@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/anthrove/openapi-e621-go"
 )
 
 func Test_openapi-e621-go_TicketsAPIService(t *testing.T) {

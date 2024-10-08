@@ -1,3 +1,3 @@
-module github.com/GIT_USER_ID/GIT_REPO_ID
+module github.com/anthrove/openapi-e621-go
 
 go 1.18
