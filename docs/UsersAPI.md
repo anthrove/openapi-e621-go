@@ -269,7 +269,7 @@ import (
 )
 
 func main() {
-	id := GetUserIdParameter(56) // GetUserIdParameter | The ID of the user.
+	id := "id_example" // string | The ID or Username of the user.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -289,7 +289,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **GetUserIdParameter** | The ID of the user. | 
+**id** | **string** | The ID or Username of the user. | 
 
 ### Other Parameters
 

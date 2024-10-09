@@ -63,7 +63,7 @@ func Test_e621_UsersAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id openapiclient.GetUserIdParameter
+		var id string
 
 		resp, httpRes, err := apiClient.UsersAPI.GetUser(context.Background(), id).Execute()
 

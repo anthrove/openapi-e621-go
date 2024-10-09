@@ -7156,13 +7156,13 @@ paths:
     get:
       operationId: getUser
       parameters:
-      - description: The ID of the user.
+      - description: The ID or Username of the user.
         explode: false
         in: path
         name: id
         required: true
         schema:
-          $ref: '#/components/schemas/getUser_id_parameter'
+          type: string
         style: simple
       responses:
         "200":
@@ -13823,11 +13823,6 @@ components:
       anyOf:
       - $ref: '#/components/schemas/User'
       - $ref: '#/components/schemas/FullUser'
-    getUser_id_parameter:
-      anyOf:
-      - format: int32
-        type: integer
-      - type: string
     getUser_200_response:
       anyOf:
       - $ref: '#/components/schemas/User'
