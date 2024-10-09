@@ -989,8 +989,8 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	tags := "tags_example" // string |  (optional)
 	md5 := "md5_example" // string |  (optional)
 	random := "random_example" // string |  (optional)
@@ -1018,8 +1018,8 @@ Other parameters are passed through a pointer to a apiSearchPostsRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **tags** | **string** |  | 
  **md5** | **string** |  | 
  **random** | **string** |  | 

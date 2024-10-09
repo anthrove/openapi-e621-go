@@ -31,7 +31,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the user. The actual value is ignored, but something must be supplied.
+	id := int32(56) // int32 | The ID of the user. The actual value is ignored, but something must be supplied.
 	userCommentThreshold := float32(8.14) // float32 |  (optional)
 	userDefaultImageSize := "userDefaultImageSize_example" // string |  (optional)
 	userFavoriteTags := "userFavoriteTags_example" // string |  (optional)
@@ -57,7 +57,7 @@ func main() {
 	userDmailFilterAttributesWords := "userDmailFilterAttributesWords_example" // string |  (optional)
 	userProfileAbout := "userProfileAbout_example" // string |  (optional)
 	userProfileArtinfo := "userProfileArtinfo_example" // string |  (optional)
-	userAvatarId := float32(8.14) // float32 |  (optional)
+	userAvatarId := int32(56) // int32 |  (optional)
 	userEnableCompactUploader := true // bool | You must have uploaded at least 10 posts. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -76,7 +76,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the user. The actual value is ignored, but something must be supplied. | 
+**id** | **int32** | The ID of the user. The actual value is ignored, but something must be supplied. | 
 
 ### Other Parameters
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
  **userDmailFilterAttributesWords** | **string** |  | 
  **userProfileAbout** | **string** |  | 
  **userProfileArtinfo** | **string** |  | 
- **userAvatarId** | **float32** |  | 
+ **userAvatarId** | **int32** |  | 
  **userEnableCompactUploader** | **bool** | You must have uploaded at least 10 posts. | 
 
 ### Return type
@@ -269,7 +269,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the user.
+	id := "id_example" // string | The ID or Username of the user.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -289,7 +289,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the user. | 
+**id** | **string** | The ID or Username of the user. | 
 
 ### Other Parameters
 
@@ -337,9 +337,9 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. (optional)
-	searchId := float32(8.14) // float32 | Search for a specific id. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
+	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchIpAddr := "searchIpAddr_example" // string | Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \"is contained within or equals\" (`<<=`). (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchNameMatches := "searchNameMatches_example" // string |  (optional)
@@ -375,9 +375,9 @@ Other parameters are passed through a pointer to a apiSearchUsersRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. | 
- **searchId** | **float32** | Search for a specific id. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. | 
+ **searchId** | **int32** | Search for a specific id. | 
  **searchIpAddr** | **string** | Must be Admin+ to use. See [postgres&#39; documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \&quot;is contained within or equals\&quot; (&#x60;&lt;&lt;&#x3D;&#x60;). | 
  **searchOrder** | **string** |  | 
  **searchNameMatches** | **string** |  | 

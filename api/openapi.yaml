@@ -7156,13 +7156,13 @@ paths:
     get:
       operationId: getUser
       parameters:
-      - description: The ID of the user.
+      - description: The ID or Username of the user.
         explode: false
         in: path
         name: id
         required: true
         schema:
-          type: number
+          type: string
         style: simple
       responses:
         "200":
@@ -7186,7 +7186,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -8366,7 +8366,7 @@ components:
       name: "search[id]"
       required: false
       schema:
-        type: number
+        type: integer
       style: form
     limit:
       description: The maximum number of results to return. Between 0 and 320.
@@ -8377,7 +8377,7 @@ components:
       schema:
         maximum: 500
         minimum: 0
-        type: number
+        type: integer
       style: form
     page:
       description: The page number of results to get. Between 1 and 750.
@@ -8388,7 +8388,7 @@ components:
       schema:
         maximum: 750
         minimum: 1
-        type: number
+        type: integer
       style: form
     ip_addr:
       description: "Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html)\
@@ -8611,7 +8611,7 @@ components:
       - 6
       - 7
       - 8
-      type: number
+      type: integer
     FeedbackCategories:
       enum:
       - negative
@@ -8667,15 +8667,15 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         group_name: group_name
         name: name
-        creator_id: 1.4658129805029452
+        creator_id: 1
         created_at: 2000-01-23T04:56:07.000+00:00
         other_names:
         - other_names
         - other_names
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         name:
           type: string
         updated_at:
@@ -8696,7 +8696,7 @@ components:
           format: date-time
           type: string
         creator_id:
-          type: number
+          type: integer
         is_locked:
           type: boolean
         notes:
@@ -8720,14 +8720,14 @@ components:
         is_active: true
         updated_at: 2000-01-23T04:56:07.000+00:00
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 5.962133916683182
-        artist_id: 5.637376656633329
+        id: 5
+        artist_id: 5
         url: https://openapi-generator.tech
       properties:
         id:
-          type: number
+          type: integer
         artist_id:
-          type: number
+          type: integer
         url:
           format: uri
           type: string
@@ -8759,22 +8759,22 @@ components:
         is_active: true
         updated_at: 2000-01-23T04:56:07.000+00:00
         name: name
-        updater_id: 1.4658129805029452
+        updater_id: 1
         created_at: 2000-01-23T04:56:07.000+00:00
         other_names:
         - other_names
         - other_names
-        id: 0.8008281904610115
-        artist_id: 6.027456183070403
+        id: 0
+        artist_id: 6
       properties:
         id:
-          type: number
+          type: integer
         artist_id:
-          type: number
+          type: integer
         name:
           type: string
         updater_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -8810,21 +8810,21 @@ components:
         staff_notes: staff_notes
         is_active: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 6.027456183070403
-        updater_id: 1.4658129805029452
+        creator_id: 6
+        updater_id: 1
         created_at: 2000-01-23T04:56:07.000+00:00
         details: details
-        id: 0.8008281904610115
-        artist_id: 5.962133916683182
+        id: 0
+        artist_id: 5
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
         artist_id:
-          type: number
+          type: integer
         staff_notes:
           description: Only visible to Janitor+
           type: string
@@ -8852,17 +8852,17 @@ components:
         staff_notes: staff_notes
         is_active: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        avoid_posting_id: 1.4658129805029452
-        updater_id: 6.027456183070403
+        avoid_posting_id: 1
+        updater_id: 6
         details: details
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
         avoid_posting_id:
-          type: number
+          type: integer
         details:
           type: string
         staff_notes:
@@ -8885,15 +8885,15 @@ components:
         reason: reason
         expires_at: 2000-01-23T04:56:07.000+00:00
         updated_at: 2000-01-23T04:56:07.000+00:00
-        user_id: 6.027456183070403
-        banner_id: 1.4658129805029452
+        user_id: 6
+        banner_id: 1
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         user_id:
-          type: number
+          type: integer
         reason:
           type: string
         expires_at:
@@ -8901,7 +8901,7 @@ components:
           nullable: true
           type: string
         banner_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -8919,25 +8919,25 @@ components:
     Blip:
       example:
         updated_at: 2000-01-23T04:56:07.000+00:00
-        response_to: 1.4658129805029452
-        creator_id: 6.027456183070403
+        response_to: 1
+        creator_id: 6
         is_hidden: true
-        warning_user_id: 5.962133916683182
-        updater_id: 5.637376656633329
+        warning_user_id: 5
+        updater_id: 5
         created_at: 2000-01-23T04:56:07.000+00:00
         warning_type: warning
         creator_name: creator_name
-        id: 0.8008281904610115
+        id: 0
         body: body
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         body:
           type: string
         response_to:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -8949,9 +8949,9 @@ components:
         warning_type:
           $ref: '#/components/schemas/WarningTypes'
         warning_user_id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
         creator_name:
           type: string
       required:
@@ -8971,7 +8971,7 @@ components:
       - $ref: '#/components/schemas/RelatedTag'
       - properties:
           count:
-            type: number
+            type: integer
         required:
         - count
     BulkUpdateRequest:
@@ -8979,18 +8979,18 @@ components:
         forum_topic_id: 1.4658129805029452
         updated_at: 2000-01-23T04:56:07.000+00:00
         approver_id: 5.962133916683182
-        creator_id: 6.027456183070403
+        creator_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
         forum_post_id: 5.637376656633329
-        id: 0.8008281904610115
+        id: 0
         title: title
         script: script
         status: approved
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         forum_topic_id:
           nullable: true
           type: number
@@ -9037,23 +9037,23 @@ components:
         body: body
         updater_name: updater_name
         score: 5.962133916683182
-        post_id: 6.027456183070403
+        post_id: 6
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 1.4658129805029452
-        updater_id: 5.637376656633329
+        creator_id: 1
+        updater_id: 5
         creator_name: creator_name
-        id: 0.8008281904610115
+        id: 0
         do_not_bump_post: true
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
         post_id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         body:
           type: string
         score:
@@ -9062,7 +9062,7 @@ components:
           format: date-time
           type: string
         updater_id:
-          type: number
+          type: integer
         do_not_bump_post:
           deprecated: true
           type: boolean
@@ -9121,7 +9121,7 @@ components:
             type: boolean
           can_approve_posts:
             type: boolean
-          disabled_cropped_thumbnails:
+          disable_cropped_thumbnails:
             type: boolean
           enable_safe_mode:
             type: boolean
@@ -9164,11 +9164,11 @@ components:
           time_zone:
             type: string
           per_page:
-            type: number
+            type: integer
           custom_style:
             type: string
           favorite_count:
-            type: number
+            type: integer
           api_regen_multiplier:
             type: number
           api_burst_limit:
@@ -9178,9 +9178,9 @@ components:
           statement_timeout:
             type: number
           favorite_limit:
-            type: number
+            type: integer
           tag_query_limit:
-            type: number
+            type: integer
           has_mail:
             type: boolean
         required:
@@ -9191,9 +9191,9 @@ components:
         - comment_threshold
         - custom_style
         - description_collapsed_initially
+        - disable_cropped_thumbnails
         - disable_responsive_mode
         - disable_user_dmails
-        - disabled_cropped_thumbnails
         - email
         - enable_auto_complete
         - enable_compact_uploader
@@ -9221,77 +9221,90 @@ components:
         - time_zone
         - updated_at
       example:
-        note_update_count: 2.3021358869347655
-        remaining_api_limit: 1.2315135367772556
+        comment_count: 3
+        note_update_count: 2
+        remaining_api_limit: 6.683562403749608
         description_collapsed_initially: true
         show_hidden_comments: true
         last_forum_read_at: 2000-01-23T04:56:07.000+00:00
         recent_tags: recent_tags
-        api_burst_limit: 7.386281948385884
+        api_burst_limit: 9.369310271410669
+        neutral_feedback_count: 1
+        profile_about: profile_about
+        upload_limit: ""
         enable_compact_uploader: true
-        id: 0.8008281904610115
+        id: 0
         replacements_beta: true
-        comment_threshold: 9.301444243932576
-        per_page: 3.616076749251911
+        artist_version_count: 9
+        comment_threshold: 1.1730742509559433
+        per_page: 4
         level: 6.027456183070403
+        flag_count: 4.145608029883936
         enable_keyboard_navigation: true
-        favorite_limit: 1.4894159098541704
-        tag_query_limit: 6.84685269835264
+        favorite_limit: 9
+        tag_query_limit: 6
         blacklist_users: true
-        avatar_id: 7.061401241503109
+        avatar_id: 7
         hide_comments: true
         enable_auto_complete: true
         last_logged_in_at: 2000-01-23T04:56:07.000+00:00
         name: name
-        post_upload_count: 5.962133916683182
+        disable_cropped_thumbnails: true
+        post_upload_count: 5
         style_usernames: true
         default_image_sizedefault_image_size: large
         is_banned: true
         can_approve_posts: true
-        api_regen_multiplier: 4.145608029883936
+        wiki_page_version_count: 7
+        api_regen_multiplier: 9.965781217890562
+        favorites_count: 2
+        negative_feedback_count: 1
+        pool_version_count: 1
         created_at: 2000-01-23T04:56:07.000+00:00
-        base_upload_limit: 1.4658129805029452
+        base_upload_limit: 1
         updated_at: 2000-01-23T04:56:07.000+00:00
         blacklisted_tags: blacklisted_tags
         disable_responsive_mode: true
-        favorite_count: 2.027123023002322
+        favorite_count: 5
         has_mail: true
         email: email
         enable_safe_mode: true
         show_post_statistics: true
         favorite_tags: favorite_tags
-        disabled_cropped_thumbnails: true
         disable_user_dmails: true
-        post_update_count: 5.637376656633329
+        post_update_count: 5
         level_string: level_string
         receive_email_notifications: true
         custom_style: custom_style
         can_upload_free: true
         time_zone: time_zone
-        statement_timeout: 1.0246457001441578
+        profile_artinfo: profile_artinfo
+        positive_feedback_count: 6
+        statement_timeout: 8.762042012749001
         no_flagging: true
+        forum_post_count: 7
         enable_privacy_mode: true
     DMail:
       example:
         is_read: true
-        from_id: 1.4658129805029452
+        from_id: 1
         is_deleted: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        owner_id: 6.027456183070403
-        to_id: 5.962133916683182
+        owner_id: 6
+        to_id: 5
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         title: title
         body: body
       properties:
         id:
-          type: number
+          type: integer
         owner_id:
-          type: number
+          type: integer
         from_id:
-          type: number
+          type: integer
         to_id:
-          type: number
+          type: integer
         title:
           type: string
         body:
@@ -9320,7 +9333,7 @@ components:
     DeferredPost:
       properties:
         id:
-          type: number
+          type: integer
         flags:
           type: string
         tags:
@@ -9341,16 +9354,16 @@ components:
         uploader:
           type: string
         uploader_id:
-          type: number
+          type: integer
         score:
           type: number
         fav_count:
-          type: number
+          type: integer
         is_favorited:
           type: boolean
         pools:
           items:
-            type: number
+            type: integer
           type: array
         md5:
           type: string
@@ -9408,10 +9421,10 @@ components:
         domain: domain
         creator_id: creator_id
         created_at: created_at
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           type: string
         updated_at:
@@ -9432,24 +9445,24 @@ components:
     ForumPost:
       example:
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 1.4658129805029452
-        updater_id: 5.962133916683182
+        creator_id: 1
+        updater_id: 5
         is_hidden: true
         warning_user_id: 5.637376656633329
         topic: 6.027456183070403
         created_at: 2000-01-23T04:56:07.000+00:00
         warning_type: warning_type
-        id: 0.8008281904610115
+        id: 0
         body: body
       properties:
         id:
-          type: number
+          type: integer
         topic:
           type: number
         creator_id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
         body:
           type: string
         is_hidden:
@@ -9479,18 +9492,18 @@ components:
       example:
         score: 5.962133916683182
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 1.4658129805029452
-        forum_post_id: 6.027456183070403
+        creator_id: 1
+        forum_post_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
         creator_name: creator_name
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         forum_post_id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         score:
           type: number
         created_at:
@@ -9511,28 +9524,28 @@ components:
       - updated_at
     ForumTopic:
       example:
-        response_count: 5.962133916683182
+        response_count: 5
         is_locked: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        category_id: 5.637376656633329
+        category_id: 5
         is_sticky: true
-        creator_id: 6.027456183070403
-        updater_id: 1.4658129805029452
+        creator_id: 6
+        updater_id: 1
         is_hidden: true
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         title: title
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
         title:
           type: string
         response_count:
-          type: number
+          type: integer
         is_sticky:
           type: boolean
         is_locked:
@@ -9546,7 +9559,7 @@ components:
           format: date-time
           type: string
         category_id:
-          type: number
+          type: integer
       required:
       - category_id
       - created_at
@@ -9568,27 +9581,27 @@ components:
       - $ref: '#/components/schemas/User'
       - properties:
           wiki_page_version_count:
-            type: number
+            type: integer
           artist_version_count:
-            type: number
+            type: integer
           pool_version_count:
-            type: number
+            type: integer
           forum_post_count:
-            type: number
+            type: integer
           comment_count:
-            type: number
+            type: integer
           flag_count:
-            type: number
+            type: integer
           favorite_count:
-            type: number
+            type: integer
           positive_feedback_count:
-            type: number
+            type: integer
           neutral_feedback_count:
-            type: number
+            type: integer
           negative_feedback_count:
-            type: number
+            type: integer
           upload_limit:
-            type: number
+            type: integer
           profile_about:
             type: string
           profile_artinfo:
@@ -9607,18 +9620,46 @@ components:
         - profile_artinfo
         - upload_limit
         - wiki_page_version_count
+      example:
+        can_approve_posts: true
+        comment_count: 9
+        note_update_count: 2
+        wiki_page_version_count: 1
+        favorites_count: 2
+        negative_feedback_count: 3
+        pool_version_count: 5
+        created_at: 2000-01-23T04:56:07.000+00:00
+        base_upload_limit: 1
+        neutral_feedback_count: 6
+        profile_about: profile_about
+        upload_limit: 6
+        favorite_count: 8
+        id: 0
+        artist_version_count: 4
+        level: 6.027456183070403
+        flag_count: 6
+        post_update_count: 5
+        level_string: level_string
+        can_upload_free: true
+        profile_artinfo: profile_artinfo
+        avatar_id: 7
+        positive_feedback_count: 9
+        name: name
+        forum_post_count: 9
+        post_upload_count: 5
+        is_banned: true
     Help:
       example:
         related: related
         updated_at: 2000-01-23T04:56:07.000+00:00
         name: name
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         title: title
         wiki_page: wiki_page
       properties:
         id:
-          type: number
+          type: integer
         name:
           type: string
         title:
@@ -9647,14 +9688,14 @@ components:
       example:
         reason: reason
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 6.027456183070403
+        creator_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         reason:
           type: string
         created_at:
@@ -9671,7 +9712,7 @@ components:
       - updated_at
     IQDBPost:
       example:
-        comment_count: 6.683562403749608
+        comment_count: 6
         file_url: file_url
         is_favorited: true
         rating: s
@@ -9680,48 +9721,48 @@ components:
         source: source
         score: 2.3021358869347655
         has_large: true
-        fav_count: 3.616076749251911
-        tag_count: 2.027123023002322
+        fav_count: 3
+        tag_count: 2
         image_height: 7.457744773683766
         bit_flags: 4.965218492984954
-        tag_count_character: 1.2315135367772556
-        tag_count_invalid: 9.369310271410669
-        id: 1.4658129805029452
-        tag_count_artist: 7.386281948385884
-        down_score: 5.637376656633329
-        change_seq: 8.762042012749001
+        tag_count_character: 1
+        tag_count_invalid: 9
+        id: 1
+        tag_count_artist: 7
+        down_score: 5
+        change_seq: 8
         has_children: true
-        tag_count_copyright: 1.0246457001441578
-        approver_id: 9.301444243932576
+        tag_count_copyright: 1
+        approver_id: 9
         image_width: 6.84685269835264
-        up_score: 5.962133916683182
+        up_score: 5
         last_noted_at: 2000-01-23T04:56:07.000+00:00
-        tag_count_lore: 9.018348186070783
+        tag_count_lore: 9
         is_rating_locked: true
         has_active_children: true
         parent_id: 1.1730742509559433
-        tag_count_general: 4.145608029883936
+        tag_count_general: 4
         is_comment_disabled: true
         is_comment_locked: true
         generated_samples:
         - 720p
         - 720p
-        tag_count_meta: 5.025004791520295
+        tag_count_meta: 5
         is_flagged: true
         is_pending: true
-        uploader_id: 7.061401241503109
+        uploader_id: 7
         tag_string: tag_string
         created_at: 2000-01-23T04:56:07.000+00:00
         description: description
         pool_ids:
-        - 6.438423552598547
-        - 6.438423552598547
+        - 6
+        - 6
         duration: duration
         is_status_locked: true
         children_ids: children_ids
         large_file_url: large_file_url
         is_deleted: true
-        tag_count_species: 9.965781217890562
+        tag_count_species: 9
         updated_at: 2000-01-23T04:56:07.000+00:00
         is_note_locked: true
         file_size: 1.4894159098541704
@@ -9733,7 +9774,7 @@ components:
         md5: md5
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -9741,9 +9782,9 @@ components:
           format: date-time
           type: string
         up_score:
-          type: number
+          type: integer
         down_score:
-          type: number
+          type: integer
         score:
           type: number
         source:
@@ -9765,9 +9806,9 @@ components:
         is_deleted:
           type: boolean
         uploader_id:
-          type: number
+          type: integer
         approver_id:
-          type: number
+          type: integer
         last_noted_at:
           format: date-time
           nullable: true
@@ -9777,19 +9818,19 @@ components:
           nullable: true
           type: string
         fav_count:
-          type: number
+          type: integer
         tag_string:
           type: string
         tag_count:
-          type: number
+          type: integer
         tag_count_general:
-          type: number
+          type: integer
         tag_count_artist:
-          type: number
+          type: integer
         tag_count_character:
-          type: number
+          type: integer
         tag_count_copyright:
-          type: number
+          type: integer
         file_ext:
           type: string
         file_size:
@@ -9812,22 +9853,22 @@ components:
         bit_flags:
           type: number
         tag_count_meta:
-          type: number
+          type: integer
         locked_tags:
           nullable: true
           type: string
         tag_count_species:
-          type: number
+          type: integer
         tag_count_invalid:
-          type: number
+          type: integer
         description:
           type: string
         comment_count:
-          type: number
+          type: integer
         change_seq:
-          type: number
+          type: integer
         tag_count_lore:
-          type: number
+          type: integer
         bg_color:
           nullable: true
           type: string
@@ -9855,7 +9896,7 @@ components:
           type: string
         pool_ids:
           items:
-            type: number
+            type: integer
           type: array
         is_favorited:
           type: boolean
@@ -9922,10 +9963,10 @@ components:
     IQDBResponse:
       example:
         score: 6.027456183070403
-        post_id: 0.8008281904610115
+        post_id: 0
         post:
           posts:
-            comment_count: 6.683562403749608
+            comment_count: 6
             file_url: file_url
             is_favorited: true
             rating: s
@@ -9934,48 +9975,48 @@ components:
             source: source
             score: 2.3021358869347655
             has_large: true
-            fav_count: 3.616076749251911
-            tag_count: 2.027123023002322
+            fav_count: 3
+            tag_count: 2
             image_height: 7.457744773683766
             bit_flags: 4.965218492984954
-            tag_count_character: 1.2315135367772556
-            tag_count_invalid: 9.369310271410669
-            id: 1.4658129805029452
-            tag_count_artist: 7.386281948385884
-            down_score: 5.637376656633329
-            change_seq: 8.762042012749001
+            tag_count_character: 1
+            tag_count_invalid: 9
+            id: 1
+            tag_count_artist: 7
+            down_score: 5
+            change_seq: 8
             has_children: true
-            tag_count_copyright: 1.0246457001441578
-            approver_id: 9.301444243932576
+            tag_count_copyright: 1
+            approver_id: 9
             image_width: 6.84685269835264
-            up_score: 5.962133916683182
+            up_score: 5
             last_noted_at: 2000-01-23T04:56:07.000+00:00
-            tag_count_lore: 9.018348186070783
+            tag_count_lore: 9
             is_rating_locked: true
             has_active_children: true
             parent_id: 1.1730742509559433
-            tag_count_general: 4.145608029883936
+            tag_count_general: 4
             is_comment_disabled: true
             is_comment_locked: true
             generated_samples:
             - 720p
             - 720p
-            tag_count_meta: 5.025004791520295
+            tag_count_meta: 5
             is_flagged: true
             is_pending: true
-            uploader_id: 7.061401241503109
+            uploader_id: 7
             tag_string: tag_string
             created_at: 2000-01-23T04:56:07.000+00:00
             description: description
             pool_ids:
-            - 6.438423552598547
-            - 6.438423552598547
+            - 6
+            - 6
             duration: duration
             is_status_locked: true
             children_ids: children_ids
             large_file_url: large_file_url
             is_deleted: true
-            tag_count_species: 9.965781217890562
+            tag_count_species: 9
             updated_at: 2000-01-23T04:56:07.000+00:00
             is_note_locked: true
             file_size: 1.4894159098541704
@@ -9990,7 +10031,7 @@ components:
         hash:
           type: string
         post_id:
-          type: number
+          type: integer
         score:
           type: number
         post:
@@ -10013,15 +10054,15 @@ components:
         file_ext: file_ext
         background_color: background_color
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 6.027456183070403
-        id: 0.8008281904610115
+        creator_id: 6
+        id: 0
         md5: md5
         url_path: https://openapi-generator.tech
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         display_name:
           type: string
         md5:
@@ -10067,15 +10108,15 @@ components:
     ModAction:
       example:
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 6.027456183070403
+        creator_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
         action: artist_page_rename
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10093,20 +10134,20 @@ components:
     NewsUpdate:
       example:
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 6.027456183070403
-        updater_id: 1.4658129805029452
+        creator_id: 6
+        updater_id: 1
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         message: message
       properties:
         id:
-          type: number
+          type: integer
         message:
           type: string
         creator_id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10127,17 +10168,17 @@ components:
         body: body
         version: 7.061401241503109
         updated_at: 2000-01-23T04:56:07.000+00:00
-        post_id: 9.301444243932576
-        creator_id: 6.027456183070403
+        post_id: 9
+        creator_id: 6
         x: 1.4658129805029452
         width: 5.637376656633329
         "y": 5.962133916683182
         creator_name: creator_name
-        id: 0.8008281904610115
+        id: 0
         height: 2.3021358869347655
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10145,7 +10186,7 @@ components:
           format: date-time
           type: string
         creator_id:
-          type: number
+          type: integer
         x:
           type: number
         "y":
@@ -10159,7 +10200,7 @@ components:
         is_active:
           type: boolean
         post_id:
-          type: number
+          type: integer
         body:
           type: string
         creator_name:
@@ -10180,22 +10221,22 @@ components:
       - "y"
     NoteVersion:
       example:
-        note_id: 7.061401241503109
+        note_id: 7
         is_active: true
         created_at: 2000-01-23T04:56:07.000+00:00
         body: body
         version: 2.3021358869347655
         updated_at: 2000-01-23T04:56:07.000+00:00
-        post_id: 9.301444243932576
+        post_id: 9
         x: 6.027456183070403
         width: 5.962133916683182
-        updater_id: 3.616076749251911
+        updater_id: 3
         "y": 1.4658129805029452
-        id: 0.8008281904610115
+        id: 0
         height: 5.637376656633329
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10217,11 +10258,11 @@ components:
         is_active:
           type: boolean
         note_id:
-          type: number
+          type: integer
         post_id:
-          type: number
+          type: integer
         updater_id:
-          type: number
+          type: integer
       required:
       - body
       - created_at
@@ -10241,26 +10282,26 @@ components:
         is_active: true
         updated_at: 2000-01-23T04:56:07.000+00:00
         name: name
-        creator_id: 6.027456183070403
+        creator_id: 6
         description: description
         created_at: 2000-01-23T04:56:07.000+00:00
         creator_name: creator_name
-        id: 0.8008281904610115
-        post_count: 5.962133916683182
+        id: 0
+        post_count: 5
         category: collection
         post_ids:
-        - 1.4658129805029452
-        - 1.4658129805029452
+        - 1
+        - 1
       properties:
         id:
-          type: number
+          type: integer
         name:
           type: string
         updated_at:
           format: date-time
           type: string
         creator_id:
-          type: number
+          type: integer
         description:
           type: string
         is_active:
@@ -10269,7 +10310,7 @@ components:
           $ref: '#/components/schemas/PoolCategories'
         post_ids:
           items:
-            type: number
+            type: integer
           type: array
         created_at:
           format: date-time
@@ -10277,7 +10318,7 @@ components:
         creator_name:
           type: string
         post_count:
-          type: number
+          type: integer
       required:
       - category
       - created_at
@@ -10294,34 +10335,34 @@ components:
       example:
         is_locked: true
         removed_post_ids:
-        - 7.061401241503109
-        - 7.061401241503109
+        - 7
+        - 7
         is_active: true
         added_post_ids:
-        - 2.3021358869347655
-        - 2.3021358869347655
+        - 2
+        - 2
         created_at: 2000-01-23T04:56:07.000+00:00
         description: description
         description_changed: true
-        pool_id: 6.027456183070403
+        pool_id: 6
         version: 5.637376656633329
         updated_at: 2000-01-23T04:56:07.000+00:00
-        updater_id: 5.962133916683182
+        updater_id: 5
         name: name
-        id: 0.8008281904610115
+        id: 0
         name_changed: true
         category: collection
         post_ids:
-        - 1.4658129805029452
-        - 1.4658129805029452
+        - 1
+        - 1
       properties:
         id:
-          type: number
+          type: integer
         pool_id:
-          type: number
+          type: integer
         post_ids:
           items:
-            type: number
+            type: integer
           type: array
         created_at:
           format: date-time
@@ -10330,7 +10371,7 @@ components:
           format: date-time
           type: string
         updater_id:
-          type: number
+          type: integer
         name:
           type: string
         name_changed:
@@ -10349,11 +10390,11 @@ components:
           type: number
         added_post_ids:
           items:
-            type: number
+            type: integer
           type: array
         removed_post_ids:
           items:
-            type: number
+            type: integer
           type: array
       required:
       - added_post_ids
@@ -10378,9 +10419,9 @@ components:
           width: 5.637376656633329
           url: url
           height: 2.3021358869347655
-        comment_count: 9.965781217890562
+        comment_count: 9
         change_seq: 1.0246457001441578
-        uploader_id: 5.025004791520295
+        uploader_id: 5
         is_favorited: true
         sources:
         - sources
@@ -10396,8 +10437,8 @@ components:
         rating: s
         created_at: 2000-01-23T04:56:07.000+00:00
         pools:
-        - 6.84685269835264
-        - 6.84685269835264
+        - 6
+        - 6
         description: description
         sample:
           width: 9.301444243932576
@@ -10463,7 +10504,7 @@ components:
           - 1.1730742509559433
           - 1.1730742509559433
           parent_id: 7.457744773683766
-        fav_count: 1.4894159098541704
+        fav_count: 1
         file:
           ext: ext
           size: 5.962133916683182
@@ -10473,13 +10514,13 @@ components:
           md5: md5
         updated_at: 2000-01-23T04:56:07.000+00:00
         has_notes: true
-        id: 0.8008281904610115
+        id: 0
         locked_tags:
         - locked_tags
         - locked_tags
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10507,14 +10548,14 @@ components:
         rating:
           $ref: '#/components/schemas/Ratings'
         fav_count:
-          type: number
+          type: integer
         sources:
           items:
             type: string
           type: array
         pools:
           items:
-            type: number
+            type: integer
           type: array
         relationships:
           $ref: '#/components/schemas/Post_relationships'
@@ -10522,11 +10563,11 @@ components:
           nullable: true
           type: number
         uploader_id:
-          type: number
+          type: integer
         description:
           type: string
         comment_count:
-          type: number
+          type: integer
         is_favorited:
           type: boolean
         has_notes:
@@ -10560,18 +10601,18 @@ components:
       - uploader_id
     PostApproval:
       example:
-        post_id: 1.4658129805029452
+        post_id: 1
         updated_at: 2000-01-23T04:56:07.000+00:00
-        user_id: 6.027456183070403
+        user_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         user_id:
-          type: number
+          type: integer
         post_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10587,19 +10628,19 @@ components:
     PostDisapproval:
       example:
         reason: borderline_quality
-        post_id: 1.4658129805029452
+        post_id: 1
         updated_at: 2000-01-23T04:56:07.000+00:00
-        user_id: 6.027456183070403
+        user_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         message: message
       properties:
         id:
-          type: number
+          type: integer
         user_id:
-          type: number
+          type: integer
         post_id:
-          type: number
+          type: integer
         reason:
           enum:
           - borderline_quality
@@ -10625,19 +10666,19 @@ components:
       - user_id
     PostEvent:
       example:
-        post_id: 1.4658129805029452
-        creator_id: 6.027456183070403
+        post_id: 1
+        creator_id: 6
         action: deleted
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
           nullable: true
-          type: number
+          type: integer
         post_id:
-          type: number
+          type: integer
         action:
           $ref: '#/components/schemas/PostEventActions'
         created_at:
@@ -10652,22 +10693,22 @@ components:
     PostFlag:
       example:
         reason: reason
-        post_id: 6.027456183070403
+        post_id: 6
         updated_at: 2000-01-23T04:56:07.000+00:00
         is_resolved: true
         creator_id: 1.4658129805029452
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         type: flag
         is_deletion: true
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
         post_id:
-          type: number
+          type: integer
         reason:
           type: string
         creator_id:
@@ -10698,7 +10739,7 @@ components:
     PostReplacement:
       example:
         reason: reason
-        approver_id: 5.962133916683182
+        approver_id: 5
         file_name: file_name
         created_at: 2000-01-23T04:56:07.000+00:00
         image_width: 7.061401241503109
@@ -10707,14 +10748,14 @@ components:
         file_ext: file_ext
         image_height: 2.3021358869347655
         updated_at: 2000-01-23T04:56:07.000+00:00
-        post_id: 6.027456183070403
-        creator_id: 1.4658129805029452
-        id: 0.8008281904610115
+        post_id: 6
+        creator_id: 1
+        id: 0
         md5: md5
         status: prompted
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10722,12 +10763,12 @@ components:
           format: date-time
           type: string
         post_id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         approver_id:
           nullable: true
-          type: number
+          type: integer
         file_ext:
           type: string
         file_size:
@@ -10797,20 +10838,20 @@ components:
       example:
         transfer_on_delete: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 6.027456183070403
+        creator_id: 6
         is_public: true
         name: name
         created_at: 2000-01-23T04:56:07.000+00:00
         description: description
-        id: 0.8008281904610115
-        post_count: 1.4658129805029452
+        id: 0
+        post_count: 1
         shortname: shortname
         post_ids:
-        - 5.962133916683182
-        - 5.962133916683182
+        - 5
+        - 5
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -10818,7 +10859,7 @@ components:
           format: date-time
           type: string
         creator_id:
-          type: number
+          type: integer
         is_public:
           type: boolean
         name:
@@ -10828,12 +10869,12 @@ components:
         description:
           type: string
         post_count:
-          type: number
+          type: integer
         transfer_on_delete:
           type: boolean
         post_ids:
           items:
-            type: number
+            type: integer
           type: array
       required:
       - created_at
@@ -10864,7 +10905,7 @@ components:
         tags: tags
         parent_changed: true
         updater_name: updater_name
-        post_id: 6.027456183070403
+        post_id: 6
         updated_at: 2000-01-23T04:56:07.000+00:00
         added_locked_tags:
         - added_locked_tags
@@ -10874,22 +10915,22 @@ components:
         added_tags:
         - added_tags
         - added_tags
-        updater_id: 1.4658129805029452
+        updater_id: 1
         unchanged_tags: unchanged_tags
-        id: 0.8008281904610115
+        id: 0
         locked_tags: locked_tags
         removed_locked_tags:
         - removed_locked_tags
         - removed_locked_tags
       properties:
         id:
-          type: number
+          type: integer
         post_id:
-          type: number
+          type: integer
         tags:
           type: string
         updater_id:
-          type: number
+          type: integer
         updated_at:
           format: date-time
           type: string
@@ -10983,19 +11024,19 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         name: name
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
-        post_count: 6.027456183070403
-        category: 1.4658129805029452
+        id: 0
+        post_count: 6
+        category: 1
         related_tags:
         - related_tags
         - related_tags
       properties:
         id:
-          type: number
+          type: integer
         name:
           type: string
         post_count:
-          type: number
+          type: integer
         related_tags:
           items:
             type: string
@@ -11030,23 +11071,23 @@ components:
         forum_topic_id: 5.962133916683182
         updated_at: 2000-01-23T04:56:07.000+00:00
         approver_id: 2.3021358869347655
-        creator_id: 6.027456183070403
+        creator_id: 6
         consequent_name: consequent_name
         created_at: 2000-01-23T04:56:07.000+00:00
         forum_post_id: 1.4658129805029452
-        id: 0.8008281904610115
-        post_count: 5.637376656633329
+        id: 0
+        post_count: 5
         antecedent_name: antecedent_name
         status: active
       properties:
         id:
-          type: number
+          type: integer
         antecedent_name:
           type: string
         reason:
           type: string
         creator_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           nullable: true
@@ -11066,7 +11107,7 @@ components:
         status:
           $ref: '#/components/schemas/TagRequestStatuses'
         post_count:
-          type: number
+          type: integer
         approver_id:
           nullable: true
           type: number
@@ -11089,23 +11130,23 @@ components:
         forum_topic_id: 5.962133916683182
         updated_at: 2000-01-23T04:56:07.000+00:00
         approver_id: 5.637376656633329
-        creator_id: 6.027456183070403
+        creator_id: 6
         consequent_name: consequent_name
         descendant_names:
         - descendant_names
         - descendant_names
         created_at: 2000-01-23T04:56:07.000+00:00
         forum_post_id: 1.4658129805029452
-        id: 0.8008281904610115
+        id: 0
         antecedent_name: antecedent_name
         status: active
       properties:
         id:
-          type: number
+          type: integer
         reason:
           type: string
         creator_id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -11177,14 +11218,14 @@ components:
         new_type: null
         is_locked: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        creator_id: 5.962133916683182
+        creator_id: 5
         created_at: 2000-01-23T04:56:07.000+00:00
-        tag_id: 1.4658129805029452
-        id: 0.8008281904610115
-        old_type: 6.027456183070403
+        tag_id: 1
+        id: 0
+        old_type: 6
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -11198,9 +11239,9 @@ components:
         is_locked:
           type: boolean
         tag_id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
       required:
       - created_at
       - creator_id
@@ -11216,12 +11257,12 @@ components:
         reason_hidden: true
         approver_id: 6.027456183070403
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
-        post_count: 1.4658129805029452
+        id: 0
+        post_count: 1
         status: approved
       properties:
         id:
-          type: number
+          type: integer
         status:
           enum:
           - approved
@@ -11241,7 +11282,7 @@ components:
           format: date-time
           type: string
         post_count:
-          type: number
+          type: integer
       required:
       - approver_id
       - created_at
@@ -11261,15 +11302,15 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         handler_id: 5.962133916683182
         response: response
-        creator_id: 6.027456183070403
-        id: 0.8008281904610115
+        creator_id: 6
+        id: 0
         disp_id: 1.4658129805029452
         status: pending
       properties:
         id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         reason:
           type: string
         disp_id:
@@ -11321,10 +11362,10 @@ components:
         allowed: true
         pattern: pattern
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -11353,7 +11394,7 @@ components:
     Upload:
       example:
         uploader_name: uploader_name
-        uploader_id: 6.027456183070403
+        uploader_id: 6
         tag_string: tag_string
         backtrace: backtrace
         rating: s
@@ -11368,18 +11409,18 @@ components:
         post_id: 1.4658129805029452
         updated_at: 2000-01-23T04:56:07.000+00:00
         parent_id: 5.962133916683182
-        id: 0.8008281904610115
+        id: 0
         status: completed
         md5: md5
       properties:
         id:
-          type: number
+          type: integer
         source:
           type: string
         rating:
           $ref: '#/components/schemas/Ratings'
         uploader_id:
-          type: number
+          type: integer
         tag_string:
           type: string
         status:
@@ -11451,21 +11492,34 @@ components:
     User:
       example:
         can_approve_posts: true
-        note_update_count: 2.3021358869347655
-        level: 6.027456183070403
-        post_update_count: 5.637376656633329
-        level_string: level_string
+        comment_count: 3
+        note_update_count: 2
+        wiki_page_version_count: 7
+        favorites_count: 2
+        negative_feedback_count: 1
+        pool_version_count: 1
         created_at: 2000-01-23T04:56:07.000+00:00
+        base_upload_limit: 1
+        neutral_feedback_count: 1
+        profile_about: profile_about
+        upload_limit: ""
+        id: 0
+        artist_version_count: 9
+        level: 6.027456183070403
+        flag_count: 4.145608029883936
+        post_update_count: 5
+        level_string: level_string
         can_upload_free: true
-        base_upload_limit: 1.4658129805029452
-        avatar_id: 7.061401241503109
+        profile_artinfo: profile_artinfo
+        avatar_id: 7
+        positive_feedback_count: 6
         name: name
-        id: 0.8008281904610115
-        post_upload_count: 5.962133916683182
+        forum_post_count: 7
+        post_upload_count: 5
         is_banned: true
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -11474,13 +11528,13 @@ components:
         level:
           type: number
         base_upload_limit:
-          type: number
+          type: integer
         post_upload_count:
-          type: number
+          type: integer
         post_update_count:
-          type: number
+          type: integer
         note_update_count:
-          type: number
+          type: integer
         is_banned:
           type: boolean
         can_approve_posts:
@@ -11491,7 +11545,32 @@ components:
           type: string
         avatar_id:
           nullable: true
+          type: integer
+        artist_version_count:
+          type: integer
+        comment_count:
+          type: integer
+        favorites_count:
+          type: integer
+        flag_count:
           type: number
+        forum_post_count:
+          type: integer
+        negative_feedback_count:
+          type: integer
+        neutral_feedback_count:
+          type: integer
+        pool_version_count:
+          type: integer
+        positive_feedback_count:
+          type: integer
+        profile_about:
+          type: string
+        profile_artinfo:
+          type: string
+        upload_limit: {}
+        wiki_page_version_count:
+          type: integer
       required:
       - avatar_id
       - base_upload_limit
@@ -11510,20 +11589,20 @@ components:
       example:
         is_deleted: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        user_id: 6.027456183070403
-        creator_id: 1.4658129805029452
+        user_id: 6
+        creator_id: 1
         updater_id: 5.962133916683182
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         category: negative
         body: body
       properties:
         id:
-          type: number
+          type: integer
         user_id:
-          type: number
+          type: integer
         creator_id:
-          type: number
+          type: integer
         category:
           $ref: '#/components/schemas/FeedbackCategories'
         body:
@@ -11552,20 +11631,20 @@ components:
       example:
         change_reason: change_reason
         updated_at: 2000-01-23T04:56:07.000+00:00
-        user_id: 1.4658129805029452
-        approver_id: 6.027456183070403
+        user_id: 1
+        approver_id: 6
         original_name: original_name
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
+        id: 0
         desired_name: desired_name
         status: approved
       properties:
         id:
-          type: number
+          type: integer
         approver_id:
-          type: number
+          type: integer
         user_id:
-          type: number
+          type: integer
         original_name:
           type: string
         desired_name:
@@ -11603,7 +11682,7 @@ components:
         body: body
         is_deleted: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        category_id: 5.962133916683182
+        category_id: 5
         creator_id: 6.027456183070403
         updater_id: 1.4658129805029452
         creator_name: creator_name
@@ -11755,21 +11834,21 @@ components:
           is_active: true
           updated_at: 2000-01-23T04:56:07.000+00:00
           created_at: 2000-01-23T04:56:07.000+00:00
-          id: 5.962133916683182
-          artist_id: 5.637376656633329
+          id: 5
+          artist_id: 5
           url: https://openapi-generator.tech
         - normalized_url: https://openapi-generator.tech
           is_active: true
           updated_at: 2000-01-23T04:56:07.000+00:00
           created_at: 2000-01-23T04:56:07.000+00:00
-          id: 5.962133916683182
-          artist_id: 5.637376656633329
+          id: 5
+          artist_id: 5
           url: https://openapi-generator.tech
         linked_user_id: 6.027456183070403
         updated_at: 2000-01-23T04:56:07.000+00:00
         name: name
-        creator_id: 1.4658129805029452
-        id: 0.8008281904610115
+        creator_id: 1
+        id: 0
     createArtist_request:
       properties:
         artist[name]:
@@ -11838,21 +11917,21 @@ components:
           is_active: true
           updated_at: 2000-01-23T04:56:07.000+00:00
           created_at: 2000-01-23T04:56:07.000+00:00
-          id: 5.962133916683182
-          artist_id: 5.637376656633329
+          id: 5
+          artist_id: 5
           url: https://openapi-generator.tech
         - normalized_url: https://openapi-generator.tech
           is_active: true
           updated_at: 2000-01-23T04:56:07.000+00:00
           created_at: 2000-01-23T04:56:07.000+00:00
-          id: 5.962133916683182
-          artist_id: 5.637376656633329
+          id: 5
+          artist_id: 5
           url: https://openapi-generator.tech
         linked_user_id: 6.027456183070403
         updated_at: 2000-01-23T04:56:07.000+00:00
         name: name
-        creator_id: 1.4658129805029452
-        id: 0.8008281904610115
+        creator_id: 1
+        id: 0
     editArtist_request:
       properties:
         artist[name]:
@@ -11913,15 +11992,15 @@ components:
           updated_at: 2000-01-23T04:56:07.000+00:00
           group_name: group_name
           name: name
-          creator_id: 1.4658129805029452
+          creator_id: 1
           created_at: 2000-01-23T04:56:07.000+00:00
           other_names:
           - other_names
           - other_names
-          id: 0.8008281904610115
+          id: 0
         created_at: 2000-01-23T04:56:07.000+00:00
-        id: 0.8008281904610115
-        artist_id: 6.027456183070403
+        id: 0
+        artist_id: 6
         url: https://openapi-generator.tech
     searchAvoidPostings_200_response_anyOf:
       description: No Results
@@ -12206,9 +12285,9 @@ components:
             width: 5.637376656633329
             url: url
             height: 2.3021358869347655
-          comment_count: 9.965781217890562
+          comment_count: 9
           change_seq: 1.0246457001441578
-          uploader_id: 5.025004791520295
+          uploader_id: 5
           is_favorited: true
           sources:
           - sources
@@ -12224,8 +12303,8 @@ components:
           rating: s
           created_at: 2000-01-23T04:56:07.000+00:00
           pools:
-          - 6.84685269835264
-          - 6.84685269835264
+          - 6
+          - 6
           description: description
           sample:
             width: 9.301444243932576
@@ -12291,7 +12370,7 @@ components:
             - 1.1730742509559433
             - 1.1730742509559433
             parent_id: 7.457744773683766
-          fav_count: 1.4894159098541704
+          fav_count: 1
           file:
             ext: ext
             size: 5.962133916683182
@@ -12301,7 +12380,7 @@ components:
             md5: md5
           updated_at: 2000-01-23T04:56:07.000+00:00
           has_notes: true
-          id: 0.8008281904610115
+          id: 0
           locked_tags:
           - locked_tags
           - locked_tags
@@ -12309,9 +12388,9 @@ components:
             width: 5.637376656633329
             url: url
             height: 2.3021358869347655
-          comment_count: 9.965781217890562
+          comment_count: 9
           change_seq: 1.0246457001441578
-          uploader_id: 5.025004791520295
+          uploader_id: 5
           is_favorited: true
           sources:
           - sources
@@ -12327,8 +12406,8 @@ components:
           rating: s
           created_at: 2000-01-23T04:56:07.000+00:00
           pools:
-          - 6.84685269835264
-          - 6.84685269835264
+          - 6
+          - 6
           description: description
           sample:
             width: 9.301444243932576
@@ -12394,7 +12473,7 @@ components:
             - 1.1730742509559433
             - 1.1730742509559433
             parent_id: 7.457744773683766
-          fav_count: 1.4894159098541704
+          fav_count: 1
           file:
             ext: ext
             size: 5.962133916683182
@@ -12404,7 +12483,7 @@ components:
             md5: md5
           updated_at: 2000-01-23T04:56:07.000+00:00
           has_notes: true
-          id: 0.8008281904610115
+          id: 0
           locked_tags:
           - locked_tags
           - locked_tags
@@ -12428,9 +12507,9 @@ components:
             width: 5.637376656633329
             url: url
             height: 2.3021358869347655
-          comment_count: 9.965781217890562
+          comment_count: 9
           change_seq: 1.0246457001441578
-          uploader_id: 5.025004791520295
+          uploader_id: 5
           is_favorited: true
           sources:
           - sources
@@ -12446,8 +12525,8 @@ components:
           rating: s
           created_at: 2000-01-23T04:56:07.000+00:00
           pools:
-          - 6.84685269835264
-          - 6.84685269835264
+          - 6
+          - 6
           description: description
           sample:
             width: 9.301444243932576
@@ -12513,7 +12592,7 @@ components:
             - 1.1730742509559433
             - 1.1730742509559433
             parent_id: 7.457744773683766
-          fav_count: 1.4894159098541704
+          fav_count: 1
           file:
             ext: ext
             size: 5.962133916683182
@@ -12523,7 +12602,7 @@ components:
             md5: md5
           updated_at: 2000-01-23T04:56:07.000+00:00
           has_notes: true
-          id: 0.8008281904610115
+          id: 0
           locked_tags:
           - locked_tags
           - locked_tags
@@ -12671,10 +12750,10 @@ components:
       example:
         posts:
         - score: 6.027456183070403
-          post_id: 0.8008281904610115
+          post_id: 0
           post:
             posts:
-              comment_count: 6.683562403749608
+              comment_count: 6
               file_url: file_url
               is_favorited: true
               rating: s
@@ -12683,48 +12762,48 @@ components:
               source: source
               score: 2.3021358869347655
               has_large: true
-              fav_count: 3.616076749251911
-              tag_count: 2.027123023002322
+              fav_count: 3
+              tag_count: 2
               image_height: 7.457744773683766
               bit_flags: 4.965218492984954
-              tag_count_character: 1.2315135367772556
-              tag_count_invalid: 9.369310271410669
-              id: 1.4658129805029452
-              tag_count_artist: 7.386281948385884
-              down_score: 5.637376656633329
-              change_seq: 8.762042012749001
+              tag_count_character: 1
+              tag_count_invalid: 9
+              id: 1
+              tag_count_artist: 7
+              down_score: 5
+              change_seq: 8
               has_children: true
-              tag_count_copyright: 1.0246457001441578
-              approver_id: 9.301444243932576
+              tag_count_copyright: 1
+              approver_id: 9
               image_width: 6.84685269835264
-              up_score: 5.962133916683182
+              up_score: 5
               last_noted_at: 2000-01-23T04:56:07.000+00:00
-              tag_count_lore: 9.018348186070783
+              tag_count_lore: 9
               is_rating_locked: true
               has_active_children: true
               parent_id: 1.1730742509559433
-              tag_count_general: 4.145608029883936
+              tag_count_general: 4
               is_comment_disabled: true
               is_comment_locked: true
               generated_samples:
               - 720p
               - 720p
-              tag_count_meta: 5.025004791520295
+              tag_count_meta: 5
               is_flagged: true
               is_pending: true
-              uploader_id: 7.061401241503109
+              uploader_id: 7
               tag_string: tag_string
               created_at: 2000-01-23T04:56:07.000+00:00
               description: description
               pool_ids:
-              - 6.438423552598547
-              - 6.438423552598547
+              - 6
+              - 6
               duration: duration
               is_status_locked: true
               children_ids: children_ids
               large_file_url: large_file_url
               is_deleted: true
-              tag_count_species: 9.965781217890562
+              tag_count_species: 9
               updated_at: 2000-01-23T04:56:07.000+00:00
               is_note_locked: true
               file_size: 1.4894159098541704
@@ -12736,10 +12815,10 @@ components:
               md5: md5
           hash: hash
         - score: 6.027456183070403
-          post_id: 0.8008281904610115
+          post_id: 0
           post:
             posts:
-              comment_count: 6.683562403749608
+              comment_count: 6
               file_url: file_url
               is_favorited: true
               rating: s
@@ -12748,48 +12827,48 @@ components:
               source: source
               score: 2.3021358869347655
               has_large: true
-              fav_count: 3.616076749251911
-              tag_count: 2.027123023002322
+              fav_count: 3
+              tag_count: 2
               image_height: 7.457744773683766
               bit_flags: 4.965218492984954
-              tag_count_character: 1.2315135367772556
-              tag_count_invalid: 9.369310271410669
-              id: 1.4658129805029452
-              tag_count_artist: 7.386281948385884
-              down_score: 5.637376656633329
-              change_seq: 8.762042012749001
+              tag_count_character: 1
+              tag_count_invalid: 9
+              id: 1
+              tag_count_artist: 7
+              down_score: 5
+              change_seq: 8
               has_children: true
-              tag_count_copyright: 1.0246457001441578
-              approver_id: 9.301444243932576
+              tag_count_copyright: 1
+              approver_id: 9
               image_width: 6.84685269835264
-              up_score: 5.962133916683182
+              up_score: 5
               last_noted_at: 2000-01-23T04:56:07.000+00:00
-              tag_count_lore: 9.018348186070783
+              tag_count_lore: 9
               is_rating_locked: true
               has_active_children: true
               parent_id: 1.1730742509559433
-              tag_count_general: 4.145608029883936
+              tag_count_general: 4
               is_comment_disabled: true
               is_comment_locked: true
               generated_samples:
               - 720p
               - 720p
-              tag_count_meta: 5.025004791520295
+              tag_count_meta: 5
               is_flagged: true
               is_pending: true
-              uploader_id: 7.061401241503109
+              uploader_id: 7
               tag_string: tag_string
               created_at: 2000-01-23T04:56:07.000+00:00
               description: description
               pool_ids:
-              - 6.438423552598547
-              - 6.438423552598547
+              - 6
+              - 6
               duration: duration
               is_status_locked: true
               children_ids: children_ids
               large_file_url: large_file_url
               is_deleted: true
-              tag_count_species: 9.965781217890562
+              tag_count_species: 9
               updated_at: 2000-01-23T04:56:07.000+00:00
               is_note_locked: true
               file_size: 1.4894159098541704
@@ -12970,13 +13049,13 @@ components:
         body: body
         version: 7.061401241503109
         updated_at: 2000-01-23T04:56:07.000+00:00
-        post_id: 9.301444243932576
-        creator_id: 6.027456183070403
+        post_id: 9
+        creator_id: 6
         x: 1.4658129805029452
         width: 5.637376656633329
         "y": 5.962133916683182
         creator_name: creator_name
-        id: 0.8008281904610115
+        id: 0
         height: 2.3021358869347655
     editNote_request:
       properties:
@@ -13253,16 +13332,16 @@ components:
     searchPostEvents_200_response:
       example:
         post_events:
-        - post_id: 1.4658129805029452
-          creator_id: 6.027456183070403
+        - post_id: 1
+          creator_id: 6
           action: deleted
           created_at: 2000-01-23T04:56:07.000+00:00
-          id: 0.8008281904610115
-        - post_id: 1.4658129805029452
-          creator_id: 6.027456183070403
+          id: 0
+        - post_id: 1
+          creator_id: 6
           action: deleted
           created_at: 2000-01-23T04:56:07.000+00:00
-          id: 0.8008281904610115
+          id: 0
       properties:
         post_events:
           items:
@@ -13774,7 +13853,7 @@ components:
       - $ref: '#/components/schemas/FullUser'
     getUser_200_response:
       anyOf:
-      - $ref: '#/components/schemas/User'
+      - $ref: '#/components/schemas/FullUser'
       - $ref: '#/components/schemas/FullCurrentUser'
     editCurrentUser_request:
       properties:
@@ -13835,7 +13914,7 @@ components:
         user[profile_artinfo]:
           type: string
         user[avatar_id]:
-          type: number
+          type: integer
         user[enable_compact_uploader]:
           description: You must have uploaded at least 10 posts.
           type: boolean
@@ -14068,7 +14147,7 @@ components:
     IQDBResponse_post:
       example:
         posts:
-          comment_count: 6.683562403749608
+          comment_count: 6
           file_url: file_url
           is_favorited: true
           rating: s
@@ -14077,48 +14156,48 @@ components:
           source: source
           score: 2.3021358869347655
           has_large: true
-          fav_count: 3.616076749251911
-          tag_count: 2.027123023002322
+          fav_count: 3
+          tag_count: 2
           image_height: 7.457744773683766
           bit_flags: 4.965218492984954
-          tag_count_character: 1.2315135367772556
-          tag_count_invalid: 9.369310271410669
-          id: 1.4658129805029452
-          tag_count_artist: 7.386281948385884
-          down_score: 5.637376656633329
-          change_seq: 8.762042012749001
+          tag_count_character: 1
+          tag_count_invalid: 9
+          id: 1
+          tag_count_artist: 7
+          down_score: 5
+          change_seq: 8
           has_children: true
-          tag_count_copyright: 1.0246457001441578
-          approver_id: 9.301444243932576
+          tag_count_copyright: 1
+          approver_id: 9
           image_width: 6.84685269835264
-          up_score: 5.962133916683182
+          up_score: 5
           last_noted_at: 2000-01-23T04:56:07.000+00:00
-          tag_count_lore: 9.018348186070783
+          tag_count_lore: 9
           is_rating_locked: true
           has_active_children: true
           parent_id: 1.1730742509559433
-          tag_count_general: 4.145608029883936
+          tag_count_general: 4
           is_comment_disabled: true
           is_comment_locked: true
           generated_samples:
           - 720p
           - 720p
-          tag_count_meta: 5.025004791520295
+          tag_count_meta: 5
           is_flagged: true
           is_pending: true
-          uploader_id: 7.061401241503109
+          uploader_id: 7
           tag_string: tag_string
           created_at: 2000-01-23T04:56:07.000+00:00
           description: description
           pool_ids:
-          - 6.438423552598547
-          - 6.438423552598547
+          - 6
+          - 6
           duration: duration
           is_status_locked: true
           children_ids: children_ids
           large_file_url: large_file_url
           is_deleted: true
-          tag_count_species: 9.965781217890562
+          tag_count_species: 9
           updated_at: 2000-01-23T04:56:07.000+00:00
           is_note_locked: true
           file_size: 1.4894159098541704

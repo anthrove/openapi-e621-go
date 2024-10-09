@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Pattern** | **string** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewUploadWhitelist
 
-`func NewUploadWhitelist(id float32, createdAt time.Time, updatedAt time.Time, pattern string, note string, hidden bool, allowed bool, reason string, ) *UploadWhitelist`
+`func NewUploadWhitelist(id int32, createdAt time.Time, updatedAt time.Time, pattern string, note string, hidden bool, allowed bool, reason string, ) *UploadWhitelist`
 
 NewUploadWhitelist instantiates a new UploadWhitelist object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *UploadWhitelist) GetId() float32`
+`func (o *UploadWhitelist) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *UploadWhitelist) GetIdOk() (*float32, bool)`
+`func (o *UploadWhitelist) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *UploadWhitelist) SetId(v float32)`
+`func (o *UploadWhitelist) SetId(v int32)`
 
 SetId sets Id field to given value.
 

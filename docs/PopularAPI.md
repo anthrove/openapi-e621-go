@@ -28,7 +28,7 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
 	date := time.Now() // string | The date to list popular uploads for. Only The day, month, and year are considered. (optional)
 	scale := "scale_example" // string | The scale of the results, in relation to `date`. (optional)
 
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiListPopularRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
  **date** | **string** | The date to list popular uploads for. Only The day, month, and year are considered. | 
  **scale** | **string** | The scale of the results, in relation to &#x60;date&#x60;. | 
 
