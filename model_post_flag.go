@@ -22,9 +22,9 @@ var _ MappedNullable = &PostFlag{}
 
 // PostFlag struct for PostFlag
 type PostFlag struct {
-	Id         float32         `json:"id"`
+	Id         int32           `json:"id"`
 	CreatedAt  time.Time       `json:"created_at"`
-	PostId     float32         `json:"post_id"`
+	PostId     int32           `json:"post_id"`
 	Reason     string          `json:"reason"`
 	CreatorId  NullableFloat32 `json:"creator_id"`
 	IsResolved bool            `json:"is_resolved"`
@@ -39,7 +39,7 @@ type _PostFlag PostFlag
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostFlag(id float32, createdAt time.Time, postId float32, reason string, creatorId NullableFloat32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string) *PostFlag {
+func NewPostFlag(id int32, createdAt time.Time, postId int32, reason string, creatorId NullableFloat32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string) *PostFlag {
 	this := PostFlag{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -62,9 +62,9 @@ func NewPostFlagWithDefaults() *PostFlag {
 }
 
 // GetId returns the Id field value
-func (o *PostFlag) GetId() float32 {
+func (o *PostFlag) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -73,7 +73,7 @@ func (o *PostFlag) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PostFlag) GetIdOk() (*float32, bool) {
+func (o *PostFlag) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -81,7 +81,7 @@ func (o *PostFlag) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *PostFlag) SetId(v float32) {
+func (o *PostFlag) SetId(v int32) {
 	o.Id = v
 }
 
@@ -110,9 +110,9 @@ func (o *PostFlag) SetCreatedAt(v time.Time) {
 }
 
 // GetPostId returns the PostId field value
-func (o *PostFlag) GetPostId() float32 {
+func (o *PostFlag) GetPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -121,7 +121,7 @@ func (o *PostFlag) GetPostId() float32 {
 
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *PostFlag) GetPostIdOk() (*float32, bool) {
+func (o *PostFlag) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -129,7 +129,7 @@ func (o *PostFlag) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *PostFlag) SetPostId(v float32) {
+func (o *PostFlag) SetPostId(v int32) {
 	o.PostId = v
 }
 

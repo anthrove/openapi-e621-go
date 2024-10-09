@@ -22,17 +22,17 @@ var _ MappedNullable = &PostSet{}
 
 // PostSet struct for PostSet
 type PostSet struct {
-	Id               float32   `json:"id"`
+	Id               int32     `json:"id"`
 	CreatedAt        time.Time `json:"created_at"`
 	UpdatedAt        time.Time `json:"updated_at"`
-	CreatorId        float32   `json:"creator_id"`
+	CreatorId        int32     `json:"creator_id"`
 	IsPublic         bool      `json:"is_public"`
 	Name             string    `json:"name"`
 	Shortname        string    `json:"shortname"`
 	Description      string    `json:"description"`
-	PostCount        float32   `json:"post_count"`
+	PostCount        int32     `json:"post_count"`
 	TransferOnDelete bool      `json:"transfer_on_delete"`
-	PostIds          []float32 `json:"post_ids"`
+	PostIds          []int32   `json:"post_ids"`
 }
 
 type _PostSet PostSet
@@ -41,7 +41,7 @@ type _PostSet PostSet
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostSet(id float32, createdAt time.Time, updatedAt time.Time, creatorId float32, isPublic bool, name string, shortname string, description string, postCount float32, transferOnDelete bool, postIds []float32) *PostSet {
+func NewPostSet(id int32, createdAt time.Time, updatedAt time.Time, creatorId int32, isPublic bool, name string, shortname string, description string, postCount int32, transferOnDelete bool, postIds []int32) *PostSet {
 	this := PostSet{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -66,9 +66,9 @@ func NewPostSetWithDefaults() *PostSet {
 }
 
 // GetId returns the Id field value
-func (o *PostSet) GetId() float32 {
+func (o *PostSet) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -77,7 +77,7 @@ func (o *PostSet) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PostSet) GetIdOk() (*float32, bool) {
+func (o *PostSet) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -85,7 +85,7 @@ func (o *PostSet) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *PostSet) SetId(v float32) {
+func (o *PostSet) SetId(v int32) {
 	o.Id = v
 }
 
@@ -138,9 +138,9 @@ func (o *PostSet) SetUpdatedAt(v time.Time) {
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *PostSet) GetCreatorId() float32 {
+func (o *PostSet) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -149,7 +149,7 @@ func (o *PostSet) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *PostSet) GetCreatorIdOk() (*float32, bool) {
+func (o *PostSet) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -157,7 +157,7 @@ func (o *PostSet) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *PostSet) SetCreatorId(v float32) {
+func (o *PostSet) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 
@@ -258,9 +258,9 @@ func (o *PostSet) SetDescription(v string) {
 }
 
 // GetPostCount returns the PostCount field value
-func (o *PostSet) GetPostCount() float32 {
+func (o *PostSet) GetPostCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -269,7 +269,7 @@ func (o *PostSet) GetPostCount() float32 {
 
 // GetPostCountOk returns a tuple with the PostCount field value
 // and a boolean to check if the value has been set.
-func (o *PostSet) GetPostCountOk() (*float32, bool) {
+func (o *PostSet) GetPostCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -277,7 +277,7 @@ func (o *PostSet) GetPostCountOk() (*float32, bool) {
 }
 
 // SetPostCount sets field value
-func (o *PostSet) SetPostCount(v float32) {
+func (o *PostSet) SetPostCount(v int32) {
 	o.PostCount = v
 }
 
@@ -306,9 +306,9 @@ func (o *PostSet) SetTransferOnDelete(v bool) {
 }
 
 // GetPostIds returns the PostIds field value
-func (o *PostSet) GetPostIds() []float32 {
+func (o *PostSet) GetPostIds() []int32 {
 	if o == nil {
-		var ret []float32
+		var ret []int32
 		return ret
 	}
 
@@ -317,7 +317,7 @@ func (o *PostSet) GetPostIds() []float32 {
 
 // GetPostIdsOk returns a tuple with the PostIds field value
 // and a boolean to check if the value has been set.
-func (o *PostSet) GetPostIdsOk() ([]float32, bool) {
+func (o *PostSet) GetPostIdsOk() ([]int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -325,7 +325,7 @@ func (o *PostSet) GetPostIdsOk() ([]float32, bool) {
 }
 
 // SetPostIds sets field value
-func (o *PostSet) SetPostIds(v []float32) {
+func (o *PostSet) SetPostIds(v []int32) {
 	o.PostIds = v
 }
 

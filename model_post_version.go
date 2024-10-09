@@ -22,10 +22,10 @@ var _ MappedNullable = &PostVersion{}
 
 // PostVersion struct for PostVersion
 type PostVersion struct {
-	Id                  float32         `json:"id"`
-	PostId              float32         `json:"post_id"`
+	Id                  int32           `json:"id"`
+	PostId              int32           `json:"post_id"`
 	Tags                string          `json:"tags"`
-	UpdaterId           float32         `json:"updater_id"`
+	UpdaterId           int32           `json:"updater_id"`
 	UpdatedAt           time.Time       `json:"updated_at"`
 	Rating              Ratings         `json:"rating"`
 	ParentId            NullableFloat32 `json:"parent_id"`
@@ -54,7 +54,7 @@ type _PostVersion PostVersion
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostVersion(id float32, postId float32, tags string, updaterId float32, updatedAt time.Time, rating Ratings, parentId NullableFloat32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string) *PostVersion {
+func NewPostVersion(id int32, postId int32, tags string, updaterId int32, updatedAt time.Time, rating Ratings, parentId NullableFloat32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string) *PostVersion {
 	this := PostVersion{}
 	this.Id = id
 	this.PostId = postId
@@ -92,9 +92,9 @@ func NewPostVersionWithDefaults() *PostVersion {
 }
 
 // GetId returns the Id field value
-func (o *PostVersion) GetId() float32 {
+func (o *PostVersion) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -103,7 +103,7 @@ func (o *PostVersion) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PostVersion) GetIdOk() (*float32, bool) {
+func (o *PostVersion) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -111,14 +111,14 @@ func (o *PostVersion) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *PostVersion) SetId(v float32) {
+func (o *PostVersion) SetId(v int32) {
 	o.Id = v
 }
 
 // GetPostId returns the PostId field value
-func (o *PostVersion) GetPostId() float32 {
+func (o *PostVersion) GetPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -127,7 +127,7 @@ func (o *PostVersion) GetPostId() float32 {
 
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *PostVersion) GetPostIdOk() (*float32, bool) {
+func (o *PostVersion) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *PostVersion) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *PostVersion) SetPostId(v float32) {
+func (o *PostVersion) SetPostId(v int32) {
 	o.PostId = v
 }
 
@@ -164,9 +164,9 @@ func (o *PostVersion) SetTags(v string) {
 }
 
 // GetUpdaterId returns the UpdaterId field value
-func (o *PostVersion) GetUpdaterId() float32 {
+func (o *PostVersion) GetUpdaterId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -175,7 +175,7 @@ func (o *PostVersion) GetUpdaterId() float32 {
 
 // GetUpdaterIdOk returns a tuple with the UpdaterId field value
 // and a boolean to check if the value has been set.
-func (o *PostVersion) GetUpdaterIdOk() (*float32, bool) {
+func (o *PostVersion) GetUpdaterIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -183,7 +183,7 @@ func (o *PostVersion) GetUpdaterIdOk() (*float32, bool) {
 }
 
 // SetUpdaterId sets field value
-func (o *PostVersion) SetUpdaterId(v float32) {
+func (o *PostVersion) SetUpdaterId(v int32) {
 	o.UpdaterId = v
 }
 

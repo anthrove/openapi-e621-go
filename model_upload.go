@@ -22,10 +22,10 @@ var _ MappedNullable = &Upload{}
 
 // Upload struct for Upload
 type Upload struct {
-	Id         float32 `json:"id"`
+	Id         int32   `json:"id"`
 	Source     string  `json:"source"`
 	Rating     Ratings `json:"rating"`
-	UploaderId float32 `json:"uploader_id"`
+	UploaderId int32   `json:"uploader_id"`
 	TagString  string  `json:"tag_string"`
 	// Note: The \"error\" status will be proceeded by an error, ex: \"error: RuntimeError - No file or source URL provided\"
 	Status    string          `json:"status"`
@@ -51,7 +51,7 @@ type _Upload Upload
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUpload(id float32, source string, rating Ratings, uploaderId float32, tagString string, status string, backtrace NullableString, postId NullableFloat32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableFloat32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string) *Upload {
+func NewUpload(id int32, source string, rating Ratings, uploaderId int32, tagString string, status string, backtrace NullableString, postId NullableFloat32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableFloat32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string) *Upload {
 	this := Upload{}
 	this.Id = id
 	this.Source = source
@@ -84,9 +84,9 @@ func NewUploadWithDefaults() *Upload {
 }
 
 // GetId returns the Id field value
-func (o *Upload) GetId() float32 {
+func (o *Upload) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -95,7 +95,7 @@ func (o *Upload) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Upload) GetIdOk() (*float32, bool) {
+func (o *Upload) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *Upload) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *Upload) SetId(v float32) {
+func (o *Upload) SetId(v int32) {
 	o.Id = v
 }
 
@@ -156,9 +156,9 @@ func (o *Upload) SetRating(v Ratings) {
 }
 
 // GetUploaderId returns the UploaderId field value
-func (o *Upload) GetUploaderId() float32 {
+func (o *Upload) GetUploaderId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -167,7 +167,7 @@ func (o *Upload) GetUploaderId() float32 {
 
 // GetUploaderIdOk returns a tuple with the UploaderId field value
 // and a boolean to check if the value has been set.
-func (o *Upload) GetUploaderIdOk() (*float32, bool) {
+func (o *Upload) GetUploaderIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -175,7 +175,7 @@ func (o *Upload) GetUploaderIdOk() (*float32, bool) {
 }
 
 // SetUploaderId sets field value
-func (o *Upload) SetUploaderId(v float32) {
+func (o *Upload) SetUploaderId(v int32) {
 	o.UploaderId = v
 }
 

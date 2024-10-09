@@ -4,19 +4,32 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Name** | **string** |  | 
 **Level** | **float32** |  | 
-**BaseUploadLimit** | **float32** |  | 
-**PostUploadCount** | **float32** |  | 
-**PostUpdateCount** | **float32** |  | 
-**NoteUpdateCount** | **float32** |  | 
+**BaseUploadLimit** | **int32** |  | 
+**PostUploadCount** | **int32** |  | 
+**PostUpdateCount** | **int32** |  | 
+**NoteUpdateCount** | **int32** |  | 
 **IsBanned** | **bool** |  | 
 **CanApprovePosts** | **bool** |  | 
 **CanUploadFree** | **bool** |  | 
 **LevelString** | **string** |  | 
-**AvatarId** | **float32** |  | 
+**AvatarId** | **int32** |  | 
+**ArtistVersionCount** | **int32** |  | 
+**CommentCount** | **int32** |  | 
+**FavoritesCount** | Pointer to **int32** |  | [optional] 
+**FlagCount** | **int32** |  | 
+**ForumPostCount** | **int32** |  | 
+**NegativeFeedbackCount** | **int32** |  | 
+**NeutralFeedbackCount** | **int32** |  | 
+**PoolVersionCount** | **int32** |  | 
+**PositiveFeedbackCount** | **int32** |  | 
+**ProfileAbout** | **string** |  | 
+**ProfileArtinfo** | **string** |  | 
+**UploadLimit** | **int32** |  | 
+**WikiPageVersionCount** | **int32** |  | 
 **BlacklistUsers** | **bool** |  | 
 **DescriptionCollapsedInitially** | **bool** |  | 
 **HideComments** | **bool** |  | 
@@ -54,24 +67,12 @@ Name | Type | Description | Notes
 **FavoriteLimit** | **int32** |  | 
 **TagQueryLimit** | **int32** |  | 
 **HasMail** | **bool** |  | 
-**WikiPageVersionCount** | **int32** |  | 
-**ArtistVersionCount** | **int32** |  | 
-**PoolVersionCount** | **int32** |  | 
-**ForumPostCount** | **int32** |  | 
-**CommentCount** | **int32** |  | 
-**FlagCount** | **int32** |  | 
-**PositiveFeedbackCount** | **int32** |  | 
-**NeutralFeedbackCount** | **int32** |  | 
-**NegativeFeedbackCount** | **int32** |  | 
-**UploadLimit** | **int32** |  | 
-**ProfileAbout** | **string** |  | 
-**ProfileArtinfo** | **string** |  | 
 
 ## Methods
 
 ### NewFullCurrentUser
 
-`func NewFullCurrentUser(id float32, createdAt time.Time, name string, level float32, baseUploadLimit float32, postUploadCount float32, postUpdateCount float32, noteUpdateCount float32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId float32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, wikiPageVersionCount int32, artistVersionCount int32, poolVersionCount int32, forumPostCount int32, commentCount int32, flagCount int32, positiveFeedbackCount int32, neutralFeedbackCount int32, negativeFeedbackCount int32, uploadLimit int32, profileAbout string, profileArtinfo string, ) *FullCurrentUser`
+`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *FullCurrentUser`
 
 NewFullCurrentUser instantiates a new FullCurrentUser object
 This constructor will assign default values to properties that have it defined,
@@ -88,20 +89,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *FullCurrentUser) GetId() float32`
+`func (o *FullCurrentUser) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *FullCurrentUser) GetIdOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *FullCurrentUser) SetId(v float32)`
+`func (o *FullCurrentUser) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -168,80 +169,80 @@ SetLevel sets Level field to given value.
 
 ### GetBaseUploadLimit
 
-`func (o *FullCurrentUser) GetBaseUploadLimit() float32`
+`func (o *FullCurrentUser) GetBaseUploadLimit() int32`
 
 GetBaseUploadLimit returns the BaseUploadLimit field if non-nil, zero value otherwise.
 
 ### GetBaseUploadLimitOk
 
-`func (o *FullCurrentUser) GetBaseUploadLimitOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetBaseUploadLimitOk() (*int32, bool)`
 
 GetBaseUploadLimitOk returns a tuple with the BaseUploadLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBaseUploadLimit
 
-`func (o *FullCurrentUser) SetBaseUploadLimit(v float32)`
+`func (o *FullCurrentUser) SetBaseUploadLimit(v int32)`
 
 SetBaseUploadLimit sets BaseUploadLimit field to given value.
 
 
 ### GetPostUploadCount
 
-`func (o *FullCurrentUser) GetPostUploadCount() float32`
+`func (o *FullCurrentUser) GetPostUploadCount() int32`
 
 GetPostUploadCount returns the PostUploadCount field if non-nil, zero value otherwise.
 
 ### GetPostUploadCountOk
 
-`func (o *FullCurrentUser) GetPostUploadCountOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetPostUploadCountOk() (*int32, bool)`
 
 GetPostUploadCountOk returns a tuple with the PostUploadCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostUploadCount
 
-`func (o *FullCurrentUser) SetPostUploadCount(v float32)`
+`func (o *FullCurrentUser) SetPostUploadCount(v int32)`
 
 SetPostUploadCount sets PostUploadCount field to given value.
 
 
 ### GetPostUpdateCount
 
-`func (o *FullCurrentUser) GetPostUpdateCount() float32`
+`func (o *FullCurrentUser) GetPostUpdateCount() int32`
 
 GetPostUpdateCount returns the PostUpdateCount field if non-nil, zero value otherwise.
 
 ### GetPostUpdateCountOk
 
-`func (o *FullCurrentUser) GetPostUpdateCountOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetPostUpdateCountOk() (*int32, bool)`
 
 GetPostUpdateCountOk returns a tuple with the PostUpdateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostUpdateCount
 
-`func (o *FullCurrentUser) SetPostUpdateCount(v float32)`
+`func (o *FullCurrentUser) SetPostUpdateCount(v int32)`
 
 SetPostUpdateCount sets PostUpdateCount field to given value.
 
 
 ### GetNoteUpdateCount
 
-`func (o *FullCurrentUser) GetNoteUpdateCount() float32`
+`func (o *FullCurrentUser) GetNoteUpdateCount() int32`
 
 GetNoteUpdateCount returns the NoteUpdateCount field if non-nil, zero value otherwise.
 
 ### GetNoteUpdateCountOk
 
-`func (o *FullCurrentUser) GetNoteUpdateCountOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetNoteUpdateCountOk() (*int32, bool)`
 
 GetNoteUpdateCountOk returns a tuple with the NoteUpdateCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNoteUpdateCount
 
-`func (o *FullCurrentUser) SetNoteUpdateCount(v float32)`
+`func (o *FullCurrentUser) SetNoteUpdateCount(v int32)`
 
 SetNoteUpdateCount sets NoteUpdateCount field to given value.
 
@@ -328,22 +329,287 @@ SetLevelString sets LevelString field to given value.
 
 ### GetAvatarId
 
-`func (o *FullCurrentUser) GetAvatarId() float32`
+`func (o *FullCurrentUser) GetAvatarId() int32`
 
 GetAvatarId returns the AvatarId field if non-nil, zero value otherwise.
 
 ### GetAvatarIdOk
 
-`func (o *FullCurrentUser) GetAvatarIdOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetAvatarIdOk() (*int32, bool)`
 
 GetAvatarIdOk returns a tuple with the AvatarId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAvatarId
 
-`func (o *FullCurrentUser) SetAvatarId(v float32)`
+`func (o *FullCurrentUser) SetAvatarId(v int32)`
 
 SetAvatarId sets AvatarId field to given value.
+
+
+### GetArtistVersionCount
+
+`func (o *FullCurrentUser) GetArtistVersionCount() int32`
+
+GetArtistVersionCount returns the ArtistVersionCount field if non-nil, zero value otherwise.
+
+### GetArtistVersionCountOk
+
+`func (o *FullCurrentUser) GetArtistVersionCountOk() (*int32, bool)`
+
+GetArtistVersionCountOk returns a tuple with the ArtistVersionCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArtistVersionCount
+
+`func (o *FullCurrentUser) SetArtistVersionCount(v int32)`
+
+SetArtistVersionCount sets ArtistVersionCount field to given value.
+
+
+### GetCommentCount
+
+`func (o *FullCurrentUser) GetCommentCount() int32`
+
+GetCommentCount returns the CommentCount field if non-nil, zero value otherwise.
+
+### GetCommentCountOk
+
+`func (o *FullCurrentUser) GetCommentCountOk() (*int32, bool)`
+
+GetCommentCountOk returns a tuple with the CommentCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCommentCount
+
+`func (o *FullCurrentUser) SetCommentCount(v int32)`
+
+SetCommentCount sets CommentCount field to given value.
+
+
+### GetFavoritesCount
+
+`func (o *FullCurrentUser) GetFavoritesCount() int32`
+
+GetFavoritesCount returns the FavoritesCount field if non-nil, zero value otherwise.
+
+### GetFavoritesCountOk
+
+`func (o *FullCurrentUser) GetFavoritesCountOk() (*int32, bool)`
+
+GetFavoritesCountOk returns a tuple with the FavoritesCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFavoritesCount
+
+`func (o *FullCurrentUser) SetFavoritesCount(v int32)`
+
+SetFavoritesCount sets FavoritesCount field to given value.
+
+### HasFavoritesCount
+
+`func (o *FullCurrentUser) HasFavoritesCount() bool`
+
+HasFavoritesCount returns a boolean if a field has been set.
+
+### GetFlagCount
+
+`func (o *FullCurrentUser) GetFlagCount() int32`
+
+GetFlagCount returns the FlagCount field if non-nil, zero value otherwise.
+
+### GetFlagCountOk
+
+`func (o *FullCurrentUser) GetFlagCountOk() (*int32, bool)`
+
+GetFlagCountOk returns a tuple with the FlagCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlagCount
+
+`func (o *FullCurrentUser) SetFlagCount(v int32)`
+
+SetFlagCount sets FlagCount field to given value.
+
+
+### GetForumPostCount
+
+`func (o *FullCurrentUser) GetForumPostCount() int32`
+
+GetForumPostCount returns the ForumPostCount field if non-nil, zero value otherwise.
+
+### GetForumPostCountOk
+
+`func (o *FullCurrentUser) GetForumPostCountOk() (*int32, bool)`
+
+GetForumPostCountOk returns a tuple with the ForumPostCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetForumPostCount
+
+`func (o *FullCurrentUser) SetForumPostCount(v int32)`
+
+SetForumPostCount sets ForumPostCount field to given value.
+
+
+### GetNegativeFeedbackCount
+
+`func (o *FullCurrentUser) GetNegativeFeedbackCount() int32`
+
+GetNegativeFeedbackCount returns the NegativeFeedbackCount field if non-nil, zero value otherwise.
+
+### GetNegativeFeedbackCountOk
+
+`func (o *FullCurrentUser) GetNegativeFeedbackCountOk() (*int32, bool)`
+
+GetNegativeFeedbackCountOk returns a tuple with the NegativeFeedbackCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNegativeFeedbackCount
+
+`func (o *FullCurrentUser) SetNegativeFeedbackCount(v int32)`
+
+SetNegativeFeedbackCount sets NegativeFeedbackCount field to given value.
+
+
+### GetNeutralFeedbackCount
+
+`func (o *FullCurrentUser) GetNeutralFeedbackCount() int32`
+
+GetNeutralFeedbackCount returns the NeutralFeedbackCount field if non-nil, zero value otherwise.
+
+### GetNeutralFeedbackCountOk
+
+`func (o *FullCurrentUser) GetNeutralFeedbackCountOk() (*int32, bool)`
+
+GetNeutralFeedbackCountOk returns a tuple with the NeutralFeedbackCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeutralFeedbackCount
+
+`func (o *FullCurrentUser) SetNeutralFeedbackCount(v int32)`
+
+SetNeutralFeedbackCount sets NeutralFeedbackCount field to given value.
+
+
+### GetPoolVersionCount
+
+`func (o *FullCurrentUser) GetPoolVersionCount() int32`
+
+GetPoolVersionCount returns the PoolVersionCount field if non-nil, zero value otherwise.
+
+### GetPoolVersionCountOk
+
+`func (o *FullCurrentUser) GetPoolVersionCountOk() (*int32, bool)`
+
+GetPoolVersionCountOk returns a tuple with the PoolVersionCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoolVersionCount
+
+`func (o *FullCurrentUser) SetPoolVersionCount(v int32)`
+
+SetPoolVersionCount sets PoolVersionCount field to given value.
+
+
+### GetPositiveFeedbackCount
+
+`func (o *FullCurrentUser) GetPositiveFeedbackCount() int32`
+
+GetPositiveFeedbackCount returns the PositiveFeedbackCount field if non-nil, zero value otherwise.
+
+### GetPositiveFeedbackCountOk
+
+`func (o *FullCurrentUser) GetPositiveFeedbackCountOk() (*int32, bool)`
+
+GetPositiveFeedbackCountOk returns a tuple with the PositiveFeedbackCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPositiveFeedbackCount
+
+`func (o *FullCurrentUser) SetPositiveFeedbackCount(v int32)`
+
+SetPositiveFeedbackCount sets PositiveFeedbackCount field to given value.
+
+
+### GetProfileAbout
+
+`func (o *FullCurrentUser) GetProfileAbout() string`
+
+GetProfileAbout returns the ProfileAbout field if non-nil, zero value otherwise.
+
+### GetProfileAboutOk
+
+`func (o *FullCurrentUser) GetProfileAboutOk() (*string, bool)`
+
+GetProfileAboutOk returns a tuple with the ProfileAbout field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileAbout
+
+`func (o *FullCurrentUser) SetProfileAbout(v string)`
+
+SetProfileAbout sets ProfileAbout field to given value.
+
+
+### GetProfileArtinfo
+
+`func (o *FullCurrentUser) GetProfileArtinfo() string`
+
+GetProfileArtinfo returns the ProfileArtinfo field if non-nil, zero value otherwise.
+
+### GetProfileArtinfoOk
+
+`func (o *FullCurrentUser) GetProfileArtinfoOk() (*string, bool)`
+
+GetProfileArtinfoOk returns a tuple with the ProfileArtinfo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileArtinfo
+
+`func (o *FullCurrentUser) SetProfileArtinfo(v string)`
+
+SetProfileArtinfo sets ProfileArtinfo field to given value.
+
+
+### GetUploadLimit
+
+`func (o *FullCurrentUser) GetUploadLimit() int32`
+
+GetUploadLimit returns the UploadLimit field if non-nil, zero value otherwise.
+
+### GetUploadLimitOk
+
+`func (o *FullCurrentUser) GetUploadLimitOk() (*int32, bool)`
+
+GetUploadLimitOk returns a tuple with the UploadLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadLimit
+
+`func (o *FullCurrentUser) SetUploadLimit(v int32)`
+
+SetUploadLimit sets UploadLimit field to given value.
+
+
+### GetWikiPageVersionCount
+
+`func (o *FullCurrentUser) GetWikiPageVersionCount() int32`
+
+GetWikiPageVersionCount returns the WikiPageVersionCount field if non-nil, zero value otherwise.
+
+### GetWikiPageVersionCountOk
+
+`func (o *FullCurrentUser) GetWikiPageVersionCountOk() (*int32, bool)`
+
+GetWikiPageVersionCountOk returns a tuple with the WikiPageVersionCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWikiPageVersionCount
+
+`func (o *FullCurrentUser) SetWikiPageVersionCount(v int32)`
+
+SetWikiPageVersionCount sets WikiPageVersionCount field to given value.
 
 
 ### GetBlacklistUsers
@@ -1089,246 +1355,6 @@ and a boolean to check if the value has been set.
 `func (o *FullCurrentUser) SetHasMail(v bool)`
 
 SetHasMail sets HasMail field to given value.
-
-
-### GetWikiPageVersionCount
-
-`func (o *FullCurrentUser) GetWikiPageVersionCount() int32`
-
-GetWikiPageVersionCount returns the WikiPageVersionCount field if non-nil, zero value otherwise.
-
-### GetWikiPageVersionCountOk
-
-`func (o *FullCurrentUser) GetWikiPageVersionCountOk() (*int32, bool)`
-
-GetWikiPageVersionCountOk returns a tuple with the WikiPageVersionCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWikiPageVersionCount
-
-`func (o *FullCurrentUser) SetWikiPageVersionCount(v int32)`
-
-SetWikiPageVersionCount sets WikiPageVersionCount field to given value.
-
-
-### GetArtistVersionCount
-
-`func (o *FullCurrentUser) GetArtistVersionCount() int32`
-
-GetArtistVersionCount returns the ArtistVersionCount field if non-nil, zero value otherwise.
-
-### GetArtistVersionCountOk
-
-`func (o *FullCurrentUser) GetArtistVersionCountOk() (*int32, bool)`
-
-GetArtistVersionCountOk returns a tuple with the ArtistVersionCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArtistVersionCount
-
-`func (o *FullCurrentUser) SetArtistVersionCount(v int32)`
-
-SetArtistVersionCount sets ArtistVersionCount field to given value.
-
-
-### GetPoolVersionCount
-
-`func (o *FullCurrentUser) GetPoolVersionCount() int32`
-
-GetPoolVersionCount returns the PoolVersionCount field if non-nil, zero value otherwise.
-
-### GetPoolVersionCountOk
-
-`func (o *FullCurrentUser) GetPoolVersionCountOk() (*int32, bool)`
-
-GetPoolVersionCountOk returns a tuple with the PoolVersionCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPoolVersionCount
-
-`func (o *FullCurrentUser) SetPoolVersionCount(v int32)`
-
-SetPoolVersionCount sets PoolVersionCount field to given value.
-
-
-### GetForumPostCount
-
-`func (o *FullCurrentUser) GetForumPostCount() int32`
-
-GetForumPostCount returns the ForumPostCount field if non-nil, zero value otherwise.
-
-### GetForumPostCountOk
-
-`func (o *FullCurrentUser) GetForumPostCountOk() (*int32, bool)`
-
-GetForumPostCountOk returns a tuple with the ForumPostCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetForumPostCount
-
-`func (o *FullCurrentUser) SetForumPostCount(v int32)`
-
-SetForumPostCount sets ForumPostCount field to given value.
-
-
-### GetCommentCount
-
-`func (o *FullCurrentUser) GetCommentCount() int32`
-
-GetCommentCount returns the CommentCount field if non-nil, zero value otherwise.
-
-### GetCommentCountOk
-
-`func (o *FullCurrentUser) GetCommentCountOk() (*int32, bool)`
-
-GetCommentCountOk returns a tuple with the CommentCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCommentCount
-
-`func (o *FullCurrentUser) SetCommentCount(v int32)`
-
-SetCommentCount sets CommentCount field to given value.
-
-
-### GetFlagCount
-
-`func (o *FullCurrentUser) GetFlagCount() int32`
-
-GetFlagCount returns the FlagCount field if non-nil, zero value otherwise.
-
-### GetFlagCountOk
-
-`func (o *FullCurrentUser) GetFlagCountOk() (*int32, bool)`
-
-GetFlagCountOk returns a tuple with the FlagCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlagCount
-
-`func (o *FullCurrentUser) SetFlagCount(v int32)`
-
-SetFlagCount sets FlagCount field to given value.
-
-
-### GetPositiveFeedbackCount
-
-`func (o *FullCurrentUser) GetPositiveFeedbackCount() int32`
-
-GetPositiveFeedbackCount returns the PositiveFeedbackCount field if non-nil, zero value otherwise.
-
-### GetPositiveFeedbackCountOk
-
-`func (o *FullCurrentUser) GetPositiveFeedbackCountOk() (*int32, bool)`
-
-GetPositiveFeedbackCountOk returns a tuple with the PositiveFeedbackCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPositiveFeedbackCount
-
-`func (o *FullCurrentUser) SetPositiveFeedbackCount(v int32)`
-
-SetPositiveFeedbackCount sets PositiveFeedbackCount field to given value.
-
-
-### GetNeutralFeedbackCount
-
-`func (o *FullCurrentUser) GetNeutralFeedbackCount() int32`
-
-GetNeutralFeedbackCount returns the NeutralFeedbackCount field if non-nil, zero value otherwise.
-
-### GetNeutralFeedbackCountOk
-
-`func (o *FullCurrentUser) GetNeutralFeedbackCountOk() (*int32, bool)`
-
-GetNeutralFeedbackCountOk returns a tuple with the NeutralFeedbackCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNeutralFeedbackCount
-
-`func (o *FullCurrentUser) SetNeutralFeedbackCount(v int32)`
-
-SetNeutralFeedbackCount sets NeutralFeedbackCount field to given value.
-
-
-### GetNegativeFeedbackCount
-
-`func (o *FullCurrentUser) GetNegativeFeedbackCount() int32`
-
-GetNegativeFeedbackCount returns the NegativeFeedbackCount field if non-nil, zero value otherwise.
-
-### GetNegativeFeedbackCountOk
-
-`func (o *FullCurrentUser) GetNegativeFeedbackCountOk() (*int32, bool)`
-
-GetNegativeFeedbackCountOk returns a tuple with the NegativeFeedbackCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNegativeFeedbackCount
-
-`func (o *FullCurrentUser) SetNegativeFeedbackCount(v int32)`
-
-SetNegativeFeedbackCount sets NegativeFeedbackCount field to given value.
-
-
-### GetUploadLimit
-
-`func (o *FullCurrentUser) GetUploadLimit() int32`
-
-GetUploadLimit returns the UploadLimit field if non-nil, zero value otherwise.
-
-### GetUploadLimitOk
-
-`func (o *FullCurrentUser) GetUploadLimitOk() (*int32, bool)`
-
-GetUploadLimitOk returns a tuple with the UploadLimit field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadLimit
-
-`func (o *FullCurrentUser) SetUploadLimit(v int32)`
-
-SetUploadLimit sets UploadLimit field to given value.
-
-
-### GetProfileAbout
-
-`func (o *FullCurrentUser) GetProfileAbout() string`
-
-GetProfileAbout returns the ProfileAbout field if non-nil, zero value otherwise.
-
-### GetProfileAboutOk
-
-`func (o *FullCurrentUser) GetProfileAboutOk() (*string, bool)`
-
-GetProfileAboutOk returns a tuple with the ProfileAbout field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfileAbout
-
-`func (o *FullCurrentUser) SetProfileAbout(v string)`
-
-SetProfileAbout sets ProfileAbout field to given value.
-
-
-### GetProfileArtinfo
-
-`func (o *FullCurrentUser) GetProfileArtinfo() string`
-
-GetProfileArtinfo returns the ProfileArtinfo field if non-nil, zero value otherwise.
-
-### GetProfileArtinfoOk
-
-`func (o *FullCurrentUser) GetProfileArtinfoOk() (*string, bool)`
-
-GetProfileArtinfoOk returns a tuple with the ProfileArtinfo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfileArtinfo
-
-`func (o *FullCurrentUser) SetProfileArtinfo(v string)`
-
-SetProfileArtinfo sets ProfileArtinfo field to given value.
 
 
 

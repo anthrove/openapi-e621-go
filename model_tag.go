@@ -22,9 +22,9 @@ var _ MappedNullable = &Tag{}
 
 // Tag struct for Tag
 type Tag struct {
-	Id                   float32       `json:"id"`
+	Id                   int32         `json:"id"`
 	Name                 string        `json:"name"`
-	PostCount            float32       `json:"post_count"`
+	PostCount            int32         `json:"post_count"`
 	RelatedTags          []string      `json:"related_tags"`
 	RelatedTagsUpdatedAt NullableTime  `json:"related_tags_updated_at"`
 	Category             TagCategories `json:"category"`
@@ -39,7 +39,7 @@ type _Tag Tag
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTag(id float32, name string, postCount float32, relatedTags []string, relatedTagsUpdatedAt NullableTime, category TagCategories, isLocked bool, createdAt time.Time, updatedAt time.Time) *Tag {
+func NewTag(id int32, name string, postCount int32, relatedTags []string, relatedTagsUpdatedAt NullableTime, category TagCategories, isLocked bool, createdAt time.Time, updatedAt time.Time) *Tag {
 	this := Tag{}
 	this.Id = id
 	this.Name = name
@@ -62,9 +62,9 @@ func NewTagWithDefaults() *Tag {
 }
 
 // GetId returns the Id field value
-func (o *Tag) GetId() float32 {
+func (o *Tag) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -73,7 +73,7 @@ func (o *Tag) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Tag) GetIdOk() (*float32, bool) {
+func (o *Tag) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -81,7 +81,7 @@ func (o *Tag) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *Tag) SetId(v float32) {
+func (o *Tag) SetId(v int32) {
 	o.Id = v
 }
 
@@ -110,9 +110,9 @@ func (o *Tag) SetName(v string) {
 }
 
 // GetPostCount returns the PostCount field value
-func (o *Tag) GetPostCount() float32 {
+func (o *Tag) GetPostCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -121,7 +121,7 @@ func (o *Tag) GetPostCount() float32 {
 
 // GetPostCountOk returns a tuple with the PostCount field value
 // and a boolean to check if the value has been set.
-func (o *Tag) GetPostCountOk() (*float32, bool) {
+func (o *Tag) GetPostCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -129,7 +129,7 @@ func (o *Tag) GetPostCountOk() (*float32, bool) {
 }
 
 // SetPostCount sets field value
-func (o *Tag) SetPostCount(v float32) {
+func (o *Tag) SetPostCount(v int32) {
 	o.PostCount = v
 }
 

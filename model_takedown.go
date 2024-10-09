@@ -22,13 +22,13 @@ var _ MappedNullable = &Takedown{}
 
 // Takedown struct for Takedown
 type Takedown struct {
-	Id           float32         `json:"id"`
+	Id           int32           `json:"id"`
 	Status       string          `json:"status"`
 	ApproverId   NullableFloat32 `json:"approver_id"`
 	ReasonHidden bool            `json:"reason_hidden"`
 	CreatedAt    time.Time       `json:"created_at"`
 	UpdatedAt    time.Time       `json:"updated_at"`
-	PostCount    float32         `json:"post_count"`
+	PostCount    int32           `json:"post_count"`
 }
 
 type _Takedown Takedown
@@ -37,7 +37,7 @@ type _Takedown Takedown
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTakedown(id float32, status string, approverId NullableFloat32, reasonHidden bool, createdAt time.Time, updatedAt time.Time, postCount float32) *Takedown {
+func NewTakedown(id int32, status string, approverId NullableFloat32, reasonHidden bool, createdAt time.Time, updatedAt time.Time, postCount int32) *Takedown {
 	this := Takedown{}
 	this.Id = id
 	this.Status = status
@@ -58,9 +58,9 @@ func NewTakedownWithDefaults() *Takedown {
 }
 
 // GetId returns the Id field value
-func (o *Takedown) GetId() float32 {
+func (o *Takedown) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -69,7 +69,7 @@ func (o *Takedown) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Takedown) GetIdOk() (*float32, bool) {
+func (o *Takedown) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -77,7 +77,7 @@ func (o *Takedown) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *Takedown) SetId(v float32) {
+func (o *Takedown) SetId(v int32) {
 	o.Id = v
 }
 
@@ -204,9 +204,9 @@ func (o *Takedown) SetUpdatedAt(v time.Time) {
 }
 
 // GetPostCount returns the PostCount field value
-func (o *Takedown) GetPostCount() float32 {
+func (o *Takedown) GetPostCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -215,7 +215,7 @@ func (o *Takedown) GetPostCount() float32 {
 
 // GetPostCountOk returns a tuple with the PostCount field value
 // and a boolean to check if the value has been set.
-func (o *Takedown) GetPostCountOk() (*float32, bool) {
+func (o *Takedown) GetPostCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -223,7 +223,7 @@ func (o *Takedown) GetPostCountOk() (*float32, bool) {
 }
 
 // SetPostCount sets field value
-func (o *Takedown) SetPostCount(v float32) {
+func (o *Takedown) SetPostCount(v int32) {
 	o.PostCount = v
 }
 

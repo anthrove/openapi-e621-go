@@ -4,24 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **AntecedentName** | **string** |  | 
 **Reason** | **string** |  | 
-**CreatorId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
 **CreatedAt** | **NullableTime** |  | 
 **ForumPostId** | **NullableFloat32** |  | 
 **UpdatedAt** | **NullableTime** |  | 
 **ForumTopicId** | **NullableFloat32** |  | 
 **ConsequentName** | **string** |  | 
 **Status** | [**TagRequestStatuses**](TagRequestStatuses.md) | Note: The \&quot;error\&quot; status will be proceeded by an error, ex: \&quot;error: Validation failed: A tag alias for tag_name already exists\&quot;  | 
-**PostCount** | **float32** |  | 
+**PostCount** | **int32** |  | 
 **ApproverId** | **NullableFloat32** |  | 
 
 ## Methods
 
 ### NewTagAlias
 
-`func NewTagAlias(id float32, antecedentName string, reason string, creatorId float32, createdAt NullableTime, forumPostId NullableFloat32, updatedAt NullableTime, forumTopicId NullableFloat32, consequentName string, status TagRequestStatuses, postCount float32, approverId NullableFloat32, ) *TagAlias`
+`func NewTagAlias(id int32, antecedentName string, reason string, creatorId int32, createdAt NullableTime, forumPostId NullableFloat32, updatedAt NullableTime, forumTopicId NullableFloat32, consequentName string, status TagRequestStatuses, postCount int32, approverId NullableFloat32, ) *TagAlias`
 
 NewTagAlias instantiates a new TagAlias object
 This constructor will assign default values to properties that have it defined,
@@ -38,20 +38,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *TagAlias) GetId() float32`
+`func (o *TagAlias) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *TagAlias) GetIdOk() (*float32, bool)`
+`func (o *TagAlias) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *TagAlias) SetId(v float32)`
+`func (o *TagAlias) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -98,20 +98,20 @@ SetReason sets Reason field to given value.
 
 ### GetCreatorId
 
-`func (o *TagAlias) GetCreatorId() float32`
+`func (o *TagAlias) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *TagAlias) GetCreatorIdOk() (*float32, bool)`
+`func (o *TagAlias) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *TagAlias) SetCreatorId(v float32)`
+`func (o *TagAlias) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
@@ -278,20 +278,20 @@ SetStatus sets Status field to given value.
 
 ### GetPostCount
 
-`func (o *TagAlias) GetPostCount() float32`
+`func (o *TagAlias) GetPostCount() int32`
 
 GetPostCount returns the PostCount field if non-nil, zero value otherwise.
 
 ### GetPostCountOk
 
-`func (o *TagAlias) GetPostCountOk() (*float32, bool)`
+`func (o *TagAlias) GetPostCountOk() (*int32, bool)`
 
 GetPostCountOk returns a tuple with the PostCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostCount
 
-`func (o *TagAlias) SetPostCount(v float32)`
+`func (o *TagAlias) SetPostCount(v int32)`
 
 SetPostCount sets PostCount field to given value.
 

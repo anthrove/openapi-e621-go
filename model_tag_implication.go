@@ -22,9 +22,9 @@ var _ MappedNullable = &TagImplication{}
 
 // TagImplication struct for TagImplication
 type TagImplication struct {
-	Id             float32         `json:"id"`
+	Id             int32           `json:"id"`
 	Reason         string          `json:"reason"`
-	CreatorId      float32         `json:"creator_id"`
+	CreatorId      int32           `json:"creator_id"`
 	CreatedAt      time.Time       `json:"created_at"`
 	ForumPostId    NullableFloat32 `json:"forum_post_id"`
 	AntecedentName string          `json:"antecedent_name"`
@@ -43,7 +43,7 @@ type _TagImplication TagImplication
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagImplication(id float32, reason string, creatorId float32, createdAt time.Time, forumPostId NullableFloat32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableFloat32, updatedAt time.Time, descendantNames []string, approverId NullableFloat32) *TagImplication {
+func NewTagImplication(id int32, reason string, creatorId int32, createdAt time.Time, forumPostId NullableFloat32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableFloat32, updatedAt time.Time, descendantNames []string, approverId NullableFloat32) *TagImplication {
 	this := TagImplication{}
 	this.Id = id
 	this.Reason = reason
@@ -69,9 +69,9 @@ func NewTagImplicationWithDefaults() *TagImplication {
 }
 
 // GetId returns the Id field value
-func (o *TagImplication) GetId() float32 {
+func (o *TagImplication) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -80,7 +80,7 @@ func (o *TagImplication) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *TagImplication) GetIdOk() (*float32, bool) {
+func (o *TagImplication) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,7 +88,7 @@ func (o *TagImplication) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *TagImplication) SetId(v float32) {
+func (o *TagImplication) SetId(v int32) {
 	o.Id = v
 }
 
@@ -117,9 +117,9 @@ func (o *TagImplication) SetReason(v string) {
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *TagImplication) GetCreatorId() float32 {
+func (o *TagImplication) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -128,7 +128,7 @@ func (o *TagImplication) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *TagImplication) GetCreatorIdOk() (*float32, bool) {
+func (o *TagImplication) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -136,7 +136,7 @@ func (o *TagImplication) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *TagImplication) SetCreatorId(v float32) {
+func (o *TagImplication) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 

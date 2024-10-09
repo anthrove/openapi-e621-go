@@ -22,9 +22,9 @@ var _ MappedNullable = &PostEvent{}
 
 // PostEvent struct for PostEvent
 type PostEvent struct {
-	Id        float32          `json:"id"`
-	CreatorId NullableFloat32  `json:"creator_id"`
-	PostId    float32          `json:"post_id"`
+	Id        int32            `json:"id"`
+	CreatorId NullableInt32    `json:"creator_id"`
+	PostId    int32            `json:"post_id"`
 	Action    PostEventActions `json:"action"`
 	CreatedAt time.Time        `json:"created_at"`
 }
@@ -35,7 +35,7 @@ type _PostEvent PostEvent
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostEvent(id float32, creatorId NullableFloat32, postId float32, action PostEventActions, createdAt time.Time) *PostEvent {
+func NewPostEvent(id int32, creatorId NullableInt32, postId int32, action PostEventActions, createdAt time.Time) *PostEvent {
 	this := PostEvent{}
 	this.Id = id
 	this.CreatorId = creatorId
@@ -54,9 +54,9 @@ func NewPostEventWithDefaults() *PostEvent {
 }
 
 // GetId returns the Id field value
-func (o *PostEvent) GetId() float32 {
+func (o *PostEvent) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -65,7 +65,7 @@ func (o *PostEvent) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PostEvent) GetIdOk() (*float32, bool) {
+func (o *PostEvent) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -73,15 +73,15 @@ func (o *PostEvent) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *PostEvent) SetId(v float32) {
+func (o *PostEvent) SetId(v int32) {
 	o.Id = v
 }
 
 // GetCreatorId returns the CreatorId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *PostEvent) GetCreatorId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *PostEvent) GetCreatorId() int32 {
 	if o == nil || o.CreatorId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -91,7 +91,7 @@ func (o *PostEvent) GetCreatorId() float32 {
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PostEvent) GetCreatorIdOk() (*float32, bool) {
+func (o *PostEvent) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -99,14 +99,14 @@ func (o *PostEvent) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *PostEvent) SetCreatorId(v float32) {
+func (o *PostEvent) SetCreatorId(v int32) {
 	o.CreatorId.Set(&v)
 }
 
 // GetPostId returns the PostId field value
-func (o *PostEvent) GetPostId() float32 {
+func (o *PostEvent) GetPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -115,7 +115,7 @@ func (o *PostEvent) GetPostId() float32 {
 
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *PostEvent) GetPostIdOk() (*float32, bool) {
+func (o *PostEvent) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -123,7 +123,7 @@ func (o *PostEvent) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *PostEvent) SetPostId(v float32) {
+func (o *PostEvent) SetPostId(v int32) {
 	o.PostId = v
 }
 

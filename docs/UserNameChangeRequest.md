@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**ApproverId** | **float32** |  | 
-**UserId** | **float32** |  | 
+**Id** | **int32** |  | 
+**ApproverId** | **int32** |  | 
+**UserId** | **int32** |  | 
 **OriginalName** | **string** |  | 
 **DesiredName** | **string** |  | 
 **ChangeReason** | Pointer to **string** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewUserNameChangeRequest
 
-`func NewUserNameChangeRequest(id float32, approverId float32, userId float32, originalName string, desiredName string, createdAt time.Time, updatedAt time.Time, status string, ) *UserNameChangeRequest`
+`func NewUserNameChangeRequest(id int32, approverId int32, userId int32, originalName string, desiredName string, createdAt time.Time, updatedAt time.Time, status string, ) *UserNameChangeRequest`
 
 NewUserNameChangeRequest instantiates a new UserNameChangeRequest object
 This constructor will assign default values to properties that have it defined,
@@ -35,60 +35,60 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *UserNameChangeRequest) GetId() float32`
+`func (o *UserNameChangeRequest) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *UserNameChangeRequest) GetIdOk() (*float32, bool)`
+`func (o *UserNameChangeRequest) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *UserNameChangeRequest) SetId(v float32)`
+`func (o *UserNameChangeRequest) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetApproverId
 
-`func (o *UserNameChangeRequest) GetApproverId() float32`
+`func (o *UserNameChangeRequest) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *UserNameChangeRequest) GetApproverIdOk() (*float32, bool)`
+`func (o *UserNameChangeRequest) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *UserNameChangeRequest) SetApproverId(v float32)`
+`func (o *UserNameChangeRequest) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 
 
 ### GetUserId
 
-`func (o *UserNameChangeRequest) GetUserId() float32`
+`func (o *UserNameChangeRequest) GetUserId() int32`
 
 GetUserId returns the UserId field if non-nil, zero value otherwise.
 
 ### GetUserIdOk
 
-`func (o *UserNameChangeRequest) GetUserIdOk() (*float32, bool)`
+`func (o *UserNameChangeRequest) GetUserIdOk() (*int32, bool)`
 
 GetUserIdOk returns a tuple with the UserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserId
 
-`func (o *UserNameChangeRequest) SetUserId(v float32)`
+`func (o *UserNameChangeRequest) SetUserId(v int32)`
 
 SetUserId sets UserId field to given value.
 

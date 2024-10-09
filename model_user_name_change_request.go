@@ -22,9 +22,9 @@ var _ MappedNullable = &UserNameChangeRequest{}
 
 // UserNameChangeRequest struct for UserNameChangeRequest
 type UserNameChangeRequest struct {
-	Id           float32   `json:"id"`
-	ApproverId   float32   `json:"approver_id"`
-	UserId       float32   `json:"user_id"`
+	Id           int32     `json:"id"`
+	ApproverId   int32     `json:"approver_id"`
+	UserId       int32     `json:"user_id"`
 	OriginalName string    `json:"original_name"`
 	DesiredName  string    `json:"desired_name"`
 	ChangeReason *string   `json:"change_reason,omitempty"`
@@ -39,7 +39,7 @@ type _UserNameChangeRequest UserNameChangeRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUserNameChangeRequest(id float32, approverId float32, userId float32, originalName string, desiredName string, createdAt time.Time, updatedAt time.Time, status string) *UserNameChangeRequest {
+func NewUserNameChangeRequest(id int32, approverId int32, userId int32, originalName string, desiredName string, createdAt time.Time, updatedAt time.Time, status string) *UserNameChangeRequest {
 	this := UserNameChangeRequest{}
 	this.Id = id
 	this.ApproverId = approverId
@@ -61,9 +61,9 @@ func NewUserNameChangeRequestWithDefaults() *UserNameChangeRequest {
 }
 
 // GetId returns the Id field value
-func (o *UserNameChangeRequest) GetId() float32 {
+func (o *UserNameChangeRequest) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -72,7 +72,7 @@ func (o *UserNameChangeRequest) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *UserNameChangeRequest) GetIdOk() (*float32, bool) {
+func (o *UserNameChangeRequest) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -80,14 +80,14 @@ func (o *UserNameChangeRequest) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *UserNameChangeRequest) SetId(v float32) {
+func (o *UserNameChangeRequest) SetId(v int32) {
 	o.Id = v
 }
 
 // GetApproverId returns the ApproverId field value
-func (o *UserNameChangeRequest) GetApproverId() float32 {
+func (o *UserNameChangeRequest) GetApproverId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -96,7 +96,7 @@ func (o *UserNameChangeRequest) GetApproverId() float32 {
 
 // GetApproverIdOk returns a tuple with the ApproverId field value
 // and a boolean to check if the value has been set.
-func (o *UserNameChangeRequest) GetApproverIdOk() (*float32, bool) {
+func (o *UserNameChangeRequest) GetApproverIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -104,14 +104,14 @@ func (o *UserNameChangeRequest) GetApproverIdOk() (*float32, bool) {
 }
 
 // SetApproverId sets field value
-func (o *UserNameChangeRequest) SetApproverId(v float32) {
+func (o *UserNameChangeRequest) SetApproverId(v int32) {
 	o.ApproverId = v
 }
 
 // GetUserId returns the UserId field value
-func (o *UserNameChangeRequest) GetUserId() float32 {
+func (o *UserNameChangeRequest) GetUserId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -120,7 +120,7 @@ func (o *UserNameChangeRequest) GetUserId() float32 {
 
 // GetUserIdOk returns a tuple with the UserId field value
 // and a boolean to check if the value has been set.
-func (o *UserNameChangeRequest) GetUserIdOk() (*float32, bool) {
+func (o *UserNameChangeRequest) GetUserIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -128,7 +128,7 @@ func (o *UserNameChangeRequest) GetUserIdOk() (*float32, bool) {
 }
 
 // SetUserId sets field value
-func (o *UserNameChangeRequest) SetUserId(v float32) {
+func (o *UserNameChangeRequest) SetUserId(v int32) {
 	o.UserId = v
 }
 

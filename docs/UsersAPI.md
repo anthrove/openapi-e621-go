@@ -31,7 +31,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the user. The actual value is ignored, but something must be supplied.
+	id := int32(56) // int32 | The ID of the user. The actual value is ignored, but something must be supplied.
 	userCommentThreshold := float32(8.14) // float32 |  (optional)
 	userDefaultImageSize := "userDefaultImageSize_example" // string |  (optional)
 	userFavoriteTags := "userFavoriteTags_example" // string |  (optional)
@@ -57,7 +57,7 @@ func main() {
 	userDmailFilterAttributesWords := "userDmailFilterAttributesWords_example" // string |  (optional)
 	userProfileAbout := "userProfileAbout_example" // string |  (optional)
 	userProfileArtinfo := "userProfileArtinfo_example" // string |  (optional)
-	userAvatarId := float32(8.14) // float32 |  (optional)
+	userAvatarId := int32(56) // int32 |  (optional)
 	userEnableCompactUploader := true // bool | You must have uploaded at least 10 posts. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -76,7 +76,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the user. The actual value is ignored, but something must be supplied. | 
+**id** | **int32** | The ID of the user. The actual value is ignored, but something must be supplied. | 
 
 ### Other Parameters
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
  **userDmailFilterAttributesWords** | **string** |  | 
  **userProfileAbout** | **string** |  | 
  **userProfileArtinfo** | **string** |  | 
- **userAvatarId** | **float32** |  | 
+ **userAvatarId** | **int32** |  | 
  **userEnableCompactUploader** | **bool** | You must have uploaded at least 10 posts. | 
 
 ### Return type
@@ -269,7 +269,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the user.
+	id := GetUserIdParameter(56) // GetUserIdParameter | The ID of the user.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -289,7 +289,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the user. | 
+**id** | **GetUserIdParameter** | The ID of the user. | 
 
 ### Other Parameters
 

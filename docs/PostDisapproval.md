@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**UserId** | **float32** |  | 
-**PostId** | **float32** |  | 
+**Id** | **int32** |  | 
+**UserId** | **int32** |  | 
+**PostId** | **int32** |  | 
 **Reason** | **string** |  | 
 **Message** | **NullableString** |  | 
 **CreatedAt** | **time.Time** |  | 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewPostDisapproval
 
-`func NewPostDisapproval(id float32, userId float32, postId float32, reason string, message NullableString, createdAt time.Time, updatedAt time.Time, ) *PostDisapproval`
+`func NewPostDisapproval(id int32, userId int32, postId int32, reason string, message NullableString, createdAt time.Time, updatedAt time.Time, ) *PostDisapproval`
 
 NewPostDisapproval instantiates a new PostDisapproval object
 This constructor will assign default values to properties that have it defined,
@@ -33,60 +33,60 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PostDisapproval) GetId() float32`
+`func (o *PostDisapproval) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PostDisapproval) GetIdOk() (*float32, bool)`
+`func (o *PostDisapproval) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PostDisapproval) SetId(v float32)`
+`func (o *PostDisapproval) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetUserId
 
-`func (o *PostDisapproval) GetUserId() float32`
+`func (o *PostDisapproval) GetUserId() int32`
 
 GetUserId returns the UserId field if non-nil, zero value otherwise.
 
 ### GetUserIdOk
 
-`func (o *PostDisapproval) GetUserIdOk() (*float32, bool)`
+`func (o *PostDisapproval) GetUserIdOk() (*int32, bool)`
 
 GetUserIdOk returns a tuple with the UserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserId
 
-`func (o *PostDisapproval) SetUserId(v float32)`
+`func (o *PostDisapproval) SetUserId(v int32)`
 
 SetUserId sets UserId field to given value.
 
 
 ### GetPostId
 
-`func (o *PostDisapproval) GetPostId() float32`
+`func (o *PostDisapproval) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *PostDisapproval) GetPostIdOk() (*float32, bool)`
+`func (o *PostDisapproval) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *PostDisapproval) SetPostId(v float32)`
+`func (o *PostDisapproval) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 

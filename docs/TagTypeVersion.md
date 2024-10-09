@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **OldType** | [**TagCategories**](TagCategories.md) |  | 
 **NewType** | [**TagCategories**](TagCategories.md) |  | 
 **IsLocked** | **bool** |  | 
-**TagId** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**TagId** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 
 ## Methods
 
 ### NewTagTypeVersion
 
-`func NewTagTypeVersion(id float32, createdAt time.Time, updatedAt time.Time, oldType TagCategories, newType TagCategories, isLocked bool, tagId float32, creatorId float32, ) *TagTypeVersion`
+`func NewTagTypeVersion(id int32, createdAt time.Time, updatedAt time.Time, oldType TagCategories, newType TagCategories, isLocked bool, tagId int32, creatorId int32, ) *TagTypeVersion`
 
 NewTagTypeVersion instantiates a new TagTypeVersion object
 This constructor will assign default values to properties that have it defined,
@@ -34,20 +34,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *TagTypeVersion) GetId() float32`
+`func (o *TagTypeVersion) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *TagTypeVersion) GetIdOk() (*float32, bool)`
+`func (o *TagTypeVersion) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *TagTypeVersion) SetId(v float32)`
+`func (o *TagTypeVersion) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -154,40 +154,40 @@ SetIsLocked sets IsLocked field to given value.
 
 ### GetTagId
 
-`func (o *TagTypeVersion) GetTagId() float32`
+`func (o *TagTypeVersion) GetTagId() int32`
 
 GetTagId returns the TagId field if non-nil, zero value otherwise.
 
 ### GetTagIdOk
 
-`func (o *TagTypeVersion) GetTagIdOk() (*float32, bool)`
+`func (o *TagTypeVersion) GetTagIdOk() (*int32, bool)`
 
 GetTagIdOk returns a tuple with the TagId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagId
 
-`func (o *TagTypeVersion) SetTagId(v float32)`
+`func (o *TagTypeVersion) SetTagId(v int32)`
 
 SetTagId sets TagId field to given value.
 
 
 ### GetCreatorId
 
-`func (o *TagTypeVersion) GetCreatorId() float32`
+`func (o *TagTypeVersion) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *TagTypeVersion) GetCreatorIdOk() (*float32, bool)`
+`func (o *TagTypeVersion) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *TagTypeVersion) SetCreatorId(v float32)`
+`func (o *TagTypeVersion) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

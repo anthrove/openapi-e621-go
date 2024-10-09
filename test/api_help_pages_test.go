@@ -11,10 +11,11 @@ package e621
 
 import (
 	"context"
+	"testing"
+
 	openapiclient "github.com/anthrove/openapi-e621-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func Test_e621_HelpPagesAPIService(t *testing.T) {
@@ -64,7 +65,7 @@ func Test_e621_HelpPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id GetArtistIdOrNameParameter
+		var id openapiclient.GetArtistIdOrNameParameter
 
 		resp, httpRes, err := apiClient.HelpPagesAPI.GetHelpPage(context.Background(), id).Execute()
 

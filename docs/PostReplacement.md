@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**PostId** | **float32** |  | 
-**CreatorId** | **float32** |  | 
-**ApproverId** | **NullableFloat32** |  | 
+**PostId** | **int32** |  | 
+**CreatorId** | **int32** |  | 
+**ApproverId** | **NullableInt32** |  | 
 **FileExt** | **string** |  | 
 **FileSize** | **float32** |  | 
 **ImageHeight** | **float32** |  | 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewPostReplacement
 
-`func NewPostReplacement(id float32, createdAt time.Time, updatedAt time.Time, postId float32, creatorId float32, approverId NullableFloat32, fileExt string, fileSize float32, imageHeight float32, imageWidth float32, md5 string, source string, fileName string, status string, reason string, ) *PostReplacement`
+`func NewPostReplacement(id int32, createdAt time.Time, updatedAt time.Time, postId int32, creatorId int32, approverId NullableInt32, fileExt string, fileSize float32, imageHeight float32, imageWidth float32, md5 string, source string, fileName string, status string, reason string, ) *PostReplacement`
 
 NewPostReplacement instantiates a new PostReplacement object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PostReplacement) GetId() float32`
+`func (o *PostReplacement) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PostReplacement) GetIdOk() (*float32, bool)`
+`func (o *PostReplacement) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PostReplacement) SetId(v float32)`
+`func (o *PostReplacement) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -101,60 +101,60 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetPostId
 
-`func (o *PostReplacement) GetPostId() float32`
+`func (o *PostReplacement) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *PostReplacement) GetPostIdOk() (*float32, bool)`
+`func (o *PostReplacement) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *PostReplacement) SetPostId(v float32)`
+`func (o *PostReplacement) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 
 
 ### GetCreatorId
 
-`func (o *PostReplacement) GetCreatorId() float32`
+`func (o *PostReplacement) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *PostReplacement) GetCreatorIdOk() (*float32, bool)`
+`func (o *PostReplacement) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *PostReplacement) SetCreatorId(v float32)`
+`func (o *PostReplacement) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
 
 ### GetApproverId
 
-`func (o *PostReplacement) GetApproverId() float32`
+`func (o *PostReplacement) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *PostReplacement) GetApproverIdOk() (*float32, bool)`
+`func (o *PostReplacement) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *PostReplacement) SetApproverId(v float32)`
+`func (o *PostReplacement) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 

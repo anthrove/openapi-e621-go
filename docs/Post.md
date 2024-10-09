@@ -16,14 +16,14 @@ Name | Type | Description | Notes
 **ChangeSeq** | **float32** |  | 
 **Flags** | [**PostFlags**](PostFlags.md) |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
-**FavCount** | **float32** |  | 
+**FavCount** | **int32** |  | 
 **Sources** | **[]string** |  | 
-**Pools** | **[]float32** |  | 
+**Pools** | **[]int32** |  | 
 **Relationships** | [**PostRelationships**](PostRelationships.md) |  | 
 **ApproverId** | **NullableFloat32** |  | 
-**UploaderId** | **float32** |  | 
+**UploaderId** | **int32** |  | 
 **Description** | **string** |  | 
-**CommentCount** | **float32** |  | 
+**CommentCount** | **int32** |  | 
 **IsFavorited** | **bool** |  | 
 **HasNotes** | **bool** |  | 
 **Duration** | **NullableFloat32** |  | 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 
 ### NewPost
 
-`func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount float32, sources []string, pools []float32, relationships PostRelationships, approverId NullableFloat32, uploaderId float32, description string, commentCount float32, isFavorited bool, hasNotes bool, duration NullableFloat32, ) *Post`
+`func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount int32, sources []string, pools []int32, relationships PostRelationships, approverId NullableFloat32, uploaderId int32, description string, commentCount int32, isFavorited bool, hasNotes bool, duration NullableFloat32, ) *Post`
 
 NewPost instantiates a new Post object
 This constructor will assign default values to properties that have it defined,
@@ -289,20 +289,20 @@ SetRating sets Rating field to given value.
 
 ### GetFavCount
 
-`func (o *Post) GetFavCount() float32`
+`func (o *Post) GetFavCount() int32`
 
 GetFavCount returns the FavCount field if non-nil, zero value otherwise.
 
 ### GetFavCountOk
 
-`func (o *Post) GetFavCountOk() (*float32, bool)`
+`func (o *Post) GetFavCountOk() (*int32, bool)`
 
 GetFavCountOk returns a tuple with the FavCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFavCount
 
-`func (o *Post) SetFavCount(v float32)`
+`func (o *Post) SetFavCount(v int32)`
 
 SetFavCount sets FavCount field to given value.
 
@@ -329,20 +329,20 @@ SetSources sets Sources field to given value.
 
 ### GetPools
 
-`func (o *Post) GetPools() []float32`
+`func (o *Post) GetPools() []int32`
 
 GetPools returns the Pools field if non-nil, zero value otherwise.
 
 ### GetPoolsOk
 
-`func (o *Post) GetPoolsOk() (*[]float32, bool)`
+`func (o *Post) GetPoolsOk() (*[]int32, bool)`
 
 GetPoolsOk returns a tuple with the Pools field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPools
 
-`func (o *Post) SetPools(v []float32)`
+`func (o *Post) SetPools(v []int32)`
 
 SetPools sets Pools field to given value.
 
@@ -399,20 +399,20 @@ SetApproverId sets ApproverId field to given value.
 UnsetApproverId ensures that no value is present for ApproverId, not even an explicit nil
 ### GetUploaderId
 
-`func (o *Post) GetUploaderId() float32`
+`func (o *Post) GetUploaderId() int32`
 
 GetUploaderId returns the UploaderId field if non-nil, zero value otherwise.
 
 ### GetUploaderIdOk
 
-`func (o *Post) GetUploaderIdOk() (*float32, bool)`
+`func (o *Post) GetUploaderIdOk() (*int32, bool)`
 
 GetUploaderIdOk returns a tuple with the UploaderId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUploaderId
 
-`func (o *Post) SetUploaderId(v float32)`
+`func (o *Post) SetUploaderId(v int32)`
 
 SetUploaderId sets UploaderId field to given value.
 
@@ -439,20 +439,20 @@ SetDescription sets Description field to given value.
 
 ### GetCommentCount
 
-`func (o *Post) GetCommentCount() float32`
+`func (o *Post) GetCommentCount() int32`
 
 GetCommentCount returns the CommentCount field if non-nil, zero value otherwise.
 
 ### GetCommentCountOk
 
-`func (o *Post) GetCommentCountOk() (*float32, bool)`
+`func (o *Post) GetCommentCountOk() (*int32, bool)`
 
 GetCommentCountOk returns a tuple with the CommentCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommentCount
 
-`func (o *Post) SetCommentCount(v float32)`
+`func (o *Post) SetCommentCount(v int32)`
 
 SetCommentCount sets CommentCount field to given value.
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**Id** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 **Reason** | **string** |  | 
 **DispId** | **float32** |  | 
 **Qtype** | [**TicketTypes**](TicketTypes.md) |  | 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewTicket
 
-`func NewTicket(id float32, creatorId float32, reason string, dispId float32, qtype TicketTypes, status TicketStatuses, createdAt time.Time, updatedAt time.Time, response string, handlerId NullableFloat32, reportReason NullableString, accusedId NullableFloat32, ) *Ticket`
+`func NewTicket(id int32, creatorId int32, reason string, dispId float32, qtype TicketTypes, status TicketStatuses, createdAt time.Time, updatedAt time.Time, response string, handlerId NullableFloat32, reportReason NullableString, accusedId NullableFloat32, ) *Ticket`
 
 NewTicket instantiates a new Ticket object
 This constructor will assign default values to properties that have it defined,
@@ -39,40 +39,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Ticket) GetId() float32`
+`func (o *Ticket) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Ticket) GetIdOk() (*float32, bool)`
+`func (o *Ticket) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Ticket) SetId(v float32)`
+`func (o *Ticket) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetCreatorId
 
-`func (o *Ticket) GetCreatorId() float32`
+`func (o *Ticket) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *Ticket) GetCreatorIdOk() (*float32, bool)`
+`func (o *Ticket) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *Ticket) SetCreatorId(v float32)`
+`func (o *Ticket) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

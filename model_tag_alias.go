@@ -22,10 +22,10 @@ var _ MappedNullable = &TagAlias{}
 
 // TagAlias struct for TagAlias
 type TagAlias struct {
-	Id             float32         `json:"id"`
+	Id             int32           `json:"id"`
 	AntecedentName string          `json:"antecedent_name"`
 	Reason         string          `json:"reason"`
-	CreatorId      float32         `json:"creator_id"`
+	CreatorId      int32           `json:"creator_id"`
 	CreatedAt      NullableTime    `json:"created_at"`
 	ForumPostId    NullableFloat32 `json:"forum_post_id"`
 	UpdatedAt      NullableTime    `json:"updated_at"`
@@ -33,7 +33,7 @@ type TagAlias struct {
 	ConsequentName string          `json:"consequent_name"`
 	// Note: The \"error\" status will be proceeded by an error, ex: \"error: Validation failed: A tag alias for tag_name already exists\"
 	Status     TagRequestStatuses `json:"status"`
-	PostCount  float32            `json:"post_count"`
+	PostCount  int32              `json:"post_count"`
 	ApproverId NullableFloat32    `json:"approver_id"`
 }
 
@@ -43,7 +43,7 @@ type _TagAlias TagAlias
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagAlias(id float32, antecedentName string, reason string, creatorId float32, createdAt NullableTime, forumPostId NullableFloat32, updatedAt NullableTime, forumTopicId NullableFloat32, consequentName string, status TagRequestStatuses, postCount float32, approverId NullableFloat32) *TagAlias {
+func NewTagAlias(id int32, antecedentName string, reason string, creatorId int32, createdAt NullableTime, forumPostId NullableFloat32, updatedAt NullableTime, forumTopicId NullableFloat32, consequentName string, status TagRequestStatuses, postCount int32, approverId NullableFloat32) *TagAlias {
 	this := TagAlias{}
 	this.Id = id
 	this.AntecedentName = antecedentName
@@ -69,9 +69,9 @@ func NewTagAliasWithDefaults() *TagAlias {
 }
 
 // GetId returns the Id field value
-func (o *TagAlias) GetId() float32 {
+func (o *TagAlias) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -80,7 +80,7 @@ func (o *TagAlias) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *TagAlias) GetIdOk() (*float32, bool) {
+func (o *TagAlias) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -88,7 +88,7 @@ func (o *TagAlias) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *TagAlias) SetId(v float32) {
+func (o *TagAlias) SetId(v int32) {
 	o.Id = v
 }
 
@@ -141,9 +141,9 @@ func (o *TagAlias) SetReason(v string) {
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *TagAlias) GetCreatorId() float32 {
+func (o *TagAlias) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -152,7 +152,7 @@ func (o *TagAlias) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *TagAlias) GetCreatorIdOk() (*float32, bool) {
+func (o *TagAlias) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -160,7 +160,7 @@ func (o *TagAlias) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *TagAlias) SetCreatorId(v float32) {
+func (o *TagAlias) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 
@@ -317,9 +317,9 @@ func (o *TagAlias) SetStatus(v TagRequestStatuses) {
 }
 
 // GetPostCount returns the PostCount field value
-func (o *TagAlias) GetPostCount() float32 {
+func (o *TagAlias) GetPostCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -328,7 +328,7 @@ func (o *TagAlias) GetPostCount() float32 {
 
 // GetPostCountOk returns a tuple with the PostCount field value
 // and a boolean to check if the value has been set.
-func (o *TagAlias) GetPostCountOk() (*float32, bool) {
+func (o *TagAlias) GetPostCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -336,7 +336,7 @@ func (o *TagAlias) GetPostCountOk() (*float32, bool) {
 }
 
 // SetPostCount sets field value
-func (o *TagAlias) SetPostCount(v float32) {
+func (o *TagAlias) SetPostCount(v int32) {
 	o.PostCount = v
 }
 

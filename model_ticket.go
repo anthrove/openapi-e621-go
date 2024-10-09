@@ -22,8 +22,8 @@ var _ MappedNullable = &Ticket{}
 
 // Ticket struct for Ticket
 type Ticket struct {
-	Id        float32         `json:"id"`
-	CreatorId float32         `json:"creator_id"`
+	Id        int32           `json:"id"`
+	CreatorId int32           `json:"creator_id"`
 	Reason    string          `json:"reason"`
 	DispId    float32         `json:"disp_id"`
 	Qtype     TicketTypes     `json:"qtype"`
@@ -44,7 +44,7 @@ type _Ticket Ticket
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTicket(id float32, creatorId float32, reason string, dispId float32, qtype TicketTypes, status TicketStatuses, createdAt time.Time, updatedAt time.Time, response string, handlerId NullableFloat32, reportReason NullableString, accusedId NullableFloat32) *Ticket {
+func NewTicket(id int32, creatorId int32, reason string, dispId float32, qtype TicketTypes, status TicketStatuses, createdAt time.Time, updatedAt time.Time, response string, handlerId NullableFloat32, reportReason NullableString, accusedId NullableFloat32) *Ticket {
 	this := Ticket{}
 	this.Id = id
 	this.CreatorId = creatorId
@@ -70,9 +70,9 @@ func NewTicketWithDefaults() *Ticket {
 }
 
 // GetId returns the Id field value
-func (o *Ticket) GetId() float32 {
+func (o *Ticket) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -81,7 +81,7 @@ func (o *Ticket) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Ticket) GetIdOk() (*float32, bool) {
+func (o *Ticket) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -89,14 +89,14 @@ func (o *Ticket) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *Ticket) SetId(v float32) {
+func (o *Ticket) SetId(v int32) {
 	o.Id = v
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *Ticket) GetCreatorId() float32 {
+func (o *Ticket) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -105,7 +105,7 @@ func (o *Ticket) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *Ticket) GetCreatorIdOk() (*float32, bool) {
+func (o *Ticket) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -113,7 +113,7 @@ func (o *Ticket) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *Ticket) SetCreatorId(v float32) {
+func (o *Ticket) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 

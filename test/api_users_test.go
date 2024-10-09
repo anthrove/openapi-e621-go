@@ -11,10 +11,11 @@ package e621
 
 import (
 	"context"
+	"testing"
+
 	openapiclient "github.com/anthrove/openapi-e621-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func Test_e621_UsersAPIService(t *testing.T) {
@@ -26,7 +27,7 @@ func Test_e621_UsersAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UsersAPI.EditCurrentUser(context.Background(), id).Execute()
 
@@ -62,7 +63,7 @@ func Test_e621_UsersAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id openapiclient.GetUserIdParameter
 
 		resp, httpRes, err := apiClient.UsersAPI.GetUser(context.Background(), id).Execute()
 
