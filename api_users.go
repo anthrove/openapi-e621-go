@@ -588,7 +588,7 @@ func (a *UsersAPIService) GetCurrentUserExecute(r UsersAPIGetCurrentUserRequest)
 type UsersAPIGetUserRequest struct {
 	ctx        context.Context
 	ApiService *UsersAPIService
-	id         GetUserIdParameter
+	id         string
 }
 
 func (r UsersAPIGetUserRequest) Execute() (*GetUser200Response, *http.Response, error) {
@@ -599,10 +599,10 @@ func (r UsersAPIGetUserRequest) Execute() (*GetUser200Response, *http.Response, 
 GetUser Get User
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id The ID of the user.
+	@param id The ID or Username of the user.
 	@return UsersAPIGetUserRequest
 */
-func (a *UsersAPIService) GetUser(ctx context.Context, id GetUserIdParameter) UsersAPIGetUserRequest {
+func (a *UsersAPIService) GetUser(ctx context.Context, id string) UsersAPIGetUserRequest {
 	return UsersAPIGetUserRequest{
 		ApiService: a,
 		ctx:        ctx,
