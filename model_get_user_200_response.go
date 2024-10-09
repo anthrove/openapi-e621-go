@@ -18,7 +18,7 @@ import (
 // GetUser200Response struct for GetUser200Response
 type GetUser200Response struct {
 	FullCurrentUser *FullCurrentUser
-	User            *User
+	FullUser        *FullUser
 }
 
 // Unmarshal JSON data into any of the pointers in the struct
@@ -37,17 +37,17 @@ func (dst *GetUser200Response) UnmarshalJSON(data []byte) error {
 		dst.FullCurrentUser = nil
 	}
 
-	// try to unmarshal JSON data into User
-	err = json.Unmarshal(data, &dst.User)
+	// try to unmarshal JSON data into FullUser
+	err = json.Unmarshal(data, &dst.FullUser)
 	if err == nil {
-		jsonUser, _ := json.Marshal(dst.User)
-		if string(jsonUser) == "{}" { // empty struct
-			dst.User = nil
+		jsonFullUser, _ := json.Marshal(dst.FullUser)
+		if string(jsonFullUser) == "{}" { // empty struct
+			dst.FullUser = nil
 		} else {
-			return nil // data stored in dst.User, return on the first match
+			return nil // data stored in dst.FullUser, return on the first match
 		}
 	} else {
-		dst.User = nil
+		dst.FullUser = nil
 	}
 
 	return fmt.Errorf("data failed to match schemas in anyOf(GetUser200Response)")
@@ -59,8 +59,8 @@ func (src *GetUser200Response) MarshalJSON() ([]byte, error) {
 		return json.Marshal(&src.FullCurrentUser)
 	}
 
-	if src.User != nil {
-		return json.Marshal(&src.User)
+	if src.FullUser != nil {
+		return json.Marshal(&src.FullUser)
 	}
 
 	return nil, nil // no data in anyOf schemas
