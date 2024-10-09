@@ -37,7 +37,7 @@ type User struct {
 	AvatarId              NullableInt32 `json:"avatar_id"`
 	ArtistVersionCount    *int32        `json:"artist_version_count,omitempty"`
 	CommentCount          *int32        `json:"comment_count,omitempty"`
-	FavoriteCount         *int32        `json:"favorite_count,omitempty"`
+	FavoritesCount        *int32        `json:"favorites_count,omitempty"`
 	FlagCount             *float32      `json:"flag_count,omitempty"`
 	ForumPostCount        *int32        `json:"forum_post_count,omitempty"`
 	NegativeFeedbackCount *int32        `json:"negative_feedback_count,omitempty"`
@@ -46,7 +46,7 @@ type User struct {
 	PositiveFeedbackCount *int32        `json:"positive_feedback_count,omitempty"`
 	ProfileAbout          *string       `json:"profile_about,omitempty"`
 	ProfileArtinfo        *string       `json:"profile_artinfo,omitempty"`
-	UploadLimit           *int32        `json:"upload_limit,omitempty"`
+	UploadLimit           interface{}   `json:"upload_limit,omitempty"`
 	WikiPageVersionCount  *int32        `json:"wiki_page_version_count,omitempty"`
 }
 
@@ -460,36 +460,36 @@ func (o *User) SetCommentCount(v int32) {
 	o.CommentCount = &v
 }
 
-// GetFavoriteCount returns the FavoriteCount field value if set, zero value otherwise.
-func (o *User) GetFavoriteCount() int32 {
-	if o == nil || IsNil(o.FavoriteCount) {
+// GetFavoritesCount returns the FavoritesCount field value if set, zero value otherwise.
+func (o *User) GetFavoritesCount() int32 {
+	if o == nil || IsNil(o.FavoritesCount) {
 		var ret int32
 		return ret
 	}
-	return *o.FavoriteCount
+	return *o.FavoritesCount
 }
 
-// GetFavoriteCountOk returns a tuple with the FavoriteCount field value if set, nil otherwise
+// GetFavoritesCountOk returns a tuple with the FavoritesCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *User) GetFavoriteCountOk() (*int32, bool) {
-	if o == nil || IsNil(o.FavoriteCount) {
+func (o *User) GetFavoritesCountOk() (*int32, bool) {
+	if o == nil || IsNil(o.FavoritesCount) {
 		return nil, false
 	}
-	return o.FavoriteCount, true
+	return o.FavoritesCount, true
 }
 
-// HasFavoriteCount returns a boolean if a field has been set.
-func (o *User) HasFavoriteCount() bool {
-	if o != nil && !IsNil(o.FavoriteCount) {
+// HasFavoritesCount returns a boolean if a field has been set.
+func (o *User) HasFavoritesCount() bool {
+	if o != nil && !IsNil(o.FavoritesCount) {
 		return true
 	}
 
 	return false
 }
 
-// SetFavoriteCount gets a reference to the given int32 and assigns it to the FavoriteCount field.
-func (o *User) SetFavoriteCount(v int32) {
-	o.FavoriteCount = &v
+// SetFavoritesCount gets a reference to the given int32 and assigns it to the FavoritesCount field.
+func (o *User) SetFavoritesCount(v int32) {
+	o.FavoritesCount = &v
 }
 
 // GetFlagCount returns the FlagCount field value if set, zero value otherwise.
@@ -748,22 +748,23 @@ func (o *User) SetProfileArtinfo(v string) {
 	o.ProfileArtinfo = &v
 }
 
-// GetUploadLimit returns the UploadLimit field value if set, zero value otherwise.
-func (o *User) GetUploadLimit() int32 {
-	if o == nil || IsNil(o.UploadLimit) {
-		var ret int32
+// GetUploadLimit returns the UploadLimit field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *User) GetUploadLimit() interface{} {
+	if o == nil {
+		var ret interface{}
 		return ret
 	}
-	return *o.UploadLimit
+	return o.UploadLimit
 }
 
 // GetUploadLimitOk returns a tuple with the UploadLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *User) GetUploadLimitOk() (*int32, bool) {
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *User) GetUploadLimitOk() (*interface{}, bool) {
 	if o == nil || IsNil(o.UploadLimit) {
 		return nil, false
 	}
-	return o.UploadLimit, true
+	return &o.UploadLimit, true
 }
 
 // HasUploadLimit returns a boolean if a field has been set.
@@ -775,9 +776,9 @@ func (o *User) HasUploadLimit() bool {
 	return false
 }
 
-// SetUploadLimit gets a reference to the given int32 and assigns it to the UploadLimit field.
-func (o *User) SetUploadLimit(v int32) {
-	o.UploadLimit = &v
+// SetUploadLimit gets a reference to the given interface{} and assigns it to the UploadLimit field.
+func (o *User) SetUploadLimit(v interface{}) {
+	o.UploadLimit = v
 }
 
 // GetWikiPageVersionCount returns the WikiPageVersionCount field value if set, zero value otherwise.
@@ -841,8 +842,8 @@ func (o User) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.CommentCount) {
 		toSerialize["comment_count"] = o.CommentCount
 	}
-	if !IsNil(o.FavoriteCount) {
-		toSerialize["favorite_count"] = o.FavoriteCount
+	if !IsNil(o.FavoritesCount) {
+		toSerialize["favorites_count"] = o.FavoritesCount
 	}
 	if !IsNil(o.FlagCount) {
 		toSerialize["flag_count"] = o.FlagCount
@@ -868,7 +869,7 @@ func (o User) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ProfileArtinfo) {
 		toSerialize["profile_artinfo"] = o.ProfileArtinfo
 	}
-	if !IsNil(o.UploadLimit) {
+	if o.UploadLimit != nil {
 		toSerialize["upload_limit"] = o.UploadLimit
 	}
 	if !IsNil(o.WikiPageVersionCount) {

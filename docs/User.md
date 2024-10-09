@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **AvatarId** | **NullableInt32** |  | 
 **ArtistVersionCount** | Pointer to **int32** |  | [optional] 
 **CommentCount** | Pointer to **int32** |  | [optional] 
-**FavoriteCount** | Pointer to **int32** |  | [optional] 
+**FavoritesCount** | Pointer to **int32** |  | [optional] 
 **FlagCount** | Pointer to **float32** |  | [optional] 
 **ForumPostCount** | Pointer to **int32** |  | [optional] 
 **NegativeFeedbackCount** | Pointer to **int32** |  | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **PositiveFeedbackCount** | Pointer to **int32** |  | [optional] 
 **ProfileAbout** | Pointer to **string** |  | [optional] 
 **ProfileArtinfo** | Pointer to **string** |  | [optional] 
-**UploadLimit** | Pointer to **int32** |  | [optional] 
+**UploadLimit** | Pointer to **interface{}** |  | [optional] 
 **WikiPageVersionCount** | Pointer to **int32** |  | [optional] 
 
 ## Methods
@@ -370,30 +370,30 @@ SetCommentCount sets CommentCount field to given value.
 
 HasCommentCount returns a boolean if a field has been set.
 
-### GetFavoriteCount
+### GetFavoritesCount
 
-`func (o *User) GetFavoriteCount() int32`
+`func (o *User) GetFavoritesCount() int32`
 
-GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
+GetFavoritesCount returns the FavoritesCount field if non-nil, zero value otherwise.
 
-### GetFavoriteCountOk
+### GetFavoritesCountOk
 
-`func (o *User) GetFavoriteCountOk() (*int32, bool)`
+`func (o *User) GetFavoritesCountOk() (*int32, bool)`
 
-GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
+GetFavoritesCountOk returns a tuple with the FavoritesCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFavoriteCount
+### SetFavoritesCount
 
-`func (o *User) SetFavoriteCount(v int32)`
+`func (o *User) SetFavoritesCount(v int32)`
 
-SetFavoriteCount sets FavoriteCount field to given value.
+SetFavoritesCount sets FavoritesCount field to given value.
 
-### HasFavoriteCount
+### HasFavoritesCount
 
-`func (o *User) HasFavoriteCount() bool`
+`func (o *User) HasFavoritesCount() bool`
 
-HasFavoriteCount returns a boolean if a field has been set.
+HasFavoritesCount returns a boolean if a field has been set.
 
 ### GetFlagCount
 
@@ -597,20 +597,20 @@ HasProfileArtinfo returns a boolean if a field has been set.
 
 ### GetUploadLimit
 
-`func (o *User) GetUploadLimit() int32`
+`func (o *User) GetUploadLimit() interface{}`
 
 GetUploadLimit returns the UploadLimit field if non-nil, zero value otherwise.
 
 ### GetUploadLimitOk
 
-`func (o *User) GetUploadLimitOk() (*int32, bool)`
+`func (o *User) GetUploadLimitOk() (*interface{}, bool)`
 
 GetUploadLimitOk returns a tuple with the UploadLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUploadLimit
 
-`func (o *User) SetUploadLimit(v int32)`
+`func (o *User) SetUploadLimit(v interface{})`
 
 SetUploadLimit sets UploadLimit field to given value.
 
@@ -620,6 +620,16 @@ SetUploadLimit sets UploadLimit field to given value.
 
 HasUploadLimit returns a boolean if a field has been set.
 
+### SetUploadLimitNil
+
+`func (o *User) SetUploadLimitNil(b bool)`
+
+ SetUploadLimitNil sets the value for UploadLimit to be an explicit nil
+
+### UnsetUploadLimit
+`func (o *User) UnsetUploadLimit()`
+
+UnsetUploadLimit ensures that no value is present for UploadLimit, not even an explicit nil
 ### GetWikiPageVersionCount
 
 `func (o *User) GetWikiPageVersionCount() int32`

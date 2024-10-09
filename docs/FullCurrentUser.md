@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **AvatarId** | **int32** |  | 
 **ArtistVersionCount** | **int32** |  | 
 **CommentCount** | **int32** |  | 
-**FavoriteCount** | **int32** |  | 
+**FavoritesCount** | Pointer to **int32** |  | [optional] 
 **FlagCount** | **int32** |  | 
 **ForumPostCount** | **int32** |  | 
 **NegativeFeedbackCount** | **int32** |  | 
@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 **EnablePrivacyMode** | **bool** |  | 
 **StyleUsernames** | **bool** |  | 
 **EnableAutoComplete** | **bool** |  | 
-**DisabledCroppedThumbnails** | **bool** |  | 
+**DisableCroppedThumbnails** | **bool** |  | 
 **EnableSafeMode** | **bool** |  | 
 **DisableResponsiveMode** | **bool** |  | 
 **NoFlagging** | **bool** |  | 
@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 **TimeZone** | **string** |  | 
 **PerPage** | **int32** |  | 
 **CustomStyle** | **string** |  | 
+**FavoriteCount** | **int32** |  | 
 **ApiRegenMultiplier** | **float32** |  | 
 **ApiBurstLimit** | **float32** |  | 
 **RemainingApiLimit** | **float32** |  | 
@@ -71,7 +72,7 @@ Name | Type | Description | Notes
 
 ### NewFullCurrentUser
 
-`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, favoriteCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *FullCurrentUser`
+`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *FullCurrentUser`
 
 NewFullCurrentUser instantiates a new FullCurrentUser object
 This constructor will assign default values to properties that have it defined,
@@ -386,25 +387,30 @@ and a boolean to check if the value has been set.
 SetCommentCount sets CommentCount field to given value.
 
 
-### GetFavoriteCount
+### GetFavoritesCount
 
-`func (o *FullCurrentUser) GetFavoriteCount() int32`
+`func (o *FullCurrentUser) GetFavoritesCount() int32`
 
-GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
+GetFavoritesCount returns the FavoritesCount field if non-nil, zero value otherwise.
 
-### GetFavoriteCountOk
+### GetFavoritesCountOk
 
-`func (o *FullCurrentUser) GetFavoriteCountOk() (*int32, bool)`
+`func (o *FullCurrentUser) GetFavoritesCountOk() (*int32, bool)`
 
-GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
+GetFavoritesCountOk returns a tuple with the FavoritesCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFavoriteCount
+### SetFavoritesCount
 
-`func (o *FullCurrentUser) SetFavoriteCount(v int32)`
+`func (o *FullCurrentUser) SetFavoritesCount(v int32)`
 
-SetFavoriteCount sets FavoriteCount field to given value.
+SetFavoritesCount sets FavoritesCount field to given value.
 
+### HasFavoritesCount
+
+`func (o *FullCurrentUser) HasFavoritesCount() bool`
+
+HasFavoritesCount returns a boolean if a field has been set.
 
 ### GetFlagCount
 
@@ -806,24 +812,24 @@ and a boolean to check if the value has been set.
 SetEnableAutoComplete sets EnableAutoComplete field to given value.
 
 
-### GetDisabledCroppedThumbnails
+### GetDisableCroppedThumbnails
 
-`func (o *FullCurrentUser) GetDisabledCroppedThumbnails() bool`
+`func (o *FullCurrentUser) GetDisableCroppedThumbnails() bool`
 
-GetDisabledCroppedThumbnails returns the DisabledCroppedThumbnails field if non-nil, zero value otherwise.
+GetDisableCroppedThumbnails returns the DisableCroppedThumbnails field if non-nil, zero value otherwise.
 
-### GetDisabledCroppedThumbnailsOk
+### GetDisableCroppedThumbnailsOk
 
-`func (o *FullCurrentUser) GetDisabledCroppedThumbnailsOk() (*bool, bool)`
+`func (o *FullCurrentUser) GetDisableCroppedThumbnailsOk() (*bool, bool)`
 
-GetDisabledCroppedThumbnailsOk returns a tuple with the DisabledCroppedThumbnails field if it's non-nil, zero value otherwise
+GetDisableCroppedThumbnailsOk returns a tuple with the DisableCroppedThumbnails field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisabledCroppedThumbnails
+### SetDisableCroppedThumbnails
 
-`func (o *FullCurrentUser) SetDisabledCroppedThumbnails(v bool)`
+`func (o *FullCurrentUser) SetDisableCroppedThumbnails(v bool)`
 
-SetDisabledCroppedThumbnails sets DisabledCroppedThumbnails field to given value.
+SetDisableCroppedThumbnails sets DisableCroppedThumbnails field to given value.
 
 
 ### GetEnableSafeMode
@@ -1189,6 +1195,26 @@ and a boolean to check if the value has been set.
 `func (o *FullCurrentUser) SetCustomStyle(v string)`
 
 SetCustomStyle sets CustomStyle field to given value.
+
+
+### GetFavoriteCount
+
+`func (o *FullCurrentUser) GetFavoriteCount() int32`
+
+GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
+
+### GetFavoriteCountOk
+
+`func (o *FullCurrentUser) GetFavoriteCountOk() (*int32, bool)`
+
+GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFavoriteCount
+
+`func (o *FullCurrentUser) SetFavoriteCount(v int32)`
+
+SetFavoriteCount sets FavoriteCount field to given value.
 
 
 ### GetApiRegenMultiplier

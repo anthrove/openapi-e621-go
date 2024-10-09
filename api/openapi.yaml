@@ -9121,7 +9121,7 @@ components:
             type: boolean
           can_approve_posts:
             type: boolean
-          disabled_cropped_thumbnails:
+          disable_cropped_thumbnails:
             type: boolean
           enable_safe_mode:
             type: boolean
@@ -9191,9 +9191,9 @@ components:
         - comment_threshold
         - custom_style
         - description_collapsed_initially
+        - disable_cropped_thumbnails
         - disable_responsive_mode
         - disable_user_dmails
-        - disabled_cropped_thumbnails
         - email
         - enable_auto_complete
         - enable_compact_uploader
@@ -9223,39 +9223,41 @@ components:
       example:
         comment_count: 3
         note_update_count: 2
-        remaining_api_limit: 8.762042012749001
+        remaining_api_limit: 6.683562403749608
         description_collapsed_initially: true
         show_hidden_comments: true
         last_forum_read_at: 2000-01-23T04:56:07.000+00:00
         recent_tags: recent_tags
-        api_burst_limit: 6.683562403749608
+        api_burst_limit: 9.369310271410669
         neutral_feedback_count: 1
         profile_about: profile_about
-        upload_limit: 7
+        upload_limit: ""
         enable_compact_uploader: true
         id: 0
         replacements_beta: true
         artist_version_count: 9
-        comment_threshold: 4.965218492984954
-        per_page: 5
+        comment_threshold: 1.1730742509559433
+        per_page: 4
         level: 6.027456183070403
         flag_count: 4.145608029883936
         enable_keyboard_navigation: true
-        favorite_limit: 6
-        tag_query_limit: 3
+        favorite_limit: 9
+        tag_query_limit: 6
         blacklist_users: true
         avatar_id: 7
         hide_comments: true
         enable_auto_complete: true
         last_logged_in_at: 2000-01-23T04:56:07.000+00:00
         name: name
+        disable_cropped_thumbnails: true
         post_upload_count: 5
         style_usernames: true
         default_image_sizedefault_image_size: large
         is_banned: true
         can_approve_posts: true
-        wiki_page_version_count: 1
-        api_regen_multiplier: 9.369310271410669
+        wiki_page_version_count: 7
+        api_regen_multiplier: 9.965781217890562
+        favorites_count: 2
         negative_feedback_count: 1
         pool_version_count: 1
         created_at: 2000-01-23T04:56:07.000+00:00
@@ -9263,13 +9265,12 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         blacklisted_tags: blacklisted_tags
         disable_responsive_mode: true
-        favorite_count: 9
+        favorite_count: 5
         has_mail: true
         email: email
         enable_safe_mode: true
         show_post_statistics: true
         favorite_tags: favorite_tags
-        disabled_cropped_thumbnails: true
         disable_user_dmails: true
         post_update_count: 5
         level_string: level_string
@@ -9279,7 +9280,7 @@ components:
         time_zone: time_zone
         profile_artinfo: profile_artinfo
         positive_feedback_count: 6
-        statement_timeout: 9.018348186070783
+        statement_timeout: 8.762042012749001
         no_flagging: true
         forum_post_count: 7
         enable_privacy_mode: true
@@ -9619,6 +9620,34 @@ components:
         - profile_artinfo
         - upload_limit
         - wiki_page_version_count
+      example:
+        can_approve_posts: true
+        comment_count: 9
+        note_update_count: 2
+        wiki_page_version_count: 1
+        favorites_count: 2
+        negative_feedback_count: 3
+        pool_version_count: 5
+        created_at: 2000-01-23T04:56:07.000+00:00
+        base_upload_limit: 1
+        neutral_feedback_count: 6
+        profile_about: profile_about
+        upload_limit: 6
+        favorite_count: 8
+        id: 0
+        artist_version_count: 4
+        level: 6.027456183070403
+        flag_count: 6
+        post_update_count: 5
+        level_string: level_string
+        can_upload_free: true
+        profile_artinfo: profile_artinfo
+        avatar_id: 7
+        positive_feedback_count: 9
+        name: name
+        forum_post_count: 9
+        post_upload_count: 5
+        is_banned: true
     Help:
       example:
         related: related
@@ -11465,15 +11494,15 @@ components:
         can_approve_posts: true
         comment_count: 3
         note_update_count: 2
-        wiki_page_version_count: 1
+        wiki_page_version_count: 7
+        favorites_count: 2
         negative_feedback_count: 1
         pool_version_count: 1
         created_at: 2000-01-23T04:56:07.000+00:00
         base_upload_limit: 1
         neutral_feedback_count: 1
         profile_about: profile_about
-        favorite_count: 2
-        upload_limit: 7
+        upload_limit: ""
         id: 0
         artist_version_count: 9
         level: 6.027456183070403
@@ -11521,7 +11550,7 @@ components:
           type: integer
         comment_count:
           type: integer
-        favorite_count:
+        favorites_count:
           type: integer
         flag_count:
           type: number
@@ -11539,8 +11568,7 @@ components:
           type: string
         profile_artinfo:
           type: string
-        upload_limit:
-          type: integer
+        upload_limit: {}
         wiki_page_version_count:
           type: integer
       required:
@@ -13825,7 +13853,7 @@ components:
       - $ref: '#/components/schemas/FullUser'
     getUser_200_response:
       anyOf:
-      - $ref: '#/components/schemas/User'
+      - $ref: '#/components/schemas/FullUser'
       - $ref: '#/components/schemas/FullCurrentUser'
     editCurrentUser_request:
       properties:

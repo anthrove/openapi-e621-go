@@ -37,7 +37,7 @@ type FullCurrentUser struct {
 	AvatarId                         int32     `json:"avatar_id"`
 	ArtistVersionCount               int32     `json:"artist_version_count"`
 	CommentCount                     int32     `json:"comment_count"`
-	FavoriteCount                    int32     `json:"favorite_count"`
+	FavoritesCount                   *int32    `json:"favorites_count,omitempty"`
 	FlagCount                        int32     `json:"flag_count"`
 	ForumPostCount                   int32     `json:"forum_post_count"`
 	NegativeFeedbackCount            int32     `json:"negative_feedback_count"`
@@ -58,7 +58,7 @@ type FullCurrentUser struct {
 	EnablePrivacyMode                bool      `json:"enable_privacy_mode"`
 	StyleUsernames                   bool      `json:"style_usernames"`
 	EnableAutoComplete               bool      `json:"enable_auto_complete"`
-	DisabledCroppedThumbnails        bool      `json:"disabled_cropped_thumbnails"`
+	DisableCroppedThumbnails         bool      `json:"disable_cropped_thumbnails"`
 	EnableSafeMode                   bool      `json:"enable_safe_mode"`
 	DisableResponsiveMode            bool      `json:"disable_responsive_mode"`
 	NoFlagging                       bool      `json:"no_flagging"`
@@ -77,6 +77,7 @@ type FullCurrentUser struct {
 	TimeZone                         string    `json:"time_zone"`
 	PerPage                          int32     `json:"per_page"`
 	CustomStyle                      string    `json:"custom_style"`
+	FavoriteCount                    int32     `json:"favorite_count"`
 	ApiRegenMultiplier               float32   `json:"api_regen_multiplier"`
 	ApiBurstLimit                    float32   `json:"api_burst_limit"`
 	RemainingApiLimit                float32   `json:"remaining_api_limit"`
@@ -92,7 +93,7 @@ type _FullCurrentUser FullCurrentUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, favoriteCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
+func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
 	this := FullCurrentUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -109,7 +110,6 @@ func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float3
 	this.AvatarId = avatarId
 	this.ArtistVersionCount = artistVersionCount
 	this.CommentCount = commentCount
-	this.FavoriteCount = favoriteCount
 	this.FlagCount = flagCount
 	this.ForumPostCount = forumPostCount
 	this.NegativeFeedbackCount = negativeFeedbackCount
@@ -130,7 +130,7 @@ func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float3
 	this.EnablePrivacyMode = enablePrivacyMode
 	this.StyleUsernames = styleUsernames
 	this.EnableAutoComplete = enableAutoComplete
-	this.DisabledCroppedThumbnails = disabledCroppedThumbnails
+	this.DisableCroppedThumbnails = disableCroppedThumbnails
 	this.EnableSafeMode = enableSafeMode
 	this.DisableResponsiveMode = disableResponsiveMode
 	this.NoFlagging = noFlagging
@@ -148,6 +148,7 @@ func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float3
 	this.TimeZone = timeZone
 	this.PerPage = perPage
 	this.CustomStyle = customStyle
+	this.FavoriteCount = favoriteCount
 	this.ApiRegenMultiplier = apiRegenMultiplier
 	this.ApiBurstLimit = apiBurstLimit
 	this.RemainingApiLimit = remainingApiLimit
@@ -526,28 +527,36 @@ func (o *FullCurrentUser) SetCommentCount(v int32) {
 	o.CommentCount = v
 }
 
-// GetFavoriteCount returns the FavoriteCount field value
-func (o *FullCurrentUser) GetFavoriteCount() int32 {
-	if o == nil {
+// GetFavoritesCount returns the FavoritesCount field value if set, zero value otherwise.
+func (o *FullCurrentUser) GetFavoritesCount() int32 {
+	if o == nil || IsNil(o.FavoritesCount) {
 		var ret int32
 		return ret
 	}
-
-	return o.FavoriteCount
+	return *o.FavoritesCount
 }
 
-// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
+// GetFavoritesCountOk returns a tuple with the FavoritesCount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetFavoriteCountOk() (*int32, bool) {
-	if o == nil {
+func (o *FullCurrentUser) GetFavoritesCountOk() (*int32, bool) {
+	if o == nil || IsNil(o.FavoritesCount) {
 		return nil, false
 	}
-	return &o.FavoriteCount, true
+	return o.FavoritesCount, true
 }
 
-// SetFavoriteCount sets field value
-func (o *FullCurrentUser) SetFavoriteCount(v int32) {
-	o.FavoriteCount = v
+// HasFavoritesCount returns a boolean if a field has been set.
+func (o *FullCurrentUser) HasFavoritesCount() bool {
+	if o != nil && !IsNil(o.FavoritesCount) {
+		return true
+	}
+
+	return false
+}
+
+// SetFavoritesCount gets a reference to the given int32 and assigns it to the FavoritesCount field.
+func (o *FullCurrentUser) SetFavoritesCount(v int32) {
+	o.FavoritesCount = &v
 }
 
 // GetFlagCount returns the FlagCount field value
@@ -1030,28 +1039,28 @@ func (o *FullCurrentUser) SetEnableAutoComplete(v bool) {
 	o.EnableAutoComplete = v
 }
 
-// GetDisabledCroppedThumbnails returns the DisabledCroppedThumbnails field value
-func (o *FullCurrentUser) GetDisabledCroppedThumbnails() bool {
+// GetDisableCroppedThumbnails returns the DisableCroppedThumbnails field value
+func (o *FullCurrentUser) GetDisableCroppedThumbnails() bool {
 	if o == nil {
 		var ret bool
 		return ret
 	}
 
-	return o.DisabledCroppedThumbnails
+	return o.DisableCroppedThumbnails
 }
 
-// GetDisabledCroppedThumbnailsOk returns a tuple with the DisabledCroppedThumbnails field value
+// GetDisableCroppedThumbnailsOk returns a tuple with the DisableCroppedThumbnails field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetDisabledCroppedThumbnailsOk() (*bool, bool) {
+func (o *FullCurrentUser) GetDisableCroppedThumbnailsOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.DisabledCroppedThumbnails, true
+	return &o.DisableCroppedThumbnails, true
 }
 
-// SetDisabledCroppedThumbnails sets field value
-func (o *FullCurrentUser) SetDisabledCroppedThumbnails(v bool) {
-	o.DisabledCroppedThumbnails = v
+// SetDisableCroppedThumbnails sets field value
+func (o *FullCurrentUser) SetDisableCroppedThumbnails(v bool) {
+	o.DisableCroppedThumbnails = v
 }
 
 // GetEnableSafeMode returns the EnableSafeMode field value
@@ -1494,6 +1503,30 @@ func (o *FullCurrentUser) SetCustomStyle(v string) {
 	o.CustomStyle = v
 }
 
+// GetFavoriteCount returns the FavoriteCount field value
+func (o *FullCurrentUser) GetFavoriteCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.FavoriteCount
+}
+
+// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetFavoriteCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.FavoriteCount, true
+}
+
+// SetFavoriteCount sets field value
+func (o *FullCurrentUser) SetFavoriteCount(v int32) {
+	o.FavoriteCount = v
+}
+
 // GetApiRegenMultiplier returns the ApiRegenMultiplier field value
 func (o *FullCurrentUser) GetApiRegenMultiplier() float32 {
 	if o == nil {
@@ -1687,7 +1720,9 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["avatar_id"] = o.AvatarId
 	toSerialize["artist_version_count"] = o.ArtistVersionCount
 	toSerialize["comment_count"] = o.CommentCount
-	toSerialize["favorite_count"] = o.FavoriteCount
+	if !IsNil(o.FavoritesCount) {
+		toSerialize["favorites_count"] = o.FavoritesCount
+	}
 	toSerialize["flag_count"] = o.FlagCount
 	toSerialize["forum_post_count"] = o.ForumPostCount
 	toSerialize["negative_feedback_count"] = o.NegativeFeedbackCount
@@ -1708,7 +1743,7 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["enable_privacy_mode"] = o.EnablePrivacyMode
 	toSerialize["style_usernames"] = o.StyleUsernames
 	toSerialize["enable_auto_complete"] = o.EnableAutoComplete
-	toSerialize["disabled_cropped_thumbnails"] = o.DisabledCroppedThumbnails
+	toSerialize["disable_cropped_thumbnails"] = o.DisableCroppedThumbnails
 	toSerialize["enable_safe_mode"] = o.EnableSafeMode
 	toSerialize["disable_responsive_mode"] = o.DisableResponsiveMode
 	toSerialize["no_flagging"] = o.NoFlagging
@@ -1729,6 +1764,7 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["time_zone"] = o.TimeZone
 	toSerialize["per_page"] = o.PerPage
 	toSerialize["custom_style"] = o.CustomStyle
+	toSerialize["favorite_count"] = o.FavoriteCount
 	toSerialize["api_regen_multiplier"] = o.ApiRegenMultiplier
 	toSerialize["api_burst_limit"] = o.ApiBurstLimit
 	toSerialize["remaining_api_limit"] = o.RemainingApiLimit
@@ -1759,7 +1795,6 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"avatar_id",
 		"artist_version_count",
 		"comment_count",
-		"favorite_count",
 		"flag_count",
 		"forum_post_count",
 		"negative_feedback_count",
@@ -1780,7 +1815,7 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"enable_privacy_mode",
 		"style_usernames",
 		"enable_auto_complete",
-		"disabled_cropped_thumbnails",
+		"disable_cropped_thumbnails",
 		"enable_safe_mode",
 		"disable_responsive_mode",
 		"no_flagging",
@@ -1798,6 +1833,7 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"time_zone",
 		"per_page",
 		"custom_style",
+		"favorite_count",
 		"api_regen_multiplier",
 		"api_burst_limit",
 		"remaining_api_limit",
