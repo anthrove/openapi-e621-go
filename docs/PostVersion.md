@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**PostId** | **float32** |  | 
+**Id** | **int32** |  | 
+**PostId** | **int32** |  | 
 **Tags** | **string** |  | 
-**UpdaterId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
 **ParentId** | **NullableFloat32** |  | 
@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 ### NewPostVersion
 
-`func NewPostVersion(id float32, postId float32, tags string, updaterId float32, updatedAt time.Time, rating Ratings, parentId NullableFloat32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string, ) *PostVersion`
+`func NewPostVersion(id int32, postId int32, tags string, updaterId int32, updatedAt time.Time, rating Ratings, parentId NullableFloat32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string, ) *PostVersion`
 
 NewPostVersion instantiates a new PostVersion object
 This constructor will assign default values to properties that have it defined,
@@ -50,40 +50,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PostVersion) GetId() float32`
+`func (o *PostVersion) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PostVersion) GetIdOk() (*float32, bool)`
+`func (o *PostVersion) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PostVersion) SetId(v float32)`
+`func (o *PostVersion) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetPostId
 
-`func (o *PostVersion) GetPostId() float32`
+`func (o *PostVersion) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *PostVersion) GetPostIdOk() (*float32, bool)`
+`func (o *PostVersion) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *PostVersion) SetPostId(v float32)`
+`func (o *PostVersion) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 
@@ -110,20 +110,20 @@ SetTags sets Tags field to given value.
 
 ### GetUpdaterId
 
-`func (o *PostVersion) GetUpdaterId() float32`
+`func (o *PostVersion) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *PostVersion) GetUpdaterIdOk() (*float32, bool)`
+`func (o *PostVersion) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *PostVersion) SetUpdaterId(v float32)`
+`func (o *PostVersion) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

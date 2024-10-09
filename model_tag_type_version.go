@@ -22,14 +22,14 @@ var _ MappedNullable = &TagTypeVersion{}
 
 // TagTypeVersion struct for TagTypeVersion
 type TagTypeVersion struct {
-	Id        float32       `json:"id"`
+	Id        int32         `json:"id"`
 	CreatedAt time.Time     `json:"created_at"`
 	UpdatedAt time.Time     `json:"updated_at"`
 	OldType   TagCategories `json:"old_type"`
 	NewType   TagCategories `json:"new_type"`
 	IsLocked  bool          `json:"is_locked"`
-	TagId     float32       `json:"tag_id"`
-	CreatorId float32       `json:"creator_id"`
+	TagId     int32         `json:"tag_id"`
+	CreatorId int32         `json:"creator_id"`
 }
 
 type _TagTypeVersion TagTypeVersion
@@ -38,7 +38,7 @@ type _TagTypeVersion TagTypeVersion
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagTypeVersion(id float32, createdAt time.Time, updatedAt time.Time, oldType TagCategories, newType TagCategories, isLocked bool, tagId float32, creatorId float32) *TagTypeVersion {
+func NewTagTypeVersion(id int32, createdAt time.Time, updatedAt time.Time, oldType TagCategories, newType TagCategories, isLocked bool, tagId int32, creatorId int32) *TagTypeVersion {
 	this := TagTypeVersion{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -60,9 +60,9 @@ func NewTagTypeVersionWithDefaults() *TagTypeVersion {
 }
 
 // GetId returns the Id field value
-func (o *TagTypeVersion) GetId() float32 {
+func (o *TagTypeVersion) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -71,7 +71,7 @@ func (o *TagTypeVersion) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *TagTypeVersion) GetIdOk() (*float32, bool) {
+func (o *TagTypeVersion) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -79,7 +79,7 @@ func (o *TagTypeVersion) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *TagTypeVersion) SetId(v float32) {
+func (o *TagTypeVersion) SetId(v int32) {
 	o.Id = v
 }
 
@@ -204,9 +204,9 @@ func (o *TagTypeVersion) SetIsLocked(v bool) {
 }
 
 // GetTagId returns the TagId field value
-func (o *TagTypeVersion) GetTagId() float32 {
+func (o *TagTypeVersion) GetTagId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -215,7 +215,7 @@ func (o *TagTypeVersion) GetTagId() float32 {
 
 // GetTagIdOk returns a tuple with the TagId field value
 // and a boolean to check if the value has been set.
-func (o *TagTypeVersion) GetTagIdOk() (*float32, bool) {
+func (o *TagTypeVersion) GetTagIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -223,14 +223,14 @@ func (o *TagTypeVersion) GetTagIdOk() (*float32, bool) {
 }
 
 // SetTagId sets field value
-func (o *TagTypeVersion) SetTagId(v float32) {
+func (o *TagTypeVersion) SetTagId(v int32) {
 	o.TagId = v
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *TagTypeVersion) GetCreatorId() float32 {
+func (o *TagTypeVersion) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -239,7 +239,7 @@ func (o *TagTypeVersion) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *TagTypeVersion) GetCreatorIdOk() (*float32, bool) {
+func (o *TagTypeVersion) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -247,7 +247,7 @@ func (o *TagTypeVersion) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *TagTypeVersion) SetCreatorId(v float32) {
+func (o *TagTypeVersion) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 

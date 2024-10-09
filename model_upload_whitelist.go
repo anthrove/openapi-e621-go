@@ -22,7 +22,7 @@ var _ MappedNullable = &UploadWhitelist{}
 
 // UploadWhitelist struct for UploadWhitelist
 type UploadWhitelist struct {
-	Id        float32   `json:"id"`
+	Id        int32     `json:"id"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 	Pattern   string    `json:"pattern"`
@@ -38,7 +38,7 @@ type _UploadWhitelist UploadWhitelist
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUploadWhitelist(id float32, createdAt time.Time, updatedAt time.Time, pattern string, note string, hidden bool, allowed bool, reason string) *UploadWhitelist {
+func NewUploadWhitelist(id int32, createdAt time.Time, updatedAt time.Time, pattern string, note string, hidden bool, allowed bool, reason string) *UploadWhitelist {
 	this := UploadWhitelist{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -60,9 +60,9 @@ func NewUploadWhitelistWithDefaults() *UploadWhitelist {
 }
 
 // GetId returns the Id field value
-func (o *UploadWhitelist) GetId() float32 {
+func (o *UploadWhitelist) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -71,7 +71,7 @@ func (o *UploadWhitelist) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *UploadWhitelist) GetIdOk() (*float32, bool) {
+func (o *UploadWhitelist) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -79,7 +79,7 @@ func (o *UploadWhitelist) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *UploadWhitelist) SetId(v float32) {
+func (o *UploadWhitelist) SetId(v int32) {
 	o.Id = v
 }
 

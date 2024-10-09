@@ -25,7 +25,7 @@ type UsersAPIService service
 type UsersAPIEditCurrentUserRequest struct {
 	ctx                               context.Context
 	ApiService                        *UsersAPIService
-	id                                float32
+	id                                int32
 	userCommentThreshold              *float32
 	userDefaultImageSize              *string
 	userFavoriteTags                  *string
@@ -51,7 +51,7 @@ type UsersAPIEditCurrentUserRequest struct {
 	userDmailFilterAttributesWords    *string
 	userProfileAbout                  *string
 	userProfileArtinfo                *string
-	userAvatarId                      *float32
+	userAvatarId                      *int32
 	userEnableCompactUploader         *bool
 }
 
@@ -181,7 +181,7 @@ func (r UsersAPIEditCurrentUserRequest) UserProfileArtinfo(userProfileArtinfo st
 	return r
 }
 
-func (r UsersAPIEditCurrentUserRequest) UserAvatarId(userAvatarId float32) UsersAPIEditCurrentUserRequest {
+func (r UsersAPIEditCurrentUserRequest) UserAvatarId(userAvatarId int32) UsersAPIEditCurrentUserRequest {
 	r.userAvatarId = &userAvatarId
 	return r
 }
@@ -203,7 +203,7 @@ EditCurrentUser Edit Current User
 	@param id The ID of the user. The actual value is ignored, but something must be supplied.
 	@return UsersAPIEditCurrentUserRequest
 */
-func (a *UsersAPIService) EditCurrentUser(ctx context.Context, id float32) UsersAPIEditCurrentUserRequest {
+func (a *UsersAPIService) EditCurrentUser(ctx context.Context, id int32) UsersAPIEditCurrentUserRequest {
 	return UsersAPIEditCurrentUserRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -588,7 +588,7 @@ func (a *UsersAPIService) GetCurrentUserExecute(r UsersAPIGetCurrentUserRequest)
 type UsersAPIGetUserRequest struct {
 	ctx        context.Context
 	ApiService *UsersAPIService
-	id         float32
+	id         GetUserIdParameter
 }
 
 func (r UsersAPIGetUserRequest) Execute() (*GetUser200Response, *http.Response, error) {
@@ -602,7 +602,7 @@ GetUser Get User
 	@param id The ID of the user.
 	@return UsersAPIGetUserRequest
 */
-func (a *UsersAPIService) GetUser(ctx context.Context, id float32) UsersAPIGetUserRequest {
+func (a *UsersAPIService) GetUser(ctx context.Context, id GetUserIdParameter) UsersAPIGetUserRequest {
 	return UsersAPIGetUserRequest{
 		ApiService: a,
 		ctx:        ctx,

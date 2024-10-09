@@ -22,21 +22,21 @@ var _ MappedNullable = &PostReplacement{}
 
 // PostReplacement struct for PostReplacement
 type PostReplacement struct {
-	Id          float32         `json:"id"`
-	CreatedAt   time.Time       `json:"created_at"`
-	UpdatedAt   time.Time       `json:"updated_at"`
-	PostId      float32         `json:"post_id"`
-	CreatorId   float32         `json:"creator_id"`
-	ApproverId  NullableFloat32 `json:"approver_id"`
-	FileExt     string          `json:"file_ext"`
-	FileSize    float32         `json:"file_size"`
-	ImageHeight float32         `json:"image_height"`
-	ImageWidth  float32         `json:"image_width"`
-	Md5         string          `json:"md5"`
-	Source      string          `json:"source"`
-	FileName    string          `json:"file_name"`
-	Status      string          `json:"status"`
-	Reason      string          `json:"reason"`
+	Id          int32         `json:"id"`
+	CreatedAt   time.Time     `json:"created_at"`
+	UpdatedAt   time.Time     `json:"updated_at"`
+	PostId      int32         `json:"post_id"`
+	CreatorId   int32         `json:"creator_id"`
+	ApproverId  NullableInt32 `json:"approver_id"`
+	FileExt     string        `json:"file_ext"`
+	FileSize    float32       `json:"file_size"`
+	ImageHeight float32       `json:"image_height"`
+	ImageWidth  float32       `json:"image_width"`
+	Md5         string        `json:"md5"`
+	Source      string        `json:"source"`
+	FileName    string        `json:"file_name"`
+	Status      string        `json:"status"`
+	Reason      string        `json:"reason"`
 }
 
 type _PostReplacement PostReplacement
@@ -45,7 +45,7 @@ type _PostReplacement PostReplacement
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostReplacement(id float32, createdAt time.Time, updatedAt time.Time, postId float32, creatorId float32, approverId NullableFloat32, fileExt string, fileSize float32, imageHeight float32, imageWidth float32, md5 string, source string, fileName string, status string, reason string) *PostReplacement {
+func NewPostReplacement(id int32, createdAt time.Time, updatedAt time.Time, postId int32, creatorId int32, approverId NullableInt32, fileExt string, fileSize float32, imageHeight float32, imageWidth float32, md5 string, source string, fileName string, status string, reason string) *PostReplacement {
 	this := PostReplacement{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -74,9 +74,9 @@ func NewPostReplacementWithDefaults() *PostReplacement {
 }
 
 // GetId returns the Id field value
-func (o *PostReplacement) GetId() float32 {
+func (o *PostReplacement) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -85,7 +85,7 @@ func (o *PostReplacement) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PostReplacement) GetIdOk() (*float32, bool) {
+func (o *PostReplacement) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -93,7 +93,7 @@ func (o *PostReplacement) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *PostReplacement) SetId(v float32) {
+func (o *PostReplacement) SetId(v int32) {
 	o.Id = v
 }
 
@@ -146,9 +146,9 @@ func (o *PostReplacement) SetUpdatedAt(v time.Time) {
 }
 
 // GetPostId returns the PostId field value
-func (o *PostReplacement) GetPostId() float32 {
+func (o *PostReplacement) GetPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -157,7 +157,7 @@ func (o *PostReplacement) GetPostId() float32 {
 
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *PostReplacement) GetPostIdOk() (*float32, bool) {
+func (o *PostReplacement) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -165,14 +165,14 @@ func (o *PostReplacement) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *PostReplacement) SetPostId(v float32) {
+func (o *PostReplacement) SetPostId(v int32) {
 	o.PostId = v
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *PostReplacement) GetCreatorId() float32 {
+func (o *PostReplacement) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -181,7 +181,7 @@ func (o *PostReplacement) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *PostReplacement) GetCreatorIdOk() (*float32, bool) {
+func (o *PostReplacement) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -189,15 +189,15 @@ func (o *PostReplacement) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *PostReplacement) SetCreatorId(v float32) {
+func (o *PostReplacement) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 
 // GetApproverId returns the ApproverId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *PostReplacement) GetApproverId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *PostReplacement) GetApproverId() int32 {
 	if o == nil || o.ApproverId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -207,7 +207,7 @@ func (o *PostReplacement) GetApproverId() float32 {
 // GetApproverIdOk returns a tuple with the ApproverId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PostReplacement) GetApproverIdOk() (*float32, bool) {
+func (o *PostReplacement) GetApproverIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -215,7 +215,7 @@ func (o *PostReplacement) GetApproverIdOk() (*float32, bool) {
 }
 
 // SetApproverId sets field value
-func (o *PostReplacement) SetApproverId(v float32) {
+func (o *PostReplacement) SetApproverId(v int32) {
 	o.ApproverId.Set(&v)
 }
 

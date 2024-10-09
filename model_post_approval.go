@@ -22,9 +22,9 @@ var _ MappedNullable = &PostApproval{}
 
 // PostApproval struct for PostApproval
 type PostApproval struct {
-	Id        float32   `json:"id"`
-	UserId    float32   `json:"user_id"`
-	PostId    float32   `json:"post_id"`
+	Id        int32     `json:"id"`
+	UserId    int32     `json:"user_id"`
+	PostId    int32     `json:"post_id"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 }
@@ -35,7 +35,7 @@ type _PostApproval PostApproval
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostApproval(id float32, userId float32, postId float32, createdAt time.Time, updatedAt time.Time) *PostApproval {
+func NewPostApproval(id int32, userId int32, postId int32, createdAt time.Time, updatedAt time.Time) *PostApproval {
 	this := PostApproval{}
 	this.Id = id
 	this.UserId = userId
@@ -54,9 +54,9 @@ func NewPostApprovalWithDefaults() *PostApproval {
 }
 
 // GetId returns the Id field value
-func (o *PostApproval) GetId() float32 {
+func (o *PostApproval) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -65,7 +65,7 @@ func (o *PostApproval) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *PostApproval) GetIdOk() (*float32, bool) {
+func (o *PostApproval) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -73,14 +73,14 @@ func (o *PostApproval) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *PostApproval) SetId(v float32) {
+func (o *PostApproval) SetId(v int32) {
 	o.Id = v
 }
 
 // GetUserId returns the UserId field value
-func (o *PostApproval) GetUserId() float32 {
+func (o *PostApproval) GetUserId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -89,7 +89,7 @@ func (o *PostApproval) GetUserId() float32 {
 
 // GetUserIdOk returns a tuple with the UserId field value
 // and a boolean to check if the value has been set.
-func (o *PostApproval) GetUserIdOk() (*float32, bool) {
+func (o *PostApproval) GetUserIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -97,14 +97,14 @@ func (o *PostApproval) GetUserIdOk() (*float32, bool) {
 }
 
 // SetUserId sets field value
-func (o *PostApproval) SetUserId(v float32) {
+func (o *PostApproval) SetUserId(v int32) {
 	o.UserId = v
 }
 
 // GetPostId returns the PostId field value
-func (o *PostApproval) GetPostId() float32 {
+func (o *PostApproval) GetPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -113,7 +113,7 @@ func (o *PostApproval) GetPostId() float32 {
 
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *PostApproval) GetPostIdOk() (*float32, bool) {
+func (o *PostApproval) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -121,7 +121,7 @@ func (o *PostApproval) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *PostApproval) SetPostId(v float32) {
+func (o *PostApproval) SetPostId(v int32) {
 	o.PostId = v
 }
 

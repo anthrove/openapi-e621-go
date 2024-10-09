@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
-**PostId** | **float32** |  | 
+**PostId** | **int32** |  | 
 **Reason** | **string** |  | 
 **CreatorId** | **NullableFloat32** |  | 
 **IsResolved** | **bool** |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewPostFlag
 
-`func NewPostFlag(id float32, createdAt time.Time, postId float32, reason string, creatorId NullableFloat32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string, ) *PostFlag`
+`func NewPostFlag(id int32, createdAt time.Time, postId int32, reason string, creatorId NullableFloat32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string, ) *PostFlag`
 
 NewPostFlag instantiates a new PostFlag object
 This constructor will assign default values to properties that have it defined,
@@ -35,20 +35,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PostFlag) GetId() float32`
+`func (o *PostFlag) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PostFlag) GetIdOk() (*float32, bool)`
+`func (o *PostFlag) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PostFlag) SetId(v float32)`
+`func (o *PostFlag) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -75,20 +75,20 @@ SetCreatedAt sets CreatedAt field to given value.
 
 ### GetPostId
 
-`func (o *PostFlag) GetPostId() float32`
+`func (o *PostFlag) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *PostFlag) GetPostIdOk() (*float32, bool)`
+`func (o *PostFlag) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *PostFlag) SetPostId(v float32)`
+`func (o *PostFlag) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 

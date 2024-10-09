@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Reason** | **string** |  | 
-**CreatorId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **ForumPostId** | **NullableFloat32** |  | 
 **AntecedentName** | **string** |  | 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewTagImplication
 
-`func NewTagImplication(id float32, reason string, creatorId float32, createdAt time.Time, forumPostId NullableFloat32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableFloat32, updatedAt time.Time, descendantNames []string, approverId NullableFloat32, ) *TagImplication`
+`func NewTagImplication(id int32, reason string, creatorId int32, createdAt time.Time, forumPostId NullableFloat32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableFloat32, updatedAt time.Time, descendantNames []string, approverId NullableFloat32, ) *TagImplication`
 
 NewTagImplication instantiates a new TagImplication object
 This constructor will assign default values to properties that have it defined,
@@ -38,20 +38,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *TagImplication) GetId() float32`
+`func (o *TagImplication) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *TagImplication) GetIdOk() (*float32, bool)`
+`func (o *TagImplication) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *TagImplication) SetId(v float32)`
+`func (o *TagImplication) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -78,20 +78,20 @@ SetReason sets Reason field to given value.
 
 ### GetCreatorId
 
-`func (o *TagImplication) GetCreatorId() float32`
+`func (o *TagImplication) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *TagImplication) GetCreatorIdOk() (*float32, bool)`
+`func (o *TagImplication) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *TagImplication) SetCreatorId(v float32)`
+`func (o *TagImplication) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

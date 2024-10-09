@@ -34,14 +34,14 @@ type Post struct {
 	ChangeSeq     float32           `json:"change_seq"`
 	Flags         PostFlags         `json:"flags"`
 	Rating        Ratings           `json:"rating"`
-	FavCount      float32           `json:"fav_count"`
+	FavCount      int32             `json:"fav_count"`
 	Sources       []string          `json:"sources"`
-	Pools         []float32         `json:"pools"`
+	Pools         []int32           `json:"pools"`
 	Relationships PostRelationships `json:"relationships"`
 	ApproverId    NullableFloat32   `json:"approver_id"`
-	UploaderId    float32           `json:"uploader_id"`
+	UploaderId    int32             `json:"uploader_id"`
 	Description   string            `json:"description"`
-	CommentCount  float32           `json:"comment_count"`
+	CommentCount  int32             `json:"comment_count"`
 	IsFavorited   bool              `json:"is_favorited"`
 	HasNotes      bool              `json:"has_notes"`
 	Duration      NullableFloat32   `json:"duration"`
@@ -53,7 +53,7 @@ type _Post Post
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount float32, sources []string, pools []float32, relationships PostRelationships, approverId NullableFloat32, uploaderId float32, description string, commentCount float32, isFavorited bool, hasNotes bool, duration NullableFloat32) *Post {
+func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount int32, sources []string, pools []int32, relationships PostRelationships, approverId NullableFloat32, uploaderId int32, description string, commentCount int32, isFavorited bool, hasNotes bool, duration NullableFloat32) *Post {
 	this := Post{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -378,9 +378,9 @@ func (o *Post) SetRating(v Ratings) {
 }
 
 // GetFavCount returns the FavCount field value
-func (o *Post) GetFavCount() float32 {
+func (o *Post) GetFavCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -389,7 +389,7 @@ func (o *Post) GetFavCount() float32 {
 
 // GetFavCountOk returns a tuple with the FavCount field value
 // and a boolean to check if the value has been set.
-func (o *Post) GetFavCountOk() (*float32, bool) {
+func (o *Post) GetFavCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -397,7 +397,7 @@ func (o *Post) GetFavCountOk() (*float32, bool) {
 }
 
 // SetFavCount sets field value
-func (o *Post) SetFavCount(v float32) {
+func (o *Post) SetFavCount(v int32) {
 	o.FavCount = v
 }
 
@@ -426,9 +426,9 @@ func (o *Post) SetSources(v []string) {
 }
 
 // GetPools returns the Pools field value
-func (o *Post) GetPools() []float32 {
+func (o *Post) GetPools() []int32 {
 	if o == nil {
-		var ret []float32
+		var ret []int32
 		return ret
 	}
 
@@ -437,7 +437,7 @@ func (o *Post) GetPools() []float32 {
 
 // GetPoolsOk returns a tuple with the Pools field value
 // and a boolean to check if the value has been set.
-func (o *Post) GetPoolsOk() ([]float32, bool) {
+func (o *Post) GetPoolsOk() ([]int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -445,7 +445,7 @@ func (o *Post) GetPoolsOk() ([]float32, bool) {
 }
 
 // SetPools sets field value
-func (o *Post) SetPools(v []float32) {
+func (o *Post) SetPools(v []int32) {
 	o.Pools = v
 }
 
@@ -500,9 +500,9 @@ func (o *Post) SetApproverId(v float32) {
 }
 
 // GetUploaderId returns the UploaderId field value
-func (o *Post) GetUploaderId() float32 {
+func (o *Post) GetUploaderId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -511,7 +511,7 @@ func (o *Post) GetUploaderId() float32 {
 
 // GetUploaderIdOk returns a tuple with the UploaderId field value
 // and a boolean to check if the value has been set.
-func (o *Post) GetUploaderIdOk() (*float32, bool) {
+func (o *Post) GetUploaderIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -519,7 +519,7 @@ func (o *Post) GetUploaderIdOk() (*float32, bool) {
 }
 
 // SetUploaderId sets field value
-func (o *Post) SetUploaderId(v float32) {
+func (o *Post) SetUploaderId(v int32) {
 	o.UploaderId = v
 }
 
@@ -548,9 +548,9 @@ func (o *Post) SetDescription(v string) {
 }
 
 // GetCommentCount returns the CommentCount field value
-func (o *Post) GetCommentCount() float32 {
+func (o *Post) GetCommentCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -559,7 +559,7 @@ func (o *Post) GetCommentCount() float32 {
 
 // GetCommentCountOk returns a tuple with the CommentCount field value
 // and a boolean to check if the value has been set.
-func (o *Post) GetCommentCountOk() (*float32, bool) {
+func (o *Post) GetCommentCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -567,7 +567,7 @@ func (o *Post) GetCommentCountOk() (*float32, bool) {
 }
 
 // SetCommentCount sets field value
-func (o *Post) SetCommentCount(v float32) {
+func (o *Post) SetCommentCount(v int32) {
 	o.CommentCount = v
 }
 

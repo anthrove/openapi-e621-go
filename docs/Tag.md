@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Name** | **string** |  | 
-**PostCount** | **float32** |  | 
+**PostCount** | **int32** |  | 
 **RelatedTags** | **[]string** |  | 
 **RelatedTagsUpdatedAt** | **NullableTime** |  | 
 **Category** | [**TagCategories**](TagCategories.md) |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewTag
 
-`func NewTag(id float32, name string, postCount float32, relatedTags []string, relatedTagsUpdatedAt NullableTime, category TagCategories, isLocked bool, createdAt time.Time, updatedAt time.Time, ) *Tag`
+`func NewTag(id int32, name string, postCount int32, relatedTags []string, relatedTagsUpdatedAt NullableTime, category TagCategories, isLocked bool, createdAt time.Time, updatedAt time.Time, ) *Tag`
 
 NewTag instantiates a new Tag object
 This constructor will assign default values to properties that have it defined,
@@ -35,20 +35,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Tag) GetId() float32`
+`func (o *Tag) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Tag) GetIdOk() (*float32, bool)`
+`func (o *Tag) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Tag) SetId(v float32)`
+`func (o *Tag) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -75,20 +75,20 @@ SetName sets Name field to given value.
 
 ### GetPostCount
 
-`func (o *Tag) GetPostCount() float32`
+`func (o *Tag) GetPostCount() int32`
 
 GetPostCount returns the PostCount field if non-nil, zero value otherwise.
 
 ### GetPostCountOk
 
-`func (o *Tag) GetPostCountOk() (*float32, bool)`
+`func (o *Tag) GetPostCountOk() (*int32, bool)`
 
 GetPostCountOk returns a tuple with the PostCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostCount
 
-`func (o *Tag) SetPostCount(v float32)`
+`func (o *Tag) SetPostCount(v int32)`
 
 SetPostCount sets PostCount field to given value.
 

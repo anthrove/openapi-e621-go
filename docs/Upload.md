@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Source** | **string** |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
-**UploaderId** | **float32** |  | 
+**UploaderId** | **int32** |  | 
 **TagString** | **string** |  | 
 **Status** | **string** | Note: The \&quot;error\&quot; status will be proceeded by an error, ex: \&quot;error: RuntimeError - No file or source URL provided\&quot;  | 
 **Backtrace** | **NullableString** |  | 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 
 ### NewUpload
 
-`func NewUpload(id float32, source string, rating Ratings, uploaderId float32, tagString string, status string, backtrace NullableString, postId NullableFloat32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableFloat32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string, ) *Upload`
+`func NewUpload(id int32, source string, rating Ratings, uploaderId int32, tagString string, status string, backtrace NullableString, postId NullableFloat32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableFloat32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string, ) *Upload`
 
 NewUpload instantiates a new Upload object
 This constructor will assign default values to properties that have it defined,
@@ -45,20 +45,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Upload) GetId() float32`
+`func (o *Upload) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Upload) GetIdOk() (*float32, bool)`
+`func (o *Upload) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Upload) SetId(v float32)`
+`func (o *Upload) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -105,20 +105,20 @@ SetRating sets Rating field to given value.
 
 ### GetUploaderId
 
-`func (o *Upload) GetUploaderId() float32`
+`func (o *Upload) GetUploaderId() int32`
 
 GetUploaderId returns the UploaderId field if non-nil, zero value otherwise.
 
 ### GetUploaderIdOk
 
-`func (o *Upload) GetUploaderIdOk() (*float32, bool)`
+`func (o *Upload) GetUploaderIdOk() (*int32, bool)`
 
 GetUploaderIdOk returns a tuple with the UploaderId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUploaderId
 
-`func (o *Upload) SetUploaderId(v float32)`
+`func (o *Upload) SetUploaderId(v int32)`
 
 SetUploaderId sets UploaderId field to given value.
 

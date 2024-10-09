@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**UserId** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**Id** | **int32** |  | 
+**UserId** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 **Category** | [**FeedbackCategories**](FeedbackCategories.md) |  | 
 **Body** | **string** |  | 
 **CreatedAt** | **time.Time** |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewUserFeedback
 
-`func NewUserFeedback(id float32, userId float32, creatorId float32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId float32, isDeleted bool, ) *UserFeedback`
+`func NewUserFeedback(id int32, userId int32, creatorId int32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId float32, isDeleted bool, ) *UserFeedback`
 
 NewUserFeedback instantiates a new UserFeedback object
 This constructor will assign default values to properties that have it defined,
@@ -35,60 +35,60 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *UserFeedback) GetId() float32`
+`func (o *UserFeedback) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *UserFeedback) GetIdOk() (*float32, bool)`
+`func (o *UserFeedback) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *UserFeedback) SetId(v float32)`
+`func (o *UserFeedback) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetUserId
 
-`func (o *UserFeedback) GetUserId() float32`
+`func (o *UserFeedback) GetUserId() int32`
 
 GetUserId returns the UserId field if non-nil, zero value otherwise.
 
 ### GetUserIdOk
 
-`func (o *UserFeedback) GetUserIdOk() (*float32, bool)`
+`func (o *UserFeedback) GetUserIdOk() (*int32, bool)`
 
 GetUserIdOk returns a tuple with the UserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserId
 
-`func (o *UserFeedback) SetUserId(v float32)`
+`func (o *UserFeedback) SetUserId(v int32)`
 
 SetUserId sets UserId field to given value.
 
 
 ### GetCreatorId
 
-`func (o *UserFeedback) GetCreatorId() float32`
+`func (o *UserFeedback) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *UserFeedback) GetCreatorIdOk() (*float32, bool)`
+`func (o *UserFeedback) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *UserFeedback) SetCreatorId(v float32)`
+`func (o *UserFeedback) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Status** | **string** |  | 
 **ApproverId** | **NullableFloat32** |  | 
 **ReasonHidden** | **bool** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**PostCount** | **float32** |  | 
+**PostCount** | **int32** |  | 
 
 ## Methods
 
 ### NewTakedown
 
-`func NewTakedown(id float32, status string, approverId NullableFloat32, reasonHidden bool, createdAt time.Time, updatedAt time.Time, postCount float32, ) *Takedown`
+`func NewTakedown(id int32, status string, approverId NullableFloat32, reasonHidden bool, createdAt time.Time, updatedAt time.Time, postCount int32, ) *Takedown`
 
 NewTakedown instantiates a new Takedown object
 This constructor will assign default values to properties that have it defined,
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Takedown) GetId() float32`
+`func (o *Takedown) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Takedown) GetIdOk() (*float32, bool)`
+`func (o *Takedown) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Takedown) SetId(v float32)`
+`func (o *Takedown) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -163,20 +163,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetPostCount
 
-`func (o *Takedown) GetPostCount() float32`
+`func (o *Takedown) GetPostCount() int32`
 
 GetPostCount returns the PostCount field if non-nil, zero value otherwise.
 
 ### GetPostCountOk
 
-`func (o *Takedown) GetPostCountOk() (*float32, bool)`
+`func (o *Takedown) GetPostCountOk() (*int32, bool)`
 
 GetPostCountOk returns a tuple with the PostCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostCount
 
-`func (o *Takedown) SetPostCount(v float32)`
+`func (o *Takedown) SetPostCount(v int32)`
 
 SetPostCount sets PostCount field to given value.
 

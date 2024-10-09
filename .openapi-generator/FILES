@@ -110,6 +110,7 @@ docs/GetAltList200ResponseInner.md
 docs/GetArtist200Response.md
 docs/GetArtistIdOrNameParameter.md
 docs/GetUser200Response.md
+docs/GetUserIdParameter.md
 docs/Help.md
 docs/HelpPagesAPI.md
 docs/IPBan.md
@@ -317,6 +318,7 @@ model_get_alt_list_200_response_inner.go
 model_get_artist_200_response.go
 model_get_artist_id_or_name_parameter.go
 model_get_user_200_response.go
+model_get_user_id_parameter.go
 model_help.go
 model_ip_ban.go
 model_iqdb_post.go

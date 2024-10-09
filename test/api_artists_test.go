@@ -11,10 +11,11 @@ package e621
 
 import (
 	"context"
+	"testing"
+
 	openapiclient "github.com/anthrove/openapi-e621-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func Test_e621_ArtistsAPIService(t *testing.T) {
@@ -38,7 +39,7 @@ func Test_e621_ArtistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var idOrName GetArtistIdOrNameParameter
+		var idOrName openapiclient.GetArtistIdOrNameParameter
 
 		httpRes, err := apiClient.ArtistsAPI.DeleteArtist(context.Background(), idOrName).Execute()
 
@@ -51,7 +52,7 @@ func Test_e621_ArtistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var idOrName GetArtistIdOrNameParameter
+		var idOrName openapiclient.GetArtistIdOrNameParameter
 
 		httpRes, err := apiClient.ArtistsAPI.EditArtist(context.Background(), idOrName).Execute()
 
@@ -64,7 +65,7 @@ func Test_e621_ArtistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var idOrName GetArtistIdOrNameParameter
+		var idOrName openapiclient.GetArtistIdOrNameParameter
 
 		resp, httpRes, err := apiClient.ArtistsAPI.GetArtist(context.Background(), idOrName).Execute()
 
@@ -78,7 +79,7 @@ func Test_e621_ArtistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var idOrName GetArtistIdOrNameParameter
+		var idOrName openapiclient.GetArtistIdOrNameParameter
 
 		httpRes, err := apiClient.ArtistsAPI.RevertArtist(context.Background(), idOrName).Execute()
 

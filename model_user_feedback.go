@@ -22,9 +22,9 @@ var _ MappedNullable = &UserFeedback{}
 
 // UserFeedback struct for UserFeedback
 type UserFeedback struct {
-	Id        float32            `json:"id"`
-	UserId    float32            `json:"user_id"`
-	CreatorId float32            `json:"creator_id"`
+	Id        int32              `json:"id"`
+	UserId    int32              `json:"user_id"`
+	CreatorId int32              `json:"creator_id"`
 	Category  FeedbackCategories `json:"category"`
 	Body      string             `json:"body"`
 	CreatedAt time.Time          `json:"created_at"`
@@ -39,7 +39,7 @@ type _UserFeedback UserFeedback
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUserFeedback(id float32, userId float32, creatorId float32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId float32, isDeleted bool) *UserFeedback {
+func NewUserFeedback(id int32, userId int32, creatorId int32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId float32, isDeleted bool) *UserFeedback {
 	this := UserFeedback{}
 	this.Id = id
 	this.UserId = userId
@@ -62,9 +62,9 @@ func NewUserFeedbackWithDefaults() *UserFeedback {
 }
 
 // GetId returns the Id field value
-func (o *UserFeedback) GetId() float32 {
+func (o *UserFeedback) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -73,7 +73,7 @@ func (o *UserFeedback) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *UserFeedback) GetIdOk() (*float32, bool) {
+func (o *UserFeedback) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -81,14 +81,14 @@ func (o *UserFeedback) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *UserFeedback) SetId(v float32) {
+func (o *UserFeedback) SetId(v int32) {
 	o.Id = v
 }
 
 // GetUserId returns the UserId field value
-func (o *UserFeedback) GetUserId() float32 {
+func (o *UserFeedback) GetUserId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -97,7 +97,7 @@ func (o *UserFeedback) GetUserId() float32 {
 
 // GetUserIdOk returns a tuple with the UserId field value
 // and a boolean to check if the value has been set.
-func (o *UserFeedback) GetUserIdOk() (*float32, bool) {
+func (o *UserFeedback) GetUserIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -105,14 +105,14 @@ func (o *UserFeedback) GetUserIdOk() (*float32, bool) {
 }
 
 // SetUserId sets field value
-func (o *UserFeedback) SetUserId(v float32) {
+func (o *UserFeedback) SetUserId(v int32) {
 	o.UserId = v
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *UserFeedback) GetCreatorId() float32 {
+func (o *UserFeedback) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -121,7 +121,7 @@ func (o *UserFeedback) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *UserFeedback) GetCreatorIdOk() (*float32, bool) {
+func (o *UserFeedback) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -129,7 +129,7 @@ func (o *UserFeedback) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *UserFeedback) SetCreatorId(v float32) {
+func (o *UserFeedback) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 

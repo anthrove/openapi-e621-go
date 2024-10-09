@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**CreatorId** | **NullableFloat32** |  | 
-**PostId** | **float32** |  | 
+**Id** | **int32** |  | 
+**CreatorId** | **NullableInt32** |  | 
+**PostId** | **int32** |  | 
 **Action** | [**PostEventActions**](PostEventActions.md) |  | 
 **CreatedAt** | **time.Time** |  | 
 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewPostEvent
 
-`func NewPostEvent(id float32, creatorId NullableFloat32, postId float32, action PostEventActions, createdAt time.Time, ) *PostEvent`
+`func NewPostEvent(id int32, creatorId NullableInt32, postId int32, action PostEventActions, createdAt time.Time, ) *PostEvent`
 
 NewPostEvent instantiates a new PostEvent object
 This constructor will assign default values to properties that have it defined,
@@ -31,40 +31,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PostEvent) GetId() float32`
+`func (o *PostEvent) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PostEvent) GetIdOk() (*float32, bool)`
+`func (o *PostEvent) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PostEvent) SetId(v float32)`
+`func (o *PostEvent) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetCreatorId
 
-`func (o *PostEvent) GetCreatorId() float32`
+`func (o *PostEvent) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *PostEvent) GetCreatorIdOk() (*float32, bool)`
+`func (o *PostEvent) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *PostEvent) SetCreatorId(v float32)`
+`func (o *PostEvent) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
@@ -81,20 +81,20 @@ SetCreatorId sets CreatorId field to given value.
 UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetPostId
 
-`func (o *PostEvent) GetPostId() float32`
+`func (o *PostEvent) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *PostEvent) GetPostIdOk() (*float32, bool)`
+`func (o *PostEvent) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *PostEvent) SetPostId(v float32)`
+`func (o *PostEvent) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 

@@ -22,19 +22,32 @@ var _ MappedNullable = &FullCurrentUser{}
 
 // FullCurrentUser struct for FullCurrentUser
 type FullCurrentUser struct {
-	Id                               float32   `json:"id"`
+	Id                               int32     `json:"id"`
 	CreatedAt                        time.Time `json:"created_at"`
 	Name                             string    `json:"name"`
 	Level                            float32   `json:"level"`
-	BaseUploadLimit                  float32   `json:"base_upload_limit"`
-	PostUploadCount                  float32   `json:"post_upload_count"`
-	PostUpdateCount                  float32   `json:"post_update_count"`
-	NoteUpdateCount                  float32   `json:"note_update_count"`
+	BaseUploadLimit                  int32     `json:"base_upload_limit"`
+	PostUploadCount                  int32     `json:"post_upload_count"`
+	PostUpdateCount                  int32     `json:"post_update_count"`
+	NoteUpdateCount                  int32     `json:"note_update_count"`
 	IsBanned                         bool      `json:"is_banned"`
 	CanApprovePosts                  bool      `json:"can_approve_posts"`
 	CanUploadFree                    bool      `json:"can_upload_free"`
 	LevelString                      string    `json:"level_string"`
-	AvatarId                         float32   `json:"avatar_id"`
+	AvatarId                         int32     `json:"avatar_id"`
+	ArtistVersionCount               int32     `json:"artist_version_count"`
+	CommentCount                     int32     `json:"comment_count"`
+	FavoritesCount                   *int32    `json:"favorites_count,omitempty"`
+	FlagCount                        int32     `json:"flag_count"`
+	ForumPostCount                   int32     `json:"forum_post_count"`
+	NegativeFeedbackCount            int32     `json:"negative_feedback_count"`
+	NeutralFeedbackCount             int32     `json:"neutral_feedback_count"`
+	PoolVersionCount                 int32     `json:"pool_version_count"`
+	PositiveFeedbackCount            int32     `json:"positive_feedback_count"`
+	ProfileAbout                     string    `json:"profile_about"`
+	ProfileArtinfo                   string    `json:"profile_artinfo"`
+	UploadLimit                      int32     `json:"upload_limit"`
+	WikiPageVersionCount             int32     `json:"wiki_page_version_count"`
 	BlacklistUsers                   bool      `json:"blacklist_users"`
 	DescriptionCollapsedInitially    bool      `json:"description_collapsed_initially"`
 	HideComments                     bool      `json:"hide_comments"`
@@ -72,18 +85,6 @@ type FullCurrentUser struct {
 	FavoriteLimit                    int32     `json:"favorite_limit"`
 	TagQueryLimit                    int32     `json:"tag_query_limit"`
 	HasMail                          bool      `json:"has_mail"`
-	WikiPageVersionCount             int32     `json:"wiki_page_version_count"`
-	ArtistVersionCount               int32     `json:"artist_version_count"`
-	PoolVersionCount                 int32     `json:"pool_version_count"`
-	ForumPostCount                   int32     `json:"forum_post_count"`
-	CommentCount                     int32     `json:"comment_count"`
-	FlagCount                        int32     `json:"flag_count"`
-	PositiveFeedbackCount            int32     `json:"positive_feedback_count"`
-	NeutralFeedbackCount             int32     `json:"neutral_feedback_count"`
-	NegativeFeedbackCount            int32     `json:"negative_feedback_count"`
-	UploadLimit                      int32     `json:"upload_limit"`
-	ProfileAbout                     string    `json:"profile_about"`
-	ProfileArtinfo                   string    `json:"profile_artinfo"`
 }
 
 type _FullCurrentUser FullCurrentUser
@@ -92,7 +93,7 @@ type _FullCurrentUser FullCurrentUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFullCurrentUser(id float32, createdAt time.Time, name string, level float32, baseUploadLimit float32, postUploadCount float32, postUpdateCount float32, noteUpdateCount float32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId float32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, wikiPageVersionCount int32, artistVersionCount int32, poolVersionCount int32, forumPostCount int32, commentCount int32, flagCount int32, positiveFeedbackCount int32, neutralFeedbackCount int32, negativeFeedbackCount int32, uploadLimit int32, profileAbout string, profileArtinfo string) *FullCurrentUser {
+func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
 	this := FullCurrentUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -107,6 +108,18 @@ func NewFullCurrentUser(id float32, createdAt time.Time, name string, level floa
 	this.CanUploadFree = canUploadFree
 	this.LevelString = levelString
 	this.AvatarId = avatarId
+	this.ArtistVersionCount = artistVersionCount
+	this.CommentCount = commentCount
+	this.FlagCount = flagCount
+	this.ForumPostCount = forumPostCount
+	this.NegativeFeedbackCount = negativeFeedbackCount
+	this.NeutralFeedbackCount = neutralFeedbackCount
+	this.PoolVersionCount = poolVersionCount
+	this.PositiveFeedbackCount = positiveFeedbackCount
+	this.ProfileAbout = profileAbout
+	this.ProfileArtinfo = profileArtinfo
+	this.UploadLimit = uploadLimit
+	this.WikiPageVersionCount = wikiPageVersionCount
 	this.BlacklistUsers = blacklistUsers
 	this.DescriptionCollapsedInitially = descriptionCollapsedInitially
 	this.HideComments = hideComments
@@ -143,18 +156,6 @@ func NewFullCurrentUser(id float32, createdAt time.Time, name string, level floa
 	this.FavoriteLimit = favoriteLimit
 	this.TagQueryLimit = tagQueryLimit
 	this.HasMail = hasMail
-	this.WikiPageVersionCount = wikiPageVersionCount
-	this.ArtistVersionCount = artistVersionCount
-	this.PoolVersionCount = poolVersionCount
-	this.ForumPostCount = forumPostCount
-	this.CommentCount = commentCount
-	this.FlagCount = flagCount
-	this.PositiveFeedbackCount = positiveFeedbackCount
-	this.NeutralFeedbackCount = neutralFeedbackCount
-	this.NegativeFeedbackCount = negativeFeedbackCount
-	this.UploadLimit = uploadLimit
-	this.ProfileAbout = profileAbout
-	this.ProfileArtinfo = profileArtinfo
 	return &this
 }
 
@@ -167,9 +168,9 @@ func NewFullCurrentUserWithDefaults() *FullCurrentUser {
 }
 
 // GetId returns the Id field value
-func (o *FullCurrentUser) GetId() float32 {
+func (o *FullCurrentUser) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -178,7 +179,7 @@ func (o *FullCurrentUser) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetIdOk() (*float32, bool) {
+func (o *FullCurrentUser) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -186,7 +187,7 @@ func (o *FullCurrentUser) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *FullCurrentUser) SetId(v float32) {
+func (o *FullCurrentUser) SetId(v int32) {
 	o.Id = v
 }
 
@@ -263,9 +264,9 @@ func (o *FullCurrentUser) SetLevel(v float32) {
 }
 
 // GetBaseUploadLimit returns the BaseUploadLimit field value
-func (o *FullCurrentUser) GetBaseUploadLimit() float32 {
+func (o *FullCurrentUser) GetBaseUploadLimit() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -274,7 +275,7 @@ func (o *FullCurrentUser) GetBaseUploadLimit() float32 {
 
 // GetBaseUploadLimitOk returns a tuple with the BaseUploadLimit field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetBaseUploadLimitOk() (*float32, bool) {
+func (o *FullCurrentUser) GetBaseUploadLimitOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -282,14 +283,14 @@ func (o *FullCurrentUser) GetBaseUploadLimitOk() (*float32, bool) {
 }
 
 // SetBaseUploadLimit sets field value
-func (o *FullCurrentUser) SetBaseUploadLimit(v float32) {
+func (o *FullCurrentUser) SetBaseUploadLimit(v int32) {
 	o.BaseUploadLimit = v
 }
 
 // GetPostUploadCount returns the PostUploadCount field value
-func (o *FullCurrentUser) GetPostUploadCount() float32 {
+func (o *FullCurrentUser) GetPostUploadCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -298,7 +299,7 @@ func (o *FullCurrentUser) GetPostUploadCount() float32 {
 
 // GetPostUploadCountOk returns a tuple with the PostUploadCount field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetPostUploadCountOk() (*float32, bool) {
+func (o *FullCurrentUser) GetPostUploadCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -306,14 +307,14 @@ func (o *FullCurrentUser) GetPostUploadCountOk() (*float32, bool) {
 }
 
 // SetPostUploadCount sets field value
-func (o *FullCurrentUser) SetPostUploadCount(v float32) {
+func (o *FullCurrentUser) SetPostUploadCount(v int32) {
 	o.PostUploadCount = v
 }
 
 // GetPostUpdateCount returns the PostUpdateCount field value
-func (o *FullCurrentUser) GetPostUpdateCount() float32 {
+func (o *FullCurrentUser) GetPostUpdateCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -322,7 +323,7 @@ func (o *FullCurrentUser) GetPostUpdateCount() float32 {
 
 // GetPostUpdateCountOk returns a tuple with the PostUpdateCount field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetPostUpdateCountOk() (*float32, bool) {
+func (o *FullCurrentUser) GetPostUpdateCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -330,14 +331,14 @@ func (o *FullCurrentUser) GetPostUpdateCountOk() (*float32, bool) {
 }
 
 // SetPostUpdateCount sets field value
-func (o *FullCurrentUser) SetPostUpdateCount(v float32) {
+func (o *FullCurrentUser) SetPostUpdateCount(v int32) {
 	o.PostUpdateCount = v
 }
 
 // GetNoteUpdateCount returns the NoteUpdateCount field value
-func (o *FullCurrentUser) GetNoteUpdateCount() float32 {
+func (o *FullCurrentUser) GetNoteUpdateCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -346,7 +347,7 @@ func (o *FullCurrentUser) GetNoteUpdateCount() float32 {
 
 // GetNoteUpdateCountOk returns a tuple with the NoteUpdateCount field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetNoteUpdateCountOk() (*float32, bool) {
+func (o *FullCurrentUser) GetNoteUpdateCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -354,7 +355,7 @@ func (o *FullCurrentUser) GetNoteUpdateCountOk() (*float32, bool) {
 }
 
 // SetNoteUpdateCount sets field value
-func (o *FullCurrentUser) SetNoteUpdateCount(v float32) {
+func (o *FullCurrentUser) SetNoteUpdateCount(v int32) {
 	o.NoteUpdateCount = v
 }
 
@@ -455,9 +456,9 @@ func (o *FullCurrentUser) SetLevelString(v string) {
 }
 
 // GetAvatarId returns the AvatarId field value
-func (o *FullCurrentUser) GetAvatarId() float32 {
+func (o *FullCurrentUser) GetAvatarId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -466,7 +467,7 @@ func (o *FullCurrentUser) GetAvatarId() float32 {
 
 // GetAvatarIdOk returns a tuple with the AvatarId field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetAvatarIdOk() (*float32, bool) {
+func (o *FullCurrentUser) GetAvatarIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -474,8 +475,328 @@ func (o *FullCurrentUser) GetAvatarIdOk() (*float32, bool) {
 }
 
 // SetAvatarId sets field value
-func (o *FullCurrentUser) SetAvatarId(v float32) {
+func (o *FullCurrentUser) SetAvatarId(v int32) {
 	o.AvatarId = v
+}
+
+// GetArtistVersionCount returns the ArtistVersionCount field value
+func (o *FullCurrentUser) GetArtistVersionCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.ArtistVersionCount
+}
+
+// GetArtistVersionCountOk returns a tuple with the ArtistVersionCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetArtistVersionCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.ArtistVersionCount, true
+}
+
+// SetArtistVersionCount sets field value
+func (o *FullCurrentUser) SetArtistVersionCount(v int32) {
+	o.ArtistVersionCount = v
+}
+
+// GetCommentCount returns the CommentCount field value
+func (o *FullCurrentUser) GetCommentCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.CommentCount
+}
+
+// GetCommentCountOk returns a tuple with the CommentCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetCommentCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.CommentCount, true
+}
+
+// SetCommentCount sets field value
+func (o *FullCurrentUser) SetCommentCount(v int32) {
+	o.CommentCount = v
+}
+
+// GetFavoritesCount returns the FavoritesCount field value if set, zero value otherwise.
+func (o *FullCurrentUser) GetFavoritesCount() int32 {
+	if o == nil || IsNil(o.FavoritesCount) {
+		var ret int32
+		return ret
+	}
+	return *o.FavoritesCount
+}
+
+// GetFavoritesCountOk returns a tuple with the FavoritesCount field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetFavoritesCountOk() (*int32, bool) {
+	if o == nil || IsNil(o.FavoritesCount) {
+		return nil, false
+	}
+	return o.FavoritesCount, true
+}
+
+// HasFavoritesCount returns a boolean if a field has been set.
+func (o *FullCurrentUser) HasFavoritesCount() bool {
+	if o != nil && !IsNil(o.FavoritesCount) {
+		return true
+	}
+
+	return false
+}
+
+// SetFavoritesCount gets a reference to the given int32 and assigns it to the FavoritesCount field.
+func (o *FullCurrentUser) SetFavoritesCount(v int32) {
+	o.FavoritesCount = &v
+}
+
+// GetFlagCount returns the FlagCount field value
+func (o *FullCurrentUser) GetFlagCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.FlagCount
+}
+
+// GetFlagCountOk returns a tuple with the FlagCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetFlagCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.FlagCount, true
+}
+
+// SetFlagCount sets field value
+func (o *FullCurrentUser) SetFlagCount(v int32) {
+	o.FlagCount = v
+}
+
+// GetForumPostCount returns the ForumPostCount field value
+func (o *FullCurrentUser) GetForumPostCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.ForumPostCount
+}
+
+// GetForumPostCountOk returns a tuple with the ForumPostCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetForumPostCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.ForumPostCount, true
+}
+
+// SetForumPostCount sets field value
+func (o *FullCurrentUser) SetForumPostCount(v int32) {
+	o.ForumPostCount = v
+}
+
+// GetNegativeFeedbackCount returns the NegativeFeedbackCount field value
+func (o *FullCurrentUser) GetNegativeFeedbackCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.NegativeFeedbackCount
+}
+
+// GetNegativeFeedbackCountOk returns a tuple with the NegativeFeedbackCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetNegativeFeedbackCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.NegativeFeedbackCount, true
+}
+
+// SetNegativeFeedbackCount sets field value
+func (o *FullCurrentUser) SetNegativeFeedbackCount(v int32) {
+	o.NegativeFeedbackCount = v
+}
+
+// GetNeutralFeedbackCount returns the NeutralFeedbackCount field value
+func (o *FullCurrentUser) GetNeutralFeedbackCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.NeutralFeedbackCount
+}
+
+// GetNeutralFeedbackCountOk returns a tuple with the NeutralFeedbackCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetNeutralFeedbackCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.NeutralFeedbackCount, true
+}
+
+// SetNeutralFeedbackCount sets field value
+func (o *FullCurrentUser) SetNeutralFeedbackCount(v int32) {
+	o.NeutralFeedbackCount = v
+}
+
+// GetPoolVersionCount returns the PoolVersionCount field value
+func (o *FullCurrentUser) GetPoolVersionCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.PoolVersionCount
+}
+
+// GetPoolVersionCountOk returns a tuple with the PoolVersionCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetPoolVersionCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.PoolVersionCount, true
+}
+
+// SetPoolVersionCount sets field value
+func (o *FullCurrentUser) SetPoolVersionCount(v int32) {
+	o.PoolVersionCount = v
+}
+
+// GetPositiveFeedbackCount returns the PositiveFeedbackCount field value
+func (o *FullCurrentUser) GetPositiveFeedbackCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.PositiveFeedbackCount
+}
+
+// GetPositiveFeedbackCountOk returns a tuple with the PositiveFeedbackCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetPositiveFeedbackCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.PositiveFeedbackCount, true
+}
+
+// SetPositiveFeedbackCount sets field value
+func (o *FullCurrentUser) SetPositiveFeedbackCount(v int32) {
+	o.PositiveFeedbackCount = v
+}
+
+// GetProfileAbout returns the ProfileAbout field value
+func (o *FullCurrentUser) GetProfileAbout() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.ProfileAbout
+}
+
+// GetProfileAboutOk returns a tuple with the ProfileAbout field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetProfileAboutOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.ProfileAbout, true
+}
+
+// SetProfileAbout sets field value
+func (o *FullCurrentUser) SetProfileAbout(v string) {
+	o.ProfileAbout = v
+}
+
+// GetProfileArtinfo returns the ProfileArtinfo field value
+func (o *FullCurrentUser) GetProfileArtinfo() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.ProfileArtinfo
+}
+
+// GetProfileArtinfoOk returns a tuple with the ProfileArtinfo field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetProfileArtinfoOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.ProfileArtinfo, true
+}
+
+// SetProfileArtinfo sets field value
+func (o *FullCurrentUser) SetProfileArtinfo(v string) {
+	o.ProfileArtinfo = v
+}
+
+// GetUploadLimit returns the UploadLimit field value
+func (o *FullCurrentUser) GetUploadLimit() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.UploadLimit
+}
+
+// GetUploadLimitOk returns a tuple with the UploadLimit field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetUploadLimitOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.UploadLimit, true
+}
+
+// SetUploadLimit sets field value
+func (o *FullCurrentUser) SetUploadLimit(v int32) {
+	o.UploadLimit = v
+}
+
+// GetWikiPageVersionCount returns the WikiPageVersionCount field value
+func (o *FullCurrentUser) GetWikiPageVersionCount() int32 {
+	if o == nil {
+		var ret int32
+		return ret
+	}
+
+	return o.WikiPageVersionCount
+}
+
+// GetWikiPageVersionCountOk returns a tuple with the WikiPageVersionCount field value
+// and a boolean to check if the value has been set.
+func (o *FullCurrentUser) GetWikiPageVersionCountOk() (*int32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.WikiPageVersionCount, true
+}
+
+// SetWikiPageVersionCount sets field value
+func (o *FullCurrentUser) SetWikiPageVersionCount(v int32) {
+	o.WikiPageVersionCount = v
 }
 
 // GetBlacklistUsers returns the BlacklistUsers field value
@@ -1374,294 +1695,6 @@ func (o *FullCurrentUser) SetHasMail(v bool) {
 	o.HasMail = v
 }
 
-// GetWikiPageVersionCount returns the WikiPageVersionCount field value
-func (o *FullCurrentUser) GetWikiPageVersionCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.WikiPageVersionCount
-}
-
-// GetWikiPageVersionCountOk returns a tuple with the WikiPageVersionCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetWikiPageVersionCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WikiPageVersionCount, true
-}
-
-// SetWikiPageVersionCount sets field value
-func (o *FullCurrentUser) SetWikiPageVersionCount(v int32) {
-	o.WikiPageVersionCount = v
-}
-
-// GetArtistVersionCount returns the ArtistVersionCount field value
-func (o *FullCurrentUser) GetArtistVersionCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.ArtistVersionCount
-}
-
-// GetArtistVersionCountOk returns a tuple with the ArtistVersionCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetArtistVersionCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.ArtistVersionCount, true
-}
-
-// SetArtistVersionCount sets field value
-func (o *FullCurrentUser) SetArtistVersionCount(v int32) {
-	o.ArtistVersionCount = v
-}
-
-// GetPoolVersionCount returns the PoolVersionCount field value
-func (o *FullCurrentUser) GetPoolVersionCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.PoolVersionCount
-}
-
-// GetPoolVersionCountOk returns a tuple with the PoolVersionCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetPoolVersionCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.PoolVersionCount, true
-}
-
-// SetPoolVersionCount sets field value
-func (o *FullCurrentUser) SetPoolVersionCount(v int32) {
-	o.PoolVersionCount = v
-}
-
-// GetForumPostCount returns the ForumPostCount field value
-func (o *FullCurrentUser) GetForumPostCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.ForumPostCount
-}
-
-// GetForumPostCountOk returns a tuple with the ForumPostCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetForumPostCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.ForumPostCount, true
-}
-
-// SetForumPostCount sets field value
-func (o *FullCurrentUser) SetForumPostCount(v int32) {
-	o.ForumPostCount = v
-}
-
-// GetCommentCount returns the CommentCount field value
-func (o *FullCurrentUser) GetCommentCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.CommentCount
-}
-
-// GetCommentCountOk returns a tuple with the CommentCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetCommentCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.CommentCount, true
-}
-
-// SetCommentCount sets field value
-func (o *FullCurrentUser) SetCommentCount(v int32) {
-	o.CommentCount = v
-}
-
-// GetFlagCount returns the FlagCount field value
-func (o *FullCurrentUser) GetFlagCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.FlagCount
-}
-
-// GetFlagCountOk returns a tuple with the FlagCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetFlagCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.FlagCount, true
-}
-
-// SetFlagCount sets field value
-func (o *FullCurrentUser) SetFlagCount(v int32) {
-	o.FlagCount = v
-}
-
-// GetPositiveFeedbackCount returns the PositiveFeedbackCount field value
-func (o *FullCurrentUser) GetPositiveFeedbackCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.PositiveFeedbackCount
-}
-
-// GetPositiveFeedbackCountOk returns a tuple with the PositiveFeedbackCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetPositiveFeedbackCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.PositiveFeedbackCount, true
-}
-
-// SetPositiveFeedbackCount sets field value
-func (o *FullCurrentUser) SetPositiveFeedbackCount(v int32) {
-	o.PositiveFeedbackCount = v
-}
-
-// GetNeutralFeedbackCount returns the NeutralFeedbackCount field value
-func (o *FullCurrentUser) GetNeutralFeedbackCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.NeutralFeedbackCount
-}
-
-// GetNeutralFeedbackCountOk returns a tuple with the NeutralFeedbackCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetNeutralFeedbackCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.NeutralFeedbackCount, true
-}
-
-// SetNeutralFeedbackCount sets field value
-func (o *FullCurrentUser) SetNeutralFeedbackCount(v int32) {
-	o.NeutralFeedbackCount = v
-}
-
-// GetNegativeFeedbackCount returns the NegativeFeedbackCount field value
-func (o *FullCurrentUser) GetNegativeFeedbackCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.NegativeFeedbackCount
-}
-
-// GetNegativeFeedbackCountOk returns a tuple with the NegativeFeedbackCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetNegativeFeedbackCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.NegativeFeedbackCount, true
-}
-
-// SetNegativeFeedbackCount sets field value
-func (o *FullCurrentUser) SetNegativeFeedbackCount(v int32) {
-	o.NegativeFeedbackCount = v
-}
-
-// GetUploadLimit returns the UploadLimit field value
-func (o *FullCurrentUser) GetUploadLimit() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.UploadLimit
-}
-
-// GetUploadLimitOk returns a tuple with the UploadLimit field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetUploadLimitOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.UploadLimit, true
-}
-
-// SetUploadLimit sets field value
-func (o *FullCurrentUser) SetUploadLimit(v int32) {
-	o.UploadLimit = v
-}
-
-// GetProfileAbout returns the ProfileAbout field value
-func (o *FullCurrentUser) GetProfileAbout() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.ProfileAbout
-}
-
-// GetProfileAboutOk returns a tuple with the ProfileAbout field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetProfileAboutOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.ProfileAbout, true
-}
-
-// SetProfileAbout sets field value
-func (o *FullCurrentUser) SetProfileAbout(v string) {
-	o.ProfileAbout = v
-}
-
-// GetProfileArtinfo returns the ProfileArtinfo field value
-func (o *FullCurrentUser) GetProfileArtinfo() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.ProfileArtinfo
-}
-
-// GetProfileArtinfoOk returns a tuple with the ProfileArtinfo field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetProfileArtinfoOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.ProfileArtinfo, true
-}
-
-// SetProfileArtinfo sets field value
-func (o *FullCurrentUser) SetProfileArtinfo(v string) {
-	o.ProfileArtinfo = v
-}
-
 func (o FullCurrentUser) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -1685,6 +1718,21 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["can_upload_free"] = o.CanUploadFree
 	toSerialize["level_string"] = o.LevelString
 	toSerialize["avatar_id"] = o.AvatarId
+	toSerialize["artist_version_count"] = o.ArtistVersionCount
+	toSerialize["comment_count"] = o.CommentCount
+	if !IsNil(o.FavoritesCount) {
+		toSerialize["favorites_count"] = o.FavoritesCount
+	}
+	toSerialize["flag_count"] = o.FlagCount
+	toSerialize["forum_post_count"] = o.ForumPostCount
+	toSerialize["negative_feedback_count"] = o.NegativeFeedbackCount
+	toSerialize["neutral_feedback_count"] = o.NeutralFeedbackCount
+	toSerialize["pool_version_count"] = o.PoolVersionCount
+	toSerialize["positive_feedback_count"] = o.PositiveFeedbackCount
+	toSerialize["profile_about"] = o.ProfileAbout
+	toSerialize["profile_artinfo"] = o.ProfileArtinfo
+	toSerialize["upload_limit"] = o.UploadLimit
+	toSerialize["wiki_page_version_count"] = o.WikiPageVersionCount
 	toSerialize["blacklist_users"] = o.BlacklistUsers
 	toSerialize["description_collapsed_initially"] = o.DescriptionCollapsedInitially
 	toSerialize["hide_comments"] = o.HideComments
@@ -1724,18 +1772,6 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["favorite_limit"] = o.FavoriteLimit
 	toSerialize["tag_query_limit"] = o.TagQueryLimit
 	toSerialize["has_mail"] = o.HasMail
-	toSerialize["wiki_page_version_count"] = o.WikiPageVersionCount
-	toSerialize["artist_version_count"] = o.ArtistVersionCount
-	toSerialize["pool_version_count"] = o.PoolVersionCount
-	toSerialize["forum_post_count"] = o.ForumPostCount
-	toSerialize["comment_count"] = o.CommentCount
-	toSerialize["flag_count"] = o.FlagCount
-	toSerialize["positive_feedback_count"] = o.PositiveFeedbackCount
-	toSerialize["neutral_feedback_count"] = o.NeutralFeedbackCount
-	toSerialize["negative_feedback_count"] = o.NegativeFeedbackCount
-	toSerialize["upload_limit"] = o.UploadLimit
-	toSerialize["profile_about"] = o.ProfileAbout
-	toSerialize["profile_artinfo"] = o.ProfileArtinfo
 	return toSerialize, nil
 }
 
@@ -1757,6 +1793,18 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"can_upload_free",
 		"level_string",
 		"avatar_id",
+		"artist_version_count",
+		"comment_count",
+		"flag_count",
+		"forum_post_count",
+		"negative_feedback_count",
+		"neutral_feedback_count",
+		"pool_version_count",
+		"positive_feedback_count",
+		"profile_about",
+		"profile_artinfo",
+		"upload_limit",
+		"wiki_page_version_count",
 		"blacklist_users",
 		"description_collapsed_initially",
 		"hide_comments",
@@ -1793,18 +1841,6 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"favorite_limit",
 		"tag_query_limit",
 		"has_mail",
-		"wiki_page_version_count",
-		"artist_version_count",
-		"pool_version_count",
-		"forum_post_count",
-		"comment_count",
-		"flag_count",
-		"positive_feedback_count",
-		"neutral_feedback_count",
-		"negative_feedback_count",
-		"upload_limit",
-		"profile_about",
-		"profile_artinfo",
 	}
 
 	allProperties := make(map[string]interface{})
