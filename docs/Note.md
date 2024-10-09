@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**CreatorId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
 **X** | **float32** |  | 
 **Y** | **float32** |  | 
 **Width** | **float32** |  | 
 **Height** | **float32** |  | 
 **Version** | **float32** |  | 
 **IsActive** | **bool** |  | 
-**PostId** | **float32** |  | 
+**PostId** | **int32** |  | 
 **Body** | **string** |  | 
 **CreatorName** | **string** |  | 
 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewNote
 
-`func NewNote(id float32, createdAt time.Time, updatedAt time.Time, creatorId float32, x float32, y float32, width float32, height float32, version float32, isActive bool, postId float32, body string, creatorName string, ) *Note`
+`func NewNote(id int32, createdAt time.Time, updatedAt time.Time, creatorId int32, x float32, y float32, width float32, height float32, version float32, isActive bool, postId int32, body string, creatorName string, ) *Note`
 
 NewNote instantiates a new Note object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Note) GetId() float32`
+`func (o *Note) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Note) GetIdOk() (*float32, bool)`
+`func (o *Note) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Note) SetId(v float32)`
+`func (o *Note) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -99,20 +99,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetCreatorId
 
-`func (o *Note) GetCreatorId() float32`
+`func (o *Note) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *Note) GetCreatorIdOk() (*float32, bool)`
+`func (o *Note) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *Note) SetCreatorId(v float32)`
+`func (o *Note) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
@@ -239,20 +239,20 @@ SetIsActive sets IsActive field to given value.
 
 ### GetPostId
 
-`func (o *Note) GetPostId() float32`
+`func (o *Note) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *Note) GetPostIdOk() (*float32, bool)`
+`func (o *Note) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *Note) SetPostId(v float32)`
+`func (o *Note) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 

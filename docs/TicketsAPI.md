@@ -249,9 +249,9 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. (optional)
-	searchId := float32(8.14) // float32 | Search for a specific id. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
+	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchCreatorName := "searchCreatorName_example" // string | You must be Moderator+. (optional)
 	searchCreatorId := float32(8.14) // float32 | You must be Moderator+ unless providing your own id. (optional)
 	searchClaimantName := "searchClaimantName_example" // string | You must be Moderator+. (optional)
@@ -285,9 +285,9 @@ Other parameters are passed through a pointer to a apiSearchTicketsRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. | 
- **searchId** | **float32** | Search for a specific id. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. | 
+ **searchId** | **int32** | Search for a specific id. | 
  **searchCreatorName** | **string** | You must be Moderator+. | 
  **searchCreatorId** | **float32** | You must be Moderator+ unless providing your own id. | 
  **searchClaimantName** | **string** | You must be Moderator+. | 

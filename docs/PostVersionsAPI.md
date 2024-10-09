@@ -29,9 +29,9 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
 	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers. (optional)
-	searchId := float32(8.14) // float32 | Search for a specific id. (optional)
+	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchUpdaterName := "searchUpdaterName_example" // string |  (optional)
 	searchUpdaterId := float32(8.14) // float32 |  (optional)
 	searchPostId := float32(8.14) // float32 |  (optional)
@@ -75,9 +75,9 @@ Other parameters are passed through a pointer to a apiSearchPostVersionsRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
  **page** | **float32** | The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers. | 
- **searchId** | **float32** | Search for a specific id. | 
+ **searchId** | **int32** | Search for a specific id. | 
  **searchUpdaterName** | **string** |  | 
  **searchUpdaterId** | **float32** |  | 
  **searchPostId** | **float32** |  | 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Flags** | **string** |  | 
 **Tags** | **string** |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
@@ -14,11 +14,11 @@ Name | Type | Description | Notes
 **Size** | **float32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Uploader** | **string** |  | 
-**UploaderId** | **float32** |  | 
+**UploaderId** | **int32** |  | 
 **Score** | **float32** |  | 
-**FavCount** | **float32** |  | 
+**FavCount** | **int32** |  | 
 **IsFavorited** | **bool** |  | 
-**Pools** | **[]float32** |  | 
+**Pools** | **[]int32** |  | 
 **Md5** | **string** |  | 
 **PreviewUrl** | **NullableString** |  | 
 **LargeUrl** | **NullableString** |  | 
@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 
 ### NewDeferredPost
 
-`func NewDeferredPost(id float32, flags string, tags string, rating Ratings, fileExt string, width float32, height float32, size float32, createdAt time.Time, uploader string, uploaderId float32, score float32, favCount float32, isFavorited bool, pools []float32, md5 string, previewUrl NullableString, largeUrl NullableString, fileUrl NullableString, previewWidth float32, previewHeight float32, ) *DeferredPost`
+`func NewDeferredPost(id int32, flags string, tags string, rating Ratings, fileExt string, width float32, height float32, size float32, createdAt time.Time, uploader string, uploaderId int32, score float32, favCount int32, isFavorited bool, pools []int32, md5 string, previewUrl NullableString, largeUrl NullableString, fileUrl NullableString, previewWidth float32, previewHeight float32, ) *DeferredPost`
 
 NewDeferredPost instantiates a new DeferredPost object
 This constructor will assign default values to properties that have it defined,
@@ -47,20 +47,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *DeferredPost) GetId() float32`
+`func (o *DeferredPost) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *DeferredPost) GetIdOk() (*float32, bool)`
+`func (o *DeferredPost) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *DeferredPost) SetId(v float32)`
+`func (o *DeferredPost) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -247,20 +247,20 @@ SetUploader sets Uploader field to given value.
 
 ### GetUploaderId
 
-`func (o *DeferredPost) GetUploaderId() float32`
+`func (o *DeferredPost) GetUploaderId() int32`
 
 GetUploaderId returns the UploaderId field if non-nil, zero value otherwise.
 
 ### GetUploaderIdOk
 
-`func (o *DeferredPost) GetUploaderIdOk() (*float32, bool)`
+`func (o *DeferredPost) GetUploaderIdOk() (*int32, bool)`
 
 GetUploaderIdOk returns a tuple with the UploaderId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUploaderId
 
-`func (o *DeferredPost) SetUploaderId(v float32)`
+`func (o *DeferredPost) SetUploaderId(v int32)`
 
 SetUploaderId sets UploaderId field to given value.
 
@@ -287,20 +287,20 @@ SetScore sets Score field to given value.
 
 ### GetFavCount
 
-`func (o *DeferredPost) GetFavCount() float32`
+`func (o *DeferredPost) GetFavCount() int32`
 
 GetFavCount returns the FavCount field if non-nil, zero value otherwise.
 
 ### GetFavCountOk
 
-`func (o *DeferredPost) GetFavCountOk() (*float32, bool)`
+`func (o *DeferredPost) GetFavCountOk() (*int32, bool)`
 
 GetFavCountOk returns a tuple with the FavCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFavCount
 
-`func (o *DeferredPost) SetFavCount(v float32)`
+`func (o *DeferredPost) SetFavCount(v int32)`
 
 SetFavCount sets FavCount field to given value.
 
@@ -327,20 +327,20 @@ SetIsFavorited sets IsFavorited field to given value.
 
 ### GetPools
 
-`func (o *DeferredPost) GetPools() []float32`
+`func (o *DeferredPost) GetPools() []int32`
 
 GetPools returns the Pools field if non-nil, zero value otherwise.
 
 ### GetPoolsOk
 
-`func (o *DeferredPost) GetPoolsOk() (*[]float32, bool)`
+`func (o *DeferredPost) GetPoolsOk() (*[]int32, bool)`
 
 GetPoolsOk returns a tuple with the Pools field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPools
 
-`func (o *DeferredPost) SetPools(v []float32)`
+`func (o *DeferredPost) SetPools(v []int32)`
 
 SetPools sets Pools field to given value.
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**ArtistId** | **float32** |  | 
+**Id** | **int32** |  | 
+**ArtistId** | **int32** |  | 
 **Url** | **string** |  | 
 **NormalizedUrl** | **string** |  | 
 **CreatedAt** | **time.Time** |  | 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewSearchArtistUrls200ResponseInner
 
-`func NewSearchArtistUrls200ResponseInner(id float32, artistId float32, url string, normalizedUrl string, createdAt time.Time, updatedAt time.Time, isActive bool, artist Artist, ) *SearchArtistUrls200ResponseInner`
+`func NewSearchArtistUrls200ResponseInner(id int32, artistId int32, url string, normalizedUrl string, createdAt time.Time, updatedAt time.Time, isActive bool, artist Artist, ) *SearchArtistUrls200ResponseInner`
 
 NewSearchArtistUrls200ResponseInner instantiates a new SearchArtistUrls200ResponseInner object
 This constructor will assign default values to properties that have it defined,
@@ -34,40 +34,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *SearchArtistUrls200ResponseInner) GetId() float32`
+`func (o *SearchArtistUrls200ResponseInner) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *SearchArtistUrls200ResponseInner) GetIdOk() (*float32, bool)`
+`func (o *SearchArtistUrls200ResponseInner) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *SearchArtistUrls200ResponseInner) SetId(v float32)`
+`func (o *SearchArtistUrls200ResponseInner) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetArtistId
 
-`func (o *SearchArtistUrls200ResponseInner) GetArtistId() float32`
+`func (o *SearchArtistUrls200ResponseInner) GetArtistId() int32`
 
 GetArtistId returns the ArtistId field if non-nil, zero value otherwise.
 
 ### GetArtistIdOk
 
-`func (o *SearchArtistUrls200ResponseInner) GetArtistIdOk() (*float32, bool)`
+`func (o *SearchArtistUrls200ResponseInner) GetArtistIdOk() (*int32, bool)`
 
 GetArtistIdOk returns a tuple with the ArtistId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArtistId
 
-`func (o *SearchArtistUrls200ResponseInner) SetArtistId(v float32)`
+`func (o *SearchArtistUrls200ResponseInner) SetArtistId(v int32)`
 
 SetArtistId sets ArtistId field to given value.
 

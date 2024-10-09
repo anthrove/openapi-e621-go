@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Name** | **string** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **IsActive** | **bool** |  | 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **GroupName** | **string** |  | 
 **LinkedUserId** | **float32** |  | 
 **CreatedAt** | **time.Time** |  | 
-**CreatorId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
 **IsLocked** | **bool** |  | 
 **Notes** | **string** |  | 
 **Domains** | [**[][]SearchArtists200ResponseInnerAllOfDomainsInnerInner**]([]SearchArtists200ResponseInnerAllOfDomainsInnerInner.md) |  | 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewGetArtist200Response
 
-`func NewGetArtist200Response(id float32, name string, updatedAt time.Time, isActive bool, otherNames []string, groupName string, linkedUserId float32, createdAt time.Time, creatorId float32, isLocked bool, notes string, domains [][]SearchArtists200ResponseInnerAllOfDomainsInnerInner, urls []ArtistURL, ) *GetArtist200Response`
+`func NewGetArtist200Response(id int32, name string, updatedAt time.Time, isActive bool, otherNames []string, groupName string, linkedUserId float32, createdAt time.Time, creatorId int32, isLocked bool, notes string, domains [][]SearchArtists200ResponseInnerAllOfDomainsInnerInner, urls []ArtistURL, ) *GetArtist200Response`
 
 NewGetArtist200Response instantiates a new GetArtist200Response object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *GetArtist200Response) GetId() float32`
+`func (o *GetArtist200Response) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *GetArtist200Response) GetIdOk() (*float32, bool)`
+`func (o *GetArtist200Response) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *GetArtist200Response) SetId(v float32)`
+`func (o *GetArtist200Response) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -199,20 +199,20 @@ SetCreatedAt sets CreatedAt field to given value.
 
 ### GetCreatorId
 
-`func (o *GetArtist200Response) GetCreatorId() float32`
+`func (o *GetArtist200Response) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *GetArtist200Response) GetCreatorIdOk() (*float32, bool)`
+`func (o *GetArtist200Response) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *GetArtist200Response) SetCreatorId(v float32)`
+`func (o *GetArtist200Response) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

@@ -385,9 +385,9 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. (optional)
-	searchId := float32(8.14) // float32 | Search for a specific id. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
+	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchDeleted := "searchDeleted_example" // string | You must be Moderator+. (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
@@ -420,9 +420,9 @@ Other parameters are passed through a pointer to a apiSearchUserFeedbacksRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. | 
- **searchId** | **float32** | Search for a specific id. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. | 
+ **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
  **searchDeleted** | **string** | You must be Moderator+. | 
  **searchBodyMatches** | **string** |  | 

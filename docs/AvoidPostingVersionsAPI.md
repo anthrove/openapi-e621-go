@@ -27,9 +27,9 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. (optional)
-	searchId := float32(8.14) // float32 | Search for a specific id. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
+	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchIpAddr := "searchIpAddr_example" // string | Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \"is contained within or equals\" (`<<=`). (optional)
 	searchOrder := "searchOrder_example" // string | The order of the results. (optional)
 	searchUpdaterName := "searchUpdaterName_example" // string | The name of the updater of the avoid posting entry. (optional)
@@ -64,9 +64,9 @@ Other parameters are passed through a pointer to a apiSearchAvoidPostingVersions
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. | 
- **searchId** | **float32** | Search for a specific id. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. | 
+ **searchId** | **int32** | Search for a specific id. | 
  **searchIpAddr** | **string** | Must be Admin+ to use. See [postgres&#39; documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \&quot;is contained within or equals\&quot; (&#x60;&lt;&lt;&#x3D;&#x60;). | 
  **searchOrder** | **string** | The order of the results. | 
  **searchUpdaterName** | **string** | The name of the updater of the avoid posting entry. | 

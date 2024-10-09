@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**PoolId** | **float32** |  | 
-**PostIds** | **[]float32** |  | 
+**Id** | **int32** |  | 
+**PoolId** | **int32** |  | 
+**PostIds** | **[]int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**UpdaterId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
 **Name** | **string** |  | 
 **NameChanged** | **bool** |  | 
 **Description** | **string** |  | 
@@ -18,14 +18,14 @@ Name | Type | Description | Notes
 **IsLocked** | **bool** |  | 
 **Category** | [**PoolCategories**](PoolCategories.md) |  | 
 **Version** | **float32** |  | 
-**AddedPostIds** | **[]float32** |  | 
-**RemovedPostIds** | **[]float32** |  | 
+**AddedPostIds** | **[]int32** |  | 
+**RemovedPostIds** | **[]int32** |  | 
 
 ## Methods
 
 ### NewPoolVersion
 
-`func NewPoolVersion(id float32, poolId float32, postIds []float32, createdAt time.Time, updatedAt time.Time, updaterId float32, name string, nameChanged bool, description string, descriptionChanged bool, isActive bool, isLocked bool, category PoolCategories, version float32, addedPostIds []float32, removedPostIds []float32, ) *PoolVersion`
+`func NewPoolVersion(id int32, poolId int32, postIds []int32, createdAt time.Time, updatedAt time.Time, updaterId int32, name string, nameChanged bool, description string, descriptionChanged bool, isActive bool, isLocked bool, category PoolCategories, version float32, addedPostIds []int32, removedPostIds []int32, ) *PoolVersion`
 
 NewPoolVersion instantiates a new PoolVersion object
 This constructor will assign default values to properties that have it defined,
@@ -42,60 +42,60 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *PoolVersion) GetId() float32`
+`func (o *PoolVersion) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *PoolVersion) GetIdOk() (*float32, bool)`
+`func (o *PoolVersion) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *PoolVersion) SetId(v float32)`
+`func (o *PoolVersion) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetPoolId
 
-`func (o *PoolVersion) GetPoolId() float32`
+`func (o *PoolVersion) GetPoolId() int32`
 
 GetPoolId returns the PoolId field if non-nil, zero value otherwise.
 
 ### GetPoolIdOk
 
-`func (o *PoolVersion) GetPoolIdOk() (*float32, bool)`
+`func (o *PoolVersion) GetPoolIdOk() (*int32, bool)`
 
 GetPoolIdOk returns a tuple with the PoolId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPoolId
 
-`func (o *PoolVersion) SetPoolId(v float32)`
+`func (o *PoolVersion) SetPoolId(v int32)`
 
 SetPoolId sets PoolId field to given value.
 
 
 ### GetPostIds
 
-`func (o *PoolVersion) GetPostIds() []float32`
+`func (o *PoolVersion) GetPostIds() []int32`
 
 GetPostIds returns the PostIds field if non-nil, zero value otherwise.
 
 ### GetPostIdsOk
 
-`func (o *PoolVersion) GetPostIdsOk() (*[]float32, bool)`
+`func (o *PoolVersion) GetPostIdsOk() (*[]int32, bool)`
 
 GetPostIdsOk returns a tuple with the PostIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostIds
 
-`func (o *PoolVersion) SetPostIds(v []float32)`
+`func (o *PoolVersion) SetPostIds(v []int32)`
 
 SetPostIds sets PostIds field to given value.
 
@@ -142,20 +142,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetUpdaterId
 
-`func (o *PoolVersion) GetUpdaterId() float32`
+`func (o *PoolVersion) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *PoolVersion) GetUpdaterIdOk() (*float32, bool)`
+`func (o *PoolVersion) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *PoolVersion) SetUpdaterId(v float32)`
+`func (o *PoolVersion) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 
@@ -322,40 +322,40 @@ SetVersion sets Version field to given value.
 
 ### GetAddedPostIds
 
-`func (o *PoolVersion) GetAddedPostIds() []float32`
+`func (o *PoolVersion) GetAddedPostIds() []int32`
 
 GetAddedPostIds returns the AddedPostIds field if non-nil, zero value otherwise.
 
 ### GetAddedPostIdsOk
 
-`func (o *PoolVersion) GetAddedPostIdsOk() (*[]float32, bool)`
+`func (o *PoolVersion) GetAddedPostIdsOk() (*[]int32, bool)`
 
 GetAddedPostIdsOk returns a tuple with the AddedPostIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAddedPostIds
 
-`func (o *PoolVersion) SetAddedPostIds(v []float32)`
+`func (o *PoolVersion) SetAddedPostIds(v []int32)`
 
 SetAddedPostIds sets AddedPostIds field to given value.
 
 
 ### GetRemovedPostIds
 
-`func (o *PoolVersion) GetRemovedPostIds() []float32`
+`func (o *PoolVersion) GetRemovedPostIds() []int32`
 
 GetRemovedPostIds returns the RemovedPostIds field if non-nil, zero value otherwise.
 
 ### GetRemovedPostIdsOk
 
-`func (o *PoolVersion) GetRemovedPostIdsOk() (*[]float32, bool)`
+`func (o *PoolVersion) GetRemovedPostIdsOk() (*[]int32, bool)`
 
 GetRemovedPostIdsOk returns a tuple with the RemovedPostIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemovedPostIds
 
-`func (o *PoolVersion) SetRemovedPostIds(v []float32)`
+`func (o *PoolVersion) SetRemovedPostIds(v []int32)`
 
 SetRemovedPostIds sets RemovedPostIds field to given value.
 

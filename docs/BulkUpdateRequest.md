@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**Id** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 **ForumTopicId** | **NullableFloat32** |  | 
 **Script** | **string** |  | 
 **Status** | **string** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewBulkUpdateRequest
 
-`func NewBulkUpdateRequest(id float32, creatorId float32, forumTopicId NullableFloat32, script string, status string, createdAt time.Time, updatedAt time.Time, approverId NullableFloat32, forumPostId NullableFloat32, title string, ) *BulkUpdateRequest`
+`func NewBulkUpdateRequest(id int32, creatorId int32, forumTopicId NullableFloat32, script string, status string, createdAt time.Time, updatedAt time.Time, approverId NullableFloat32, forumPostId NullableFloat32, title string, ) *BulkUpdateRequest`
 
 NewBulkUpdateRequest instantiates a new BulkUpdateRequest object
 This constructor will assign default values to properties that have it defined,
@@ -36,40 +36,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *BulkUpdateRequest) GetId() float32`
+`func (o *BulkUpdateRequest) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *BulkUpdateRequest) GetIdOk() (*float32, bool)`
+`func (o *BulkUpdateRequest) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *BulkUpdateRequest) SetId(v float32)`
+`func (o *BulkUpdateRequest) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetCreatorId
 
-`func (o *BulkUpdateRequest) GetCreatorId() float32`
+`func (o *BulkUpdateRequest) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *BulkUpdateRequest) GetCreatorIdOk() (*float32, bool)`
+`func (o *BulkUpdateRequest) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *BulkUpdateRequest) SetCreatorId(v float32)`
+`func (o *BulkUpdateRequest) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

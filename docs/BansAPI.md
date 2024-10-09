@@ -98,9 +98,9 @@ import (
 )
 
 func main() {
-	limit := float32(8.14) // float32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. (optional)
-	searchId := float32(8.14) // float32 | Search for a specific id. (optional)
+	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
+	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string | The order of the results. (optional)
 	searchBannerId := "searchBannerId_example" // string | The ID of the banner. (optional)
 	searchBannerName := "searchBannerName_example" // string | The name of banner. (optional)
@@ -132,9 +132,9 @@ Other parameters are passed through a pointer to a apiSearchBansRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **float32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. | 
- **searchId** | **float32** | Search for a specific id. | 
+ **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. | 
+ **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** | The order of the results. | 
  **searchBannerId** | **string** | The ID of the banner. | 
  **searchBannerName** | **string** | The name of banner. | 

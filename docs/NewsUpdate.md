@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Message** | **string** |  | 
-**CreatorId** | **float32** |  | 
-**UpdaterId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
+**UpdaterId** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewNewsUpdate
 
-`func NewNewsUpdate(id float32, message string, creatorId float32, updaterId float32, createdAt time.Time, updatedAt time.Time, ) *NewsUpdate`
+`func NewNewsUpdate(id int32, message string, creatorId int32, updaterId int32, createdAt time.Time, updatedAt time.Time, ) *NewsUpdate`
 
 NewNewsUpdate instantiates a new NewsUpdate object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NewsUpdate) GetId() float32`
+`func (o *NewsUpdate) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NewsUpdate) GetIdOk() (*float32, bool)`
+`func (o *NewsUpdate) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NewsUpdate) SetId(v float32)`
+`func (o *NewsUpdate) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -72,40 +72,40 @@ SetMessage sets Message field to given value.
 
 ### GetCreatorId
 
-`func (o *NewsUpdate) GetCreatorId() float32`
+`func (o *NewsUpdate) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *NewsUpdate) GetCreatorIdOk() (*float32, bool)`
+`func (o *NewsUpdate) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *NewsUpdate) SetCreatorId(v float32)`
+`func (o *NewsUpdate) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
 
 ### GetUpdaterId
 
-`func (o *NewsUpdate) GetUpdaterId() float32`
+`func (o *NewsUpdate) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *NewsUpdate) GetUpdaterIdOk() (*float32, bool)`
+`func (o *NewsUpdate) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *NewsUpdate) SetUpdaterId(v float32)`
+`func (o *NewsUpdate) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

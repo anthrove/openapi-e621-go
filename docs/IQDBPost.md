@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**UpScore** | **float32** |  | 
-**DownScore** | **float32** |  | 
+**UpScore** | **int32** |  | 
+**DownScore** | **int32** |  | 
 **Score** | **float32** |  | 
 **Source** | **string** |  | 
 **Md5** | **string** |  | 
@@ -19,17 +19,17 @@ Name | Type | Description | Notes
 **IsPending** | **bool** |  | 
 **IsFlagged** | **bool** |  | 
 **IsDeleted** | **bool** |  | 
-**UploaderId** | **float32** |  | 
-**ApproverId** | **float32** |  | 
+**UploaderId** | **int32** |  | 
+**ApproverId** | **int32** |  | 
 **LastNotedAt** | **NullableTime** |  | 
 **LastCommentBumpedAt** | **NullableTime** |  | 
-**FavCount** | **float32** |  | 
+**FavCount** | **int32** |  | 
 **TagString** | **string** |  | 
-**TagCount** | **float32** |  | 
-**TagCountGeneral** | **float32** |  | 
-**TagCountArtist** | **float32** |  | 
-**TagCountCharacter** | **float32** |  | 
-**TagCountCopyright** | **float32** |  | 
+**TagCount** | **int32** |  | 
+**TagCountGeneral** | **int32** |  | 
+**TagCountArtist** | **int32** |  | 
+**TagCountCharacter** | **int32** |  | 
+**TagCountCopyright** | **int32** |  | 
 **FileExt** | **string** |  | 
 **FileSize** | **float32** |  | 
 **ImageWidth** | **float32** |  | 
@@ -39,14 +39,14 @@ Name | Type | Description | Notes
 **LastCommentedAt** | **NullableTime** |  | 
 **HasActiveChildren** | **bool** |  | 
 **BitFlags** | **float32** |  | 
-**TagCountMeta** | **float32** |  | 
+**TagCountMeta** | **int32** |  | 
 **LockedTags** | **NullableString** |  | 
-**TagCountSpecies** | **float32** |  | 
-**TagCountInvalid** | **float32** |  | 
+**TagCountSpecies** | **int32** |  | 
+**TagCountInvalid** | **int32** |  | 
 **Description** | **string** |  | 
-**CommentCount** | **float32** |  | 
-**ChangeSeq** | **float32** |  | 
-**TagCountLore** | **float32** |  | 
+**CommentCount** | **int32** |  | 
+**ChangeSeq** | **int32** |  | 
+**TagCountLore** | **int32** |  | 
 **BgColor** | **NullableString** |  | 
 **GeneratedSamples** | **[]string** |  | 
 **Duration** | **NullableString** |  | 
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 **HasLarge** | **bool** |  | 
 **HasVisibleChildren** | **bool** |  | 
 **ChildrenIds** | **NullableString** |  | 
-**PoolIds** | **[]float32** |  | 
+**PoolIds** | **[]int32** |  | 
 **IsFavorited** | **bool** |  | 
 **FileUrl** | Pointer to **string** |  | [optional] 
 **LargeFileUrl** | Pointer to **string** |  | [optional] 
@@ -65,7 +65,7 @@ Name | Type | Description | Notes
 
 ### NewIQDBPost
 
-`func NewIQDBPost(id float32, createdAt time.Time, updatedAt time.Time, upScore float32, downScore float32, score float32, source string, md5 string, rating Ratings, isNoteLocked bool, isRatingLocked bool, isStatusLocked bool, isPending bool, isFlagged bool, isDeleted bool, uploaderId float32, approverId float32, lastNotedAt NullableTime, lastCommentBumpedAt NullableTime, favCount float32, tagString string, tagCount float32, tagCountGeneral float32, tagCountArtist float32, tagCountCharacter float32, tagCountCopyright float32, fileExt string, fileSize float32, imageWidth float32, imageHeight float32, parentId NullableFloat32, hasChildren bool, lastCommentedAt NullableTime, hasActiveChildren bool, bitFlags float32, tagCountMeta float32, lockedTags NullableString, tagCountSpecies float32, tagCountInvalid float32, description string, commentCount float32, changeSeq float32, tagCountLore float32, bgColor NullableString, generatedSamples []string, duration NullableString, isCommentDisabled bool, isCommentLocked bool, hasLarge bool, hasVisibleChildren bool, childrenIds NullableString, poolIds []float32, isFavorited bool, ) *IQDBPost`
+`func NewIQDBPost(id int32, createdAt time.Time, updatedAt time.Time, upScore int32, downScore int32, score float32, source string, md5 string, rating Ratings, isNoteLocked bool, isRatingLocked bool, isStatusLocked bool, isPending bool, isFlagged bool, isDeleted bool, uploaderId int32, approverId int32, lastNotedAt NullableTime, lastCommentBumpedAt NullableTime, favCount int32, tagString string, tagCount int32, tagCountGeneral int32, tagCountArtist int32, tagCountCharacter int32, tagCountCopyright int32, fileExt string, fileSize float32, imageWidth float32, imageHeight float32, parentId NullableFloat32, hasChildren bool, lastCommentedAt NullableTime, hasActiveChildren bool, bitFlags float32, tagCountMeta int32, lockedTags NullableString, tagCountSpecies int32, tagCountInvalid int32, description string, commentCount int32, changeSeq int32, tagCountLore int32, bgColor NullableString, generatedSamples []string, duration NullableString, isCommentDisabled bool, isCommentLocked bool, hasLarge bool, hasVisibleChildren bool, childrenIds NullableString, poolIds []int32, isFavorited bool, ) *IQDBPost`
 
 NewIQDBPost instantiates a new IQDBPost object
 This constructor will assign default values to properties that have it defined,
@@ -82,20 +82,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *IQDBPost) GetId() float32`
+`func (o *IQDBPost) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *IQDBPost) GetIdOk() (*float32, bool)`
+`func (o *IQDBPost) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *IQDBPost) SetId(v float32)`
+`func (o *IQDBPost) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -142,40 +142,40 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetUpScore
 
-`func (o *IQDBPost) GetUpScore() float32`
+`func (o *IQDBPost) GetUpScore() int32`
 
 GetUpScore returns the UpScore field if non-nil, zero value otherwise.
 
 ### GetUpScoreOk
 
-`func (o *IQDBPost) GetUpScoreOk() (*float32, bool)`
+`func (o *IQDBPost) GetUpScoreOk() (*int32, bool)`
 
 GetUpScoreOk returns a tuple with the UpScore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpScore
 
-`func (o *IQDBPost) SetUpScore(v float32)`
+`func (o *IQDBPost) SetUpScore(v int32)`
 
 SetUpScore sets UpScore field to given value.
 
 
 ### GetDownScore
 
-`func (o *IQDBPost) GetDownScore() float32`
+`func (o *IQDBPost) GetDownScore() int32`
 
 GetDownScore returns the DownScore field if non-nil, zero value otherwise.
 
 ### GetDownScoreOk
 
-`func (o *IQDBPost) GetDownScoreOk() (*float32, bool)`
+`func (o *IQDBPost) GetDownScoreOk() (*int32, bool)`
 
 GetDownScoreOk returns a tuple with the DownScore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDownScore
 
-`func (o *IQDBPost) SetDownScore(v float32)`
+`func (o *IQDBPost) SetDownScore(v int32)`
 
 SetDownScore sets DownScore field to given value.
 
@@ -382,40 +382,40 @@ SetIsDeleted sets IsDeleted field to given value.
 
 ### GetUploaderId
 
-`func (o *IQDBPost) GetUploaderId() float32`
+`func (o *IQDBPost) GetUploaderId() int32`
 
 GetUploaderId returns the UploaderId field if non-nil, zero value otherwise.
 
 ### GetUploaderIdOk
 
-`func (o *IQDBPost) GetUploaderIdOk() (*float32, bool)`
+`func (o *IQDBPost) GetUploaderIdOk() (*int32, bool)`
 
 GetUploaderIdOk returns a tuple with the UploaderId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUploaderId
 
-`func (o *IQDBPost) SetUploaderId(v float32)`
+`func (o *IQDBPost) SetUploaderId(v int32)`
 
 SetUploaderId sets UploaderId field to given value.
 
 
 ### GetApproverId
 
-`func (o *IQDBPost) GetApproverId() float32`
+`func (o *IQDBPost) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *IQDBPost) GetApproverIdOk() (*float32, bool)`
+`func (o *IQDBPost) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *IQDBPost) SetApproverId(v float32)`
+`func (o *IQDBPost) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 
@@ -482,20 +482,20 @@ SetLastCommentBumpedAt sets LastCommentBumpedAt field to given value.
 UnsetLastCommentBumpedAt ensures that no value is present for LastCommentBumpedAt, not even an explicit nil
 ### GetFavCount
 
-`func (o *IQDBPost) GetFavCount() float32`
+`func (o *IQDBPost) GetFavCount() int32`
 
 GetFavCount returns the FavCount field if non-nil, zero value otherwise.
 
 ### GetFavCountOk
 
-`func (o *IQDBPost) GetFavCountOk() (*float32, bool)`
+`func (o *IQDBPost) GetFavCountOk() (*int32, bool)`
 
 GetFavCountOk returns a tuple with the FavCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFavCount
 
-`func (o *IQDBPost) SetFavCount(v float32)`
+`func (o *IQDBPost) SetFavCount(v int32)`
 
 SetFavCount sets FavCount field to given value.
 
@@ -522,100 +522,100 @@ SetTagString sets TagString field to given value.
 
 ### GetTagCount
 
-`func (o *IQDBPost) GetTagCount() float32`
+`func (o *IQDBPost) GetTagCount() int32`
 
 GetTagCount returns the TagCount field if non-nil, zero value otherwise.
 
 ### GetTagCountOk
 
-`func (o *IQDBPost) GetTagCountOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountOk() (*int32, bool)`
 
 GetTagCountOk returns a tuple with the TagCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCount
 
-`func (o *IQDBPost) SetTagCount(v float32)`
+`func (o *IQDBPost) SetTagCount(v int32)`
 
 SetTagCount sets TagCount field to given value.
 
 
 ### GetTagCountGeneral
 
-`func (o *IQDBPost) GetTagCountGeneral() float32`
+`func (o *IQDBPost) GetTagCountGeneral() int32`
 
 GetTagCountGeneral returns the TagCountGeneral field if non-nil, zero value otherwise.
 
 ### GetTagCountGeneralOk
 
-`func (o *IQDBPost) GetTagCountGeneralOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountGeneralOk() (*int32, bool)`
 
 GetTagCountGeneralOk returns a tuple with the TagCountGeneral field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountGeneral
 
-`func (o *IQDBPost) SetTagCountGeneral(v float32)`
+`func (o *IQDBPost) SetTagCountGeneral(v int32)`
 
 SetTagCountGeneral sets TagCountGeneral field to given value.
 
 
 ### GetTagCountArtist
 
-`func (o *IQDBPost) GetTagCountArtist() float32`
+`func (o *IQDBPost) GetTagCountArtist() int32`
 
 GetTagCountArtist returns the TagCountArtist field if non-nil, zero value otherwise.
 
 ### GetTagCountArtistOk
 
-`func (o *IQDBPost) GetTagCountArtistOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountArtistOk() (*int32, bool)`
 
 GetTagCountArtistOk returns a tuple with the TagCountArtist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountArtist
 
-`func (o *IQDBPost) SetTagCountArtist(v float32)`
+`func (o *IQDBPost) SetTagCountArtist(v int32)`
 
 SetTagCountArtist sets TagCountArtist field to given value.
 
 
 ### GetTagCountCharacter
 
-`func (o *IQDBPost) GetTagCountCharacter() float32`
+`func (o *IQDBPost) GetTagCountCharacter() int32`
 
 GetTagCountCharacter returns the TagCountCharacter field if non-nil, zero value otherwise.
 
 ### GetTagCountCharacterOk
 
-`func (o *IQDBPost) GetTagCountCharacterOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountCharacterOk() (*int32, bool)`
 
 GetTagCountCharacterOk returns a tuple with the TagCountCharacter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountCharacter
 
-`func (o *IQDBPost) SetTagCountCharacter(v float32)`
+`func (o *IQDBPost) SetTagCountCharacter(v int32)`
 
 SetTagCountCharacter sets TagCountCharacter field to given value.
 
 
 ### GetTagCountCopyright
 
-`func (o *IQDBPost) GetTagCountCopyright() float32`
+`func (o *IQDBPost) GetTagCountCopyright() int32`
 
 GetTagCountCopyright returns the TagCountCopyright field if non-nil, zero value otherwise.
 
 ### GetTagCountCopyrightOk
 
-`func (o *IQDBPost) GetTagCountCopyrightOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountCopyrightOk() (*int32, bool)`
 
 GetTagCountCopyrightOk returns a tuple with the TagCountCopyright field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountCopyright
 
-`func (o *IQDBPost) SetTagCountCopyright(v float32)`
+`func (o *IQDBPost) SetTagCountCopyright(v int32)`
 
 SetTagCountCopyright sets TagCountCopyright field to given value.
 
@@ -822,20 +822,20 @@ SetBitFlags sets BitFlags field to given value.
 
 ### GetTagCountMeta
 
-`func (o *IQDBPost) GetTagCountMeta() float32`
+`func (o *IQDBPost) GetTagCountMeta() int32`
 
 GetTagCountMeta returns the TagCountMeta field if non-nil, zero value otherwise.
 
 ### GetTagCountMetaOk
 
-`func (o *IQDBPost) GetTagCountMetaOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountMetaOk() (*int32, bool)`
 
 GetTagCountMetaOk returns a tuple with the TagCountMeta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountMeta
 
-`func (o *IQDBPost) SetTagCountMeta(v float32)`
+`func (o *IQDBPost) SetTagCountMeta(v int32)`
 
 SetTagCountMeta sets TagCountMeta field to given value.
 
@@ -872,40 +872,40 @@ SetLockedTags sets LockedTags field to given value.
 UnsetLockedTags ensures that no value is present for LockedTags, not even an explicit nil
 ### GetTagCountSpecies
 
-`func (o *IQDBPost) GetTagCountSpecies() float32`
+`func (o *IQDBPost) GetTagCountSpecies() int32`
 
 GetTagCountSpecies returns the TagCountSpecies field if non-nil, zero value otherwise.
 
 ### GetTagCountSpeciesOk
 
-`func (o *IQDBPost) GetTagCountSpeciesOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountSpeciesOk() (*int32, bool)`
 
 GetTagCountSpeciesOk returns a tuple with the TagCountSpecies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountSpecies
 
-`func (o *IQDBPost) SetTagCountSpecies(v float32)`
+`func (o *IQDBPost) SetTagCountSpecies(v int32)`
 
 SetTagCountSpecies sets TagCountSpecies field to given value.
 
 
 ### GetTagCountInvalid
 
-`func (o *IQDBPost) GetTagCountInvalid() float32`
+`func (o *IQDBPost) GetTagCountInvalid() int32`
 
 GetTagCountInvalid returns the TagCountInvalid field if non-nil, zero value otherwise.
 
 ### GetTagCountInvalidOk
 
-`func (o *IQDBPost) GetTagCountInvalidOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountInvalidOk() (*int32, bool)`
 
 GetTagCountInvalidOk returns a tuple with the TagCountInvalid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountInvalid
 
-`func (o *IQDBPost) SetTagCountInvalid(v float32)`
+`func (o *IQDBPost) SetTagCountInvalid(v int32)`
 
 SetTagCountInvalid sets TagCountInvalid field to given value.
 
@@ -932,60 +932,60 @@ SetDescription sets Description field to given value.
 
 ### GetCommentCount
 
-`func (o *IQDBPost) GetCommentCount() float32`
+`func (o *IQDBPost) GetCommentCount() int32`
 
 GetCommentCount returns the CommentCount field if non-nil, zero value otherwise.
 
 ### GetCommentCountOk
 
-`func (o *IQDBPost) GetCommentCountOk() (*float32, bool)`
+`func (o *IQDBPost) GetCommentCountOk() (*int32, bool)`
 
 GetCommentCountOk returns a tuple with the CommentCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommentCount
 
-`func (o *IQDBPost) SetCommentCount(v float32)`
+`func (o *IQDBPost) SetCommentCount(v int32)`
 
 SetCommentCount sets CommentCount field to given value.
 
 
 ### GetChangeSeq
 
-`func (o *IQDBPost) GetChangeSeq() float32`
+`func (o *IQDBPost) GetChangeSeq() int32`
 
 GetChangeSeq returns the ChangeSeq field if non-nil, zero value otherwise.
 
 ### GetChangeSeqOk
 
-`func (o *IQDBPost) GetChangeSeqOk() (*float32, bool)`
+`func (o *IQDBPost) GetChangeSeqOk() (*int32, bool)`
 
 GetChangeSeqOk returns a tuple with the ChangeSeq field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetChangeSeq
 
-`func (o *IQDBPost) SetChangeSeq(v float32)`
+`func (o *IQDBPost) SetChangeSeq(v int32)`
 
 SetChangeSeq sets ChangeSeq field to given value.
 
 
 ### GetTagCountLore
 
-`func (o *IQDBPost) GetTagCountLore() float32`
+`func (o *IQDBPost) GetTagCountLore() int32`
 
 GetTagCountLore returns the TagCountLore field if non-nil, zero value otherwise.
 
 ### GetTagCountLoreOk
 
-`func (o *IQDBPost) GetTagCountLoreOk() (*float32, bool)`
+`func (o *IQDBPost) GetTagCountLoreOk() (*int32, bool)`
 
 GetTagCountLoreOk returns a tuple with the TagCountLore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagCountLore
 
-`func (o *IQDBPost) SetTagCountLore(v float32)`
+`func (o *IQDBPost) SetTagCountLore(v int32)`
 
 SetTagCountLore sets TagCountLore field to given value.
 
@@ -1182,20 +1182,20 @@ SetChildrenIds sets ChildrenIds field to given value.
 UnsetChildrenIds ensures that no value is present for ChildrenIds, not even an explicit nil
 ### GetPoolIds
 
-`func (o *IQDBPost) GetPoolIds() []float32`
+`func (o *IQDBPost) GetPoolIds() []int32`
 
 GetPoolIds returns the PoolIds field if non-nil, zero value otherwise.
 
 ### GetPoolIdsOk
 
-`func (o *IQDBPost) GetPoolIdsOk() (*[]float32, bool)`
+`func (o *IQDBPost) GetPoolIdsOk() (*[]int32, bool)`
 
 GetPoolIdsOk returns a tuple with the PoolIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPoolIds
 
-`func (o *IQDBPost) SetPoolIds(v []float32)`
+`func (o *IQDBPost) SetPoolIds(v []int32)`
 
 SetPoolIds sets PoolIds field to given value.
 

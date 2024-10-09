@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
-**PostId** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**PostId** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 **Body** | **string** |  | 
 **Score** | **float32** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**UpdaterId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
 **DoNotBumpPost** | **bool** |  | 
 **IsHidden** | **bool** |  | 
 **IsSticky** | **bool** |  | 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewComment
 
-`func NewComment(id float32, createdAt time.Time, postId float32, creatorId float32, body string, score float32, updatedAt time.Time, updaterId float32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string, ) *Comment`
+`func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score float32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string, ) *Comment`
 
 NewComment instantiates a new Comment object
 This constructor will assign default values to properties that have it defined,
@@ -41,20 +41,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Comment) GetId() float32`
+`func (o *Comment) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Comment) GetIdOk() (*float32, bool)`
+`func (o *Comment) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Comment) SetId(v float32)`
+`func (o *Comment) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -81,40 +81,40 @@ SetCreatedAt sets CreatedAt field to given value.
 
 ### GetPostId
 
-`func (o *Comment) GetPostId() float32`
+`func (o *Comment) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *Comment) GetPostIdOk() (*float32, bool)`
+`func (o *Comment) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *Comment) SetPostId(v float32)`
+`func (o *Comment) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 
 
 ### GetCreatorId
 
-`func (o *Comment) GetCreatorId() float32`
+`func (o *Comment) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *Comment) GetCreatorIdOk() (*float32, bool)`
+`func (o *Comment) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *Comment) SetCreatorId(v float32)`
+`func (o *Comment) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
@@ -181,20 +181,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetUpdaterId
 
-`func (o *Comment) GetUpdaterId() float32`
+`func (o *Comment) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *Comment) GetUpdaterIdOk() (*float32, bool)`
+`func (o *Comment) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *Comment) SetUpdaterId(v float32)`
+`func (o *Comment) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **X** | **float32** |  | 
@@ -14,15 +14,15 @@ Name | Type | Description | Notes
 **Body** | **string** |  | 
 **Version** | **float32** |  | 
 **IsActive** | **bool** |  | 
-**NoteId** | **float32** |  | 
-**PostId** | **float32** |  | 
-**UpdaterId** | **float32** |  | 
+**NoteId** | **int32** |  | 
+**PostId** | **int32** |  | 
+**UpdaterId** | **int32** |  | 
 
 ## Methods
 
 ### NewNoteVersion
 
-`func NewNoteVersion(id float32, createdAt time.Time, updatedAt time.Time, x float32, y float32, width float32, height float32, body string, version float32, isActive bool, noteId float32, postId float32, updaterId float32, ) *NoteVersion`
+`func NewNoteVersion(id int32, createdAt time.Time, updatedAt time.Time, x float32, y float32, width float32, height float32, body string, version float32, isActive bool, noteId int32, postId int32, updaterId int32, ) *NoteVersion`
 
 NewNoteVersion instantiates a new NoteVersion object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *NoteVersion) GetId() float32`
+`func (o *NoteVersion) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *NoteVersion) GetIdOk() (*float32, bool)`
+`func (o *NoteVersion) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *NoteVersion) SetId(v float32)`
+`func (o *NoteVersion) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -239,60 +239,60 @@ SetIsActive sets IsActive field to given value.
 
 ### GetNoteId
 
-`func (o *NoteVersion) GetNoteId() float32`
+`func (o *NoteVersion) GetNoteId() int32`
 
 GetNoteId returns the NoteId field if non-nil, zero value otherwise.
 
 ### GetNoteIdOk
 
-`func (o *NoteVersion) GetNoteIdOk() (*float32, bool)`
+`func (o *NoteVersion) GetNoteIdOk() (*int32, bool)`
 
 GetNoteIdOk returns a tuple with the NoteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNoteId
 
-`func (o *NoteVersion) SetNoteId(v float32)`
+`func (o *NoteVersion) SetNoteId(v int32)`
 
 SetNoteId sets NoteId field to given value.
 
 
 ### GetPostId
 
-`func (o *NoteVersion) GetPostId() float32`
+`func (o *NoteVersion) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *NoteVersion) GetPostIdOk() (*float32, bool)`
+`func (o *NoteVersion) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *NoteVersion) SetPostId(v float32)`
+`func (o *NoteVersion) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 
 
 ### GetUpdaterId
 
-`func (o *NoteVersion) GetUpdaterId() float32`
+`func (o *NoteVersion) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *NoteVersion) GetUpdaterIdOk() (*float32, bool)`
+`func (o *NoteVersion) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *NoteVersion) SetUpdaterId(v float32)`
+`func (o *NoteVersion) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

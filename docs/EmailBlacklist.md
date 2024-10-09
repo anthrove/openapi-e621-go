@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **string** |  | 
 **UpdatedAt** | **string** |  | 
 **Domain** | **string** |  | 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewEmailBlacklist
 
-`func NewEmailBlacklist(id float32, createdAt string, updatedAt string, domain string, creatorId string, reason string, ) *EmailBlacklist`
+`func NewEmailBlacklist(id int32, createdAt string, updatedAt string, domain string, creatorId string, reason string, ) *EmailBlacklist`
 
 NewEmailBlacklist instantiates a new EmailBlacklist object
 This constructor will assign default values to properties that have it defined,
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *EmailBlacklist) GetId() float32`
+`func (o *EmailBlacklist) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *EmailBlacklist) GetIdOk() (*float32, bool)`
+`func (o *EmailBlacklist) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *EmailBlacklist) SetId(v float32)`
+`func (o *EmailBlacklist) SetId(v int32)`
 
 SetId sets Id field to given value.
 

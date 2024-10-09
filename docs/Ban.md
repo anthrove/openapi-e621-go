@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**UserId** | **float32** |  | 
+**Id** | **int32** |  | 
+**UserId** | **int32** |  | 
 **Reason** | **string** |  | 
 **ExpiresAt** | **NullableTime** |  | 
-**BannerId** | **float32** |  | 
+**BannerId** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewBan
 
-`func NewBan(id float32, userId float32, reason string, expiresAt NullableTime, bannerId float32, createdAt time.Time, updatedAt time.Time, ) *Ban`
+`func NewBan(id int32, userId int32, reason string, expiresAt NullableTime, bannerId int32, createdAt time.Time, updatedAt time.Time, ) *Ban`
 
 NewBan instantiates a new Ban object
 This constructor will assign default values to properties that have it defined,
@@ -33,40 +33,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Ban) GetId() float32`
+`func (o *Ban) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Ban) GetIdOk() (*float32, bool)`
+`func (o *Ban) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Ban) SetId(v float32)`
+`func (o *Ban) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetUserId
 
-`func (o *Ban) GetUserId() float32`
+`func (o *Ban) GetUserId() int32`
 
 GetUserId returns the UserId field if non-nil, zero value otherwise.
 
 ### GetUserIdOk
 
-`func (o *Ban) GetUserIdOk() (*float32, bool)`
+`func (o *Ban) GetUserIdOk() (*int32, bool)`
 
 GetUserIdOk returns a tuple with the UserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserId
 
-`func (o *Ban) SetUserId(v float32)`
+`func (o *Ban) SetUserId(v int32)`
 
 SetUserId sets UserId field to given value.
 
@@ -123,20 +123,20 @@ SetExpiresAt sets ExpiresAt field to given value.
 UnsetExpiresAt ensures that no value is present for ExpiresAt, not even an explicit nil
 ### GetBannerId
 
-`func (o *Ban) GetBannerId() float32`
+`func (o *Ban) GetBannerId() int32`
 
 GetBannerId returns the BannerId field if non-nil, zero value otherwise.
 
 ### GetBannerIdOk
 
-`func (o *Ban) GetBannerIdOk() (*float32, bool)`
+`func (o *Ban) GetBannerIdOk() (*int32, bool)`
 
 GetBannerIdOk returns a tuple with the BannerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBannerId
 
-`func (o *Ban) SetBannerId(v float32)`
+`func (o *Ban) SetBannerId(v int32)`
 
 SetBannerId sets BannerId field to given value.
 

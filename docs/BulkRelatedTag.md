@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **CategoryId** | [**TagCategories**](TagCategories.md) |  | 
-**Count** | **float32** |  | 
+**Count** | **int32** |  | 
 
 ## Methods
 
 ### NewBulkRelatedTag
 
-`func NewBulkRelatedTag(name string, categoryId TagCategories, count float32, ) *BulkRelatedTag`
+`func NewBulkRelatedTag(name string, categoryId TagCategories, count int32, ) *BulkRelatedTag`
 
 NewBulkRelatedTag instantiates a new BulkRelatedTag object
 This constructor will assign default values to properties that have it defined,
@@ -69,20 +69,20 @@ SetCategoryId sets CategoryId field to given value.
 
 ### GetCount
 
-`func (o *BulkRelatedTag) GetCount() float32`
+`func (o *BulkRelatedTag) GetCount() int32`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *BulkRelatedTag) GetCountOk() (*float32, bool)`
+`func (o *BulkRelatedTag) GetCountOk() (*int32, bool)`
 
 GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCount
 
-`func (o *BulkRelatedTag) SetCount(v float32)`
+`func (o *BulkRelatedTag) SetCount(v int32)`
 
 SetCount sets Count field to given value.
 

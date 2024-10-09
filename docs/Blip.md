@@ -4,23 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**Id** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 **Body** | **string** |  | 
-**ResponseTo** | **float32** |  | 
+**ResponseTo** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **IsHidden** | **bool** |  | 
 **WarningType** | [**WarningTypes**](WarningTypes.md) |  | 
-**WarningUserId** | **float32** |  | 
-**UpdaterId** | **float32** |  | 
+**WarningUserId** | **int32** |  | 
+**UpdaterId** | **int32** |  | 
 **CreatorName** | **string** |  | 
 
 ## Methods
 
 ### NewBlip
 
-`func NewBlip(id float32, creatorId float32, body string, responseTo float32, createdAt time.Time, updatedAt time.Time, isHidden bool, warningType WarningTypes, warningUserId float32, updaterId float32, creatorName string, ) *Blip`
+`func NewBlip(id int32, creatorId int32, body string, responseTo int32, createdAt time.Time, updatedAt time.Time, isHidden bool, warningType WarningTypes, warningUserId int32, updaterId int32, creatorName string, ) *Blip`
 
 NewBlip instantiates a new Blip object
 This constructor will assign default values to properties that have it defined,
@@ -37,40 +37,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Blip) GetId() float32`
+`func (o *Blip) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Blip) GetIdOk() (*float32, bool)`
+`func (o *Blip) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Blip) SetId(v float32)`
+`func (o *Blip) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetCreatorId
 
-`func (o *Blip) GetCreatorId() float32`
+`func (o *Blip) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *Blip) GetCreatorIdOk() (*float32, bool)`
+`func (o *Blip) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *Blip) SetCreatorId(v float32)`
+`func (o *Blip) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
@@ -97,20 +97,20 @@ SetBody sets Body field to given value.
 
 ### GetResponseTo
 
-`func (o *Blip) GetResponseTo() float32`
+`func (o *Blip) GetResponseTo() int32`
 
 GetResponseTo returns the ResponseTo field if non-nil, zero value otherwise.
 
 ### GetResponseToOk
 
-`func (o *Blip) GetResponseToOk() (*float32, bool)`
+`func (o *Blip) GetResponseToOk() (*int32, bool)`
 
 GetResponseToOk returns a tuple with the ResponseTo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetResponseTo
 
-`func (o *Blip) SetResponseTo(v float32)`
+`func (o *Blip) SetResponseTo(v int32)`
 
 SetResponseTo sets ResponseTo field to given value.
 
@@ -197,40 +197,40 @@ SetWarningType sets WarningType field to given value.
 
 ### GetWarningUserId
 
-`func (o *Blip) GetWarningUserId() float32`
+`func (o *Blip) GetWarningUserId() int32`
 
 GetWarningUserId returns the WarningUserId field if non-nil, zero value otherwise.
 
 ### GetWarningUserIdOk
 
-`func (o *Blip) GetWarningUserIdOk() (*float32, bool)`
+`func (o *Blip) GetWarningUserIdOk() (*int32, bool)`
 
 GetWarningUserIdOk returns a tuple with the WarningUserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWarningUserId
 
-`func (o *Blip) SetWarningUserId(v float32)`
+`func (o *Blip) SetWarningUserId(v int32)`
 
 SetWarningUserId sets WarningUserId field to given value.
 
 
 ### GetUpdaterId
 
-`func (o *Blip) GetUpdaterId() float32`
+`func (o *Blip) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *Blip) GetUpdaterIdOk() (*float32, bool)`
+`func (o *Blip) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *Blip) SetUpdaterId(v float32)`
+`func (o *Blip) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **File** | [**PostFile**](PostFile.md) |  | 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 
 ### NewPost
 
-`func NewPost(id float32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount float32, sources []string, pools []float32, relationships PostRelationships, approverId NullableFloat32, uploaderId float32, description string, commentCount float32, isFavorited bool, hasNotes bool, duration NullableFloat32, ) *Post`
+`func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount float32, sources []string, pools []float32, relationships PostRelationships, approverId NullableFloat32, uploaderId float32, description string, commentCount float32, isFavorited bool, hasNotes bool, duration NullableFloat32, ) *Post`
 
 NewPost instantiates a new Post object
 This constructor will assign default values to properties that have it defined,
@@ -49,20 +49,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Post) GetId() float32`
+`func (o *Post) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Post) GetIdOk() (*float32, bool)`
+`func (o *Post) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Post) SetId(v float32)`
+`func (o *Post) SetId(v int32)`
 
 SetId sets Id field to given value.
 

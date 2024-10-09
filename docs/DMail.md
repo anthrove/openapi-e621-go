@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**OwnerId** | **float32** |  | 
-**FromId** | **float32** |  | 
-**ToId** | **float32** |  | 
+**Id** | **int32** |  | 
+**OwnerId** | **int32** |  | 
+**FromId** | **int32** |  | 
+**ToId** | **int32** |  | 
 **Title** | **string** |  | 
 **Body** | **string** |  | 
 **IsRead** | **bool** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewDMail
 
-`func NewDMail(id float32, ownerId float32, fromId float32, toId float32, title string, body string, isRead bool, isDeleted bool, createdAt time.Time, updatedAt time.Time, ) *DMail`
+`func NewDMail(id int32, ownerId int32, fromId int32, toId int32, title string, body string, isRead bool, isDeleted bool, createdAt time.Time, updatedAt time.Time, ) *DMail`
 
 NewDMail instantiates a new DMail object
 This constructor will assign default values to properties that have it defined,
@@ -36,80 +36,80 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *DMail) GetId() float32`
+`func (o *DMail) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *DMail) GetIdOk() (*float32, bool)`
+`func (o *DMail) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *DMail) SetId(v float32)`
+`func (o *DMail) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetOwnerId
 
-`func (o *DMail) GetOwnerId() float32`
+`func (o *DMail) GetOwnerId() int32`
 
 GetOwnerId returns the OwnerId field if non-nil, zero value otherwise.
 
 ### GetOwnerIdOk
 
-`func (o *DMail) GetOwnerIdOk() (*float32, bool)`
+`func (o *DMail) GetOwnerIdOk() (*int32, bool)`
 
 GetOwnerIdOk returns a tuple with the OwnerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOwnerId
 
-`func (o *DMail) SetOwnerId(v float32)`
+`func (o *DMail) SetOwnerId(v int32)`
 
 SetOwnerId sets OwnerId field to given value.
 
 
 ### GetFromId
 
-`func (o *DMail) GetFromId() float32`
+`func (o *DMail) GetFromId() int32`
 
 GetFromId returns the FromId field if non-nil, zero value otherwise.
 
 ### GetFromIdOk
 
-`func (o *DMail) GetFromIdOk() (*float32, bool)`
+`func (o *DMail) GetFromIdOk() (*int32, bool)`
 
 GetFromIdOk returns a tuple with the FromId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFromId
 
-`func (o *DMail) SetFromId(v float32)`
+`func (o *DMail) SetFromId(v int32)`
 
 SetFromId sets FromId field to given value.
 
 
 ### GetToId
 
-`func (o *DMail) GetToId() float32`
+`func (o *DMail) GetToId() int32`
 
 GetToId returns the ToId field if non-nil, zero value otherwise.
 
 ### GetToIdOk
 
-`func (o *DMail) GetToIdOk() (*float32, bool)`
+`func (o *DMail) GetToIdOk() (*int32, bool)`
 
 GetToIdOk returns a tuple with the ToId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetToId
 
-`func (o *DMail) SetToId(v float32)`
+`func (o *DMail) SetToId(v int32)`
 
 SetToId sets ToId field to given value.
 

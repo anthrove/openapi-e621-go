@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**ArtistId** | **float32** |  | 
+**Id** | **int32** |  | 
+**ArtistId** | **int32** |  | 
 **Name** | **string** |  | 
-**UpdaterId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **IsActive** | **bool** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewArtistVersion
 
-`func NewArtistVersion(id float32, artistId float32, name string, updaterId float32, createdAt time.Time, updatedAt time.Time, isActive bool, otherNames []string, notesChanged bool, urls []string, ) *ArtistVersion`
+`func NewArtistVersion(id int32, artistId int32, name string, updaterId int32, createdAt time.Time, updatedAt time.Time, isActive bool, otherNames []string, notesChanged bool, urls []string, ) *ArtistVersion`
 
 NewArtistVersion instantiates a new ArtistVersion object
 This constructor will assign default values to properties that have it defined,
@@ -36,40 +36,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ArtistVersion) GetId() float32`
+`func (o *ArtistVersion) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ArtistVersion) GetIdOk() (*float32, bool)`
+`func (o *ArtistVersion) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ArtistVersion) SetId(v float32)`
+`func (o *ArtistVersion) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetArtistId
 
-`func (o *ArtistVersion) GetArtistId() float32`
+`func (o *ArtistVersion) GetArtistId() int32`
 
 GetArtistId returns the ArtistId field if non-nil, zero value otherwise.
 
 ### GetArtistIdOk
 
-`func (o *ArtistVersion) GetArtistIdOk() (*float32, bool)`
+`func (o *ArtistVersion) GetArtistIdOk() (*int32, bool)`
 
 GetArtistIdOk returns a tuple with the ArtistId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArtistId
 
-`func (o *ArtistVersion) SetArtistId(v float32)`
+`func (o *ArtistVersion) SetArtistId(v int32)`
 
 SetArtistId sets ArtistId field to given value.
 
@@ -96,20 +96,20 @@ SetName sets Name field to given value.
 
 ### GetUpdaterId
 
-`func (o *ArtistVersion) GetUpdaterId() float32`
+`func (o *ArtistVersion) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *ArtistVersion) GetUpdaterIdOk() (*float32, bool)`
+`func (o *ArtistVersion) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *ArtistVersion) SetUpdaterId(v float32)`
+`func (o *ArtistVersion) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

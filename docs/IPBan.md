@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**CreatorId** | **float32** |  | 
+**Id** | **int32** |  | 
+**CreatorId** | **int32** |  | 
 **Reason** | **string** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewIPBan
 
-`func NewIPBan(id float32, creatorId float32, reason string, createdAt time.Time, updatedAt time.Time, ) *IPBan`
+`func NewIPBan(id int32, creatorId int32, reason string, createdAt time.Time, updatedAt time.Time, ) *IPBan`
 
 NewIPBan instantiates a new IPBan object
 This constructor will assign default values to properties that have it defined,
@@ -31,40 +31,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *IPBan) GetId() float32`
+`func (o *IPBan) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *IPBan) GetIdOk() (*float32, bool)`
+`func (o *IPBan) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *IPBan) SetId(v float32)`
+`func (o *IPBan) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetCreatorId
 
-`func (o *IPBan) GetCreatorId() float32`
+`func (o *IPBan) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *IPBan) GetCreatorIdOk() (*float32, bool)`
+`func (o *IPBan) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *IPBan) SetCreatorId(v float32)`
+`func (o *IPBan) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

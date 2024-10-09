@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
-**CreatorId** | **float32** |  | 
-**UpdaterId** | **float32** |  | 
-**ArtistId** | **float32** |  | 
+**Id** | **int32** |  | 
+**CreatorId** | **int32** |  | 
+**UpdaterId** | **int32** |  | 
+**ArtistId** | **int32** |  | 
 **StaffNotes** | Pointer to **string** | Only visible to Janitor+ | [optional] 
 **Details** | **string** |  | 
 **IsActive** | **bool** |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewAvoidPosting
 
-`func NewAvoidPosting(id float32, creatorId float32, updaterId float32, artistId float32, details string, isActive bool, createdAt time.Time, updatedAt time.Time, ) *AvoidPosting`
+`func NewAvoidPosting(id int32, creatorId int32, updaterId int32, artistId int32, details string, isActive bool, createdAt time.Time, updatedAt time.Time, ) *AvoidPosting`
 
 NewAvoidPosting instantiates a new AvoidPosting object
 This constructor will assign default values to properties that have it defined,
@@ -35,80 +35,80 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *AvoidPosting) GetId() float32`
+`func (o *AvoidPosting) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *AvoidPosting) GetIdOk() (*float32, bool)`
+`func (o *AvoidPosting) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *AvoidPosting) SetId(v float32)`
+`func (o *AvoidPosting) SetId(v int32)`
 
 SetId sets Id field to given value.
 
 
 ### GetCreatorId
 
-`func (o *AvoidPosting) GetCreatorId() float32`
+`func (o *AvoidPosting) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *AvoidPosting) GetCreatorIdOk() (*float32, bool)`
+`func (o *AvoidPosting) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *AvoidPosting) SetCreatorId(v float32)`
+`func (o *AvoidPosting) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
 
 ### GetUpdaterId
 
-`func (o *AvoidPosting) GetUpdaterId() float32`
+`func (o *AvoidPosting) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *AvoidPosting) GetUpdaterIdOk() (*float32, bool)`
+`func (o *AvoidPosting) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *AvoidPosting) SetUpdaterId(v float32)`
+`func (o *AvoidPosting) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 
 
 ### GetArtistId
 
-`func (o *AvoidPosting) GetArtistId() float32`
+`func (o *AvoidPosting) GetArtistId() int32`
 
 GetArtistId returns the ArtistId field if non-nil, zero value otherwise.
 
 ### GetArtistIdOk
 
-`func (o *AvoidPosting) GetArtistIdOk() (*float32, bool)`
+`func (o *AvoidPosting) GetArtistIdOk() (*int32, bool)`
 
 GetArtistIdOk returns a tuple with the ArtistId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArtistId
 
-`func (o *AvoidPosting) SetArtistId(v float32)`
+`func (o *AvoidPosting) SetArtistId(v int32)`
 
 SetArtistId sets ArtistId field to given value.
 

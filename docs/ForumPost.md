@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Topic** | Pointer to **float32** |  | [optional] 
-**CreatorId** | **float32** |  | 
-**UpdaterId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
+**UpdaterId** | **int32** |  | 
 **Body** | **string** |  | 
 **IsHidden** | **bool** |  | 
 **CreatedAt** | **time.Time** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewForumPost
 
-`func NewForumPost(id float32, creatorId float32, updaterId float32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32, ) *ForumPost`
+`func NewForumPost(id int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32, ) *ForumPost`
 
 NewForumPost instantiates a new ForumPost object
 This constructor will assign default values to properties that have it defined,
@@ -36,20 +36,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *ForumPost) GetId() float32`
+`func (o *ForumPost) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ForumPost) GetIdOk() (*float32, bool)`
+`func (o *ForumPost) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ForumPost) SetId(v float32)`
+`func (o *ForumPost) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -81,40 +81,40 @@ HasTopic returns a boolean if a field has been set.
 
 ### GetCreatorId
 
-`func (o *ForumPost) GetCreatorId() float32`
+`func (o *ForumPost) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *ForumPost) GetCreatorIdOk() (*float32, bool)`
+`func (o *ForumPost) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *ForumPost) SetCreatorId(v float32)`
+`func (o *ForumPost) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
 
 ### GetUpdaterId
 
-`func (o *ForumPost) GetUpdaterId() float32`
+`func (o *ForumPost) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *ForumPost) GetUpdaterIdOk() (*float32, bool)`
+`func (o *ForumPost) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *ForumPost) SetUpdaterId(v float32)`
+`func (o *ForumPost) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

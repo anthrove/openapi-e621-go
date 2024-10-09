@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **Name** | **string** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **IsActive** | **bool** |  | 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **GroupName** | **string** |  | 
 **LinkedUserId** | **NullableFloat32** |  | 
 **CreatedAt** | **time.Time** |  | 
-**CreatorId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
 **IsLocked** | **bool** |  | 
 **Notes** | **NullableString** |  | 
 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 ### NewArtist
 
-`func NewArtist(id float32, name string, updatedAt time.Time, isActive bool, otherNames []string, groupName string, linkedUserId NullableFloat32, createdAt time.Time, creatorId float32, isLocked bool, notes NullableString, ) *Artist`
+`func NewArtist(id int32, name string, updatedAt time.Time, isActive bool, otherNames []string, groupName string, linkedUserId NullableFloat32, createdAt time.Time, creatorId int32, isLocked bool, notes NullableString, ) *Artist`
 
 NewArtist instantiates a new Artist object
 This constructor will assign default values to properties that have it defined,
@@ -37,20 +37,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *Artist) GetId() float32`
+`func (o *Artist) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Artist) GetIdOk() (*float32, bool)`
+`func (o *Artist) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Artist) SetId(v float32)`
+`func (o *Artist) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -207,20 +207,20 @@ SetCreatedAt sets CreatedAt field to given value.
 
 ### GetCreatorId
 
-`func (o *Artist) GetCreatorId() float32`
+`func (o *Artist) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *Artist) GetCreatorIdOk() (*float32, bool)`
+`func (o *Artist) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *Artist) SetCreatorId(v float32)`
+`func (o *Artist) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

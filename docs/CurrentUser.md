@@ -44,22 +44,22 @@ Name | Type | Description | Notes
 **FavoriteTags** | **string** |  | 
 **BlacklistedTags** | **string** |  | 
 **TimeZone** | **string** |  | 
-**PerPage** | **float32** |  | 
+**PerPage** | **int32** |  | 
 **CustomStyle** | **string** |  | 
-**FavoriteCount** | **float32** |  | 
+**FavoriteCount** | **int32** |  | 
 **ApiRegenMultiplier** | **float32** |  | 
 **ApiBurstLimit** | **float32** |  | 
 **RemainingApiLimit** | **float32** |  | 
 **StatementTimeout** | **float32** |  | 
-**FavoriteLimit** | **float32** |  | 
-**TagQueryLimit** | **float32** |  | 
+**FavoriteLimit** | **int32** |  | 
+**TagQueryLimit** | **int32** |  | 
 **HasMail** | **bool** |  | 
 
 ## Methods
 
 ### NewCurrentUser
 
-`func NewCurrentUser(id float32, createdAt time.Time, name string, level float32, baseUploadLimit float32, postUploadCount float32, postUpdateCount float32, noteUpdateCount float32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId float32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage float32, customStyle string, favoriteCount float32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit float32, tagQueryLimit float32, hasMail bool, ) *CurrentUser`
+`func NewCurrentUser(id float32, createdAt time.Time, name string, level float32, baseUploadLimit float32, postUploadCount float32, postUpdateCount float32, noteUpdateCount float32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId float32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *CurrentUser`
 
 NewCurrentUser instantiates a new CurrentUser object
 This constructor will assign default values to properties that have it defined,
@@ -881,20 +881,20 @@ SetTimeZone sets TimeZone field to given value.
 
 ### GetPerPage
 
-`func (o *CurrentUser) GetPerPage() float32`
+`func (o *CurrentUser) GetPerPage() int32`
 
 GetPerPage returns the PerPage field if non-nil, zero value otherwise.
 
 ### GetPerPageOk
 
-`func (o *CurrentUser) GetPerPageOk() (*float32, bool)`
+`func (o *CurrentUser) GetPerPageOk() (*int32, bool)`
 
 GetPerPageOk returns a tuple with the PerPage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPerPage
 
-`func (o *CurrentUser) SetPerPage(v float32)`
+`func (o *CurrentUser) SetPerPage(v int32)`
 
 SetPerPage sets PerPage field to given value.
 
@@ -921,20 +921,20 @@ SetCustomStyle sets CustomStyle field to given value.
 
 ### GetFavoriteCount
 
-`func (o *CurrentUser) GetFavoriteCount() float32`
+`func (o *CurrentUser) GetFavoriteCount() int32`
 
 GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
 
 ### GetFavoriteCountOk
 
-`func (o *CurrentUser) GetFavoriteCountOk() (*float32, bool)`
+`func (o *CurrentUser) GetFavoriteCountOk() (*int32, bool)`
 
 GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFavoriteCount
 
-`func (o *CurrentUser) SetFavoriteCount(v float32)`
+`func (o *CurrentUser) SetFavoriteCount(v int32)`
 
 SetFavoriteCount sets FavoriteCount field to given value.
 
@@ -1021,40 +1021,40 @@ SetStatementTimeout sets StatementTimeout field to given value.
 
 ### GetFavoriteLimit
 
-`func (o *CurrentUser) GetFavoriteLimit() float32`
+`func (o *CurrentUser) GetFavoriteLimit() int32`
 
 GetFavoriteLimit returns the FavoriteLimit field if non-nil, zero value otherwise.
 
 ### GetFavoriteLimitOk
 
-`func (o *CurrentUser) GetFavoriteLimitOk() (*float32, bool)`
+`func (o *CurrentUser) GetFavoriteLimitOk() (*int32, bool)`
 
 GetFavoriteLimitOk returns a tuple with the FavoriteLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFavoriteLimit
 
-`func (o *CurrentUser) SetFavoriteLimit(v float32)`
+`func (o *CurrentUser) SetFavoriteLimit(v int32)`
 
 SetFavoriteLimit sets FavoriteLimit field to given value.
 
 
 ### GetTagQueryLimit
 
-`func (o *CurrentUser) GetTagQueryLimit() float32`
+`func (o *CurrentUser) GetTagQueryLimit() int32`
 
 GetTagQueryLimit returns the TagQueryLimit field if non-nil, zero value otherwise.
 
 ### GetTagQueryLimitOk
 
-`func (o *CurrentUser) GetTagQueryLimitOk() (*float32, bool)`
+`func (o *CurrentUser) GetTagQueryLimitOk() (*int32, bool)`
 
 GetTagQueryLimitOk returns a tuple with the TagQueryLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTagQueryLimit
 
-`func (o *CurrentUser) SetTagQueryLimit(v float32)`
+`func (o *CurrentUser) SetTagQueryLimit(v int32)`
 
 SetTagQueryLimit sets TagQueryLimit field to given value.
 
