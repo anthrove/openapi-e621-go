@@ -22,69 +22,68 @@ var _ MappedNullable = &CurrentUser{}
 
 // CurrentUser struct for CurrentUser
 type CurrentUser struct {
-	Id                               int32       `json:"id"`
-	CreatedAt                        time.Time   `json:"created_at"`
-	Name                             string      `json:"name"`
-	Level                            float32     `json:"level"`
-	BaseUploadLimit                  int32       `json:"base_upload_limit"`
-	PostUploadCount                  int32       `json:"post_upload_count"`
-	PostUpdateCount                  int32       `json:"post_update_count"`
-	NoteUpdateCount                  int32       `json:"note_update_count"`
-	IsBanned                         bool        `json:"is_banned"`
-	CanApprovePosts                  bool        `json:"can_approve_posts"`
-	CanUploadFree                    bool        `json:"can_upload_free"`
-	LevelString                      string      `json:"level_string"`
-	AvatarId                         int32       `json:"avatar_id"`
-	ArtistVersionCount               *int32      `json:"artist_version_count,omitempty"`
-	CommentCount                     *int32      `json:"comment_count,omitempty"`
-	FavoritesCount                   *int32      `json:"favorites_count,omitempty"`
-	FlagCount                        *float32    `json:"flag_count,omitempty"`
-	ForumPostCount                   *int32      `json:"forum_post_count,omitempty"`
-	NegativeFeedbackCount            *int32      `json:"negative_feedback_count,omitempty"`
-	NeutralFeedbackCount             *int32      `json:"neutral_feedback_count,omitempty"`
-	PoolVersionCount                 *int32      `json:"pool_version_count,omitempty"`
-	PositiveFeedbackCount            *int32      `json:"positive_feedback_count,omitempty"`
-	ProfileAbout                     *string     `json:"profile_about,omitempty"`
-	ProfileArtinfo                   *string     `json:"profile_artinfo,omitempty"`
-	UploadLimit                      interface{} `json:"upload_limit,omitempty"`
-	WikiPageVersionCount             *int32      `json:"wiki_page_version_count,omitempty"`
-	BlacklistUsers                   bool        `json:"blacklist_users"`
-	DescriptionCollapsedInitially    bool        `json:"description_collapsed_initially"`
-	HideComments                     bool        `json:"hide_comments"`
-	ShowHiddenComments               bool        `json:"show_hidden_comments"`
-	ShowPostStatistics               bool        `json:"show_post_statistics"`
-	ReceiveEmailNotifications        bool        `json:"receive_email_notifications"`
-	EnableKeyboardNavigation         bool        `json:"enable_keyboard_navigation"`
-	EnablePrivacyMode                bool        `json:"enable_privacy_mode"`
-	StyleUsernames                   bool        `json:"style_usernames"`
-	EnableAutoComplete               bool        `json:"enable_auto_complete"`
-	DisabledCroppedThumbnails        bool        `json:"disabled_cropped_thumbnails"`
-	EnableSafeMode                   bool        `json:"enable_safe_mode"`
-	DisableResponsiveMode            bool        `json:"disable_responsive_mode"`
-	NoFlagging                       bool        `json:"no_flagging"`
-	DisableUserDmails                bool        `json:"disable_user_dmails"`
-	EnableCompactUploader            bool        `json:"enable_compact_uploader"`
-	ReplacementsBeta                 bool        `json:"replacements_beta"`
-	UpdatedAt                        time.Time   `json:"updated_at"`
-	Email                            string      `json:"email"`
-	LastLoggedInAt                   time.Time   `json:"last_logged_in_at"`
-	LastForumReadAt                  time.Time   `json:"last_forum_read_at"`
-	RecentTags                       string      `json:"recent_tags"`
-	CommentThreshold                 float32     `json:"comment_threshold"`
-	DefaultImageSizedefaultImageSize *string     `json:"default_image_sizedefault_image_size,omitempty"`
-	FavoriteTags                     string      `json:"favorite_tags"`
-	BlacklistedTags                  string      `json:"blacklisted_tags"`
-	TimeZone                         string      `json:"time_zone"`
-	PerPage                          int32       `json:"per_page"`
-	CustomStyle                      string      `json:"custom_style"`
-	FavoriteCount                    int32       `json:"favorite_count"`
-	ApiRegenMultiplier               float32     `json:"api_regen_multiplier"`
-	ApiBurstLimit                    float32     `json:"api_burst_limit"`
-	RemainingApiLimit                float32     `json:"remaining_api_limit"`
-	StatementTimeout                 float32     `json:"statement_timeout"`
-	FavoriteLimit                    int32       `json:"favorite_limit"`
-	TagQueryLimit                    int32       `json:"tag_query_limit"`
-	HasMail                          bool        `json:"has_mail"`
+	Id                               int32     `json:"id"`
+	CreatedAt                        time.Time `json:"created_at"`
+	Name                             string    `json:"name"`
+	Level                            float32   `json:"level"`
+	BaseUploadLimit                  int32     `json:"base_upload_limit"`
+	PostUploadCount                  int32     `json:"post_upload_count"`
+	PostUpdateCount                  int32     `json:"post_update_count"`
+	NoteUpdateCount                  int32     `json:"note_update_count"`
+	IsBanned                         bool      `json:"is_banned"`
+	CanApprovePosts                  bool      `json:"can_approve_posts"`
+	CanUploadFree                    bool      `json:"can_upload_free"`
+	LevelString                      string    `json:"level_string"`
+	AvatarId                         int32     `json:"avatar_id"`
+	ArtistVersionCount               *int32    `json:"artist_version_count,omitempty"`
+	CommentCount                     *int32    `json:"comment_count,omitempty"`
+	FavoriteCount                    int32     `json:"favorite_count"`
+	FlagCount                        *float32  `json:"flag_count,omitempty"`
+	ForumPostCount                   *int32    `json:"forum_post_count,omitempty"`
+	NegativeFeedbackCount            *int32    `json:"negative_feedback_count,omitempty"`
+	NeutralFeedbackCount             *int32    `json:"neutral_feedback_count,omitempty"`
+	PoolVersionCount                 *int32    `json:"pool_version_count,omitempty"`
+	PositiveFeedbackCount            *int32    `json:"positive_feedback_count,omitempty"`
+	ProfileAbout                     *string   `json:"profile_about,omitempty"`
+	ProfileArtinfo                   *string   `json:"profile_artinfo,omitempty"`
+	UploadLimit                      *int32    `json:"upload_limit,omitempty"`
+	WikiPageVersionCount             *int32    `json:"wiki_page_version_count,omitempty"`
+	BlacklistUsers                   bool      `json:"blacklist_users"`
+	DescriptionCollapsedInitially    bool      `json:"description_collapsed_initially"`
+	HideComments                     bool      `json:"hide_comments"`
+	ShowHiddenComments               bool      `json:"show_hidden_comments"`
+	ShowPostStatistics               bool      `json:"show_post_statistics"`
+	ReceiveEmailNotifications        bool      `json:"receive_email_notifications"`
+	EnableKeyboardNavigation         bool      `json:"enable_keyboard_navigation"`
+	EnablePrivacyMode                bool      `json:"enable_privacy_mode"`
+	StyleUsernames                   bool      `json:"style_usernames"`
+	EnableAutoComplete               bool      `json:"enable_auto_complete"`
+	DisabledCroppedThumbnails        bool      `json:"disabled_cropped_thumbnails"`
+	EnableSafeMode                   bool      `json:"enable_safe_mode"`
+	DisableResponsiveMode            bool      `json:"disable_responsive_mode"`
+	NoFlagging                       bool      `json:"no_flagging"`
+	DisableUserDmails                bool      `json:"disable_user_dmails"`
+	EnableCompactUploader            bool      `json:"enable_compact_uploader"`
+	ReplacementsBeta                 bool      `json:"replacements_beta"`
+	UpdatedAt                        time.Time `json:"updated_at"`
+	Email                            string    `json:"email"`
+	LastLoggedInAt                   time.Time `json:"last_logged_in_at"`
+	LastForumReadAt                  time.Time `json:"last_forum_read_at"`
+	RecentTags                       string    `json:"recent_tags"`
+	CommentThreshold                 float32   `json:"comment_threshold"`
+	DefaultImageSizedefaultImageSize *string   `json:"default_image_sizedefault_image_size,omitempty"`
+	FavoriteTags                     string    `json:"favorite_tags"`
+	BlacklistedTags                  string    `json:"blacklisted_tags"`
+	TimeZone                         string    `json:"time_zone"`
+	PerPage                          int32     `json:"per_page"`
+	CustomStyle                      string    `json:"custom_style"`
+	ApiRegenMultiplier               float32   `json:"api_regen_multiplier"`
+	ApiBurstLimit                    float32   `json:"api_burst_limit"`
+	RemainingApiLimit                float32   `json:"remaining_api_limit"`
+	StatementTimeout                 float32   `json:"statement_timeout"`
+	FavoriteLimit                    int32     `json:"favorite_limit"`
+	TagQueryLimit                    int32     `json:"tag_query_limit"`
+	HasMail                          bool      `json:"has_mail"`
 }
 
 type _CurrentUser CurrentUser
@@ -93,7 +92,7 @@ type _CurrentUser CurrentUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *CurrentUser {
+func NewCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, favoriteCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *CurrentUser {
 	this := CurrentUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -108,6 +107,7 @@ func NewCurrentUser(id int32, createdAt time.Time, name string, level float32, b
 	this.CanUploadFree = canUploadFree
 	this.LevelString = levelString
 	this.AvatarId = avatarId
+	this.FavoriteCount = favoriteCount
 	this.BlacklistUsers = blacklistUsers
 	this.DescriptionCollapsedInitially = descriptionCollapsedInitially
 	this.HideComments = hideComments
@@ -136,7 +136,6 @@ func NewCurrentUser(id int32, createdAt time.Time, name string, level float32, b
 	this.TimeZone = timeZone
 	this.PerPage = perPage
 	this.CustomStyle = customStyle
-	this.FavoriteCount = favoriteCount
 	this.ApiRegenMultiplier = apiRegenMultiplier
 	this.ApiBurstLimit = apiBurstLimit
 	this.RemainingApiLimit = remainingApiLimit
@@ -531,36 +530,28 @@ func (o *CurrentUser) SetCommentCount(v int32) {
 	o.CommentCount = &v
 }
 
-// GetFavoritesCount returns the FavoritesCount field value if set, zero value otherwise.
-func (o *CurrentUser) GetFavoritesCount() int32 {
-	if o == nil || IsNil(o.FavoritesCount) {
+// GetFavoriteCount returns the FavoriteCount field value
+func (o *CurrentUser) GetFavoriteCount() int32 {
+	if o == nil {
 		var ret int32
 		return ret
 	}
-	return *o.FavoritesCount
+
+	return o.FavoriteCount
 }
 
-// GetFavoritesCountOk returns a tuple with the FavoritesCount field value if set, nil otherwise
+// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
 // and a boolean to check if the value has been set.
-func (o *CurrentUser) GetFavoritesCountOk() (*int32, bool) {
-	if o == nil || IsNil(o.FavoritesCount) {
+func (o *CurrentUser) GetFavoriteCountOk() (*int32, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.FavoritesCount, true
+	return &o.FavoriteCount, true
 }
 
-// HasFavoritesCount returns a boolean if a field has been set.
-func (o *CurrentUser) HasFavoritesCount() bool {
-	if o != nil && !IsNil(o.FavoritesCount) {
-		return true
-	}
-
-	return false
-}
-
-// SetFavoritesCount gets a reference to the given int32 and assigns it to the FavoritesCount field.
-func (o *CurrentUser) SetFavoritesCount(v int32) {
-	o.FavoritesCount = &v
+// SetFavoriteCount sets field value
+func (o *CurrentUser) SetFavoriteCount(v int32) {
+	o.FavoriteCount = v
 }
 
 // GetFlagCount returns the FlagCount field value if set, zero value otherwise.
@@ -819,23 +810,22 @@ func (o *CurrentUser) SetProfileArtinfo(v string) {
 	o.ProfileArtinfo = &v
 }
 
-// GetUploadLimit returns the UploadLimit field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *CurrentUser) GetUploadLimit() interface{} {
-	if o == nil {
-		var ret interface{}
+// GetUploadLimit returns the UploadLimit field value if set, zero value otherwise.
+func (o *CurrentUser) GetUploadLimit() int32 {
+	if o == nil || IsNil(o.UploadLimit) {
+		var ret int32
 		return ret
 	}
-	return o.UploadLimit
+	return *o.UploadLimit
 }
 
 // GetUploadLimitOk returns a tuple with the UploadLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *CurrentUser) GetUploadLimitOk() (*interface{}, bool) {
+func (o *CurrentUser) GetUploadLimitOk() (*int32, bool) {
 	if o == nil || IsNil(o.UploadLimit) {
 		return nil, false
 	}
-	return &o.UploadLimit, true
+	return o.UploadLimit, true
 }
 
 // HasUploadLimit returns a boolean if a field has been set.
@@ -847,9 +837,9 @@ func (o *CurrentUser) HasUploadLimit() bool {
 	return false
 }
 
-// SetUploadLimit gets a reference to the given interface{} and assigns it to the UploadLimit field.
-func (o *CurrentUser) SetUploadLimit(v interface{}) {
-	o.UploadLimit = v
+// SetUploadLimit gets a reference to the given int32 and assigns it to the UploadLimit field.
+func (o *CurrentUser) SetUploadLimit(v int32) {
+	o.UploadLimit = &v
 }
 
 // GetWikiPageVersionCount returns the WikiPageVersionCount field value if set, zero value otherwise.
@@ -1588,30 +1578,6 @@ func (o *CurrentUser) SetCustomStyle(v string) {
 	o.CustomStyle = v
 }
 
-// GetFavoriteCount returns the FavoriteCount field value
-func (o *CurrentUser) GetFavoriteCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.FavoriteCount
-}
-
-// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
-// and a boolean to check if the value has been set.
-func (o *CurrentUser) GetFavoriteCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.FavoriteCount, true
-}
-
-// SetFavoriteCount sets field value
-func (o *CurrentUser) SetFavoriteCount(v int32) {
-	o.FavoriteCount = v
-}
-
 // GetApiRegenMultiplier returns the ApiRegenMultiplier field value
 func (o *CurrentUser) GetApiRegenMultiplier() float32 {
 	if o == nil {
@@ -1809,9 +1775,7 @@ func (o CurrentUser) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.CommentCount) {
 		toSerialize["comment_count"] = o.CommentCount
 	}
-	if !IsNil(o.FavoritesCount) {
-		toSerialize["favorites_count"] = o.FavoritesCount
-	}
+	toSerialize["favorite_count"] = o.FavoriteCount
 	if !IsNil(o.FlagCount) {
 		toSerialize["flag_count"] = o.FlagCount
 	}
@@ -1836,7 +1800,7 @@ func (o CurrentUser) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ProfileArtinfo) {
 		toSerialize["profile_artinfo"] = o.ProfileArtinfo
 	}
-	if o.UploadLimit != nil {
+	if !IsNil(o.UploadLimit) {
 		toSerialize["upload_limit"] = o.UploadLimit
 	}
 	if !IsNil(o.WikiPageVersionCount) {
@@ -1873,7 +1837,6 @@ func (o CurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["time_zone"] = o.TimeZone
 	toSerialize["per_page"] = o.PerPage
 	toSerialize["custom_style"] = o.CustomStyle
-	toSerialize["favorite_count"] = o.FavoriteCount
 	toSerialize["api_regen_multiplier"] = o.ApiRegenMultiplier
 	toSerialize["api_burst_limit"] = o.ApiBurstLimit
 	toSerialize["remaining_api_limit"] = o.RemainingApiLimit
@@ -1902,6 +1865,7 @@ func (o *CurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"can_upload_free",
 		"level_string",
 		"avatar_id",
+		"favorite_count",
 		"blacklist_users",
 		"description_collapsed_initially",
 		"hide_comments",
@@ -1930,7 +1894,6 @@ func (o *CurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"time_zone",
 		"per_page",
 		"custom_style",
-		"favorite_count",
 		"api_regen_multiplier",
 		"api_burst_limit",
 		"remaining_api_limit",

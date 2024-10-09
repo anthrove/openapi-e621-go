@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **AvatarId** | **int32** |  | 
 **ArtistVersionCount** | **int32** |  | 
 **CommentCount** | **int32** |  | 
-**FavoritesCount** | Pointer to **int32** |  | [optional] 
+**FavoriteCount** | **int32** |  | 
 **FlagCount** | **int32** |  | 
 **ForumPostCount** | **int32** |  | 
 **NegativeFeedbackCount** | **int32** |  | 
@@ -30,13 +30,12 @@ Name | Type | Description | Notes
 **ProfileArtinfo** | **string** |  | 
 **UploadLimit** | **int32** |  | 
 **WikiPageVersionCount** | **int32** |  | 
-**FavoriteCount** | **int32** |  | 
 
 ## Methods
 
 ### NewSearchUsers200ResponseInner
 
-`func NewSearchUsers200ResponseInner(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32, ) *SearchUsers200ResponseInner`
+`func NewSearchUsers200ResponseInner(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, favoriteCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, ) *SearchUsers200ResponseInner`
 
 NewSearchUsers200ResponseInner instantiates a new SearchUsers200ResponseInner object
 This constructor will assign default values to properties that have it defined,
@@ -351,30 +350,25 @@ and a boolean to check if the value has been set.
 SetCommentCount sets CommentCount field to given value.
 
 
-### GetFavoritesCount
+### GetFavoriteCount
 
-`func (o *SearchUsers200ResponseInner) GetFavoritesCount() int32`
+`func (o *SearchUsers200ResponseInner) GetFavoriteCount() int32`
 
-GetFavoritesCount returns the FavoritesCount field if non-nil, zero value otherwise.
+GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
 
-### GetFavoritesCountOk
+### GetFavoriteCountOk
 
-`func (o *SearchUsers200ResponseInner) GetFavoritesCountOk() (*int32, bool)`
+`func (o *SearchUsers200ResponseInner) GetFavoriteCountOk() (*int32, bool)`
 
-GetFavoritesCountOk returns a tuple with the FavoritesCount field if it's non-nil, zero value otherwise
+GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFavoritesCount
+### SetFavoriteCount
 
-`func (o *SearchUsers200ResponseInner) SetFavoritesCount(v int32)`
+`func (o *SearchUsers200ResponseInner) SetFavoriteCount(v int32)`
 
-SetFavoritesCount sets FavoritesCount field to given value.
+SetFavoriteCount sets FavoriteCount field to given value.
 
-### HasFavoritesCount
-
-`func (o *SearchUsers200ResponseInner) HasFavoritesCount() bool`
-
-HasFavoritesCount returns a boolean if a field has been set.
 
 ### GetFlagCount
 
@@ -574,26 +568,6 @@ and a boolean to check if the value has been set.
 `func (o *SearchUsers200ResponseInner) SetWikiPageVersionCount(v int32)`
 
 SetWikiPageVersionCount sets WikiPageVersionCount field to given value.
-
-
-### GetFavoriteCount
-
-`func (o *SearchUsers200ResponseInner) GetFavoriteCount() int32`
-
-GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
-
-### GetFavoriteCountOk
-
-`func (o *SearchUsers200ResponseInner) GetFavoriteCountOk() (*int32, bool)`
-
-GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFavoriteCount
-
-`func (o *SearchUsers200ResponseInner) SetFavoriteCount(v int32)`
-
-SetFavoriteCount sets FavoriteCount field to given value.
 
 
 

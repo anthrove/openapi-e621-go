@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **AvatarId** | **int32** |  | 
 **ArtistVersionCount** | **int32** |  | 
 **CommentCount** | **int32** |  | 
-**FavoritesCount** | Pointer to **int32** |  | [optional] 
+**FavoriteCount** | **int32** |  | 
 **FlagCount** | **int32** |  | 
 **ForumPostCount** | **int32** |  | 
 **NegativeFeedbackCount** | **int32** |  | 
@@ -59,7 +59,6 @@ Name | Type | Description | Notes
 **TimeZone** | **string** |  | 
 **PerPage** | **int32** |  | 
 **CustomStyle** | **string** |  | 
-**FavoriteCount** | **int32** |  | 
 **ApiRegenMultiplier** | **float32** |  | 
 **ApiBurstLimit** | **float32** |  | 
 **RemainingApiLimit** | **float32** |  | 
@@ -72,7 +71,7 @@ Name | Type | Description | Notes
 
 ### NewGetUser200Response
 
-`func NewGetUser200Response(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *GetUser200Response`
+`func NewGetUser200Response(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, favoriteCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *GetUser200Response`
 
 NewGetUser200Response instantiates a new GetUser200Response object
 This constructor will assign default values to properties that have it defined,
@@ -387,30 +386,25 @@ and a boolean to check if the value has been set.
 SetCommentCount sets CommentCount field to given value.
 
 
-### GetFavoritesCount
+### GetFavoriteCount
 
-`func (o *GetUser200Response) GetFavoritesCount() int32`
+`func (o *GetUser200Response) GetFavoriteCount() int32`
 
-GetFavoritesCount returns the FavoritesCount field if non-nil, zero value otherwise.
+GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
 
-### GetFavoritesCountOk
+### GetFavoriteCountOk
 
-`func (o *GetUser200Response) GetFavoritesCountOk() (*int32, bool)`
+`func (o *GetUser200Response) GetFavoriteCountOk() (*int32, bool)`
 
-GetFavoritesCountOk returns a tuple with the FavoritesCount field if it's non-nil, zero value otherwise
+GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFavoritesCount
+### SetFavoriteCount
 
-`func (o *GetUser200Response) SetFavoritesCount(v int32)`
+`func (o *GetUser200Response) SetFavoriteCount(v int32)`
 
-SetFavoritesCount sets FavoritesCount field to given value.
+SetFavoriteCount sets FavoriteCount field to given value.
 
-### HasFavoritesCount
-
-`func (o *GetUser200Response) HasFavoritesCount() bool`
-
-HasFavoritesCount returns a boolean if a field has been set.
 
 ### GetFlagCount
 
@@ -1195,26 +1189,6 @@ and a boolean to check if the value has been set.
 `func (o *GetUser200Response) SetCustomStyle(v string)`
 
 SetCustomStyle sets CustomStyle field to given value.
-
-
-### GetFavoriteCount
-
-`func (o *GetUser200Response) GetFavoriteCount() int32`
-
-GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
-
-### GetFavoriteCountOk
-
-`func (o *GetUser200Response) GetFavoriteCountOk() (*int32, bool)`
-
-GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFavoriteCount
-
-`func (o *GetUser200Response) SetFavoriteCount(v int32)`
-
-SetFavoriteCount sets FavoriteCount field to given value.
 
 
 ### GetApiRegenMultiplier
