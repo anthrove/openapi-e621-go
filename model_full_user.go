@@ -37,7 +37,7 @@ type FullUser struct {
 	AvatarId              int32     `json:"avatar_id"`
 	ArtistVersionCount    int32     `json:"artist_version_count"`
 	CommentCount          int32     `json:"comment_count"`
-	FavoritesCount        *int32    `json:"favorites_count,omitempty"`
+	FavoriteCount         int32     `json:"favorite_count"`
 	FlagCount             int32     `json:"flag_count"`
 	ForumPostCount        int32     `json:"forum_post_count"`
 	NegativeFeedbackCount int32     `json:"negative_feedback_count"`
@@ -48,7 +48,6 @@ type FullUser struct {
 	ProfileArtinfo        string    `json:"profile_artinfo"`
 	UploadLimit           int32     `json:"upload_limit"`
 	WikiPageVersionCount  int32     `json:"wiki_page_version_count"`
-	FavoriteCount         int32     `json:"favorite_count"`
 }
 
 type _FullUser FullUser
@@ -57,7 +56,7 @@ type _FullUser FullUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFullUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32) *FullUser {
+func NewFullUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, favoriteCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32) *FullUser {
 	this := FullUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -74,6 +73,7 @@ func NewFullUser(id int32, createdAt time.Time, name string, level float32, base
 	this.AvatarId = avatarId
 	this.ArtistVersionCount = artistVersionCount
 	this.CommentCount = commentCount
+	this.FavoriteCount = favoriteCount
 	this.FlagCount = flagCount
 	this.ForumPostCount = forumPostCount
 	this.NegativeFeedbackCount = negativeFeedbackCount
@@ -84,7 +84,6 @@ func NewFullUser(id int32, createdAt time.Time, name string, level float32, base
 	this.ProfileArtinfo = profileArtinfo
 	this.UploadLimit = uploadLimit
 	this.WikiPageVersionCount = wikiPageVersionCount
-	this.FavoriteCount = favoriteCount
 	return &this
 }
 
@@ -456,36 +455,28 @@ func (o *FullUser) SetCommentCount(v int32) {
 	o.CommentCount = v
 }
 
-// GetFavoritesCount returns the FavoritesCount field value if set, zero value otherwise.
-func (o *FullUser) GetFavoritesCount() int32 {
-	if o == nil || IsNil(o.FavoritesCount) {
+// GetFavoriteCount returns the FavoriteCount field value
+func (o *FullUser) GetFavoriteCount() int32 {
+	if o == nil {
 		var ret int32
 		return ret
 	}
-	return *o.FavoritesCount
+
+	return o.FavoriteCount
 }
 
-// GetFavoritesCountOk returns a tuple with the FavoritesCount field value if set, nil otherwise
+// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
 // and a boolean to check if the value has been set.
-func (o *FullUser) GetFavoritesCountOk() (*int32, bool) {
-	if o == nil || IsNil(o.FavoritesCount) {
+func (o *FullUser) GetFavoriteCountOk() (*int32, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.FavoritesCount, true
+	return &o.FavoriteCount, true
 }
 
-// HasFavoritesCount returns a boolean if a field has been set.
-func (o *FullUser) HasFavoritesCount() bool {
-	if o != nil && !IsNil(o.FavoritesCount) {
-		return true
-	}
-
-	return false
-}
-
-// SetFavoritesCount gets a reference to the given int32 and assigns it to the FavoritesCount field.
-func (o *FullUser) SetFavoritesCount(v int32) {
-	o.FavoritesCount = &v
+// SetFavoriteCount sets field value
+func (o *FullUser) SetFavoriteCount(v int32) {
+	o.FavoriteCount = v
 }
 
 // GetFlagCount returns the FlagCount field value
@@ -728,30 +719,6 @@ func (o *FullUser) SetWikiPageVersionCount(v int32) {
 	o.WikiPageVersionCount = v
 }
 
-// GetFavoriteCount returns the FavoriteCount field value
-func (o *FullUser) GetFavoriteCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.FavoriteCount
-}
-
-// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
-// and a boolean to check if the value has been set.
-func (o *FullUser) GetFavoriteCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.FavoriteCount, true
-}
-
-// SetFavoriteCount sets field value
-func (o *FullUser) SetFavoriteCount(v int32) {
-	o.FavoriteCount = v
-}
-
 func (o FullUser) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -777,9 +744,7 @@ func (o FullUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["avatar_id"] = o.AvatarId
 	toSerialize["artist_version_count"] = o.ArtistVersionCount
 	toSerialize["comment_count"] = o.CommentCount
-	if !IsNil(o.FavoritesCount) {
-		toSerialize["favorites_count"] = o.FavoritesCount
-	}
+	toSerialize["favorite_count"] = o.FavoriteCount
 	toSerialize["flag_count"] = o.FlagCount
 	toSerialize["forum_post_count"] = o.ForumPostCount
 	toSerialize["negative_feedback_count"] = o.NegativeFeedbackCount
@@ -790,7 +755,6 @@ func (o FullUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["profile_artinfo"] = o.ProfileArtinfo
 	toSerialize["upload_limit"] = o.UploadLimit
 	toSerialize["wiki_page_version_count"] = o.WikiPageVersionCount
-	toSerialize["favorite_count"] = o.FavoriteCount
 	return toSerialize, nil
 }
 
@@ -814,6 +778,7 @@ func (o *FullUser) UnmarshalJSON(data []byte) (err error) {
 		"avatar_id",
 		"artist_version_count",
 		"comment_count",
+		"favorite_count",
 		"flag_count",
 		"forum_post_count",
 		"negative_feedback_count",
@@ -824,7 +789,6 @@ func (o *FullUser) UnmarshalJSON(data []byte) (err error) {
 		"profile_artinfo",
 		"upload_limit",
 		"wiki_page_version_count",
-		"favorite_count",
 	}
 
 	allProperties := make(map[string]interface{})

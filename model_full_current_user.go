@@ -37,7 +37,7 @@ type FullCurrentUser struct {
 	AvatarId                         int32     `json:"avatar_id"`
 	ArtistVersionCount               int32     `json:"artist_version_count"`
 	CommentCount                     int32     `json:"comment_count"`
-	FavoritesCount                   *int32    `json:"favorites_count,omitempty"`
+	FavoriteCount                    int32     `json:"favorite_count"`
 	FlagCount                        int32     `json:"flag_count"`
 	ForumPostCount                   int32     `json:"forum_post_count"`
 	NegativeFeedbackCount            int32     `json:"negative_feedback_count"`
@@ -77,7 +77,6 @@ type FullCurrentUser struct {
 	TimeZone                         string    `json:"time_zone"`
 	PerPage                          int32     `json:"per_page"`
 	CustomStyle                      string    `json:"custom_style"`
-	FavoriteCount                    int32     `json:"favorite_count"`
 	ApiRegenMultiplier               float32   `json:"api_regen_multiplier"`
 	ApiBurstLimit                    float32   `json:"api_burst_limit"`
 	RemainingApiLimit                float32   `json:"remaining_api_limit"`
@@ -93,7 +92,7 @@ type _FullCurrentUser FullCurrentUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
+func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, favoriteCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disabledCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
 	this := FullCurrentUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -110,6 +109,7 @@ func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float3
 	this.AvatarId = avatarId
 	this.ArtistVersionCount = artistVersionCount
 	this.CommentCount = commentCount
+	this.FavoriteCount = favoriteCount
 	this.FlagCount = flagCount
 	this.ForumPostCount = forumPostCount
 	this.NegativeFeedbackCount = negativeFeedbackCount
@@ -148,7 +148,6 @@ func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float3
 	this.TimeZone = timeZone
 	this.PerPage = perPage
 	this.CustomStyle = customStyle
-	this.FavoriteCount = favoriteCount
 	this.ApiRegenMultiplier = apiRegenMultiplier
 	this.ApiBurstLimit = apiBurstLimit
 	this.RemainingApiLimit = remainingApiLimit
@@ -527,36 +526,28 @@ func (o *FullCurrentUser) SetCommentCount(v int32) {
 	o.CommentCount = v
 }
 
-// GetFavoritesCount returns the FavoritesCount field value if set, zero value otherwise.
-func (o *FullCurrentUser) GetFavoritesCount() int32 {
-	if o == nil || IsNil(o.FavoritesCount) {
+// GetFavoriteCount returns the FavoriteCount field value
+func (o *FullCurrentUser) GetFavoriteCount() int32 {
+	if o == nil {
 		var ret int32
 		return ret
 	}
-	return *o.FavoritesCount
+
+	return o.FavoriteCount
 }
 
-// GetFavoritesCountOk returns a tuple with the FavoritesCount field value if set, nil otherwise
+// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetFavoritesCountOk() (*int32, bool) {
-	if o == nil || IsNil(o.FavoritesCount) {
+func (o *FullCurrentUser) GetFavoriteCountOk() (*int32, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.FavoritesCount, true
+	return &o.FavoriteCount, true
 }
 
-// HasFavoritesCount returns a boolean if a field has been set.
-func (o *FullCurrentUser) HasFavoritesCount() bool {
-	if o != nil && !IsNil(o.FavoritesCount) {
-		return true
-	}
-
-	return false
-}
-
-// SetFavoritesCount gets a reference to the given int32 and assigns it to the FavoritesCount field.
-func (o *FullCurrentUser) SetFavoritesCount(v int32) {
-	o.FavoritesCount = &v
+// SetFavoriteCount sets field value
+func (o *FullCurrentUser) SetFavoriteCount(v int32) {
+	o.FavoriteCount = v
 }
 
 // GetFlagCount returns the FlagCount field value
@@ -1503,30 +1494,6 @@ func (o *FullCurrentUser) SetCustomStyle(v string) {
 	o.CustomStyle = v
 }
 
-// GetFavoriteCount returns the FavoriteCount field value
-func (o *FullCurrentUser) GetFavoriteCount() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.FavoriteCount
-}
-
-// GetFavoriteCountOk returns a tuple with the FavoriteCount field value
-// and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetFavoriteCountOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.FavoriteCount, true
-}
-
-// SetFavoriteCount sets field value
-func (o *FullCurrentUser) SetFavoriteCount(v int32) {
-	o.FavoriteCount = v
-}
-
 // GetApiRegenMultiplier returns the ApiRegenMultiplier field value
 func (o *FullCurrentUser) GetApiRegenMultiplier() float32 {
 	if o == nil {
@@ -1720,9 +1687,7 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["avatar_id"] = o.AvatarId
 	toSerialize["artist_version_count"] = o.ArtistVersionCount
 	toSerialize["comment_count"] = o.CommentCount
-	if !IsNil(o.FavoritesCount) {
-		toSerialize["favorites_count"] = o.FavoritesCount
-	}
+	toSerialize["favorite_count"] = o.FavoriteCount
 	toSerialize["flag_count"] = o.FlagCount
 	toSerialize["forum_post_count"] = o.ForumPostCount
 	toSerialize["negative_feedback_count"] = o.NegativeFeedbackCount
@@ -1764,7 +1729,6 @@ func (o FullCurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["time_zone"] = o.TimeZone
 	toSerialize["per_page"] = o.PerPage
 	toSerialize["custom_style"] = o.CustomStyle
-	toSerialize["favorite_count"] = o.FavoriteCount
 	toSerialize["api_regen_multiplier"] = o.ApiRegenMultiplier
 	toSerialize["api_burst_limit"] = o.ApiBurstLimit
 	toSerialize["remaining_api_limit"] = o.RemainingApiLimit
@@ -1795,6 +1759,7 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"avatar_id",
 		"artist_version_count",
 		"comment_count",
+		"favorite_count",
 		"flag_count",
 		"forum_post_count",
 		"negative_feedback_count",
@@ -1833,7 +1798,6 @@ func (o *FullCurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"time_zone",
 		"per_page",
 		"custom_style",
-		"favorite_count",
 		"api_regen_multiplier",
 		"api_burst_limit",
 		"remaining_api_limit",

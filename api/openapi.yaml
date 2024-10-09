@@ -9223,26 +9223,26 @@ components:
       example:
         comment_count: 3
         note_update_count: 2
-        remaining_api_limit: 6.683562403749608
+        remaining_api_limit: 8.762042012749001
         description_collapsed_initially: true
         show_hidden_comments: true
         last_forum_read_at: 2000-01-23T04:56:07.000+00:00
         recent_tags: recent_tags
-        api_burst_limit: 9.369310271410669
+        api_burst_limit: 6.683562403749608
         neutral_feedback_count: 1
         profile_about: profile_about
-        upload_limit: ""
+        upload_limit: 7
         enable_compact_uploader: true
         id: 0
         replacements_beta: true
         artist_version_count: 9
-        comment_threshold: 1.1730742509559433
-        per_page: 4
+        comment_threshold: 4.965218492984954
+        per_page: 5
         level: 6.027456183070403
         flag_count: 4.145608029883936
         enable_keyboard_navigation: true
-        favorite_limit: 9
-        tag_query_limit: 6
+        favorite_limit: 6
+        tag_query_limit: 3
         blacklist_users: true
         avatar_id: 7
         hide_comments: true
@@ -9254,9 +9254,8 @@ components:
         default_image_sizedefault_image_size: large
         is_banned: true
         can_approve_posts: true
-        wiki_page_version_count: 7
-        api_regen_multiplier: 9.965781217890562
-        favorites_count: 2
+        wiki_page_version_count: 1
+        api_regen_multiplier: 9.369310271410669
         negative_feedback_count: 1
         pool_version_count: 1
         created_at: 2000-01-23T04:56:07.000+00:00
@@ -9264,7 +9263,7 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         blacklisted_tags: blacklisted_tags
         disable_responsive_mode: true
-        favorite_count: 5
+        favorite_count: 9
         has_mail: true
         email: email
         enable_safe_mode: true
@@ -9280,7 +9279,7 @@ components:
         time_zone: time_zone
         profile_artinfo: profile_artinfo
         positive_feedback_count: 6
-        statement_timeout: 8.762042012749001
+        statement_timeout: 9.018348186070783
         no_flagging: true
         forum_post_count: 7
         enable_privacy_mode: true
@@ -11466,15 +11465,15 @@ components:
         can_approve_posts: true
         comment_count: 3
         note_update_count: 2
-        wiki_page_version_count: 7
-        favorites_count: 2
+        wiki_page_version_count: 1
         negative_feedback_count: 1
         pool_version_count: 1
         created_at: 2000-01-23T04:56:07.000+00:00
         base_upload_limit: 1
         neutral_feedback_count: 1
         profile_about: profile_about
-        upload_limit: ""
+        favorite_count: 2
+        upload_limit: 7
         id: 0
         artist_version_count: 9
         level: 6.027456183070403
@@ -11522,7 +11521,7 @@ components:
           type: integer
         comment_count:
           type: integer
-        favorites_count:
+        favorite_count:
           type: integer
         flag_count:
           type: number
@@ -11540,7 +11539,8 @@ components:
           type: string
         profile_artinfo:
           type: string
-        upload_limit: {}
+        upload_limit:
+          type: integer
         wiki_page_version_count:
           type: integer
       required:
