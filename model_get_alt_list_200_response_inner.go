@@ -18,21 +18,21 @@ import (
 
 // GetAltList200ResponseInner - struct for GetAltList200ResponseInner
 type GetAltList200ResponseInner struct {
-	ArrayOfFloat32 *[]float32
-	Float32        *float32
+	ArrayOfInt32 *[]int32
+	Int32        *int32
 }
 
-// []float32AsGetAltList200ResponseInner is a convenience function that returns []float32 wrapped in GetAltList200ResponseInner
-func ArrayOfFloat32AsGetAltList200ResponseInner(v *[]float32) GetAltList200ResponseInner {
+// []int32AsGetAltList200ResponseInner is a convenience function that returns []int32 wrapped in GetAltList200ResponseInner
+func ArrayOfInt32AsGetAltList200ResponseInner(v *[]int32) GetAltList200ResponseInner {
 	return GetAltList200ResponseInner{
-		ArrayOfFloat32: v,
+		ArrayOfInt32: v,
 	}
 }
 
-// float32AsGetAltList200ResponseInner is a convenience function that returns float32 wrapped in GetAltList200ResponseInner
-func Float32AsGetAltList200ResponseInner(v *float32) GetAltList200ResponseInner {
+// int32AsGetAltList200ResponseInner is a convenience function that returns int32 wrapped in GetAltList200ResponseInner
+func Int32AsGetAltList200ResponseInner(v *int32) GetAltList200ResponseInner {
 	return GetAltList200ResponseInner{
-		Float32: v,
+		Int32: v,
 	}
 }
 
@@ -40,44 +40,44 @@ func Float32AsGetAltList200ResponseInner(v *float32) GetAltList200ResponseInner 
 func (dst *GetAltList200ResponseInner) UnmarshalJSON(data []byte) error {
 	var err error
 	match := 0
-	// try to unmarshal data into ArrayOfFloat32
-	err = newStrictDecoder(data).Decode(&dst.ArrayOfFloat32)
+	// try to unmarshal data into ArrayOfInt32
+	err = newStrictDecoder(data).Decode(&dst.ArrayOfInt32)
 	if err == nil {
-		jsonArrayOfFloat32, _ := json.Marshal(dst.ArrayOfFloat32)
-		if string(jsonArrayOfFloat32) == "{}" { // empty struct
-			dst.ArrayOfFloat32 = nil
+		jsonArrayOfInt32, _ := json.Marshal(dst.ArrayOfInt32)
+		if string(jsonArrayOfInt32) == "{}" { // empty struct
+			dst.ArrayOfInt32 = nil
 		} else {
-			if err = validator.Validate(dst.ArrayOfFloat32); err != nil {
-				dst.ArrayOfFloat32 = nil
+			if err = validator.Validate(dst.ArrayOfInt32); err != nil {
+				dst.ArrayOfInt32 = nil
 			} else {
 				match++
 			}
 		}
 	} else {
-		dst.ArrayOfFloat32 = nil
+		dst.ArrayOfInt32 = nil
 	}
 
-	// try to unmarshal data into Float32
-	err = newStrictDecoder(data).Decode(&dst.Float32)
+	// try to unmarshal data into Int32
+	err = newStrictDecoder(data).Decode(&dst.Int32)
 	if err == nil {
-		jsonFloat32, _ := json.Marshal(dst.Float32)
-		if string(jsonFloat32) == "{}" { // empty struct
-			dst.Float32 = nil
+		jsonInt32, _ := json.Marshal(dst.Int32)
+		if string(jsonInt32) == "{}" { // empty struct
+			dst.Int32 = nil
 		} else {
-			if err = validator.Validate(dst.Float32); err != nil {
-				dst.Float32 = nil
+			if err = validator.Validate(dst.Int32); err != nil {
+				dst.Int32 = nil
 			} else {
 				match++
 			}
 		}
 	} else {
-		dst.Float32 = nil
+		dst.Int32 = nil
 	}
 
 	if match > 1 { // more than 1 match
 		// reset to nil
-		dst.ArrayOfFloat32 = nil
-		dst.Float32 = nil
+		dst.ArrayOfInt32 = nil
+		dst.Int32 = nil
 
 		return fmt.Errorf("data matches more than one schema in oneOf(GetAltList200ResponseInner)")
 	} else if match == 1 {
@@ -89,12 +89,12 @@ func (dst *GetAltList200ResponseInner) UnmarshalJSON(data []byte) error {
 
 // Marshal data from the first non-nil pointers in the struct to JSON
 func (src GetAltList200ResponseInner) MarshalJSON() ([]byte, error) {
-	if src.ArrayOfFloat32 != nil {
-		return json.Marshal(&src.ArrayOfFloat32)
+	if src.ArrayOfInt32 != nil {
+		return json.Marshal(&src.ArrayOfInt32)
 	}
 
-	if src.Float32 != nil {
-		return json.Marshal(&src.Float32)
+	if src.Int32 != nil {
+		return json.Marshal(&src.Int32)
 	}
 
 	return nil, nil // no data in oneOf schemas
@@ -105,12 +105,12 @@ func (obj *GetAltList200ResponseInner) GetActualInstance() interface{} {
 	if obj == nil {
 		return nil
 	}
-	if obj.ArrayOfFloat32 != nil {
-		return obj.ArrayOfFloat32
+	if obj.ArrayOfInt32 != nil {
+		return obj.ArrayOfInt32
 	}
 
-	if obj.Float32 != nil {
-		return obj.Float32
+	if obj.Int32 != nil {
+		return obj.Int32
 	}
 
 	// all schemas are nil

@@ -22,14 +22,14 @@ var _ MappedNullable = &WikiPage{}
 
 // WikiPage struct for WikiPage
 type WikiPage struct {
-	Id          float32        `json:"id"`
+	Id          int32          `json:"id"`
 	CreatedAt   time.Time      `json:"created_at"`
 	UpdatedAt   time.Time      `json:"updated_at"`
 	Title       string         `json:"title"`
 	Body        string         `json:"body"`
-	CreatorId   float32        `json:"creator_id"`
+	CreatorId   int32          `json:"creator_id"`
 	IsLocked    bool           `json:"is_locked"`
-	UpdaterId   float32        `json:"updater_id"`
+	UpdaterId   int32          `json:"updater_id"`
 	IsDeleted   bool           `json:"is_deleted"`
 	OtherNames  []string       `json:"other_names"`
 	Parent      NullableString `json:"parent"`
@@ -43,7 +43,7 @@ type _WikiPage WikiPage
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWikiPage(id float32, createdAt time.Time, updatedAt time.Time, title string, body string, creatorId float32, isLocked bool, updaterId float32, isDeleted bool, otherNames []string, parent NullableString, creatorName string, categoryId TagCategories) *WikiPage {
+func NewWikiPage(id int32, createdAt time.Time, updatedAt time.Time, title string, body string, creatorId int32, isLocked bool, updaterId int32, isDeleted bool, otherNames []string, parent NullableString, creatorName string, categoryId TagCategories) *WikiPage {
 	this := WikiPage{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -70,9 +70,9 @@ func NewWikiPageWithDefaults() *WikiPage {
 }
 
 // GetId returns the Id field value
-func (o *WikiPage) GetId() float32 {
+func (o *WikiPage) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -81,7 +81,7 @@ func (o *WikiPage) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *WikiPage) GetIdOk() (*float32, bool) {
+func (o *WikiPage) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -89,7 +89,7 @@ func (o *WikiPage) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *WikiPage) SetId(v float32) {
+func (o *WikiPage) SetId(v int32) {
 	o.Id = v
 }
 
@@ -190,9 +190,9 @@ func (o *WikiPage) SetBody(v string) {
 }
 
 // GetCreatorId returns the CreatorId field value
-func (o *WikiPage) GetCreatorId() float32 {
+func (o *WikiPage) GetCreatorId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -201,7 +201,7 @@ func (o *WikiPage) GetCreatorId() float32 {
 
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
-func (o *WikiPage) GetCreatorIdOk() (*float32, bool) {
+func (o *WikiPage) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -209,7 +209,7 @@ func (o *WikiPage) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *WikiPage) SetCreatorId(v float32) {
+func (o *WikiPage) SetCreatorId(v int32) {
 	o.CreatorId = v
 }
 
@@ -238,9 +238,9 @@ func (o *WikiPage) SetIsLocked(v bool) {
 }
 
 // GetUpdaterId returns the UpdaterId field value
-func (o *WikiPage) GetUpdaterId() float32 {
+func (o *WikiPage) GetUpdaterId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -249,7 +249,7 @@ func (o *WikiPage) GetUpdaterId() float32 {
 
 // GetUpdaterIdOk returns a tuple with the UpdaterId field value
 // and a boolean to check if the value has been set.
-func (o *WikiPage) GetUpdaterIdOk() (*float32, bool) {
+func (o *WikiPage) GetUpdaterIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -257,7 +257,7 @@ func (o *WikiPage) GetUpdaterIdOk() (*float32, bool) {
 }
 
 // SetUpdaterId sets field value
-func (o *WikiPage) SetUpdaterId(v float32) {
+func (o *WikiPage) SetUpdaterId(v int32) {
 	o.UpdaterId = v
 }
 

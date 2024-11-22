@@ -25,7 +25,7 @@ type FullCurrentUser struct {
 	Id                               int32     `json:"id"`
 	CreatedAt                        time.Time `json:"created_at"`
 	Name                             string    `json:"name"`
-	Level                            float32   `json:"level"`
+	Level                            int32     `json:"level"`
 	BaseUploadLimit                  int32     `json:"base_upload_limit"`
 	PostUploadCount                  int32     `json:"post_upload_count"`
 	PostUpdateCount                  int32     `json:"post_update_count"`
@@ -79,9 +79,9 @@ type FullCurrentUser struct {
 	CustomStyle                      string    `json:"custom_style"`
 	FavoriteCount                    int32     `json:"favorite_count"`
 	ApiRegenMultiplier               float32   `json:"api_regen_multiplier"`
-	ApiBurstLimit                    float32   `json:"api_burst_limit"`
-	RemainingApiLimit                float32   `json:"remaining_api_limit"`
-	StatementTimeout                 float32   `json:"statement_timeout"`
+	ApiBurstLimit                    int32     `json:"api_burst_limit"`
+	RemainingApiLimit                int32     `json:"remaining_api_limit"`
+	StatementTimeout                 int32     `json:"statement_timeout"`
 	FavoriteLimit                    int32     `json:"favorite_limit"`
 	TagQueryLimit                    int32     `json:"tag_query_limit"`
 	HasMail                          bool      `json:"has_mail"`
@@ -93,7 +93,7 @@ type _FullCurrentUser FullCurrentUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
+func NewFullCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *FullCurrentUser {
 	this := FullCurrentUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -240,9 +240,9 @@ func (o *FullCurrentUser) SetName(v string) {
 }
 
 // GetLevel returns the Level field value
-func (o *FullCurrentUser) GetLevel() float32 {
+func (o *FullCurrentUser) GetLevel() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -251,7 +251,7 @@ func (o *FullCurrentUser) GetLevel() float32 {
 
 // GetLevelOk returns a tuple with the Level field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetLevelOk() (*float32, bool) {
+func (o *FullCurrentUser) GetLevelOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -259,7 +259,7 @@ func (o *FullCurrentUser) GetLevelOk() (*float32, bool) {
 }
 
 // SetLevel sets field value
-func (o *FullCurrentUser) SetLevel(v float32) {
+func (o *FullCurrentUser) SetLevel(v int32) {
 	o.Level = v
 }
 
@@ -1552,9 +1552,9 @@ func (o *FullCurrentUser) SetApiRegenMultiplier(v float32) {
 }
 
 // GetApiBurstLimit returns the ApiBurstLimit field value
-func (o *FullCurrentUser) GetApiBurstLimit() float32 {
+func (o *FullCurrentUser) GetApiBurstLimit() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -1563,7 +1563,7 @@ func (o *FullCurrentUser) GetApiBurstLimit() float32 {
 
 // GetApiBurstLimitOk returns a tuple with the ApiBurstLimit field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetApiBurstLimitOk() (*float32, bool) {
+func (o *FullCurrentUser) GetApiBurstLimitOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1571,14 +1571,14 @@ func (o *FullCurrentUser) GetApiBurstLimitOk() (*float32, bool) {
 }
 
 // SetApiBurstLimit sets field value
-func (o *FullCurrentUser) SetApiBurstLimit(v float32) {
+func (o *FullCurrentUser) SetApiBurstLimit(v int32) {
 	o.ApiBurstLimit = v
 }
 
 // GetRemainingApiLimit returns the RemainingApiLimit field value
-func (o *FullCurrentUser) GetRemainingApiLimit() float32 {
+func (o *FullCurrentUser) GetRemainingApiLimit() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -1587,7 +1587,7 @@ func (o *FullCurrentUser) GetRemainingApiLimit() float32 {
 
 // GetRemainingApiLimitOk returns a tuple with the RemainingApiLimit field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetRemainingApiLimitOk() (*float32, bool) {
+func (o *FullCurrentUser) GetRemainingApiLimitOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1595,14 +1595,14 @@ func (o *FullCurrentUser) GetRemainingApiLimitOk() (*float32, bool) {
 }
 
 // SetRemainingApiLimit sets field value
-func (o *FullCurrentUser) SetRemainingApiLimit(v float32) {
+func (o *FullCurrentUser) SetRemainingApiLimit(v int32) {
 	o.RemainingApiLimit = v
 }
 
 // GetStatementTimeout returns the StatementTimeout field value
-func (o *FullCurrentUser) GetStatementTimeout() float32 {
+func (o *FullCurrentUser) GetStatementTimeout() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -1611,7 +1611,7 @@ func (o *FullCurrentUser) GetStatementTimeout() float32 {
 
 // GetStatementTimeoutOk returns a tuple with the StatementTimeout field value
 // and a boolean to check if the value has been set.
-func (o *FullCurrentUser) GetStatementTimeoutOk() (*float32, bool) {
+func (o *FullCurrentUser) GetStatementTimeoutOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1619,7 +1619,7 @@ func (o *FullCurrentUser) GetStatementTimeoutOk() (*float32, bool) {
 }
 
 // SetStatementTimeout sets field value
-func (o *FullCurrentUser) SetStatementTimeout(v float32) {
+func (o *FullCurrentUser) SetStatementTimeout(v int32) {
 	o.StatementTimeout = v
 }
 

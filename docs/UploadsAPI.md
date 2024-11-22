@@ -34,13 +34,13 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchUploaderId := float32(8.14) // float32 |  (optional)
+	searchUploaderId := int32(56) // int32 |  (optional)
 	searchUploaderName := "searchUploaderName_example" // string |  (optional)
 	searchSource := "searchSource_example" // string |  (optional)
 	searchSourceMatches := "searchSourceMatches_example" // string |  (optional)
 	searchRating := openapiclient.Ratings("s") // Ratings |  (optional)
-	searchParentId := float32(8.14) // float32 |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
+	searchParentId := int32(56) // int32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
 	searchHasPost := true // bool |  (optional)
 	searchPostTagsMatch := "searchPostTagsMatch_example" // string |  (optional)
 	searchStatus := "searchStatus_example" // string |  (optional)
@@ -74,13 +74,13 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchUploaderId** | **float32** |  | 
+ **searchUploaderId** | **int32** |  | 
  **searchUploaderName** | **string** |  | 
  **searchSource** | **string** |  | 
  **searchSourceMatches** | **string** |  | 
  **searchRating** | [**Ratings**](Ratings.md) |  | 
- **searchParentId** | **float32** |  | 
- **searchPostId** | **float32** |  | 
+ **searchParentId** | **int32** |  | 
+ **searchPostId** | **int32** |  | 
  **searchHasPost** | **bool** |  | 
  **searchPostTagsMatch** | **string** |  | 
  **searchStatus** | **string** |  | 
@@ -129,7 +129,7 @@ func main() {
 	uploadFile := os.NewFile(1234, "some_file") // *os.File | Mutually exclusive with direct_url. (optional)
 	uploadDirectUrl := "uploadDirectUrl_example" // string | Mutually exclusive with file. (optional)
 	uploadSource := "uploadSource_example" // string |  (optional)
-	uploadParentId := float32(8.14) // float32 |  (optional)
+	uploadParentId := int32(56) // int32 |  (optional)
 	uploadDescription := "uploadDescription_example" // string |  (optional)
 	uploadAsPending := true // bool | Must have the \\\"Unrestricted Uploads\\\" permission. (optional)
 	uploadLockedRating := true // bool | Must be Privileged+ to use. (optional)
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
  **uploadFile** | ***os.File** | Mutually exclusive with direct_url. | 
  **uploadDirectUrl** | **string** | Mutually exclusive with file. | 
  **uploadSource** | **string** |  | 
- **uploadParentId** | **float32** |  | 
+ **uploadParentId** | **int32** |  | 
  **uploadDescription** | **string** |  | 
  **uploadAsPending** | **bool** | Must have the \\\&quot;Unrestricted Uploads\\\&quot; permission. | 
  **uploadLockedRating** | **bool** | Must be Privileged+ to use. | 

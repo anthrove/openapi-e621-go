@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **CreatorId** | **int32** |  | 
 **ApproverId** | **NullableInt32** |  | 
 **FileExt** | **string** |  | 
-**FileSize** | **float32** |  | 
-**ImageHeight** | **float32** |  | 
-**ImageWidth** | **float32** |  | 
+**FileSize** | **int64** |  | 
+**ImageHeight** | **int32** |  | 
+**ImageWidth** | **int32** |  | 
 **Md5** | **string** |  | 
 **Source** | **string** |  | 
 **FileName** | **string** |  | 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewPostReplacement
 
-`func NewPostReplacement(id int32, createdAt time.Time, updatedAt time.Time, postId int32, creatorId int32, approverId NullableInt32, fileExt string, fileSize float32, imageHeight float32, imageWidth float32, md5 string, source string, fileName string, status string, reason string, ) *PostReplacement`
+`func NewPostReplacement(id int32, createdAt time.Time, updatedAt time.Time, postId int32, creatorId int32, approverId NullableInt32, fileExt string, fileSize int64, imageHeight int32, imageWidth int32, md5 string, source string, fileName string, status string, reason string, ) *PostReplacement`
 
 NewPostReplacement instantiates a new PostReplacement object
 This constructor will assign default values to properties that have it defined,
@@ -191,60 +191,60 @@ SetFileExt sets FileExt field to given value.
 
 ### GetFileSize
 
-`func (o *PostReplacement) GetFileSize() float32`
+`func (o *PostReplacement) GetFileSize() int64`
 
 GetFileSize returns the FileSize field if non-nil, zero value otherwise.
 
 ### GetFileSizeOk
 
-`func (o *PostReplacement) GetFileSizeOk() (*float32, bool)`
+`func (o *PostReplacement) GetFileSizeOk() (*int64, bool)`
 
 GetFileSizeOk returns a tuple with the FileSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFileSize
 
-`func (o *PostReplacement) SetFileSize(v float32)`
+`func (o *PostReplacement) SetFileSize(v int64)`
 
 SetFileSize sets FileSize field to given value.
 
 
 ### GetImageHeight
 
-`func (o *PostReplacement) GetImageHeight() float32`
+`func (o *PostReplacement) GetImageHeight() int32`
 
 GetImageHeight returns the ImageHeight field if non-nil, zero value otherwise.
 
 ### GetImageHeightOk
 
-`func (o *PostReplacement) GetImageHeightOk() (*float32, bool)`
+`func (o *PostReplacement) GetImageHeightOk() (*int32, bool)`
 
 GetImageHeightOk returns a tuple with the ImageHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageHeight
 
-`func (o *PostReplacement) SetImageHeight(v float32)`
+`func (o *PostReplacement) SetImageHeight(v int32)`
 
 SetImageHeight sets ImageHeight field to given value.
 
 
 ### GetImageWidth
 
-`func (o *PostReplacement) GetImageWidth() float32`
+`func (o *PostReplacement) GetImageWidth() int32`
 
 GetImageWidth returns the ImageWidth field if non-nil, zero value otherwise.
 
 ### GetImageWidthOk
 
-`func (o *PostReplacement) GetImageWidthOk() (*float32, bool)`
+`func (o *PostReplacement) GetImageWidthOk() (*int32, bool)`
 
 GetImageWidthOk returns a tuple with the ImageWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageWidth
 
-`func (o *PostReplacement) SetImageWidth(v float32)`
+`func (o *PostReplacement) SetImageWidth(v int32)`
 
 SetImageWidth sets ImageWidth field to given value.
 

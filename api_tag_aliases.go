@@ -25,7 +25,7 @@ type TagAliasesAPIService service
 type TagAliasesAPIApproveTagAliasRequest struct {
 	ctx        context.Context
 	ApiService *TagAliasesAPIService
-	id         float32
+	id         int32
 }
 
 func (r TagAliasesAPIApproveTagAliasRequest) Execute() (*http.Response, error) {
@@ -41,7 +41,7 @@ You must be Admin+.
 	@param id The ID of the tag alias.
 	@return TagAliasesAPIApproveTagAliasRequest
 */
-func (a *TagAliasesAPIService) ApproveTagAlias(ctx context.Context, id float32) TagAliasesAPIApproveTagAliasRequest {
+func (a *TagAliasesAPIService) ApproveTagAlias(ctx context.Context, id int32) TagAliasesAPIApproveTagAliasRequest {
 	return TagAliasesAPIApproveTagAliasRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -288,7 +288,7 @@ func (a *TagAliasesAPIService) CreateTagAliasExecute(r TagAliasesAPICreateTagAli
 type TagAliasesAPIEditTagAliasRequest struct {
 	ctx                    context.Context
 	ApiService             *TagAliasesAPIService
-	id                     float32
+	id                     int32
 	tagAliasAntecedentName *string
 	tagAliasConsequentName *string
 	tagAliasForumTopicId   *string
@@ -322,7 +322,7 @@ You must be Admin+.
 	@param id The ID of the tag alias.
 	@return TagAliasesAPIEditTagAliasRequest
 */
-func (a *TagAliasesAPIService) EditTagAlias(ctx context.Context, id float32) TagAliasesAPIEditTagAliasRequest {
+func (a *TagAliasesAPIService) EditTagAlias(ctx context.Context, id int32) TagAliasesAPIEditTagAliasRequest {
 	return TagAliasesAPIEditTagAliasRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -439,7 +439,7 @@ func (a *TagAliasesAPIService) EditTagAliasExecute(r TagAliasesAPIEditTagAliasRe
 type TagAliasesAPIGetTagAliasRequest struct {
 	ctx        context.Context
 	ApiService *TagAliasesAPIService
-	id         float32
+	id         int32
 }
 
 func (r TagAliasesAPIGetTagAliasRequest) Execute() (*TagAlias, *http.Response, error) {
@@ -453,7 +453,7 @@ GetTagAlias Get Tag Alias
 	@param id The ID of the tag alias.
 	@return TagAliasesAPIGetTagAliasRequest
 */
-func (a *TagAliasesAPIService) GetTagAlias(ctx context.Context, id float32) TagAliasesAPIGetTagAliasRequest {
+func (a *TagAliasesAPIService) GetTagAlias(ctx context.Context, id int32) TagAliasesAPIGetTagAliasRequest {
 	return TagAliasesAPIGetTagAliasRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -551,7 +551,7 @@ func (a *TagAliasesAPIService) GetTagAliasExecute(r TagAliasesAPIGetTagAliasRequ
 type TagAliasesAPIRejectTagAliasRequest struct {
 	ctx        context.Context
 	ApiService *TagAliasesAPIService
-	id         float32
+	id         int32
 }
 
 func (r TagAliasesAPIRejectTagAliasRequest) Execute() (*http.Response, error) {
@@ -567,7 +567,7 @@ You must be the creator of the request (if pending), or Admin+.
 	@param id The ID of the tag alias.
 	@return TagAliasesAPIRejectTagAliasRequest
 */
-func (a *TagAliasesAPIService) RejectTagAlias(ctx context.Context, id float32) TagAliasesAPIRejectTagAliasRequest {
+func (a *TagAliasesAPIService) RejectTagAlias(ctx context.Context, id int32) TagAliasesAPIRejectTagAliasRequest {
 	return TagAliasesAPIRejectTagAliasRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -674,9 +674,9 @@ type TagAliasesAPISearchTagAliasesRequest struct {
 	searchStatus                *TagRequestStatuses
 	searchAntecedentTagCategory *TagCategories
 	searchConsequentTagCategory *TagCategories
-	searchCreatorId             *float32
+	searchCreatorId             *int32
 	searchCreatorName           *string
-	searchApproverId            *float32
+	searchApproverId            *int32
 	searchApproverName          *string
 }
 
@@ -733,7 +733,7 @@ func (r TagAliasesAPISearchTagAliasesRequest) SearchConsequentTagCategory(search
 	return r
 }
 
-func (r TagAliasesAPISearchTagAliasesRequest) SearchCreatorId(searchCreatorId float32) TagAliasesAPISearchTagAliasesRequest {
+func (r TagAliasesAPISearchTagAliasesRequest) SearchCreatorId(searchCreatorId int32) TagAliasesAPISearchTagAliasesRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -743,7 +743,7 @@ func (r TagAliasesAPISearchTagAliasesRequest) SearchCreatorName(searchCreatorNam
 	return r
 }
 
-func (r TagAliasesAPISearchTagAliasesRequest) SearchApproverId(searchApproverId float32) TagAliasesAPISearchTagAliasesRequest {
+func (r TagAliasesAPISearchTagAliasesRequest) SearchApproverId(searchApproverId int32) TagAliasesAPISearchTagAliasesRequest {
 	r.searchApproverId = &searchApproverId
 	return r
 }

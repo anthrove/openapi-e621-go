@@ -25,7 +25,7 @@ type DMailsAPIService service
 type DMailsAPIDeleteDMailRequest struct {
 	ctx        context.Context
 	ApiService *DMailsAPIService
-	id         float32
+	id         int32
 }
 
 func (r DMailsAPIDeleteDMailRequest) Execute() (*http.Response, error) {
@@ -41,7 +41,7 @@ Deleting simply hides your copy of the dmail.
 	@param id The ID of the dmail.
 	@return DMailsAPIDeleteDMailRequest
 */
-func (a *DMailsAPIService) DeleteDMail(ctx context.Context, id float32) DMailsAPIDeleteDMailRequest {
+func (a *DMailsAPIService) DeleteDMail(ctx context.Context, id int32) DMailsAPIDeleteDMailRequest {
 	return DMailsAPIDeleteDMailRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -138,7 +138,7 @@ func (a *DMailsAPIService) DeleteDMailExecute(r DMailsAPIDeleteDMailRequest) (*h
 type DMailsAPIGetDMailRequest struct {
 	ctx        context.Context
 	ApiService *DMailsAPIService
-	id         float32
+	id         int32
 }
 
 func (r DMailsAPIGetDMailRequest) Execute() (*DMail, *http.Response, error) {
@@ -154,7 +154,7 @@ Fetching a dmail will not mark it as read.
 	@param id The ID of the dmail.
 	@return DMailsAPIGetDMailRequest
 */
-func (a *DMailsAPIService) GetDMail(ctx context.Context, id float32) DMailsAPIGetDMailRequest {
+func (a *DMailsAPIService) GetDMail(ctx context.Context, id int32) DMailsAPIGetDMailRequest {
 	return DMailsAPIGetDMailRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -370,7 +370,7 @@ func (a *DMailsAPIService) MarkAllDMailsAsUnreadExecute(r DMailsAPIMarkAllDMails
 type DMailsAPIMarkDMailAsReadRequest struct {
 	ctx        context.Context
 	ApiService *DMailsAPIService
-	id         float32
+	id         int32
 }
 
 func (r DMailsAPIMarkDMailAsReadRequest) Execute() (*http.Response, error) {
@@ -384,7 +384,7 @@ MarkDMailAsRead Mark DMail As Read
 	@param id The ID of the dmail.
 	@return DMailsAPIMarkDMailAsReadRequest
 */
-func (a *DMailsAPIService) MarkDMailAsRead(ctx context.Context, id float32) DMailsAPIMarkDMailAsReadRequest {
+func (a *DMailsAPIService) MarkDMailAsRead(ctx context.Context, id int32) DMailsAPIMarkDMailAsReadRequest {
 	return DMailsAPIMarkDMailAsReadRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -481,7 +481,7 @@ func (a *DMailsAPIService) MarkDMailAsReadExecute(r DMailsAPIMarkDMailAsReadRequ
 type DMailsAPIMarkDMailAsUnreadRequest struct {
 	ctx        context.Context
 	ApiService *DMailsAPIService
-	id         float32
+	id         int32
 }
 
 func (r DMailsAPIMarkDMailAsUnreadRequest) Execute() (*http.Response, error) {
@@ -495,7 +495,7 @@ MarkDMailAsUnread Mark DMail As Unread
 	@param id The ID of the dmail.
 	@return DMailsAPIMarkDMailAsUnreadRequest
 */
-func (a *DMailsAPIService) MarkDMailAsUnread(ctx context.Context, id float32) DMailsAPIMarkDMailAsUnreadRequest {
+func (a *DMailsAPIService) MarkDMailAsUnread(ctx context.Context, id int32) DMailsAPIMarkDMailAsUnreadRequest {
 	return DMailsAPIMarkDMailAsUnreadRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -598,9 +598,9 @@ type DMailsAPISearchDMailsRequest struct {
 	searchTitleMatches   *string
 	searchMessageMatches *string
 	searchToName         *string
-	searchToId           *float32
+	searchToId           *int32
 	searchFromName       *string
-	searchFromId         *float32
+	searchFromId         *int32
 	searchIsRead         *bool
 	searchIsDeleted      *bool
 	searchRead           *bool
@@ -639,7 +639,7 @@ func (r DMailsAPISearchDMailsRequest) SearchToName(searchToName string) DMailsAP
 	return r
 }
 
-func (r DMailsAPISearchDMailsRequest) SearchToId(searchToId float32) DMailsAPISearchDMailsRequest {
+func (r DMailsAPISearchDMailsRequest) SearchToId(searchToId int32) DMailsAPISearchDMailsRequest {
 	r.searchToId = &searchToId
 	return r
 }
@@ -649,7 +649,7 @@ func (r DMailsAPISearchDMailsRequest) SearchFromName(searchFromName string) DMai
 	return r
 }
 
-func (r DMailsAPISearchDMailsRequest) SearchFromId(searchFromId float32) DMailsAPISearchDMailsRequest {
+func (r DMailsAPISearchDMailsRequest) SearchFromId(searchFromId int32) DMailsAPISearchDMailsRequest {
 	r.searchFromId = &searchFromId
 	return r
 }
@@ -803,12 +803,12 @@ func (a *DMailsAPIService) SearchDMailsExecute(r DMailsAPISearchDMailsRequest) (
 type DMailsAPIUpdateUserDmailFilterRequest struct {
 	ctx              context.Context
 	ApiService       *DMailsAPIService
-	dmailId          *float32
+	dmailId          *int32
 	dmailFilterWords *string
 }
 
 // Due to the odd way this route works, a dmail is REQUIRED to edit your dmail filter. You must be the owner of the dmail.
-func (r DMailsAPIUpdateUserDmailFilterRequest) DmailId(dmailId float32) DMailsAPIUpdateUserDmailFilterRequest {
+func (r DMailsAPIUpdateUserDmailFilterRequest) DmailId(dmailId int32) DMailsAPIUpdateUserDmailFilterRequest {
 	r.dmailId = &dmailId
 	return r
 }

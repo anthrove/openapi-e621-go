@@ -29,13 +29,13 @@ type UploadsAPISearchUploadsRequest struct {
 	page                *int32
 	searchId            *int32
 	searchOrder         *string
-	searchUploaderId    *float32
+	searchUploaderId    *int32
 	searchUploaderName  *string
 	searchSource        *string
 	searchSourceMatches *string
 	searchRating        *Ratings
-	searchParentId      *float32
-	searchPostId        *float32
+	searchParentId      *int32
+	searchPostId        *int32
 	searchHasPost       *bool
 	searchPostTagsMatch *string
 	searchStatus        *string
@@ -66,7 +66,7 @@ func (r UploadsAPISearchUploadsRequest) SearchOrder(searchOrder string) UploadsA
 	return r
 }
 
-func (r UploadsAPISearchUploadsRequest) SearchUploaderId(searchUploaderId float32) UploadsAPISearchUploadsRequest {
+func (r UploadsAPISearchUploadsRequest) SearchUploaderId(searchUploaderId int32) UploadsAPISearchUploadsRequest {
 	r.searchUploaderId = &searchUploaderId
 	return r
 }
@@ -91,12 +91,12 @@ func (r UploadsAPISearchUploadsRequest) SearchRating(searchRating Ratings) Uploa
 	return r
 }
 
-func (r UploadsAPISearchUploadsRequest) SearchParentId(searchParentId float32) UploadsAPISearchUploadsRequest {
+func (r UploadsAPISearchUploadsRequest) SearchParentId(searchParentId int32) UploadsAPISearchUploadsRequest {
 	r.searchParentId = &searchParentId
 	return r
 }
 
-func (r UploadsAPISearchUploadsRequest) SearchPostId(searchPostId float32) UploadsAPISearchUploadsRequest {
+func (r UploadsAPISearchUploadsRequest) SearchPostId(searchPostId int32) UploadsAPISearchUploadsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
@@ -277,7 +277,7 @@ type UploadsAPIUploadPostRequest struct {
 	uploadFile         *os.File
 	uploadDirectUrl    *string
 	uploadSource       *string
-	uploadParentId     *float32
+	uploadParentId     *int32
 	uploadDescription  *string
 	uploadAsPending    *bool
 	uploadLockedRating *bool
@@ -311,7 +311,7 @@ func (r UploadsAPIUploadPostRequest) UploadSource(uploadSource string) UploadsAP
 	return r
 }
 
-func (r UploadsAPIUploadPostRequest) UploadParentId(uploadParentId float32) UploadsAPIUploadPostRequest {
+func (r UploadsAPIUploadPostRequest) UploadParentId(uploadParentId int32) UploadsAPIUploadPostRequest {
 	r.uploadParentId = &uploadParentId
 	return r
 }

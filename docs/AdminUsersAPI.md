@@ -30,9 +30,9 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the user.
+	id := int32(56) // int32 | The ID of the user.
 	userVerified := true // bool | Must have the bd staff user flag to use. (optional)
-	userLevel := float32(8.14) // float32 | Must have the bd staff user flag to promote to Admin+. (optional)
+	userLevel := int32(56) // int32 | Must have the bd staff user flag to promote to Admin+. (optional)
 	userName := "userName_example" // string |  (optional)
 	userProfileAbout := "userProfileAbout_example" // string |  (optional)
 	userProfileArtinfo := "userProfileArtinfo_example" // string |  (optional)
@@ -60,7 +60,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the user. | 
+**id** | **int32** | The ID of the user. | 
 
 ### Other Parameters
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
  **userVerified** | **bool** | Must have the bd staff user flag to use. | 
- **userLevel** | **float32** | Must have the bd staff user flag to promote to Admin+. | 
+ **userLevel** | **int32** | Must have the bd staff user flag to promote to Admin+. | 
  **userName** | **string** |  | 
  **userProfileAbout** | **string** |  | 
  **userProfileArtinfo** | **string** |  | 
@@ -122,7 +122,7 @@ import (
 )
 
 func main() {
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 9999. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 9999. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -147,7 +147,7 @@ Other parameters are passed through a pointer to a apiGetAltListRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **float32** | The page number of results to get. Between 1 and 9999. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 9999. | 
 
 ### Return type
 

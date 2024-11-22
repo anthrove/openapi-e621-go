@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **CreatorId** | **int32** |  | 
-**X** | **float32** |  | 
-**Y** | **float32** |  | 
-**Width** | **float32** |  | 
-**Height** | **float32** |  | 
+**X** | **int32** |  | 
+**Y** | **int32** |  | 
+**Width** | **int32** |  | 
+**Height** | **int32** |  | 
 **Version** | **float32** |  | 
 **IsActive** | **bool** |  | 
 **PostId** | **int32** |  | 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewCreateNote201Response
 
-`func NewCreateNote201Response(id int32, createdAt time.Time, updatedAt time.Time, creatorId int32, x float32, y float32, width float32, height float32, version float32, isActive bool, postId int32, body string, creatorName string, htmlId string, ) *CreateNote201Response`
+`func NewCreateNote201Response(id int32, createdAt time.Time, updatedAt time.Time, creatorId int32, x int32, y int32, width int32, height int32, version float32, isActive bool, postId int32, body string, creatorName string, htmlId string, ) *CreateNote201Response`
 
 NewCreateNote201Response instantiates a new CreateNote201Response object
 This constructor will assign default values to properties that have it defined,
@@ -120,80 +120,80 @@ SetCreatorId sets CreatorId field to given value.
 
 ### GetX
 
-`func (o *CreateNote201Response) GetX() float32`
+`func (o *CreateNote201Response) GetX() int32`
 
 GetX returns the X field if non-nil, zero value otherwise.
 
 ### GetXOk
 
-`func (o *CreateNote201Response) GetXOk() (*float32, bool)`
+`func (o *CreateNote201Response) GetXOk() (*int32, bool)`
 
 GetXOk returns a tuple with the X field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetX
 
-`func (o *CreateNote201Response) SetX(v float32)`
+`func (o *CreateNote201Response) SetX(v int32)`
 
 SetX sets X field to given value.
 
 
 ### GetY
 
-`func (o *CreateNote201Response) GetY() float32`
+`func (o *CreateNote201Response) GetY() int32`
 
 GetY returns the Y field if non-nil, zero value otherwise.
 
 ### GetYOk
 
-`func (o *CreateNote201Response) GetYOk() (*float32, bool)`
+`func (o *CreateNote201Response) GetYOk() (*int32, bool)`
 
 GetYOk returns a tuple with the Y field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetY
 
-`func (o *CreateNote201Response) SetY(v float32)`
+`func (o *CreateNote201Response) SetY(v int32)`
 
 SetY sets Y field to given value.
 
 
 ### GetWidth
 
-`func (o *CreateNote201Response) GetWidth() float32`
+`func (o *CreateNote201Response) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *CreateNote201Response) GetWidthOk() (*float32, bool)`
+`func (o *CreateNote201Response) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *CreateNote201Response) SetWidth(v float32)`
+`func (o *CreateNote201Response) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 
 
 ### GetHeight
 
-`func (o *CreateNote201Response) GetHeight() float32`
+`func (o *CreateNote201Response) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *CreateNote201Response) GetHeightOk() (*float32, bool)`
+`func (o *CreateNote201Response) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *CreateNote201Response) SetHeight(v float32)`
+`func (o *CreateNote201Response) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 

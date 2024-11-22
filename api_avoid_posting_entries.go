@@ -28,12 +28,12 @@ type AvoidPostingEntriesAPICreateAvoidPostingRequest struct {
 	avoidPostingDetails                          *string
 	avoidPostingStaffNotes                       *string
 	avoidPostingIsActive                         *bool
-	avoidPostingArtistAttributesId               *float32
+	avoidPostingArtistAttributesId               *int32
 	avoidPostingArtistAttributesName             *string
 	avoidPostingArtistAttributesOtherNamesString *string
 	avoidPostingArtistAttributesOtherNames       *[]string
 	avoidPostingArtistAttributesGroupName        *string
-	avoidPostingArtistAttributesLinkedUserId     *float32
+	avoidPostingArtistAttributesLinkedUserId     *int32
 }
 
 func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingDetails(avoidPostingDetails string) AvoidPostingEntriesAPICreateAvoidPostingRequest {
@@ -51,7 +51,7 @@ func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingIsActive(av
 	return r
 }
 
-func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingArtistAttributesId(avoidPostingArtistAttributesId float32) AvoidPostingEntriesAPICreateAvoidPostingRequest {
+func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingArtistAttributesId(avoidPostingArtistAttributesId int32) AvoidPostingEntriesAPICreateAvoidPostingRequest {
 	r.avoidPostingArtistAttributesId = &avoidPostingArtistAttributesId
 	return r
 }
@@ -77,7 +77,7 @@ func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingArtistAttri
 	return r
 }
 
-func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingArtistAttributesLinkedUserId(avoidPostingArtistAttributesLinkedUserId float32) AvoidPostingEntriesAPICreateAvoidPostingRequest {
+func (r AvoidPostingEntriesAPICreateAvoidPostingRequest) AvoidPostingArtistAttributesLinkedUserId(avoidPostingArtistAttributesLinkedUserId int32) AvoidPostingEntriesAPICreateAvoidPostingRequest {
 	r.avoidPostingArtistAttributesLinkedUserId = &avoidPostingArtistAttributesLinkedUserId
 	return r
 }
@@ -462,7 +462,7 @@ type AvoidPostingEntriesAPIEditAvoidPostingRequest struct {
 	avoidPostingArtistAttributesOtherNamesString *string
 	avoidPostingArtistAttributesOtherNames       *[]string
 	avoidPostingArtistAttributesGroupName        *string
-	avoidPostingArtistAttributesLinkedUserId     *float32
+	avoidPostingArtistAttributesLinkedUserId     *int32
 }
 
 func (r AvoidPostingEntriesAPIEditAvoidPostingRequest) AvoidPostingDetails(avoidPostingDetails string) AvoidPostingEntriesAPIEditAvoidPostingRequest {
@@ -500,7 +500,7 @@ func (r AvoidPostingEntriesAPIEditAvoidPostingRequest) AvoidPostingArtistAttribu
 	return r
 }
 
-func (r AvoidPostingEntriesAPIEditAvoidPostingRequest) AvoidPostingArtistAttributesLinkedUserId(avoidPostingArtistAttributesLinkedUserId float32) AvoidPostingEntriesAPIEditAvoidPostingRequest {
+func (r AvoidPostingEntriesAPIEditAvoidPostingRequest) AvoidPostingArtistAttributesLinkedUserId(avoidPostingArtistAttributesLinkedUserId int32) AvoidPostingEntriesAPIEditAvoidPostingRequest {
 	r.avoidPostingArtistAttributesLinkedUserId = &avoidPostingArtistAttributesLinkedUserId
 	return r
 }

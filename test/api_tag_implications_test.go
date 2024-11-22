@@ -26,7 +26,7 @@ func Test_e621_TagImplicationsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagImplicationsAPI.ApproveTagImplication(context.Background(), id).Execute()
 
@@ -50,7 +50,7 @@ func Test_e621_TagImplicationsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagImplicationsAPI.EditTagImplication(context.Background(), id).Execute()
 
@@ -63,7 +63,7 @@ func Test_e621_TagImplicationsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TagImplicationsAPI.GetTagImplication(context.Background(), id).Execute()
 
@@ -77,7 +77,7 @@ func Test_e621_TagImplicationsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagImplicationsAPI.RejectTagImplication(context.Background(), id).Execute()
 

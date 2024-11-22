@@ -21,8 +21,8 @@ var _ MappedNullable = &CreateCommentVote200Response{}
 
 // CreateCommentVote200Response struct for CreateCommentVote200Response
 type CreateCommentVote200Response struct {
-	Score    float32 `json:"score"`
-	OurScore float32 `json:"our_score"`
+	Score    int32 `json:"score"`
+	OurScore int32 `json:"our_score"`
 }
 
 type _CreateCommentVote200Response CreateCommentVote200Response
@@ -31,7 +31,7 @@ type _CreateCommentVote200Response CreateCommentVote200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCreateCommentVote200Response(score float32, ourScore float32) *CreateCommentVote200Response {
+func NewCreateCommentVote200Response(score int32, ourScore int32) *CreateCommentVote200Response {
 	this := CreateCommentVote200Response{}
 	this.Score = score
 	this.OurScore = ourScore
@@ -47,9 +47,9 @@ func NewCreateCommentVote200ResponseWithDefaults() *CreateCommentVote200Response
 }
 
 // GetScore returns the Score field value
-func (o *CreateCommentVote200Response) GetScore() float32 {
+func (o *CreateCommentVote200Response) GetScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -58,7 +58,7 @@ func (o *CreateCommentVote200Response) GetScore() float32 {
 
 // GetScoreOk returns a tuple with the Score field value
 // and a boolean to check if the value has been set.
-func (o *CreateCommentVote200Response) GetScoreOk() (*float32, bool) {
+func (o *CreateCommentVote200Response) GetScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -66,14 +66,14 @@ func (o *CreateCommentVote200Response) GetScoreOk() (*float32, bool) {
 }
 
 // SetScore sets field value
-func (o *CreateCommentVote200Response) SetScore(v float32) {
+func (o *CreateCommentVote200Response) SetScore(v int32) {
 	o.Score = v
 }
 
 // GetOurScore returns the OurScore field value
-func (o *CreateCommentVote200Response) GetOurScore() float32 {
+func (o *CreateCommentVote200Response) GetOurScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -82,7 +82,7 @@ func (o *CreateCommentVote200Response) GetOurScore() float32 {
 
 // GetOurScoreOk returns a tuple with the OurScore field value
 // and a boolean to check if the value has been set.
-func (o *CreateCommentVote200Response) GetOurScoreOk() (*float32, bool) {
+func (o *CreateCommentVote200Response) GetOurScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *CreateCommentVote200Response) GetOurScoreOk() (*float32, bool) {
 }
 
 // SetOurScore sets field value
-func (o *CreateCommentVote200Response) SetOurScore(v float32) {
+func (o *CreateCommentVote200Response) SetOurScore(v int32) {
 	o.OurScore = v
 }
 

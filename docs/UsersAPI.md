@@ -37,7 +37,7 @@ func main() {
 	userFavoriteTags := "userFavoriteTags_example" // string |  (optional)
 	userBlacklistedTags := "userBlacklistedTags_example" // string |  (optional)
 	userTimeZone := "userTimeZone_example" // string | https://en.wikipedia.org/wiki/List_of_tz_database_time_zones (optional)
-	userPerPage := float32(8.14) // float32 |  (optional)
+	userPerPage := int32(56) // int32 |  (optional)
 	userCustomStyle := "userCustomStyle_example" // string |  (optional)
 	userDescriptionCollapsedInitially := true // bool |  (optional)
 	userHideComments := true // bool |  (optional)
@@ -53,7 +53,7 @@ func main() {
 	userDisableCroppedThumbnails := true // bool |  (optional)
 	userEnableSafeMode := true // bool |  (optional)
 	userDisableResponsiveMode := true // bool |  (optional)
-	userDmailFilterAttributesId := float32(8.14) // float32 |  (optional)
+	userDmailFilterAttributesId := int32(56) // int32 |  (optional)
 	userDmailFilterAttributesWords := "userDmailFilterAttributesWords_example" // string |  (optional)
 	userProfileAbout := "userProfileAbout_example" // string |  (optional)
 	userProfileArtinfo := "userProfileArtinfo_example" // string |  (optional)
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
  **userFavoriteTags** | **string** |  | 
  **userBlacklistedTags** | **string** |  | 
  **userTimeZone** | **string** | https://en.wikipedia.org/wiki/List_of_tz_database_time_zones | 
- **userPerPage** | **float32** |  | 
+ **userPerPage** | **int32** |  | 
  **userCustomStyle** | **string** |  | 
  **userDescriptionCollapsedInitially** | **bool** |  | 
  **userHideComments** | **bool** |  | 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
  **userDisableCroppedThumbnails** | **bool** |  | 
  **userEnableSafeMode** | **bool** |  | 
  **userDisableResponsiveMode** | **bool** |  | 
- **userDmailFilterAttributesId** | **float32** |  | 
+ **userDmailFilterAttributesId** | **int32** |  | 
  **userDmailFilterAttributesWords** | **string** |  | 
  **userProfileAbout** | **string** |  | 
  **userProfileArtinfo** | **string** |  | 
@@ -344,10 +344,10 @@ func main() {
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchNameMatches := "searchNameMatches_example" // string |  (optional)
 	searchAboutMe := "searchAboutMe_example" // string |  (optional)
-	searchAvatarId := float32(8.14) // float32 |  (optional)
-	searchLevel := float32(8.14) // float32 |  (optional)
-	searchMinLevel := float32(8.14) // float32 |  (optional)
-	searchMaxLevel := float32(8.14) // float32 |  (optional)
+	searchAvatarId := int32(56) // int32 |  (optional)
+	searchLevel := int32(56) // int32 |  (optional)
+	searchMinLevel := int32(56) // int32 |  (optional)
+	searchMaxLevel := int32(56) // int32 |  (optional)
 	searchCanUploadFree := true // bool |  (optional)
 	searchCanApprovePosts := true // bool |  (optional)
 	searchEmailMatches := "searchEmailMatches_example" // string | You must be Admin+. (optional)
@@ -382,10 +382,10 @@ Name | Type | Description  | Notes
  **searchOrder** | **string** |  | 
  **searchNameMatches** | **string** |  | 
  **searchAboutMe** | **string** |  | 
- **searchAvatarId** | **float32** |  | 
- **searchLevel** | **float32** |  | 
- **searchMinLevel** | **float32** |  | 
- **searchMaxLevel** | **float32** |  | 
+ **searchAvatarId** | **int32** |  | 
+ **searchLevel** | **int32** |  | 
+ **searchMinLevel** | **int32** |  | 
+ **searchMaxLevel** | **int32** |  | 
  **searchCanUploadFree** | **bool** |  | 
  **searchCanApprovePosts** | **bool** |  | 
  **searchEmailMatches** | **string** | You must be Admin+. | 

@@ -31,8 +31,8 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 	searchAction := openapiclient.PostEventActions("deleted") // PostEventActions |  (optional)
 
@@ -63,8 +63,8 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchPostId** | **float32** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
  **searchAction** | [**PostEventActions**](PostEventActions.md) |  | 
 

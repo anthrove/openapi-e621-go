@@ -21,7 +21,7 @@ var _ MappedNullable = &MarkAllForumTopicsAsReadRequest{}
 
 // MarkAllForumTopicsAsReadRequest struct for MarkAllForumTopicsAsReadRequest
 type MarkAllForumTopicsAsReadRequest struct {
-	CategoryId float32 `json:"category_id"`
+	CategoryId int32 `json:"category_id"`
 }
 
 type _MarkAllForumTopicsAsReadRequest MarkAllForumTopicsAsReadRequest
@@ -30,7 +30,7 @@ type _MarkAllForumTopicsAsReadRequest MarkAllForumTopicsAsReadRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewMarkAllForumTopicsAsReadRequest(categoryId float32) *MarkAllForumTopicsAsReadRequest {
+func NewMarkAllForumTopicsAsReadRequest(categoryId int32) *MarkAllForumTopicsAsReadRequest {
 	this := MarkAllForumTopicsAsReadRequest{}
 	this.CategoryId = categoryId
 	return &this
@@ -45,9 +45,9 @@ func NewMarkAllForumTopicsAsReadRequestWithDefaults() *MarkAllForumTopicsAsReadR
 }
 
 // GetCategoryId returns the CategoryId field value
-func (o *MarkAllForumTopicsAsReadRequest) GetCategoryId() float32 {
+func (o *MarkAllForumTopicsAsReadRequest) GetCategoryId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -56,7 +56,7 @@ func (o *MarkAllForumTopicsAsReadRequest) GetCategoryId() float32 {
 
 // GetCategoryIdOk returns a tuple with the CategoryId field value
 // and a boolean to check if the value has been set.
-func (o *MarkAllForumTopicsAsReadRequest) GetCategoryIdOk() (*float32, bool) {
+func (o *MarkAllForumTopicsAsReadRequest) GetCategoryIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -64,7 +64,7 @@ func (o *MarkAllForumTopicsAsReadRequest) GetCategoryIdOk() (*float32, bool) {
 }
 
 // SetCategoryId sets field value
-func (o *MarkAllForumTopicsAsReadRequest) SetCategoryId(v float32) {
+func (o *MarkAllForumTopicsAsReadRequest) SetCategoryId(v int32) {
 	o.CategoryId = v
 }
 

@@ -26,7 +26,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TakedownsAPI.AddPostsToTakedownByIds(context.Background(), id).Execute()
 
@@ -40,7 +40,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TakedownsAPI.AddPostsToTakedownByTags(context.Background(), id).Execute()
 
@@ -54,7 +54,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TakedownsAPI.CountMatchingPosts(context.Background(), id).Execute()
 
@@ -80,7 +80,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TakedownsAPI.DeleteTakedown(context.Background(), id).Execute()
 
@@ -93,7 +93,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TakedownsAPI.EditTakedown(context.Background(), id).Execute()
 
@@ -106,7 +106,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TakedownsAPI.GetTakedown(context.Background(), id).Execute()
 
@@ -120,7 +120,7 @@ func Test_e621_TakedownsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TakedownsAPI.RemovePostsFromTakedownByIds(context.Background(), id).Execute()
 

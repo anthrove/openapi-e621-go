@@ -24,10 +24,10 @@ type PostApprovalsAPIService service
 type PostApprovalsAPIApprovePostRequest struct {
 	ctx        context.Context
 	ApiService *PostApprovalsAPIService
-	postId     *float32
+	postId     *int32
 }
 
-func (r PostApprovalsAPIApprovePostRequest) PostId(postId float32) PostApprovalsAPIApprovePostRequest {
+func (r PostApprovalsAPIApprovePostRequest) PostId(postId int32) PostApprovalsAPIApprovePostRequest {
 	r.postId = &postId
 	return r
 }
@@ -148,9 +148,9 @@ type PostApprovalsAPISearchPostApprovalsRequest struct {
 	searchId            *int32
 	searchOrder         *string
 	searchPostTagsMatch *string
-	searchUserId        *float32
+	searchUserId        *int32
 	searchUserName      *string
-	searchPostId        *float32
+	searchPostId        *int32
 }
 
 // The maximum number of results to return. Between 0 and 320.
@@ -181,7 +181,7 @@ func (r PostApprovalsAPISearchPostApprovalsRequest) SearchPostTagsMatch(searchPo
 	return r
 }
 
-func (r PostApprovalsAPISearchPostApprovalsRequest) SearchUserId(searchUserId float32) PostApprovalsAPISearchPostApprovalsRequest {
+func (r PostApprovalsAPISearchPostApprovalsRequest) SearchUserId(searchUserId int32) PostApprovalsAPISearchPostApprovalsRequest {
 	r.searchUserId = &searchUserId
 	return r
 }
@@ -191,7 +191,7 @@ func (r PostApprovalsAPISearchPostApprovalsRequest) SearchUserName(searchUserNam
 	return r
 }
 
-func (r PostApprovalsAPISearchPostApprovalsRequest) SearchPostId(searchPostId float32) PostApprovalsAPISearchPostApprovalsRequest {
+func (r PostApprovalsAPISearchPostApprovalsRequest) SearchPostId(searchPostId int32) PostApprovalsAPISearchPostApprovalsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
@@ -318,10 +318,10 @@ func (a *PostApprovalsAPIService) SearchPostApprovalsExecute(r PostApprovalsAPIS
 type PostApprovalsAPIUnapprovePostRequest struct {
 	ctx        context.Context
 	ApiService *PostApprovalsAPIService
-	postId     *float32
+	postId     *int32
 }
 
-func (r PostApprovalsAPIUnapprovePostRequest) PostId(postId float32) PostApprovalsAPIUnapprovePostRequest {
+func (r PostApprovalsAPIUnapprovePostRequest) PostId(postId int32) PostApprovalsAPIUnapprovePostRequest {
 	r.postId = &postId
 	return r
 }

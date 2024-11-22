@@ -35,7 +35,7 @@ import (
 
 func main() {
 	commentBody := "commentBody_example" // string | 
-	commentPostId := float32(8.14) // float32 | 
+	commentPostId := int32(56) // int32 | 
 	commentDoNotBumpPost := true // bool |  (optional)
 	commentIsSticky := true // bool | Only usable for Janitor+ (optional)
 	commentIsHidden := true // bool | Only usable for Moderator+ (optional)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateCommentRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **commentBody** | **string** |  | 
- **commentPostId** | **float32** |  | 
+ **commentPostId** | **int32** |  | 
  **commentDoNotBumpPost** | **bool** |  | 
  **commentIsSticky** | **bool** | Only usable for Janitor+ | 
  **commentIsHidden** | **bool** | Only usable for Moderator+ | 
@@ -108,7 +108,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the comment.
+	id := int32(56) // int32 | The ID of the comment.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -126,7 +126,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the comment. | 
+**id** | **int32** | The ID of the comment. | 
 
 ### Other Parameters
 
@@ -176,7 +176,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the comment.
+	id := int32(56) // int32 | The ID of the comment.
 	commentBody := "commentBody_example" // string |  (optional)
 	commentIsSticky := true // bool | Only usable for Janitor+ (optional)
 	commentIsHidden := true // bool | Only usable for Moderator+ (optional)
@@ -197,7 +197,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the comment. | 
+**id** | **int32** | The ID of the comment. | 
 
 ### Other Parameters
 
@@ -250,7 +250,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the comment.
+	id := int32(56) // int32 | The ID of the comment.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -270,7 +270,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the comment. | 
+**id** | **int32** | The ID of the comment. | 
 
 ### Other Parameters
 
@@ -320,7 +320,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the comment.
+	id := int32(56) // int32 | The ID of the comment.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -340,7 +340,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the comment. | 
+**id** | **int32** | The ID of the comment. | 
 
 ### Other Parameters
 
@@ -390,7 +390,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the comment.
+	id := int32(56) // int32 | The ID of the comment.
 	markBlipRequest := *openapiclient.NewMarkBlipRequest("RecordType_example") // MarkBlipRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -411,7 +411,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the comment. | 
+**id** | **int32** | The ID of the comment. | 
 
 ### Other Parameters
 
@@ -469,12 +469,12 @@ func main() {
 	searchOrder := "searchOrder_example" // string |  (optional)
 	groupBy := "groupBy_example" // string |  (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 | Accepts a comma separated list. (optional)
+	searchPostId := "searchPostId_example" // string | Accepts a comma separated list. (optional)
 	searchPostTagsMatch := "searchPostTagsMatch_example" // string |  (optional)
 	searchPostNoteUpdaterName := "searchPostNoteUpdaterName_example" // string |  (optional)
-	searchPostNoteUpdaterId := float32(8.14) // float32 |  (optional)
+	searchPostNoteUpdaterId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchIsSticky := true // bool |  (optional)
 	searchIsHidden := true // bool | Only usable by Moderator+ (optional)
 	searchDoNotBumpPost := true // bool |  (optional)
@@ -509,12 +509,12 @@ Name | Type | Description  | Notes
  **searchOrder** | **string** |  | 
  **groupBy** | **string** |  | 
  **searchBodyMatches** | **string** |  | 
- **searchPostId** | **float32** | Accepts a comma separated list. | 
+ **searchPostId** | **string** | Accepts a comma separated list. | 
  **searchPostTagsMatch** | **string** |  | 
  **searchPostNoteUpdaterName** | **string** |  | 
- **searchPostNoteUpdaterId** | **float32** |  | 
+ **searchPostNoteUpdaterId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchIsSticky** | **bool** |  | 
  **searchIsHidden** | **bool** | Only usable by Moderator+ | 
  **searchDoNotBumpPost** | **bool** |  | 
@@ -558,7 +558,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the comment.
+	id := int32(56) // int32 | The ID of the comment.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -578,7 +578,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the comment. | 
+**id** | **int32** | The ID of the comment. | 
 
 ### Other Parameters
 

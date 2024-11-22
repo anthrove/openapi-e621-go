@@ -35,7 +35,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the dmail.
+	id := int32(56) // int32 | The ID of the dmail.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -53,7 +53,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the dmail. | 
+**id** | **int32** | The ID of the dmail. | 
 
 ### Other Parameters
 
@@ -103,7 +103,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the dmail.
+	id := int32(56) // int32 | The ID of the dmail.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -123,7 +123,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the dmail. | 
+**id** | **int32** | The ID of the dmail. | 
 
 ### Other Parameters
 
@@ -228,7 +228,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the dmail.
+	id := int32(56) // int32 | The ID of the dmail.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -246,7 +246,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the dmail. | 
+**id** | **int32** | The ID of the dmail. | 
 
 ### Other Parameters
 
@@ -294,7 +294,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the dmail.
+	id := int32(56) // int32 | The ID of the dmail.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -312,7 +312,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the dmail. | 
+**id** | **int32** | The ID of the dmail. | 
 
 ### Other Parameters
 
@@ -368,9 +368,9 @@ func main() {
 	searchTitleMatches := "searchTitleMatches_example" // string |  (optional)
 	searchMessageMatches := "searchMessageMatches_example" // string |  (optional)
 	searchToName := "searchToName_example" // string |  (optional)
-	searchToId := float32(8.14) // float32 |  (optional)
+	searchToId := int32(56) // int32 |  (optional)
 	searchFromName := "searchFromName_example" // string |  (optional)
-	searchFromId := float32(8.14) // float32 |  (optional)
+	searchFromId := int32(56) // int32 |  (optional)
 	searchIsRead := true // bool |  (optional)
 	searchIsDeleted := true // bool |  (optional)
 	searchRead := true // bool |  (optional)
@@ -404,9 +404,9 @@ Name | Type | Description  | Notes
  **searchTitleMatches** | **string** |  | 
  **searchMessageMatches** | **string** |  | 
  **searchToName** | **string** |  | 
- **searchToId** | **float32** |  | 
+ **searchToId** | **int32** |  | 
  **searchFromName** | **string** |  | 
- **searchFromId** | **float32** |  | 
+ **searchFromId** | **int32** |  | 
  **searchIsRead** | **bool** |  | 
  **searchIsDeleted** | **bool** |  | 
  **searchRead** | **bool** |  | 
@@ -448,7 +448,7 @@ import (
 )
 
 func main() {
-	dmailId := float32(8.14) // float32 | Due to the odd way this route works, a dmail is REQUIRED to edit your dmail filter. You must be the owner of the dmail.
+	dmailId := int32(56) // int32 | Due to the odd way this route works, a dmail is REQUIRED to edit your dmail filter. You must be the owner of the dmail.
 	dmailFilterWords := "dmailFilterWords_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -472,7 +472,7 @@ Other parameters are passed through a pointer to a apiUpdateUserDmailFilterReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmailId** | **float32** | Due to the odd way this route works, a dmail is REQUIRED to edit your dmail filter. You must be the owner of the dmail. | 
+ **dmailId** | **int32** | Due to the odd way this route works, a dmail is REQUIRED to edit your dmail filter. You must be the owner of the dmail. | 
  **dmailFilterWords** | **string** |  | 
 
 ### Return type

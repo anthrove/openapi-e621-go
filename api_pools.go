@@ -25,18 +25,18 @@ type PoolsAPIService service
 type PoolsAPIAddPostToPoolRequest struct {
 	ctx        context.Context
 	ApiService *PoolsAPIService
-	postId     *float32
-	poolId     *float32
+	postId     *int32
+	poolId     *int32
 	poolName   *string
 }
 
-func (r PoolsAPIAddPostToPoolRequest) PostId(postId float32) PoolsAPIAddPostToPoolRequest {
+func (r PoolsAPIAddPostToPoolRequest) PostId(postId int32) PoolsAPIAddPostToPoolRequest {
 	r.postId = &postId
 	return r
 }
 
 // Mutually exclusive with pool_name.
-func (r PoolsAPIAddPostToPoolRequest) PoolId(poolId float32) PoolsAPIAddPostToPoolRequest {
+func (r PoolsAPIAddPostToPoolRequest) PoolId(poolId int32) PoolsAPIAddPostToPoolRequest {
 	r.poolId = &poolId
 	return r
 }
@@ -148,7 +148,7 @@ type PoolsAPICreatePoolRequest struct {
 	poolCategory      *PoolCategories
 	ipoolSActive      *bool
 	poolPostIdsString *string
-	poolPostIds       *[]float32
+	poolPostIds       *[]int32
 }
 
 func (r PoolsAPICreatePoolRequest) PoolName(poolName string) PoolsAPICreatePoolRequest {
@@ -178,7 +178,7 @@ func (r PoolsAPICreatePoolRequest) PoolPostIdsString(poolPostIdsString string) P
 }
 
 // Array of post IDs. Mutually exclusive with post_ids_string.
-func (r PoolsAPICreatePoolRequest) PoolPostIds(poolPostIds []float32) PoolsAPICreatePoolRequest {
+func (r PoolsAPICreatePoolRequest) PoolPostIds(poolPostIds []int32) PoolsAPICreatePoolRequest {
 	r.poolPostIds = &poolPostIds
 	return r
 }
@@ -319,7 +319,7 @@ func (a *PoolsAPIService) CreatePoolExecute(r PoolsAPICreatePoolRequest) (*Pool,
 type PoolsAPIDeletePoolRequest struct {
 	ctx        context.Context
 	ApiService *PoolsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PoolsAPIDeletePoolRequest) Execute() (*http.Response, error) {
@@ -335,7 +335,7 @@ You must be Janitor+.
 	@param id The ID of the pool.
 	@return PoolsAPIDeletePoolRequest
 */
-func (a *PoolsAPIService) DeletePool(ctx context.Context, id float32) PoolsAPIDeletePoolRequest {
+func (a *PoolsAPIService) DeletePool(ctx context.Context, id int32) PoolsAPIDeletePoolRequest {
 	return PoolsAPIDeletePoolRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -432,13 +432,13 @@ func (a *PoolsAPIService) DeletePoolExecute(r PoolsAPIDeletePoolRequest) (*http.
 type PoolsAPIEditPoolRequest struct {
 	ctx               context.Context
 	ApiService        *PoolsAPIService
-	id                float32
+	id                int32
 	poolName          *string
 	poolDescription   *string
 	poolIsActive      *bool
 	poolCategory      *PoolCategories
 	poolPostIdsString *string
-	poolPostIds       *[]float32
+	poolPostIds       *[]int32
 }
 
 func (r PoolsAPIEditPoolRequest) PoolName(poolName string) PoolsAPIEditPoolRequest {
@@ -469,7 +469,7 @@ func (r PoolsAPIEditPoolRequest) PoolPostIdsString(poolPostIdsString string) Poo
 }
 
 // Array of post IDs. Mutually exclusive with post_ids_string.
-func (r PoolsAPIEditPoolRequest) PoolPostIds(poolPostIds []float32) PoolsAPIEditPoolRequest {
+func (r PoolsAPIEditPoolRequest) PoolPostIds(poolPostIds []int32) PoolsAPIEditPoolRequest {
 	r.poolPostIds = &poolPostIds
 	return r
 }
@@ -485,7 +485,7 @@ EditPool Edit Pool
 	@param id The ID of the pool.
 	@return PoolsAPIEditPoolRequest
 */
-func (a *PoolsAPIService) EditPool(ctx context.Context, id float32) PoolsAPIEditPoolRequest {
+func (a *PoolsAPIService) EditPool(ctx context.Context, id int32) PoolsAPIEditPoolRequest {
 	return PoolsAPIEditPoolRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -611,7 +611,7 @@ func (a *PoolsAPIService) EditPoolExecute(r PoolsAPIEditPoolRequest) (*http.Resp
 type PoolsAPIGetPoolRequest struct {
 	ctx        context.Context
 	ApiService *PoolsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PoolsAPIGetPoolRequest) Execute() (*Pool, *http.Response, error) {
@@ -625,7 +625,7 @@ GetPool Get Pool
 	@param id The ID of the pool.
 	@return PoolsAPIGetPoolRequest
 */
-func (a *PoolsAPIService) GetPool(ctx context.Context, id float32) PoolsAPIGetPoolRequest {
+func (a *PoolsAPIService) GetPool(ctx context.Context, id int32) PoolsAPIGetPoolRequest {
 	return PoolsAPIGetPoolRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -723,16 +723,16 @@ func (a *PoolsAPIService) GetPoolExecute(r PoolsAPIGetPoolRequest) (*Pool, *http
 type PoolsAPIRemovePostFromPoolRequest struct {
 	ctx        context.Context
 	ApiService *PoolsAPIService
-	poolId     *float32
-	postId     *float32
+	poolId     *int32
+	postId     *int32
 }
 
-func (r PoolsAPIRemovePostFromPoolRequest) PoolId(poolId float32) PoolsAPIRemovePostFromPoolRequest {
+func (r PoolsAPIRemovePostFromPoolRequest) PoolId(poolId int32) PoolsAPIRemovePostFromPoolRequest {
 	r.poolId = &poolId
 	return r
 }
 
-func (r PoolsAPIRemovePostFromPoolRequest) PostId(postId float32) PoolsAPIRemovePostFromPoolRequest {
+func (r PoolsAPIRemovePostFromPoolRequest) PostId(postId int32) PoolsAPIRemovePostFromPoolRequest {
 	r.postId = &postId
 	return r
 }
@@ -829,12 +829,12 @@ func (a *PoolsAPIService) RemovePostFromPoolExecute(r PoolsAPIRemovePostFromPool
 type PoolsAPIRevertPoolRequest struct {
 	ctx        context.Context
 	ApiService *PoolsAPIService
-	id         float32
-	versionId  *float32
+	id         int32
+	versionId  *int32
 }
 
 // The version ID to revert to.
-func (r PoolsAPIRevertPoolRequest) VersionId(versionId float32) PoolsAPIRevertPoolRequest {
+func (r PoolsAPIRevertPoolRequest) VersionId(versionId int32) PoolsAPIRevertPoolRequest {
 	r.versionId = &versionId
 	return r
 }
@@ -850,7 +850,7 @@ RevertPool Revert Pool
 	@param id The ID of the pool.
 	@return PoolsAPIRevertPoolRequest
 */
-func (a *PoolsAPIService) RevertPool(ctx context.Context, id float32) PoolsAPIRevertPoolRequest {
+func (a *PoolsAPIService) RevertPool(ctx context.Context, id int32) PoolsAPIRevertPoolRequest {
 	return PoolsAPIRevertPoolRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -968,7 +968,7 @@ type PoolsAPISearchPoolsRequest struct {
 	searchOrder              *string
 	searchNameMatches        *string
 	searchDescriptionMatches *string
-	searchCreatorId          *float32
+	searchCreatorId          *int32
 	searchCreatorName        *string
 	searchCategory           *PoolCategories
 	searchIsActive           *bool
@@ -1007,7 +1007,7 @@ func (r PoolsAPISearchPoolsRequest) SearchDescriptionMatches(searchDescriptionMa
 	return r
 }
 
-func (r PoolsAPISearchPoolsRequest) SearchCreatorId(searchCreatorId float32) PoolsAPISearchPoolsRequest {
+func (r PoolsAPISearchPoolsRequest) SearchCreatorId(searchCreatorId int32) PoolsAPISearchPoolsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }

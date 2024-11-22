@@ -165,7 +165,7 @@ type FavoritesAPIListFavoritesRequest struct {
 	ApiService *FavoritesAPIService
 	limit      *int32
 	page       *int32
-	userId     *float32
+	userId     *int32
 }
 
 // The maximum number of results to return. Between 0 and 320.
@@ -181,7 +181,7 @@ func (r FavoritesAPIListFavoritesRequest) Page(page int32) FavoritesAPIListFavor
 }
 
 // You must be the user or Moderator+ if the user has their favorites hidden.
-func (r FavoritesAPIListFavoritesRequest) UserId(userId float32) FavoritesAPIListFavoritesRequest {
+func (r FavoritesAPIListFavoritesRequest) UserId(userId int32) FavoritesAPIListFavoritesRequest {
 	r.userId = &userId
 	return r
 }
@@ -312,7 +312,7 @@ func (a *FavoritesAPIService) ListFavoritesExecute(r FavoritesAPIListFavoritesRe
 type FavoritesAPIRemoveFavoriteRequest struct {
 	ctx        context.Context
 	ApiService *FavoritesAPIService
-	id         float32
+	id         int32
 }
 
 func (r FavoritesAPIRemoveFavoriteRequest) Execute() (*http.Response, error) {
@@ -326,7 +326,7 @@ RemoveFavorite Remove Favorite
 	@param id
 	@return FavoritesAPIRemoveFavoriteRequest
 */
-func (a *FavoritesAPIService) RemoveFavorite(ctx context.Context, id float32) FavoritesAPIRemoveFavoriteRequest {
+func (a *FavoritesAPIService) RemoveFavorite(ctx context.Context, id int32) FavoritesAPIRemoveFavoriteRequest {
 	return FavoritesAPIRemoveFavoriteRequest{
 		ApiService: a,
 		ctx:        ctx,

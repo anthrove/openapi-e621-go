@@ -22,13 +22,13 @@ var _ MappedNullable = &WikiPageVersion{}
 
 // WikiPageVersion struct for WikiPageVersion
 type WikiPageVersion struct {
-	Id         float32        `json:"id"`
+	Id         int32          `json:"id"`
 	CreatedAt  time.Time      `json:"created_at"`
 	UpdatedAt  time.Time      `json:"updated_at"`
 	Title      string         `json:"title"`
 	Body       string         `json:"body"`
-	UpdaterId  float32        `json:"updater_id"`
-	WikiPageId float32        `json:"wiki_page_id"`
+	UpdaterId  int32          `json:"updater_id"`
+	WikiPageId int32          `json:"wiki_page_id"`
 	IsLocked   bool           `json:"is_locked"`
 	OtherNames []string       `json:"other_names"`
 	IsDeleted  bool           `json:"is_deleted"`
@@ -42,7 +42,7 @@ type _WikiPageVersion WikiPageVersion
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWikiPageVersion(id float32, createdAt time.Time, updatedAt time.Time, title string, body string, updaterId float32, wikiPageId float32, isLocked bool, otherNames []string, isDeleted bool, reason NullableString, parent NullableString) *WikiPageVersion {
+func NewWikiPageVersion(id int32, createdAt time.Time, updatedAt time.Time, title string, body string, updaterId int32, wikiPageId int32, isLocked bool, otherNames []string, isDeleted bool, reason NullableString, parent NullableString) *WikiPageVersion {
 	this := WikiPageVersion{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -68,9 +68,9 @@ func NewWikiPageVersionWithDefaults() *WikiPageVersion {
 }
 
 // GetId returns the Id field value
-func (o *WikiPageVersion) GetId() float32 {
+func (o *WikiPageVersion) GetId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -79,7 +79,7 @@ func (o *WikiPageVersion) GetId() float32 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *WikiPageVersion) GetIdOk() (*float32, bool) {
+func (o *WikiPageVersion) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *WikiPageVersion) GetIdOk() (*float32, bool) {
 }
 
 // SetId sets field value
-func (o *WikiPageVersion) SetId(v float32) {
+func (o *WikiPageVersion) SetId(v int32) {
 	o.Id = v
 }
 
@@ -188,9 +188,9 @@ func (o *WikiPageVersion) SetBody(v string) {
 }
 
 // GetUpdaterId returns the UpdaterId field value
-func (o *WikiPageVersion) GetUpdaterId() float32 {
+func (o *WikiPageVersion) GetUpdaterId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -199,7 +199,7 @@ func (o *WikiPageVersion) GetUpdaterId() float32 {
 
 // GetUpdaterIdOk returns a tuple with the UpdaterId field value
 // and a boolean to check if the value has been set.
-func (o *WikiPageVersion) GetUpdaterIdOk() (*float32, bool) {
+func (o *WikiPageVersion) GetUpdaterIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -207,14 +207,14 @@ func (o *WikiPageVersion) GetUpdaterIdOk() (*float32, bool) {
 }
 
 // SetUpdaterId sets field value
-func (o *WikiPageVersion) SetUpdaterId(v float32) {
+func (o *WikiPageVersion) SetUpdaterId(v int32) {
 	o.UpdaterId = v
 }
 
 // GetWikiPageId returns the WikiPageId field value
-func (o *WikiPageVersion) GetWikiPageId() float32 {
+func (o *WikiPageVersion) GetWikiPageId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -223,7 +223,7 @@ func (o *WikiPageVersion) GetWikiPageId() float32 {
 
 // GetWikiPageIdOk returns a tuple with the WikiPageId field value
 // and a boolean to check if the value has been set.
-func (o *WikiPageVersion) GetWikiPageIdOk() (*float32, bool) {
+func (o *WikiPageVersion) GetWikiPageIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -231,7 +231,7 @@ func (o *WikiPageVersion) GetWikiPageIdOk() (*float32, bool) {
 }
 
 // SetWikiPageId sets field value
-func (o *WikiPageVersion) SetWikiPageId(v float32) {
+func (o *WikiPageVersion) SetWikiPageId(v int32) {
 	o.WikiPageId = v
 }
 

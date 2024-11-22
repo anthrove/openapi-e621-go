@@ -27,7 +27,7 @@ type Comment struct {
 	PostId    int32     `json:"post_id"`
 	CreatorId int32     `json:"creator_id"`
 	Body      string    `json:"body"`
-	Score     float32   `json:"score"`
+	Score     int32     `json:"score"`
 	UpdatedAt time.Time `json:"updated_at"`
 	UpdaterId int32     `json:"updater_id"`
 	// Deprecated
@@ -46,7 +46,7 @@ type _Comment Comment
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score float32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string) *Comment {
+func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score int32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string) *Comment {
 	this := Comment{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -195,9 +195,9 @@ func (o *Comment) SetBody(v string) {
 }
 
 // GetScore returns the Score field value
-func (o *Comment) GetScore() float32 {
+func (o *Comment) GetScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -206,7 +206,7 @@ func (o *Comment) GetScore() float32 {
 
 // GetScoreOk returns a tuple with the Score field value
 // and a boolean to check if the value has been set.
-func (o *Comment) GetScoreOk() (*float32, bool) {
+func (o *Comment) GetScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -214,7 +214,7 @@ func (o *Comment) GetScoreOk() (*float32, bool) {
 }
 
 // SetScore sets field value
-func (o *Comment) SetScore(v float32) {
+func (o *Comment) SetScore(v int32) {
 	o.Score = v
 }
 

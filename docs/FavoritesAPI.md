@@ -29,7 +29,7 @@ import (
 )
 
 func main() {
-	addFavoriteRequest := *openapiclient.NewAddFavoriteRequest() // AddFavoriteRequest |  (optional)
+	addFavoriteRequest := *openapiclient.NewAddFavoriteRequest(int32(123)) // AddFavoriteRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -95,7 +95,7 @@ import (
 func main() {
 	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
-	userId := float32(8.14) // float32 | You must be the user or Moderator+ if the user has their favorites hidden. (optional)
+	userId := int32(56) // int32 | You must be the user or Moderator+ if the user has their favorites hidden. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
- **userId** | **float32** | You must be the user or Moderator+ if the user has their favorites hidden. | 
+ **userId** | **int32** | You must be the user or Moderator+ if the user has their favorites hidden. | 
 
 ### Return type
 
@@ -161,7 +161,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | 
+	id := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -179,7 +179,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** |  | 
+**id** | **int32** |  | 
 
 ### Other Parameters
 

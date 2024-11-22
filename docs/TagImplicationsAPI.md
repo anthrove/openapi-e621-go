@@ -34,7 +34,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the tag implication.
+	id := int32(56) // int32 | The ID of the tag implication.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -52,7 +52,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the tag implication. | 
+**id** | **int32** | The ID of the tag implication. | 
 
 ### Other Parameters
 
@@ -172,7 +172,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the tag implication.
+	id := int32(56) // int32 | The ID of the tag implication.
 	tagImplicationAntecedentName := "tagImplicationAntecedentName_example" // string |  (optional)
 	tagImplicationConsequentName := "tagImplicationConsequentName_example" // string |  (optional)
 	tagImplicationForumTopicId := "tagImplicationForumTopicId_example" // string |  (optional)
@@ -193,7 +193,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the tag implication. | 
+**id** | **int32** | The ID of the tag implication. | 
 
 ### Other Parameters
 
@@ -244,7 +244,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the tag implication.
+	id := int32(56) // int32 | The ID of the tag implication.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -264,7 +264,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the tag implication. | 
+**id** | **int32** | The ID of the tag implication. | 
 
 ### Other Parameters
 
@@ -314,7 +314,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the tag implication.
+	id := int32(56) // int32 | The ID of the tag implication.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -332,7 +332,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the tag implication. | 
+**id** | **int32** | The ID of the tag implication. | 
 
 ### Other Parameters
 
@@ -392,9 +392,9 @@ func main() {
 	searchStatus := openapiclient.TagRequestStatuses("active") // TagRequestStatuses |  (optional)
 	searchAntecedentTagCategory := openapiclient.TagCategories(0) // TagCategories |  (optional)
 	searchConsequentTagCategory := openapiclient.TagCategories(0) // TagCategories |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
-	searchApproverId := float32(8.14) // float32 |  (optional)
+	searchApproverId := int32(56) // int32 |  (optional)
 	searchApproverName := "searchApproverName_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -430,9 +430,9 @@ Name | Type | Description  | Notes
  **searchStatus** | [**TagRequestStatuses**](TagRequestStatuses.md) |  | 
  **searchAntecedentTagCategory** | [**TagCategories**](TagCategories.md) |  | 
  **searchConsequentTagCategory** | [**TagCategories**](TagCategories.md) |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
- **searchApproverId** | **float32** |  | 
+ **searchApproverId** | **int32** |  | 
  **searchApproverName** | **string** |  | 
 
 ### Return type

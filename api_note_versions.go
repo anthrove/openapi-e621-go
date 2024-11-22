@@ -29,10 +29,10 @@ type NoteVersionsAPISearchNoteVersionsRequest struct {
 	searchId          *int32
 	searchIpAddr      *string
 	searchOrder       *string
-	searchUpdaterId   *float32
+	searchUpdaterId   *int32
 	searchUpdaterName *string
-	searchPostId      *float32
-	searchNoteId      *float32
+	searchPostId      *int32
+	searchNoteId      *int32
 	searchIsActive    *bool
 	searchBodyMatches *string
 }
@@ -67,7 +67,7 @@ func (r NoteVersionsAPISearchNoteVersionsRequest) SearchOrder(searchOrder string
 	return r
 }
 
-func (r NoteVersionsAPISearchNoteVersionsRequest) SearchUpdaterId(searchUpdaterId float32) NoteVersionsAPISearchNoteVersionsRequest {
+func (r NoteVersionsAPISearchNoteVersionsRequest) SearchUpdaterId(searchUpdaterId int32) NoteVersionsAPISearchNoteVersionsRequest {
 	r.searchUpdaterId = &searchUpdaterId
 	return r
 }
@@ -77,12 +77,12 @@ func (r NoteVersionsAPISearchNoteVersionsRequest) SearchUpdaterName(searchUpdate
 	return r
 }
 
-func (r NoteVersionsAPISearchNoteVersionsRequest) SearchPostId(searchPostId float32) NoteVersionsAPISearchNoteVersionsRequest {
+func (r NoteVersionsAPISearchNoteVersionsRequest) SearchPostId(searchPostId int32) NoteVersionsAPISearchNoteVersionsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
 
-func (r NoteVersionsAPISearchNoteVersionsRequest) SearchNoteId(searchNoteId float32) NoteVersionsAPISearchNoteVersionsRequest {
+func (r NoteVersionsAPISearchNoteVersionsRequest) SearchNoteId(searchNoteId int32) NoteVersionsAPISearchNoteVersionsRequest {
 	r.searchNoteId = &searchNoteId
 	return r
 }

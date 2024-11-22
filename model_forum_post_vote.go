@@ -25,7 +25,7 @@ type ForumPostVote struct {
 	Id          int32     `json:"id"`
 	ForumPostId int32     `json:"forum_post_id"`
 	CreatorId   int32     `json:"creator_id"`
-	Score       float32   `json:"score"`
+	Score       int32     `json:"score"`
 	CreatedAt   time.Time `json:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at"`
 	CreatorName string    `json:"creator_name"`
@@ -37,7 +37,7 @@ type _ForumPostVote ForumPostVote
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewForumPostVote(id int32, forumPostId int32, creatorId int32, score float32, createdAt time.Time, updatedAt time.Time, creatorName string) *ForumPostVote {
+func NewForumPostVote(id int32, forumPostId int32, creatorId int32, score int32, createdAt time.Time, updatedAt time.Time, creatorName string) *ForumPostVote {
 	this := ForumPostVote{}
 	this.Id = id
 	this.ForumPostId = forumPostId
@@ -130,9 +130,9 @@ func (o *ForumPostVote) SetCreatorId(v int32) {
 }
 
 // GetScore returns the Score field value
-func (o *ForumPostVote) GetScore() float32 {
+func (o *ForumPostVote) GetScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -141,7 +141,7 @@ func (o *ForumPostVote) GetScore() float32 {
 
 // GetScoreOk returns a tuple with the Score field value
 // and a boolean to check if the value has been set.
-func (o *ForumPostVote) GetScoreOk() (*float32, bool) {
+func (o *ForumPostVote) GetScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -149,7 +149,7 @@ func (o *ForumPostVote) GetScoreOk() (*float32, bool) {
 }
 
 // SetScore sets field value
-func (o *ForumPostVote) SetScore(v float32) {
+func (o *ForumPostVote) SetScore(v int32) {
 	o.Score = v
 }
 

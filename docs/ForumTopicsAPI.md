@@ -37,8 +37,8 @@ import (
 
 func main() {
 	forumTopicTitle := "forumTopicTitle_example" // string | 
-	forumTopicCategoryId := float32(8.14) // float32 | 
-	forumTopicOriginalPostAttributesId := float32(8.14) // float32 | Forum post ID. Mutually exclusive with body, one must be provided. (optional)
+	forumTopicCategoryId := int32(56) // int32 | 
+	forumTopicOriginalPostAttributesId := int32(56) // int32 | Forum post ID. Mutually exclusive with body, one must be provided. (optional)
 	forumTopicOriginalPostAttributesBody := "forumTopicOriginalPostAttributesBody_example" // string | First forum post body. Mutually exclusive with id, one must be provided. (optional)
 	forumTopicIsSticky := true // bool | You must be Moderator+. (optional)
 	forumTopicIsLocked := true // bool | You must be Moderator+. (optional)
@@ -67,8 +67,8 @@ Other parameters are passed through a pointer to a apiCreateForumTopicRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **forumTopicTitle** | **string** |  | 
- **forumTopicCategoryId** | **float32** |  | 
- **forumTopicOriginalPostAttributesId** | **float32** | Forum post ID. Mutually exclusive with body, one must be provided. | 
+ **forumTopicCategoryId** | **int32** |  | 
+ **forumTopicOriginalPostAttributesId** | **int32** | Forum post ID. Mutually exclusive with body, one must be provided. | 
  **forumTopicOriginalPostAttributesBody** | **string** | First forum post body. Mutually exclusive with id, one must be provided. | 
  **forumTopicIsSticky** | **bool** | You must be Moderator+. | 
  **forumTopicIsLocked** | **bool** | You must be Moderator+. | 
@@ -112,7 +112,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -130,7 +130,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 
@@ -178,10 +178,10 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 	forumTopicTitle := "forumTopicTitle_example" // string |  (optional)
-	forumTopicCategoryId := float32(8.14) // float32 |  (optional)
-	forumTopicOriginalPostAttributesId := float32(8.14) // float32 | Forum post ID. Silently ignored (optional)
+	forumTopicCategoryId := int32(56) // int32 |  (optional)
+	forumTopicOriginalPostAttributesId := int32(56) // int32 | Forum post ID. Silently ignored (optional)
 	forumTopicOriginalPostAttributesBody := "forumTopicOriginalPostAttributesBody_example" // string | First forum post body. (optional)
 	forumTopicIsSticky := true // bool | You must be Moderator+. (optional)
 	forumTopicIsLocked := true // bool | You must be Moderator+. (optional)
@@ -202,7 +202,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 
@@ -213,8 +213,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
  **forumTopicTitle** | **string** |  | 
- **forumTopicCategoryId** | **float32** |  | 
- **forumTopicOriginalPostAttributesId** | **float32** | Forum post ID. Silently ignored | 
+ **forumTopicCategoryId** | **int32** |  | 
+ **forumTopicOriginalPostAttributesId** | **int32** | Forum post ID. Silently ignored | 
  **forumTopicOriginalPostAttributesBody** | **string** | First forum post body. | 
  **forumTopicIsSticky** | **bool** | You must be Moderator+. | 
  **forumTopicIsLocked** | **bool** | You must be Moderator+. | 
@@ -258,7 +258,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -278,7 +278,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 
@@ -328,7 +328,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -348,7 +348,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 
@@ -396,7 +396,7 @@ import (
 )
 
 func main() {
-	markAllForumTopicsAsReadRequest := *openapiclient.NewMarkAllForumTopicsAsReadRequest(float32(123)) // MarkAllForumTopicsAsReadRequest |  (optional)
+	markAllForumTopicsAsReadRequest := *openapiclient.NewMarkAllForumTopicsAsReadRequest(int32(123)) // MarkAllForumTopicsAsReadRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -464,7 +464,7 @@ func main() {
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchTitle := "searchTitle_example" // string |  (optional)
 	searchTitleMatches := "searchTitleMatches_example" // string |  (optional)
-	searchCategoryId := float32(8.14) // float32 |  (optional)
+	searchCategoryId := int32(56) // int32 |  (optional)
 	searchIsSticky := true // bool |  (optional)
 	searchIsLocked := true // bool |  (optional)
 	searchIsHidden := true // bool |  (optional)
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
  **searchOrder** | **string** |  | 
  **searchTitle** | **string** |  | 
  **searchTitleMatches** | **string** |  | 
- **searchCategoryId** | **float32** |  | 
+ **searchCategoryId** | **int32** |  | 
  **searchIsSticky** | **bool** |  | 
  **searchIsLocked** | **bool** |  | 
  **searchIsHidden** | **bool** |  | 
@@ -540,7 +540,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -560,7 +560,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 
@@ -610,7 +610,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -630,7 +630,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 
@@ -678,7 +678,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum topic.
+	id := int32(56) // int32 | The ID of the forum topic.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -698,7 +698,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum topic. | 
+**id** | **int32** | The ID of the forum topic. | 
 
 ### Other Parameters
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AddedCount** | **float32** |  | 
-**AddedPostIds** | **[]float32** |  | 
+**AddedCount** | **int32** |  | 
+**AddedPostIds** | **[]int32** |  | 
 
 ## Methods
 
 ### NewAddPostsToTakedownByIds200Response
 
-`func NewAddPostsToTakedownByIds200Response(addedCount float32, addedPostIds []float32, ) *AddPostsToTakedownByIds200Response`
+`func NewAddPostsToTakedownByIds200Response(addedCount int32, addedPostIds []int32, ) *AddPostsToTakedownByIds200Response`
 
 NewAddPostsToTakedownByIds200Response instantiates a new AddPostsToTakedownByIds200Response object
 This constructor will assign default values to properties that have it defined,
@@ -28,40 +28,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAddedCount
 
-`func (o *AddPostsToTakedownByIds200Response) GetAddedCount() float32`
+`func (o *AddPostsToTakedownByIds200Response) GetAddedCount() int32`
 
 GetAddedCount returns the AddedCount field if non-nil, zero value otherwise.
 
 ### GetAddedCountOk
 
-`func (o *AddPostsToTakedownByIds200Response) GetAddedCountOk() (*float32, bool)`
+`func (o *AddPostsToTakedownByIds200Response) GetAddedCountOk() (*int32, bool)`
 
 GetAddedCountOk returns a tuple with the AddedCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAddedCount
 
-`func (o *AddPostsToTakedownByIds200Response) SetAddedCount(v float32)`
+`func (o *AddPostsToTakedownByIds200Response) SetAddedCount(v int32)`
 
 SetAddedCount sets AddedCount field to given value.
 
 
 ### GetAddedPostIds
 
-`func (o *AddPostsToTakedownByIds200Response) GetAddedPostIds() []float32`
+`func (o *AddPostsToTakedownByIds200Response) GetAddedPostIds() []int32`
 
 GetAddedPostIds returns the AddedPostIds field if non-nil, zero value otherwise.
 
 ### GetAddedPostIdsOk
 
-`func (o *AddPostsToTakedownByIds200Response) GetAddedPostIdsOk() (*[]float32, bool)`
+`func (o *AddPostsToTakedownByIds200Response) GetAddedPostIdsOk() (*[]int32, bool)`
 
 GetAddedPostIdsOk returns a tuple with the AddedPostIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAddedPostIds
 
-`func (o *AddPostsToTakedownByIds200Response) SetAddedPostIds(v []float32)`
+`func (o *AddPostsToTakedownByIds200Response) SetAddedPostIds(v []int32)`
 
 SetAddedPostIds sets AddedPostIds field to given value.
 

@@ -239,7 +239,7 @@ func (a *MascotsAPIService) CreateMascotExecute(r MascotsAPICreateMascotRequest)
 type MascotsAPIDeleteMascotRequest struct {
 	ctx        context.Context
 	ApiService *MascotsAPIService
-	id         float32
+	id         int32
 }
 
 func (r MascotsAPIDeleteMascotRequest) Execute() (*http.Response, error) {
@@ -255,7 +255,7 @@ You must be Admin+.
 	@param id The ID of the mascot.
 	@return MascotsAPIDeleteMascotRequest
 */
-func (a *MascotsAPIService) DeleteMascot(ctx context.Context, id float32) MascotsAPIDeleteMascotRequest {
+func (a *MascotsAPIService) DeleteMascot(ctx context.Context, id int32) MascotsAPIDeleteMascotRequest {
 	return MascotsAPIDeleteMascotRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -352,7 +352,7 @@ func (a *MascotsAPIService) DeleteMascotExecute(r MascotsAPIDeleteMascotRequest)
 type MascotsAPIEditMascotRequest struct {
 	ctx                     context.Context
 	ApiService              *MascotsAPIService
-	id                      float32
+	id                      int32
 	mascotMascotFile        *os.File
 	mascotDisplayName       *string
 	mascotBackgroundColor   *string
@@ -417,7 +417,7 @@ You must be Admin+.
 	@param id The ID of the mascot.
 	@return MascotsAPIEditMascotRequest
 */
-func (a *MascotsAPIService) EditMascot(ctx context.Context, id float32) MascotsAPIEditMascotRequest {
+func (a *MascotsAPIService) EditMascot(ctx context.Context, id int32) MascotsAPIEditMascotRequest {
 	return MascotsAPIEditMascotRequest{
 		ApiService: a,
 		ctx:        ctx,

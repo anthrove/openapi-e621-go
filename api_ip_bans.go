@@ -166,7 +166,7 @@ func (a *IPBansAPIService) CreateIPBanExecute(r IPBansAPICreateIPBanRequest) (*I
 type IPBansAPIDeleteIPBanRequest struct {
 	ctx        context.Context
 	ApiService *IPBansAPIService
-	id         float32
+	id         int32
 }
 
 func (r IPBansAPIDeleteIPBanRequest) Execute() (*http.Response, error) {
@@ -182,7 +182,7 @@ You must be Admin+.
 	@param id The ID of the ip ban.
 	@return IPBansAPIDeleteIPBanRequest
 */
-func (a *IPBansAPIService) DeleteIPBan(ctx context.Context, id float32) IPBansAPIDeleteIPBanRequest {
+func (a *IPBansAPIService) DeleteIPBan(ctx context.Context, id int32) IPBansAPIDeleteIPBanRequest {
 	return IPBansAPIDeleteIPBanRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -284,7 +284,7 @@ type IPBansAPIListIPBansRequest struct {
 	searchId         *int32
 	searchIpAddr     *string
 	searchOrder      *string
-	searchBannerId   *float32
+	searchBannerId   *int32
 	searchBannerName *string
 	searchReason     *string
 }
@@ -318,7 +318,7 @@ func (r IPBansAPIListIPBansRequest) SearchOrder(searchOrder string) IPBansAPILis
 	return r
 }
 
-func (r IPBansAPIListIPBansRequest) SearchBannerId(searchBannerId float32) IPBansAPIListIPBansRequest {
+func (r IPBansAPIListIPBansRequest) SearchBannerId(searchBannerId int32) IPBansAPIListIPBansRequest {
 	r.searchBannerId = &searchBannerId
 	return r
 }

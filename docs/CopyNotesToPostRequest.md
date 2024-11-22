@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OtherPostId** | **float32** |  | 
+**OtherPostId** | **int32** |  | 
 
 ## Methods
 
 ### NewCopyNotesToPostRequest
 
-`func NewCopyNotesToPostRequest(otherPostId float32, ) *CopyNotesToPostRequest`
+`func NewCopyNotesToPostRequest(otherPostId int32, ) *CopyNotesToPostRequest`
 
 NewCopyNotesToPostRequest instantiates a new CopyNotesToPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetOtherPostId
 
-`func (o *CopyNotesToPostRequest) GetOtherPostId() float32`
+`func (o *CopyNotesToPostRequest) GetOtherPostId() int32`
 
 GetOtherPostId returns the OtherPostId field if non-nil, zero value otherwise.
 
 ### GetOtherPostIdOk
 
-`func (o *CopyNotesToPostRequest) GetOtherPostIdOk() (*float32, bool)`
+`func (o *CopyNotesToPostRequest) GetOtherPostIdOk() (*int32, bool)`
 
 GetOtherPostIdOk returns a tuple with the OtherPostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOtherPostId
 
-`func (o *CopyNotesToPostRequest) SetOtherPostId(v float32)`
+`func (o *CopyNotesToPostRequest) SetOtherPostId(v int32)`
 
 SetOtherPostId sets OtherPostId field to given value.
 

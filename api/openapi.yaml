@@ -253,7 +253,7 @@ paths:
         name: version_id
         required: true
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "204":
@@ -887,7 +887,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -927,7 +927,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -948,7 +948,7 @@ paths:
         name: "search[response_to]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -997,7 +997,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -1020,7 +1020,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -1049,7 +1049,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -1086,7 +1086,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -1116,7 +1116,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -1145,7 +1145,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         $ref: '#/components/requestBodies/warning'
@@ -1192,7 +1192,7 @@ paths:
         name: "search[user_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1206,7 +1206,7 @@ paths:
         name: "search[approver_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1220,14 +1220,14 @@ paths:
         name: "search[forum_topic_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[forum_post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1299,7 +1299,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -1322,7 +1322,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -1346,7 +1346,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -1378,7 +1378,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -1436,7 +1436,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: string
         style: form
       - explode: true
         in: query
@@ -1457,7 +1457,7 @@ paths:
         name: "search[post_note_updater_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1471,7 +1471,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1540,7 +1540,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -1565,7 +1565,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -1592,7 +1592,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -1625,7 +1625,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -1655,7 +1655,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -1684,7 +1684,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         $ref: '#/components/requestBodies/warning'
@@ -1749,7 +1749,7 @@ paths:
           enum:
           - -1
           - 1
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1862,7 +1862,7 @@ paths:
         name: "search[to_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1876,7 +1876,7 @@ paths:
         name: "search[from_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -1920,7 +1920,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -1944,7 +1944,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -1970,7 +1970,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -1994,7 +1994,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -2123,7 +2123,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -2150,7 +2150,7 @@ paths:
         name: user_id
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -2200,7 +2200,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -2240,7 +2240,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -2254,7 +2254,7 @@ paths:
         name: "search[topic_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -2275,7 +2275,7 @@ paths:
         name: "search[topic_category_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -2328,7 +2328,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -2353,7 +2353,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -2380,7 +2380,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -2412,7 +2412,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -2441,7 +2441,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -2471,7 +2471,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         $ref: '#/components/requestBodies/warning'
@@ -2588,7 +2588,7 @@ paths:
         name: "search[category_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -2657,7 +2657,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -2682,7 +2682,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -2707,7 +2707,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -2739,7 +2739,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -2768,7 +2768,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -2796,7 +2796,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -2824,7 +2824,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -2911,7 +2911,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -2960,7 +2960,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -3006,7 +3006,7 @@ paths:
         name: "search[banner_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3069,7 +3069,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -3106,7 +3106,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3203,7 +3203,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -3227,7 +3227,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -3277,7 +3277,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3358,7 +3358,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -3382,7 +3382,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -3440,7 +3440,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3454,7 +3454,7 @@ paths:
         name: "search[post_note_updater_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3468,7 +3468,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3520,7 +3520,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -3543,7 +3543,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -3566,7 +3566,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -3597,7 +3597,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       - description: The version ID to revert to.
         explode: true
@@ -3605,7 +3605,7 @@ paths:
         name: version_id
         required: true
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "204":
@@ -3647,7 +3647,7 @@ paths:
         name: "search[updater_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3661,14 +3661,14 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[note_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3733,7 +3733,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3802,7 +3802,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -3825,7 +3825,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -3848,7 +3848,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -3879,7 +3879,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       - description: The version ID to revert to.
         explode: true
@@ -3887,7 +3887,7 @@ paths:
         name: version_id
         required: true
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "204":
@@ -3962,7 +3962,7 @@ paths:
         name: "search[updater_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -3976,7 +3976,7 @@ paths:
         name: "search[pool_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -4072,7 +4072,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -4096,7 +4096,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4132,7 +4132,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -4163,7 +4163,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4198,7 +4198,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4229,7 +4229,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       - description: The version ID to revert to.
         explode: true
@@ -4237,7 +4237,7 @@ paths:
         name: version_id
         required: true
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "204":
@@ -4263,7 +4263,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       - description: The direction to move in the sequence.
         explode: true
@@ -4303,7 +4303,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4376,7 +4376,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4412,14 +4412,14 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[maintainer_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -4465,7 +4465,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -4489,7 +4489,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -4515,7 +4515,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4548,7 +4548,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4585,7 +4585,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4622,7 +4622,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -4699,7 +4699,7 @@ paths:
         name: "search[user_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4713,7 +4713,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -4747,14 +4747,14 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4814,7 +4814,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4828,7 +4828,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4895,7 +4895,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -4944,7 +4944,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4958,7 +4958,7 @@ paths:
         name: "search[approver_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4972,7 +4972,7 @@ paths:
         name: "search[rejector_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -4993,7 +4993,7 @@ paths:
         name: "search[uploader_id_on_approve]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -5041,7 +5041,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -5066,7 +5066,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -5093,7 +5093,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -5125,7 +5125,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -5156,7 +5156,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -5188,7 +5188,7 @@ paths:
         schema:
           maximum: 750
           minimum: 1
-          type: number
+          type: integer
         style: form
       - $ref: '#/components/parameters/id'
       - explode: true
@@ -5203,21 +5203,21 @@ paths:
         name: "search[updater_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[start_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -5243,7 +5243,7 @@ paths:
         name: "search[parent_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -5390,7 +5390,7 @@ paths:
           enum:
           - -1
           - 1
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -5582,7 +5582,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -5614,7 +5614,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -5775,7 +5775,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -5789,7 +5789,7 @@ paths:
         name: "search[approver_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -5819,7 +5819,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -5842,7 +5842,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -5866,7 +5866,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -5898,7 +5898,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -6005,7 +6005,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -6019,7 +6019,7 @@ paths:
         name: "search[approver_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -6049,7 +6049,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -6072,7 +6072,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -6096,7 +6096,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6128,7 +6128,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -6239,7 +6239,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - description: Must be Moderator+ to use.
         explode: true
@@ -6271,7 +6271,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - description: Must be Moderator+ to use.
         explode: true
@@ -6341,7 +6341,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -6364,7 +6364,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -6388,7 +6388,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6420,7 +6420,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6454,7 +6454,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6488,7 +6488,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6522,7 +6522,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6564,7 +6564,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - description: You must be Moderator+.
         explode: true
@@ -6580,7 +6580,7 @@ paths:
         name: "search[claimant_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - description: You must be Moderator+.
         explode: true
@@ -6596,7 +6596,7 @@ paths:
         name: "search[accused_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -6649,7 +6649,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -6677,7 +6677,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -6708,7 +6708,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -6738,7 +6738,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -6780,7 +6780,7 @@ paths:
         name: "search[uploader_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -6815,14 +6815,14 @@ paths:
         name: "search[parent_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -6973,7 +6973,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -6996,7 +6996,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -7027,7 +7027,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       - explode: true
         in: query
@@ -7095,28 +7095,28 @@ paths:
         name: "search[avatar_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[level]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[min_level]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
         name: "search[max_level]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7249,7 +7249,7 @@ paths:
         name: dmail_id
         required: true
         schema:
-          type: number
+          type: integer
         style: form
       requestBody:
         content:
@@ -7309,7 +7309,7 @@ paths:
         name: "search[user_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7323,7 +7323,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7384,7 +7384,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -7408,7 +7408,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -7434,7 +7434,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -7466,7 +7466,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -7491,7 +7491,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -7529,7 +7529,7 @@ paths:
         name: "search[current_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7595,7 +7595,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -7665,7 +7665,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7748,7 +7748,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -7771,7 +7771,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -7795,7 +7795,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -7826,7 +7826,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       - description: The version ID to revert to.
         explode: true
@@ -7834,7 +7834,7 @@ paths:
         name: version_id
         required: true
         schema:
-          type: number
+          type: integer
         style: form
       responses:
         "204":
@@ -7875,7 +7875,7 @@ paths:
         name: "search[updater_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7889,7 +7889,7 @@ paths:
         name: "search[wiki_page_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -7939,7 +7939,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "200":
@@ -7966,7 +7966,7 @@ paths:
         schema:
           maximum: 9999
           minimum: 1
-          type: number
+          type: integer
         style: form
       responses:
         "200":
@@ -7993,7 +7993,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -8028,7 +8028,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -8060,7 +8060,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -8091,7 +8091,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "201":
@@ -8122,7 +8122,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       responses:
         "204":
@@ -8149,7 +8149,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -8186,7 +8186,7 @@ paths:
         name: id
         required: true
         schema:
-          type: number
+          type: integer
         style: simple
       requestBody:
         content:
@@ -8214,7 +8214,7 @@ paths:
         content:
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/approvePost_request'
+              $ref: '#/components/schemas/addFavorite_request'
       responses:
         "204":
           description: Success/Failure
@@ -8235,7 +8235,7 @@ paths:
         content:
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/approvePost_request'
+              $ref: '#/components/schemas/addFavorite_request'
       responses:
         "201":
           description: Success
@@ -8277,7 +8277,7 @@ paths:
         name: "search[creator_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -8291,7 +8291,7 @@ paths:
         name: "search[post_id]"
         required: false
         schema:
-          type: number
+          type: integer
         style: form
       - explode: true
         in: query
@@ -8634,7 +8634,6 @@ components:
       - record
       - ban
       type: string
-      types: string
     PoolCategories:
       enum:
       - collection
@@ -9036,7 +9035,7 @@ components:
         warning_type: warning_type
         body: body
         updater_name: updater_name
-        score: 5.962133916683182
+        score: 5
         post_id: 6
         updated_at: 2000-01-23T04:56:07.000+00:00
         creator_id: 1
@@ -9057,7 +9056,7 @@ components:
         body:
           type: string
         score:
-          type: number
+          type: integer
         updated_at:
           format: date-time
           type: string
@@ -9172,11 +9171,11 @@ components:
           api_regen_multiplier:
             type: number
           api_burst_limit:
-            type: number
+            type: integer
           remaining_api_limit:
-            type: number
+            type: integer
           statement_timeout:
-            type: number
+            type: integer
           favorite_limit:
             type: integer
           tag_query_limit:
@@ -9223,26 +9222,26 @@ components:
       example:
         comment_count: 3
         note_update_count: 2
-        remaining_api_limit: 6.683562403749608
+        remaining_api_limit: 8
         description_collapsed_initially: true
         show_hidden_comments: true
         last_forum_read_at: 2000-01-23T04:56:07.000+00:00
         recent_tags: recent_tags
-        api_burst_limit: 9.369310271410669
+        api_burst_limit: 6
         neutral_feedback_count: 1
         profile_about: profile_about
-        upload_limit: ""
+        upload_limit: 7
         enable_compact_uploader: true
         id: 0
         replacements_beta: true
         artist_version_count: 9
-        comment_threshold: 1.1730742509559433
-        per_page: 4
-        level: 6.027456183070403
+        comment_threshold: 4.965218492984954
+        per_page: 5
+        level: 6
         flag_count: 4.145608029883936
         enable_keyboard_navigation: true
-        favorite_limit: 9
-        tag_query_limit: 6
+        favorite_limit: 6
+        tag_query_limit: 3
         blacklist_users: true
         avatar_id: 7
         hide_comments: true
@@ -9255,8 +9254,8 @@ components:
         default_image_sizedefault_image_size: large
         is_banned: true
         can_approve_posts: true
-        wiki_page_version_count: 7
-        api_regen_multiplier: 9.965781217890562
+        wiki_page_version_count: 1
+        api_regen_multiplier: 9.369310271410669
         favorites_count: 2
         negative_feedback_count: 1
         pool_version_count: 1
@@ -9265,7 +9264,7 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         blacklisted_tags: blacklisted_tags
         disable_responsive_mode: true
-        favorite_count: 5
+        favorite_count: 9
         has_mail: true
         email: email
         enable_safe_mode: true
@@ -9280,7 +9279,7 @@ components:
         time_zone: time_zone
         profile_artinfo: profile_artinfo
         positive_feedback_count: 6
-        statement_timeout: 8.762042012749001
+        statement_timeout: 9
         no_flagging: true
         forum_post_count: 7
         enable_privacy_mode: true
@@ -9343,11 +9342,12 @@ components:
         file_ext:
           type: string
         width:
-          type: number
+          type: integer
         height:
-          type: number
+          type: integer
         size:
-          type: number
+          format: int64
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -9356,7 +9356,7 @@ components:
         uploader_id:
           type: integer
         score:
-          type: number
+          type: integer
         fav_count:
           type: integer
         is_favorited:
@@ -9377,9 +9377,9 @@ components:
           nullable: true
           type: string
         preview_width:
-          type: number
+          type: integer
         preview_height:
-          type: number
+          type: integer
       required:
       - created_at
       - fav_count
@@ -9449,16 +9449,16 @@ components:
         updater_id: 5
         is_hidden: true
         warning_user_id: 5.637376656633329
-        topic: 6.027456183070403
         created_at: 2000-01-23T04:56:07.000+00:00
         warning_type: warning_type
         id: 0
+        topic_id: 6
         body: body
       properties:
         id:
           type: integer
-        topic:
-          type: number
+        topic_id:
+          type: integer
         creator_id:
           type: integer
         updater_id:
@@ -9484,13 +9484,14 @@ components:
       - creator_id
       - id
       - is_hidden
+      - topic_id
       - updated_at
       - updater_id
       - warning_type
       - warning_user_id
     ForumPostVote:
       example:
-        score: 5.962133916683182
+        score: 5
         updated_at: 2000-01-23T04:56:07.000+00:00
         creator_id: 1
         forum_post_id: 6
@@ -9505,7 +9506,7 @@ components:
         creator_id:
           type: integer
         score:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -9622,28 +9623,28 @@ components:
         - wiki_page_version_count
       example:
         can_approve_posts: true
-        comment_count: 9
+        comment_count: 6
         note_update_count: 2
-        wiki_page_version_count: 1
+        wiki_page_version_count: 4
         favorites_count: 2
-        negative_feedback_count: 3
-        pool_version_count: 5
+        negative_feedback_count: 6
+        pool_version_count: 9
         created_at: 2000-01-23T04:56:07.000+00:00
         base_upload_limit: 1
-        neutral_feedback_count: 6
+        neutral_feedback_count: 3
         profile_about: profile_about
-        upload_limit: 6
-        favorite_count: 8
+        upload_limit: 1
+        favorite_count: 9
         id: 0
-        artist_version_count: 4
-        level: 6.027456183070403
-        flag_count: 6
+        artist_version_count: 5
+        level: 6
+        flag_count: 8
         post_update_count: 5
         level_string: level_string
         can_upload_free: true
         profile_artinfo: profile_artinfo
         avatar_id: 7
-        positive_feedback_count: 9
+        positive_feedback_count: 6
         name: name
         forum_post_count: 9
         post_upload_count: 5
@@ -9719,11 +9720,11 @@ components:
         last_comment_bumped_at: 2000-01-23T04:56:07.000+00:00
         last_commented_at: 2000-01-23T04:56:07.000+00:00
         source: source
-        score: 2.3021358869347655
+        score: 2
         has_large: true
         fav_count: 3
         tag_count: 2
-        image_height: 7.457744773683766
+        image_height: 7
         bit_flags: 4.965218492984954
         tag_count_character: 1
         tag_count_invalid: 9
@@ -9734,13 +9735,13 @@ components:
         has_children: true
         tag_count_copyright: 1
         approver_id: 9
-        image_width: 6.84685269835264
+        image_width: 6
         up_score: 5
         last_noted_at: 2000-01-23T04:56:07.000+00:00
         tag_count_lore: 9
         is_rating_locked: true
         has_active_children: true
-        parent_id: 1.1730742509559433
+        parent_id: 1
         tag_count_general: 4
         is_comment_disabled: true
         is_comment_locked: true
@@ -9765,7 +9766,7 @@ components:
         tag_count_species: 9
         updated_at: 2000-01-23T04:56:07.000+00:00
         is_note_locked: true
-        file_size: 1.4894159098541704
+        file_size: 1
         bg_color: bg_color
         has_visible_children: true
         file_ext: file_ext
@@ -9786,7 +9787,7 @@ components:
         down_score:
           type: integer
         score:
-          type: number
+          type: integer
         source:
           type: string
         md5:
@@ -9834,14 +9835,15 @@ components:
         file_ext:
           type: string
         file_size:
-          type: number
+          format: int64
+          type: integer
         image_width:
-          type: number
+          type: integer
         image_height:
-          type: number
+          type: integer
         parent_id:
           nullable: true
-          type: number
+          type: integer
         has_children:
           type: boolean
         last_commented_at:
@@ -9962,7 +9964,7 @@ components:
       - uploader_id
     IQDBResponse:
       example:
-        score: 6.027456183070403
+        score: 6
         post_id: 0
         post:
           posts:
@@ -9973,11 +9975,11 @@ components:
             last_comment_bumped_at: 2000-01-23T04:56:07.000+00:00
             last_commented_at: 2000-01-23T04:56:07.000+00:00
             source: source
-            score: 2.3021358869347655
+            score: 2
             has_large: true
             fav_count: 3
             tag_count: 2
-            image_height: 7.457744773683766
+            image_height: 7
             bit_flags: 4.965218492984954
             tag_count_character: 1
             tag_count_invalid: 9
@@ -9988,13 +9990,13 @@ components:
             has_children: true
             tag_count_copyright: 1
             approver_id: 9
-            image_width: 6.84685269835264
+            image_width: 6
             up_score: 5
             last_noted_at: 2000-01-23T04:56:07.000+00:00
             tag_count_lore: 9
             is_rating_locked: true
             has_active_children: true
-            parent_id: 1.1730742509559433
+            parent_id: 1
             tag_count_general: 4
             is_comment_disabled: true
             is_comment_locked: true
@@ -10019,7 +10021,7 @@ components:
             tag_count_species: 9
             updated_at: 2000-01-23T04:56:07.000+00:00
             is_note_locked: true
-            file_size: 1.4894159098541704
+            file_size: 1
             bg_color: bg_color
             has_visible_children: true
             file_ext: file_ext
@@ -10033,7 +10035,7 @@ components:
         post_id:
           type: integer
         score:
-          type: number
+          type: integer
         post:
           $ref: '#/components/schemas/IQDBResponse_post'
       required:
@@ -10170,12 +10172,12 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         post_id: 9
         creator_id: 6
-        x: 1.4658129805029452
-        width: 5.637376656633329
-        "y": 5.962133916683182
+        x: 1
+        width: 5
+        "y": 5
         creator_name: creator_name
         id: 0
-        height: 2.3021358869347655
+        height: 2
       properties:
         id:
           type: integer
@@ -10188,13 +10190,13 @@ components:
         creator_id:
           type: integer
         x:
-          type: number
+          type: integer
         "y":
-          type: number
+          type: integer
         width:
-          type: number
+          type: integer
         height:
-          type: number
+          type: integer
         version:
           type: number
         is_active:
@@ -10228,12 +10230,12 @@ components:
         version: 2.3021358869347655
         updated_at: 2000-01-23T04:56:07.000+00:00
         post_id: 9
-        x: 6.027456183070403
-        width: 5.962133916683182
+        x: 6
+        width: 5
         updater_id: 3
-        "y": 1.4658129805029452
+        "y": 1
         id: 0
-        height: 5.637376656633329
+        height: 5
       properties:
         id:
           type: integer
@@ -10244,13 +10246,13 @@ components:
           format: date-time
           type: string
         x:
-          type: number
+          type: integer
         "y":
-          type: number
+          type: integer
         width:
-          type: number
+          type: integer
         height:
-          type: number
+          type: integer
         body:
           type: string
         version:
@@ -10416,9 +10418,9 @@ components:
     Post:
       example:
         preview:
-          width: 5.637376656633329
+          width: 5
           url: url
-          height: 2.3021358869347655
+          height: 2
         comment_count: 9
         change_seq: 1.0246457001441578
         uploader_id: 5
@@ -10448,23 +10450,23 @@ components:
               urls:
               - https://openapi-generator.tech
               - https://openapi-generator.tech
-              width: 2.027123023002322
+              width: 2
               type: video
-              height: 3.616076749251911
+              height: 3
             original:
               urls:
               - https://openapi-generator.tech
               - https://openapi-generator.tech
-              width: 2.027123023002322
+              width: 2
               type: video
-              height: 3.616076749251911
+              height: 3
             "480p":
               urls:
               - https://openapi-generator.tech
               - https://openapi-generator.tech
-              width: 2.027123023002322
+              width: 2
               type: video
-              height: 3.616076749251911
+              height: 3
           url: url
           height: 7.061401241503109
         tags:
@@ -10494,23 +10496,23 @@ components:
           - invalid
         duration: 9.369310271410669
         score:
-          total: 1.2315135367772556
-          up: 4.145608029883936
-          down: 7.386281948385884
+          total: 1
+          up: 4
+          down: 7
         relationships:
           has_children: true
           has_active_children: true
           children:
-          - 1.1730742509559433
-          - 1.1730742509559433
+          - 1
+          - 1
           parent_id: 7.457744773683766
         fav_count: 1
         file:
           ext: ext
-          size: 5.962133916683182
-          width: 6.027456183070403
+          size: 5
+          width: 6
           url: url
-          height: 1.4658129805029452
+          height: 1
           md5: md5
         updated_at: 2000-01-23T04:56:07.000+00:00
         has_notes: true
@@ -10742,11 +10744,11 @@ components:
         approver_id: 5
         file_name: file_name
         created_at: 2000-01-23T04:56:07.000+00:00
-        image_width: 7.061401241503109
+        image_width: 7
         source: source
-        file_size: 5.637376656633329
+        file_size: 5
         file_ext: file_ext
-        image_height: 2.3021358869347655
+        image_height: 2
         updated_at: 2000-01-23T04:56:07.000+00:00
         post_id: 6
         creator_id: 1
@@ -10772,11 +10774,12 @@ components:
         file_ext:
           type: string
         file_size:
-          type: number
+          format: int64
+          type: integer
         image_height:
-          type: number
+          type: integer
         image_width:
-          type: number
+          type: integer
         md5:
           type: string
         source:
@@ -10813,18 +10816,18 @@ components:
         urls:
         - https://openapi-generator.tech
         - https://openapi-generator.tech
-        width: 2.027123023002322
+        width: 2
         type: video
-        height: 3.616076749251911
+        height: 3
       properties:
         type:
           enum:
           - video
           type: string
         height:
-          type: number
+          type: integer
         width:
-          type: number
+          type: integer
         urls:
           items:
             $ref: '#/components/schemas/PostSampleAlternate_urls_inner'
@@ -11494,7 +11497,7 @@ components:
         can_approve_posts: true
         comment_count: 3
         note_update_count: 2
-        wiki_page_version_count: 7
+        wiki_page_version_count: 1
         favorites_count: 2
         negative_feedback_count: 1
         pool_version_count: 1
@@ -11502,10 +11505,10 @@ components:
         base_upload_limit: 1
         neutral_feedback_count: 1
         profile_about: profile_about
-        upload_limit: ""
+        upload_limit: 7
         id: 0
         artist_version_count: 9
-        level: 6.027456183070403
+        level: 6
         flag_count: 4.145608029883936
         post_update_count: 5
         level_string: level_string
@@ -11526,7 +11529,7 @@ components:
         name:
           type: string
         level:
-          type: number
+          type: integer
         base_upload_limit:
           type: integer
         post_upload_count:
@@ -11568,7 +11571,8 @@ components:
           type: string
         profile_artinfo:
           type: string
-        upload_limit: {}
+        upload_limit:
+          type: integer
         wiki_page_version_count:
           type: integer
       required:
@@ -11591,7 +11595,7 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         user_id: 6
         creator_id: 1
-        updater_id: 5.962133916683182
+        updater_id: 5
         created_at: 2000-01-23T04:56:07.000+00:00
         id: 0
         category: negative
@@ -11614,7 +11618,7 @@ components:
           format: date-time
           type: string
         updater_id:
-          type: number
+          type: integer
         is_deleted:
           type: boolean
       required:
@@ -11683,13 +11687,13 @@ components:
         is_deleted: true
         updated_at: 2000-01-23T04:56:07.000+00:00
         category_id: 5
-        creator_id: 6.027456183070403
-        updater_id: 1.4658129805029452
+        creator_id: 6
+        updater_id: 1
         creator_name: creator_name
-        id: 0.8008281904610115
+        id: 0
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -11701,11 +11705,11 @@ components:
         body:
           type: string
         creator_id:
-          type: number
+          type: integer
         is_locked:
           type: boolean
         updater_id:
-          type: number
+          type: integer
         is_deleted:
           type: boolean
         other_names:
@@ -11738,20 +11742,20 @@ components:
         is_locked: true
         reason: reason
         parent: parent
-        wiki_page_id: 1.4658129805029452
+        wiki_page_id: 1
         is_deleted: true
         updated_at: 2000-01-23T04:56:07.000+00:00
-        updater_id: 6.027456183070403
+        updater_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
         other_names:
         - other_names
         - other_names
-        id: 0.8008281904610115
+        id: 0
         title: title
         body: body
       properties:
         id:
-          type: number
+          type: integer
         created_at:
           format: date-time
           type: string
@@ -11763,9 +11767,9 @@ components:
         body:
           type: string
         updater_id:
-          type: number
+          type: integer
         wiki_page_id:
-          type: number
+          type: integer
         is_locked:
           type: boolean
         other_names:
@@ -12027,7 +12031,7 @@ components:
         avoid_posting[is_active]:
           type: boolean
         avoid_posting[artist_attributes][id]:
-          type: number
+          type: integer
         avoid_posting[artist_attributes][name]:
           description: "If provided and the artist does not exist, an artist will\
             \ be created."
@@ -12041,7 +12045,7 @@ components:
         avoid_posting[artist_attributes][group_name]:
           type: string
         avoid_posting[artist_attributes][linked_user_id]:
-          type: number
+          type: integer
     editAvoidPosting_request:
       properties:
         avoid_posting[details]:
@@ -12061,7 +12065,7 @@ components:
         avoid_posting[artist_attributes][group_name]:
           type: string
         avoid_posting[artist_attributes][linked_user_id]:
-          type: number
+          type: integer
     searchAvoidPostingVersions_200_response_anyOf:
       description: No Results
       properties:
@@ -12115,7 +12119,7 @@ components:
         blip[body]:
           type: string
         blip[response_to]:
-          type: number
+          type: integer
       required:
       - "blip[body]"
     editBlip_request:
@@ -12158,7 +12162,7 @@ components:
         bulk_update_request[reason]:
           type: string
         bulk_update_request[forum_topic_id]:
-          type: number
+          type: integer
         bulk_update_request[skip_forum]:
           description: Only usable for Admin+
           type: boolean
@@ -12197,7 +12201,7 @@ components:
         comment[body]:
           type: string
         comment[post_id]:
-          type: number
+          type: integer
         comment[do_not_bump_post]:
           type: boolean
         comment[is_sticky]:
@@ -12221,13 +12225,13 @@ components:
           type: boolean
     createCommentVote_200_response:
       example:
-        score: 0.8008281904610115
-        our_score: 6.027456183070403
+        score: 0
+        our_score: 6
       properties:
         score:
-          type: number
+          type: integer
         our_score:
-          type: number
+          type: integer
       required:
       - our_score
       - score
@@ -12282,9 +12286,9 @@ components:
       example:
         posts:
         - preview:
-            width: 5.637376656633329
+            width: 5
             url: url
-            height: 2.3021358869347655
+            height: 2
           comment_count: 9
           change_seq: 1.0246457001441578
           uploader_id: 5
@@ -12314,23 +12318,23 @@ components:
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
               original:
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
               "480p":
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
             url: url
             height: 7.061401241503109
           tags:
@@ -12360,23 +12364,23 @@ components:
             - invalid
           duration: 9.369310271410669
           score:
-            total: 1.2315135367772556
-            up: 4.145608029883936
-            down: 7.386281948385884
+            total: 1
+            up: 4
+            down: 7
           relationships:
             has_children: true
             has_active_children: true
             children:
-            - 1.1730742509559433
-            - 1.1730742509559433
+            - 1
+            - 1
             parent_id: 7.457744773683766
           fav_count: 1
           file:
             ext: ext
-            size: 5.962133916683182
-            width: 6.027456183070403
+            size: 5
+            width: 6
             url: url
-            height: 1.4658129805029452
+            height: 1
             md5: md5
           updated_at: 2000-01-23T04:56:07.000+00:00
           has_notes: true
@@ -12385,9 +12389,9 @@ components:
           - locked_tags
           - locked_tags
         - preview:
-            width: 5.637376656633329
+            width: 5
             url: url
-            height: 2.3021358869347655
+            height: 2
           comment_count: 9
           change_seq: 1.0246457001441578
           uploader_id: 5
@@ -12417,23 +12421,23 @@ components:
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
               original:
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
               "480p":
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
             url: url
             height: 7.061401241503109
           tags:
@@ -12463,23 +12467,23 @@ components:
             - invalid
           duration: 9.369310271410669
           score:
-            total: 1.2315135367772556
-            up: 4.145608029883936
-            down: 7.386281948385884
+            total: 1
+            up: 4
+            down: 7
           relationships:
             has_children: true
             has_active_children: true
             children:
-            - 1.1730742509559433
-            - 1.1730742509559433
+            - 1
+            - 1
             parent_id: 7.457744773683766
           fav_count: 1
           file:
             ext: ext
-            size: 5.962133916683182
-            width: 6.027456183070403
+            size: 5
+            width: 6
             url: url
-            height: 1.4658129805029452
+            height: 1
             md5: md5
           updated_at: 2000-01-23T04:56:07.000+00:00
           has_notes: true
@@ -12496,17 +12500,17 @@ components:
       - posts
     addFavorite_request:
       properties:
-        post_ud:
-          type: number
+        post_id:
+          type: integer
       required:
       - post_id
     addFavorite_201_response:
       example:
         post:
           preview:
-            width: 5.637376656633329
+            width: 5
             url: url
-            height: 2.3021358869347655
+            height: 2
           comment_count: 9
           change_seq: 1.0246457001441578
           uploader_id: 5
@@ -12536,23 +12540,23 @@ components:
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
               original:
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
               "480p":
                 urls:
                 - https://openapi-generator.tech
                 - https://openapi-generator.tech
-                width: 2.027123023002322
+                width: 2
                 type: video
-                height: 3.616076749251911
+                height: 3
             url: url
             height: 7.061401241503109
           tags:
@@ -12582,23 +12586,23 @@ components:
             - invalid
           duration: 9.369310271410669
           score:
-            total: 1.2315135367772556
-            up: 4.145608029883936
-            down: 7.386281948385884
+            total: 1
+            up: 4
+            down: 7
           relationships:
             has_children: true
             has_active_children: true
             children:
-            - 1.1730742509559433
-            - 1.1730742509559433
+            - 1
+            - 1
             parent_id: 7.457744773683766
           fav_count: 1
           file:
             ext: ext
-            size: 5.962133916683182
-            width: 6.027456183070403
+            size: 5
+            width: 6
             url: url
-            height: 1.4658129805029452
+            height: 1
             md5: md5
           updated_at: 2000-01-23T04:56:07.000+00:00
           has_notes: true
@@ -12632,7 +12636,7 @@ components:
         forum_post[body]:
           type: string
         forum_post[topic_id]:
-          type: number
+          type: integer
       required:
       - "forum_post[body]"
       - "forum_post[topic_id]"
@@ -12647,7 +12651,7 @@ components:
           - -1
           - 0
           - 1
-          type: number
+          type: integer
       required:
       - "forum_post_vote[score]"
     createForumTopic_request:
@@ -12655,10 +12659,10 @@ components:
         forum_topic[title]:
           type: string
         forum_topic[category_id]:
-          type: number
+          type: integer
         forum_topic[original_post_attributes][id]:
           description: "Forum post ID. Mutually exclusive with body, one must be provided."
-          type: number
+          type: integer
         forum_topic[original_post_attributes][body]:
           description: "First forum post body. Mutually exclusive with id, one must\
             \ be provided."
@@ -12677,10 +12681,10 @@ components:
         forum_topic[title]:
           type: string
         forum_topic[category_id]:
-          type: number
+          type: integer
         forum_topic[original_post_attributes][id]:
           description: Forum post ID. Silently ignored
-          type: number
+          type: integer
         forum_topic[original_post_attributes][body]:
           description: First forum post body.
           type: string
@@ -12693,7 +12697,7 @@ components:
     markAllForumTopicsAsRead_request:
       properties:
         category_id:
-          type: number
+          type: integer
       required:
       - category_id
     createHelpPage_request:
@@ -12749,7 +12753,7 @@ components:
     queryIQDBGet_200_response:
       example:
         posts:
-        - score: 6.027456183070403
+        - score: 6
           post_id: 0
           post:
             posts:
@@ -12760,11 +12764,11 @@ components:
               last_comment_bumped_at: 2000-01-23T04:56:07.000+00:00
               last_commented_at: 2000-01-23T04:56:07.000+00:00
               source: source
-              score: 2.3021358869347655
+              score: 2
               has_large: true
               fav_count: 3
               tag_count: 2
-              image_height: 7.457744773683766
+              image_height: 7
               bit_flags: 4.965218492984954
               tag_count_character: 1
               tag_count_invalid: 9
@@ -12775,13 +12779,13 @@ components:
               has_children: true
               tag_count_copyright: 1
               approver_id: 9
-              image_width: 6.84685269835264
+              image_width: 6
               up_score: 5
               last_noted_at: 2000-01-23T04:56:07.000+00:00
               tag_count_lore: 9
               is_rating_locked: true
               has_active_children: true
-              parent_id: 1.1730742509559433
+              parent_id: 1
               tag_count_general: 4
               is_comment_disabled: true
               is_comment_locked: true
@@ -12806,7 +12810,7 @@ components:
               tag_count_species: 9
               updated_at: 2000-01-23T04:56:07.000+00:00
               is_note_locked: true
-              file_size: 1.4894159098541704
+              file_size: 1
               bg_color: bg_color
               has_visible_children: true
               file_ext: file_ext
@@ -12814,7 +12818,7 @@ components:
               locked_tags: locked_tags
               md5: md5
           hash: hash
-        - score: 6.027456183070403
+        - score: 6
           post_id: 0
           post:
             posts:
@@ -12825,11 +12829,11 @@ components:
               last_comment_bumped_at: 2000-01-23T04:56:07.000+00:00
               last_commented_at: 2000-01-23T04:56:07.000+00:00
               source: source
-              score: 2.3021358869347655
+              score: 2
               has_large: true
               fav_count: 3
               tag_count: 2
-              image_height: 7.457744773683766
+              image_height: 7
               bit_flags: 4.965218492984954
               tag_count_character: 1
               tag_count_invalid: 9
@@ -12840,13 +12844,13 @@ components:
               has_children: true
               tag_count_copyright: 1
               approver_id: 9
-              image_width: 6.84685269835264
+              image_width: 6
               up_score: 5
               last_noted_at: 2000-01-23T04:56:07.000+00:00
               tag_count_lore: 9
               is_rating_locked: true
               has_active_children: true
-              parent_id: 1.1730742509559433
+              parent_id: 1
               tag_count_general: 4
               is_comment_disabled: true
               is_comment_locked: true
@@ -12871,7 +12875,7 @@ components:
               tag_count_species: 9
               updated_at: 2000-01-23T04:56:07.000+00:00
               is_note_locked: true
-              file_size: 1.4894159098541704
+              file_size: 1
               bg_color: bg_color
               has_visible_children: true
               file_ext: file_ext
@@ -13012,15 +13016,15 @@ components:
     createNote_request:
       properties:
         note[post_id]:
-          type: number
+          type: integer
         note[x]:
-          type: number
+          type: integer
         note[y]:
-          type: number
+          type: integer
         note[width]:
-          type: number
+          type: integer
         note[height]:
-          type: number
+          type: integer
         note[body]:
           type: string
         note[html_id]:
@@ -13051,22 +13055,22 @@ components:
         updated_at: 2000-01-23T04:56:07.000+00:00
         post_id: 9
         creator_id: 6
-        x: 1.4658129805029452
-        width: 5.637376656633329
-        "y": 5.962133916683182
+        x: 1
+        width: 5
+        "y": 5
         creator_name: creator_name
         id: 0
-        height: 2.3021358869347655
+        height: 2
     editNote_request:
       properties:
         note[x]:
-          type: number
+          type: integer
         note[y]:
-          type: number
+          type: integer
         note[width]:
-          type: number
+          type: integer
         note[height]:
-          type: number
+          type: integer
         note[body]:
           type: string
     searchNoteVersions_200_response_anyOf:
@@ -13101,7 +13105,7 @@ components:
         pool[post_ids]:
           description: Array of post IDs. Mutually exclusive with post_ids_string.
           items:
-            type: number
+            type: integer
           type: array
       required:
       - "pool[name]"
@@ -13121,26 +13125,26 @@ components:
         pool[post_ids]:
           description: Array of post IDs. Mutually exclusive with post_ids_string.
           items:
-            type: number
+            type: integer
           type: array
     addPostToPool_request:
       properties:
         pool_id:
           description: Mutually exclusive with pool_name.
-          type: number
+          type: integer
         pool_name:
           description: Mutually exclusive with pool_id.
           type: string
         post_id:
-          type: number
+          type: integer
       required:
       - post_id
     removePostFromPool_request:
       properties:
         pool_id:
-          type: number
+          type: integer
         post_id:
-          type: number
+          type: integer
       required:
       - pool_id
       - post_id
@@ -13184,9 +13188,9 @@ components:
           description: "The sources before your edits, used to reconcile conflicts."
           type: string
         post[parent_id]:
-          type: number
+          type: integer
         post[old_parent_id]:
-          type: number
+          type: integer
         post[description]:
           type: string
         post[old_description]:
@@ -13230,7 +13234,7 @@ components:
     copyNotesToPost_request:
       properties:
         other_post_id:
-          type: number
+          type: integer
       required:
       - other_post_id
     unflagPost_request:
@@ -13292,7 +13296,7 @@ components:
         post_ids:
           description: "post_ids[]=1&post_ids[]=2"
           items:
-            type: number
+            type: integer
           type: array
       required:
       - post_ids
@@ -13368,7 +13372,7 @@ components:
     createPostFlag_request:
       properties:
         post_flag[post_id]:
-          type: number
+          type: integer
         post_flag[reason_name]:
           enum:
           - uploading_guidelines
@@ -13382,7 +13386,7 @@ components:
           - inferior
           type: string
         post_flag[parent_id]:
-          type: number
+          type: integer
       required:
       - "post_flag[post_id]"
       - "post_flag[reason_name]"
@@ -13441,19 +13445,19 @@ components:
           type: string
     createPostVote_200_response:
       example:
-        score: 0.8008281904610115
-        our_score: 5.962133916683182
-        up: 6.027456183070403
-        down: 1.4658129805029452
+        score: 0
+        our_score: 5
+        up: 6
+        down: 1
       properties:
         score:
-          type: number
+          type: integer
         up:
-          type: number
+          type: integer
         down:
-          type: number
+          type: integer
         our_score:
-          type: number
+          type: integer
       required:
       - down
       - our_score
@@ -13618,7 +13622,7 @@ components:
         takedown[post_ids]:
           description: "takedown[post_ids][]=1&takedown[post_ids][]=2"
           items:
-            type: number
+            type: integer
           type: array
         takedown[reason_hidden]:
           type: boolean
@@ -13630,7 +13634,7 @@ components:
             Must have the bd staff user flag to use.
             takedown[del_post_ids][]=1&takedown[del_post_ids][]=2
           items:
-            type: number
+            type: integer
           type: array
         takedown[status]:
           description: Must have the bd staff user flag to use.
@@ -13660,15 +13664,15 @@ components:
     addPostsToTakedownByIds_200_response:
       example:
         added_post_ids:
-        - 6.027456183070403
-        - 6.027456183070403
-        added_count: 0.8008281904610115
+        - 6
+        - 6
+        added_count: 0
       properties:
         added_count:
-          type: number
+          type: integer
         added_post_ids:
           items:
-            type: number
+            type: integer
           type: array
       required:
       - added_count
@@ -13681,10 +13685,10 @@ components:
       - post_tags
     countMatchingPosts_200_response:
       example:
-        matched_post_count: 0.8008281904610115
+        matched_post_count: 0
       properties:
         matched_post_count:
-          type: number
+          type: integer
       required:
       - matched_post_count
     searchTickets_200_response_anyOf:
@@ -13751,7 +13755,7 @@ components:
         upload[rating]:
           $ref: '#/components/schemas/Ratings'
         upload[parent_id]:
-          type: number
+          type: integer
         upload[description]:
           type: string
         upload[as_pending]:
@@ -13768,7 +13772,7 @@ components:
       - "upload[tag_string]"
     uploadPost_200_response:
       example:
-        post_id: 0.8008281904610115
+        post_id: 0
         success: true
         location: location
       properties:
@@ -13779,7 +13783,7 @@ components:
         location:
           type: string
         post_id:
-          type: number
+          type: integer
       required:
       - location
       - post_id
@@ -13874,7 +13878,7 @@ components:
           description: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
           type: string
         user[per_page]:
-          type: number
+          type: integer
         user[custom_style]:
           type: string
         user[description_collapsed_initially]:
@@ -13906,7 +13910,7 @@ components:
         user[disable_responsive_mode]:
           type: boolean
         user[dmail_filter_attributes][id]:
-          type: number
+          type: integer
         user[dmail_filter_attributes][words]:
           type: string
         user[profile_about]:
@@ -13943,7 +13947,7 @@ components:
     createUserFeedback_request:
       properties:
         user_feedback[user_id]:
-          type: number
+          type: integer
         user_feedback[user_name]:
           type: string
         user_feedback[body]:
@@ -14046,10 +14050,10 @@ components:
     getAltList_200_response_inner:
       oneOf:
       - description: ID of concerned user.
-        type: number
+        type: integer
       - items:
           description: ID of suspected alt.
-          type: number
+          type: integer
     adminEditUser_request:
       properties:
         user[verified]:
@@ -14057,7 +14061,7 @@ components:
           type: boolean
         user[level]:
           description: Must have the bd staff user flag to promote to Admin+.
-          type: number
+          type: integer
         user[name]:
           type: string
         user[profile_about]:
@@ -14107,12 +14111,6 @@ components:
           type: string
       required:
       - commit
-    approvePost_request:
-      properties:
-        post_id:
-          type: number
-      required:
-      - post_id
     searchPostDisapprovals_200_response_anyOf:
       description: No Results
       properties:
@@ -14132,7 +14130,7 @@ components:
     createPostDisapproval_request:
       properties:
         post_disapproval[post_id]:
-          type: number
+          type: integer
         post_disapproval[reason]:
           enum:
           - borderline_quality
@@ -14154,11 +14152,11 @@ components:
           last_comment_bumped_at: 2000-01-23T04:56:07.000+00:00
           last_commented_at: 2000-01-23T04:56:07.000+00:00
           source: source
-          score: 2.3021358869347655
+          score: 2
           has_large: true
           fav_count: 3
           tag_count: 2
-          image_height: 7.457744773683766
+          image_height: 7
           bit_flags: 4.965218492984954
           tag_count_character: 1
           tag_count_invalid: 9
@@ -14169,13 +14167,13 @@ components:
           has_children: true
           tag_count_copyright: 1
           approver_id: 9
-          image_width: 6.84685269835264
+          image_width: 6
           up_score: 5
           last_noted_at: 2000-01-23T04:56:07.000+00:00
           tag_count_lore: 9
           is_rating_locked: true
           has_active_children: true
-          parent_id: 1.1730742509559433
+          parent_id: 1
           tag_count_general: 4
           is_comment_disabled: true
           is_comment_locked: true
@@ -14200,7 +14198,7 @@ components:
           tag_count_species: 9
           updated_at: 2000-01-23T04:56:07.000+00:00
           is_note_locked: true
-          file_size: 1.4894159098541704
+          file_size: 1
           bg_color: bg_color
           has_visible_children: true
           file_ext: file_ext
@@ -14215,20 +14213,21 @@ components:
     Post_file:
       example:
         ext: ext
-        size: 5.962133916683182
-        width: 6.027456183070403
+        size: 5
+        width: 6
         url: url
-        height: 1.4658129805029452
+        height: 1
         md5: md5
       properties:
         width:
-          type: number
+          type: integer
         height:
-          type: number
+          type: integer
         ext:
           type: string
         size:
-          type: number
+          format: int64
+          type: integer
         md5:
           type: string
         url:
@@ -14243,14 +14242,14 @@ components:
       - width
     Post_preview:
       example:
-        width: 5.637376656633329
+        width: 5
         url: url
-        height: 2.3021358869347655
+        height: 2
       properties:
         width:
-          type: number
+          type: integer
         height:
-          type: number
+          type: integer
         url:
           nullable: true
           type: string
@@ -14264,23 +14263,23 @@ components:
           urls:
           - https://openapi-generator.tech
           - https://openapi-generator.tech
-          width: 2.027123023002322
+          width: 2
           type: video
-          height: 3.616076749251911
+          height: 3
         original:
           urls:
           - https://openapi-generator.tech
           - https://openapi-generator.tech
-          width: 2.027123023002322
+          width: 2
           type: video
-          height: 3.616076749251911
+          height: 3
         "480p":
           urls:
           - https://openapi-generator.tech
           - https://openapi-generator.tech
-          width: 2.027123023002322
+          width: 2
           type: video
-          height: 3.616076749251911
+          height: 3
       properties:
         "480p":
           $ref: '#/components/schemas/PostSampleAlternate'
@@ -14297,23 +14296,23 @@ components:
             urls:
             - https://openapi-generator.tech
             - https://openapi-generator.tech
-            width: 2.027123023002322
+            width: 2
             type: video
-            height: 3.616076749251911
+            height: 3
           original:
             urls:
             - https://openapi-generator.tech
             - https://openapi-generator.tech
-            width: 2.027123023002322
+            width: 2
             type: video
-            height: 3.616076749251911
+            height: 3
           "480p":
             urls:
             - https://openapi-generator.tech
             - https://openapi-generator.tech
-            width: 2.027123023002322
+            width: 2
             type: video
-            height: 3.616076749251911
+            height: 3
         url: url
         height: 7.061401241503109
       properties:
@@ -14338,16 +14337,16 @@ components:
       - width
     Post_score:
       example:
-        total: 1.2315135367772556
-        up: 4.145608029883936
-        down: 7.386281948385884
+        total: 1
+        up: 4
+        down: 7
       properties:
         up:
-          type: number
+          type: integer
         down:
-          type: number
+          type: integer
         total:
-          type: number
+          type: integer
       required:
       - down
       - total
@@ -14453,8 +14452,8 @@ components:
         has_children: true
         has_active_children: true
         children:
-        - 1.1730742509559433
-        - 1.1730742509559433
+        - 1
+        - 1
         parent_id: 7.457744773683766
       properties:
         parent_id:
@@ -14466,7 +14465,7 @@ components:
           type: boolean
         children:
           items:
-            type: number
+            type: integer
           type: array
       required:
       - children

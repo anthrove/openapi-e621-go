@@ -25,7 +25,7 @@ type TicketsAPIService service
 type TicketsAPIClaimTicketRequest struct {
 	ctx        context.Context
 	ApiService *TicketsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TicketsAPIClaimTicketRequest) Execute() (*Ticket, *http.Response, error) {
@@ -41,7 +41,7 @@ You must be Moderator+. Errors are quietly swallowed and shown as notices in htm
 	@param id The ID of the ticket.
 	@return TicketsAPIClaimTicketRequest
 */
-func (a *TicketsAPIService) ClaimTicket(ctx context.Context, id float32) TicketsAPIClaimTicketRequest {
+func (a *TicketsAPIService) ClaimTicket(ctx context.Context, id int32) TicketsAPIClaimTicketRequest {
 	return TicketsAPIClaimTicketRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -150,7 +150,7 @@ func (a *TicketsAPIService) ClaimTicketExecute(r TicketsAPIClaimTicketRequest) (
 type TicketsAPIEditTicketRequest struct {
 	ctx                   context.Context
 	ApiService            *TicketsAPIService
-	id                    float32
+	id                    int32
 	ticketResponse        *string
 	ticketStatus          *string
 	ticketRecordType      *WarningTypes
@@ -191,7 +191,7 @@ You must be Moderator+.
 	@param id The ID of the ticket.
 	@return TicketsAPIEditTicketRequest
 */
-func (a *TicketsAPIService) EditTicket(ctx context.Context, id float32) TicketsAPIEditTicketRequest {
+func (a *TicketsAPIService) EditTicket(ctx context.Context, id int32) TicketsAPIEditTicketRequest {
 	return TicketsAPIEditTicketRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -301,7 +301,7 @@ func (a *TicketsAPIService) EditTicketExecute(r TicketsAPIEditTicketRequest) (*h
 type TicketsAPIGetTicketRequest struct {
 	ctx        context.Context
 	ApiService *TicketsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TicketsAPIGetTicketRequest) Execute() (*Ticket, *http.Response, error) {
@@ -317,7 +317,7 @@ You must be Janitor+ to see tickets you did not create.
 	@param id The ID of the ticket.
 	@return TicketsAPIGetTicketRequest
 */
-func (a *TicketsAPIService) GetTicket(ctx context.Context, id float32) TicketsAPIGetTicketRequest {
+func (a *TicketsAPIService) GetTicket(ctx context.Context, id int32) TicketsAPIGetTicketRequest {
 	return TicketsAPIGetTicketRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -430,11 +430,11 @@ type TicketsAPISearchTicketsRequest struct {
 	page               *int32
 	searchId           *int32
 	searchCreatorName  *string
-	searchCreatorId    *float32
+	searchCreatorId    *int32
 	searchClaimantName *string
-	searchClaimantId   *float32
+	searchClaimantId   *int32
 	searchAccusedName  *string
-	searchAccusedId    *float32
+	searchAccusedId    *int32
 	searchQtype        *TicketTypes
 	searchReason       *string
 	searchStatus       *string
@@ -465,7 +465,7 @@ func (r TicketsAPISearchTicketsRequest) SearchCreatorName(searchCreatorName stri
 }
 
 // You must be Moderator+ unless providing your own id.
-func (r TicketsAPISearchTicketsRequest) SearchCreatorId(searchCreatorId float32) TicketsAPISearchTicketsRequest {
+func (r TicketsAPISearchTicketsRequest) SearchCreatorId(searchCreatorId int32) TicketsAPISearchTicketsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -477,7 +477,7 @@ func (r TicketsAPISearchTicketsRequest) SearchClaimantName(searchClaimantName st
 }
 
 // You must be Moderator+.
-func (r TicketsAPISearchTicketsRequest) SearchClaimantId(searchClaimantId float32) TicketsAPISearchTicketsRequest {
+func (r TicketsAPISearchTicketsRequest) SearchClaimantId(searchClaimantId int32) TicketsAPISearchTicketsRequest {
 	r.searchClaimantId = &searchClaimantId
 	return r
 }
@@ -489,7 +489,7 @@ func (r TicketsAPISearchTicketsRequest) SearchAccusedName(searchAccusedName stri
 }
 
 // You must be Moderator+.
-func (r TicketsAPISearchTicketsRequest) SearchAccusedId(searchAccusedId float32) TicketsAPISearchTicketsRequest {
+func (r TicketsAPISearchTicketsRequest) SearchAccusedId(searchAccusedId int32) TicketsAPISearchTicketsRequest {
 	r.searchAccusedId = &searchAccusedId
 	return r
 }
@@ -654,7 +654,7 @@ func (a *TicketsAPIService) SearchTicketsExecute(r TicketsAPISearchTicketsReques
 type TicketsAPIUnclaimTicketRequest struct {
 	ctx        context.Context
 	ApiService *TicketsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TicketsAPIUnclaimTicketRequest) Execute() (*Ticket, *http.Response, error) {
@@ -670,7 +670,7 @@ You must be Moderator+. Errors are quietly swallowed and shown as notices in htm
 	@param id The ID of the ticket.
 	@return TicketsAPIUnclaimTicketRequest
 */
-func (a *TicketsAPIService) UnclaimTicket(ctx context.Context, id float32) TicketsAPIUnclaimTicketRequest {
+func (a *TicketsAPIService) UnclaimTicket(ctx context.Context, id int32) TicketsAPIUnclaimTicketRequest {
 	return TicketsAPIUnclaimTicketRequest{
 		ApiService: a,
 		ctx:        ctx,

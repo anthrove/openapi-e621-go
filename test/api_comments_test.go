@@ -38,7 +38,7 @@ func Test_e621_CommentsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.CommentsAPI.DeleteComment(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_CommentsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.CommentsAPI.EditComment(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_CommentsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.CommentsAPI.GetComment(context.Background(), id).Execute()
 
@@ -78,7 +78,7 @@ func Test_e621_CommentsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.CommentsAPI.HideComment(context.Background(), id).Execute()
 
@@ -92,7 +92,7 @@ func Test_e621_CommentsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.CommentsAPI.MarkComment(context.Background(), id).Execute()
 
@@ -118,7 +118,7 @@ func Test_e621_CommentsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.CommentsAPI.UnhideComment(context.Background(), id).Execute()
 

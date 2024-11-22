@@ -11,7 +11,9 @@ API version: d69c34e
 package openapi
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the AddFavoriteRequest type satisfies the MappedNullable interface at compile time
@@ -19,15 +21,18 @@ var _ MappedNullable = &AddFavoriteRequest{}
 
 // AddFavoriteRequest struct for AddFavoriteRequest
 type AddFavoriteRequest struct {
-	PostUd *float32 `json:"post_ud,omitempty"`
+	PostId int32 `json:"post_id"`
 }
+
+type _AddFavoriteRequest AddFavoriteRequest
 
 // NewAddFavoriteRequest instantiates a new AddFavoriteRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAddFavoriteRequest() *AddFavoriteRequest {
+func NewAddFavoriteRequest(postId int32) *AddFavoriteRequest {
 	this := AddFavoriteRequest{}
+	this.PostId = postId
 	return &this
 }
 
@@ -39,36 +44,28 @@ func NewAddFavoriteRequestWithDefaults() *AddFavoriteRequest {
 	return &this
 }
 
-// GetPostUd returns the PostUd field value if set, zero value otherwise.
-func (o *AddFavoriteRequest) GetPostUd() float32 {
-	if o == nil || IsNil(o.PostUd) {
-		var ret float32
+// GetPostId returns the PostId field value
+func (o *AddFavoriteRequest) GetPostId() int32 {
+	if o == nil {
+		var ret int32
 		return ret
 	}
-	return *o.PostUd
+
+	return o.PostId
 }
 
-// GetPostUdOk returns a tuple with the PostUd field value if set, nil otherwise
+// GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *AddFavoriteRequest) GetPostUdOk() (*float32, bool) {
-	if o == nil || IsNil(o.PostUd) {
+func (o *AddFavoriteRequest) GetPostIdOk() (*int32, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.PostUd, true
+	return &o.PostId, true
 }
 
-// HasPostUd returns a boolean if a field has been set.
-func (o *AddFavoriteRequest) HasPostUd() bool {
-	if o != nil && !IsNil(o.PostUd) {
-		return true
-	}
-
-	return false
-}
-
-// SetPostUd gets a reference to the given float32 and assigns it to the PostUd field.
-func (o *AddFavoriteRequest) SetPostUd(v float32) {
-	o.PostUd = &v
+// SetPostId sets field value
+func (o *AddFavoriteRequest) SetPostId(v int32) {
+	o.PostId = v
 }
 
 func (o AddFavoriteRequest) MarshalJSON() ([]byte, error) {
@@ -81,10 +78,45 @@ func (o AddFavoriteRequest) MarshalJSON() ([]byte, error) {
 
 func (o AddFavoriteRequest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.PostUd) {
-		toSerialize["post_ud"] = o.PostUd
-	}
+	toSerialize["post_id"] = o.PostId
 	return toSerialize, nil
+}
+
+func (o *AddFavoriteRequest) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"post_id",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varAddFavoriteRequest := _AddFavoriteRequest{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varAddFavoriteRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = AddFavoriteRequest(varAddFavoriteRequest)
+
+	return err
 }
 
 type NullableAddFavoriteRequest struct {

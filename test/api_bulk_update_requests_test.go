@@ -26,7 +26,7 @@ func Test_e621_BulkUpdateRequestsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.BulkUpdateRequestsAPI.ApproveBulkUpdateRequest(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_BulkUpdateRequestsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.BulkUpdateRequestsAPI.EditBulkUpdateRequest(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_BulkUpdateRequestsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.BulkUpdateRequestsAPI.GetBulkUpdateRequest(context.Background(), id).Execute()
 
@@ -78,7 +78,7 @@ func Test_e621_BulkUpdateRequestsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.BulkUpdateRequestsAPI.RejectBulkUpdateRequest(context.Background(), id).Execute()
 

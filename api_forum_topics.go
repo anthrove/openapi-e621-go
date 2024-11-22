@@ -26,8 +26,8 @@ type ForumTopicsAPICreateForumTopicRequest struct {
 	ctx                                  context.Context
 	ApiService                           *ForumTopicsAPIService
 	forumTopicTitle                      *string
-	forumTopicCategoryId                 *float32
-	forumTopicOriginalPostAttributesId   *float32
+	forumTopicCategoryId                 *int32
+	forumTopicOriginalPostAttributesId   *int32
 	forumTopicOriginalPostAttributesBody *string
 	forumTopicIsSticky                   *bool
 	forumTopicIsLocked                   *bool
@@ -38,13 +38,13 @@ func (r ForumTopicsAPICreateForumTopicRequest) ForumTopicTitle(forumTopicTitle s
 	return r
 }
 
-func (r ForumTopicsAPICreateForumTopicRequest) ForumTopicCategoryId(forumTopicCategoryId float32) ForumTopicsAPICreateForumTopicRequest {
+func (r ForumTopicsAPICreateForumTopicRequest) ForumTopicCategoryId(forumTopicCategoryId int32) ForumTopicsAPICreateForumTopicRequest {
 	r.forumTopicCategoryId = &forumTopicCategoryId
 	return r
 }
 
 // Forum post ID. Mutually exclusive with body, one must be provided.
-func (r ForumTopicsAPICreateForumTopicRequest) ForumTopicOriginalPostAttributesId(forumTopicOriginalPostAttributesId float32) ForumTopicsAPICreateForumTopicRequest {
+func (r ForumTopicsAPICreateForumTopicRequest) ForumTopicOriginalPostAttributesId(forumTopicOriginalPostAttributesId int32) ForumTopicsAPICreateForumTopicRequest {
 	r.forumTopicOriginalPostAttributesId = &forumTopicOriginalPostAttributesId
 	return r
 }
@@ -204,7 +204,7 @@ func (a *ForumTopicsAPIService) CreateForumTopicExecute(r ForumTopicsAPICreateFo
 type ForumTopicsAPIDeleteForumTopicRequest struct {
 	ctx        context.Context
 	ApiService *ForumTopicsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumTopicsAPIDeleteForumTopicRequest) Execute() (*http.Response, error) {
@@ -220,7 +220,7 @@ You must be Admin+.
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPIDeleteForumTopicRequest
 */
-func (a *ForumTopicsAPIService) DeleteForumTopic(ctx context.Context, id float32) ForumTopicsAPIDeleteForumTopicRequest {
+func (a *ForumTopicsAPIService) DeleteForumTopic(ctx context.Context, id int32) ForumTopicsAPIDeleteForumTopicRequest {
 	return ForumTopicsAPIDeleteForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -317,10 +317,10 @@ func (a *ForumTopicsAPIService) DeleteForumTopicExecute(r ForumTopicsAPIDeleteFo
 type ForumTopicsAPIEditForumTopicRequest struct {
 	ctx                                  context.Context
 	ApiService                           *ForumTopicsAPIService
-	id                                   float32
+	id                                   int32
 	forumTopicTitle                      *string
-	forumTopicCategoryId                 *float32
-	forumTopicOriginalPostAttributesId   *float32
+	forumTopicCategoryId                 *int32
+	forumTopicOriginalPostAttributesId   *int32
 	forumTopicOriginalPostAttributesBody *string
 	forumTopicIsSticky                   *bool
 	forumTopicIsLocked                   *bool
@@ -331,13 +331,13 @@ func (r ForumTopicsAPIEditForumTopicRequest) ForumTopicTitle(forumTopicTitle str
 	return r
 }
 
-func (r ForumTopicsAPIEditForumTopicRequest) ForumTopicCategoryId(forumTopicCategoryId float32) ForumTopicsAPIEditForumTopicRequest {
+func (r ForumTopicsAPIEditForumTopicRequest) ForumTopicCategoryId(forumTopicCategoryId int32) ForumTopicsAPIEditForumTopicRequest {
 	r.forumTopicCategoryId = &forumTopicCategoryId
 	return r
 }
 
 // Forum post ID. Silently ignored
-func (r ForumTopicsAPIEditForumTopicRequest) ForumTopicOriginalPostAttributesId(forumTopicOriginalPostAttributesId float32) ForumTopicsAPIEditForumTopicRequest {
+func (r ForumTopicsAPIEditForumTopicRequest) ForumTopicOriginalPostAttributesId(forumTopicOriginalPostAttributesId int32) ForumTopicsAPIEditForumTopicRequest {
 	r.forumTopicOriginalPostAttributesId = &forumTopicOriginalPostAttributesId
 	return r
 }
@@ -371,7 +371,7 @@ EditForumTopic Edit Forum Topic
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPIEditForumTopicRequest
 */
-func (a *ForumTopicsAPIService) EditForumTopic(ctx context.Context, id float32) ForumTopicsAPIEditForumTopicRequest {
+func (a *ForumTopicsAPIService) EditForumTopic(ctx context.Context, id int32) ForumTopicsAPIEditForumTopicRequest {
 	return ForumTopicsAPIEditForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -497,7 +497,7 @@ func (a *ForumTopicsAPIService) EditForumTopicExecute(r ForumTopicsAPIEditForumT
 type ForumTopicsAPIGetForumTopicRequest struct {
 	ctx        context.Context
 	ApiService *ForumTopicsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumTopicsAPIGetForumTopicRequest) Execute() (*ForumTopic, *http.Response, error) {
@@ -513,7 +513,7 @@ If the forum topic is hidden, you must be the creator or Moderator+ to see it.
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPIGetForumTopicRequest
 */
-func (a *ForumTopicsAPIService) GetForumTopic(ctx context.Context, id float32) ForumTopicsAPIGetForumTopicRequest {
+func (a *ForumTopicsAPIService) GetForumTopic(ctx context.Context, id int32) ForumTopicsAPIGetForumTopicRequest {
 	return ForumTopicsAPIGetForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -622,7 +622,7 @@ func (a *ForumTopicsAPIService) GetForumTopicExecute(r ForumTopicsAPIGetForumTop
 type ForumTopicsAPIHideForumTopicRequest struct {
 	ctx        context.Context
 	ApiService *ForumTopicsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumTopicsAPIHideForumTopicRequest) Execute() (*ForumTopic, *http.Response, error) {
@@ -638,7 +638,7 @@ You must be the creator or Moderator+.
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPIHideForumTopicRequest
 */
-func (a *ForumTopicsAPIService) HideForumTopic(ctx context.Context, id float32) ForumTopicsAPIHideForumTopicRequest {
+func (a *ForumTopicsAPIService) HideForumTopic(ctx context.Context, id int32) ForumTopicsAPIHideForumTopicRequest {
 	return ForumTopicsAPIHideForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -857,7 +857,7 @@ type ForumTopicsAPISearchForumTopicsRequest struct {
 	searchOrder        *string
 	searchTitle        *string
 	searchTitleMatches *string
-	searchCategoryId   *float32
+	searchCategoryId   *int32
 	searchIsSticky     *bool
 	searchIsLocked     *bool
 	searchIsHidden     *bool
@@ -896,7 +896,7 @@ func (r ForumTopicsAPISearchForumTopicsRequest) SearchTitleMatches(searchTitleMa
 	return r
 }
 
-func (r ForumTopicsAPISearchForumTopicsRequest) SearchCategoryId(searchCategoryId float32) ForumTopicsAPISearchForumTopicsRequest {
+func (r ForumTopicsAPISearchForumTopicsRequest) SearchCategoryId(searchCategoryId int32) ForumTopicsAPISearchForumTopicsRequest {
 	r.searchCategoryId = &searchCategoryId
 	return r
 }
@@ -1042,7 +1042,7 @@ func (a *ForumTopicsAPIService) SearchForumTopicsExecute(r ForumTopicsAPISearchF
 type ForumTopicsAPISubscribeForumTopicRequest struct {
 	ctx        context.Context
 	ApiService *ForumTopicsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumTopicsAPISubscribeForumTopicRequest) Execute() (*ForumTopic, *http.Response, error) {
@@ -1056,7 +1056,7 @@ SubscribeForumTopic Subscribe To Forum Topic
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPISubscribeForumTopicRequest
 */
-func (a *ForumTopicsAPIService) SubscribeForumTopic(ctx context.Context, id float32) ForumTopicsAPISubscribeForumTopicRequest {
+func (a *ForumTopicsAPIService) SubscribeForumTopic(ctx context.Context, id int32) ForumTopicsAPISubscribeForumTopicRequest {
 	return ForumTopicsAPISubscribeForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1165,7 +1165,7 @@ func (a *ForumTopicsAPIService) SubscribeForumTopicExecute(r ForumTopicsAPISubsc
 type ForumTopicsAPIUnhideForumTopicRequest struct {
 	ctx        context.Context
 	ApiService *ForumTopicsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumTopicsAPIUnhideForumTopicRequest) Execute() (*ForumTopic, *http.Response, error) {
@@ -1181,7 +1181,7 @@ You must be Moderator+.
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPIUnhideForumTopicRequest
 */
-func (a *ForumTopicsAPIService) UnhideForumTopic(ctx context.Context, id float32) ForumTopicsAPIUnhideForumTopicRequest {
+func (a *ForumTopicsAPIService) UnhideForumTopic(ctx context.Context, id int32) ForumTopicsAPIUnhideForumTopicRequest {
 	return ForumTopicsAPIUnhideForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1290,7 +1290,7 @@ func (a *ForumTopicsAPIService) UnhideForumTopicExecute(r ForumTopicsAPIUnhideFo
 type ForumTopicsAPIUnsubscribeForumTopicRequest struct {
 	ctx        context.Context
 	ApiService *ForumTopicsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumTopicsAPIUnsubscribeForumTopicRequest) Execute() (*ForumTopic, *http.Response, error) {
@@ -1304,7 +1304,7 @@ UnsubscribeForumTopic Unsubscribe From Forum Topic
 	@param id The ID of the forum topic.
 	@return ForumTopicsAPIUnsubscribeForumTopicRequest
 */
-func (a *ForumTopicsAPIService) UnsubscribeForumTopic(ctx context.Context, id float32) ForumTopicsAPIUnsubscribeForumTopicRequest {
+func (a *ForumTopicsAPIService) UnsubscribeForumTopic(ctx context.Context, id int32) ForumTopicsAPIUnsubscribeForumTopicRequest {
 	return ForumTopicsAPIUnsubscribeForumTopicRequest{
 		ApiService: a,
 		ctx:        ctx,

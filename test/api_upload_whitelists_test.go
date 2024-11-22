@@ -26,7 +26,7 @@ func Test_e621_UploadWhitelistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.UploadWhitelistsAPI.CheckIfUrlIsAllowed(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_UploadWhitelistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UploadWhitelistsAPI.DeleteUploadWhitelist(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_UploadWhitelistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UploadWhitelistsAPI.EditUploadWhitelist(context.Background(), id).Execute()
 

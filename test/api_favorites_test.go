@@ -50,7 +50,7 @@ func Test_e621_FavoritesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.FavoritesAPI.RemoveFavorite(context.Background(), id).Execute()
 

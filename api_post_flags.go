@@ -25,12 +25,12 @@ type PostFlagsAPIService service
 type PostFlagsAPICreatePostFlagRequest struct {
 	ctx                context.Context
 	ApiService         *PostFlagsAPIService
-	postFlagPostId     *float32
+	postFlagPostId     *int32
 	postFlagReasonName *string
-	postFlagParentId   *float32
+	postFlagParentId   *int32
 }
 
-func (r PostFlagsAPICreatePostFlagRequest) PostFlagPostId(postFlagPostId float32) PostFlagsAPICreatePostFlagRequest {
+func (r PostFlagsAPICreatePostFlagRequest) PostFlagPostId(postFlagPostId int32) PostFlagsAPICreatePostFlagRequest {
 	r.postFlagPostId = &postFlagPostId
 	return r
 }
@@ -40,7 +40,7 @@ func (r PostFlagsAPICreatePostFlagRequest) PostFlagReasonName(postFlagReasonName
 	return r
 }
 
-func (r PostFlagsAPICreatePostFlagRequest) PostFlagParentId(postFlagParentId float32) PostFlagsAPICreatePostFlagRequest {
+func (r PostFlagsAPICreatePostFlagRequest) PostFlagParentId(postFlagParentId int32) PostFlagsAPICreatePostFlagRequest {
 	r.postFlagParentId = &postFlagParentId
 	return r
 }
@@ -175,7 +175,7 @@ func (a *PostFlagsAPIService) CreatePostFlagExecute(r PostFlagsAPICreatePostFlag
 type PostFlagsAPIGetPostFlagRequest struct {
 	ctx        context.Context
 	ApiService *PostFlagsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostFlagsAPIGetPostFlagRequest) Execute() (*PostFlag, *http.Response, error) {
@@ -189,7 +189,7 @@ GetPostFlag Get Post Flag
 	@param id The ID of the post flag.
 	@return PostFlagsAPIGetPostFlagRequest
 */
-func (a *PostFlagsAPIService) GetPostFlag(ctx context.Context, id float32) PostFlagsAPIGetPostFlagRequest {
+func (a *PostFlagsAPIService) GetPostFlag(ctx context.Context, id int32) PostFlagsAPIGetPostFlagRequest {
 	return PostFlagsAPIGetPostFlagRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -293,9 +293,9 @@ type PostFlagsAPISearchPostFlagsRequest struct {
 	searchIpAddr        *string
 	searchOrder         *string
 	searchReasonMatches *string
-	searchCreatorId     *float32
+	searchCreatorId     *int32
 	searchCreatorName   *string
-	searchPostId        *float32
+	searchPostId        *int32
 	searchPostTagsMatch *string
 	searchType          *string
 	searchIsResolved    *bool
@@ -335,7 +335,7 @@ func (r PostFlagsAPISearchPostFlagsRequest) SearchReasonMatches(searchReasonMatc
 	return r
 }
 
-func (r PostFlagsAPISearchPostFlagsRequest) SearchCreatorId(searchCreatorId float32) PostFlagsAPISearchPostFlagsRequest {
+func (r PostFlagsAPISearchPostFlagsRequest) SearchCreatorId(searchCreatorId int32) PostFlagsAPISearchPostFlagsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -345,7 +345,7 @@ func (r PostFlagsAPISearchPostFlagsRequest) SearchCreatorName(searchCreatorName 
 	return r
 }
 
-func (r PostFlagsAPISearchPostFlagsRequest) SearchPostId(searchPostId float32) PostFlagsAPISearchPostFlagsRequest {
+func (r PostFlagsAPISearchPostFlagsRequest) SearchPostId(searchPostId int32) PostFlagsAPISearchPostFlagsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }

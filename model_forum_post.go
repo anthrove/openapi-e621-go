@@ -23,7 +23,7 @@ var _ MappedNullable = &ForumPost{}
 // ForumPost struct for ForumPost
 type ForumPost struct {
 	Id            int32           `json:"id"`
-	Topic         *float32        `json:"topic,omitempty"`
+	TopicId       int32           `json:"topic_id"`
 	CreatorId     int32           `json:"creator_id"`
 	UpdaterId     int32           `json:"updater_id"`
 	Body          string          `json:"body"`
@@ -40,9 +40,10 @@ type _ForumPost ForumPost
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewForumPost(id int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32) *ForumPost {
+func NewForumPost(id int32, topicId int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32) *ForumPost {
 	this := ForumPost{}
 	this.Id = id
+	this.TopicId = topicId
 	this.CreatorId = creatorId
 	this.UpdaterId = updaterId
 	this.Body = body
@@ -86,36 +87,28 @@ func (o *ForumPost) SetId(v int32) {
 	o.Id = v
 }
 
-// GetTopic returns the Topic field value if set, zero value otherwise.
-func (o *ForumPost) GetTopic() float32 {
-	if o == nil || IsNil(o.Topic) {
-		var ret float32
+// GetTopicId returns the TopicId field value
+func (o *ForumPost) GetTopicId() int32 {
+	if o == nil {
+		var ret int32
 		return ret
 	}
-	return *o.Topic
+
+	return o.TopicId
 }
 
-// GetTopicOk returns a tuple with the Topic field value if set, nil otherwise
+// GetTopicIdOk returns a tuple with the TopicId field value
 // and a boolean to check if the value has been set.
-func (o *ForumPost) GetTopicOk() (*float32, bool) {
-	if o == nil || IsNil(o.Topic) {
+func (o *ForumPost) GetTopicIdOk() (*int32, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Topic, true
+	return &o.TopicId, true
 }
 
-// HasTopic returns a boolean if a field has been set.
-func (o *ForumPost) HasTopic() bool {
-	if o != nil && !IsNil(o.Topic) {
-		return true
-	}
-
-	return false
-}
-
-// SetTopic gets a reference to the given float32 and assigns it to the Topic field.
-func (o *ForumPost) SetTopic(v float32) {
-	o.Topic = &v
+// SetTopicId sets field value
+func (o *ForumPost) SetTopicId(v int32) {
+	o.TopicId = v
 }
 
 // GetCreatorId returns the CreatorId field value
@@ -323,9 +316,7 @@ func (o ForumPost) MarshalJSON() ([]byte, error) {
 func (o ForumPost) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["id"] = o.Id
-	if !IsNil(o.Topic) {
-		toSerialize["topic"] = o.Topic
-	}
+	toSerialize["topic_id"] = o.TopicId
 	toSerialize["creator_id"] = o.CreatorId
 	toSerialize["updater_id"] = o.UpdaterId
 	toSerialize["body"] = o.Body
@@ -343,6 +334,7 @@ func (o *ForumPost) UnmarshalJSON(data []byte) (err error) {
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"id",
+		"topic_id",
 		"creator_id",
 		"updater_id",
 		"body",

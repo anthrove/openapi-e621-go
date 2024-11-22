@@ -36,8 +36,8 @@ import (
 )
 
 func main() {
-	postId := float32(8.14) // float32 | 
-	poolId := float32(8.14) // float32 | Mutually exclusive with pool_name. (optional)
+	postId := int32(56) // int32 | 
+	poolId := int32(56) // int32 | Mutually exclusive with pool_name. (optional)
 	poolName := "poolName_example" // string | Mutually exclusive with pool_id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -61,8 +61,8 @@ Other parameters are passed through a pointer to a apiAddPostToPoolRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **float32** |  | 
- **poolId** | **float32** | Mutually exclusive with pool_name. | 
+ **postId** | **int32** |  | 
+ **poolId** | **int32** | Mutually exclusive with pool_name. | 
  **poolName** | **string** | Mutually exclusive with pool_id. | 
 
 ### Return type
@@ -107,7 +107,7 @@ func main() {
 	poolCategory := openapiclient.PoolCategories("collection") // PoolCategories |  (optional)
 	ipoolSActive := true // bool |  (optional)
 	poolPostIdsString := "poolPostIdsString_example" // string | Space separated list of post IDs. Mutually exclusive with post_ids. (optional)
-	poolPostIds := []float32{float32(123)} // []float32 | Array of post IDs. Mutually exclusive with post_ids_string. (optional)
+	poolPostIds := []int32{int32(123)} // []int32 | Array of post IDs. Mutually exclusive with post_ids_string. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
  **poolCategory** | [**PoolCategories**](PoolCategories.md) |  | 
  **ipoolSActive** | **bool** |  | 
  **poolPostIdsString** | **string** | Space separated list of post IDs. Mutually exclusive with post_ids. | 
- **poolPostIds** | **[]float32** | Array of post IDs. Mutually exclusive with post_ids_string. | 
+ **poolPostIds** | **[]int32** | Array of post IDs. Mutually exclusive with post_ids_string. | 
 
 ### Return type
 
@@ -178,7 +178,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the pool.
+	id := int32(56) // int32 | The ID of the pool.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -196,7 +196,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the pool. | 
+**id** | **int32** | The ID of the pool. | 
 
 ### Other Parameters
 
@@ -244,13 +244,13 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the pool.
+	id := int32(56) // int32 | The ID of the pool.
 	poolName := "poolName_example" // string |  (optional)
 	poolDescription := "poolDescription_example" // string |  (optional)
 	poolIsActive := true // bool |  (optional)
 	poolCategory := openapiclient.PoolCategories("collection") // PoolCategories | If the pool has more than 30 posts, you must be Janitor+. (optional)
 	poolPostIdsString := "poolPostIdsString_example" // string | Space separated list of post IDs. Mutually exclusive with post_ids. (optional)
-	poolPostIds := []float32{float32(123)} // []float32 | Array of post IDs. Mutually exclusive with post_ids_string. (optional)
+	poolPostIds := []int32{int32(123)} // []int32 | Array of post IDs. Mutually exclusive with post_ids_string. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -268,7 +268,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the pool. | 
+**id** | **int32** | The ID of the pool. | 
 
 ### Other Parameters
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
  **poolIsActive** | **bool** |  | 
  **poolCategory** | [**PoolCategories**](PoolCategories.md) | If the pool has more than 30 posts, you must be Janitor+. | 
  **poolPostIdsString** | **string** | Space separated list of post IDs. Mutually exclusive with post_ids. | 
- **poolPostIds** | **[]float32** | Array of post IDs. Mutually exclusive with post_ids_string. | 
+ **poolPostIds** | **[]int32** | Array of post IDs. Mutually exclusive with post_ids_string. | 
 
 ### Return type
 
@@ -322,7 +322,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the pool.
+	id := int32(56) // int32 | The ID of the pool.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -342,7 +342,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the pool. | 
+**id** | **int32** | The ID of the pool. | 
 
 ### Other Parameters
 
@@ -390,8 +390,8 @@ import (
 )
 
 func main() {
-	poolId := float32(8.14) // float32 | 
-	postId := float32(8.14) // float32 | 
+	poolId := int32(56) // int32 | 
+	postId := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -414,8 +414,8 @@ Other parameters are passed through a pointer to a apiRemovePostFromPoolRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **poolId** | **float32** |  | 
- **postId** | **float32** |  | 
+ **poolId** | **int32** |  | 
+ **postId** | **int32** |  | 
 
 ### Return type
 
@@ -454,8 +454,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the pool.
-	versionId := float32(8.14) // float32 | The version ID to revert to.
+	id := int32(56) // int32 | The ID of the pool.
+	versionId := int32(56) // int32 | The version ID to revert to.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -473,7 +473,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the pool. | 
+**id** | **int32** | The ID of the pool. | 
 
 ### Other Parameters
 
@@ -483,7 +483,7 @@ Other parameters are passed through a pointer to a apiRevertPoolRequest struct v
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **versionId** | **float32** | The version ID to revert to. | 
+ **versionId** | **int32** | The version ID to revert to. | 
 
 ### Return type
 
@@ -528,7 +528,7 @@ func main() {
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchNameMatches := "searchNameMatches_example" // string |  (optional)
 	searchDescriptionMatches := "searchDescriptionMatches_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 	searchCategory := openapiclient.PoolCategories("collection") // PoolCategories |  (optional)
 	searchIsActive := true // bool |  (optional)
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
  **searchOrder** | **string** |  | 
  **searchNameMatches** | **string** |  | 
  **searchDescriptionMatches** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
  **searchCategory** | [**PoolCategories**](PoolCategories.md) |  | 
  **searchIsActive** | **bool** |  | 

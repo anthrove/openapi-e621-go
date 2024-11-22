@@ -25,7 +25,7 @@ type TakedownsAPIService service
 type TakedownsAPIAddPostsToTakedownByIdsRequest struct {
 	ctx        context.Context
 	ApiService *TakedownsAPIService
-	id         float32
+	id         int32
 	postIds    *string
 }
 
@@ -47,7 +47,7 @@ You must have the bd staff user flag.
 	@param id The ID of the takedown.
 	@return TakedownsAPIAddPostsToTakedownByIdsRequest
 */
-func (a *TakedownsAPIService) AddPostsToTakedownByIds(ctx context.Context, id float32) TakedownsAPIAddPostsToTakedownByIdsRequest {
+func (a *TakedownsAPIService) AddPostsToTakedownByIds(ctx context.Context, id int32) TakedownsAPIAddPostsToTakedownByIdsRequest {
 	return TakedownsAPIAddPostsToTakedownByIdsRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -160,7 +160,7 @@ func (a *TakedownsAPIService) AddPostsToTakedownByIdsExecute(r TakedownsAPIAddPo
 type TakedownsAPIAddPostsToTakedownByTagsRequest struct {
 	ctx        context.Context
 	ApiService *TakedownsAPIService
-	id         float32
+	id         int32
 	postTags   *string
 }
 
@@ -182,7 +182,7 @@ You must have the bd staff user flag.
 	@param id The ID of the takedown.
 	@return TakedownsAPIAddPostsToTakedownByTagsRequest
 */
-func (a *TakedownsAPIService) AddPostsToTakedownByTags(ctx context.Context, id float32) TakedownsAPIAddPostsToTakedownByTagsRequest {
+func (a *TakedownsAPIService) AddPostsToTakedownByTags(ctx context.Context, id int32) TakedownsAPIAddPostsToTakedownByTagsRequest {
 	return TakedownsAPIAddPostsToTakedownByTagsRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -295,7 +295,7 @@ func (a *TakedownsAPIService) AddPostsToTakedownByTagsExecute(r TakedownsAPIAddP
 type TakedownsAPICountMatchingPostsRequest struct {
 	ctx        context.Context
 	ApiService *TakedownsAPIService
-	id         float32
+	id         int32
 	postTags   *string
 }
 
@@ -317,7 +317,7 @@ You must have the bd staff user flag.
 	@param id The ID of the takedown.
 	@return TakedownsAPICountMatchingPostsRequest
 */
-func (a *TakedownsAPIService) CountMatchingPosts(ctx context.Context, id float32) TakedownsAPICountMatchingPostsRequest {
+func (a *TakedownsAPIService) CountMatchingPosts(ctx context.Context, id int32) TakedownsAPICountMatchingPostsRequest {
 	return TakedownsAPICountMatchingPostsRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -434,10 +434,10 @@ type TakedownsAPICreateTakedownRequest struct {
 	takedownReason       *string
 	takedownSource       *string
 	takedownInstructions *string
-	takedownPostIds      *[]float32
+	takedownPostIds      *[]int32
 	takedownReasonHidden *bool
 	takedownNotes        *string
-	takedownDelPostIds   *[]float32
+	takedownDelPostIds   *[]int32
 	takedownStatus       *string
 }
 
@@ -462,7 +462,7 @@ func (r TakedownsAPICreateTakedownRequest) TakedownInstructions(takedownInstruct
 }
 
 // takedown[post_ids][]&#x3D;1&amp;takedown[post_ids][]&#x3D;2
-func (r TakedownsAPICreateTakedownRequest) TakedownPostIds(takedownPostIds []float32) TakedownsAPICreateTakedownRequest {
+func (r TakedownsAPICreateTakedownRequest) TakedownPostIds(takedownPostIds []int32) TakedownsAPICreateTakedownRequest {
 	r.takedownPostIds = &takedownPostIds
 	return r
 }
@@ -479,7 +479,7 @@ func (r TakedownsAPICreateTakedownRequest) TakedownNotes(takedownNotes string) T
 }
 
 // Must have the bd staff user flag to use. takedown[del_post_ids][]&#x3D;1&amp;takedown[del_post_ids][]&#x3D;2
-func (r TakedownsAPICreateTakedownRequest) TakedownDelPostIds(takedownDelPostIds []float32) TakedownsAPICreateTakedownRequest {
+func (r TakedownsAPICreateTakedownRequest) TakedownDelPostIds(takedownDelPostIds []int32) TakedownsAPICreateTakedownRequest {
 	r.takedownDelPostIds = &takedownDelPostIds
 	return r
 }
@@ -636,7 +636,7 @@ func (a *TakedownsAPIService) CreateTakedownExecute(r TakedownsAPICreateTakedown
 type TakedownsAPIDeleteTakedownRequest struct {
 	ctx        context.Context
 	ApiService *TakedownsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TakedownsAPIDeleteTakedownRequest) Execute() (*http.Response, error) {
@@ -652,7 +652,7 @@ You must have the bd staff user flag.
 	@param id The ID of the takedown.
 	@return TakedownsAPIDeleteTakedownRequest
 */
-func (a *TakedownsAPIService) DeleteTakedown(ctx context.Context, id float32) TakedownsAPIDeleteTakedownRequest {
+func (a *TakedownsAPIService) DeleteTakedown(ctx context.Context, id int32) TakedownsAPIDeleteTakedownRequest {
 	return TakedownsAPIDeleteTakedownRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -749,7 +749,7 @@ func (a *TakedownsAPIService) DeleteTakedownExecute(r TakedownsAPIDeleteTakedown
 type TakedownsAPIEditTakedownRequest struct {
 	ctx                  context.Context
 	ApiService           *TakedownsAPIService
-	id                   float32
+	id                   int32
 	takedownNotes        *string
 	takedownReasonHidden *bool
 	takedownPosts        *string
@@ -796,7 +796,7 @@ You must have the bd staff user flag.
 	@param id The ID of the takedown.
 	@return TakedownsAPIEditTakedownRequest
 */
-func (a *TakedownsAPIService) EditTakedown(ctx context.Context, id float32) TakedownsAPIEditTakedownRequest {
+func (a *TakedownsAPIService) EditTakedown(ctx context.Context, id int32) TakedownsAPIEditTakedownRequest {
 	return TakedownsAPIEditTakedownRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -919,7 +919,7 @@ func (a *TakedownsAPIService) EditTakedownExecute(r TakedownsAPIEditTakedownRequ
 type TakedownsAPIGetTakedownRequest struct {
 	ctx        context.Context
 	ApiService *TakedownsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TakedownsAPIGetTakedownRequest) Execute() (*Takedown, *http.Response, error) {
@@ -933,7 +933,7 @@ GetTakedown Get Takedown
 	@param id The ID of the takedown.
 	@return TakedownsAPIGetTakedownRequest
 */
-func (a *TakedownsAPIService) GetTakedown(ctx context.Context, id float32) TakedownsAPIGetTakedownRequest {
+func (a *TakedownsAPIService) GetTakedown(ctx context.Context, id int32) TakedownsAPIGetTakedownRequest {
 	return TakedownsAPIGetTakedownRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1031,7 +1031,7 @@ func (a *TakedownsAPIService) GetTakedownExecute(r TakedownsAPIGetTakedownReques
 type TakedownsAPIRemovePostsFromTakedownByIdsRequest struct {
 	ctx        context.Context
 	ApiService *TakedownsAPIService
-	id         float32
+	id         int32
 	postIds    *string
 }
 
@@ -1053,7 +1053,7 @@ You must have the bd staff user flag.
 	@param id The ID of the takedown.
 	@return TakedownsAPIRemovePostsFromTakedownByIdsRequest
 */
-func (a *TakedownsAPIService) RemovePostsFromTakedownByIds(ctx context.Context, id float32) TakedownsAPIRemovePostsFromTakedownByIdsRequest {
+func (a *TakedownsAPIService) RemovePostsFromTakedownByIds(ctx context.Context, id int32) TakedownsAPIRemovePostsFromTakedownByIdsRequest {
 	return TakedownsAPIRemovePostsFromTakedownByIdsRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1162,11 +1162,11 @@ type TakedownsAPISearchTakedownsRequest struct {
 	searchStatus       *string
 	searchSource       *string
 	searchReason       *string
-	searchCreatorId    *float32
+	searchCreatorId    *int32
 	searchCreatorName  *string
 	searchReasonHidden *bool
 	searchInstructions *string
-	searchPostId       *float32
+	searchPostId       *int32
 	searchNotes        *string
 	searchEmail        *string
 	searchVericode     *string
@@ -1219,7 +1219,7 @@ func (r TakedownsAPISearchTakedownsRequest) SearchReason(searchReason string) Ta
 }
 
 // Must be Moderator+ to use.
-func (r TakedownsAPISearchTakedownsRequest) SearchCreatorId(searchCreatorId float32) TakedownsAPISearchTakedownsRequest {
+func (r TakedownsAPISearchTakedownsRequest) SearchCreatorId(searchCreatorId int32) TakedownsAPISearchTakedownsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -1243,7 +1243,7 @@ func (r TakedownsAPISearchTakedownsRequest) SearchInstructions(searchInstruction
 }
 
 // Must be Moderator+ to use.
-func (r TakedownsAPISearchTakedownsRequest) SearchPostId(searchPostId float32) TakedownsAPISearchTakedownsRequest {
+func (r TakedownsAPISearchTakedownsRequest) SearchPostId(searchPostId int32) TakedownsAPISearchTakedownsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }

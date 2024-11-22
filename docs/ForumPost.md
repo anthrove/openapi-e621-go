@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int32** |  | 
-**Topic** | Pointer to **float32** |  | [optional] 
+**TopicId** | **int32** |  | 
 **CreatorId** | **int32** |  | 
 **UpdaterId** | **int32** |  | 
 **Body** | **string** |  | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewForumPost
 
-`func NewForumPost(id int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32, ) *ForumPost`
+`func NewForumPost(id int32, topicId int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32, ) *ForumPost`
 
 NewForumPost instantiates a new ForumPost object
 This constructor will assign default values to properties that have it defined,
@@ -54,30 +54,25 @@ and a boolean to check if the value has been set.
 SetId sets Id field to given value.
 
 
-### GetTopic
+### GetTopicId
 
-`func (o *ForumPost) GetTopic() float32`
+`func (o *ForumPost) GetTopicId() int32`
 
-GetTopic returns the Topic field if non-nil, zero value otherwise.
+GetTopicId returns the TopicId field if non-nil, zero value otherwise.
 
-### GetTopicOk
+### GetTopicIdOk
 
-`func (o *ForumPost) GetTopicOk() (*float32, bool)`
+`func (o *ForumPost) GetTopicIdOk() (*int32, bool)`
 
-GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
+GetTopicIdOk returns a tuple with the TopicId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTopic
+### SetTopicId
 
-`func (o *ForumPost) SetTopic(v float32)`
+`func (o *ForumPost) SetTopicId(v int32)`
 
-SetTopic sets Topic field to given value.
+SetTopicId sets TopicId field to given value.
 
-### HasTopic
-
-`func (o *ForumPost) HasTopic() bool`
-
-HasTopic returns a boolean if a field has been set.
 
 ### GetCreatorId
 

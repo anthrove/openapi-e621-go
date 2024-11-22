@@ -25,7 +25,7 @@ type TagsAPIService service
 type TagsAPICorrectTagRequest struct {
 	ctx        context.Context
 	ApiService *TagsAPIService
-	id         float32
+	id         int32
 	commit     *string
 }
 
@@ -48,7 +48,7 @@ You must be Janitor+. `commit=Fix` must be set.
 	@param id The ID of the tag.
 	@return TagsAPICorrectTagRequest
 */
-func (a *TagsAPIService) CorrectTag(ctx context.Context, id float32) TagsAPICorrectTagRequest {
+func (a *TagsAPIService) CorrectTag(ctx context.Context, id int32) TagsAPICorrectTagRequest {
 	return TagsAPICorrectTagRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -149,7 +149,7 @@ func (a *TagsAPIService) CorrectTagExecute(r TagsAPICorrectTagRequest) (*http.Re
 type TagsAPIEditTagRequest struct {
 	ctx         context.Context
 	ApiService  *TagsAPIService
-	id          float32
+	id          int32
 	tagCategory *TagCategories
 	tagIsLocked *bool
 }
@@ -178,7 +178,7 @@ Must be Admin+ if the tag is locked or post count is >100.
 	@param id The ID of the tag.
 	@return TagsAPIEditTagRequest
 */
-func (a *TagsAPIService) EditTag(ctx context.Context, id float32) TagsAPIEditTagRequest {
+func (a *TagsAPIService) EditTag(ctx context.Context, id int32) TagsAPIEditTagRequest {
 	return TagsAPIEditTagRequest{
 		ApiService: a,
 		ctx:        ctx,

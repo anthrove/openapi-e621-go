@@ -38,7 +38,7 @@ func Test_e621_UserFeedbacksAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UserFeedbacksAPI.DeleteUserFeedback(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_UserFeedbacksAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UserFeedbacksAPI.DestroyUserFeedback(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_UserFeedbacksAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UserFeedbacksAPI.EditUserFeedback(context.Background(), id).Execute()
 
@@ -77,7 +77,7 @@ func Test_e621_UserFeedbacksAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.UserFeedbacksAPI.GetUserFeedback(context.Background(), id).Execute()
 
@@ -103,7 +103,7 @@ func Test_e621_UserFeedbacksAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.UserFeedbacksAPI.UndeleteUserFeedback(context.Background(), id).Execute()
 

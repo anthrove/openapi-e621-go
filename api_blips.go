@@ -26,7 +26,7 @@ type BlipsAPICreateBlipRequest struct {
 	ctx            context.Context
 	ApiService     *BlipsAPIService
 	blipBody       *string
-	blipResponseTo *float32
+	blipResponseTo *int32
 }
 
 func (r BlipsAPICreateBlipRequest) BlipBody(blipBody string) BlipsAPICreateBlipRequest {
@@ -34,7 +34,7 @@ func (r BlipsAPICreateBlipRequest) BlipBody(blipBody string) BlipsAPICreateBlipR
 	return r
 }
 
-func (r BlipsAPICreateBlipRequest) BlipResponseTo(blipResponseTo float32) BlipsAPICreateBlipRequest {
+func (r BlipsAPICreateBlipRequest) BlipResponseTo(blipResponseTo int32) BlipsAPICreateBlipRequest {
 	r.blipResponseTo = &blipResponseTo
 	return r
 }
@@ -174,7 +174,7 @@ func (a *BlipsAPIService) CreateBlipExecute(r BlipsAPICreateBlipRequest) (*Blip,
 type BlipsAPIDeleteBlipRequest struct {
 	ctx        context.Context
 	ApiService *BlipsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BlipsAPIDeleteBlipRequest) Execute() (*http.Response, error) {
@@ -190,7 +190,7 @@ You must be Admin+.
 	@param id The ID of the blip.
 	@return BlipsAPIDeleteBlipRequest
 */
-func (a *BlipsAPIService) DeleteBlip(ctx context.Context, id float32) BlipsAPIDeleteBlipRequest {
+func (a *BlipsAPIService) DeleteBlip(ctx context.Context, id int32) BlipsAPIDeleteBlipRequest {
 	return BlipsAPIDeleteBlipRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -287,7 +287,7 @@ func (a *BlipsAPIService) DeleteBlipExecute(r BlipsAPIDeleteBlipRequest) (*http.
 type BlipsAPIEditBlipRequest struct {
 	ctx        context.Context
 	ApiService *BlipsAPIService
-	id         float32
+	id         int32
 	blipBody   *string
 }
 
@@ -309,7 +309,7 @@ Unless Admin+, blips cannot be edited after 5 minutes. Marked blips cannot be ed
 	@param id The ID of the blip.
 	@return BlipsAPIEditBlipRequest
 */
-func (a *BlipsAPIService) EditBlip(ctx context.Context, id float32) BlipsAPIEditBlipRequest {
+func (a *BlipsAPIService) EditBlip(ctx context.Context, id int32) BlipsAPIEditBlipRequest {
 	return BlipsAPIEditBlipRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -432,7 +432,7 @@ func (a *BlipsAPIService) EditBlipExecute(r BlipsAPIEditBlipRequest) (*Blip, *ht
 type BlipsAPIGetBlipRequest struct {
 	ctx        context.Context
 	ApiService *BlipsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BlipsAPIGetBlipRequest) Execute() ([]Blip, *http.Response, error) {
@@ -446,7 +446,7 @@ GetBlip Get Blip
 	@param id The ID of the blip to get.
 	@return BlipsAPIGetBlipRequest
 */
-func (a *BlipsAPIService) GetBlip(ctx context.Context, id float32) BlipsAPIGetBlipRequest {
+func (a *BlipsAPIService) GetBlip(ctx context.Context, id int32) BlipsAPIGetBlipRequest {
 	return BlipsAPIGetBlipRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -555,7 +555,7 @@ func (a *BlipsAPIService) GetBlipExecute(r BlipsAPIGetBlipRequest) ([]Blip, *htt
 type BlipsAPIHideBlipRequest struct {
 	ctx        context.Context
 	ApiService *BlipsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BlipsAPIHideBlipRequest) Execute() (*Blip, *http.Response, error) {
@@ -571,7 +571,7 @@ You must be the creator or Moderator+.
 	@param id The ID of the blip.
 	@return BlipsAPIHideBlipRequest
 */
-func (a *BlipsAPIService) HideBlip(ctx context.Context, id float32) BlipsAPIHideBlipRequest {
+func (a *BlipsAPIService) HideBlip(ctx context.Context, id int32) BlipsAPIHideBlipRequest {
 	return BlipsAPIHideBlipRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -680,7 +680,7 @@ func (a *BlipsAPIService) HideBlipExecute(r BlipsAPIHideBlipRequest) (*Blip, *ht
 type BlipsAPIMarkBlipRequest struct {
 	ctx             context.Context
 	ApiService      *BlipsAPIService
-	id              float32
+	id              int32
 	markBlipRequest *MarkBlipRequest
 }
 
@@ -702,7 +702,7 @@ You must be Moderator+.
 	@param id The ID of the blip.
 	@return BlipsAPIMarkBlipRequest
 */
-func (a *BlipsAPIService) MarkBlip(ctx context.Context, id float32) BlipsAPIMarkBlipRequest {
+func (a *BlipsAPIService) MarkBlip(ctx context.Context, id int32) BlipsAPIMarkBlipRequest {
 	return BlipsAPIMarkBlipRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -818,10 +818,10 @@ type BlipsAPISearchBlipsRequest struct {
 	searchId          *int32
 	searchIpAddr      *string
 	searchOrder       *string
-	searchCreatorId   *float32
+	searchCreatorId   *int32
 	searchCreatorName *string
 	searchBodyMatches *string
-	searchResponseTo  *float32
+	searchResponseTo  *int32
 }
 
 // The maximum number of results to return. Between 0 and 320.
@@ -853,7 +853,7 @@ func (r BlipsAPISearchBlipsRequest) SearchOrder(searchOrder string) BlipsAPISear
 	return r
 }
 
-func (r BlipsAPISearchBlipsRequest) SearchCreatorId(searchCreatorId float32) BlipsAPISearchBlipsRequest {
+func (r BlipsAPISearchBlipsRequest) SearchCreatorId(searchCreatorId int32) BlipsAPISearchBlipsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -868,7 +868,7 @@ func (r BlipsAPISearchBlipsRequest) SearchBodyMatches(searchBodyMatches string) 
 	return r
 }
 
-func (r BlipsAPISearchBlipsRequest) SearchResponseTo(searchResponseTo float32) BlipsAPISearchBlipsRequest {
+func (r BlipsAPISearchBlipsRequest) SearchResponseTo(searchResponseTo int32) BlipsAPISearchBlipsRequest {
 	r.searchResponseTo = &searchResponseTo
 	return r
 }
@@ -998,7 +998,7 @@ func (a *BlipsAPIService) SearchBlipsExecute(r BlipsAPISearchBlipsRequest) (*Sea
 type BlipsAPIUnhideBlipRequest struct {
 	ctx        context.Context
 	ApiService *BlipsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BlipsAPIUnhideBlipRequest) Execute() (*Blip, *http.Response, error) {
@@ -1014,7 +1014,7 @@ You must be Moderator+.
 	@param id The ID of the blip.
 	@return BlipsAPIUnhideBlipRequest
 */
-func (a *BlipsAPIService) UnhideBlip(ctx context.Context, id float32) BlipsAPIUnhideBlipRequest {
+func (a *BlipsAPIService) UnhideBlip(ctx context.Context, id int32) BlipsAPIUnhideBlipRequest {
 	return BlipsAPIUnhideBlipRequest{
 		ApiService: a,
 		ctx:        ctx,

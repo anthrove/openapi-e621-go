@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MatchedPostCount** | **float32** |  | 
+**MatchedPostCount** | **int32** |  | 
 
 ## Methods
 
 ### NewCountMatchingPosts200Response
 
-`func NewCountMatchingPosts200Response(matchedPostCount float32, ) *CountMatchingPosts200Response`
+`func NewCountMatchingPosts200Response(matchedPostCount int32, ) *CountMatchingPosts200Response`
 
 NewCountMatchingPosts200Response instantiates a new CountMatchingPosts200Response object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetMatchedPostCount
 
-`func (o *CountMatchingPosts200Response) GetMatchedPostCount() float32`
+`func (o *CountMatchingPosts200Response) GetMatchedPostCount() int32`
 
 GetMatchedPostCount returns the MatchedPostCount field if non-nil, zero value otherwise.
 
 ### GetMatchedPostCountOk
 
-`func (o *CountMatchingPosts200Response) GetMatchedPostCountOk() (*float32, bool)`
+`func (o *CountMatchingPosts200Response) GetMatchedPostCountOk() (*int32, bool)`
 
 GetMatchedPostCountOk returns a tuple with the MatchedPostCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMatchedPostCount
 
-`func (o *CountMatchingPosts200Response) SetMatchedPostCount(v float32)`
+`func (o *CountMatchingPosts200Response) SetMatchedPostCount(v int32)`
 
 SetMatchedPostCount sets MatchedPostCount field to given value.
 

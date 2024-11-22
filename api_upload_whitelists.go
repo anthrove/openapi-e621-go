@@ -25,7 +25,7 @@ type UploadWhitelistsAPIService service
 type UploadWhitelistsAPICheckIfUrlIsAllowedRequest struct {
 	ctx        context.Context
 	ApiService *UploadWhitelistsAPIService
-	id         float32
+	id         int32
 	url        *string
 }
 
@@ -45,7 +45,7 @@ CheckIfUrlIsAllowed Check If URL Is Allowed
 	@param id The ID of the upload whitelist.
 	@return UploadWhitelistsAPICheckIfUrlIsAllowedRequest
 */
-func (a *UploadWhitelistsAPIService) CheckIfUrlIsAllowed(ctx context.Context, id float32) UploadWhitelistsAPICheckIfUrlIsAllowedRequest {
+func (a *UploadWhitelistsAPIService) CheckIfUrlIsAllowed(ctx context.Context, id int32) UploadWhitelistsAPICheckIfUrlIsAllowedRequest {
 	return UploadWhitelistsAPICheckIfUrlIsAllowedRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -303,7 +303,7 @@ func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitel
 type UploadWhitelistsAPIDeleteUploadWhitelistRequest struct {
 	ctx        context.Context
 	ApiService *UploadWhitelistsAPIService
-	id         float32
+	id         int32
 }
 
 func (r UploadWhitelistsAPIDeleteUploadWhitelistRequest) Execute() (*http.Response, error) {
@@ -319,7 +319,7 @@ You must be Admin+.
 	@param id The ID of the upload whitelist.
 	@return UploadWhitelistsAPIDeleteUploadWhitelistRequest
 */
-func (a *UploadWhitelistsAPIService) DeleteUploadWhitelist(ctx context.Context, id float32) UploadWhitelistsAPIDeleteUploadWhitelistRequest {
+func (a *UploadWhitelistsAPIService) DeleteUploadWhitelist(ctx context.Context, id int32) UploadWhitelistsAPIDeleteUploadWhitelistRequest {
 	return UploadWhitelistsAPIDeleteUploadWhitelistRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -416,7 +416,7 @@ func (a *UploadWhitelistsAPIService) DeleteUploadWhitelistExecute(r UploadWhitel
 type UploadWhitelistsAPIEditUploadWhitelistRequest struct {
 	ctx                    context.Context
 	ApiService             *UploadWhitelistsAPIService
-	id                     float32
+	id                     int32
 	uploadWhitelistAllowed *string
 	uploadWhitelistPattern *string
 	uploadWhitelistReason  *string
@@ -460,7 +460,7 @@ EditUploadWhitelist Edit Upload Whitelist
 	@param id The ID of the upload whitelist entry.
 	@return UploadWhitelistsAPIEditUploadWhitelistRequest
 */
-func (a *UploadWhitelistsAPIService) EditUploadWhitelist(ctx context.Context, id float32) UploadWhitelistsAPIEditUploadWhitelistRequest {
+func (a *UploadWhitelistsAPIService) EditUploadWhitelist(ctx context.Context, id int32) UploadWhitelistsAPIEditUploadWhitelistRequest {
 	return UploadWhitelistsAPIEditUploadWhitelistRequest{
 		ApiService: a,
 		ctx:        ctx,

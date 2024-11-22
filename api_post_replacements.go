@@ -26,7 +26,7 @@ type PostReplacementsAPIService service
 type PostReplacementsAPIApprovePostReplacementRequest struct {
 	ctx        context.Context
 	ApiService *PostReplacementsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostReplacementsAPIApprovePostReplacementRequest) Execute() (*http.Response, error) {
@@ -42,7 +42,7 @@ You must have the "Approve Posts" permission.
 	@param id The ID of the post replacement.
 	@return PostReplacementsAPIApprovePostReplacementRequest
 */
-func (a *PostReplacementsAPIService) ApprovePostReplacement(ctx context.Context, id float32) PostReplacementsAPIApprovePostReplacementRequest {
+func (a *PostReplacementsAPIService) ApprovePostReplacement(ctx context.Context, id int32) PostReplacementsAPIApprovePostReplacementRequest {
 	return PostReplacementsAPIApprovePostReplacementRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -341,7 +341,7 @@ func (a *PostReplacementsAPIService) CreatePostReplacementExecute(r PostReplacem
 type PostReplacementsAPIDeletePostReplacementRequest struct {
 	ctx        context.Context
 	ApiService *PostReplacementsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostReplacementsAPIDeletePostReplacementRequest) Execute() (*http.Response, error) {
@@ -357,7 +357,7 @@ You must be Admin+.
 	@param id The ID of the post replacement.
 	@return PostReplacementsAPIDeletePostReplacementRequest
 */
-func (a *PostReplacementsAPIService) DeletePostReplacement(ctx context.Context, id float32) PostReplacementsAPIDeletePostReplacementRequest {
+func (a *PostReplacementsAPIService) DeletePostReplacement(ctx context.Context, id int32) PostReplacementsAPIDeletePostReplacementRequest {
 	return PostReplacementsAPIDeletePostReplacementRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -454,7 +454,7 @@ func (a *PostReplacementsAPIService) DeletePostReplacementExecute(r PostReplacem
 type PostReplacementsAPIPromotePostReplacementRequest struct {
 	ctx        context.Context
 	ApiService *PostReplacementsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostReplacementsAPIPromotePostReplacementRequest) Execute() (*AddFavorite201Response, *http.Response, error) {
@@ -470,7 +470,7 @@ You must have the "Approve Posts" permission.
 	@param id The ID of the post replacement.
 	@return PostReplacementsAPIPromotePostReplacementRequest
 */
-func (a *PostReplacementsAPIService) PromotePostReplacement(ctx context.Context, id float32) PostReplacementsAPIPromotePostReplacementRequest {
+func (a *PostReplacementsAPIService) PromotePostReplacement(ctx context.Context, id int32) PostReplacementsAPIPromotePostReplacementRequest {
 	return PostReplacementsAPIPromotePostReplacementRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -590,7 +590,7 @@ func (a *PostReplacementsAPIService) PromotePostReplacementExecute(r PostReplace
 type PostReplacementsAPIRejectPostReplacementRequest struct {
 	ctx                          context.Context
 	ApiService                   *PostReplacementsAPIService
-	id                           float32
+	id                           int32
 	rejectPostReplacementRequest *RejectPostReplacementRequest
 }
 
@@ -612,7 +612,7 @@ You must have the "Approve Posts" permission.
 	@param id The ID of the post replacement.
 	@return PostReplacementsAPIRejectPostReplacementRequest
 */
-func (a *PostReplacementsAPIService) RejectPostReplacement(ctx context.Context, id float32) PostReplacementsAPIRejectPostReplacementRequest {
+func (a *PostReplacementsAPIService) RejectPostReplacement(ctx context.Context, id int32) PostReplacementsAPIRejectPostReplacementRequest {
 	return PostReplacementsAPIRejectPostReplacementRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -728,14 +728,14 @@ type PostReplacementsAPISearchPostReplacementsRequest struct {
 	searchFileExt               *string
 	searchMd5                   *string
 	searchStatus                *string
-	searchCreatorId             *float32
+	searchCreatorId             *int32
 	searchCreatorName           *string
-	searchApproverId            *float32
+	searchApproverId            *int32
 	searchApproverName          *string
-	searchRejectorId            *float32
+	searchRejectorId            *int32
 	searchRejectorName          *string
 	searchUploaderNameOnApprove *string
-	searchUploaderIdOnApprove   *float32
+	searchUploaderIdOnApprove   *int32
 }
 
 // The maximum number of results to return. Between 0 and 320.
@@ -771,7 +771,7 @@ func (r PostReplacementsAPISearchPostReplacementsRequest) SearchStatus(searchSta
 	return r
 }
 
-func (r PostReplacementsAPISearchPostReplacementsRequest) SearchCreatorId(searchCreatorId float32) PostReplacementsAPISearchPostReplacementsRequest {
+func (r PostReplacementsAPISearchPostReplacementsRequest) SearchCreatorId(searchCreatorId int32) PostReplacementsAPISearchPostReplacementsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -781,7 +781,7 @@ func (r PostReplacementsAPISearchPostReplacementsRequest) SearchCreatorName(sear
 	return r
 }
 
-func (r PostReplacementsAPISearchPostReplacementsRequest) SearchApproverId(searchApproverId float32) PostReplacementsAPISearchPostReplacementsRequest {
+func (r PostReplacementsAPISearchPostReplacementsRequest) SearchApproverId(searchApproverId int32) PostReplacementsAPISearchPostReplacementsRequest {
 	r.searchApproverId = &searchApproverId
 	return r
 }
@@ -791,7 +791,7 @@ func (r PostReplacementsAPISearchPostReplacementsRequest) SearchApproverName(sea
 	return r
 }
 
-func (r PostReplacementsAPISearchPostReplacementsRequest) SearchRejectorId(searchRejectorId float32) PostReplacementsAPISearchPostReplacementsRequest {
+func (r PostReplacementsAPISearchPostReplacementsRequest) SearchRejectorId(searchRejectorId int32) PostReplacementsAPISearchPostReplacementsRequest {
 	r.searchRejectorId = &searchRejectorId
 	return r
 }
@@ -806,7 +806,7 @@ func (r PostReplacementsAPISearchPostReplacementsRequest) SearchUploaderNameOnAp
 	return r
 }
 
-func (r PostReplacementsAPISearchPostReplacementsRequest) SearchUploaderIdOnApprove(searchUploaderIdOnApprove float32) PostReplacementsAPISearchPostReplacementsRequest {
+func (r PostReplacementsAPISearchPostReplacementsRequest) SearchUploaderIdOnApprove(searchUploaderIdOnApprove int32) PostReplacementsAPISearchPostReplacementsRequest {
 	r.searchUploaderIdOnApprove = &searchUploaderIdOnApprove
 	return r
 }
@@ -951,7 +951,7 @@ func (a *PostReplacementsAPIService) SearchPostReplacementsExecute(r PostReplace
 type PostReplacementsAPITogglePostReplacementPenaltyRequest struct {
 	ctx        context.Context
 	ApiService *PostReplacementsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostReplacementsAPITogglePostReplacementPenaltyRequest) Execute() (*http.Response, error) {
@@ -967,7 +967,7 @@ You must have the "Approve Posts" permission.
 	@param id The ID of the post replacement.
 	@return PostReplacementsAPITogglePostReplacementPenaltyRequest
 */
-func (a *PostReplacementsAPIService) TogglePostReplacementPenalty(ctx context.Context, id float32) PostReplacementsAPITogglePostReplacementPenaltyRequest {
+func (a *PostReplacementsAPIService) TogglePostReplacementPenalty(ctx context.Context, id int32) PostReplacementsAPITogglePostReplacementPenaltyRequest {
 	return PostReplacementsAPITogglePostReplacementPenaltyRequest{
 		ApiService: a,
 		ctx:        ctx,

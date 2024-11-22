@@ -37,8 +37,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post set.
-	postIds := []float32{float32(123)} // []float32 | post_ids[]=1&post_ids[]=2
+	id := int32(56) // int32 | The ID of the post set.
+	postIds := []int32{int32(123)} // []int32 | post_ids[]=1&post_ids[]=2
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -58,7 +58,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post set. | 
+**id** | **int32** | The ID of the post set. | 
 
 ### Other Parameters
 
@@ -68,7 +68,7 @@ Other parameters are passed through a pointer to a apiAddPostsToPostSetRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **postIds** | **[]float32** | post_ids[]&#x3D;1&amp;post_ids[]&#x3D;2 | 
+ **postIds** | **[]int32** | post_ids[]&#x3D;1&amp;post_ids[]&#x3D;2 | 
 
 ### Return type
 
@@ -181,7 +181,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post set.
+	id := int32(56) // int32 | The ID of the post set.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -199,7 +199,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post set. | 
+**id** | **int32** | The ID of the post set. | 
 
 ### Other Parameters
 
@@ -249,7 +249,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post sets.
+	id := int32(56) // int32 | The ID of the post sets.
 	postSetName := "postSetName_example" // string |  (optional)
 	postSetShortname := "postSetShortname_example" // string |  (optional)
 	postSetDescription := "postSetDescription_example" // string |  (optional)
@@ -272,7 +272,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post sets. | 
+**id** | **int32** | The ID of the post sets. | 
 
 ### Other Parameters
 
@@ -327,7 +327,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post set.
+	id := int32(56) // int32 | The ID of the post set.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -347,7 +347,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post set. | 
+**id** | **int32** | The ID of the post set. | 
 
 ### Other Parameters
 
@@ -458,8 +458,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post set.
-	postIds := []float32{float32(123)} // []float32 | post_ids[]=1&post_ids[]=2
+	id := int32(56) // int32 | The ID of the post set.
+	postIds := []int32{int32(123)} // []int32 | post_ids[]=1&post_ids[]=2
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -479,7 +479,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post set. | 
+**id** | **int32** | The ID of the post set. | 
 
 ### Other Parameters
 
@@ -489,7 +489,7 @@ Other parameters are passed through a pointer to a apiRemovePostsFromPostSetRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **postIds** | **[]float32** | post_ids[]&#x3D;1&amp;post_ids[]&#x3D;2 | 
+ **postIds** | **[]int32** | post_ids[]&#x3D;1&amp;post_ids[]&#x3D;2 | 
 
 ### Return type
 
@@ -534,13 +534,13 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 	searchName := "searchName_example" // string |  (optional)
 	searchShortname := "searchShortname_example" // string |  (optional)
 	searchIsPublic := true // bool | You must be Moderator+. (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
-	searchMaintainerId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
+	searchMaintainerId := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -569,13 +569,13 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
  **searchName** | **string** |  | 
  **searchShortname** | **string** |  | 
  **searchIsPublic** | **bool** | You must be Moderator+. | 
- **searchPostId** | **float32** |  | 
- **searchMaintainerId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
+ **searchMaintainerId** | **int32** |  | 
 
 ### Return type
 
@@ -616,7 +616,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post set.
+	id := int32(56) // int32 | The ID of the post set.
 	postSetPostIdsString := "postSetPostIdsString_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -637,7 +637,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post set. | 
+**id** | **int32** | The ID of the post set. | 
 
 ### Other Parameters
 

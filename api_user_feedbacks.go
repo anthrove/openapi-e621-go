@@ -27,7 +27,7 @@ type UserFeedbacksAPICreateUserFeedbackRequest struct {
 	ApiService           *UserFeedbacksAPIService
 	userFeedbackBody     *string
 	userFeedbackCategory *FeedbackCategories
-	userFeedbackUserId   *float32
+	userFeedbackUserId   *int32
 	userFeedbackUserName *string
 }
 
@@ -41,7 +41,7 @@ func (r UserFeedbacksAPICreateUserFeedbackRequest) UserFeedbackCategory(userFeed
 	return r
 }
 
-func (r UserFeedbacksAPICreateUserFeedbackRequest) UserFeedbackUserId(userFeedbackUserId float32) UserFeedbacksAPICreateUserFeedbackRequest {
+func (r UserFeedbacksAPICreateUserFeedbackRequest) UserFeedbackUserId(userFeedbackUserId int32) UserFeedbacksAPICreateUserFeedbackRequest {
 	r.userFeedbackUserId = &userFeedbackUserId
 	return r
 }
@@ -184,7 +184,7 @@ func (a *UserFeedbacksAPIService) CreateUserFeedbackExecute(r UserFeedbacksAPICr
 type UserFeedbacksAPIDeleteUserFeedbackRequest struct {
 	ctx        context.Context
 	ApiService *UserFeedbacksAPIService
-	id         float32
+	id         int32
 }
 
 func (r UserFeedbacksAPIDeleteUserFeedbackRequest) Execute() (*http.Response, error) {
@@ -200,7 +200,7 @@ You must be Moderator+.
 	@param id The ID of the feedback.
 	@return UserFeedbacksAPIDeleteUserFeedbackRequest
 */
-func (a *UserFeedbacksAPIService) DeleteUserFeedback(ctx context.Context, id float32) UserFeedbacksAPIDeleteUserFeedbackRequest {
+func (a *UserFeedbacksAPIService) DeleteUserFeedback(ctx context.Context, id int32) UserFeedbacksAPIDeleteUserFeedbackRequest {
 	return UserFeedbacksAPIDeleteUserFeedbackRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -297,7 +297,7 @@ func (a *UserFeedbacksAPIService) DeleteUserFeedbackExecute(r UserFeedbacksAPIDe
 type UserFeedbacksAPIDestroyUserFeedbackRequest struct {
 	ctx        context.Context
 	ApiService *UserFeedbacksAPIService
-	id         float32
+	id         int32
 }
 
 func (r UserFeedbacksAPIDestroyUserFeedbackRequest) Execute() (*http.Response, error) {
@@ -313,7 +313,7 @@ You must be Admin+, or the creator and Moderator+.
 	@param id The ID of the feedback.
 	@return UserFeedbacksAPIDestroyUserFeedbackRequest
 */
-func (a *UserFeedbacksAPIService) DestroyUserFeedback(ctx context.Context, id float32) UserFeedbacksAPIDestroyUserFeedbackRequest {
+func (a *UserFeedbacksAPIService) DestroyUserFeedback(ctx context.Context, id int32) UserFeedbacksAPIDestroyUserFeedbackRequest {
 	return UserFeedbacksAPIDestroyUserFeedbackRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -410,7 +410,7 @@ func (a *UserFeedbacksAPIService) DestroyUserFeedbackExecute(r UserFeedbacksAPID
 type UserFeedbacksAPIEditUserFeedbackRequest struct {
 	ctx                  context.Context
 	ApiService           *UserFeedbacksAPIService
-	id                   float32
+	id                   int32
 	userFeedbackBody     *string
 	userFeedbackCategory *FeedbackCategories
 }
@@ -438,7 +438,7 @@ You must be Moderator+.
 	@param id The ID of the feedback.
 	@return UserFeedbacksAPIEditUserFeedbackRequest
 */
-func (a *UserFeedbacksAPIService) EditUserFeedback(ctx context.Context, id float32) UserFeedbacksAPIEditUserFeedbackRequest {
+func (a *UserFeedbacksAPIService) EditUserFeedback(ctx context.Context, id int32) UserFeedbacksAPIEditUserFeedbackRequest {
 	return UserFeedbacksAPIEditUserFeedbackRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -552,7 +552,7 @@ func (a *UserFeedbacksAPIService) EditUserFeedbackExecute(r UserFeedbacksAPIEdit
 type UserFeedbacksAPIGetUserFeedbackRequest struct {
 	ctx        context.Context
 	ApiService *UserFeedbacksAPIService
-	id         float32
+	id         int32
 }
 
 func (r UserFeedbacksAPIGetUserFeedbackRequest) Execute() (*UserFeedback, *http.Response, error) {
@@ -568,7 +568,7 @@ You must be Moderator+ if the feedback is deleted.
 	@param id The ID of the feedback.
 	@return UserFeedbacksAPIGetUserFeedbackRequest
 */
-func (a *UserFeedbacksAPIService) GetUserFeedback(ctx context.Context, id float32) UserFeedbacksAPIGetUserFeedbackRequest {
+func (a *UserFeedbacksAPIService) GetUserFeedback(ctx context.Context, id int32) UserFeedbacksAPIGetUserFeedbackRequest {
 	return UserFeedbacksAPIGetUserFeedbackRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -683,9 +683,9 @@ type UserFeedbacksAPISearchUserFeedbacksRequest struct {
 	searchOrder       *string
 	searchDeleted     *string
 	searchBodyMatches *string
-	searchUserId      *float32
+	searchUserId      *int32
 	searchUserName    *string
-	searchCreatorId   *float32
+	searchCreatorId   *int32
 	searchCreatorName *string
 	searchCategory    *FeedbackCategories
 }
@@ -724,7 +724,7 @@ func (r UserFeedbacksAPISearchUserFeedbacksRequest) SearchBodyMatches(searchBody
 	return r
 }
 
-func (r UserFeedbacksAPISearchUserFeedbacksRequest) SearchUserId(searchUserId float32) UserFeedbacksAPISearchUserFeedbacksRequest {
+func (r UserFeedbacksAPISearchUserFeedbacksRequest) SearchUserId(searchUserId int32) UserFeedbacksAPISearchUserFeedbacksRequest {
 	r.searchUserId = &searchUserId
 	return r
 }
@@ -734,7 +734,7 @@ func (r UserFeedbacksAPISearchUserFeedbacksRequest) SearchUserName(searchUserNam
 	return r
 }
 
-func (r UserFeedbacksAPISearchUserFeedbacksRequest) SearchCreatorId(searchCreatorId float32) UserFeedbacksAPISearchUserFeedbacksRequest {
+func (r UserFeedbacksAPISearchUserFeedbacksRequest) SearchCreatorId(searchCreatorId int32) UserFeedbacksAPISearchUserFeedbacksRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -880,7 +880,7 @@ func (a *UserFeedbacksAPIService) SearchUserFeedbacksExecute(r UserFeedbacksAPIS
 type UserFeedbacksAPIUndeleteUserFeedbackRequest struct {
 	ctx        context.Context
 	ApiService *UserFeedbacksAPIService
-	id         float32
+	id         int32
 }
 
 func (r UserFeedbacksAPIUndeleteUserFeedbackRequest) Execute() (*http.Response, error) {
@@ -896,7 +896,7 @@ You must be Moderator+.
 	@param id The ID of the feedback.
 	@return UserFeedbacksAPIUndeleteUserFeedbackRequest
 */
-func (a *UserFeedbacksAPIService) UndeleteUserFeedback(ctx context.Context, id float32) UserFeedbacksAPIUndeleteUserFeedbackRequest {
+func (a *UserFeedbacksAPIService) UndeleteUserFeedback(ctx context.Context, id int32) UserFeedbacksAPIUndeleteUserFeedbackRequest {
 	return UserFeedbacksAPIUndeleteUserFeedbackRequest{
 		ApiService: a,
 		ctx:        ctx,

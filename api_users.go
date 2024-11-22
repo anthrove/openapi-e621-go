@@ -31,7 +31,7 @@ type UsersAPIEditCurrentUserRequest struct {
 	userFavoriteTags                  *string
 	userBlacklistedTags               *string
 	userTimeZone                      *string
-	userPerPage                       *float32
+	userPerPage                       *int32
 	userCustomStyle                   *string
 	userDescriptionCollapsedInitially *bool
 	userHideComments                  *bool
@@ -47,7 +47,7 @@ type UsersAPIEditCurrentUserRequest struct {
 	userDisableCroppedThumbnails      *bool
 	userEnableSafeMode                *bool
 	userDisableResponsiveMode         *bool
-	userDmailFilterAttributesId       *float32
+	userDmailFilterAttributesId       *int32
 	userDmailFilterAttributesWords    *string
 	userProfileAbout                  *string
 	userProfileArtinfo                *string
@@ -81,7 +81,7 @@ func (r UsersAPIEditCurrentUserRequest) UserTimeZone(userTimeZone string) UsersA
 	return r
 }
 
-func (r UsersAPIEditCurrentUserRequest) UserPerPage(userPerPage float32) UsersAPIEditCurrentUserRequest {
+func (r UsersAPIEditCurrentUserRequest) UserPerPage(userPerPage int32) UsersAPIEditCurrentUserRequest {
 	r.userPerPage = &userPerPage
 	return r
 }
@@ -161,7 +161,7 @@ func (r UsersAPIEditCurrentUserRequest) UserDisableResponsiveMode(userDisableRes
 	return r
 }
 
-func (r UsersAPIEditCurrentUserRequest) UserDmailFilterAttributesId(userDmailFilterAttributesId float32) UsersAPIEditCurrentUserRequest {
+func (r UsersAPIEditCurrentUserRequest) UserDmailFilterAttributesId(userDmailFilterAttributesId int32) UsersAPIEditCurrentUserRequest {
 	r.userDmailFilterAttributesId = &userDmailFilterAttributesId
 	return r
 }
@@ -707,10 +707,10 @@ type UsersAPISearchUsersRequest struct {
 	searchOrder           *string
 	searchNameMatches     *string
 	searchAboutMe         *string
-	searchAvatarId        *float32
-	searchLevel           *float32
-	searchMinLevel        *float32
-	searchMaxLevel        *float32
+	searchAvatarId        *int32
+	searchLevel           *int32
+	searchMinLevel        *int32
+	searchMaxLevel        *int32
 	searchCanUploadFree   *bool
 	searchCanApprovePosts *bool
 	searchEmailMatches    *string
@@ -755,22 +755,22 @@ func (r UsersAPISearchUsersRequest) SearchAboutMe(searchAboutMe string) UsersAPI
 	return r
 }
 
-func (r UsersAPISearchUsersRequest) SearchAvatarId(searchAvatarId float32) UsersAPISearchUsersRequest {
+func (r UsersAPISearchUsersRequest) SearchAvatarId(searchAvatarId int32) UsersAPISearchUsersRequest {
 	r.searchAvatarId = &searchAvatarId
 	return r
 }
 
-func (r UsersAPISearchUsersRequest) SearchLevel(searchLevel float32) UsersAPISearchUsersRequest {
+func (r UsersAPISearchUsersRequest) SearchLevel(searchLevel int32) UsersAPISearchUsersRequest {
 	r.searchLevel = &searchLevel
 	return r
 }
 
-func (r UsersAPISearchUsersRequest) SearchMinLevel(searchMinLevel float32) UsersAPISearchUsersRequest {
+func (r UsersAPISearchUsersRequest) SearchMinLevel(searchMinLevel int32) UsersAPISearchUsersRequest {
 	r.searchMinLevel = &searchMinLevel
 	return r
 }
 
-func (r UsersAPISearchUsersRequest) SearchMaxLevel(searchMaxLevel float32) UsersAPISearchUsersRequest {
+func (r UsersAPISearchUsersRequest) SearchMaxLevel(searchMaxLevel int32) UsersAPISearchUsersRequest {
 	r.searchMaxLevel = &searchMaxLevel
 	return r
 }

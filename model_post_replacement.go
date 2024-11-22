@@ -29,9 +29,9 @@ type PostReplacement struct {
 	CreatorId   int32         `json:"creator_id"`
 	ApproverId  NullableInt32 `json:"approver_id"`
 	FileExt     string        `json:"file_ext"`
-	FileSize    float32       `json:"file_size"`
-	ImageHeight float32       `json:"image_height"`
-	ImageWidth  float32       `json:"image_width"`
+	FileSize    int64         `json:"file_size"`
+	ImageHeight int32         `json:"image_height"`
+	ImageWidth  int32         `json:"image_width"`
 	Md5         string        `json:"md5"`
 	Source      string        `json:"source"`
 	FileName    string        `json:"file_name"`
@@ -45,7 +45,7 @@ type _PostReplacement PostReplacement
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostReplacement(id int32, createdAt time.Time, updatedAt time.Time, postId int32, creatorId int32, approverId NullableInt32, fileExt string, fileSize float32, imageHeight float32, imageWidth float32, md5 string, source string, fileName string, status string, reason string) *PostReplacement {
+func NewPostReplacement(id int32, createdAt time.Time, updatedAt time.Time, postId int32, creatorId int32, approverId NullableInt32, fileExt string, fileSize int64, imageHeight int32, imageWidth int32, md5 string, source string, fileName string, status string, reason string) *PostReplacement {
 	this := PostReplacement{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -244,9 +244,9 @@ func (o *PostReplacement) SetFileExt(v string) {
 }
 
 // GetFileSize returns the FileSize field value
-func (o *PostReplacement) GetFileSize() float32 {
+func (o *PostReplacement) GetFileSize() int64 {
 	if o == nil {
-		var ret float32
+		var ret int64
 		return ret
 	}
 
@@ -255,7 +255,7 @@ func (o *PostReplacement) GetFileSize() float32 {
 
 // GetFileSizeOk returns a tuple with the FileSize field value
 // and a boolean to check if the value has been set.
-func (o *PostReplacement) GetFileSizeOk() (*float32, bool) {
+func (o *PostReplacement) GetFileSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -263,14 +263,14 @@ func (o *PostReplacement) GetFileSizeOk() (*float32, bool) {
 }
 
 // SetFileSize sets field value
-func (o *PostReplacement) SetFileSize(v float32) {
+func (o *PostReplacement) SetFileSize(v int64) {
 	o.FileSize = v
 }
 
 // GetImageHeight returns the ImageHeight field value
-func (o *PostReplacement) GetImageHeight() float32 {
+func (o *PostReplacement) GetImageHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -279,7 +279,7 @@ func (o *PostReplacement) GetImageHeight() float32 {
 
 // GetImageHeightOk returns a tuple with the ImageHeight field value
 // and a boolean to check if the value has been set.
-func (o *PostReplacement) GetImageHeightOk() (*float32, bool) {
+func (o *PostReplacement) GetImageHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -287,14 +287,14 @@ func (o *PostReplacement) GetImageHeightOk() (*float32, bool) {
 }
 
 // SetImageHeight sets field value
-func (o *PostReplacement) SetImageHeight(v float32) {
+func (o *PostReplacement) SetImageHeight(v int32) {
 	o.ImageHeight = v
 }
 
 // GetImageWidth returns the ImageWidth field value
-func (o *PostReplacement) GetImageWidth() float32 {
+func (o *PostReplacement) GetImageWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -303,7 +303,7 @@ func (o *PostReplacement) GetImageWidth() float32 {
 
 // GetImageWidthOk returns a tuple with the ImageWidth field value
 // and a boolean to check if the value has been set.
-func (o *PostReplacement) GetImageWidthOk() (*float32, bool) {
+func (o *PostReplacement) GetImageWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -311,7 +311,7 @@ func (o *PostReplacement) GetImageWidthOk() (*float32, bool) {
 }
 
 // SetImageWidth sets field value
-func (o *PostReplacement) SetImageWidth(v float32) {
+func (o *PostReplacement) SetImageWidth(v int32) {
 	o.ImageWidth = v
 }
 

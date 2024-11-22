@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Name** | **string** |  | 
-**Level** | **float32** |  | 
+**Level** | **int32** |  | 
 **BaseUploadLimit** | **int32** |  | 
 **PostUploadCount** | **int32** |  | 
 **PostUpdateCount** | **int32** |  | 
@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 
 ### NewSearchUsers200ResponseInner
 
-`func NewSearchUsers200ResponseInner(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32, ) *SearchUsers200ResponseInner`
+`func NewSearchUsers200ResponseInner(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32, ) *SearchUsers200ResponseInner`
 
 NewSearchUsers200ResponseInner instantiates a new SearchUsers200ResponseInner object
 This constructor will assign default values to properties that have it defined,
@@ -113,20 +113,20 @@ SetName sets Name field to given value.
 
 ### GetLevel
 
-`func (o *SearchUsers200ResponseInner) GetLevel() float32`
+`func (o *SearchUsers200ResponseInner) GetLevel() int32`
 
 GetLevel returns the Level field if non-nil, zero value otherwise.
 
 ### GetLevelOk
 
-`func (o *SearchUsers200ResponseInner) GetLevelOk() (*float32, bool)`
+`func (o *SearchUsers200ResponseInner) GetLevelOk() (*int32, bool)`
 
 GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLevel
 
-`func (o *SearchUsers200ResponseInner) SetLevel(v float32)`
+`func (o *SearchUsers200ResponseInner) SetLevel(v int32)`
 
 SetLevel sets Level field to given value.
 

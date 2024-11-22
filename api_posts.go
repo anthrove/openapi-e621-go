@@ -26,10 +26,10 @@ type PostsAPIService service
 type PostsAPIApprovePostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	postId     *float32
+	postId     *int32
 }
 
-func (r PostsAPIApprovePostRequest) PostId(postId float32) PostsAPIApprovePostRequest {
+func (r PostsAPIApprovePostRequest) PostId(postId int32) PostsAPIApprovePostRequest {
 	r.postId = &postId
 	return r
 }
@@ -145,7 +145,7 @@ func (a *PostsAPIService) ApprovePostExecute(r PostsAPIApprovePostRequest) (*htt
 type PostsAPICopyNotesToPostRequest struct {
 	ctx                    context.Context
 	ApiService             *PostsAPIService
-	id                     float32
+	id                     int32
 	copyNotesToPostRequest *CopyNotesToPostRequest
 }
 
@@ -165,7 +165,7 @@ CopyNotesToPost Copy Notes To Post
 	@param id The ID of the post.
 	@return PostsAPICopyNotesToPostRequest
 */
-func (a *PostsAPIService) CopyNotesToPost(ctx context.Context, id float32) PostsAPICopyNotesToPostRequest {
+func (a *PostsAPIService) CopyNotesToPost(ctx context.Context, id int32) PostsAPICopyNotesToPostRequest {
 	return PostsAPICopyNotesToPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -275,7 +275,7 @@ func (a *PostsAPIService) CopyNotesToPostExecute(r PostsAPICopyNotesToPostReques
 type PostsAPIDeletePostRequest struct {
 	ctx           context.Context
 	ApiService    *PostsAPIService
-	id            float32
+	id            int32
 	reason        *string
 	moveFavorites *bool
 	copySources   *bool
@@ -326,7 +326,7 @@ You must have the "Approve Posts" permission. `commit=Delete` must be set.
 	@param id The ID of the post.
 	@return PostsAPIDeletePostRequest
 */
-func (a *PostsAPIService) DeletePost(ctx context.Context, id float32) PostsAPIDeletePostRequest {
+func (a *PostsAPIService) DeletePost(ctx context.Context, id int32) PostsAPIDeletePostRequest {
 	return PostsAPIDeletePostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -449,15 +449,15 @@ func (a *PostsAPIService) DeletePostExecute(r PostsAPIDeletePostRequest) (*http.
 type PostsAPIEditPostRequest struct {
 	ctx                       context.Context
 	ApiService                *PostsAPIService
-	id                        float32
+	id                        int32
 	postTagString             *string
 	postOldTagString          *string
 	postTagStringDiff         *string
 	postSourceDiff            *string
 	postSource                *string
 	postOldSource             *string
-	postParentId              *float32
-	postOldParentId           *float32
+	postParentId              *int32
+	postOldParentId           *int32
 	postDescription           *string
 	postOldDescription        *string
 	postRating                *Ratings
@@ -509,12 +509,12 @@ func (r PostsAPIEditPostRequest) PostOldSource(postOldSource string) PostsAPIEdi
 	return r
 }
 
-func (r PostsAPIEditPostRequest) PostParentId(postParentId float32) PostsAPIEditPostRequest {
+func (r PostsAPIEditPostRequest) PostParentId(postParentId int32) PostsAPIEditPostRequest {
 	r.postParentId = &postParentId
 	return r
 }
 
-func (r PostsAPIEditPostRequest) PostOldParentId(postOldParentId float32) PostsAPIEditPostRequest {
+func (r PostsAPIEditPostRequest) PostOldParentId(postOldParentId int32) PostsAPIEditPostRequest {
 	r.postOldParentId = &postOldParentId
 	return r
 }
@@ -605,7 +605,7 @@ Most errors are silently swallowed.
 	@param id The ID of the post.
 	@return PostsAPIEditPostRequest
 */
-func (a *PostsAPIService) EditPost(ctx context.Context, id float32) PostsAPIEditPostRequest {
+func (a *PostsAPIService) EditPost(ctx context.Context, id int32) PostsAPIEditPostRequest {
 	return PostsAPIEditPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -788,7 +788,7 @@ func (a *PostsAPIService) EditPostExecute(r PostsAPIEditPostRequest) (*Post, *ht
 type PostsAPIExpungePostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 	reason     *string
 }
 
@@ -810,7 +810,7 @@ You must have the "Approve Posts" permission and be Admin+.
 	@param id The ID of the post.
 	@return PostsAPIExpungePostRequest
 */
-func (a *PostsAPIService) ExpungePost(ctx context.Context, id float32) PostsAPIExpungePostRequest {
+func (a *PostsAPIService) ExpungePost(ctx context.Context, id int32) PostsAPIExpungePostRequest {
 	return PostsAPIExpungePostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -933,7 +933,7 @@ func (a *PostsAPIService) ExpungePostExecute(r PostsAPIExpungePostRequest) (*Add
 type PostsAPIGetPostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostsAPIGetPostRequest) Execute() (*AddFavorite201Response, *http.Response, error) {
@@ -947,7 +947,7 @@ GetPost Get Post
 	@param id The ID of the post.
 	@return PostsAPIGetPostRequest
 */
-func (a *PostsAPIService) GetPost(ctx context.Context, id float32) PostsAPIGetPostRequest {
+func (a *PostsAPIService) GetPost(ctx context.Context, id int32) PostsAPIGetPostRequest {
 	return PostsAPIGetPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1045,7 +1045,7 @@ func (a *PostsAPIService) GetPostExecute(r PostsAPIGetPostRequest) (*AddFavorite
 type PostsAPIGetPostInSequenceRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 	seq        *string
 }
 
@@ -1066,7 +1066,7 @@ GetPostInSequence Get Post In Sequence
 	@param id The ID of the post.
 	@return PostsAPIGetPostInSequenceRequest
 */
-func (a *PostsAPIService) GetPostInSequence(ctx context.Context, id float32) PostsAPIGetPostInSequenceRequest {
+func (a *PostsAPIService) GetPostInSequence(ctx context.Context, id int32) PostsAPIGetPostInSequenceRequest {
 	return PostsAPIGetPostInSequenceRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1306,7 +1306,7 @@ func (a *PostsAPIService) GetRandomPostExecute(r PostsAPIGetRandomPostRequest) (
 type PostsAPIMarkPostAsTranslatedRequest struct {
 	ctx                         context.Context
 	ApiService                  *PostsAPIService
-	id                          float32
+	id                          int32
 	markPostAsTranslatedRequest *MarkPostAsTranslatedRequest
 }
 
@@ -1328,7 +1328,7 @@ Will error if no body is provided.
 	@param id The ID of the post.
 	@return PostsAPIMarkPostAsTranslatedRequest
 */
-func (a *PostsAPIService) MarkPostAsTranslated(ctx context.Context, id float32) PostsAPIMarkPostAsTranslatedRequest {
+func (a *PostsAPIService) MarkPostAsTranslated(ctx context.Context, id int32) PostsAPIMarkPostAsTranslatedRequest {
 	return PostsAPIMarkPostAsTranslatedRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1450,7 +1450,7 @@ func (a *PostsAPIService) MarkPostAsTranslatedExecute(r PostsAPIMarkPostAsTransl
 type PostsAPIMovePostFavoritesRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 	commit     *string
 }
 
@@ -1473,7 +1473,7 @@ You must have the "Approve Posts" permission. `commit=Submit“ must be set.
 	@param id The ID of the post.
 	@return PostsAPIMovePostFavoritesRequest
 */
-func (a *PostsAPIService) MovePostFavorites(ctx context.Context, id float32) PostsAPIMovePostFavoritesRequest {
+func (a *PostsAPIService) MovePostFavorites(ctx context.Context, id int32) PostsAPIMovePostFavoritesRequest {
 	return PostsAPIMovePostFavoritesRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1574,7 +1574,7 @@ func (a *PostsAPIService) MovePostFavoritesExecute(r PostsAPIMovePostFavoritesRe
 type PostsAPIRegeneratePostThumbnailsRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostsAPIRegeneratePostThumbnailsRequest) Execute() (*AddFavorite201Response, *http.Response, error) {
@@ -1590,7 +1590,7 @@ You must be Janitor+.
 	@param id The ID of the post.
 	@return PostsAPIRegeneratePostThumbnailsRequest
 */
-func (a *PostsAPIService) RegeneratePostThumbnails(ctx context.Context, id float32) PostsAPIRegeneratePostThumbnailsRequest {
+func (a *PostsAPIService) RegeneratePostThumbnails(ctx context.Context, id int32) PostsAPIRegeneratePostThumbnailsRequest {
 	return PostsAPIRegeneratePostThumbnailsRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1710,7 +1710,7 @@ func (a *PostsAPIService) RegeneratePostThumbnailsExecute(r PostsAPIRegeneratePo
 type PostsAPIRegeneratePostVideosRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostsAPIRegeneratePostVideosRequest) Execute() (*http.Response, error) {
@@ -1726,7 +1726,7 @@ You must be Janitor+.
 	@param id The ID of the post.
 	@return PostsAPIRegeneratePostVideosRequest
 */
-func (a *PostsAPIService) RegeneratePostVideos(ctx context.Context, id float32) PostsAPIRegeneratePostVideosRequest {
+func (a *PostsAPIService) RegeneratePostVideos(ctx context.Context, id int32) PostsAPIRegeneratePostVideosRequest {
 	return PostsAPIRegeneratePostVideosRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1834,12 +1834,12 @@ func (a *PostsAPIService) RegeneratePostVideosExecute(r PostsAPIRegeneratePostVi
 type PostsAPIRevertPostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
-	versionId  *float32
+	id         int32
+	versionId  *int32
 }
 
 // The version ID to revert to.
-func (r PostsAPIRevertPostRequest) VersionId(versionId float32) PostsAPIRevertPostRequest {
+func (r PostsAPIRevertPostRequest) VersionId(versionId int32) PostsAPIRevertPostRequest {
 	r.versionId = &versionId
 	return r
 }
@@ -1855,7 +1855,7 @@ RevertPost Revert Post
 	@param id The ID of the post.
 	@return PostsAPIRevertPostRequest
 */
-func (a *PostsAPIService) RevertPost(ctx context.Context, id float32) PostsAPIRevertPostRequest {
+func (a *PostsAPIService) RevertPost(ctx context.Context, id int32) PostsAPIRevertPostRequest {
 	return PostsAPIRevertPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -2112,10 +2112,10 @@ func (a *PostsAPIService) SearchPostsExecute(r PostsAPISearchPostsRequest) (*Lis
 type PostsAPIUnapprovePostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	postId     *float32
+	postId     *int32
 }
 
-func (r PostsAPIUnapprovePostRequest) PostId(postId float32) PostsAPIUnapprovePostRequest {
+func (r PostsAPIUnapprovePostRequest) PostId(postId int32) PostsAPIUnapprovePostRequest {
 	r.postId = &postId
 	return r
 }
@@ -2231,7 +2231,7 @@ func (a *PostsAPIService) UnapprovePostExecute(r PostsAPIUnapprovePostRequest) (
 type PostsAPIUndeletePostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostsAPIUndeletePostRequest) Execute() (*AddFavorite201Response, *http.Response, error) {
@@ -2247,7 +2247,7 @@ You must have the "Approve Posts" permission.
 	@param id The ID of the post.
 	@return PostsAPIUndeletePostRequest
 */
-func (a *PostsAPIService) UndeletePost(ctx context.Context, id float32) PostsAPIUndeletePostRequest {
+func (a *PostsAPIService) UndeletePost(ctx context.Context, id int32) PostsAPIUndeletePostRequest {
 	return PostsAPIUndeletePostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -2367,7 +2367,7 @@ func (a *PostsAPIService) UndeletePostExecute(r PostsAPIUndeletePostRequest) (*A
 type PostsAPIUnflagPostRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 	approval   *string
 }
 
@@ -2390,7 +2390,7 @@ You must have the "Approve Posts" permission.
 	@param id The ID of the post.
 	@return PostsAPIUnflagPostRequest
 */
-func (a *PostsAPIService) UnflagPost(ctx context.Context, id float32) PostsAPIUnflagPostRequest {
+func (a *PostsAPIService) UnflagPost(ctx context.Context, id int32) PostsAPIUnflagPostRequest {
 	return PostsAPIUnflagPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -2490,7 +2490,7 @@ func (a *PostsAPIService) UnflagPostExecute(r PostsAPIUnflagPostRequest) (*http.
 type PostsAPIUpdatePostIqdbRequest struct {
 	ctx        context.Context
 	ApiService *PostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostsAPIUpdatePostIqdbRequest) Execute() (*AddFavorite201Response, *http.Response, error) {
@@ -2506,7 +2506,7 @@ You must be Admin+.
 	@param id The ID of the post.
 	@return PostsAPIUpdatePostIqdbRequest
 */
-func (a *PostsAPIService) UpdatePostIqdb(ctx context.Context, id float32) PostsAPIUpdatePostIqdbRequest {
+func (a *PostsAPIService) UpdatePostIqdb(ctx context.Context, id int32) PostsAPIUpdatePostIqdbRequest {
 	return PostsAPIUpdatePostIqdbRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -2631,7 +2631,7 @@ type PostsAPIUploadPostRequest struct {
 	uploadFile         *os.File
 	uploadDirectUrl    *string
 	uploadSource       *string
-	uploadParentId     *float32
+	uploadParentId     *int32
 	uploadDescription  *string
 	uploadAsPending    *bool
 	uploadLockedRating *bool
@@ -2665,7 +2665,7 @@ func (r PostsAPIUploadPostRequest) UploadSource(uploadSource string) PostsAPIUpl
 	return r
 }
 
-func (r PostsAPIUploadPostRequest) UploadParentId(uploadParentId float32) PostsAPIUploadPostRequest {
+func (r PostsAPIUploadPostRequest) UploadParentId(uploadParentId int32) PostsAPIUploadPostRequest {
 	r.uploadParentId = &uploadParentId
 	return r
 }

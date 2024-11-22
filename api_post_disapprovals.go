@@ -24,12 +24,12 @@ type PostDisapprovalsAPIService service
 type PostDisapprovalsAPICreatePostDisapprovalRequest struct {
 	ctx                    context.Context
 	ApiService             *PostDisapprovalsAPIService
-	postDisapprovalPostId  *float32
+	postDisapprovalPostId  *int32
 	postDisapprovalReason  *string
 	postDisapprovalMessage *string
 }
 
-func (r PostDisapprovalsAPICreatePostDisapprovalRequest) PostDisapprovalPostId(postDisapprovalPostId float32) PostDisapprovalsAPICreatePostDisapprovalRequest {
+func (r PostDisapprovalsAPICreatePostDisapprovalRequest) PostDisapprovalPostId(postDisapprovalPostId int32) PostDisapprovalsAPICreatePostDisapprovalRequest {
 	r.postDisapprovalPostId = &postDisapprovalPostId
 	return r
 }
@@ -178,9 +178,9 @@ type PostDisapprovalsAPISearchPostDisapprovalsRequest struct {
 	page                *int32
 	searchId            *int32
 	searchOrder         *string
-	searchCreatorId     *float32
+	searchCreatorId     *int32
 	searchCreatorName   *string
-	searchPostId        *float32
+	searchPostId        *int32
 	searchMessage       *string
 	searchPostTagsMatch *string
 	searchReason        *string
@@ -210,7 +210,7 @@ func (r PostDisapprovalsAPISearchPostDisapprovalsRequest) SearchOrder(searchOrde
 	return r
 }
 
-func (r PostDisapprovalsAPISearchPostDisapprovalsRequest) SearchCreatorId(searchCreatorId float32) PostDisapprovalsAPISearchPostDisapprovalsRequest {
+func (r PostDisapprovalsAPISearchPostDisapprovalsRequest) SearchCreatorId(searchCreatorId int32) PostDisapprovalsAPISearchPostDisapprovalsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -220,7 +220,7 @@ func (r PostDisapprovalsAPISearchPostDisapprovalsRequest) SearchCreatorName(sear
 	return r
 }
 
-func (r PostDisapprovalsAPISearchPostDisapprovalsRequest) SearchPostId(searchPostId float32) PostDisapprovalsAPISearchPostDisapprovalsRequest {
+func (r PostDisapprovalsAPISearchPostDisapprovalsRequest) SearchPostId(searchPostId int32) PostDisapprovalsAPISearchPostDisapprovalsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }

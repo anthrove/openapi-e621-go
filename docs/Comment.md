@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **PostId** | **int32** |  | 
 **CreatorId** | **int32** |  | 
 **Body** | **string** |  | 
-**Score** | **float32** |  | 
+**Score** | **int32** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **UpdaterId** | **int32** |  | 
 **DoNotBumpPost** | **bool** |  | 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewComment
 
-`func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score float32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string, ) *Comment`
+`func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score int32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string, ) *Comment`
 
 NewComment instantiates a new Comment object
 This constructor will assign default values to properties that have it defined,
@@ -141,20 +141,20 @@ SetBody sets Body field to given value.
 
 ### GetScore
 
-`func (o *Comment) GetScore() float32`
+`func (o *Comment) GetScore() int32`
 
 GetScore returns the Score field if non-nil, zero value otherwise.
 
 ### GetScoreOk
 
-`func (o *Comment) GetScoreOk() (*float32, bool)`
+`func (o *Comment) GetScoreOk() (*int32, bool)`
 
 GetScoreOk returns a tuple with the Score field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScore
 
-`func (o *Comment) SetScore(v float32)`
+`func (o *Comment) SetScore(v int32)`
 
 SetScore sets Score field to given value.
 

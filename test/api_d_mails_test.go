@@ -26,7 +26,7 @@ func Test_e621_DMailsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.DMailsAPI.DeleteDMail(context.Background(), id).Execute()
 
@@ -39,7 +39,7 @@ func Test_e621_DMailsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.DMailsAPI.GetDMail(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_DMailsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.DMailsAPI.MarkDMailAsRead(context.Background(), id).Execute()
 
@@ -77,7 +77,7 @@ func Test_e621_DMailsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.DMailsAPI.MarkDMailAsUnread(context.Background(), id).Execute()
 

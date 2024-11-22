@@ -25,7 +25,7 @@ type WikiPageVersionsAPIService service
 type WikiPageVersionsAPIGetWikiPageVersionRequest struct {
 	ctx        context.Context
 	ApiService *WikiPageVersionsAPIService
-	id         float32
+	id         int32
 }
 
 func (r WikiPageVersionsAPIGetWikiPageVersionRequest) Execute() (*WikiPageVersion, *http.Response, error) {
@@ -39,7 +39,7 @@ GetWikiPageVersion Get Wiki Page Version
 	@param id The ID of the wiki page version.
 	@return WikiPageVersionsAPIGetWikiPageVersionRequest
 */
-func (a *WikiPageVersionsAPIService) GetWikiPageVersion(ctx context.Context, id float32) WikiPageVersionsAPIGetWikiPageVersionRequest {
+func (a *WikiPageVersionsAPIService) GetWikiPageVersion(ctx context.Context, id int32) WikiPageVersionsAPIGetWikiPageVersionRequest {
 	return WikiPageVersionsAPIGetWikiPageVersionRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -142,9 +142,9 @@ type WikiPageVersionsAPISearchWikiPageVersionsRequest struct {
 	searchId          *int32
 	searchIpAddr      *string
 	searchOrder       *string
-	searchUpdaterId   *float32
+	searchUpdaterId   *int32
 	searchUpdaterName *string
-	searchWikiPageId  *float32
+	searchWikiPageId  *int32
 	searchTitle       *string
 	searchBody        *string
 	searchIsLocked    *bool
@@ -180,7 +180,7 @@ func (r WikiPageVersionsAPISearchWikiPageVersionsRequest) SearchOrder(searchOrde
 	return r
 }
 
-func (r WikiPageVersionsAPISearchWikiPageVersionsRequest) SearchUpdaterId(searchUpdaterId float32) WikiPageVersionsAPISearchWikiPageVersionsRequest {
+func (r WikiPageVersionsAPISearchWikiPageVersionsRequest) SearchUpdaterId(searchUpdaterId int32) WikiPageVersionsAPISearchWikiPageVersionsRequest {
 	r.searchUpdaterId = &searchUpdaterId
 	return r
 }
@@ -190,7 +190,7 @@ func (r WikiPageVersionsAPISearchWikiPageVersionsRequest) SearchUpdaterName(sear
 	return r
 }
 
-func (r WikiPageVersionsAPISearchWikiPageVersionsRequest) SearchWikiPageId(searchWikiPageId float32) WikiPageVersionsAPISearchWikiPageVersionsRequest {
+func (r WikiPageVersionsAPISearchWikiPageVersionsRequest) SearchWikiPageId(searchWikiPageId int32) WikiPageVersionsAPISearchWikiPageVersionsRequest {
 	r.searchWikiPageId = &searchWikiPageId
 	return r
 }

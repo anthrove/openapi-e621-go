@@ -24,7 +24,7 @@ type PostRelationships struct {
 	ParentId          NullableFloat32 `json:"parent_id"`
 	HasChildren       bool            `json:"has_children"`
 	HasActiveChildren bool            `json:"has_active_children"`
-	Children          []float32       `json:"children"`
+	Children          []int32         `json:"children"`
 }
 
 type _PostRelationships PostRelationships
@@ -33,7 +33,7 @@ type _PostRelationships PostRelationships
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostRelationships(parentId NullableFloat32, hasChildren bool, hasActiveChildren bool, children []float32) *PostRelationships {
+func NewPostRelationships(parentId NullableFloat32, hasChildren bool, hasActiveChildren bool, children []int32) *PostRelationships {
 	this := PostRelationships{}
 	this.ParentId = parentId
 	this.HasChildren = hasChildren
@@ -125,9 +125,9 @@ func (o *PostRelationships) SetHasActiveChildren(v bool) {
 }
 
 // GetChildren returns the Children field value
-func (o *PostRelationships) GetChildren() []float32 {
+func (o *PostRelationships) GetChildren() []int32 {
 	if o == nil {
-		var ret []float32
+		var ret []int32
 		return ret
 	}
 
@@ -136,7 +136,7 @@ func (o *PostRelationships) GetChildren() []float32 {
 
 // GetChildrenOk returns a tuple with the Children field value
 // and a boolean to check if the value has been set.
-func (o *PostRelationships) GetChildrenOk() ([]float32, bool) {
+func (o *PostRelationships) GetChildrenOk() ([]int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -144,7 +144,7 @@ func (o *PostRelationships) GetChildrenOk() ([]float32, bool) {
 }
 
 // SetChildren sets field value
-func (o *PostRelationships) SetChildren(v []float32) {
+func (o *PostRelationships) SetChildren(v []int32) {
 	o.Children = v
 }
 

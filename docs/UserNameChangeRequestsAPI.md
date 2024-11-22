@@ -97,7 +97,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the name change request.
+	id := int32(56) // int32 | The ID of the name change request.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -117,7 +117,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the name change request. | 
+**id** | **int32** | The ID of the name change request. | 
 
 ### Other Parameters
 
@@ -171,7 +171,7 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchCurrentId := float32(8.14) // float32 |  (optional)
+	searchCurrentId := int32(56) // int32 |  (optional)
 	searchCurrentName := "searchCurrentName_example" // string |  (optional)
 	searchOriginalName := "searchOriginalName_example" // string |  (optional)
 	searchDesiredName := "searchDesiredName_example" // string |  (optional)
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchCurrentId** | **float32** |  | 
+ **searchCurrentId** | **int32** |  | 
  **searchCurrentName** | **string** |  | 
  **searchOriginalName** | **string** |  | 
  **searchDesiredName** | **string** |  | 

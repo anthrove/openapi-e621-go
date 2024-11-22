@@ -37,7 +37,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 	postIds := "postIds_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -58,7 +58,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -109,7 +109,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 	postTags := "postTags_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -130,7 +130,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -181,7 +181,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 	postTags := "postTags_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -202,7 +202,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -255,10 +255,10 @@ func main() {
 	takedownReason := "takedownReason_example" // string | 
 	takedownSource := "takedownSource_example" // string |  (optional)
 	takedownInstructions := "takedownInstructions_example" // string |  (optional)
-	takedownPostIds := []float32{float32(123)} // []float32 | takedown[post_ids][]=1&takedown[post_ids][]=2 (optional)
+	takedownPostIds := []int32{int32(123)} // []int32 | takedown[post_ids][]=1&takedown[post_ids][]=2 (optional)
 	takedownReasonHidden := true // bool |  (optional)
 	takedownNotes := "takedownNotes_example" // string | Must have the bd staff user flag to use. (optional)
-	takedownDelPostIds := []float32{float32(123)} // []float32 | Must have the bd staff user flag to use. takedown[del_post_ids][]=1&takedown[del_post_ids][]=2  (optional)
+	takedownDelPostIds := []int32{int32(123)} // []int32 | Must have the bd staff user flag to use. takedown[del_post_ids][]=1&takedown[del_post_ids][]=2  (optional)
 	takedownStatus := "takedownStatus_example" // string | Must have the bd staff user flag to use. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -288,10 +288,10 @@ Name | Type | Description  | Notes
  **takedownReason** | **string** |  | 
  **takedownSource** | **string** |  | 
  **takedownInstructions** | **string** |  | 
- **takedownPostIds** | **[]float32** | takedown[post_ids][]&#x3D;1&amp;takedown[post_ids][]&#x3D;2 | 
+ **takedownPostIds** | **[]int32** | takedown[post_ids][]&#x3D;1&amp;takedown[post_ids][]&#x3D;2 | 
  **takedownReasonHidden** | **bool** |  | 
  **takedownNotes** | **string** | Must have the bd staff user flag to use. | 
- **takedownDelPostIds** | **[]float32** | Must have the bd staff user flag to use. takedown[del_post_ids][]&#x3D;1&amp;takedown[del_post_ids][]&#x3D;2  | 
+ **takedownDelPostIds** | **[]int32** | Must have the bd staff user flag to use. takedown[del_post_ids][]&#x3D;1&amp;takedown[del_post_ids][]&#x3D;2  | 
  **takedownStatus** | **string** | Must have the bd staff user flag to use. | 
 
 ### Return type
@@ -333,7 +333,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -351,7 +351,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -401,7 +401,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 	takedownNotes := "takedownNotes_example" // string |  (optional)
 	takedownReasonHidden := true // bool |  (optional)
 	takedownPosts := "takedownPosts_example" // string |  (optional)
@@ -424,7 +424,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -477,7 +477,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -547,7 +547,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the takedown.
+	id := int32(56) // int32 | The ID of the takedown.
 	postIds := "postIds_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
@@ -566,7 +566,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the takedown. | 
+**id** | **int32** | The ID of the takedown. | 
 
 ### Other Parameters
 
@@ -625,11 +625,11 @@ func main() {
 	searchStatus := "searchStatus_example" // string |  (optional)
 	searchSource := "searchSource_example" // string | Must be Moderator+ to use. (optional)
 	searchReason := "searchReason_example" // string | Must be Moderator+ to use. (optional)
-	searchCreatorId := float32(8.14) // float32 | Must be Moderator+ to use. (optional)
+	searchCreatorId := int32(56) // int32 | Must be Moderator+ to use. (optional)
 	searchCreatorName := "searchCreatorName_example" // string | Must be Moderator+ to use. (optional)
 	searchReasonHidden := true // bool | Must be Moderator+ to use. (optional)
 	searchInstructions := "searchInstructions_example" // string | Must be Moderator+ to use. (optional)
-	searchPostId := float32(8.14) // float32 | Must be Moderator+ to use. (optional)
+	searchPostId := int32(56) // int32 | Must be Moderator+ to use. (optional)
 	searchNotes := "searchNotes_example" // string | Must be Moderator+ to use. (optional)
 	searchEmail := "searchEmail_example" // string | Must be Admin+ to use. (optional)
 	searchVericode := "searchVericode_example" // string | Must be Admin+ to use. (optional)
@@ -665,11 +665,11 @@ Name | Type | Description  | Notes
  **searchStatus** | **string** |  | 
  **searchSource** | **string** | Must be Moderator+ to use. | 
  **searchReason** | **string** | Must be Moderator+ to use. | 
- **searchCreatorId** | **float32** | Must be Moderator+ to use. | 
+ **searchCreatorId** | **int32** | Must be Moderator+ to use. | 
  **searchCreatorName** | **string** | Must be Moderator+ to use. | 
  **searchReasonHidden** | **bool** | Must be Moderator+ to use. | 
  **searchInstructions** | **string** | Must be Moderator+ to use. | 
- **searchPostId** | **float32** | Must be Moderator+ to use. | 
+ **searchPostId** | **int32** | Must be Moderator+ to use. | 
  **searchNotes** | **string** | Must be Moderator+ to use. | 
  **searchEmail** | **string** | Must be Admin+ to use. | 
  **searchVericode** | **string** | Must be Admin+ to use. | 

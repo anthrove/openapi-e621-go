@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Name** | **string** |  | 
-**Level** | **float32** |  | 
+**Level** | **int32** |  | 
 **BaseUploadLimit** | **int32** |  | 
 **PostUploadCount** | **int32** |  | 
 **PostUpdateCount** | **int32** |  | 
@@ -28,14 +28,14 @@ Name | Type | Description | Notes
 **PositiveFeedbackCount** | Pointer to **int32** |  | [optional] 
 **ProfileAbout** | Pointer to **string** |  | [optional] 
 **ProfileArtinfo** | Pointer to **string** |  | [optional] 
-**UploadLimit** | Pointer to **interface{}** |  | [optional] 
+**UploadLimit** | Pointer to **int32** |  | [optional] 
 **WikiPageVersionCount** | Pointer to **int32** |  | [optional] 
 
 ## Methods
 
 ### NewUser
 
-`func NewUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId NullableInt32, ) *User`
+`func NewUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId NullableInt32, ) *User`
 
 NewUser instantiates a new User object
 This constructor will assign default values to properties that have it defined,
@@ -112,20 +112,20 @@ SetName sets Name field to given value.
 
 ### GetLevel
 
-`func (o *User) GetLevel() float32`
+`func (o *User) GetLevel() int32`
 
 GetLevel returns the Level field if non-nil, zero value otherwise.
 
 ### GetLevelOk
 
-`func (o *User) GetLevelOk() (*float32, bool)`
+`func (o *User) GetLevelOk() (*int32, bool)`
 
 GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLevel
 
-`func (o *User) SetLevel(v float32)`
+`func (o *User) SetLevel(v int32)`
 
 SetLevel sets Level field to given value.
 
@@ -597,20 +597,20 @@ HasProfileArtinfo returns a boolean if a field has been set.
 
 ### GetUploadLimit
 
-`func (o *User) GetUploadLimit() interface{}`
+`func (o *User) GetUploadLimit() int32`
 
 GetUploadLimit returns the UploadLimit field if non-nil, zero value otherwise.
 
 ### GetUploadLimitOk
 
-`func (o *User) GetUploadLimitOk() (*interface{}, bool)`
+`func (o *User) GetUploadLimitOk() (*int32, bool)`
 
 GetUploadLimitOk returns a tuple with the UploadLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUploadLimit
 
-`func (o *User) SetUploadLimit(v interface{})`
+`func (o *User) SetUploadLimit(v int32)`
 
 SetUploadLimit sets UploadLimit field to given value.
 
@@ -620,16 +620,6 @@ SetUploadLimit sets UploadLimit field to given value.
 
 HasUploadLimit returns a boolean if a field has been set.
 
-### SetUploadLimitNil
-
-`func (o *User) SetUploadLimitNil(b bool)`
-
- SetUploadLimitNil sets the value for UploadLimit to be an explicit nil
-
-### UnsetUploadLimit
-`func (o *User) UnsetUploadLimit()`
-
-UnsetUploadLimit ensures that no value is present for UploadLimit, not even an explicit nil
 ### GetWikiPageVersionCount
 
 `func (o *User) GetWikiPageVersionCount() int32`

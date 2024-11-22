@@ -110,7 +110,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the wiki page.
+	id := int32(56) // int32 | The ID of the wiki page.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -128,7 +128,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the wiki page. | 
+**id** | **int32** | The ID of the wiki page. | 
 
 ### Other Parameters
 
@@ -178,7 +178,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the wiki page.
+	id := int32(56) // int32 | The ID of the wiki page.
 	wikiPageBody := "wikiPageBody_example" // string |  (optional)
 	wikiPageEditReason := "wikiPageEditReason_example" // string |  (optional)
 	wikiPageParent := "wikiPageParent_example" // string | Must be Privileged+ to use. (optional)
@@ -203,7 +203,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the wiki page. | 
+**id** | **int32** | The ID of the wiki page. | 
 
 ### Other Parameters
 
@@ -258,7 +258,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID or name of the wiki page.
+	id := int32(56) // int32 | The ID or name of the wiki page.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -278,7 +278,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID or name of the wiki page. | 
+**id** | **int32** | The ID or name of the wiki page. | 
 
 ### Other Parameters
 
@@ -326,8 +326,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the wiki page.
-	versionId := float32(8.14) // float32 | The version ID to revert to.
+	id := int32(56) // int32 | The ID of the wiki page.
+	versionId := int32(56) // int32 | The version ID to revert to.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -345,7 +345,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the wiki page. | 
+**id** | **int32** | The ID of the wiki page. | 
 
 ### Other Parameters
 
@@ -355,7 +355,7 @@ Other parameters are passed through a pointer to a apiRevertWikiPageRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **versionId** | **float32** | The version ID to revert to. | 
+ **versionId** | **int32** | The version ID to revert to. | 
 
 ### Return type
 
@@ -402,7 +402,7 @@ func main() {
 	searchTitleMatches := "searchTitleMatches_example" // string |  (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
 	searchOtherNamesMatch := "searchOtherNamesMatch_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 	searchParent := "searchParent_example" // string |  (optional)
 	searchOtherNamesPresent := true // bool |  (optional)
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
  **searchTitleMatches** | **string** |  | 
  **searchBodyMatches** | **string** |  | 
  **searchOtherNamesMatch** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
  **searchParent** | **string** |  | 
  **searchOtherNamesPresent** | **bool** |  | 

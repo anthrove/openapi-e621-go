@@ -35,7 +35,7 @@ import (
 
 func main() {
 	blipBody := "blipBody_example" // string | 
-	blipResponseTo := float32(8.14) // float32 |  (optional)
+	blipResponseTo := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateBlipRequest struct v
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blipBody** | **string** |  | 
- **blipResponseTo** | **float32** |  | 
+ **blipResponseTo** | **int32** |  | 
 
 ### Return type
 
@@ -102,7 +102,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the blip.
+	id := int32(56) // int32 | The ID of the blip.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the blip. | 
+**id** | **int32** | The ID of the blip. | 
 
 ### Other Parameters
 
@@ -170,7 +170,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the blip.
+	id := int32(56) // int32 | The ID of the blip.
 	blipBody := "blipBody_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -191,7 +191,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the blip. | 
+**id** | **int32** | The ID of the blip. | 
 
 ### Other Parameters
 
@@ -240,7 +240,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the blip to get.
+	id := int32(56) // int32 | The ID of the blip to get.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -260,7 +260,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the blip to get. | 
+**id** | **int32** | The ID of the blip to get. | 
 
 ### Other Parameters
 
@@ -310,7 +310,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the blip.
+	id := int32(56) // int32 | The ID of the blip.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -330,7 +330,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the blip. | 
+**id** | **int32** | The ID of the blip. | 
 
 ### Other Parameters
 
@@ -380,7 +380,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the blip.
+	id := int32(56) // int32 | The ID of the blip.
 	markBlipRequest := *openapiclient.NewMarkBlipRequest("RecordType_example") // MarkBlipRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -401,7 +401,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the blip. | 
+**id** | **int32** | The ID of the blip. | 
 
 ### Other Parameters
 
@@ -457,10 +457,10 @@ func main() {
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchIpAddr := "searchIpAddr_example" // string | Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \"is contained within or equals\" (`<<=`). (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
-	searchResponseTo := float32(8.14) // float32 |  (optional)
+	searchResponseTo := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -490,10 +490,10 @@ Name | Type | Description  | Notes
  **searchId** | **int32** | Search for a specific id. | 
  **searchIpAddr** | **string** | Must be Admin+ to use. See [postgres&#39; documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \&quot;is contained within or equals\&quot; (&#x60;&lt;&lt;&#x3D;&#x60;). | 
  **searchOrder** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
  **searchBodyMatches** | **string** |  | 
- **searchResponseTo** | **float32** |  | 
+ **searchResponseTo** | **int32** |  | 
 
 ### Return type
 
@@ -534,7 +534,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the blip.
+	id := int32(56) // int32 | The ID of the blip.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -554,7 +554,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the blip. | 
+**id** | **int32** | The ID of the blip. | 
 
 ### Other Parameters
 

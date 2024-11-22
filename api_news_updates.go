@@ -156,7 +156,7 @@ func (a *NewsUpdatesAPIService) CreateNewsUpdateExecute(r NewsUpdatesAPICreateNe
 type NewsUpdatesAPIDeleteNewsUpdateRequest struct {
 	ctx        context.Context
 	ApiService *NewsUpdatesAPIService
-	id         float32
+	id         int32
 }
 
 func (r NewsUpdatesAPIDeleteNewsUpdateRequest) Execute() (*http.Response, error) {
@@ -172,7 +172,7 @@ You must be Admin+.
 	@param id The ID of the news update.
 	@return NewsUpdatesAPIDeleteNewsUpdateRequest
 */
-func (a *NewsUpdatesAPIService) DeleteNewsUpdate(ctx context.Context, id float32) NewsUpdatesAPIDeleteNewsUpdateRequest {
+func (a *NewsUpdatesAPIService) DeleteNewsUpdate(ctx context.Context, id int32) NewsUpdatesAPIDeleteNewsUpdateRequest {
 	return NewsUpdatesAPIDeleteNewsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -269,7 +269,7 @@ func (a *NewsUpdatesAPIService) DeleteNewsUpdateExecute(r NewsUpdatesAPIDeleteNe
 type NewsUpdatesAPIEditNewsUpdateRequest struct {
 	ctx               context.Context
 	ApiService        *NewsUpdatesAPIService
-	id                float32
+	id                int32
 	newsUpdateMessage *string
 }
 
@@ -291,7 +291,7 @@ You must be Admin+
 	@param id The ID of the news update.
 	@return NewsUpdatesAPIEditNewsUpdateRequest
 */
-func (a *NewsUpdatesAPIService) EditNewsUpdate(ctx context.Context, id float32) NewsUpdatesAPIEditNewsUpdateRequest {
+func (a *NewsUpdatesAPIService) EditNewsUpdate(ctx context.Context, id int32) NewsUpdatesAPIEditNewsUpdateRequest {
 	return NewsUpdatesAPIEditNewsUpdateRequest{
 		ApiService: a,
 		ctx:        ctx,

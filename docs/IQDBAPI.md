@@ -30,7 +30,7 @@ import (
 func main() {
 	searchScoreCutoff := float32(8.14) // float32 |  (optional)
 	searchUrl := "searchUrl_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
 	searchHash := "searchHash_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **searchScoreCutoff** | **float32** |  | 
  **searchUrl** | **string** |  | 
- **searchPostId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
  **searchHash** | **string** |  | 
 
 ### Return type

@@ -21,8 +21,8 @@ var _ MappedNullable = &AddPostsToTakedownByIds200Response{}
 
 // AddPostsToTakedownByIds200Response struct for AddPostsToTakedownByIds200Response
 type AddPostsToTakedownByIds200Response struct {
-	AddedCount   float32   `json:"added_count"`
-	AddedPostIds []float32 `json:"added_post_ids"`
+	AddedCount   int32   `json:"added_count"`
+	AddedPostIds []int32 `json:"added_post_ids"`
 }
 
 type _AddPostsToTakedownByIds200Response AddPostsToTakedownByIds200Response
@@ -31,7 +31,7 @@ type _AddPostsToTakedownByIds200Response AddPostsToTakedownByIds200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewAddPostsToTakedownByIds200Response(addedCount float32, addedPostIds []float32) *AddPostsToTakedownByIds200Response {
+func NewAddPostsToTakedownByIds200Response(addedCount int32, addedPostIds []int32) *AddPostsToTakedownByIds200Response {
 	this := AddPostsToTakedownByIds200Response{}
 	this.AddedCount = addedCount
 	this.AddedPostIds = addedPostIds
@@ -47,9 +47,9 @@ func NewAddPostsToTakedownByIds200ResponseWithDefaults() *AddPostsToTakedownById
 }
 
 // GetAddedCount returns the AddedCount field value
-func (o *AddPostsToTakedownByIds200Response) GetAddedCount() float32 {
+func (o *AddPostsToTakedownByIds200Response) GetAddedCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -58,7 +58,7 @@ func (o *AddPostsToTakedownByIds200Response) GetAddedCount() float32 {
 
 // GetAddedCountOk returns a tuple with the AddedCount field value
 // and a boolean to check if the value has been set.
-func (o *AddPostsToTakedownByIds200Response) GetAddedCountOk() (*float32, bool) {
+func (o *AddPostsToTakedownByIds200Response) GetAddedCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -66,14 +66,14 @@ func (o *AddPostsToTakedownByIds200Response) GetAddedCountOk() (*float32, bool) 
 }
 
 // SetAddedCount sets field value
-func (o *AddPostsToTakedownByIds200Response) SetAddedCount(v float32) {
+func (o *AddPostsToTakedownByIds200Response) SetAddedCount(v int32) {
 	o.AddedCount = v
 }
 
 // GetAddedPostIds returns the AddedPostIds field value
-func (o *AddPostsToTakedownByIds200Response) GetAddedPostIds() []float32 {
+func (o *AddPostsToTakedownByIds200Response) GetAddedPostIds() []int32 {
 	if o == nil {
-		var ret []float32
+		var ret []int32
 		return ret
 	}
 
@@ -82,7 +82,7 @@ func (o *AddPostsToTakedownByIds200Response) GetAddedPostIds() []float32 {
 
 // GetAddedPostIdsOk returns a tuple with the AddedPostIds field value
 // and a boolean to check if the value has been set.
-func (o *AddPostsToTakedownByIds200Response) GetAddedPostIdsOk() ([]float32, bool) {
+func (o *AddPostsToTakedownByIds200Response) GetAddedPostIdsOk() ([]int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *AddPostsToTakedownByIds200Response) GetAddedPostIdsOk() ([]float32, boo
 }
 
 // SetAddedPostIds sets field value
-func (o *AddPostsToTakedownByIds200Response) SetAddedPostIds(v []float32) {
+func (o *AddPostsToTakedownByIds200Response) SetAddedPostIds(v []int32) {
 	o.AddedPostIds = v
 }
 

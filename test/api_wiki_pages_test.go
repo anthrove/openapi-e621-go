@@ -38,7 +38,7 @@ func Test_e621_WikiPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.WikiPagesAPI.DeleteWikiPage(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_WikiPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.WikiPagesAPI.EditWikiPage(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_WikiPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.WikiPagesAPI.GetWikiPage(context.Background(), id).Execute()
 
@@ -78,7 +78,7 @@ func Test_e621_WikiPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.WikiPagesAPI.RevertWikiPage(context.Background(), id).Execute()
 

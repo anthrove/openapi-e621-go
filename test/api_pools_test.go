@@ -49,7 +49,7 @@ func Test_e621_PoolsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PoolsAPI.DeletePool(context.Background(), id).Execute()
 
@@ -62,7 +62,7 @@ func Test_e621_PoolsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PoolsAPI.EditPool(context.Background(), id).Execute()
 
@@ -75,7 +75,7 @@ func Test_e621_PoolsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PoolsAPI.GetPool(context.Background(), id).Execute()
 
@@ -100,7 +100,7 @@ func Test_e621_PoolsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PoolsAPI.RevertPool(context.Background(), id).Execute()
 

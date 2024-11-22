@@ -99,7 +99,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the ip ban.
+	id := int32(56) // int32 | The ID of the ip ban.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -117,7 +117,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the ip ban. | 
+**id** | **int32** | The ID of the ip ban. | 
 
 ### Other Parameters
 
@@ -172,7 +172,7 @@ func main() {
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchIpAddr := "searchIpAddr_example" // string | Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \"is contained within or equals\" (`<<=`). (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchBannerId := float32(8.14) // float32 |  (optional)
+	searchBannerId := int32(56) // int32 |  (optional)
 	searchBannerName := "searchBannerName_example" // string |  (optional)
 	searchReason := "searchReason_example" // string |  (optional)
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
  **searchId** | **int32** | Search for a specific id. | 
  **searchIpAddr** | **string** | Must be Admin+ to use. See [postgres&#39; documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \&quot;is contained within or equals\&quot; (&#x60;&lt;&lt;&#x3D;&#x60;). | 
  **searchOrder** | **string** |  | 
- **searchBannerId** | **float32** |  | 
+ **searchBannerId** | **int32** |  | 
  **searchBannerName** | **string** |  | 
  **searchReason** | **string** |  | 
 

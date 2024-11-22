@@ -38,12 +38,12 @@ func main() {
 	avoidPostingDetails := "avoidPostingDetails_example" // string |  (optional)
 	avoidPostingStaffNotes := "avoidPostingStaffNotes_example" // string |  (optional)
 	avoidPostingIsActive := true // bool |  (optional)
-	avoidPostingArtistAttributesId := float32(8.14) // float32 |  (optional)
+	avoidPostingArtistAttributesId := int32(56) // int32 |  (optional)
 	avoidPostingArtistAttributesName := "avoidPostingArtistAttributesName_example" // string | If provided and the artist does not exist, an artist will be created. (optional)
 	avoidPostingArtistAttributesOtherNamesString := "avoidPostingArtistAttributesOtherNamesString_example" // string |  (optional)
 	avoidPostingArtistAttributesOtherNames := []string{"Inner_example"} // []string |  (optional)
 	avoidPostingArtistAttributesGroupName := "avoidPostingArtistAttributesGroupName_example" // string |  (optional)
-	avoidPostingArtistAttributesLinkedUserId := float32(8.14) // float32 |  (optional)
+	avoidPostingArtistAttributesLinkedUserId := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -71,12 +71,12 @@ Name | Type | Description  | Notes
  **avoidPostingDetails** | **string** |  | 
  **avoidPostingStaffNotes** | **string** |  | 
  **avoidPostingIsActive** | **bool** |  | 
- **avoidPostingArtistAttributesId** | **float32** |  | 
+ **avoidPostingArtistAttributesId** | **int32** |  | 
  **avoidPostingArtistAttributesName** | **string** | If provided and the artist does not exist, an artist will be created. | 
  **avoidPostingArtistAttributesOtherNamesString** | **string** |  | 
  **avoidPostingArtistAttributesOtherNames** | **[]string** |  | 
  **avoidPostingArtistAttributesGroupName** | **string** |  | 
- **avoidPostingArtistAttributesLinkedUserId** | **float32** |  | 
+ **avoidPostingArtistAttributesLinkedUserId** | **int32** |  | 
 
 ### Return type
 
@@ -261,7 +261,7 @@ func main() {
 	avoidPostingArtistAttributesOtherNamesString := "avoidPostingArtistAttributesOtherNamesString_example" // string |  (optional)
 	avoidPostingArtistAttributesOtherNames := []string{"Inner_example"} // []string |  (optional)
 	avoidPostingArtistAttributesGroupName := "avoidPostingArtistAttributesGroupName_example" // string |  (optional)
-	avoidPostingArtistAttributesLinkedUserId := float32(8.14) // float32 |  (optional)
+	avoidPostingArtistAttributesLinkedUserId := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
  **avoidPostingArtistAttributesOtherNamesString** | **string** |  | 
  **avoidPostingArtistAttributesOtherNames** | **[]string** |  | 
  **avoidPostingArtistAttributesGroupName** | **string** |  | 
- **avoidPostingArtistAttributesLinkedUserId** | **float32** |  | 
+ **avoidPostingArtistAttributesLinkedUserId** | **int32** |  | 
 
 ### Return type
 

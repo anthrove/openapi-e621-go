@@ -26,11 +26,11 @@ type CommentVotesAPICreateCommentVoteRequest struct {
 	ctx        context.Context
 	ApiService *CommentVotesAPIService
 	id         string
-	score      *float32
+	score      *int32
 	noUnvote   *bool
 }
 
-func (r CommentVotesAPICreateCommentVoteRequest) Score(score float32) CommentVotesAPICreateCommentVoteRequest {
+func (r CommentVotesAPICreateCommentVoteRequest) Score(score int32) CommentVotesAPICreateCommentVoteRequest {
 	r.score = &score
 	return r
 }

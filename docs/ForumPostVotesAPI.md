@@ -29,7 +29,7 @@ import (
 
 func main() {
 	id := "id_example" // string | The ID of the forum post.
-	forumPostVoteScore := float32(8.14) // float32 | 
+	forumPostVoteScore := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -59,7 +59,7 @@ Other parameters are passed through a pointer to a apiCreateForumPostVoteRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **forumPostVoteScore** | **float32** |  | 
+ **forumPostVoteScore** | **int32** |  | 
 
 ### Return type
 

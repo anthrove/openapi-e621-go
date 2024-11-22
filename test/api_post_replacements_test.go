@@ -26,7 +26,7 @@ func Test_e621_PostReplacementsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostReplacementsAPI.ApprovePostReplacement(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_PostReplacementsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostReplacementsAPI.DeletePostReplacement(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_PostReplacementsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostReplacementsAPI.PromotePostReplacement(context.Background(), id).Execute()
 
@@ -78,7 +78,7 @@ func Test_e621_PostReplacementsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostReplacementsAPI.RejectPostReplacement(context.Background(), id).Execute()
 
@@ -103,7 +103,7 @@ func Test_e621_PostReplacementsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostReplacementsAPI.TogglePostReplacementPenalty(context.Background(), id).Execute()
 

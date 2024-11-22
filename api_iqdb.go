@@ -27,7 +27,7 @@ type IQDBAPIQueryIQDBGetRequest struct {
 	ApiService        *IQDBAPIService
 	searchScoreCutoff *float32
 	searchUrl         *string
-	searchPostId      *float32
+	searchPostId      *int32
 	searchHash        *string
 }
 
@@ -41,7 +41,7 @@ func (r IQDBAPIQueryIQDBGetRequest) SearchUrl(searchUrl string) IQDBAPIQueryIQDB
 	return r
 }
 
-func (r IQDBAPIQueryIQDBGetRequest) SearchPostId(searchPostId float32) IQDBAPIQueryIQDBGetRequest {
+func (r IQDBAPIQueryIQDBGetRequest) SearchPostId(searchPostId int32) IQDBAPIQueryIQDBGetRequest {
 	r.searchPostId = &searchPostId
 	return r
 }

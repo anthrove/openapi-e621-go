@@ -27,13 +27,13 @@ type DeferredPost struct {
 	Tags          string         `json:"tags"`
 	Rating        Ratings        `json:"rating"`
 	FileExt       string         `json:"file_ext"`
-	Width         float32        `json:"width"`
-	Height        float32        `json:"height"`
-	Size          float32        `json:"size"`
+	Width         int32          `json:"width"`
+	Height        int32          `json:"height"`
+	Size          int64          `json:"size"`
 	CreatedAt     time.Time      `json:"created_at"`
 	Uploader      string         `json:"uploader"`
 	UploaderId    int32          `json:"uploader_id"`
-	Score         float32        `json:"score"`
+	Score         int32          `json:"score"`
 	FavCount      int32          `json:"fav_count"`
 	IsFavorited   bool           `json:"is_favorited"`
 	Pools         []int32        `json:"pools"`
@@ -41,8 +41,8 @@ type DeferredPost struct {
 	PreviewUrl    NullableString `json:"preview_url"`
 	LargeUrl      NullableString `json:"large_url"`
 	FileUrl       NullableString `json:"file_url"`
-	PreviewWidth  float32        `json:"preview_width"`
-	PreviewHeight float32        `json:"preview_height"`
+	PreviewWidth  int32          `json:"preview_width"`
+	PreviewHeight int32          `json:"preview_height"`
 }
 
 type _DeferredPost DeferredPost
@@ -51,7 +51,7 @@ type _DeferredPost DeferredPost
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewDeferredPost(id int32, flags string, tags string, rating Ratings, fileExt string, width float32, height float32, size float32, createdAt time.Time, uploader string, uploaderId int32, score float32, favCount int32, isFavorited bool, pools []int32, md5 string, previewUrl NullableString, largeUrl NullableString, fileUrl NullableString, previewWidth float32, previewHeight float32) *DeferredPost {
+func NewDeferredPost(id int32, flags string, tags string, rating Ratings, fileExt string, width int32, height int32, size int64, createdAt time.Time, uploader string, uploaderId int32, score int32, favCount int32, isFavorited bool, pools []int32, md5 string, previewUrl NullableString, largeUrl NullableString, fileUrl NullableString, previewWidth int32, previewHeight int32) *DeferredPost {
 	this := DeferredPost{}
 	this.Id = id
 	this.Flags = flags
@@ -206,9 +206,9 @@ func (o *DeferredPost) SetFileExt(v string) {
 }
 
 // GetWidth returns the Width field value
-func (o *DeferredPost) GetWidth() float32 {
+func (o *DeferredPost) GetWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -217,7 +217,7 @@ func (o *DeferredPost) GetWidth() float32 {
 
 // GetWidthOk returns a tuple with the Width field value
 // and a boolean to check if the value has been set.
-func (o *DeferredPost) GetWidthOk() (*float32, bool) {
+func (o *DeferredPost) GetWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -225,14 +225,14 @@ func (o *DeferredPost) GetWidthOk() (*float32, bool) {
 }
 
 // SetWidth sets field value
-func (o *DeferredPost) SetWidth(v float32) {
+func (o *DeferredPost) SetWidth(v int32) {
 	o.Width = v
 }
 
 // GetHeight returns the Height field value
-func (o *DeferredPost) GetHeight() float32 {
+func (o *DeferredPost) GetHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -241,7 +241,7 @@ func (o *DeferredPost) GetHeight() float32 {
 
 // GetHeightOk returns a tuple with the Height field value
 // and a boolean to check if the value has been set.
-func (o *DeferredPost) GetHeightOk() (*float32, bool) {
+func (o *DeferredPost) GetHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -249,14 +249,14 @@ func (o *DeferredPost) GetHeightOk() (*float32, bool) {
 }
 
 // SetHeight sets field value
-func (o *DeferredPost) SetHeight(v float32) {
+func (o *DeferredPost) SetHeight(v int32) {
 	o.Height = v
 }
 
 // GetSize returns the Size field value
-func (o *DeferredPost) GetSize() float32 {
+func (o *DeferredPost) GetSize() int64 {
 	if o == nil {
-		var ret float32
+		var ret int64
 		return ret
 	}
 
@@ -265,7 +265,7 @@ func (o *DeferredPost) GetSize() float32 {
 
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
-func (o *DeferredPost) GetSizeOk() (*float32, bool) {
+func (o *DeferredPost) GetSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -273,7 +273,7 @@ func (o *DeferredPost) GetSizeOk() (*float32, bool) {
 }
 
 // SetSize sets field value
-func (o *DeferredPost) SetSize(v float32) {
+func (o *DeferredPost) SetSize(v int64) {
 	o.Size = v
 }
 
@@ -350,9 +350,9 @@ func (o *DeferredPost) SetUploaderId(v int32) {
 }
 
 // GetScore returns the Score field value
-func (o *DeferredPost) GetScore() float32 {
+func (o *DeferredPost) GetScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -361,7 +361,7 @@ func (o *DeferredPost) GetScore() float32 {
 
 // GetScoreOk returns a tuple with the Score field value
 // and a boolean to check if the value has been set.
-func (o *DeferredPost) GetScoreOk() (*float32, bool) {
+func (o *DeferredPost) GetScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -369,7 +369,7 @@ func (o *DeferredPost) GetScoreOk() (*float32, bool) {
 }
 
 // SetScore sets field value
-func (o *DeferredPost) SetScore(v float32) {
+func (o *DeferredPost) SetScore(v int32) {
 	o.Score = v
 }
 
@@ -548,9 +548,9 @@ func (o *DeferredPost) SetFileUrl(v string) {
 }
 
 // GetPreviewWidth returns the PreviewWidth field value
-func (o *DeferredPost) GetPreviewWidth() float32 {
+func (o *DeferredPost) GetPreviewWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -559,7 +559,7 @@ func (o *DeferredPost) GetPreviewWidth() float32 {
 
 // GetPreviewWidthOk returns a tuple with the PreviewWidth field value
 // and a boolean to check if the value has been set.
-func (o *DeferredPost) GetPreviewWidthOk() (*float32, bool) {
+func (o *DeferredPost) GetPreviewWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -567,14 +567,14 @@ func (o *DeferredPost) GetPreviewWidthOk() (*float32, bool) {
 }
 
 // SetPreviewWidth sets field value
-func (o *DeferredPost) SetPreviewWidth(v float32) {
+func (o *DeferredPost) SetPreviewWidth(v int32) {
 	o.PreviewWidth = v
 }
 
 // GetPreviewHeight returns the PreviewHeight field value
-func (o *DeferredPost) GetPreviewHeight() float32 {
+func (o *DeferredPost) GetPreviewHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -583,7 +583,7 @@ func (o *DeferredPost) GetPreviewHeight() float32 {
 
 // GetPreviewHeightOk returns a tuple with the PreviewHeight field value
 // and a boolean to check if the value has been set.
-func (o *DeferredPost) GetPreviewHeightOk() (*float32, bool) {
+func (o *DeferredPost) GetPreviewHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -591,7 +591,7 @@ func (o *DeferredPost) GetPreviewHeightOk() (*float32, bool) {
 }
 
 // SetPreviewHeight sets field value
-func (o *DeferredPost) SetPreviewHeight(v float32) {
+func (o *DeferredPost) SetPreviewHeight(v int32) {
 	o.PreviewHeight = v
 }
 

@@ -26,7 +26,7 @@ func Test_e621_PostSetsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostSetsAPI.AddPostsToPostSet(context.Background(), id).Execute()
 
@@ -52,7 +52,7 @@ func Test_e621_PostSetsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostSetsAPI.DeletePostSet(context.Background(), id).Execute()
 
@@ -65,7 +65,7 @@ func Test_e621_PostSetsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostSetsAPI.EditPostSet(context.Background(), id).Execute()
 
@@ -78,7 +78,7 @@ func Test_e621_PostSetsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostSetsAPI.GetPostSet(context.Background(), id).Execute()
 
@@ -104,7 +104,7 @@ func Test_e621_PostSetsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostSetsAPI.RemovePostsFromPostSet(context.Background(), id).Execute()
 
@@ -130,7 +130,7 @@ func Test_e621_PostSetsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostSetsAPI.UpdatePostSetPosts(context.Background(), id).Execute()
 

@@ -213,7 +213,7 @@ func (a *WikiPagesAPIService) CreateWikiPageExecute(r WikiPagesAPICreateWikiPage
 type WikiPagesAPIDeleteWikiPageRequest struct {
 	ctx        context.Context
 	ApiService *WikiPagesAPIService
-	id         float32
+	id         int32
 }
 
 func (r WikiPagesAPIDeleteWikiPageRequest) Execute() (*http.Response, error) {
@@ -229,7 +229,7 @@ You must be Admin+
 	@param id The ID of the wiki page.
 	@return WikiPagesAPIDeleteWikiPageRequest
 */
-func (a *WikiPagesAPIService) DeleteWikiPage(ctx context.Context, id float32) WikiPagesAPIDeleteWikiPageRequest {
+func (a *WikiPagesAPIService) DeleteWikiPage(ctx context.Context, id int32) WikiPagesAPIDeleteWikiPageRequest {
 	return WikiPagesAPIDeleteWikiPageRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -326,7 +326,7 @@ func (a *WikiPagesAPIService) DeleteWikiPageExecute(r WikiPagesAPIDeleteWikiPage
 type WikiPagesAPIEditWikiPageRequest struct {
 	ctx                              context.Context
 	ApiService                       *WikiPagesAPIService
-	id                               float32
+	id                               int32
 	wikiPageBody                     *string
 	wikiPageEditReason               *string
 	wikiPageParent                   *string
@@ -389,7 +389,7 @@ You must be Janitor+ if the wiki page is locked.
 	@param id The ID of the wiki page.
 	@return WikiPagesAPIEditWikiPageRequest
 */
-func (a *WikiPagesAPIService) EditWikiPage(ctx context.Context, id float32) WikiPagesAPIEditWikiPageRequest {
+func (a *WikiPagesAPIService) EditWikiPage(ctx context.Context, id int32) WikiPagesAPIEditWikiPageRequest {
 	return WikiPagesAPIEditWikiPageRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -518,7 +518,7 @@ func (a *WikiPagesAPIService) EditWikiPageExecute(r WikiPagesAPIEditWikiPageRequ
 type WikiPagesAPIGetWikiPageRequest struct {
 	ctx        context.Context
 	ApiService *WikiPagesAPIService
-	id         float32
+	id         int32
 }
 
 func (r WikiPagesAPIGetWikiPageRequest) Execute() (*WikiPage, *http.Response, error) {
@@ -532,7 +532,7 @@ GetWikiPage Get Wiki Page
 	@param id The ID or name of the wiki page.
 	@return WikiPagesAPIGetWikiPageRequest
 */
-func (a *WikiPagesAPIService) GetWikiPage(ctx context.Context, id float32) WikiPagesAPIGetWikiPageRequest {
+func (a *WikiPagesAPIService) GetWikiPage(ctx context.Context, id int32) WikiPagesAPIGetWikiPageRequest {
 	return WikiPagesAPIGetWikiPageRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -630,12 +630,12 @@ func (a *WikiPagesAPIService) GetWikiPageExecute(r WikiPagesAPIGetWikiPageReques
 type WikiPagesAPIRevertWikiPageRequest struct {
 	ctx        context.Context
 	ApiService *WikiPagesAPIService
-	id         float32
-	versionId  *float32
+	id         int32
+	versionId  *int32
 }
 
 // The version ID to revert to.
-func (r WikiPagesAPIRevertWikiPageRequest) VersionId(versionId float32) WikiPagesAPIRevertWikiPageRequest {
+func (r WikiPagesAPIRevertWikiPageRequest) VersionId(versionId int32) WikiPagesAPIRevertWikiPageRequest {
 	r.versionId = &versionId
 	return r
 }
@@ -651,7 +651,7 @@ RevertWikiPage Revert Wiki Page
 	@param id The ID of the wiki page.
 	@return WikiPagesAPIRevertWikiPageRequest
 */
-func (a *WikiPagesAPIService) RevertWikiPage(ctx context.Context, id float32) WikiPagesAPIRevertWikiPageRequest {
+func (a *WikiPagesAPIService) RevertWikiPage(ctx context.Context, id int32) WikiPagesAPIRevertWikiPageRequest {
 	return WikiPagesAPIRevertWikiPageRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -771,7 +771,7 @@ type WikiPagesAPISearchWikiPagesRequest struct {
 	searchTitleMatches      *string
 	searchBodyMatches       *string
 	searchOtherNamesMatch   *string
-	searchCreatorId         *float32
+	searchCreatorId         *int32
 	searchCreatorName       *string
 	searchParent            *string
 	searchOtherNamesPresent *bool
@@ -822,7 +822,7 @@ func (r WikiPagesAPISearchWikiPagesRequest) SearchOtherNamesMatch(searchOtherNam
 	return r
 }
 
-func (r WikiPagesAPISearchWikiPagesRequest) SearchCreatorId(searchCreatorId float32) WikiPagesAPISearchWikiPagesRequest {
+func (r WikiPagesAPISearchWikiPagesRequest) SearchCreatorId(searchCreatorId int32) WikiPagesAPISearchWikiPagesRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
