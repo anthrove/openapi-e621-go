@@ -21,7 +21,7 @@ var _ MappedNullable = &CountMatchingPosts200Response{}
 
 // CountMatchingPosts200Response struct for CountMatchingPosts200Response
 type CountMatchingPosts200Response struct {
-	MatchedPostCount float32 `json:"matched_post_count"`
+	MatchedPostCount int32 `json:"matched_post_count"`
 }
 
 type _CountMatchingPosts200Response CountMatchingPosts200Response
@@ -30,7 +30,7 @@ type _CountMatchingPosts200Response CountMatchingPosts200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCountMatchingPosts200Response(matchedPostCount float32) *CountMatchingPosts200Response {
+func NewCountMatchingPosts200Response(matchedPostCount int32) *CountMatchingPosts200Response {
 	this := CountMatchingPosts200Response{}
 	this.MatchedPostCount = matchedPostCount
 	return &this
@@ -45,9 +45,9 @@ func NewCountMatchingPosts200ResponseWithDefaults() *CountMatchingPosts200Respon
 }
 
 // GetMatchedPostCount returns the MatchedPostCount field value
-func (o *CountMatchingPosts200Response) GetMatchedPostCount() float32 {
+func (o *CountMatchingPosts200Response) GetMatchedPostCount() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -56,7 +56,7 @@ func (o *CountMatchingPosts200Response) GetMatchedPostCount() float32 {
 
 // GetMatchedPostCountOk returns a tuple with the MatchedPostCount field value
 // and a boolean to check if the value has been set.
-func (o *CountMatchingPosts200Response) GetMatchedPostCountOk() (*float32, bool) {
+func (o *CountMatchingPosts200Response) GetMatchedPostCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -64,7 +64,7 @@ func (o *CountMatchingPosts200Response) GetMatchedPostCountOk() (*float32, bool)
 }
 
 // SetMatchedPostCount sets field value
-func (o *CountMatchingPosts200Response) SetMatchedPostCount(v float32) {
+func (o *CountMatchingPosts200Response) SetMatchedPostCount(v int32) {
 	o.MatchedPostCount = v
 }
 

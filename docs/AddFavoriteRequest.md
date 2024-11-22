@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PostUd** | Pointer to **float32** |  | [optional] 
+**PostId** | **int32** |  | 
 
 ## Methods
 
 ### NewAddFavoriteRequest
 
-`func NewAddFavoriteRequest() *AddFavoriteRequest`
+`func NewAddFavoriteRequest(postId int32, ) *AddFavoriteRequest`
 
 NewAddFavoriteRequest instantiates a new AddFavoriteRequest object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewAddFavoriteRequestWithDefaults instantiates a new AddFavoriteRequest object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPostUd
+### GetPostId
 
-`func (o *AddFavoriteRequest) GetPostUd() float32`
+`func (o *AddFavoriteRequest) GetPostId() int32`
 
-GetPostUd returns the PostUd field if non-nil, zero value otherwise.
+GetPostId returns the PostId field if non-nil, zero value otherwise.
 
-### GetPostUdOk
+### GetPostIdOk
 
-`func (o *AddFavoriteRequest) GetPostUdOk() (*float32, bool)`
+`func (o *AddFavoriteRequest) GetPostIdOk() (*int32, bool)`
 
-GetPostUdOk returns a tuple with the PostUd field if it's non-nil, zero value otherwise
+GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPostUd
+### SetPostId
 
-`func (o *AddFavoriteRequest) SetPostUd(v float32)`
+`func (o *AddFavoriteRequest) SetPostId(v int32)`
 
-SetPostUd sets PostUd field to given value.
+SetPostId sets PostId field to given value.
 
-### HasPostUd
-
-`func (o *AddFavoriteRequest) HasPostUd() bool`
-
-HasPostUd returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

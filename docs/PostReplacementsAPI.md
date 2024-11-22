@@ -35,7 +35,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post replacement.
+	id := int32(56) // int32 | The ID of the post replacement.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -53,7 +53,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post replacement. | 
+**id** | **int32** | The ID of the post replacement. | 
 
 ### Other Parameters
 
@@ -175,7 +175,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post replacement.
+	id := int32(56) // int32 | The ID of the post replacement.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -193,7 +193,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post replacement. | 
+**id** | **int32** | The ID of the post replacement. | 
 
 ### Other Parameters
 
@@ -243,7 +243,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post replacement.
+	id := int32(56) // int32 | The ID of the post replacement.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -263,7 +263,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post replacement. | 
+**id** | **int32** | The ID of the post replacement. | 
 
 ### Other Parameters
 
@@ -313,7 +313,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post replacement.
+	id := int32(56) // int32 | The ID of the post replacement.
 	rejectPostReplacementRequest := *openapiclient.NewRejectPostReplacementRequest() // RejectPostReplacementRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -332,7 +332,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post replacement. | 
+**id** | **int32** | The ID of the post replacement. | 
 
 ### Other Parameters
 
@@ -389,14 +389,14 @@ func main() {
 	searchFileExt := "searchFileExt_example" // string |  (optional)
 	searchMd5 := "searchMd5_example" // string |  (optional)
 	searchStatus := "searchStatus_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
-	searchApproverId := float32(8.14) // float32 |  (optional)
+	searchApproverId := int32(56) // int32 |  (optional)
 	searchApproverName := "searchApproverName_example" // string |  (optional)
-	searchRejectorId := float32(8.14) // float32 |  (optional)
+	searchRejectorId := int32(56) // int32 |  (optional)
 	searchRejectorName := "searchRejectorName_example" // string |  (optional)
 	searchUploaderNameOnApprove := "searchUploaderNameOnApprove_example" // string |  (optional)
-	searchUploaderIdOnApprove := float32(8.14) // float32 |  (optional)
+	searchUploaderIdOnApprove := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -427,14 +427,14 @@ Name | Type | Description  | Notes
  **searchFileExt** | **string** |  | 
  **searchMd5** | **string** |  | 
  **searchStatus** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
- **searchApproverId** | **float32** |  | 
+ **searchApproverId** | **int32** |  | 
  **searchApproverName** | **string** |  | 
- **searchRejectorId** | **float32** |  | 
+ **searchRejectorId** | **int32** |  | 
  **searchRejectorName** | **string** |  | 
  **searchUploaderNameOnApprove** | **string** |  | 
- **searchUploaderIdOnApprove** | **float32** |  | 
+ **searchUploaderIdOnApprove** | **int32** |  | 
 
 ### Return type
 
@@ -475,7 +475,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post replacement.
+	id := int32(56) // int32 | The ID of the post replacement.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -493,7 +493,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post replacement. | 
+**id** | **int32** | The ID of the post replacement. | 
 
 ### Other Parameters
 

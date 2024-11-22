@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **ParentId** | **NullableFloat32** |  | 
 **HasChildren** | **bool** |  | 
 **HasActiveChildren** | **bool** |  | 
-**Children** | **[]float32** |  | 
+**Children** | **[]int32** |  | 
 
 ## Methods
 
 ### NewPostRelationships
 
-`func NewPostRelationships(parentId NullableFloat32, hasChildren bool, hasActiveChildren bool, children []float32, ) *PostRelationships`
+`func NewPostRelationships(parentId NullableFloat32, hasChildren bool, hasActiveChildren bool, children []int32, ) *PostRelationships`
 
 NewPostRelationships instantiates a new PostRelationships object
 This constructor will assign default values to properties that have it defined,
@@ -100,20 +100,20 @@ SetHasActiveChildren sets HasActiveChildren field to given value.
 
 ### GetChildren
 
-`func (o *PostRelationships) GetChildren() []float32`
+`func (o *PostRelationships) GetChildren() []int32`
 
 GetChildren returns the Children field if non-nil, zero value otherwise.
 
 ### GetChildrenOk
 
-`func (o *PostRelationships) GetChildrenOk() (*[]float32, bool)`
+`func (o *PostRelationships) GetChildrenOk() (*[]int32, bool)`
 
 GetChildrenOk returns a tuple with the Children field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetChildren
 
-`func (o *PostRelationships) SetChildren(v []float32)`
+`func (o *PostRelationships) SetChildren(v []int32)`
 
 SetChildren sets Children field to given value.
 

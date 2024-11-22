@@ -33,7 +33,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the ticket.
+	id := int32(56) // int32 | The ID of the ticket.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -53,7 +53,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the ticket. | 
+**id** | **int32** | The ID of the ticket. | 
 
 ### Other Parameters
 
@@ -103,7 +103,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the ticket.
+	id := int32(56) // int32 | The ID of the ticket.
 	ticketResponse := "ticketResponse_example" // string | 
 	ticketStatus := "ticketStatus_example" // string |  (optional)
 	ticketRecordType := openapiclient.WarningTypes("warning") // WarningTypes |  (optional)
@@ -125,7 +125,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the ticket. | 
+**id** | **int32** | The ID of the ticket. | 
 
 ### Other Parameters
 
@@ -179,7 +179,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the ticket.
+	id := int32(56) // int32 | The ID of the ticket.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -199,7 +199,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the ticket. | 
+**id** | **int32** | The ID of the ticket. | 
 
 ### Other Parameters
 
@@ -253,11 +253,11 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchCreatorName := "searchCreatorName_example" // string | You must be Moderator+. (optional)
-	searchCreatorId := float32(8.14) // float32 | You must be Moderator+ unless providing your own id. (optional)
+	searchCreatorId := int32(56) // int32 | You must be Moderator+ unless providing your own id. (optional)
 	searchClaimantName := "searchClaimantName_example" // string | You must be Moderator+. (optional)
-	searchClaimantId := float32(8.14) // float32 | You must be Moderator+. (optional)
+	searchClaimantId := int32(56) // int32 | You must be Moderator+. (optional)
 	searchAccusedName := "searchAccusedName_example" // string | You must be Moderator+. (optional)
-	searchAccusedId := float32(8.14) // float32 | You must be Moderator+. (optional)
+	searchAccusedId := int32(56) // int32 | You must be Moderator+. (optional)
 	searchQtype := openapiclient.TicketTypes("blip") // TicketTypes |  (optional)
 	searchReason := "searchReason_example" // string | You must be Moderator+. (optional)
 	searchStatus := "searchStatus_example" // string |  (optional)
@@ -289,11 +289,11 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchCreatorName** | **string** | You must be Moderator+. | 
- **searchCreatorId** | **float32** | You must be Moderator+ unless providing your own id. | 
+ **searchCreatorId** | **int32** | You must be Moderator+ unless providing your own id. | 
  **searchClaimantName** | **string** | You must be Moderator+. | 
- **searchClaimantId** | **float32** | You must be Moderator+. | 
+ **searchClaimantId** | **int32** | You must be Moderator+. | 
  **searchAccusedName** | **string** | You must be Moderator+. | 
- **searchAccusedId** | **float32** | You must be Moderator+. | 
+ **searchAccusedId** | **int32** | You must be Moderator+. | 
  **searchQtype** | [**TicketTypes**](TicketTypes.md) |  | 
  **searchReason** | **string** | You must be Moderator+. | 
  **searchStatus** | **string** |  | 
@@ -337,7 +337,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the ticket.
+	id := int32(56) // int32 | The ID of the ticket.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -357,7 +357,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the ticket. | 
+**id** | **int32** | The ID of the ticket. | 
 
 ### Other Parameters
 

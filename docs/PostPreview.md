@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Width** | **float32** |  | 
-**Height** | **float32** |  | 
+**Width** | **int32** |  | 
+**Height** | **int32** |  | 
 **Url** | **NullableString** |  | 
 
 ## Methods
 
 ### NewPostPreview
 
-`func NewPostPreview(width float32, height float32, url NullableString, ) *PostPreview`
+`func NewPostPreview(width int32, height int32, url NullableString, ) *PostPreview`
 
 NewPostPreview instantiates a new PostPreview object
 This constructor will assign default values to properties that have it defined,
@@ -29,40 +29,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetWidth
 
-`func (o *PostPreview) GetWidth() float32`
+`func (o *PostPreview) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *PostPreview) GetWidthOk() (*float32, bool)`
+`func (o *PostPreview) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *PostPreview) SetWidth(v float32)`
+`func (o *PostPreview) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 
 
 ### GetHeight
 
-`func (o *PostPreview) GetHeight() float32`
+`func (o *PostPreview) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *PostPreview) GetHeightOk() (*float32, bool)`
+`func (o *PostPreview) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *PostPreview) SetHeight(v float32)`
+`func (o *PostPreview) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 

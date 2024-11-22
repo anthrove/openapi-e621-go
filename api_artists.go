@@ -585,11 +585,11 @@ type ArtistsAPIRevertArtistRequest struct {
 	ctx        context.Context
 	ApiService *ArtistsAPIService
 	idOrName   GetArtistIdOrNameParameter
-	versionId  *float32
+	versionId  *int32
 }
 
 // The version ID to revert to.
-func (r ArtistsAPIRevertArtistRequest) VersionId(versionId float32) ArtistsAPIRevertArtistRequest {
+func (r ArtistsAPIRevertArtistRequest) VersionId(versionId int32) ArtistsAPIRevertArtistRequest {
 	r.versionId = &versionId
 	return r
 }

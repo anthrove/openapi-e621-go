@@ -25,7 +25,7 @@ type BansAPIService service
 type BansAPIGetBanRequest struct {
 	ctx        context.Context
 	ApiService *BansAPIService
-	id         float32
+	id         int32
 }
 
 func (r BansAPIGetBanRequest) Execute() (*Ban, *http.Response, error) {
@@ -39,7 +39,7 @@ GetBan Get Ban
 	@param id The ID of the ban to get.
 	@return BansAPIGetBanRequest
 */
-func (a *BansAPIService) GetBan(ctx context.Context, id float32) BansAPIGetBanRequest {
+func (a *BansAPIService) GetBan(ctx context.Context, id int32) BansAPIGetBanRequest {
 	return BansAPIGetBanRequest{
 		ApiService: a,
 		ctx:        ctx,

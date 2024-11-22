@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **UpdatedAt** | **time.Time** |  | 
 **UpScore** | **int32** |  | 
 **DownScore** | **int32** |  | 
-**Score** | **float32** |  | 
+**Score** | **int32** |  | 
 **Source** | **string** |  | 
 **Md5** | **string** |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
@@ -31,10 +31,10 @@ Name | Type | Description | Notes
 **TagCountCharacter** | **int32** |  | 
 **TagCountCopyright** | **int32** |  | 
 **FileExt** | **string** |  | 
-**FileSize** | **float32** |  | 
-**ImageWidth** | **float32** |  | 
-**ImageHeight** | **float32** |  | 
-**ParentId** | **NullableFloat32** |  | 
+**FileSize** | **int64** |  | 
+**ImageWidth** | **int32** |  | 
+**ImageHeight** | **int32** |  | 
+**ParentId** | **NullableInt32** |  | 
 **HasChildren** | **bool** |  | 
 **LastCommentedAt** | **NullableTime** |  | 
 **HasActiveChildren** | **bool** |  | 
@@ -65,7 +65,7 @@ Name | Type | Description | Notes
 
 ### NewIQDBPost
 
-`func NewIQDBPost(id int32, createdAt time.Time, updatedAt time.Time, upScore int32, downScore int32, score float32, source string, md5 string, rating Ratings, isNoteLocked bool, isRatingLocked bool, isStatusLocked bool, isPending bool, isFlagged bool, isDeleted bool, uploaderId int32, approverId int32, lastNotedAt NullableTime, lastCommentBumpedAt NullableTime, favCount int32, tagString string, tagCount int32, tagCountGeneral int32, tagCountArtist int32, tagCountCharacter int32, tagCountCopyright int32, fileExt string, fileSize float32, imageWidth float32, imageHeight float32, parentId NullableFloat32, hasChildren bool, lastCommentedAt NullableTime, hasActiveChildren bool, bitFlags float32, tagCountMeta int32, lockedTags NullableString, tagCountSpecies int32, tagCountInvalid int32, description string, commentCount int32, changeSeq int32, tagCountLore int32, bgColor NullableString, generatedSamples []string, duration NullableString, isCommentDisabled bool, isCommentLocked bool, hasLarge bool, hasVisibleChildren bool, childrenIds NullableString, poolIds []int32, isFavorited bool, ) *IQDBPost`
+`func NewIQDBPost(id int32, createdAt time.Time, updatedAt time.Time, upScore int32, downScore int32, score int32, source string, md5 string, rating Ratings, isNoteLocked bool, isRatingLocked bool, isStatusLocked bool, isPending bool, isFlagged bool, isDeleted bool, uploaderId int32, approverId int32, lastNotedAt NullableTime, lastCommentBumpedAt NullableTime, favCount int32, tagString string, tagCount int32, tagCountGeneral int32, tagCountArtist int32, tagCountCharacter int32, tagCountCopyright int32, fileExt string, fileSize int64, imageWidth int32, imageHeight int32, parentId NullableInt32, hasChildren bool, lastCommentedAt NullableTime, hasActiveChildren bool, bitFlags float32, tagCountMeta int32, lockedTags NullableString, tagCountSpecies int32, tagCountInvalid int32, description string, commentCount int32, changeSeq int32, tagCountLore int32, bgColor NullableString, generatedSamples []string, duration NullableString, isCommentDisabled bool, isCommentLocked bool, hasLarge bool, hasVisibleChildren bool, childrenIds NullableString, poolIds []int32, isFavorited bool, ) *IQDBPost`
 
 NewIQDBPost instantiates a new IQDBPost object
 This constructor will assign default values to properties that have it defined,
@@ -182,20 +182,20 @@ SetDownScore sets DownScore field to given value.
 
 ### GetScore
 
-`func (o *IQDBPost) GetScore() float32`
+`func (o *IQDBPost) GetScore() int32`
 
 GetScore returns the Score field if non-nil, zero value otherwise.
 
 ### GetScoreOk
 
-`func (o *IQDBPost) GetScoreOk() (*float32, bool)`
+`func (o *IQDBPost) GetScoreOk() (*int32, bool)`
 
 GetScoreOk returns a tuple with the Score field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScore
 
-`func (o *IQDBPost) SetScore(v float32)`
+`func (o *IQDBPost) SetScore(v int32)`
 
 SetScore sets Score field to given value.
 
@@ -642,80 +642,80 @@ SetFileExt sets FileExt field to given value.
 
 ### GetFileSize
 
-`func (o *IQDBPost) GetFileSize() float32`
+`func (o *IQDBPost) GetFileSize() int64`
 
 GetFileSize returns the FileSize field if non-nil, zero value otherwise.
 
 ### GetFileSizeOk
 
-`func (o *IQDBPost) GetFileSizeOk() (*float32, bool)`
+`func (o *IQDBPost) GetFileSizeOk() (*int64, bool)`
 
 GetFileSizeOk returns a tuple with the FileSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFileSize
 
-`func (o *IQDBPost) SetFileSize(v float32)`
+`func (o *IQDBPost) SetFileSize(v int64)`
 
 SetFileSize sets FileSize field to given value.
 
 
 ### GetImageWidth
 
-`func (o *IQDBPost) GetImageWidth() float32`
+`func (o *IQDBPost) GetImageWidth() int32`
 
 GetImageWidth returns the ImageWidth field if non-nil, zero value otherwise.
 
 ### GetImageWidthOk
 
-`func (o *IQDBPost) GetImageWidthOk() (*float32, bool)`
+`func (o *IQDBPost) GetImageWidthOk() (*int32, bool)`
 
 GetImageWidthOk returns a tuple with the ImageWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageWidth
 
-`func (o *IQDBPost) SetImageWidth(v float32)`
+`func (o *IQDBPost) SetImageWidth(v int32)`
 
 SetImageWidth sets ImageWidth field to given value.
 
 
 ### GetImageHeight
 
-`func (o *IQDBPost) GetImageHeight() float32`
+`func (o *IQDBPost) GetImageHeight() int32`
 
 GetImageHeight returns the ImageHeight field if non-nil, zero value otherwise.
 
 ### GetImageHeightOk
 
-`func (o *IQDBPost) GetImageHeightOk() (*float32, bool)`
+`func (o *IQDBPost) GetImageHeightOk() (*int32, bool)`
 
 GetImageHeightOk returns a tuple with the ImageHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageHeight
 
-`func (o *IQDBPost) SetImageHeight(v float32)`
+`func (o *IQDBPost) SetImageHeight(v int32)`
 
 SetImageHeight sets ImageHeight field to given value.
 
 
 ### GetParentId
 
-`func (o *IQDBPost) GetParentId() float32`
+`func (o *IQDBPost) GetParentId() int32`
 
 GetParentId returns the ParentId field if non-nil, zero value otherwise.
 
 ### GetParentIdOk
 
-`func (o *IQDBPost) GetParentIdOk() (*float32, bool)`
+`func (o *IQDBPost) GetParentIdOk() (*int32, bool)`
 
 GetParentIdOk returns a tuple with the ParentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParentId
 
-`func (o *IQDBPost) SetParentId(v float32)`
+`func (o *IQDBPost) SetParentId(v int32)`
 
 SetParentId sets ParentId field to given value.
 

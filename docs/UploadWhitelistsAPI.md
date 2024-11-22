@@ -31,7 +31,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the upload whitelist.
+	id := int32(56) // int32 | The ID of the upload whitelist.
 	url := "url_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -52,7 +52,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the upload whitelist. | 
+**id** | **int32** | The ID of the upload whitelist. | 
 
 ### Other Parameters
 
@@ -175,7 +175,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the upload whitelist.
+	id := int32(56) // int32 | The ID of the upload whitelist.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -193,7 +193,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the upload whitelist. | 
+**id** | **int32** | The ID of the upload whitelist. | 
 
 ### Other Parameters
 
@@ -241,7 +241,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the upload whitelist entry.
+	id := int32(56) // int32 | The ID of the upload whitelist entry.
 	uploadWhitelistAllowed := "uploadWhitelistAllowed_example" // string |  (optional)
 	uploadWhitelistPattern := "uploadWhitelistPattern_example" // string |  (optional)
 	uploadWhitelistReason := "uploadWhitelistReason_example" // string |  (optional)
@@ -264,7 +264,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the upload whitelist entry. | 
+**id** | **int32** | The ID of the upload whitelist entry. | 
 
 ### Other Parameters
 

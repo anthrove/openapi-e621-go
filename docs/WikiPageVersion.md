@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Title** | **string** |  | 
 **Body** | **string** |  | 
-**UpdaterId** | **float32** |  | 
-**WikiPageId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
+**WikiPageId** | **int32** |  | 
 **IsLocked** | **bool** |  | 
 **OtherNames** | **[]string** |  | 
 **IsDeleted** | **bool** |  | 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewWikiPageVersion
 
-`func NewWikiPageVersion(id float32, createdAt time.Time, updatedAt time.Time, title string, body string, updaterId float32, wikiPageId float32, isLocked bool, otherNames []string, isDeleted bool, reason NullableString, parent NullableString, ) *WikiPageVersion`
+`func NewWikiPageVersion(id int32, createdAt time.Time, updatedAt time.Time, title string, body string, updaterId int32, wikiPageId int32, isLocked bool, otherNames []string, isDeleted bool, reason NullableString, parent NullableString, ) *WikiPageVersion`
 
 NewWikiPageVersion instantiates a new WikiPageVersion object
 This constructor will assign default values to properties that have it defined,
@@ -38,20 +38,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *WikiPageVersion) GetId() float32`
+`func (o *WikiPageVersion) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *WikiPageVersion) GetIdOk() (*float32, bool)`
+`func (o *WikiPageVersion) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *WikiPageVersion) SetId(v float32)`
+`func (o *WikiPageVersion) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -138,40 +138,40 @@ SetBody sets Body field to given value.
 
 ### GetUpdaterId
 
-`func (o *WikiPageVersion) GetUpdaterId() float32`
+`func (o *WikiPageVersion) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *WikiPageVersion) GetUpdaterIdOk() (*float32, bool)`
+`func (o *WikiPageVersion) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *WikiPageVersion) SetUpdaterId(v float32)`
+`func (o *WikiPageVersion) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 
 
 ### GetWikiPageId
 
-`func (o *WikiPageVersion) GetWikiPageId() float32`
+`func (o *WikiPageVersion) GetWikiPageId() int32`
 
 GetWikiPageId returns the WikiPageId field if non-nil, zero value otherwise.
 
 ### GetWikiPageIdOk
 
-`func (o *WikiPageVersion) GetWikiPageIdOk() (*float32, bool)`
+`func (o *WikiPageVersion) GetWikiPageIdOk() (*int32, bool)`
 
 GetWikiPageIdOk returns a tuple with the WikiPageId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWikiPageId
 
-`func (o *WikiPageVersion) SetWikiPageId(v float32)`
+`func (o *WikiPageVersion) SetWikiPageId(v int32)`
 
 SetWikiPageId sets WikiPageId field to given value.
 

@@ -28,7 +28,7 @@ type ModActionsAPISearchModActionsRequest struct {
 	page              *int32
 	searchId          *int32
 	searchOrder       *string
-	searchCreatorId   *float32
+	searchCreatorId   *int32
 	searchCreatorName *string
 	searchAction      *ModactionActions
 }
@@ -56,7 +56,7 @@ func (r ModActionsAPISearchModActionsRequest) SearchOrder(searchOrder string) Mo
 	return r
 }
 
-func (r ModActionsAPISearchModActionsRequest) SearchCreatorId(searchCreatorId float32) ModActionsAPISearchModActionsRequest {
+func (r ModActionsAPISearchModActionsRequest) SearchCreatorId(searchCreatorId int32) ModActionsAPISearchModActionsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }

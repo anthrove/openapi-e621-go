@@ -38,7 +38,7 @@ func Test_e621_NewsUpdatesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.NewsUpdatesAPI.DeleteNewsUpdate(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_NewsUpdatesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.NewsUpdatesAPI.EditNewsUpdate(context.Background(), id).Execute()
 

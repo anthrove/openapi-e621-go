@@ -38,7 +38,7 @@ func Test_e621_IPBansAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.IPBansAPI.DeleteIPBan(context.Background(), id).Execute()
 

@@ -112,7 +112,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the mascot.
+	id := int32(56) // int32 | The ID of the mascot.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -130,7 +130,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the mascot. | 
+**id** | **int32** | The ID of the mascot. | 
 
 ### Other Parameters
 
@@ -180,7 +180,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the mascot.
+	id := int32(56) // int32 | The ID of the mascot.
 	mascotMascotFile := os.NewFile(1234, "some_file") // *os.File |  (optional)
 	mascotDisplayName := "mascotDisplayName_example" // string |  (optional)
 	mascotBackgroundColor := "mascotBackgroundColor_example" // string |  (optional)
@@ -206,7 +206,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the mascot. | 
+**id** | **int32** | The ID of the mascot. | 
 
 ### Other Parameters
 

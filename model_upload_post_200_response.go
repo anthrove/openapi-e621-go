@@ -21,9 +21,9 @@ var _ MappedNullable = &UploadPost200Response{}
 
 // UploadPost200Response struct for UploadPost200Response
 type UploadPost200Response struct {
-	Success  bool    `json:"success"`
-	Location string  `json:"location"`
-	PostId   float32 `json:"post_id"`
+	Success  bool   `json:"success"`
+	Location string `json:"location"`
+	PostId   int32  `json:"post_id"`
 }
 
 type _UploadPost200Response UploadPost200Response
@@ -32,7 +32,7 @@ type _UploadPost200Response UploadPost200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUploadPost200Response(success bool, location string, postId float32) *UploadPost200Response {
+func NewUploadPost200Response(success bool, location string, postId int32) *UploadPost200Response {
 	this := UploadPost200Response{}
 	this.Success = success
 	this.Location = location
@@ -97,9 +97,9 @@ func (o *UploadPost200Response) SetLocation(v string) {
 }
 
 // GetPostId returns the PostId field value
-func (o *UploadPost200Response) GetPostId() float32 {
+func (o *UploadPost200Response) GetPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -108,7 +108,7 @@ func (o *UploadPost200Response) GetPostId() float32 {
 
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
-func (o *UploadPost200Response) GetPostIdOk() (*float32, bool) {
+func (o *UploadPost200Response) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -116,7 +116,7 @@ func (o *UploadPost200Response) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *UploadPost200Response) SetPostId(v float32) {
+func (o *UploadPost200Response) SetPostId(v int32) {
 	o.PostId = v
 }
 

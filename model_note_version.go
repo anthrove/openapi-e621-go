@@ -25,10 +25,10 @@ type NoteVersion struct {
 	Id        int32     `json:"id"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
-	X         float32   `json:"x"`
-	Y         float32   `json:"y"`
-	Width     float32   `json:"width"`
-	Height    float32   `json:"height"`
+	X         int32     `json:"x"`
+	Y         int32     `json:"y"`
+	Width     int32     `json:"width"`
+	Height    int32     `json:"height"`
 	Body      string    `json:"body"`
 	Version   float32   `json:"version"`
 	IsActive  bool      `json:"is_active"`
@@ -43,7 +43,7 @@ type _NoteVersion NoteVersion
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewNoteVersion(id int32, createdAt time.Time, updatedAt time.Time, x float32, y float32, width float32, height float32, body string, version float32, isActive bool, noteId int32, postId int32, updaterId int32) *NoteVersion {
+func NewNoteVersion(id int32, createdAt time.Time, updatedAt time.Time, x int32, y int32, width int32, height int32, body string, version float32, isActive bool, noteId int32, postId int32, updaterId int32) *NoteVersion {
 	this := NoteVersion{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -142,9 +142,9 @@ func (o *NoteVersion) SetUpdatedAt(v time.Time) {
 }
 
 // GetX returns the X field value
-func (o *NoteVersion) GetX() float32 {
+func (o *NoteVersion) GetX() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -153,7 +153,7 @@ func (o *NoteVersion) GetX() float32 {
 
 // GetXOk returns a tuple with the X field value
 // and a boolean to check if the value has been set.
-func (o *NoteVersion) GetXOk() (*float32, bool) {
+func (o *NoteVersion) GetXOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -161,14 +161,14 @@ func (o *NoteVersion) GetXOk() (*float32, bool) {
 }
 
 // SetX sets field value
-func (o *NoteVersion) SetX(v float32) {
+func (o *NoteVersion) SetX(v int32) {
 	o.X = v
 }
 
 // GetY returns the Y field value
-func (o *NoteVersion) GetY() float32 {
+func (o *NoteVersion) GetY() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -177,7 +177,7 @@ func (o *NoteVersion) GetY() float32 {
 
 // GetYOk returns a tuple with the Y field value
 // and a boolean to check if the value has been set.
-func (o *NoteVersion) GetYOk() (*float32, bool) {
+func (o *NoteVersion) GetYOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -185,14 +185,14 @@ func (o *NoteVersion) GetYOk() (*float32, bool) {
 }
 
 // SetY sets field value
-func (o *NoteVersion) SetY(v float32) {
+func (o *NoteVersion) SetY(v int32) {
 	o.Y = v
 }
 
 // GetWidth returns the Width field value
-func (o *NoteVersion) GetWidth() float32 {
+func (o *NoteVersion) GetWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -201,7 +201,7 @@ func (o *NoteVersion) GetWidth() float32 {
 
 // GetWidthOk returns a tuple with the Width field value
 // and a boolean to check if the value has been set.
-func (o *NoteVersion) GetWidthOk() (*float32, bool) {
+func (o *NoteVersion) GetWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -209,14 +209,14 @@ func (o *NoteVersion) GetWidthOk() (*float32, bool) {
 }
 
 // SetWidth sets field value
-func (o *NoteVersion) SetWidth(v float32) {
+func (o *NoteVersion) SetWidth(v int32) {
 	o.Width = v
 }
 
 // GetHeight returns the Height field value
-func (o *NoteVersion) GetHeight() float32 {
+func (o *NoteVersion) GetHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -225,7 +225,7 @@ func (o *NoteVersion) GetHeight() float32 {
 
 // GetHeightOk returns a tuple with the Height field value
 // and a boolean to check if the value has been set.
-func (o *NoteVersion) GetHeightOk() (*float32, bool) {
+func (o *NoteVersion) GetHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -233,7 +233,7 @@ func (o *NoteVersion) GetHeightOk() (*float32, bool) {
 }
 
 // SetHeight sets field value
-func (o *NoteVersion) SetHeight(v float32) {
+func (o *NoteVersion) SetHeight(v int32) {
 	o.Height = v
 }
 

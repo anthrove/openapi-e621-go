@@ -26,7 +26,7 @@ type ForumPostsAPICreateForumPostRequest struct {
 	ctx              context.Context
 	ApiService       *ForumPostsAPIService
 	forumPostBody    *string
-	forumPostTopicId *float32
+	forumPostTopicId *int32
 }
 
 func (r ForumPostsAPICreateForumPostRequest) ForumPostBody(forumPostBody string) ForumPostsAPICreateForumPostRequest {
@@ -34,7 +34,7 @@ func (r ForumPostsAPICreateForumPostRequest) ForumPostBody(forumPostBody string)
 	return r
 }
 
-func (r ForumPostsAPICreateForumPostRequest) ForumPostTopicId(forumPostTopicId float32) ForumPostsAPICreateForumPostRequest {
+func (r ForumPostsAPICreateForumPostRequest) ForumPostTopicId(forumPostTopicId int32) ForumPostsAPICreateForumPostRequest {
 	r.forumPostTopicId = &forumPostTopicId
 	return r
 }
@@ -164,7 +164,7 @@ func (a *ForumPostsAPIService) CreateForumPostExecute(r ForumPostsAPICreateForum
 type ForumPostsAPIDeleteForumPostRequest struct {
 	ctx        context.Context
 	ApiService *ForumPostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumPostsAPIDeleteForumPostRequest) Execute() (*http.Response, error) {
@@ -180,7 +180,7 @@ You must be Admin+.
 	@param id The ID of the forum post.
 	@return ForumPostsAPIDeleteForumPostRequest
 */
-func (a *ForumPostsAPIService) DeleteForumPost(ctx context.Context, id float32) ForumPostsAPIDeleteForumPostRequest {
+func (a *ForumPostsAPIService) DeleteForumPost(ctx context.Context, id int32) ForumPostsAPIDeleteForumPostRequest {
 	return ForumPostsAPIDeleteForumPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -277,7 +277,7 @@ func (a *ForumPostsAPIService) DeleteForumPostExecute(r ForumPostsAPIDeleteForum
 type ForumPostsAPIEditForumPostRequest struct {
 	ctx           context.Context
 	ApiService    *ForumPostsAPIService
-	id            float32
+	id            int32
 	forumPostBody *string
 }
 
@@ -299,7 +299,7 @@ You must be the creator of the forum post, or Admin+ to edit. Marked forum posts
 	@param id The ID of the forum post.
 	@return ForumPostsAPIEditForumPostRequest
 */
-func (a *ForumPostsAPIService) EditForumPost(ctx context.Context, id float32) ForumPostsAPIEditForumPostRequest {
+func (a *ForumPostsAPIService) EditForumPost(ctx context.Context, id int32) ForumPostsAPIEditForumPostRequest {
 	return ForumPostsAPIEditForumPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -410,7 +410,7 @@ func (a *ForumPostsAPIService) EditForumPostExecute(r ForumPostsAPIEditForumPost
 type ForumPostsAPIGetForumPostRequest struct {
 	ctx        context.Context
 	ApiService *ForumPostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumPostsAPIGetForumPostRequest) Execute() (*ForumPost, *http.Response, error) {
@@ -426,7 +426,7 @@ If the forum post is hidden, you must be the creator or Moderator+ to see it.
 	@param id The ID of the forum post.
 	@return ForumPostsAPIGetForumPostRequest
 */
-func (a *ForumPostsAPIService) GetForumPost(ctx context.Context, id float32) ForumPostsAPIGetForumPostRequest {
+func (a *ForumPostsAPIService) GetForumPost(ctx context.Context, id int32) ForumPostsAPIGetForumPostRequest {
 	return ForumPostsAPIGetForumPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -535,7 +535,7 @@ func (a *ForumPostsAPIService) GetForumPostExecute(r ForumPostsAPIGetForumPostRe
 type ForumPostsAPIHideForumPostRequest struct {
 	ctx        context.Context
 	ApiService *ForumPostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumPostsAPIHideForumPostRequest) Execute() (*ForumPost, *http.Response, error) {
@@ -551,7 +551,7 @@ You must be the creator or Moderator+.
 	@param id The ID of the forum post.
 	@return ForumPostsAPIHideForumPostRequest
 */
-func (a *ForumPostsAPIService) HideForumPost(ctx context.Context, id float32) ForumPostsAPIHideForumPostRequest {
+func (a *ForumPostsAPIService) HideForumPost(ctx context.Context, id int32) ForumPostsAPIHideForumPostRequest {
 	return ForumPostsAPIHideForumPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -660,7 +660,7 @@ func (a *ForumPostsAPIService) HideForumPostExecute(r ForumPostsAPIHideForumPost
 type ForumPostsAPIMarkForumPostRequest struct {
 	ctx             context.Context
 	ApiService      *ForumPostsAPIService
-	id              float32
+	id              int32
 	markBlipRequest *MarkBlipRequest
 }
 
@@ -682,7 +682,7 @@ You must be Moderator+.
 	@param id The ID of the forum post.
 	@return ForumPostsAPIMarkForumPostRequest
 */
-func (a *ForumPostsAPIService) MarkForumPost(ctx context.Context, id float32) ForumPostsAPIMarkForumPostRequest {
+func (a *ForumPostsAPIService) MarkForumPost(ctx context.Context, id int32) ForumPostsAPIMarkForumPostRequest {
 	return ForumPostsAPIMarkForumPostRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -797,12 +797,12 @@ type ForumPostsAPISearchForumPostsRequest struct {
 	page                    *int32
 	searchId                *int32
 	searchOrder             *string
-	searchCreatorId         *float32
+	searchCreatorId         *int32
 	searchCreatorName       *string
-	searchTopicId           *float32
+	searchTopicId           *int32
 	searchTopicTitleMatches *string
 	searchBodyMatches       *string
-	searchTopicCategoryId   *float32
+	searchTopicCategoryId   *int32
 	searchIsHidden          *bool
 }
 
@@ -829,7 +829,7 @@ func (r ForumPostsAPISearchForumPostsRequest) SearchOrder(searchOrder string) Fo
 	return r
 }
 
-func (r ForumPostsAPISearchForumPostsRequest) SearchCreatorId(searchCreatorId float32) ForumPostsAPISearchForumPostsRequest {
+func (r ForumPostsAPISearchForumPostsRequest) SearchCreatorId(searchCreatorId int32) ForumPostsAPISearchForumPostsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -839,7 +839,7 @@ func (r ForumPostsAPISearchForumPostsRequest) SearchCreatorName(searchCreatorNam
 	return r
 }
 
-func (r ForumPostsAPISearchForumPostsRequest) SearchTopicId(searchTopicId float32) ForumPostsAPISearchForumPostsRequest {
+func (r ForumPostsAPISearchForumPostsRequest) SearchTopicId(searchTopicId int32) ForumPostsAPISearchForumPostsRequest {
 	r.searchTopicId = &searchTopicId
 	return r
 }
@@ -854,7 +854,7 @@ func (r ForumPostsAPISearchForumPostsRequest) SearchBodyMatches(searchBodyMatche
 	return r
 }
 
-func (r ForumPostsAPISearchForumPostsRequest) SearchTopicCategoryId(searchTopicCategoryId float32) ForumPostsAPISearchForumPostsRequest {
+func (r ForumPostsAPISearchForumPostsRequest) SearchTopicCategoryId(searchTopicCategoryId int32) ForumPostsAPISearchForumPostsRequest {
 	r.searchTopicCategoryId = &searchTopicCategoryId
 	return r
 }
@@ -995,7 +995,7 @@ func (a *ForumPostsAPIService) SearchForumPostsExecute(r ForumPostsAPISearchForu
 type ForumPostsAPIUnhideForumPostRequest struct {
 	ctx        context.Context
 	ApiService *ForumPostsAPIService
-	id         float32
+	id         int32
 }
 
 func (r ForumPostsAPIUnhideForumPostRequest) Execute() (*ForumPost, *http.Response, error) {
@@ -1011,7 +1011,7 @@ You must be Moderator+.
 	@param id The ID of the forum post.
 	@return ForumPostsAPIUnhideForumPostRequest
 */
-func (a *ForumPostsAPIService) UnhideForumPost(ctx context.Context, id float32) ForumPostsAPIUnhideForumPostRequest {
+func (a *ForumPostsAPIService) UnhideForumPost(ctx context.Context, id int32) ForumPostsAPIUnhideForumPostRequest {
 	return ForumPostsAPIUnhideForumPostRequest{
 		ApiService: a,
 		ctx:        ctx,

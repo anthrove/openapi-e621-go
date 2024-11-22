@@ -31,7 +31,7 @@ import (
 )
 
 func main() {
-	postId := float32(8.14) // float32 | 
+	postId := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -54,7 +54,7 @@ Other parameters are passed through a pointer to a apiApprovePostRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **float32** |  | 
+ **postId** | **int32** |  | 
 
 ### Return type
 
@@ -100,9 +100,9 @@ func main() {
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchPostTagsMatch := "searchPostTagsMatch_example" // string |  (optional)
-	searchUserId := float32(8.14) // float32 |  (optional)
+	searchUserId := int32(56) // int32 |  (optional)
 	searchUserName := "searchUserName_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -132,9 +132,9 @@ Name | Type | Description  | Notes
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
  **searchPostTagsMatch** | **string** |  | 
- **searchUserId** | **float32** |  | 
+ **searchUserId** | **int32** |  | 
  **searchUserName** | **string** |  | 
- **searchPostId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
 
 ### Return type
 
@@ -175,7 +175,7 @@ import (
 )
 
 func main() {
-	postId := float32(8.14) // float32 | 
+	postId := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -198,7 +198,7 @@ Other parameters are passed through a pointer to a apiUnapprovePostRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **float32** |  | 
+ **postId** | **int32** |  | 
 
 ### Return type
 

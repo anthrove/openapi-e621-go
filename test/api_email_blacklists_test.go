@@ -38,7 +38,7 @@ func Test_e621_EmailBlacklistsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.EmailBlacklistsAPI.DeleteEmailBlacklist(context.Background(), id).Execute()
 

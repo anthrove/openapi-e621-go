@@ -25,7 +25,7 @@ type User struct {
 	Id                    int32         `json:"id"`
 	CreatedAt             time.Time     `json:"created_at"`
 	Name                  string        `json:"name"`
-	Level                 float32       `json:"level"`
+	Level                 int32         `json:"level"`
 	BaseUploadLimit       int32         `json:"base_upload_limit"`
 	PostUploadCount       int32         `json:"post_upload_count"`
 	PostUpdateCount       int32         `json:"post_update_count"`
@@ -46,7 +46,7 @@ type User struct {
 	PositiveFeedbackCount *int32        `json:"positive_feedback_count,omitempty"`
 	ProfileAbout          *string       `json:"profile_about,omitempty"`
 	ProfileArtinfo        *string       `json:"profile_artinfo,omitempty"`
-	UploadLimit           interface{}   `json:"upload_limit,omitempty"`
+	UploadLimit           *int32        `json:"upload_limit,omitempty"`
 	WikiPageVersionCount  *int32        `json:"wiki_page_version_count,omitempty"`
 }
 
@@ -56,7 +56,7 @@ type _User User
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId NullableInt32) *User {
+func NewUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId NullableInt32) *User {
 	this := User{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -155,9 +155,9 @@ func (o *User) SetName(v string) {
 }
 
 // GetLevel returns the Level field value
-func (o *User) GetLevel() float32 {
+func (o *User) GetLevel() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -166,7 +166,7 @@ func (o *User) GetLevel() float32 {
 
 // GetLevelOk returns a tuple with the Level field value
 // and a boolean to check if the value has been set.
-func (o *User) GetLevelOk() (*float32, bool) {
+func (o *User) GetLevelOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -174,7 +174,7 @@ func (o *User) GetLevelOk() (*float32, bool) {
 }
 
 // SetLevel sets field value
-func (o *User) SetLevel(v float32) {
+func (o *User) SetLevel(v int32) {
 	o.Level = v
 }
 
@@ -748,23 +748,22 @@ func (o *User) SetProfileArtinfo(v string) {
 	o.ProfileArtinfo = &v
 }
 
-// GetUploadLimit returns the UploadLimit field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *User) GetUploadLimit() interface{} {
-	if o == nil {
-		var ret interface{}
+// GetUploadLimit returns the UploadLimit field value if set, zero value otherwise.
+func (o *User) GetUploadLimit() int32 {
+	if o == nil || IsNil(o.UploadLimit) {
+		var ret int32
 		return ret
 	}
-	return o.UploadLimit
+	return *o.UploadLimit
 }
 
 // GetUploadLimitOk returns a tuple with the UploadLimit field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *User) GetUploadLimitOk() (*interface{}, bool) {
+func (o *User) GetUploadLimitOk() (*int32, bool) {
 	if o == nil || IsNil(o.UploadLimit) {
 		return nil, false
 	}
-	return &o.UploadLimit, true
+	return o.UploadLimit, true
 }
 
 // HasUploadLimit returns a boolean if a field has been set.
@@ -776,9 +775,9 @@ func (o *User) HasUploadLimit() bool {
 	return false
 }
 
-// SetUploadLimit gets a reference to the given interface{} and assigns it to the UploadLimit field.
-func (o *User) SetUploadLimit(v interface{}) {
-	o.UploadLimit = v
+// SetUploadLimit gets a reference to the given int32 and assigns it to the UploadLimit field.
+func (o *User) SetUploadLimit(v int32) {
+	o.UploadLimit = &v
 }
 
 // GetWikiPageVersionCount returns the WikiPageVersionCount field value if set, zero value otherwise.
@@ -869,7 +868,7 @@ func (o User) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ProfileArtinfo) {
 		toSerialize["profile_artinfo"] = o.ProfileArtinfo
 	}
-	if o.UploadLimit != nil {
+	if !IsNil(o.UploadLimit) {
 		toSerialize["upload_limit"] = o.UploadLimit
 	}
 	if !IsNil(o.WikiPageVersionCount) {

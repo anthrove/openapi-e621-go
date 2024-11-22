@@ -5,15 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | **string** |  | 
-**Height** | **float32** |  | 
-**Width** | **float32** |  | 
+**Height** | **int32** |  | 
+**Width** | **int32** |  | 
 **Urls** | [**[]PostSampleAlternateUrlsInner**](PostSampleAlternateUrlsInner.md) |  | 
 
 ## Methods
 
 ### NewPostSampleAlternate
 
-`func NewPostSampleAlternate(type_ string, height float32, width float32, urls []PostSampleAlternateUrlsInner, ) *PostSampleAlternate`
+`func NewPostSampleAlternate(type_ string, height int32, width int32, urls []PostSampleAlternateUrlsInner, ) *PostSampleAlternate`
 
 NewPostSampleAlternate instantiates a new PostSampleAlternate object
 This constructor will assign default values to properties that have it defined,
@@ -50,40 +50,40 @@ SetType sets Type field to given value.
 
 ### GetHeight
 
-`func (o *PostSampleAlternate) GetHeight() float32`
+`func (o *PostSampleAlternate) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *PostSampleAlternate) GetHeightOk() (*float32, bool)`
+`func (o *PostSampleAlternate) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *PostSampleAlternate) SetHeight(v float32)`
+`func (o *PostSampleAlternate) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 
 
 ### GetWidth
 
-`func (o *PostSampleAlternate) GetWidth() float32`
+`func (o *PostSampleAlternate) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *PostSampleAlternate) GetWidthOk() (*float32, bool)`
+`func (o *PostSampleAlternate) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *PostSampleAlternate) SetWidth(v float32)`
+`func (o *PostSampleAlternate) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 

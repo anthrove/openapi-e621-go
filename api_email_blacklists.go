@@ -155,7 +155,7 @@ func (a *EmailBlacklistsAPIService) CreateEmailBlacklistExecute(r EmailBlacklist
 type EmailBlacklistsAPIDeleteEmailBlacklistRequest struct {
 	ctx        context.Context
 	ApiService *EmailBlacklistsAPIService
-	id         float32
+	id         int32
 }
 
 func (r EmailBlacklistsAPIDeleteEmailBlacklistRequest) Execute() (*http.Response, error) {
@@ -171,7 +171,7 @@ You must be Admin+.
 	@param id The ID of the email blacklist.
 	@return EmailBlacklistsAPIDeleteEmailBlacklistRequest
 */
-func (a *EmailBlacklistsAPIService) DeleteEmailBlacklist(ctx context.Context, id float32) EmailBlacklistsAPIDeleteEmailBlacklistRequest {
+func (a *EmailBlacklistsAPIService) DeleteEmailBlacklist(ctx context.Context, id int32) EmailBlacklistsAPIDeleteEmailBlacklistRequest {
 	return EmailBlacklistsAPIDeleteEmailBlacklistRequest{
 		ApiService: a,
 		ctx:        ctx,

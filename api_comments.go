@@ -26,7 +26,7 @@ type CommentsAPICreateCommentRequest struct {
 	ctx                  context.Context
 	ApiService           *CommentsAPIService
 	commentBody          *string
-	commentPostId        *float32
+	commentPostId        *int32
 	commentDoNotBumpPost *bool
 	commentIsSticky      *bool
 	commentIsHidden      *bool
@@ -37,7 +37,7 @@ func (r CommentsAPICreateCommentRequest) CommentBody(commentBody string) Comment
 	return r
 }
 
-func (r CommentsAPICreateCommentRequest) CommentPostId(commentPostId float32) CommentsAPICreateCommentRequest {
+func (r CommentsAPICreateCommentRequest) CommentPostId(commentPostId int32) CommentsAPICreateCommentRequest {
 	r.commentPostId = &commentPostId
 	return r
 }
@@ -193,7 +193,7 @@ func (a *CommentsAPIService) CreateCommentExecute(r CommentsAPICreateCommentRequ
 type CommentsAPIDeleteCommentRequest struct {
 	ctx        context.Context
 	ApiService *CommentsAPIService
-	id         float32
+	id         int32
 }
 
 func (r CommentsAPIDeleteCommentRequest) Execute() (*http.Response, error) {
@@ -209,7 +209,7 @@ You must be Admin+.
 	@param id The ID of the comment.
 	@return CommentsAPIDeleteCommentRequest
 */
-func (a *CommentsAPIService) DeleteComment(ctx context.Context, id float32) CommentsAPIDeleteCommentRequest {
+func (a *CommentsAPIService) DeleteComment(ctx context.Context, id int32) CommentsAPIDeleteCommentRequest {
 	return CommentsAPIDeleteCommentRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -306,7 +306,7 @@ func (a *CommentsAPIService) DeleteCommentExecute(r CommentsAPIDeleteCommentRequ
 type CommentsAPIEditCommentRequest struct {
 	ctx             context.Context
 	ApiService      *CommentsAPIService
-	id              float32
+	id              int32
 	commentBody     *string
 	commentIsSticky *bool
 	commentIsHidden *bool
@@ -342,7 +342,7 @@ You must be the creator of the comment, or Admin+ to edit. Marked comments canno
 	@param id The ID of the comment.
 	@return CommentsAPIEditCommentRequest
 */
-func (a *CommentsAPIService) EditComment(ctx context.Context, id float32) CommentsAPIEditCommentRequest {
+func (a *CommentsAPIService) EditComment(ctx context.Context, id int32) CommentsAPIEditCommentRequest {
 	return CommentsAPIEditCommentRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -459,7 +459,7 @@ func (a *CommentsAPIService) EditCommentExecute(r CommentsAPIEditCommentRequest)
 type CommentsAPIGetCommentRequest struct {
 	ctx        context.Context
 	ApiService *CommentsAPIService
-	id         float32
+	id         int32
 }
 
 func (r CommentsAPIGetCommentRequest) Execute() (*Comment, *http.Response, error) {
@@ -475,7 +475,7 @@ If the comment is hidden, you must be the creator or Moderator+ to see it.
 	@param id The ID of the comment.
 	@return CommentsAPIGetCommentRequest
 */
-func (a *CommentsAPIService) GetComment(ctx context.Context, id float32) CommentsAPIGetCommentRequest {
+func (a *CommentsAPIService) GetComment(ctx context.Context, id int32) CommentsAPIGetCommentRequest {
 	return CommentsAPIGetCommentRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -584,7 +584,7 @@ func (a *CommentsAPIService) GetCommentExecute(r CommentsAPIGetCommentRequest) (
 type CommentsAPIHideCommentRequest struct {
 	ctx        context.Context
 	ApiService *CommentsAPIService
-	id         float32
+	id         int32
 }
 
 func (r CommentsAPIHideCommentRequest) Execute() (*Comment, *http.Response, error) {
@@ -600,7 +600,7 @@ You must be the creator or Moderator+.
 	@param id The ID of the comment.
 	@return CommentsAPIHideCommentRequest
 */
-func (a *CommentsAPIService) HideComment(ctx context.Context, id float32) CommentsAPIHideCommentRequest {
+func (a *CommentsAPIService) HideComment(ctx context.Context, id int32) CommentsAPIHideCommentRequest {
 	return CommentsAPIHideCommentRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -709,7 +709,7 @@ func (a *CommentsAPIService) HideCommentExecute(r CommentsAPIHideCommentRequest)
 type CommentsAPIMarkCommentRequest struct {
 	ctx             context.Context
 	ApiService      *CommentsAPIService
-	id              float32
+	id              int32
 	markBlipRequest *MarkBlipRequest
 }
 
@@ -731,7 +731,7 @@ You must be Moderator+.
 	@param id The ID of the comment.
 	@return CommentsAPIMarkCommentRequest
 */
-func (a *CommentsAPIService) MarkComment(ctx context.Context, id float32) CommentsAPIMarkCommentRequest {
+func (a *CommentsAPIService) MarkComment(ctx context.Context, id int32) CommentsAPIMarkCommentRequest {
 	return CommentsAPIMarkCommentRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -849,12 +849,12 @@ type CommentsAPISearchCommentsRequest struct {
 	searchOrder               *string
 	groupBy                   *string
 	searchBodyMatches         *string
-	searchPostId              *float32
+	searchPostId              *string
 	searchPostTagsMatch       *string
 	searchPostNoteUpdaterName *string
-	searchPostNoteUpdaterId   *float32
+	searchPostNoteUpdaterId   *int32
 	searchCreatorName         *string
-	searchCreatorId           *float32
+	searchCreatorId           *int32
 	searchIsSticky            *bool
 	searchIsHidden            *bool
 	searchDoNotBumpPost       *bool
@@ -900,7 +900,7 @@ func (r CommentsAPISearchCommentsRequest) SearchBodyMatches(searchBodyMatches st
 }
 
 // Accepts a comma separated list.
-func (r CommentsAPISearchCommentsRequest) SearchPostId(searchPostId float32) CommentsAPISearchCommentsRequest {
+func (r CommentsAPISearchCommentsRequest) SearchPostId(searchPostId string) CommentsAPISearchCommentsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
@@ -915,7 +915,7 @@ func (r CommentsAPISearchCommentsRequest) SearchPostNoteUpdaterName(searchPostNo
 	return r
 }
 
-func (r CommentsAPISearchCommentsRequest) SearchPostNoteUpdaterId(searchPostNoteUpdaterId float32) CommentsAPISearchCommentsRequest {
+func (r CommentsAPISearchCommentsRequest) SearchPostNoteUpdaterId(searchPostNoteUpdaterId int32) CommentsAPISearchCommentsRequest {
 	r.searchPostNoteUpdaterId = &searchPostNoteUpdaterId
 	return r
 }
@@ -925,7 +925,7 @@ func (r CommentsAPISearchCommentsRequest) SearchCreatorName(searchCreatorName st
 	return r
 }
 
-func (r CommentsAPISearchCommentsRequest) SearchCreatorId(searchCreatorId float32) CommentsAPISearchCommentsRequest {
+func (r CommentsAPISearchCommentsRequest) SearchCreatorId(searchCreatorId int32) CommentsAPISearchCommentsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -1092,7 +1092,7 @@ func (a *CommentsAPIService) SearchCommentsExecute(r CommentsAPISearchCommentsRe
 type CommentsAPIUnhideCommentRequest struct {
 	ctx        context.Context
 	ApiService *CommentsAPIService
-	id         float32
+	id         int32
 }
 
 func (r CommentsAPIUnhideCommentRequest) Execute() (*Comment, *http.Response, error) {
@@ -1108,7 +1108,7 @@ You must be Moderator+.
 	@param id The ID of the comment.
 	@return CommentsAPIUnhideCommentRequest
 */
-func (a *CommentsAPIService) UnhideComment(ctx context.Context, id float32) CommentsAPIUnhideCommentRequest {
+func (a *CommentsAPIService) UnhideComment(ctx context.Context, id int32) CommentsAPIUnhideCommentRequest {
 	return CommentsAPIUnhideCommentRequest{
 		ApiService: a,
 		ctx:        ctx,

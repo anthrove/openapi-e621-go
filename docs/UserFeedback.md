@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 **Body** | **string** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**UpdaterId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
 **IsDeleted** | **bool** |  | 
 
 ## Methods
 
 ### NewUserFeedback
 
-`func NewUserFeedback(id int32, userId int32, creatorId int32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId float32, isDeleted bool, ) *UserFeedback`
+`func NewUserFeedback(id int32, userId int32, creatorId int32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId int32, isDeleted bool, ) *UserFeedback`
 
 NewUserFeedback instantiates a new UserFeedback object
 This constructor will assign default values to properties that have it defined,
@@ -175,20 +175,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetUpdaterId
 
-`func (o *UserFeedback) GetUpdaterId() float32`
+`func (o *UserFeedback) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *UserFeedback) GetUpdaterIdOk() (*float32, bool)`
+`func (o *UserFeedback) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *UserFeedback) SetUpdaterId(v float32)`
+`func (o *UserFeedback) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

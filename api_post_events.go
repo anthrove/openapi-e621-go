@@ -28,8 +28,8 @@ type PostEventsAPISearchPostEventsRequest struct {
 	page              *int32
 	searchId          *int32
 	searchOrder       *string
-	searchPostId      *float32
-	searchCreatorId   *float32
+	searchPostId      *int32
+	searchCreatorId   *int32
 	searchCreatorName *string
 	searchAction      *PostEventActions
 }
@@ -57,12 +57,12 @@ func (r PostEventsAPISearchPostEventsRequest) SearchOrder(searchOrder string) Po
 	return r
 }
 
-func (r PostEventsAPISearchPostEventsRequest) SearchPostId(searchPostId float32) PostEventsAPISearchPostEventsRequest {
+func (r PostEventsAPISearchPostEventsRequest) SearchPostId(searchPostId int32) PostEventsAPISearchPostEventsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
 
-func (r PostEventsAPISearchPostEventsRequest) SearchCreatorId(searchCreatorId float32) PostEventsAPISearchPostEventsRequest {
+func (r PostEventsAPISearchPostEventsRequest) SearchCreatorId(searchCreatorId int32) PostEventsAPISearchPostEventsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }

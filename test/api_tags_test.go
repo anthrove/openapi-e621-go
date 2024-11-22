@@ -27,7 +27,7 @@ func Test_e621_TagsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagsAPI.CorrectTag(context.Background(), id).Execute()
 
@@ -40,7 +40,7 @@ func Test_e621_TagsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagsAPI.EditTag(context.Background(), id).Execute()
 

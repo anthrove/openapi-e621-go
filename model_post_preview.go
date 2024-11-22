@@ -21,8 +21,8 @@ var _ MappedNullable = &PostPreview{}
 
 // PostPreview struct for PostPreview
 type PostPreview struct {
-	Width  float32        `json:"width"`
-	Height float32        `json:"height"`
+	Width  int32          `json:"width"`
+	Height int32          `json:"height"`
 	Url    NullableString `json:"url"`
 }
 
@@ -32,7 +32,7 @@ type _PostPreview PostPreview
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostPreview(width float32, height float32, url NullableString) *PostPreview {
+func NewPostPreview(width int32, height int32, url NullableString) *PostPreview {
 	this := PostPreview{}
 	this.Width = width
 	this.Height = height
@@ -49,9 +49,9 @@ func NewPostPreviewWithDefaults() *PostPreview {
 }
 
 // GetWidth returns the Width field value
-func (o *PostPreview) GetWidth() float32 {
+func (o *PostPreview) GetWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PostPreview) GetWidth() float32 {
 
 // GetWidthOk returns a tuple with the Width field value
 // and a boolean to check if the value has been set.
-func (o *PostPreview) GetWidthOk() (*float32, bool) {
+func (o *PostPreview) GetWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,14 +68,14 @@ func (o *PostPreview) GetWidthOk() (*float32, bool) {
 }
 
 // SetWidth sets field value
-func (o *PostPreview) SetWidth(v float32) {
+func (o *PostPreview) SetWidth(v int32) {
 	o.Width = v
 }
 
 // GetHeight returns the Height field value
-func (o *PostPreview) GetHeight() float32 {
+func (o *PostPreview) GetHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -84,7 +84,7 @@ func (o *PostPreview) GetHeight() float32 {
 
 // GetHeightOk returns a tuple with the Height field value
 // and a boolean to check if the value has been set.
-func (o *PostPreview) GetHeightOk() (*float32, bool) {
+func (o *PostPreview) GetHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -92,7 +92,7 @@ func (o *PostPreview) GetHeightOk() (*float32, bool) {
 }
 
 // SetHeight sets field value
-func (o *PostPreview) SetHeight(v float32) {
+func (o *PostPreview) SetHeight(v int32) {
 	o.Height = v
 }
 

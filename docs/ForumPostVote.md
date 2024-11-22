@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **int32** |  | 
 **ForumPostId** | **int32** |  | 
 **CreatorId** | **int32** |  | 
-**Score** | **float32** |  | 
+**Score** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **CreatorName** | **string** |  | 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewForumPostVote
 
-`func NewForumPostVote(id int32, forumPostId int32, creatorId int32, score float32, createdAt time.Time, updatedAt time.Time, creatorName string, ) *ForumPostVote`
+`func NewForumPostVote(id int32, forumPostId int32, creatorId int32, score int32, createdAt time.Time, updatedAt time.Time, creatorName string, ) *ForumPostVote`
 
 NewForumPostVote instantiates a new ForumPostVote object
 This constructor will assign default values to properties that have it defined,
@@ -93,20 +93,20 @@ SetCreatorId sets CreatorId field to given value.
 
 ### GetScore
 
-`func (o *ForumPostVote) GetScore() float32`
+`func (o *ForumPostVote) GetScore() int32`
 
 GetScore returns the Score field if non-nil, zero value otherwise.
 
 ### GetScoreOk
 
-`func (o *ForumPostVote) GetScoreOk() (*float32, bool)`
+`func (o *ForumPostVote) GetScoreOk() (*int32, bool)`
 
 GetScoreOk returns a tuple with the Score field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScore
 
-`func (o *ForumPostVote) SetScore(v float32)`
+`func (o *ForumPostVote) SetScore(v int32)`
 
 SetScore sets Score field to given value.
 

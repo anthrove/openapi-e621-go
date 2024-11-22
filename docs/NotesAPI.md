@@ -32,11 +32,11 @@ import (
 )
 
 func main() {
-	notePostId := float32(8.14) // float32 | 
-	noteX := float32(8.14) // float32 | 
-	noteY := float32(8.14) // float32 | 
-	noteWidth := float32(8.14) // float32 | 
-	noteHeight := float32(8.14) // float32 | 
+	notePostId := int32(56) // int32 | 
+	noteX := int32(56) // int32 | 
+	noteY := int32(56) // int32 | 
+	noteWidth := int32(56) // int32 | 
+	noteHeight := int32(56) // int32 | 
 	noteBody := "noteBody_example" // string | 
 	noteHtmlId := "noteHtmlId_example" // string | Passthrough, used in frontend. (optional)
 
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateNoteRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notePostId** | **float32** |  | 
- **noteX** | **float32** |  | 
- **noteY** | **float32** |  | 
- **noteWidth** | **float32** |  | 
- **noteHeight** | **float32** |  | 
+ **notePostId** | **int32** |  | 
+ **noteX** | **int32** |  | 
+ **noteY** | **int32** |  | 
+ **noteWidth** | **int32** |  | 
+ **noteHeight** | **int32** |  | 
  **noteBody** | **string** |  | 
  **noteHtmlId** | **string** | Passthrough, used in frontend. | 
 
@@ -108,7 +108,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the note.
+	id := int32(56) // int32 | The ID of the note.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -126,7 +126,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the note. | 
+**id** | **int32** | The ID of the note. | 
 
 ### Other Parameters
 
@@ -174,11 +174,11 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the note.
-	noteX := float32(8.14) // float32 |  (optional)
-	noteY := float32(8.14) // float32 |  (optional)
-	noteWidth := float32(8.14) // float32 |  (optional)
-	noteHeight := float32(8.14) // float32 |  (optional)
+	id := int32(56) // int32 | The ID of the note.
+	noteX := int32(56) // int32 |  (optional)
+	noteY := int32(56) // int32 |  (optional)
+	noteWidth := int32(56) // int32 |  (optional)
+	noteHeight := int32(56) // int32 |  (optional)
 	noteBody := "noteBody_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -197,7 +197,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the note. | 
+**id** | **int32** | The ID of the note. | 
 
 ### Other Parameters
 
@@ -207,10 +207,10 @@ Other parameters are passed through a pointer to a apiEditNoteRequest struct via
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **noteX** | **float32** |  | 
- **noteY** | **float32** |  | 
- **noteWidth** | **float32** |  | 
- **noteHeight** | **float32** |  | 
+ **noteX** | **int32** |  | 
+ **noteY** | **int32** |  | 
+ **noteWidth** | **int32** |  | 
+ **noteHeight** | **int32** |  | 
  **noteBody** | **string** |  | 
 
 ### Return type
@@ -250,7 +250,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the note.
+	id := int32(56) // int32 | The ID of the note.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -270,7 +270,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the note. | 
+**id** | **int32** | The ID of the note. | 
 
 ### Other Parameters
 
@@ -318,8 +318,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the note.
-	versionId := float32(8.14) // float32 | The version ID to revert to.
+	id := int32(56) // int32 | The ID of the note.
+	versionId := int32(56) // int32 | The version ID to revert to.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -337,7 +337,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the note. | 
+**id** | **int32** | The ID of the note. | 
 
 ### Other Parameters
 
@@ -347,7 +347,7 @@ Other parameters are passed through a pointer to a apiRevertNoteRequest struct v
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **versionId** | **float32** | The version ID to revert to. | 
+ **versionId** | **int32** | The version ID to revert to. | 
 
 ### Return type
 
@@ -394,11 +394,11 @@ func main() {
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
 	searchIsActive := true // bool |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
 	searchPostTagsMatch := "searchPostTagsMatch_example" // string |  (optional)
-	searchPostNoteUpdaterId := float32(8.14) // float32 |  (optional)
+	searchPostNoteUpdaterId := int32(56) // int32 |  (optional)
 	searchPostNoteUpdaterName := "searchPostNoteUpdaterName_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -430,11 +430,11 @@ Name | Type | Description  | Notes
  **searchOrder** | **string** |  | 
  **searchBodyMatches** | **string** |  | 
  **searchIsActive** | **bool** |  | 
- **searchPostId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
  **searchPostTagsMatch** | **string** |  | 
- **searchPostNoteUpdaterId** | **float32** |  | 
+ **searchPostNoteUpdaterId** | **int32** |  | 
  **searchPostNoteUpdaterName** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
 
 ### Return type

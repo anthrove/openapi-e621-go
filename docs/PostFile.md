@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Width** | **float32** |  | 
-**Height** | **float32** |  | 
+**Width** | **int32** |  | 
+**Height** | **int32** |  | 
 **Ext** | **string** |  | 
-**Size** | **float32** |  | 
+**Size** | **int64** |  | 
 **Md5** | **string** |  | 
 **Url** | **NullableString** |  | 
 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewPostFile
 
-`func NewPostFile(width float32, height float32, ext string, size float32, md5 string, url NullableString, ) *PostFile`
+`func NewPostFile(width int32, height int32, ext string, size int64, md5 string, url NullableString, ) *PostFile`
 
 NewPostFile instantiates a new PostFile object
 This constructor will assign default values to properties that have it defined,
@@ -32,40 +32,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetWidth
 
-`func (o *PostFile) GetWidth() float32`
+`func (o *PostFile) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *PostFile) GetWidthOk() (*float32, bool)`
+`func (o *PostFile) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *PostFile) SetWidth(v float32)`
+`func (o *PostFile) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 
 
 ### GetHeight
 
-`func (o *PostFile) GetHeight() float32`
+`func (o *PostFile) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *PostFile) GetHeightOk() (*float32, bool)`
+`func (o *PostFile) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *PostFile) SetHeight(v float32)`
+`func (o *PostFile) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 
@@ -92,20 +92,20 @@ SetExt sets Ext field to given value.
 
 ### GetSize
 
-`func (o *PostFile) GetSize() float32`
+`func (o *PostFile) GetSize() int64`
 
 GetSize returns the Size field if non-nil, zero value otherwise.
 
 ### GetSizeOk
 
-`func (o *PostFile) GetSizeOk() (*float32, bool)`
+`func (o *PostFile) GetSizeOk() (*int64, bool)`
 
 GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSize
 
-`func (o *PostFile) SetSize(v float32)`
+`func (o *PostFile) SetSize(v int64)`
 
 SetSize sets Size field to given value.
 

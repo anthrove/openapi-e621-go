@@ -47,7 +47,7 @@ import (
 )
 
 func main() {
-	postId := float32(8.14) // float32 | 
+	postId := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -70,7 +70,7 @@ Other parameters are passed through a pointer to a apiApprovePostRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **float32** |  | 
+ **postId** | **int32** |  | 
 
 ### Return type
 
@@ -109,8 +109,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
-	copyNotesToPostRequest := *openapiclient.NewCopyNotesToPostRequest(float32(123)) // CopyNotesToPostRequest |  (optional)
+	id := int32(56) // int32 | The ID of the post.
+	copyNotesToPostRequest := *openapiclient.NewCopyNotesToPostRequest(int32(123)) // CopyNotesToPostRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -128,7 +128,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -179,7 +179,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	reason := "reason_example" // string | If the post does not have an active flag, this is required. (optional)
 	moveFavorites := true // bool | Move favorites to parent. (optional)
 	copySources := true // bool | Copy sources to parent. (optional)
@@ -202,7 +202,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -257,15 +257,15 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	postTagString := "postTagString_example" // string | Replaces all tags on the post. (optional)
 	postOldTagString := "postOldTagString_example" // string | The tag string before your edits, used to reconcile conflicts. (optional)
 	postTagStringDiff := "postTagStringDiff_example" // string | Tags with a minus are removed, else they are added. Mutually exclusive with tag_string. (optional)
 	postSourceDiff := "postSourceDiff_example" // string | Sources with a minus are removed, else they are added. It is not possible to add inactive sources through this. Mutually exclusive with source. (optional)
 	postSource := "postSource_example" // string | Replaces all sources on the post. (optional)
 	postOldSource := "postOldSource_example" // string | The sources before your edits, used to reconcile conflicts. (optional)
-	postParentId := float32(8.14) // float32 |  (optional)
-	postOldParentId := float32(8.14) // float32 |  (optional)
+	postParentId := int32(56) // int32 |  (optional)
+	postOldParentId := int32(56) // int32 |  (optional)
 	postDescription := "postDescription_example" // string |  (optional)
 	postOldDescription := "postOldDescription_example" // string |  (optional)
 	postRating := openapiclient.Ratings("s") // Ratings |  (optional)
@@ -298,7 +298,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -314,8 +314,8 @@ Name | Type | Description  | Notes
  **postSourceDiff** | **string** | Sources with a minus are removed, else they are added. It is not possible to add inactive sources through this. Mutually exclusive with source. | 
  **postSource** | **string** | Replaces all sources on the post. | 
  **postOldSource** | **string** | The sources before your edits, used to reconcile conflicts. | 
- **postParentId** | **float32** |  | 
- **postOldParentId** | **float32** |  | 
+ **postParentId** | **int32** |  | 
+ **postOldParentId** | **int32** |  | 
  **postDescription** | **string** |  | 
  **postOldDescription** | **string** |  | 
  **postRating** | [**Ratings**](Ratings.md) |  | 
@@ -369,7 +369,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	reason := "reason_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -390,7 +390,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -439,7 +439,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -459,7 +459,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -507,7 +507,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	seq := "seq_example" // string | The direction to move in the sequence. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -528,7 +528,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -643,7 +643,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	markPostAsTranslatedRequest := *openapiclient.NewMarkPostAsTranslatedRequest() // MarkPostAsTranslatedRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -664,7 +664,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -715,7 +715,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	commit := "commit_example" // string | If not set, nothing will happen.
 
 	configuration := openapiclient.NewConfiguration()
@@ -734,7 +734,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -785,7 +785,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -805,7 +805,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -855,7 +855,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -873,7 +873,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -921,8 +921,8 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
-	versionId := float32(8.14) // float32 | The version ID to revert to.
+	id := int32(56) // int32 | The ID of the post.
+	versionId := int32(56) // int32 | The version ID to revert to.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -940,7 +940,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -950,7 +950,7 @@ Other parameters are passed through a pointer to a apiRevertPostRequest struct v
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **versionId** | **float32** | The version ID to revert to. | 
+ **versionId** | **int32** | The version ID to revert to. | 
 
 ### Return type
 
@@ -1063,7 +1063,7 @@ import (
 )
 
 func main() {
-	postId := float32(8.14) // float32 | 
+	postId := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1086,7 +1086,7 @@ Other parameters are passed through a pointer to a apiUnapprovePostRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postId** | **float32** |  | 
+ **postId** | **int32** |  | 
 
 ### Return type
 
@@ -1127,7 +1127,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1147,7 +1147,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -1197,7 +1197,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 	approval := "approval_example" // string | Approves the post if set to \\\"approve\\\". (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1216,7 +1216,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -1267,7 +1267,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post.
+	id := int32(56) // int32 | The ID of the post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1287,7 +1287,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post. | 
+**id** | **int32** | The ID of the post. | 
 
 ### Other Parameters
 
@@ -1340,7 +1340,7 @@ func main() {
 	uploadFile := os.NewFile(1234, "some_file") // *os.File | Mutually exclusive with direct_url. (optional)
 	uploadDirectUrl := "uploadDirectUrl_example" // string | Mutually exclusive with file. (optional)
 	uploadSource := "uploadSource_example" // string |  (optional)
-	uploadParentId := float32(8.14) // float32 |  (optional)
+	uploadParentId := int32(56) // int32 |  (optional)
 	uploadDescription := "uploadDescription_example" // string |  (optional)
 	uploadAsPending := true // bool | Must have the \\\"Unrestricted Uploads\\\" permission. (optional)
 	uploadLockedRating := true // bool | Must be Privileged+ to use. (optional)
@@ -1374,7 +1374,7 @@ Name | Type | Description  | Notes
  **uploadFile** | ***os.File** | Mutually exclusive with direct_url. | 
  **uploadDirectUrl** | **string** | Mutually exclusive with file. | 
  **uploadSource** | **string** |  | 
- **uploadParentId** | **float32** |  | 
+ **uploadParentId** | **int32** |  | 
  **uploadDescription** | **string** |  | 
  **uploadAsPending** | **bool** | Must have the \\\&quot;Unrestricted Uploads\\\&quot; permission. | 
  **uploadLockedRating** | **bool** | Must be Privileged+ to use. | 

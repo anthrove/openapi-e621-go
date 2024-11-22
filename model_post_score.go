@@ -21,9 +21,9 @@ var _ MappedNullable = &PostScore{}
 
 // PostScore struct for PostScore
 type PostScore struct {
-	Up    float32 `json:"up"`
-	Down  float32 `json:"down"`
-	Total float32 `json:"total"`
+	Up    int32 `json:"up"`
+	Down  int32 `json:"down"`
+	Total int32 `json:"total"`
 }
 
 type _PostScore PostScore
@@ -32,7 +32,7 @@ type _PostScore PostScore
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostScore(up float32, down float32, total float32) *PostScore {
+func NewPostScore(up int32, down int32, total int32) *PostScore {
 	this := PostScore{}
 	this.Up = up
 	this.Down = down
@@ -49,9 +49,9 @@ func NewPostScoreWithDefaults() *PostScore {
 }
 
 // GetUp returns the Up field value
-func (o *PostScore) GetUp() float32 {
+func (o *PostScore) GetUp() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -60,7 +60,7 @@ func (o *PostScore) GetUp() float32 {
 
 // GetUpOk returns a tuple with the Up field value
 // and a boolean to check if the value has been set.
-func (o *PostScore) GetUpOk() (*float32, bool) {
+func (o *PostScore) GetUpOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -68,14 +68,14 @@ func (o *PostScore) GetUpOk() (*float32, bool) {
 }
 
 // SetUp sets field value
-func (o *PostScore) SetUp(v float32) {
+func (o *PostScore) SetUp(v int32) {
 	o.Up = v
 }
 
 // GetDown returns the Down field value
-func (o *PostScore) GetDown() float32 {
+func (o *PostScore) GetDown() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -84,7 +84,7 @@ func (o *PostScore) GetDown() float32 {
 
 // GetDownOk returns a tuple with the Down field value
 // and a boolean to check if the value has been set.
-func (o *PostScore) GetDownOk() (*float32, bool) {
+func (o *PostScore) GetDownOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -92,14 +92,14 @@ func (o *PostScore) GetDownOk() (*float32, bool) {
 }
 
 // SetDown sets field value
-func (o *PostScore) SetDown(v float32) {
+func (o *PostScore) SetDown(v int32) {
 	o.Down = v
 }
 
 // GetTotal returns the Total field value
-func (o *PostScore) GetTotal() float32 {
+func (o *PostScore) GetTotal() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -108,7 +108,7 @@ func (o *PostScore) GetTotal() float32 {
 
 // GetTotalOk returns a tuple with the Total field value
 // and a boolean to check if the value has been set.
-func (o *PostScore) GetTotalOk() (*float32, bool) {
+func (o *PostScore) GetTotalOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -116,7 +116,7 @@ func (o *PostScore) GetTotalOk() (*float32, bool) {
 }
 
 // SetTotal sets field value
-func (o *PostScore) SetTotal(v float32) {
+func (o *PostScore) SetTotal(v int32) {
 	o.Total = v
 }
 

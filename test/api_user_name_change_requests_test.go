@@ -37,7 +37,7 @@ func Test_e621_UserNameChangeRequestsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.UserNameChangeRequestsAPI.GetUserNameChangeRequest(context.Background(), id).Execute()
 

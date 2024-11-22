@@ -30,15 +30,15 @@ import (
 
 func main() {
 	limit := int32(56) // int32 | The maximum number of results to return. Between 0 and 320. (optional)
-	page := float32(8.14) // float32 | The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers. (optional)
+	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchUpdaterName := "searchUpdaterName_example" // string |  (optional)
-	searchUpdaterId := float32(8.14) // float32 |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
-	searchStartId := float32(8.14) // float32 |  (optional)
+	searchUpdaterId := int32(56) // int32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
+	searchStartId := int32(56) // int32 |  (optional)
 	searchRating := openapiclient.Ratings("s") // Ratings |  (optional)
 	searchRatingChanged := "searchRatingChanged_example" // string |  (optional)
-	searchParentId := float32(8.14) // float32 |  (optional)
+	searchParentId := int32(56) // int32 |  (optional)
 	searchParentIdChanged := true // bool |  (optional)
 	searchTags := "searchTags_example" // string |  (optional)
 	searchTagsRemoved := "searchTagsRemoved_example" // string |  (optional)
@@ -76,15 +76,15 @@ Other parameters are passed through a pointer to a apiSearchPostVersionsRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **int32** | The maximum number of results to return. Between 0 and 320. | 
- **page** | **float32** | The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers. | 
+ **page** | **int32** | The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchUpdaterName** | **string** |  | 
- **searchUpdaterId** | **float32** |  | 
- **searchPostId** | **float32** |  | 
- **searchStartId** | **float32** |  | 
+ **searchUpdaterId** | **int32** |  | 
+ **searchPostId** | **int32** |  | 
+ **searchStartId** | **int32** |  | 
  **searchRating** | [**Ratings**](Ratings.md) |  | 
  **searchRatingChanged** | **string** |  | 
- **searchParentId** | **float32** |  | 
+ **searchParentId** | **int32** |  | 
  **searchParentIdChanged** | **bool** |  | 
  **searchTags** | **string** |  | 
  **searchTagsRemoved** | **string** |  | 

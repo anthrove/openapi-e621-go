@@ -25,12 +25,12 @@ type PostSetsAPIService service
 type PostSetsAPIAddPostsToPostSetRequest struct {
 	ctx        context.Context
 	ApiService *PostSetsAPIService
-	id         float32
-	postIds    *[]float32
+	id         int32
+	postIds    *[]int32
 }
 
 // post_ids[]&#x3D;1&amp;post_ids[]&#x3D;2
-func (r PostSetsAPIAddPostsToPostSetRequest) PostIds(postIds []float32) PostSetsAPIAddPostsToPostSetRequest {
+func (r PostSetsAPIAddPostsToPostSetRequest) PostIds(postIds []int32) PostSetsAPIAddPostsToPostSetRequest {
 	r.postIds = &postIds
 	return r
 }
@@ -48,7 +48,7 @@ You must be the owner of the set, a maintainer (if public), or Admin+.
 	@param id The ID of the post set.
 	@return PostSetsAPIAddPostsToPostSetRequest
 */
-func (a *PostSetsAPIService) AddPostsToPostSet(ctx context.Context, id float32) PostSetsAPIAddPostsToPostSetRequest {
+func (a *PostSetsAPIService) AddPostsToPostSet(ctx context.Context, id int32) PostSetsAPIAddPostsToPostSetRequest {
 	return PostSetsAPIAddPostsToPostSetRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -338,7 +338,7 @@ func (a *PostSetsAPIService) CreatePostSetExecute(r PostSetsAPICreatePostSetRequ
 type PostSetsAPIDeletePostSetRequest struct {
 	ctx        context.Context
 	ApiService *PostSetsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostSetsAPIDeletePostSetRequest) Execute() (*http.Response, error) {
@@ -354,7 +354,7 @@ You must be the owner of the set, or Admin+.
 	@param id The ID of the post set.
 	@return PostSetsAPIDeletePostSetRequest
 */
-func (a *PostSetsAPIService) DeletePostSet(ctx context.Context, id float32) PostSetsAPIDeletePostSetRequest {
+func (a *PostSetsAPIService) DeletePostSet(ctx context.Context, id int32) PostSetsAPIDeletePostSetRequest {
 	return PostSetsAPIDeletePostSetRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -451,7 +451,7 @@ func (a *PostSetsAPIService) DeletePostSetExecute(r PostSetsAPIDeletePostSetRequ
 type PostSetsAPIEditPostSetRequest struct {
 	ctx                     context.Context
 	ApiService              *PostSetsAPIService
-	id                      float32
+	id                      int32
 	postSetName             *string
 	postSetShortname        *string
 	postSetDescription      *string
@@ -497,7 +497,7 @@ You must be the owner of the set, or Admin+.
 	@param id The ID of the post sets.
 	@return PostSetsAPIEditPostSetRequest
 */
-func (a *PostSetsAPIService) EditPostSet(ctx context.Context, id float32) PostSetsAPIEditPostSetRequest {
+func (a *PostSetsAPIService) EditPostSet(ctx context.Context, id int32) PostSetsAPIEditPostSetRequest {
 	return PostSetsAPIEditPostSetRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -620,7 +620,7 @@ func (a *PostSetsAPIService) EditPostSetExecute(r PostSetsAPIEditPostSetRequest)
 type PostSetsAPIGetPostSetRequest struct {
 	ctx        context.Context
 	ApiService *PostSetsAPIService
-	id         float32
+	id         int32
 }
 
 func (r PostSetsAPIGetPostSetRequest) Execute() (*PostSet, *http.Response, error) {
@@ -636,7 +636,7 @@ You must be Moderator+ if the set is not public.
 	@param id The ID of the post set.
 	@return PostSetsAPIGetPostSetRequest
 */
-func (a *PostSetsAPIService) GetPostSet(ctx context.Context, id float32) PostSetsAPIGetPostSetRequest {
+func (a *PostSetsAPIService) GetPostSet(ctx context.Context, id int32) PostSetsAPIGetPostSetRequest {
 	return PostSetsAPIGetPostSetRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -866,12 +866,12 @@ func (a *PostSetsAPIService) ListPostSetsForSelectExecute(r PostSetsAPIListPostS
 type PostSetsAPIRemovePostsFromPostSetRequest struct {
 	ctx        context.Context
 	ApiService *PostSetsAPIService
-	id         float32
-	postIds    *[]float32
+	id         int32
+	postIds    *[]int32
 }
 
 // post_ids[]&#x3D;1&amp;post_ids[]&#x3D;2
-func (r PostSetsAPIRemovePostsFromPostSetRequest) PostIds(postIds []float32) PostSetsAPIRemovePostsFromPostSetRequest {
+func (r PostSetsAPIRemovePostsFromPostSetRequest) PostIds(postIds []int32) PostSetsAPIRemovePostsFromPostSetRequest {
 	r.postIds = &postIds
 	return r
 }
@@ -889,7 +889,7 @@ You must be the owner of the set, a maintainer (if public), or Admin+.
 	@param id The ID of the post set.
 	@return PostSetsAPIRemovePostsFromPostSetRequest
 */
-func (a *PostSetsAPIService) RemovePostsFromPostSet(ctx context.Context, id float32) PostSetsAPIRemovePostsFromPostSetRequest {
+func (a *PostSetsAPIService) RemovePostsFromPostSet(ctx context.Context, id int32) PostSetsAPIRemovePostsFromPostSetRequest {
 	return PostSetsAPIRemovePostsFromPostSetRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -1017,13 +1017,13 @@ type PostSetsAPISearchPostSetsRequest struct {
 	page               *int32
 	searchId           *int32
 	searchOrder        *string
-	searchCreatorId    *float32
+	searchCreatorId    *int32
 	searchCreatorName  *string
 	searchName         *string
 	searchShortname    *string
 	searchIsPublic     *bool
-	searchPostId       *float32
-	searchMaintainerId *float32
+	searchPostId       *int32
+	searchMaintainerId *int32
 }
 
 // The maximum number of results to return. Between 0 and 320.
@@ -1049,7 +1049,7 @@ func (r PostSetsAPISearchPostSetsRequest) SearchOrder(searchOrder string) PostSe
 	return r
 }
 
-func (r PostSetsAPISearchPostSetsRequest) SearchCreatorId(searchCreatorId float32) PostSetsAPISearchPostSetsRequest {
+func (r PostSetsAPISearchPostSetsRequest) SearchCreatorId(searchCreatorId int32) PostSetsAPISearchPostSetsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -1075,12 +1075,12 @@ func (r PostSetsAPISearchPostSetsRequest) SearchIsPublic(searchIsPublic bool) Po
 	return r
 }
 
-func (r PostSetsAPISearchPostSetsRequest) SearchPostId(searchPostId float32) PostSetsAPISearchPostSetsRequest {
+func (r PostSetsAPISearchPostSetsRequest) SearchPostId(searchPostId int32) PostSetsAPISearchPostSetsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
 
-func (r PostSetsAPISearchPostSetsRequest) SearchMaintainerId(searchMaintainerId float32) PostSetsAPISearchPostSetsRequest {
+func (r PostSetsAPISearchPostSetsRequest) SearchMaintainerId(searchMaintainerId int32) PostSetsAPISearchPostSetsRequest {
 	r.searchMaintainerId = &searchMaintainerId
 	return r
 }
@@ -1216,7 +1216,7 @@ func (a *PostSetsAPIService) SearchPostSetsExecute(r PostSetsAPISearchPostSetsRe
 type PostSetsAPIUpdatePostSetPostsRequest struct {
 	ctx                  context.Context
 	ApiService           *PostSetsAPIService
-	id                   float32
+	id                   int32
 	postSetPostIdsString *string
 }
 
@@ -1238,7 +1238,7 @@ You must be the owner of the set, a maintainer (if public), or Admin+.
 	@param id The ID of the post set.
 	@return PostSetsAPIUpdatePostSetPostsRequest
 */
-func (a *PostSetsAPIService) UpdatePostSetPosts(ctx context.Context, id float32) PostSetsAPIUpdatePostSetPostsRequest {
+func (a *PostSetsAPIService) UpdatePostSetPosts(ctx context.Context, id int32) PostSetsAPIUpdatePostSetPostsRequest {
 	return PostSetsAPIUpdatePostSetPostsRequest{
 		ApiService: a,
 		ctx:        ctx,

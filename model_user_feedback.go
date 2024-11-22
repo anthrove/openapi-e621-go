@@ -29,7 +29,7 @@ type UserFeedback struct {
 	Body      string             `json:"body"`
 	CreatedAt time.Time          `json:"created_at"`
 	UpdatedAt time.Time          `json:"updated_at"`
-	UpdaterId float32            `json:"updater_id"`
+	UpdaterId int32              `json:"updater_id"`
 	IsDeleted bool               `json:"is_deleted"`
 }
 
@@ -39,7 +39,7 @@ type _UserFeedback UserFeedback
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUserFeedback(id int32, userId int32, creatorId int32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId float32, isDeleted bool) *UserFeedback {
+func NewUserFeedback(id int32, userId int32, creatorId int32, category FeedbackCategories, body string, createdAt time.Time, updatedAt time.Time, updaterId int32, isDeleted bool) *UserFeedback {
 	this := UserFeedback{}
 	this.Id = id
 	this.UserId = userId
@@ -230,9 +230,9 @@ func (o *UserFeedback) SetUpdatedAt(v time.Time) {
 }
 
 // GetUpdaterId returns the UpdaterId field value
-func (o *UserFeedback) GetUpdaterId() float32 {
+func (o *UserFeedback) GetUpdaterId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -241,7 +241,7 @@ func (o *UserFeedback) GetUpdaterId() float32 {
 
 // GetUpdaterIdOk returns a tuple with the UpdaterId field value
 // and a boolean to check if the value has been set.
-func (o *UserFeedback) GetUpdaterIdOk() (*float32, bool) {
+func (o *UserFeedback) GetUpdaterIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -249,7 +249,7 @@ func (o *UserFeedback) GetUpdaterIdOk() (*float32, bool) {
 }
 
 // SetUpdaterId sets field value
-func (o *UserFeedback) SetUpdaterId(v float32) {
+func (o *UserFeedback) SetUpdaterId(v int32) {
 	o.UpdaterId = v
 }
 

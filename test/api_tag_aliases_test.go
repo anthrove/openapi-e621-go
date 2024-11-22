@@ -26,7 +26,7 @@ func Test_e621_TagAliasesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagAliasesAPI.ApproveTagAlias(context.Background(), id).Execute()
 
@@ -50,7 +50,7 @@ func Test_e621_TagAliasesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagAliasesAPI.EditTagAlias(context.Background(), id).Execute()
 
@@ -63,7 +63,7 @@ func Test_e621_TagAliasesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TagAliasesAPI.GetTagAlias(context.Background(), id).Execute()
 
@@ -77,7 +77,7 @@ func Test_e621_TagAliasesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TagAliasesAPI.RejectTagAlias(context.Background(), id).Execute()
 

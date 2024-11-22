@@ -21,7 +21,7 @@ var _ MappedNullable = &CopyNotesToPostRequest{}
 
 // CopyNotesToPostRequest struct for CopyNotesToPostRequest
 type CopyNotesToPostRequest struct {
-	OtherPostId float32 `json:"other_post_id"`
+	OtherPostId int32 `json:"other_post_id"`
 }
 
 type _CopyNotesToPostRequest CopyNotesToPostRequest
@@ -30,7 +30,7 @@ type _CopyNotesToPostRequest CopyNotesToPostRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCopyNotesToPostRequest(otherPostId float32) *CopyNotesToPostRequest {
+func NewCopyNotesToPostRequest(otherPostId int32) *CopyNotesToPostRequest {
 	this := CopyNotesToPostRequest{}
 	this.OtherPostId = otherPostId
 	return &this
@@ -45,9 +45,9 @@ func NewCopyNotesToPostRequestWithDefaults() *CopyNotesToPostRequest {
 }
 
 // GetOtherPostId returns the OtherPostId field value
-func (o *CopyNotesToPostRequest) GetOtherPostId() float32 {
+func (o *CopyNotesToPostRequest) GetOtherPostId() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -56,7 +56,7 @@ func (o *CopyNotesToPostRequest) GetOtherPostId() float32 {
 
 // GetOtherPostIdOk returns a tuple with the OtherPostId field value
 // and a boolean to check if the value has been set.
-func (o *CopyNotesToPostRequest) GetOtherPostIdOk() (*float32, bool) {
+func (o *CopyNotesToPostRequest) GetOtherPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -64,7 +64,7 @@ func (o *CopyNotesToPostRequest) GetOtherPostIdOk() (*float32, bool) {
 }
 
 // SetOtherPostId sets field value
-func (o *CopyNotesToPostRequest) SetOtherPostId(v float32) {
+func (o *CopyNotesToPostRequest) SetOtherPostId(v int32) {
 	o.OtherPostId = v
 }
 

@@ -26,7 +26,7 @@ func Test_e621_WikiPageVersionsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.WikiPageVersionsAPI.GetWikiPageVersion(context.Background(), id).Execute()
 

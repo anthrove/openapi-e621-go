@@ -26,7 +26,7 @@ func Test_e621_TicketsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TicketsAPI.ClaimTicket(context.Background(), id).Execute()
 
@@ -40,7 +40,7 @@ func Test_e621_TicketsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.TicketsAPI.EditTicket(context.Background(), id).Execute()
 
@@ -53,7 +53,7 @@ func Test_e621_TicketsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TicketsAPI.GetTicket(context.Background(), id).Execute()
 
@@ -79,7 +79,7 @@ func Test_e621_TicketsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.TicketsAPI.UnclaimTicket(context.Background(), id).Execute()
 

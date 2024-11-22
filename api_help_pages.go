@@ -185,7 +185,7 @@ func (a *HelpPagesAPIService) CreateHelpPageExecute(r HelpPagesAPICreateHelpPage
 type HelpPagesAPIDeleteHelpPageRequest struct {
 	ctx        context.Context
 	ApiService *HelpPagesAPIService
-	id         float32
+	id         int32
 }
 
 func (r HelpPagesAPIDeleteHelpPageRequest) Execute() (*http.Response, error) {
@@ -201,7 +201,7 @@ You must be Admin+.
 	@param id The ID of the help page.
 	@return HelpPagesAPIDeleteHelpPageRequest
 */
-func (a *HelpPagesAPIService) DeleteHelpPage(ctx context.Context, id float32) HelpPagesAPIDeleteHelpPageRequest {
+func (a *HelpPagesAPIService) DeleteHelpPage(ctx context.Context, id int32) HelpPagesAPIDeleteHelpPageRequest {
 	return HelpPagesAPIDeleteHelpPageRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -298,7 +298,7 @@ func (a *HelpPagesAPIService) DeleteHelpPageExecute(r HelpPagesAPIDeleteHelpPage
 type HelpPagesAPIEditHelpPageRequest struct {
 	ctx              context.Context
 	ApiService       *HelpPagesAPIService
-	id               float32
+	id               int32
 	helpPageName     *string
 	helpPageWikiPage *string
 	helpPageRelated  *string
@@ -339,7 +339,7 @@ You must be Admin+
 	@param id The ID of the help page.
 	@return HelpPagesAPIEditHelpPageRequest
 */
-func (a *HelpPagesAPIService) EditHelpPage(ctx context.Context, id float32) HelpPagesAPIEditHelpPageRequest {
+func (a *HelpPagesAPIService) EditHelpPage(ctx context.Context, id int32) HelpPagesAPIEditHelpPageRequest {
 	return HelpPagesAPIEditHelpPageRequest{
 		ApiService: a,
 		ctx:        ctx,

@@ -38,7 +38,7 @@ func Test_e621_MascotsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.MascotsAPI.DeleteMascot(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_MascotsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.MascotsAPI.EditMascot(context.Background(), id).Execute()
 

@@ -105,7 +105,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the help page.
+	id := int32(56) // int32 | The ID of the help page.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -123,7 +123,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the help page. | 
+**id** | **int32** | The ID of the help page. | 
 
 ### Other Parameters
 
@@ -173,7 +173,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the help page.
+	id := int32(56) // int32 | The ID of the help page.
 	helpPageName := "helpPageName_example" // string |  (optional)
 	helpPageWikiPage := "helpPageWikiPage_example" // string |  (optional)
 	helpPageRelated := "helpPageRelated_example" // string | Separate with a comma followed by a space. (optional)
@@ -195,7 +195,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the help page. | 
+**id** | **int32** | The ID of the help page. | 
 
 ### Other Parameters
 

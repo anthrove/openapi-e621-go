@@ -29,9 +29,9 @@ type PoolVersionsAPISearchPoolVersionsRequest struct {
 	searchId          *int32
 	searchIpAddr      *string
 	searchOrder       *string
-	searchUpdaterId   *float32
+	searchUpdaterId   *int32
 	searchUpdaterName *string
-	searchPoolId      *float32
+	searchPoolId      *int32
 }
 
 // The maximum number of results to return. Between 0 and 320.
@@ -64,7 +64,7 @@ func (r PoolVersionsAPISearchPoolVersionsRequest) SearchOrder(searchOrder string
 	return r
 }
 
-func (r PoolVersionsAPISearchPoolVersionsRequest) SearchUpdaterId(searchUpdaterId float32) PoolVersionsAPISearchPoolVersionsRequest {
+func (r PoolVersionsAPISearchPoolVersionsRequest) SearchUpdaterId(searchUpdaterId int32) PoolVersionsAPISearchPoolVersionsRequest {
 	r.searchUpdaterId = &searchUpdaterId
 	return r
 }
@@ -74,7 +74,7 @@ func (r PoolVersionsAPISearchPoolVersionsRequest) SearchUpdaterName(searchUpdate
 	return r
 }
 
-func (r PoolVersionsAPISearchPoolVersionsRequest) SearchPoolId(searchPoolId float32) PoolVersionsAPISearchPoolVersionsRequest {
+func (r PoolVersionsAPISearchPoolVersionsRequest) SearchPoolId(searchPoolId int32) PoolVersionsAPISearchPoolVersionsRequest {
 	r.searchPoolId = &searchPoolId
 	return r
 }

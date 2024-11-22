@@ -25,15 +25,15 @@ type PostVersionsAPISearchPostVersionsRequest struct {
 	ctx                      context.Context
 	ApiService               *PostVersionsAPIService
 	limit                    *int32
-	page                     *float32
+	page                     *int32
 	searchId                 *int32
 	searchUpdaterName        *string
-	searchUpdaterId          *float32
-	searchPostId             *float32
-	searchStartId            *float32
+	searchUpdaterId          *int32
+	searchPostId             *int32
+	searchStartId            *int32
 	searchRating             *Ratings
 	searchRatingChanged      *string
-	searchParentId           *float32
+	searchParentId           *int32
 	searchParentIdChanged    *bool
 	searchTags               *string
 	searchTagsRemoved        *string
@@ -55,7 +55,7 @@ func (r PostVersionsAPISearchPostVersionsRequest) Limit(limit int32) PostVersion
 }
 
 // The page number of results to get. Between 1 and 750. Note that for post versions specifically, you can only go through the 10,000 most recent results with page numbers.
-func (r PostVersionsAPISearchPostVersionsRequest) Page(page float32) PostVersionsAPISearchPostVersionsRequest {
+func (r PostVersionsAPISearchPostVersionsRequest) Page(page int32) PostVersionsAPISearchPostVersionsRequest {
 	r.page = &page
 	return r
 }
@@ -71,17 +71,17 @@ func (r PostVersionsAPISearchPostVersionsRequest) SearchUpdaterName(searchUpdate
 	return r
 }
 
-func (r PostVersionsAPISearchPostVersionsRequest) SearchUpdaterId(searchUpdaterId float32) PostVersionsAPISearchPostVersionsRequest {
+func (r PostVersionsAPISearchPostVersionsRequest) SearchUpdaterId(searchUpdaterId int32) PostVersionsAPISearchPostVersionsRequest {
 	r.searchUpdaterId = &searchUpdaterId
 	return r
 }
 
-func (r PostVersionsAPISearchPostVersionsRequest) SearchPostId(searchPostId float32) PostVersionsAPISearchPostVersionsRequest {
+func (r PostVersionsAPISearchPostVersionsRequest) SearchPostId(searchPostId int32) PostVersionsAPISearchPostVersionsRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
 
-func (r PostVersionsAPISearchPostVersionsRequest) SearchStartId(searchStartId float32) PostVersionsAPISearchPostVersionsRequest {
+func (r PostVersionsAPISearchPostVersionsRequest) SearchStartId(searchStartId int32) PostVersionsAPISearchPostVersionsRequest {
 	r.searchStartId = &searchStartId
 	return r
 }
@@ -96,7 +96,7 @@ func (r PostVersionsAPISearchPostVersionsRequest) SearchRatingChanged(searchRati
 	return r
 }
 
-func (r PostVersionsAPISearchPostVersionsRequest) SearchParentId(searchParentId float32) PostVersionsAPISearchPostVersionsRequest {
+func (r PostVersionsAPISearchPostVersionsRequest) SearchParentId(searchParentId int32) PostVersionsAPISearchPostVersionsRequest {
 	r.searchParentId = &searchParentId
 	return r
 }

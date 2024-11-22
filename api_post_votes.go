@@ -26,11 +26,11 @@ type PostVotesAPICreatePostVoteRequest struct {
 	ctx        context.Context
 	ApiService *PostVotesAPIService
 	id         string
-	score      *float32
+	score      *int32
 	noUnvote   *bool
 }
 
-func (r PostVotesAPICreatePostVoteRequest) Score(score float32) PostVotesAPICreatePostVoteRequest {
+func (r PostVotesAPICreatePostVoteRequest) Score(score int32) PostVotesAPICreatePostVoteRequest {
 	r.score = &score
 	return r
 }

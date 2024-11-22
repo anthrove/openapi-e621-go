@@ -34,7 +34,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the bulk update request.
+	id := int32(56) // int32 | The ID of the bulk update request.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -52,7 +52,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the bulk update request. | 
+**id** | **int32** | The ID of the bulk update request. | 
 
 ### Other Parameters
 
@@ -103,7 +103,7 @@ func main() {
 	bulkUpdateRequestScript := "bulkUpdateRequestScript_example" // string | 
 	bulkUpdateRequestTitle := "bulkUpdateRequestTitle_example" // string | 
 	bulkUpdateRequestReason := "bulkUpdateRequestReason_example" // string | 
-	bulkUpdateRequestForumTopicId := float32(8.14) // float32 |  (optional)
+	bulkUpdateRequestForumTopicId := int32(56) // int32 |  (optional)
 	bulkUpdateRequestSkipForum := true // bool | Only usable for Admin+ (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
  **bulkUpdateRequestScript** | **string** |  | 
  **bulkUpdateRequestTitle** | **string** |  | 
  **bulkUpdateRequestReason** | **string** |  | 
- **bulkUpdateRequestForumTopicId** | **float32** |  | 
+ **bulkUpdateRequestForumTopicId** | **int32** |  | 
  **bulkUpdateRequestSkipForum** | **bool** | Only usable for Admin+ | 
 
 ### Return type
@@ -174,7 +174,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the bulk update request.
+	id := int32(56) // int32 | The ID of the bulk update request.
 	bulkUpdateRequestScript := "bulkUpdateRequestScript_example" // string |  (optional)
 	bulkUpdateRequestForumTopicId := "bulkUpdateRequestForumTopicId_example" // string | You must be Admin+. (optional)
 	bulkUpdateRequestForumPostId := "bulkUpdateRequestForumPostId_example" // string | You must be Admin+. (optional)
@@ -195,7 +195,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the bulk update request. | 
+**id** | **int32** | The ID of the bulk update request. | 
 
 ### Other Parameters
 
@@ -246,7 +246,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the bulk update request.
+	id := int32(56) // int32 | The ID of the bulk update request.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -266,7 +266,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the bulk update request. | 
+**id** | **int32** | The ID of the bulk update request. | 
 
 ### Other Parameters
 
@@ -316,7 +316,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the bulk update request.
+	id := int32(56) // int32 | The ID of the bulk update request.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -334,7 +334,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the bulk update request. | 
+**id** | **int32** | The ID of the bulk update request. | 
 
 ### Other Parameters
 
@@ -388,12 +388,12 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchUserId := float32(8.14) // float32 |  (optional)
+	searchUserId := int32(56) // int32 |  (optional)
 	searchUserName := "searchUserName_example" // string |  (optional)
-	searchApproverId := float32(8.14) // float32 |  (optional)
+	searchApproverId := int32(56) // int32 |  (optional)
 	searchApproverName := "searchApproverName_example" // string |  (optional)
-	searchForumTopicId := float32(8.14) // float32 |  (optional)
-	searchForumPostId := float32(8.14) // float32 |  (optional)
+	searchForumTopicId := int32(56) // int32 |  (optional)
+	searchForumPostId := int32(56) // int32 |  (optional)
 	searchStatus := "searchStatus_example" // string |  (optional)
 	searchTitleMatches := "searchTitleMatches_example" // string |  (optional)
 	searchScriptMatches := "searchScriptMatches_example" // string |  (optional)
@@ -425,12 +425,12 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchUserId** | **float32** |  | 
+ **searchUserId** | **int32** |  | 
  **searchUserName** | **string** |  | 
- **searchApproverId** | **float32** |  | 
+ **searchApproverId** | **int32** |  | 
  **searchApproverName** | **string** |  | 
- **searchForumTopicId** | **float32** |  | 
- **searchForumPostId** | **float32** |  | 
+ **searchForumTopicId** | **int32** |  | 
+ **searchForumPostId** | **int32** |  | 
  **searchStatus** | **string** |  | 
  **searchTitleMatches** | **string** |  | 
  **searchScriptMatches** | **string** |  | 

@@ -153,7 +153,7 @@ func (a *UserNameChangeRequestsAPIService) CreateUserNameChangeRequestExecute(r 
 type UserNameChangeRequestsAPIGetUserNameChangeRequestRequest struct {
 	ctx        context.Context
 	ApiService *UserNameChangeRequestsAPIService
-	id         float32
+	id         int32
 }
 
 func (r UserNameChangeRequestsAPIGetUserNameChangeRequestRequest) Execute() (*UserNameChangeRequest, *http.Response, error) {
@@ -169,7 +169,7 @@ You must be the creator of the request or Moderator+.
 	@param id The ID of the name change request.
 	@return UserNameChangeRequestsAPIGetUserNameChangeRequestRequest
 */
-func (a *UserNameChangeRequestsAPIService) GetUserNameChangeRequest(ctx context.Context, id float32) UserNameChangeRequestsAPIGetUserNameChangeRequestRequest {
+func (a *UserNameChangeRequestsAPIService) GetUserNameChangeRequest(ctx context.Context, id int32) UserNameChangeRequestsAPIGetUserNameChangeRequestRequest {
 	return UserNameChangeRequestsAPIGetUserNameChangeRequestRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -282,7 +282,7 @@ type UserNameChangeRequestsAPISearchUserNameChangeRequestsRequest struct {
 	page               *int32
 	searchId           *int32
 	searchOrder        *string
-	searchCurrentId    *float32
+	searchCurrentId    *int32
 	searchCurrentName  *string
 	searchOriginalName *string
 	searchDesiredName  *string
@@ -311,7 +311,7 @@ func (r UserNameChangeRequestsAPISearchUserNameChangeRequestsRequest) SearchOrde
 	return r
 }
 
-func (r UserNameChangeRequestsAPISearchUserNameChangeRequestsRequest) SearchCurrentId(searchCurrentId float32) UserNameChangeRequestsAPISearchUserNameChangeRequestsRequest {
+func (r UserNameChangeRequestsAPISearchUserNameChangeRequestsRequest) SearchCurrentId(searchCurrentId int32) UserNameChangeRequestsAPISearchUserNameChangeRequestsRequest {
 	r.searchCurrentId = &searchCurrentId
 	return r
 }

@@ -26,10 +26,10 @@ type CreateNote201Response struct {
 	CreatedAt   time.Time `json:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at"`
 	CreatorId   int32     `json:"creator_id"`
-	X           float32   `json:"x"`
-	Y           float32   `json:"y"`
-	Width       float32   `json:"width"`
-	Height      float32   `json:"height"`
+	X           int32     `json:"x"`
+	Y           int32     `json:"y"`
+	Width       int32     `json:"width"`
+	Height      int32     `json:"height"`
 	Version     float32   `json:"version"`
 	IsActive    bool      `json:"is_active"`
 	PostId      int32     `json:"post_id"`
@@ -45,7 +45,7 @@ type _CreateNote201Response CreateNote201Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCreateNote201Response(id int32, createdAt time.Time, updatedAt time.Time, creatorId int32, x float32, y float32, width float32, height float32, version float32, isActive bool, postId int32, body string, creatorName string, htmlId string) *CreateNote201Response {
+func NewCreateNote201Response(id int32, createdAt time.Time, updatedAt time.Time, creatorId int32, x int32, y int32, width int32, height int32, version float32, isActive bool, postId int32, body string, creatorName string, htmlId string) *CreateNote201Response {
 	this := CreateNote201Response{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -169,9 +169,9 @@ func (o *CreateNote201Response) SetCreatorId(v int32) {
 }
 
 // GetX returns the X field value
-func (o *CreateNote201Response) GetX() float32 {
+func (o *CreateNote201Response) GetX() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -180,7 +180,7 @@ func (o *CreateNote201Response) GetX() float32 {
 
 // GetXOk returns a tuple with the X field value
 // and a boolean to check if the value has been set.
-func (o *CreateNote201Response) GetXOk() (*float32, bool) {
+func (o *CreateNote201Response) GetXOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -188,14 +188,14 @@ func (o *CreateNote201Response) GetXOk() (*float32, bool) {
 }
 
 // SetX sets field value
-func (o *CreateNote201Response) SetX(v float32) {
+func (o *CreateNote201Response) SetX(v int32) {
 	o.X = v
 }
 
 // GetY returns the Y field value
-func (o *CreateNote201Response) GetY() float32 {
+func (o *CreateNote201Response) GetY() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -204,7 +204,7 @@ func (o *CreateNote201Response) GetY() float32 {
 
 // GetYOk returns a tuple with the Y field value
 // and a boolean to check if the value has been set.
-func (o *CreateNote201Response) GetYOk() (*float32, bool) {
+func (o *CreateNote201Response) GetYOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -212,14 +212,14 @@ func (o *CreateNote201Response) GetYOk() (*float32, bool) {
 }
 
 // SetY sets field value
-func (o *CreateNote201Response) SetY(v float32) {
+func (o *CreateNote201Response) SetY(v int32) {
 	o.Y = v
 }
 
 // GetWidth returns the Width field value
-func (o *CreateNote201Response) GetWidth() float32 {
+func (o *CreateNote201Response) GetWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -228,7 +228,7 @@ func (o *CreateNote201Response) GetWidth() float32 {
 
 // GetWidthOk returns a tuple with the Width field value
 // and a boolean to check if the value has been set.
-func (o *CreateNote201Response) GetWidthOk() (*float32, bool) {
+func (o *CreateNote201Response) GetWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -236,14 +236,14 @@ func (o *CreateNote201Response) GetWidthOk() (*float32, bool) {
 }
 
 // SetWidth sets field value
-func (o *CreateNote201Response) SetWidth(v float32) {
+func (o *CreateNote201Response) SetWidth(v int32) {
 	o.Width = v
 }
 
 // GetHeight returns the Height field value
-func (o *CreateNote201Response) GetHeight() float32 {
+func (o *CreateNote201Response) GetHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -252,7 +252,7 @@ func (o *CreateNote201Response) GetHeight() float32 {
 
 // GetHeightOk returns a tuple with the Height field value
 // and a boolean to check if the value has been set.
-func (o *CreateNote201Response) GetHeightOk() (*float32, bool) {
+func (o *CreateNote201Response) GetHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -260,7 +260,7 @@ func (o *CreateNote201Response) GetHeightOk() (*float32, bool) {
 }
 
 // SetHeight sets field value
-func (o *CreateNote201Response) SetHeight(v float32) {
+func (o *CreateNote201Response) SetHeight(v int32) {
 	o.Height = v
 }
 

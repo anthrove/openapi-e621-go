@@ -33,7 +33,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the tag.
+	id := int32(56) // int32 | The ID of the tag.
 	commit := "commit_example" // string | If not set, nothing will happen.
 
 	configuration := openapiclient.NewConfiguration()
@@ -52,7 +52,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the tag. | 
+**id** | **int32** | The ID of the tag. | 
 
 ### Other Parameters
 
@@ -103,7 +103,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the tag.
+	id := int32(56) // int32 | The ID of the tag.
 	tagCategory := openapiclient.TagCategories(0) // TagCategories |  (optional)
 	tagIsLocked := true // bool | Must be Admin+. (optional)
 
@@ -123,7 +123,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the tag. | 
+**id** | **int32** | The ID of the tag. | 
 
 ### Other Parameters
 

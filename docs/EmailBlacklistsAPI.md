@@ -99,7 +99,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the email blacklist.
+	id := int32(56) // int32 | The ID of the email blacklist.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -117,7 +117,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the email blacklist. | 
+**id** | **int32** | The ID of the email blacklist. | 
 
 ### Other Parameters
 

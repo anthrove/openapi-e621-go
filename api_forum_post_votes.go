@@ -26,10 +26,10 @@ type ForumPostVotesAPICreateForumPostVoteRequest struct {
 	ctx                context.Context
 	ApiService         *ForumPostVotesAPIService
 	id                 string
-	forumPostVoteScore *float32
+	forumPostVoteScore *int32
 }
 
-func (r ForumPostVotesAPICreateForumPostVoteRequest) ForumPostVoteScore(forumPostVoteScore float32) ForumPostVotesAPICreateForumPostVoteRequest {
+func (r ForumPostVotesAPICreateForumPostVoteRequest) ForumPostVoteScore(forumPostVoteScore int32) ForumPostVotesAPICreateForumPostVoteRequest {
 	r.forumPostVoteScore = &forumPostVoteScore
 	return r
 }

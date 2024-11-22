@@ -37,7 +37,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostsAPI.CopyNotesToPost(context.Background(), id).Execute()
 
@@ -50,7 +50,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostsAPI.DeletePost(context.Background(), id).Execute()
 
@@ -63,7 +63,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.EditPost(context.Background(), id).Execute()
 
@@ -77,7 +77,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.ExpungePost(context.Background(), id).Execute()
 
@@ -91,7 +91,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.GetPost(context.Background(), id).Execute()
 
@@ -105,7 +105,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.GetPostInSequence(context.Background(), id).Execute()
 
@@ -131,7 +131,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.MarkPostAsTranslated(context.Background(), id).Execute()
 
@@ -145,7 +145,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostsAPI.MovePostFavorites(context.Background(), id).Execute()
 
@@ -158,7 +158,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.RegeneratePostThumbnails(context.Background(), id).Execute()
 
@@ -172,7 +172,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostsAPI.RegeneratePostVideos(context.Background(), id).Execute()
 
@@ -185,7 +185,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostsAPI.RevertPost(context.Background(), id).Execute()
 
@@ -221,7 +221,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.UndeletePost(context.Background(), id).Execute()
 
@@ -235,7 +235,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.PostsAPI.UnflagPost(context.Background(), id).Execute()
 
@@ -248,7 +248,7 @@ func Test_e621_PostsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.PostsAPI.UpdatePostIqdb(context.Background(), id).Execute()
 

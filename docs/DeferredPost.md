@@ -9,13 +9,13 @@ Name | Type | Description | Notes
 **Tags** | **string** |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
 **FileExt** | **string** |  | 
-**Width** | **float32** |  | 
-**Height** | **float32** |  | 
-**Size** | **float32** |  | 
+**Width** | **int32** |  | 
+**Height** | **int32** |  | 
+**Size** | **int64** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Uploader** | **string** |  | 
 **UploaderId** | **int32** |  | 
-**Score** | **float32** |  | 
+**Score** | **int32** |  | 
 **FavCount** | **int32** |  | 
 **IsFavorited** | **bool** |  | 
 **Pools** | **[]int32** |  | 
@@ -23,14 +23,14 @@ Name | Type | Description | Notes
 **PreviewUrl** | **NullableString** |  | 
 **LargeUrl** | **NullableString** |  | 
 **FileUrl** | **NullableString** |  | 
-**PreviewWidth** | **float32** |  | 
-**PreviewHeight** | **float32** |  | 
+**PreviewWidth** | **int32** |  | 
+**PreviewHeight** | **int32** |  | 
 
 ## Methods
 
 ### NewDeferredPost
 
-`func NewDeferredPost(id int32, flags string, tags string, rating Ratings, fileExt string, width float32, height float32, size float32, createdAt time.Time, uploader string, uploaderId int32, score float32, favCount int32, isFavorited bool, pools []int32, md5 string, previewUrl NullableString, largeUrl NullableString, fileUrl NullableString, previewWidth float32, previewHeight float32, ) *DeferredPost`
+`func NewDeferredPost(id int32, flags string, tags string, rating Ratings, fileExt string, width int32, height int32, size int64, createdAt time.Time, uploader string, uploaderId int32, score int32, favCount int32, isFavorited bool, pools []int32, md5 string, previewUrl NullableString, largeUrl NullableString, fileUrl NullableString, previewWidth int32, previewHeight int32, ) *DeferredPost`
 
 NewDeferredPost instantiates a new DeferredPost object
 This constructor will assign default values to properties that have it defined,
@@ -147,60 +147,60 @@ SetFileExt sets FileExt field to given value.
 
 ### GetWidth
 
-`func (o *DeferredPost) GetWidth() float32`
+`func (o *DeferredPost) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *DeferredPost) GetWidthOk() (*float32, bool)`
+`func (o *DeferredPost) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *DeferredPost) SetWidth(v float32)`
+`func (o *DeferredPost) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 
 
 ### GetHeight
 
-`func (o *DeferredPost) GetHeight() float32`
+`func (o *DeferredPost) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *DeferredPost) GetHeightOk() (*float32, bool)`
+`func (o *DeferredPost) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *DeferredPost) SetHeight(v float32)`
+`func (o *DeferredPost) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 
 
 ### GetSize
 
-`func (o *DeferredPost) GetSize() float32`
+`func (o *DeferredPost) GetSize() int64`
 
 GetSize returns the Size field if non-nil, zero value otherwise.
 
 ### GetSizeOk
 
-`func (o *DeferredPost) GetSizeOk() (*float32, bool)`
+`func (o *DeferredPost) GetSizeOk() (*int64, bool)`
 
 GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSize
 
-`func (o *DeferredPost) SetSize(v float32)`
+`func (o *DeferredPost) SetSize(v int64)`
 
 SetSize sets Size field to given value.
 
@@ -267,20 +267,20 @@ SetUploaderId sets UploaderId field to given value.
 
 ### GetScore
 
-`func (o *DeferredPost) GetScore() float32`
+`func (o *DeferredPost) GetScore() int32`
 
 GetScore returns the Score field if non-nil, zero value otherwise.
 
 ### GetScoreOk
 
-`func (o *DeferredPost) GetScoreOk() (*float32, bool)`
+`func (o *DeferredPost) GetScoreOk() (*int32, bool)`
 
 GetScoreOk returns a tuple with the Score field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScore
 
-`func (o *DeferredPost) SetScore(v float32)`
+`func (o *DeferredPost) SetScore(v int32)`
 
 SetScore sets Score field to given value.
 
@@ -457,40 +457,40 @@ SetFileUrl sets FileUrl field to given value.
 UnsetFileUrl ensures that no value is present for FileUrl, not even an explicit nil
 ### GetPreviewWidth
 
-`func (o *DeferredPost) GetPreviewWidth() float32`
+`func (o *DeferredPost) GetPreviewWidth() int32`
 
 GetPreviewWidth returns the PreviewWidth field if non-nil, zero value otherwise.
 
 ### GetPreviewWidthOk
 
-`func (o *DeferredPost) GetPreviewWidthOk() (*float32, bool)`
+`func (o *DeferredPost) GetPreviewWidthOk() (*int32, bool)`
 
 GetPreviewWidthOk returns a tuple with the PreviewWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPreviewWidth
 
-`func (o *DeferredPost) SetPreviewWidth(v float32)`
+`func (o *DeferredPost) SetPreviewWidth(v int32)`
 
 SetPreviewWidth sets PreviewWidth field to given value.
 
 
 ### GetPreviewHeight
 
-`func (o *DeferredPost) GetPreviewHeight() float32`
+`func (o *DeferredPost) GetPreviewHeight() int32`
 
 GetPreviewHeight returns the PreviewHeight field if non-nil, zero value otherwise.
 
 ### GetPreviewHeightOk
 
-`func (o *DeferredPost) GetPreviewHeightOk() (*float32, bool)`
+`func (o *DeferredPost) GetPreviewHeightOk() (*int32, bool)`
 
 GetPreviewHeightOk returns a tuple with the PreviewHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPreviewHeight
 
-`func (o *DeferredPost) SetPreviewHeight(v float32)`
+`func (o *DeferredPost) SetPreviewHeight(v int32)`
 
 SetPreviewHeight sets PreviewHeight field to given value.
 

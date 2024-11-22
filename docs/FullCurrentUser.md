@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Name** | **string** |  | 
-**Level** | **float32** |  | 
+**Level** | **int32** |  | 
 **BaseUploadLimit** | **int32** |  | 
 **PostUploadCount** | **int32** |  | 
 **PostUpdateCount** | **int32** |  | 
@@ -61,9 +61,9 @@ Name | Type | Description | Notes
 **CustomStyle** | **string** |  | 
 **FavoriteCount** | **int32** |  | 
 **ApiRegenMultiplier** | **float32** |  | 
-**ApiBurstLimit** | **float32** |  | 
-**RemainingApiLimit** | **float32** |  | 
-**StatementTimeout** | **float32** |  | 
+**ApiBurstLimit** | **int32** |  | 
+**RemainingApiLimit** | **int32** |  | 
+**StatementTimeout** | **int32** |  | 
 **FavoriteLimit** | **int32** |  | 
 **TagQueryLimit** | **int32** |  | 
 **HasMail** | **bool** |  | 
@@ -72,7 +72,7 @@ Name | Type | Description | Notes
 
 ### NewFullCurrentUser
 
-`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *FullCurrentUser`
+`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *FullCurrentUser`
 
 NewFullCurrentUser instantiates a new FullCurrentUser object
 This constructor will assign default values to properties that have it defined,
@@ -149,20 +149,20 @@ SetName sets Name field to given value.
 
 ### GetLevel
 
-`func (o *FullCurrentUser) GetLevel() float32`
+`func (o *FullCurrentUser) GetLevel() int32`
 
 GetLevel returns the Level field if non-nil, zero value otherwise.
 
 ### GetLevelOk
 
-`func (o *FullCurrentUser) GetLevelOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetLevelOk() (*int32, bool)`
 
 GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLevel
 
-`func (o *FullCurrentUser) SetLevel(v float32)`
+`func (o *FullCurrentUser) SetLevel(v int32)`
 
 SetLevel sets Level field to given value.
 
@@ -1239,60 +1239,60 @@ SetApiRegenMultiplier sets ApiRegenMultiplier field to given value.
 
 ### GetApiBurstLimit
 
-`func (o *FullCurrentUser) GetApiBurstLimit() float32`
+`func (o *FullCurrentUser) GetApiBurstLimit() int32`
 
 GetApiBurstLimit returns the ApiBurstLimit field if non-nil, zero value otherwise.
 
 ### GetApiBurstLimitOk
 
-`func (o *FullCurrentUser) GetApiBurstLimitOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetApiBurstLimitOk() (*int32, bool)`
 
 GetApiBurstLimitOk returns a tuple with the ApiBurstLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApiBurstLimit
 
-`func (o *FullCurrentUser) SetApiBurstLimit(v float32)`
+`func (o *FullCurrentUser) SetApiBurstLimit(v int32)`
 
 SetApiBurstLimit sets ApiBurstLimit field to given value.
 
 
 ### GetRemainingApiLimit
 
-`func (o *FullCurrentUser) GetRemainingApiLimit() float32`
+`func (o *FullCurrentUser) GetRemainingApiLimit() int32`
 
 GetRemainingApiLimit returns the RemainingApiLimit field if non-nil, zero value otherwise.
 
 ### GetRemainingApiLimitOk
 
-`func (o *FullCurrentUser) GetRemainingApiLimitOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetRemainingApiLimitOk() (*int32, bool)`
 
 GetRemainingApiLimitOk returns a tuple with the RemainingApiLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemainingApiLimit
 
-`func (o *FullCurrentUser) SetRemainingApiLimit(v float32)`
+`func (o *FullCurrentUser) SetRemainingApiLimit(v int32)`
 
 SetRemainingApiLimit sets RemainingApiLimit field to given value.
 
 
 ### GetStatementTimeout
 
-`func (o *FullCurrentUser) GetStatementTimeout() float32`
+`func (o *FullCurrentUser) GetStatementTimeout() int32`
 
 GetStatementTimeout returns the StatementTimeout field if non-nil, zero value otherwise.
 
 ### GetStatementTimeoutOk
 
-`func (o *FullCurrentUser) GetStatementTimeoutOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetStatementTimeoutOk() (*int32, bool)`
 
 GetStatementTimeoutOk returns a tuple with the StatementTimeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatementTimeout
 
-`func (o *FullCurrentUser) SetStatementTimeout(v float32)`
+`func (o *FullCurrentUser) SetStatementTimeout(v int32)`
 
 SetStatementTimeout sets StatementTimeout field to given value.
 

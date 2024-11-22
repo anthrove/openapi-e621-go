@@ -321,7 +321,7 @@ import (
 
 func main() {
 	idOrName := GetArtistIdOrNameParameter(8.14) // GetArtistIdOrNameParameter | The ID or name of the artist to revert.
-	versionId := float32(8.14) // float32 | The version ID to revert to.
+	versionId := int32(56) // int32 | The version ID to revert to.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -349,7 +349,7 @@ Other parameters are passed through a pointer to a apiRevertArtistRequest struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **versionId** | **float32** | The version ID to revert to. | 
+ **versionId** | **int32** | The version ID to revert to. | 
 
 ### Return type
 

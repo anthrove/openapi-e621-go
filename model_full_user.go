@@ -25,7 +25,7 @@ type FullUser struct {
 	Id                    int32     `json:"id"`
 	CreatedAt             time.Time `json:"created_at"`
 	Name                  string    `json:"name"`
-	Level                 float32   `json:"level"`
+	Level                 int32     `json:"level"`
 	BaseUploadLimit       int32     `json:"base_upload_limit"`
 	PostUploadCount       int32     `json:"post_upload_count"`
 	PostUpdateCount       int32     `json:"post_update_count"`
@@ -57,7 +57,7 @@ type _FullUser FullUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFullUser(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32) *FullUser {
+func NewFullUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32) *FullUser {
 	this := FullUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -169,9 +169,9 @@ func (o *FullUser) SetName(v string) {
 }
 
 // GetLevel returns the Level field value
-func (o *FullUser) GetLevel() float32 {
+func (o *FullUser) GetLevel() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -180,7 +180,7 @@ func (o *FullUser) GetLevel() float32 {
 
 // GetLevelOk returns a tuple with the Level field value
 // and a boolean to check if the value has been set.
-func (o *FullUser) GetLevelOk() (*float32, bool) {
+func (o *FullUser) GetLevelOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -188,7 +188,7 @@ func (o *FullUser) GetLevelOk() (*float32, bool) {
 }
 
 // SetLevel sets field value
-func (o *FullUser) SetLevel(v float32) {
+func (o *FullUser) SetLevel(v int32) {
 	o.Level = v
 }
 

@@ -27,7 +27,7 @@ func Test_e621_AdminUsersAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.AdminUsersAPI.AdminEditUser(context.Background(), id).Execute()
 

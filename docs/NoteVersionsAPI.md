@@ -34,10 +34,10 @@ func main() {
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchIpAddr := "searchIpAddr_example" // string | Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \"is contained within or equals\" (`<<=`). (optional)
 	searchOrder := "searchOrder_example" // string | The order of the results. (optional)
-	searchUpdaterId := float32(8.14) // float32 |  (optional)
+	searchUpdaterId := int32(56) // int32 |  (optional)
 	searchUpdaterName := "searchUpdaterName_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
-	searchNoteId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
+	searchNoteId := int32(56) // int32 |  (optional)
 	searchIsActive := true // bool |  (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
 
@@ -69,10 +69,10 @@ Name | Type | Description  | Notes
  **searchId** | **int32** | Search for a specific id. | 
  **searchIpAddr** | **string** | Must be Admin+ to use. See [postgres&#39; documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \&quot;is contained within or equals\&quot; (&#x60;&lt;&lt;&#x3D;&#x60;). | 
  **searchOrder** | **string** | The order of the results. | 
- **searchUpdaterId** | **float32** |  | 
+ **searchUpdaterId** | **int32** |  | 
  **searchUpdaterName** | **string** |  | 
- **searchPostId** | **float32** |  | 
- **searchNoteId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
+ **searchNoteId** | **int32** |  | 
  **searchIsActive** | **bool** |  | 
  **searchBodyMatches** | **string** |  | 
 

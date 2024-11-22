@@ -31,9 +31,9 @@ import (
 )
 
 func main() {
-	postFlagPostId := float32(8.14) // float32 | 
+	postFlagPostId := int32(56) // int32 | 
 	postFlagReasonName := "postFlagReasonName_example" // string | 
-	postFlagParentId := float32(8.14) // float32 |  (optional)
+	postFlagParentId := int32(56) // int32 |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -58,9 +58,9 @@ Other parameters are passed through a pointer to a apiCreatePostFlagRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postFlagPostId** | **float32** |  | 
+ **postFlagPostId** | **int32** |  | 
  **postFlagReasonName** | **string** |  | 
- **postFlagParentId** | **float32** |  | 
+ **postFlagParentId** | **int32** |  | 
 
 ### Return type
 
@@ -99,7 +99,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the post flag.
+	id := int32(56) // int32 | The ID of the post flag.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -119,7 +119,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the post flag. | 
+**id** | **int32** | The ID of the post flag. | 
 
 ### Other Parameters
 
@@ -175,9 +175,9 @@ func main() {
 	searchIpAddr := "searchIpAddr_example" // string | Must be Admin+ to use. See [postgres' documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \"is contained within or equals\" (`<<=`). (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchReasonMatches := "searchReasonMatches_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
 	searchPostTagsMatch := "searchPostTagsMatch_example" // string |  (optional)
 	searchType := "searchType_example" // string |  (optional)
 	searchIsResolved := true // bool |  (optional)
@@ -211,9 +211,9 @@ Name | Type | Description  | Notes
  **searchIpAddr** | **string** | Must be Admin+ to use. See [postgres&#39; documentation](https://www.postgresql.org/docs/9.3/functions-net.html) for information on how this is parsed. Specifically, \&quot;is contained within or equals\&quot; (&#x60;&lt;&lt;&#x3D;&#x60;). | 
  **searchOrder** | **string** |  | 
  **searchReasonMatches** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
- **searchPostId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
  **searchPostTagsMatch** | **string** |  | 
  **searchType** | **string** |  | 
  **searchIsResolved** | **bool** |  | 

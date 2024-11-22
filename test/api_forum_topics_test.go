@@ -38,7 +38,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.ForumTopicsAPI.DeleteForumTopic(context.Background(), id).Execute()
 
@@ -51,7 +51,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.ForumTopicsAPI.EditForumTopic(context.Background(), id).Execute()
 
@@ -64,7 +64,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.ForumTopicsAPI.GetForumTopic(context.Background(), id).Execute()
 
@@ -78,7 +78,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.ForumTopicsAPI.HideForumTopic(context.Background(), id).Execute()
 
@@ -115,7 +115,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.ForumTopicsAPI.SubscribeForumTopic(context.Background(), id).Execute()
 
@@ -129,7 +129,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.ForumTopicsAPI.UnhideForumTopic(context.Background(), id).Execute()
 
@@ -143,7 +143,7 @@ func Test_e621_ForumTopicsAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.ForumTopicsAPI.UnsubscribeForumTopic(context.Background(), id).Execute()
 

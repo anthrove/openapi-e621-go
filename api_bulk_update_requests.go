@@ -25,7 +25,7 @@ type BulkUpdateRequestsAPIService service
 type BulkUpdateRequestsAPIApproveBulkUpdateRequestRequest struct {
 	ctx        context.Context
 	ApiService *BulkUpdateRequestsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BulkUpdateRequestsAPIApproveBulkUpdateRequestRequest) Execute() (*http.Response, error) {
@@ -41,7 +41,7 @@ Must be Admin+.
 	@param id The ID of the bulk update request.
 	@return BulkUpdateRequestsAPIApproveBulkUpdateRequestRequest
 */
-func (a *BulkUpdateRequestsAPIService) ApproveBulkUpdateRequest(ctx context.Context, id float32) BulkUpdateRequestsAPIApproveBulkUpdateRequestRequest {
+func (a *BulkUpdateRequestsAPIService) ApproveBulkUpdateRequest(ctx context.Context, id int32) BulkUpdateRequestsAPIApproveBulkUpdateRequestRequest {
 	return BulkUpdateRequestsAPIApproveBulkUpdateRequestRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -141,7 +141,7 @@ type BulkUpdateRequestsAPICreateBulkUpdateRequestRequest struct {
 	bulkUpdateRequestScript       *string
 	bulkUpdateRequestTitle        *string
 	bulkUpdateRequestReason       *string
-	bulkUpdateRequestForumTopicId *float32
+	bulkUpdateRequestForumTopicId *int32
 	bulkUpdateRequestSkipForum    *bool
 }
 
@@ -160,7 +160,7 @@ func (r BulkUpdateRequestsAPICreateBulkUpdateRequestRequest) BulkUpdateRequestRe
 	return r
 }
 
-func (r BulkUpdateRequestsAPICreateBulkUpdateRequestRequest) BulkUpdateRequestForumTopicId(bulkUpdateRequestForumTopicId float32) BulkUpdateRequestsAPICreateBulkUpdateRequestRequest {
+func (r BulkUpdateRequestsAPICreateBulkUpdateRequestRequest) BulkUpdateRequestForumTopicId(bulkUpdateRequestForumTopicId int32) BulkUpdateRequestsAPICreateBulkUpdateRequestRequest {
 	r.bulkUpdateRequestForumTopicId = &bulkUpdateRequestForumTopicId
 	return r
 }
@@ -306,7 +306,7 @@ func (a *BulkUpdateRequestsAPIService) CreateBulkUpdateRequestExecute(r BulkUpda
 type BulkUpdateRequestsAPIEditBulkUpdateRequestRequest struct {
 	ctx                           context.Context
 	ApiService                    *BulkUpdateRequestsAPIService
-	id                            float32
+	id                            int32
 	bulkUpdateRequestScript       *string
 	bulkUpdateRequestForumTopicId *string
 	bulkUpdateRequestForumPostId  *string
@@ -342,7 +342,7 @@ You must be the creator of the BUR, or Admin+.
 	@param id The ID of the bulk update request.
 	@return BulkUpdateRequestsAPIEditBulkUpdateRequestRequest
 */
-func (a *BulkUpdateRequestsAPIService) EditBulkUpdateRequest(ctx context.Context, id float32) BulkUpdateRequestsAPIEditBulkUpdateRequestRequest {
+func (a *BulkUpdateRequestsAPIService) EditBulkUpdateRequest(ctx context.Context, id int32) BulkUpdateRequestsAPIEditBulkUpdateRequestRequest {
 	return BulkUpdateRequestsAPIEditBulkUpdateRequestRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -459,7 +459,7 @@ func (a *BulkUpdateRequestsAPIService) EditBulkUpdateRequestExecute(r BulkUpdate
 type BulkUpdateRequestsAPIGetBulkUpdateRequestRequest struct {
 	ctx        context.Context
 	ApiService *BulkUpdateRequestsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BulkUpdateRequestsAPIGetBulkUpdateRequestRequest) Execute() (*BulkUpdateRequest, *http.Response, error) {
@@ -473,7 +473,7 @@ GetBulkUpdateRequest Get Bulk Update Request
 	@param id The ID of the bulk update request.
 	@return BulkUpdateRequestsAPIGetBulkUpdateRequestRequest
 */
-func (a *BulkUpdateRequestsAPIService) GetBulkUpdateRequest(ctx context.Context, id float32) BulkUpdateRequestsAPIGetBulkUpdateRequestRequest {
+func (a *BulkUpdateRequestsAPIService) GetBulkUpdateRequest(ctx context.Context, id int32) BulkUpdateRequestsAPIGetBulkUpdateRequestRequest {
 	return BulkUpdateRequestsAPIGetBulkUpdateRequestRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -571,7 +571,7 @@ func (a *BulkUpdateRequestsAPIService) GetBulkUpdateRequestExecute(r BulkUpdateR
 type BulkUpdateRequestsAPIRejectBulkUpdateRequestRequest struct {
 	ctx        context.Context
 	ApiService *BulkUpdateRequestsAPIService
-	id         float32
+	id         int32
 }
 
 func (r BulkUpdateRequestsAPIRejectBulkUpdateRequestRequest) Execute() (*http.Response, error) {
@@ -587,7 +587,7 @@ You must be the creator of the BUR, or Admin+.
 	@param id The ID of the bulk update request.
 	@return BulkUpdateRequestsAPIRejectBulkUpdateRequestRequest
 */
-func (a *BulkUpdateRequestsAPIService) RejectBulkUpdateRequest(ctx context.Context, id float32) BulkUpdateRequestsAPIRejectBulkUpdateRequestRequest {
+func (a *BulkUpdateRequestsAPIService) RejectBulkUpdateRequest(ctx context.Context, id int32) BulkUpdateRequestsAPIRejectBulkUpdateRequestRequest {
 	return BulkUpdateRequestsAPIRejectBulkUpdateRequestRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -688,12 +688,12 @@ type BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest struct {
 	page                *int32
 	searchId            *int32
 	searchOrder         *string
-	searchUserId        *float32
+	searchUserId        *int32
 	searchUserName      *string
-	searchApproverId    *float32
+	searchApproverId    *int32
 	searchApproverName  *string
-	searchForumTopicId  *float32
-	searchForumPostId   *float32
+	searchForumTopicId  *int32
+	searchForumPostId   *int32
 	searchStatus        *string
 	searchTitleMatches  *string
 	searchScriptMatches *string
@@ -722,7 +722,7 @@ func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchOrder(search
 	return r
 }
 
-func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchUserId(searchUserId float32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
+func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchUserId(searchUserId int32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
 	r.searchUserId = &searchUserId
 	return r
 }
@@ -732,7 +732,7 @@ func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchUserName(sea
 	return r
 }
 
-func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchApproverId(searchApproverId float32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
+func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchApproverId(searchApproverId int32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
 	r.searchApproverId = &searchApproverId
 	return r
 }
@@ -742,12 +742,12 @@ func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchApproverName
 	return r
 }
 
-func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchForumTopicId(searchForumTopicId float32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
+func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchForumTopicId(searchForumTopicId int32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
 	r.searchForumTopicId = &searchForumTopicId
 	return r
 }
 
-func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchForumPostId(searchForumPostId float32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
+func (r BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest) SearchForumPostId(searchForumPostId int32) BulkUpdateRequestsAPISearchBulkUpdateRequestsRequest {
 	r.searchForumPostId = &searchForumPostId
 	return r
 }

@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Success** | **bool** |  | 
 **Location** | **string** |  | 
-**PostId** | **float32** |  | 
+**PostId** | **int32** |  | 
 
 ## Methods
 
 ### NewUploadPost200Response
 
-`func NewUploadPost200Response(success bool, location string, postId float32, ) *UploadPost200Response`
+`func NewUploadPost200Response(success bool, location string, postId int32, ) *UploadPost200Response`
 
 NewUploadPost200Response instantiates a new UploadPost200Response object
 This constructor will assign default values to properties that have it defined,
@@ -69,20 +69,20 @@ SetLocation sets Location field to given value.
 
 ### GetPostId
 
-`func (o *UploadPost200Response) GetPostId() float32`
+`func (o *UploadPost200Response) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *UploadPost200Response) GetPostIdOk() (*float32, bool)`
+`func (o *UploadPost200Response) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *UploadPost200Response) SetPostId(v float32)`
+`func (o *UploadPost200Response) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 

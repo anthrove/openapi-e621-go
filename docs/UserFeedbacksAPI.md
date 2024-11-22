@@ -37,7 +37,7 @@ import (
 func main() {
 	userFeedbackBody := "userFeedbackBody_example" // string | 
 	userFeedbackCategory := openapiclient.FeedbackCategories("negative") // FeedbackCategories | 
-	userFeedbackUserId := float32(8.14) // float32 |  (optional)
+	userFeedbackUserId := int32(56) // int32 |  (optional)
 	userFeedbackUserName := "userFeedbackUserName_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userFeedbackBody** | **string** |  | 
  **userFeedbackCategory** | [**FeedbackCategories**](FeedbackCategories.md) |  | 
- **userFeedbackUserId** | **float32** |  | 
+ **userFeedbackUserId** | **int32** |  | 
  **userFeedbackUserName** | **string** |  | 
 
 ### Return type
@@ -107,7 +107,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the feedback.
+	id := int32(56) // int32 | The ID of the feedback.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -125,7 +125,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the feedback. | 
+**id** | **int32** | The ID of the feedback. | 
 
 ### Other Parameters
 
@@ -175,7 +175,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the feedback.
+	id := int32(56) // int32 | The ID of the feedback.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -193,7 +193,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the feedback. | 
+**id** | **int32** | The ID of the feedback. | 
 
 ### Other Parameters
 
@@ -243,7 +243,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the feedback.
+	id := int32(56) // int32 | The ID of the feedback.
 	userFeedbackBody := "userFeedbackBody_example" // string |  (optional)
 	userFeedbackCategory := openapiclient.FeedbackCategories("negative") // FeedbackCategories |  (optional)
 
@@ -263,7 +263,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the feedback. | 
+**id** | **int32** | The ID of the feedback. | 
 
 ### Other Parameters
 
@@ -315,7 +315,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the feedback.
+	id := int32(56) // int32 | The ID of the feedback.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -335,7 +335,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the feedback. | 
+**id** | **int32** | The ID of the feedback. | 
 
 ### Other Parameters
 
@@ -391,9 +391,9 @@ func main() {
 	searchOrder := "searchOrder_example" // string |  (optional)
 	searchDeleted := "searchDeleted_example" // string | You must be Moderator+. (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
-	searchUserId := float32(8.14) // float32 |  (optional)
+	searchUserId := int32(56) // int32 |  (optional)
 	searchUserName := "searchUserName_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
 	searchCategory := openapiclient.FeedbackCategories("negative") // FeedbackCategories |  (optional)
 
@@ -426,9 +426,9 @@ Name | Type | Description  | Notes
  **searchOrder** | **string** |  | 
  **searchDeleted** | **string** | You must be Moderator+. | 
  **searchBodyMatches** | **string** |  | 
- **searchUserId** | **float32** |  | 
+ **searchUserId** | **int32** |  | 
  **searchUserName** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
  **searchCategory** | [**FeedbackCategories**](FeedbackCategories.md) |  | 
 
@@ -471,7 +471,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the feedback.
+	id := int32(56) // int32 | The ID of the feedback.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -489,7 +489,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the feedback. | 
+**id** | **int32** | The ID of the feedback. | 
 
 ### Other Parameters
 

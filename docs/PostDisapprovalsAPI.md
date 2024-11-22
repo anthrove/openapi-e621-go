@@ -30,7 +30,7 @@ import (
 )
 
 func main() {
-	postDisapprovalPostId := float32(8.14) // float32 | 
+	postDisapprovalPostId := int32(56) // int32 | 
 	postDisapprovalReason := "postDisapprovalReason_example" // string | 
 	postDisapprovalMessage := "postDisapprovalMessage_example" // string |  (optional)
 
@@ -57,7 +57,7 @@ Other parameters are passed through a pointer to a apiCreatePostDisapprovalReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postDisapprovalPostId** | **float32** |  | 
+ **postDisapprovalPostId** | **int32** |  | 
  **postDisapprovalReason** | **string** |  | 
  **postDisapprovalMessage** | **string** |  | 
 
@@ -104,9 +104,9 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
-	searchPostId := float32(8.14) // float32 |  (optional)
+	searchPostId := int32(56) // int32 |  (optional)
 	searchMessage := "searchMessage_example" // string |  (optional)
 	searchPostTagsMatch := "searchPostTagsMatch_example" // string |  (optional)
 	searchReason := "searchReason_example" // string |  (optional)
@@ -139,9 +139,9 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
- **searchPostId** | **float32** |  | 
+ **searchPostId** | **int32** |  | 
  **searchMessage** | **string** |  | 
  **searchPostTagsMatch** | **string** |  | 
  **searchReason** | **string** |  | 

@@ -22,62 +22,62 @@ var _ MappedNullable = &IQDBPost{}
 
 // IQDBPost struct for IQDBPost
 type IQDBPost struct {
-	Id                  int32           `json:"id"`
-	CreatedAt           time.Time       `json:"created_at"`
-	UpdatedAt           time.Time       `json:"updated_at"`
-	UpScore             int32           `json:"up_score"`
-	DownScore           int32           `json:"down_score"`
-	Score               float32         `json:"score"`
-	Source              string          `json:"source"`
-	Md5                 string          `json:"md5"`
-	Rating              Ratings         `json:"rating"`
-	IsNoteLocked        bool            `json:"is_note_locked"`
-	IsRatingLocked      bool            `json:"is_rating_locked"`
-	IsStatusLocked      bool            `json:"is_status_locked"`
-	IsPending           bool            `json:"is_pending"`
-	IsFlagged           bool            `json:"is_flagged"`
-	IsDeleted           bool            `json:"is_deleted"`
-	UploaderId          int32           `json:"uploader_id"`
-	ApproverId          int32           `json:"approver_id"`
-	LastNotedAt         NullableTime    `json:"last_noted_at"`
-	LastCommentBumpedAt NullableTime    `json:"last_comment_bumped_at"`
-	FavCount            int32           `json:"fav_count"`
-	TagString           string          `json:"tag_string"`
-	TagCount            int32           `json:"tag_count"`
-	TagCountGeneral     int32           `json:"tag_count_general"`
-	TagCountArtist      int32           `json:"tag_count_artist"`
-	TagCountCharacter   int32           `json:"tag_count_character"`
-	TagCountCopyright   int32           `json:"tag_count_copyright"`
-	FileExt             string          `json:"file_ext"`
-	FileSize            float32         `json:"file_size"`
-	ImageWidth          float32         `json:"image_width"`
-	ImageHeight         float32         `json:"image_height"`
-	ParentId            NullableFloat32 `json:"parent_id"`
-	HasChildren         bool            `json:"has_children"`
-	LastCommentedAt     NullableTime    `json:"last_commented_at"`
-	HasActiveChildren   bool            `json:"has_active_children"`
-	BitFlags            float32         `json:"bit_flags"`
-	TagCountMeta        int32           `json:"tag_count_meta"`
-	LockedTags          NullableString  `json:"locked_tags"`
-	TagCountSpecies     int32           `json:"tag_count_species"`
-	TagCountInvalid     int32           `json:"tag_count_invalid"`
-	Description         string          `json:"description"`
-	CommentCount        int32           `json:"comment_count"`
-	ChangeSeq           int32           `json:"change_seq"`
-	TagCountLore        int32           `json:"tag_count_lore"`
-	BgColor             NullableString  `json:"bg_color"`
-	GeneratedSamples    []string        `json:"generated_samples"`
-	Duration            NullableString  `json:"duration"`
-	IsCommentDisabled   bool            `json:"is_comment_disabled"`
-	IsCommentLocked     bool            `json:"is_comment_locked"`
-	HasLarge            bool            `json:"has_large"`
-	HasVisibleChildren  bool            `json:"has_visible_children"`
-	ChildrenIds         NullableString  `json:"children_ids"`
-	PoolIds             []int32         `json:"pool_ids"`
-	IsFavorited         bool            `json:"is_favorited"`
-	FileUrl             *string         `json:"file_url,omitempty"`
-	LargeFileUrl        *string         `json:"large_file_url,omitempty"`
-	PreviewFileUrl      *string         `json:"preview_file_url,omitempty"`
+	Id                  int32          `json:"id"`
+	CreatedAt           time.Time      `json:"created_at"`
+	UpdatedAt           time.Time      `json:"updated_at"`
+	UpScore             int32          `json:"up_score"`
+	DownScore           int32          `json:"down_score"`
+	Score               int32          `json:"score"`
+	Source              string         `json:"source"`
+	Md5                 string         `json:"md5"`
+	Rating              Ratings        `json:"rating"`
+	IsNoteLocked        bool           `json:"is_note_locked"`
+	IsRatingLocked      bool           `json:"is_rating_locked"`
+	IsStatusLocked      bool           `json:"is_status_locked"`
+	IsPending           bool           `json:"is_pending"`
+	IsFlagged           bool           `json:"is_flagged"`
+	IsDeleted           bool           `json:"is_deleted"`
+	UploaderId          int32          `json:"uploader_id"`
+	ApproverId          int32          `json:"approver_id"`
+	LastNotedAt         NullableTime   `json:"last_noted_at"`
+	LastCommentBumpedAt NullableTime   `json:"last_comment_bumped_at"`
+	FavCount            int32          `json:"fav_count"`
+	TagString           string         `json:"tag_string"`
+	TagCount            int32          `json:"tag_count"`
+	TagCountGeneral     int32          `json:"tag_count_general"`
+	TagCountArtist      int32          `json:"tag_count_artist"`
+	TagCountCharacter   int32          `json:"tag_count_character"`
+	TagCountCopyright   int32          `json:"tag_count_copyright"`
+	FileExt             string         `json:"file_ext"`
+	FileSize            int64          `json:"file_size"`
+	ImageWidth          int32          `json:"image_width"`
+	ImageHeight         int32          `json:"image_height"`
+	ParentId            NullableInt32  `json:"parent_id"`
+	HasChildren         bool           `json:"has_children"`
+	LastCommentedAt     NullableTime   `json:"last_commented_at"`
+	HasActiveChildren   bool           `json:"has_active_children"`
+	BitFlags            float32        `json:"bit_flags"`
+	TagCountMeta        int32          `json:"tag_count_meta"`
+	LockedTags          NullableString `json:"locked_tags"`
+	TagCountSpecies     int32          `json:"tag_count_species"`
+	TagCountInvalid     int32          `json:"tag_count_invalid"`
+	Description         string         `json:"description"`
+	CommentCount        int32          `json:"comment_count"`
+	ChangeSeq           int32          `json:"change_seq"`
+	TagCountLore        int32          `json:"tag_count_lore"`
+	BgColor             NullableString `json:"bg_color"`
+	GeneratedSamples    []string       `json:"generated_samples"`
+	Duration            NullableString `json:"duration"`
+	IsCommentDisabled   bool           `json:"is_comment_disabled"`
+	IsCommentLocked     bool           `json:"is_comment_locked"`
+	HasLarge            bool           `json:"has_large"`
+	HasVisibleChildren  bool           `json:"has_visible_children"`
+	ChildrenIds         NullableString `json:"children_ids"`
+	PoolIds             []int32        `json:"pool_ids"`
+	IsFavorited         bool           `json:"is_favorited"`
+	FileUrl             *string        `json:"file_url,omitempty"`
+	LargeFileUrl        *string        `json:"large_file_url,omitempty"`
+	PreviewFileUrl      *string        `json:"preview_file_url,omitempty"`
 }
 
 type _IQDBPost IQDBPost
@@ -86,7 +86,7 @@ type _IQDBPost IQDBPost
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewIQDBPost(id int32, createdAt time.Time, updatedAt time.Time, upScore int32, downScore int32, score float32, source string, md5 string, rating Ratings, isNoteLocked bool, isRatingLocked bool, isStatusLocked bool, isPending bool, isFlagged bool, isDeleted bool, uploaderId int32, approverId int32, lastNotedAt NullableTime, lastCommentBumpedAt NullableTime, favCount int32, tagString string, tagCount int32, tagCountGeneral int32, tagCountArtist int32, tagCountCharacter int32, tagCountCopyright int32, fileExt string, fileSize float32, imageWidth float32, imageHeight float32, parentId NullableFloat32, hasChildren bool, lastCommentedAt NullableTime, hasActiveChildren bool, bitFlags float32, tagCountMeta int32, lockedTags NullableString, tagCountSpecies int32, tagCountInvalid int32, description string, commentCount int32, changeSeq int32, tagCountLore int32, bgColor NullableString, generatedSamples []string, duration NullableString, isCommentDisabled bool, isCommentLocked bool, hasLarge bool, hasVisibleChildren bool, childrenIds NullableString, poolIds []int32, isFavorited bool) *IQDBPost {
+func NewIQDBPost(id int32, createdAt time.Time, updatedAt time.Time, upScore int32, downScore int32, score int32, source string, md5 string, rating Ratings, isNoteLocked bool, isRatingLocked bool, isStatusLocked bool, isPending bool, isFlagged bool, isDeleted bool, uploaderId int32, approverId int32, lastNotedAt NullableTime, lastCommentBumpedAt NullableTime, favCount int32, tagString string, tagCount int32, tagCountGeneral int32, tagCountArtist int32, tagCountCharacter int32, tagCountCopyright int32, fileExt string, fileSize int64, imageWidth int32, imageHeight int32, parentId NullableInt32, hasChildren bool, lastCommentedAt NullableTime, hasActiveChildren bool, bitFlags float32, tagCountMeta int32, lockedTags NullableString, tagCountSpecies int32, tagCountInvalid int32, description string, commentCount int32, changeSeq int32, tagCountLore int32, bgColor NullableString, generatedSamples []string, duration NullableString, isCommentDisabled bool, isCommentLocked bool, hasLarge bool, hasVisibleChildren bool, childrenIds NullableString, poolIds []int32, isFavorited bool) *IQDBPost {
 	this := IQDBPost{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -273,9 +273,9 @@ func (o *IQDBPost) SetDownScore(v int32) {
 }
 
 // GetScore returns the Score field value
-func (o *IQDBPost) GetScore() float32 {
+func (o *IQDBPost) GetScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -284,7 +284,7 @@ func (o *IQDBPost) GetScore() float32 {
 
 // GetScoreOk returns a tuple with the Score field value
 // and a boolean to check if the value has been set.
-func (o *IQDBPost) GetScoreOk() (*float32, bool) {
+func (o *IQDBPost) GetScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -292,7 +292,7 @@ func (o *IQDBPost) GetScoreOk() (*float32, bool) {
 }
 
 // SetScore sets field value
-func (o *IQDBPost) SetScore(v float32) {
+func (o *IQDBPost) SetScore(v int32) {
 	o.Score = v
 }
 
@@ -805,9 +805,9 @@ func (o *IQDBPost) SetFileExt(v string) {
 }
 
 // GetFileSize returns the FileSize field value
-func (o *IQDBPost) GetFileSize() float32 {
+func (o *IQDBPost) GetFileSize() int64 {
 	if o == nil {
-		var ret float32
+		var ret int64
 		return ret
 	}
 
@@ -816,7 +816,7 @@ func (o *IQDBPost) GetFileSize() float32 {
 
 // GetFileSizeOk returns a tuple with the FileSize field value
 // and a boolean to check if the value has been set.
-func (o *IQDBPost) GetFileSizeOk() (*float32, bool) {
+func (o *IQDBPost) GetFileSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -824,14 +824,14 @@ func (o *IQDBPost) GetFileSizeOk() (*float32, bool) {
 }
 
 // SetFileSize sets field value
-func (o *IQDBPost) SetFileSize(v float32) {
+func (o *IQDBPost) SetFileSize(v int64) {
 	o.FileSize = v
 }
 
 // GetImageWidth returns the ImageWidth field value
-func (o *IQDBPost) GetImageWidth() float32 {
+func (o *IQDBPost) GetImageWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -840,7 +840,7 @@ func (o *IQDBPost) GetImageWidth() float32 {
 
 // GetImageWidthOk returns a tuple with the ImageWidth field value
 // and a boolean to check if the value has been set.
-func (o *IQDBPost) GetImageWidthOk() (*float32, bool) {
+func (o *IQDBPost) GetImageWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -848,14 +848,14 @@ func (o *IQDBPost) GetImageWidthOk() (*float32, bool) {
 }
 
 // SetImageWidth sets field value
-func (o *IQDBPost) SetImageWidth(v float32) {
+func (o *IQDBPost) SetImageWidth(v int32) {
 	o.ImageWidth = v
 }
 
 // GetImageHeight returns the ImageHeight field value
-func (o *IQDBPost) GetImageHeight() float32 {
+func (o *IQDBPost) GetImageHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -864,7 +864,7 @@ func (o *IQDBPost) GetImageHeight() float32 {
 
 // GetImageHeightOk returns a tuple with the ImageHeight field value
 // and a boolean to check if the value has been set.
-func (o *IQDBPost) GetImageHeightOk() (*float32, bool) {
+func (o *IQDBPost) GetImageHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -872,15 +872,15 @@ func (o *IQDBPost) GetImageHeightOk() (*float32, bool) {
 }
 
 // SetImageHeight sets field value
-func (o *IQDBPost) SetImageHeight(v float32) {
+func (o *IQDBPost) SetImageHeight(v int32) {
 	o.ImageHeight = v
 }
 
 // GetParentId returns the ParentId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *IQDBPost) GetParentId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *IQDBPost) GetParentId() int32 {
 	if o == nil || o.ParentId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -890,7 +890,7 @@ func (o *IQDBPost) GetParentId() float32 {
 // GetParentIdOk returns a tuple with the ParentId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *IQDBPost) GetParentIdOk() (*float32, bool) {
+func (o *IQDBPost) GetParentIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -898,7 +898,7 @@ func (o *IQDBPost) GetParentIdOk() (*float32, bool) {
 }
 
 // SetParentId sets field value
-func (o *IQDBPost) SetParentId(v float32) {
+func (o *IQDBPost) SetParentId(v int32) {
 	o.ParentId.Set(&v)
 }
 

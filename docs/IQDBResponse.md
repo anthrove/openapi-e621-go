@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Hash** | **string** |  | 
 **PostId** | **int32** |  | 
-**Score** | **float32** |  | 
+**Score** | **int32** |  | 
 **Post** | [**IQDBResponsePost**](IQDBResponsePost.md) |  | 
 
 ## Methods
 
 ### NewIQDBResponse
 
-`func NewIQDBResponse(hash string, postId int32, score float32, post IQDBResponsePost, ) *IQDBResponse`
+`func NewIQDBResponse(hash string, postId int32, score int32, post IQDBResponsePost, ) *IQDBResponse`
 
 NewIQDBResponse instantiates a new IQDBResponse object
 This constructor will assign default values to properties that have it defined,
@@ -70,20 +70,20 @@ SetPostId sets PostId field to given value.
 
 ### GetScore
 
-`func (o *IQDBResponse) GetScore() float32`
+`func (o *IQDBResponse) GetScore() int32`
 
 GetScore returns the Score field if non-nil, zero value otherwise.
 
 ### GetScoreOk
 
-`func (o *IQDBResponse) GetScoreOk() (*float32, bool)`
+`func (o *IQDBResponse) GetScoreOk() (*int32, bool)`
 
 GetScoreOk returns a tuple with the Score field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetScore
 
-`func (o *IQDBResponse) SetScore(v float32)`
+`func (o *IQDBResponse) SetScore(v int32)`
 
 SetScore sets Score field to given value.
 

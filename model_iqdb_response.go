@@ -23,7 +23,7 @@ var _ MappedNullable = &IQDBResponse{}
 type IQDBResponse struct {
 	Hash   string           `json:"hash"`
 	PostId int32            `json:"post_id"`
-	Score  float32          `json:"score"`
+	Score  int32            `json:"score"`
 	Post   IQDBResponsePost `json:"post"`
 }
 
@@ -33,7 +33,7 @@ type _IQDBResponse IQDBResponse
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewIQDBResponse(hash string, postId int32, score float32, post IQDBResponsePost) *IQDBResponse {
+func NewIQDBResponse(hash string, postId int32, score int32, post IQDBResponsePost) *IQDBResponse {
 	this := IQDBResponse{}
 	this.Hash = hash
 	this.PostId = postId
@@ -99,9 +99,9 @@ func (o *IQDBResponse) SetPostId(v int32) {
 }
 
 // GetScore returns the Score field value
-func (o *IQDBResponse) GetScore() float32 {
+func (o *IQDBResponse) GetScore() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -110,7 +110,7 @@ func (o *IQDBResponse) GetScore() float32 {
 
 // GetScoreOk returns a tuple with the Score field value
 // and a boolean to check if the value has been set.
-func (o *IQDBResponse) GetScoreOk() (*float32, bool) {
+func (o *IQDBResponse) GetScoreOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -118,7 +118,7 @@ func (o *IQDBResponse) GetScoreOk() (*float32, bool) {
 }
 
 // SetScore sets field value
-func (o *IQDBResponse) SetScore(v float32) {
+func (o *IQDBResponse) SetScore(v int32) {
 	o.Score = v
 }
 

@@ -25,36 +25,36 @@ type NotesAPIService service
 type NotesAPICreateNoteRequest struct {
 	ctx        context.Context
 	ApiService *NotesAPIService
-	notePostId *float32
-	noteX      *float32
-	noteY      *float32
-	noteWidth  *float32
-	noteHeight *float32
+	notePostId *int32
+	noteX      *int32
+	noteY      *int32
+	noteWidth  *int32
+	noteHeight *int32
 	noteBody   *string
 	noteHtmlId *string
 }
 
-func (r NotesAPICreateNoteRequest) NotePostId(notePostId float32) NotesAPICreateNoteRequest {
+func (r NotesAPICreateNoteRequest) NotePostId(notePostId int32) NotesAPICreateNoteRequest {
 	r.notePostId = &notePostId
 	return r
 }
 
-func (r NotesAPICreateNoteRequest) NoteX(noteX float32) NotesAPICreateNoteRequest {
+func (r NotesAPICreateNoteRequest) NoteX(noteX int32) NotesAPICreateNoteRequest {
 	r.noteX = &noteX
 	return r
 }
 
-func (r NotesAPICreateNoteRequest) NoteY(noteY float32) NotesAPICreateNoteRequest {
+func (r NotesAPICreateNoteRequest) NoteY(noteY int32) NotesAPICreateNoteRequest {
 	r.noteY = &noteY
 	return r
 }
 
-func (r NotesAPICreateNoteRequest) NoteWidth(noteWidth float32) NotesAPICreateNoteRequest {
+func (r NotesAPICreateNoteRequest) NoteWidth(noteWidth int32) NotesAPICreateNoteRequest {
 	r.noteWidth = &noteWidth
 	return r
 }
 
-func (r NotesAPICreateNoteRequest) NoteHeight(noteHeight float32) NotesAPICreateNoteRequest {
+func (r NotesAPICreateNoteRequest) NoteHeight(noteHeight int32) NotesAPICreateNoteRequest {
 	r.noteHeight = &noteHeight
 	return r
 }
@@ -214,7 +214,7 @@ func (a *NotesAPIService) CreateNoteExecute(r NotesAPICreateNoteRequest) (*Creat
 type NotesAPIDeleteNoteRequest struct {
 	ctx        context.Context
 	ApiService *NotesAPIService
-	id         float32
+	id         int32
 }
 
 func (r NotesAPIDeleteNoteRequest) Execute() (*http.Response, error) {
@@ -228,7 +228,7 @@ DeleteNote Delete Note
 	@param id The ID of the note.
 	@return NotesAPIDeleteNoteRequest
 */
-func (a *NotesAPIService) DeleteNote(ctx context.Context, id float32) NotesAPIDeleteNoteRequest {
+func (a *NotesAPIService) DeleteNote(ctx context.Context, id int32) NotesAPIDeleteNoteRequest {
 	return NotesAPIDeleteNoteRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -325,30 +325,30 @@ func (a *NotesAPIService) DeleteNoteExecute(r NotesAPIDeleteNoteRequest) (*http.
 type NotesAPIEditNoteRequest struct {
 	ctx        context.Context
 	ApiService *NotesAPIService
-	id         float32
-	noteX      *float32
-	noteY      *float32
-	noteWidth  *float32
-	noteHeight *float32
+	id         int32
+	noteX      *int32
+	noteY      *int32
+	noteWidth  *int32
+	noteHeight *int32
 	noteBody   *string
 }
 
-func (r NotesAPIEditNoteRequest) NoteX(noteX float32) NotesAPIEditNoteRequest {
+func (r NotesAPIEditNoteRequest) NoteX(noteX int32) NotesAPIEditNoteRequest {
 	r.noteX = &noteX
 	return r
 }
 
-func (r NotesAPIEditNoteRequest) NoteY(noteY float32) NotesAPIEditNoteRequest {
+func (r NotesAPIEditNoteRequest) NoteY(noteY int32) NotesAPIEditNoteRequest {
 	r.noteY = &noteY
 	return r
 }
 
-func (r NotesAPIEditNoteRequest) NoteWidth(noteWidth float32) NotesAPIEditNoteRequest {
+func (r NotesAPIEditNoteRequest) NoteWidth(noteWidth int32) NotesAPIEditNoteRequest {
 	r.noteWidth = &noteWidth
 	return r
 }
 
-func (r NotesAPIEditNoteRequest) NoteHeight(noteHeight float32) NotesAPIEditNoteRequest {
+func (r NotesAPIEditNoteRequest) NoteHeight(noteHeight int32) NotesAPIEditNoteRequest {
 	r.noteHeight = &noteHeight
 	return r
 }
@@ -369,7 +369,7 @@ EditNote Edit Note
 	@param id The ID of the note.
 	@return NotesAPIEditNoteRequest
 */
-func (a *NotesAPIService) EditNote(ctx context.Context, id float32) NotesAPIEditNoteRequest {
+func (a *NotesAPIService) EditNote(ctx context.Context, id int32) NotesAPIEditNoteRequest {
 	return NotesAPIEditNoteRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -492,7 +492,7 @@ func (a *NotesAPIService) EditNoteExecute(r NotesAPIEditNoteRequest) (*http.Resp
 type NotesAPIGetNoteRequest struct {
 	ctx        context.Context
 	ApiService *NotesAPIService
-	id         float32
+	id         int32
 }
 
 func (r NotesAPIGetNoteRequest) Execute() (*Note, *http.Response, error) {
@@ -506,7 +506,7 @@ GetNote Get Note
 	@param id The ID of the note.
 	@return NotesAPIGetNoteRequest
 */
-func (a *NotesAPIService) GetNote(ctx context.Context, id float32) NotesAPIGetNoteRequest {
+func (a *NotesAPIService) GetNote(ctx context.Context, id int32) NotesAPIGetNoteRequest {
 	return NotesAPIGetNoteRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -604,12 +604,12 @@ func (a *NotesAPIService) GetNoteExecute(r NotesAPIGetNoteRequest) (*Note, *http
 type NotesAPIRevertNoteRequest struct {
 	ctx        context.Context
 	ApiService *NotesAPIService
-	id         float32
-	versionId  *float32
+	id         int32
+	versionId  *int32
 }
 
 // The version ID to revert to.
-func (r NotesAPIRevertNoteRequest) VersionId(versionId float32) NotesAPIRevertNoteRequest {
+func (r NotesAPIRevertNoteRequest) VersionId(versionId int32) NotesAPIRevertNoteRequest {
 	r.versionId = &versionId
 	return r
 }
@@ -625,7 +625,7 @@ RevertNote Revert Note
 	@param id The ID of the note.
 	@return NotesAPIRevertNoteRequest
 */
-func (a *NotesAPIService) RevertNote(ctx context.Context, id float32) NotesAPIRevertNoteRequest {
+func (a *NotesAPIService) RevertNote(ctx context.Context, id int32) NotesAPIRevertNoteRequest {
 	return NotesAPIRevertNoteRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -743,11 +743,11 @@ type NotesAPISearchNotesRequest struct {
 	searchOrder               *string
 	searchBodyMatches         *string
 	searchIsActive            *bool
-	searchPostId              *float32
+	searchPostId              *int32
 	searchPostTagsMatch       *string
-	searchPostNoteUpdaterId   *float32
+	searchPostNoteUpdaterId   *int32
 	searchPostNoteUpdaterName *string
-	searchCreatorId           *float32
+	searchCreatorId           *int32
 	searchCreatorName         *string
 }
 
@@ -784,7 +784,7 @@ func (r NotesAPISearchNotesRequest) SearchIsActive(searchIsActive bool) NotesAPI
 	return r
 }
 
-func (r NotesAPISearchNotesRequest) SearchPostId(searchPostId float32) NotesAPISearchNotesRequest {
+func (r NotesAPISearchNotesRequest) SearchPostId(searchPostId int32) NotesAPISearchNotesRequest {
 	r.searchPostId = &searchPostId
 	return r
 }
@@ -794,7 +794,7 @@ func (r NotesAPISearchNotesRequest) SearchPostTagsMatch(searchPostTagsMatch stri
 	return r
 }
 
-func (r NotesAPISearchNotesRequest) SearchPostNoteUpdaterId(searchPostNoteUpdaterId float32) NotesAPISearchNotesRequest {
+func (r NotesAPISearchNotesRequest) SearchPostNoteUpdaterId(searchPostNoteUpdaterId int32) NotesAPISearchNotesRequest {
 	r.searchPostNoteUpdaterId = &searchPostNoteUpdaterId
 	return r
 }
@@ -804,7 +804,7 @@ func (r NotesAPISearchNotesRequest) SearchPostNoteUpdaterName(searchPostNoteUpda
 	return r
 }
 
-func (r NotesAPISearchNotesRequest) SearchCreatorId(searchCreatorId float32) NotesAPISearchNotesRequest {
+func (r NotesAPISearchNotesRequest) SearchCreatorId(searchCreatorId int32) NotesAPISearchNotesRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }

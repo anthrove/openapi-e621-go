@@ -39,7 +39,7 @@ func Test_e621_HelpPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.HelpPagesAPI.DeleteHelpPage(context.Background(), id).Execute()
 
@@ -52,7 +52,7 @@ func Test_e621_HelpPagesAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		httpRes, err := apiClient.HelpPagesAPI.EditHelpPage(context.Background(), id).Execute()
 

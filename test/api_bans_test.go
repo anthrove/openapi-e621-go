@@ -11,10 +11,11 @@ package e621
 
 import (
 	"context"
+	"testing"
+
 	openapiclient "github.com/anthrove/openapi-e621-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func Test_e621_BansAPIService(t *testing.T) {
@@ -26,7 +27,7 @@ func Test_e621_BansAPIService(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
 
-		var id float32
+		var id int32
 
 		resp, httpRes, err := apiClient.BansAPI.GetBan(context.Background(), id).Execute()
 

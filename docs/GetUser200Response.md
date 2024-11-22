@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **Name** | **string** |  | 
-**Level** | **float32** |  | 
+**Level** | **int32** |  | 
 **BaseUploadLimit** | **int32** |  | 
 **PostUploadCount** | **int32** |  | 
 **PostUpdateCount** | **int32** |  | 
@@ -61,9 +61,9 @@ Name | Type | Description | Notes
 **PerPage** | **int32** |  | 
 **CustomStyle** | **string** |  | 
 **ApiRegenMultiplier** | **float32** |  | 
-**ApiBurstLimit** | **float32** |  | 
-**RemainingApiLimit** | **float32** |  | 
-**StatementTimeout** | **float32** |  | 
+**ApiBurstLimit** | **int32** |  | 
+**RemainingApiLimit** | **int32** |  | 
+**StatementTimeout** | **int32** |  | 
 **FavoriteLimit** | **int32** |  | 
 **TagQueryLimit** | **int32** |  | 
 **HasMail** | **bool** |  | 
@@ -72,7 +72,7 @@ Name | Type | Description | Notes
 
 ### NewGetUser200Response
 
-`func NewGetUser200Response(id int32, createdAt time.Time, name string, level float32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit float32, remainingApiLimit float32, statementTimeout float32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *GetUser200Response`
+`func NewGetUser200Response(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *GetUser200Response`
 
 NewGetUser200Response instantiates a new GetUser200Response object
 This constructor will assign default values to properties that have it defined,
@@ -149,20 +149,20 @@ SetName sets Name field to given value.
 
 ### GetLevel
 
-`func (o *GetUser200Response) GetLevel() float32`
+`func (o *GetUser200Response) GetLevel() int32`
 
 GetLevel returns the Level field if non-nil, zero value otherwise.
 
 ### GetLevelOk
 
-`func (o *GetUser200Response) GetLevelOk() (*float32, bool)`
+`func (o *GetUser200Response) GetLevelOk() (*int32, bool)`
 
 GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLevel
 
-`func (o *GetUser200Response) SetLevel(v float32)`
+`func (o *GetUser200Response) SetLevel(v int32)`
 
 SetLevel sets Level field to given value.
 
@@ -1239,60 +1239,60 @@ SetApiRegenMultiplier sets ApiRegenMultiplier field to given value.
 
 ### GetApiBurstLimit
 
-`func (o *GetUser200Response) GetApiBurstLimit() float32`
+`func (o *GetUser200Response) GetApiBurstLimit() int32`
 
 GetApiBurstLimit returns the ApiBurstLimit field if non-nil, zero value otherwise.
 
 ### GetApiBurstLimitOk
 
-`func (o *GetUser200Response) GetApiBurstLimitOk() (*float32, bool)`
+`func (o *GetUser200Response) GetApiBurstLimitOk() (*int32, bool)`
 
 GetApiBurstLimitOk returns a tuple with the ApiBurstLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApiBurstLimit
 
-`func (o *GetUser200Response) SetApiBurstLimit(v float32)`
+`func (o *GetUser200Response) SetApiBurstLimit(v int32)`
 
 SetApiBurstLimit sets ApiBurstLimit field to given value.
 
 
 ### GetRemainingApiLimit
 
-`func (o *GetUser200Response) GetRemainingApiLimit() float32`
+`func (o *GetUser200Response) GetRemainingApiLimit() int32`
 
 GetRemainingApiLimit returns the RemainingApiLimit field if non-nil, zero value otherwise.
 
 ### GetRemainingApiLimitOk
 
-`func (o *GetUser200Response) GetRemainingApiLimitOk() (*float32, bool)`
+`func (o *GetUser200Response) GetRemainingApiLimitOk() (*int32, bool)`
 
 GetRemainingApiLimitOk returns a tuple with the RemainingApiLimit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemainingApiLimit
 
-`func (o *GetUser200Response) SetRemainingApiLimit(v float32)`
+`func (o *GetUser200Response) SetRemainingApiLimit(v int32)`
 
 SetRemainingApiLimit sets RemainingApiLimit field to given value.
 
 
 ### GetStatementTimeout
 
-`func (o *GetUser200Response) GetStatementTimeout() float32`
+`func (o *GetUser200Response) GetStatementTimeout() int32`
 
 GetStatementTimeout returns the StatementTimeout field if non-nil, zero value otherwise.
 
 ### GetStatementTimeoutOk
 
-`func (o *GetUser200Response) GetStatementTimeoutOk() (*float32, bool)`
+`func (o *GetUser200Response) GetStatementTimeoutOk() (*int32, bool)`
 
 GetStatementTimeoutOk returns a tuple with the StatementTimeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatementTimeout
 
-`func (o *GetUser200Response) SetStatementTimeout(v float32)`
+`func (o *GetUser200Response) SetStatementTimeout(v int32)`
 
 SetStatementTimeout sets StatementTimeout field to given value.
 

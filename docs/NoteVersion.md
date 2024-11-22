@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 **Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**X** | **float32** |  | 
-**Y** | **float32** |  | 
-**Width** | **float32** |  | 
-**Height** | **float32** |  | 
+**X** | **int32** |  | 
+**Y** | **int32** |  | 
+**Width** | **int32** |  | 
+**Height** | **int32** |  | 
 **Body** | **string** |  | 
 **Version** | **float32** |  | 
 **IsActive** | **bool** |  | 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewNoteVersion
 
-`func NewNoteVersion(id int32, createdAt time.Time, updatedAt time.Time, x float32, y float32, width float32, height float32, body string, version float32, isActive bool, noteId int32, postId int32, updaterId int32, ) *NoteVersion`
+`func NewNoteVersion(id int32, createdAt time.Time, updatedAt time.Time, x int32, y int32, width int32, height int32, body string, version float32, isActive bool, noteId int32, postId int32, updaterId int32, ) *NoteVersion`
 
 NewNoteVersion instantiates a new NoteVersion object
 This constructor will assign default values to properties that have it defined,
@@ -99,80 +99,80 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetX
 
-`func (o *NoteVersion) GetX() float32`
+`func (o *NoteVersion) GetX() int32`
 
 GetX returns the X field if non-nil, zero value otherwise.
 
 ### GetXOk
 
-`func (o *NoteVersion) GetXOk() (*float32, bool)`
+`func (o *NoteVersion) GetXOk() (*int32, bool)`
 
 GetXOk returns a tuple with the X field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetX
 
-`func (o *NoteVersion) SetX(v float32)`
+`func (o *NoteVersion) SetX(v int32)`
 
 SetX sets X field to given value.
 
 
 ### GetY
 
-`func (o *NoteVersion) GetY() float32`
+`func (o *NoteVersion) GetY() int32`
 
 GetY returns the Y field if non-nil, zero value otherwise.
 
 ### GetYOk
 
-`func (o *NoteVersion) GetYOk() (*float32, bool)`
+`func (o *NoteVersion) GetYOk() (*int32, bool)`
 
 GetYOk returns a tuple with the Y field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetY
 
-`func (o *NoteVersion) SetY(v float32)`
+`func (o *NoteVersion) SetY(v int32)`
 
 SetY sets Y field to given value.
 
 
 ### GetWidth
 
-`func (o *NoteVersion) GetWidth() float32`
+`func (o *NoteVersion) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *NoteVersion) GetWidthOk() (*float32, bool)`
+`func (o *NoteVersion) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *NoteVersion) SetWidth(v float32)`
+`func (o *NoteVersion) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 
 
 ### GetHeight
 
-`func (o *NoteVersion) GetHeight() float32`
+`func (o *NoteVersion) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *NoteVersion) GetHeightOk() (*float32, bool)`
+`func (o *NoteVersion) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *NoteVersion) SetHeight(v float32)`
+`func (o *NoteVersion) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 

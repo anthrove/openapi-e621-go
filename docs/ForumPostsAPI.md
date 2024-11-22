@@ -35,7 +35,7 @@ import (
 
 func main() {
 	forumPostBody := "forumPostBody_example" // string | 
-	forumPostTopicId := float32(8.14) // float32 | 
+	forumPostTopicId := int32(56) // int32 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateForumPostRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **forumPostBody** | **string** |  | 
- **forumPostTopicId** | **float32** |  | 
+ **forumPostTopicId** | **int32** |  | 
 
 ### Return type
 
@@ -102,7 +102,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum post.
+	id := int32(56) // int32 | The ID of the forum post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum post. | 
+**id** | **int32** | The ID of the forum post. | 
 
 ### Other Parameters
 
@@ -170,7 +170,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum post.
+	id := int32(56) // int32 | The ID of the forum post.
 	forumPostBody := "forumPostBody_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -189,7 +189,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum post. | 
+**id** | **int32** | The ID of the forum post. | 
 
 ### Other Parameters
 
@@ -240,7 +240,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum post.
+	id := int32(56) // int32 | The ID of the forum post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -260,7 +260,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum post. | 
+**id** | **int32** | The ID of the forum post. | 
 
 ### Other Parameters
 
@@ -310,7 +310,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum post.
+	id := int32(56) // int32 | The ID of the forum post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -330,7 +330,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum post. | 
+**id** | **int32** | The ID of the forum post. | 
 
 ### Other Parameters
 
@@ -380,7 +380,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum post.
+	id := int32(56) // int32 | The ID of the forum post.
 	markBlipRequest := *openapiclient.NewMarkBlipRequest("RecordType_example") // MarkBlipRequest |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -401,7 +401,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum post. | 
+**id** | **int32** | The ID of the forum post. | 
 
 ### Other Parameters
 
@@ -456,12 +456,12 @@ func main() {
 	page := int32(56) // int32 | The page number of results to get. Between 1 and 750. (optional)
 	searchId := int32(56) // int32 | Search for a specific id. (optional)
 	searchOrder := "searchOrder_example" // string |  (optional)
-	searchCreatorId := float32(8.14) // float32 |  (optional)
+	searchCreatorId := int32(56) // int32 |  (optional)
 	searchCreatorName := "searchCreatorName_example" // string |  (optional)
-	searchTopicId := float32(8.14) // float32 |  (optional)
+	searchTopicId := int32(56) // int32 |  (optional)
 	searchTopicTitleMatches := "searchTopicTitleMatches_example" // string |  (optional)
 	searchBodyMatches := "searchBodyMatches_example" // string |  (optional)
-	searchTopicCategoryId := float32(8.14) // float32 |  (optional)
+	searchTopicCategoryId := int32(56) // int32 |  (optional)
 	searchIsHidden := true // bool |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -491,12 +491,12 @@ Name | Type | Description  | Notes
  **page** | **int32** | The page number of results to get. Between 1 and 750. | 
  **searchId** | **int32** | Search for a specific id. | 
  **searchOrder** | **string** |  | 
- **searchCreatorId** | **float32** |  | 
+ **searchCreatorId** | **int32** |  | 
  **searchCreatorName** | **string** |  | 
- **searchTopicId** | **float32** |  | 
+ **searchTopicId** | **int32** |  | 
  **searchTopicTitleMatches** | **string** |  | 
  **searchBodyMatches** | **string** |  | 
- **searchTopicCategoryId** | **float32** |  | 
+ **searchTopicCategoryId** | **int32** |  | 
  **searchIsHidden** | **bool** |  | 
 
 ### Return type
@@ -538,7 +538,7 @@ import (
 )
 
 func main() {
-	id := float32(8.14) // float32 | The ID of the forum post.
+	id := int32(56) // int32 | The ID of the forum post.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -558,7 +558,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **float32** | The ID of the forum post. | 
+**id** | **int32** | The ID of the forum post. | 
 
 ### Other Parameters
 

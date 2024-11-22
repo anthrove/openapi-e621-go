@@ -21,10 +21,10 @@ var _ MappedNullable = &PostFile{}
 
 // PostFile struct for PostFile
 type PostFile struct {
-	Width  float32        `json:"width"`
-	Height float32        `json:"height"`
+	Width  int32          `json:"width"`
+	Height int32          `json:"height"`
 	Ext    string         `json:"ext"`
-	Size   float32        `json:"size"`
+	Size   int64          `json:"size"`
 	Md5    string         `json:"md5"`
 	Url    NullableString `json:"url"`
 }
@@ -35,7 +35,7 @@ type _PostFile PostFile
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostFile(width float32, height float32, ext string, size float32, md5 string, url NullableString) *PostFile {
+func NewPostFile(width int32, height int32, ext string, size int64, md5 string, url NullableString) *PostFile {
 	this := PostFile{}
 	this.Width = width
 	this.Height = height
@@ -55,9 +55,9 @@ func NewPostFileWithDefaults() *PostFile {
 }
 
 // GetWidth returns the Width field value
-func (o *PostFile) GetWidth() float32 {
+func (o *PostFile) GetWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -66,7 +66,7 @@ func (o *PostFile) GetWidth() float32 {
 
 // GetWidthOk returns a tuple with the Width field value
 // and a boolean to check if the value has been set.
-func (o *PostFile) GetWidthOk() (*float32, bool) {
+func (o *PostFile) GetWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -74,14 +74,14 @@ func (o *PostFile) GetWidthOk() (*float32, bool) {
 }
 
 // SetWidth sets field value
-func (o *PostFile) SetWidth(v float32) {
+func (o *PostFile) SetWidth(v int32) {
 	o.Width = v
 }
 
 // GetHeight returns the Height field value
-func (o *PostFile) GetHeight() float32 {
+func (o *PostFile) GetHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -90,7 +90,7 @@ func (o *PostFile) GetHeight() float32 {
 
 // GetHeightOk returns a tuple with the Height field value
 // and a boolean to check if the value has been set.
-func (o *PostFile) GetHeightOk() (*float32, bool) {
+func (o *PostFile) GetHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -98,7 +98,7 @@ func (o *PostFile) GetHeightOk() (*float32, bool) {
 }
 
 // SetHeight sets field value
-func (o *PostFile) SetHeight(v float32) {
+func (o *PostFile) SetHeight(v int32) {
 	o.Height = v
 }
 
@@ -127,9 +127,9 @@ func (o *PostFile) SetExt(v string) {
 }
 
 // GetSize returns the Size field value
-func (o *PostFile) GetSize() float32 {
+func (o *PostFile) GetSize() int64 {
 	if o == nil {
-		var ret float32
+		var ret int64
 		return ret
 	}
 
@@ -138,7 +138,7 @@ func (o *PostFile) GetSize() float32 {
 
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
-func (o *PostFile) GetSizeOk() (*float32, bool) {
+func (o *PostFile) GetSizeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -146,7 +146,7 @@ func (o *PostFile) GetSizeOk() (*float32, bool) {
 }
 
 // SetSize sets field value
-func (o *PostFile) SetSize(v float32) {
+func (o *PostFile) SetSize(v int64) {
 	o.Size = v
 }
 

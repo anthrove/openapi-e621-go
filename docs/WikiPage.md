@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **float32** |  | 
+**Id** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Title** | **string** |  | 
 **Body** | **string** |  | 
-**CreatorId** | **float32** |  | 
+**CreatorId** | **int32** |  | 
 **IsLocked** | **bool** |  | 
-**UpdaterId** | **float32** |  | 
+**UpdaterId** | **int32** |  | 
 **IsDeleted** | **bool** |  | 
 **OtherNames** | **[]string** |  | 
 **Parent** | **NullableString** |  | 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 
 ### NewWikiPage
 
-`func NewWikiPage(id float32, createdAt time.Time, updatedAt time.Time, title string, body string, creatorId float32, isLocked bool, updaterId float32, isDeleted bool, otherNames []string, parent NullableString, creatorName string, categoryId TagCategories, ) *WikiPage`
+`func NewWikiPage(id int32, createdAt time.Time, updatedAt time.Time, title string, body string, creatorId int32, isLocked bool, updaterId int32, isDeleted bool, otherNames []string, parent NullableString, creatorName string, categoryId TagCategories, ) *WikiPage`
 
 NewWikiPage instantiates a new WikiPage object
 This constructor will assign default values to properties that have it defined,
@@ -39,20 +39,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *WikiPage) GetId() float32`
+`func (o *WikiPage) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *WikiPage) GetIdOk() (*float32, bool)`
+`func (o *WikiPage) GetIdOk() (*int32, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *WikiPage) SetId(v float32)`
+`func (o *WikiPage) SetId(v int32)`
 
 SetId sets Id field to given value.
 
@@ -139,20 +139,20 @@ SetBody sets Body field to given value.
 
 ### GetCreatorId
 
-`func (o *WikiPage) GetCreatorId() float32`
+`func (o *WikiPage) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *WikiPage) GetCreatorIdOk() (*float32, bool)`
+`func (o *WikiPage) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *WikiPage) SetCreatorId(v float32)`
+`func (o *WikiPage) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 
@@ -179,20 +179,20 @@ SetIsLocked sets IsLocked field to given value.
 
 ### GetUpdaterId
 
-`func (o *WikiPage) GetUpdaterId() float32`
+`func (o *WikiPage) GetUpdaterId() int32`
 
 GetUpdaterId returns the UpdaterId field if non-nil, zero value otherwise.
 
 ### GetUpdaterIdOk
 
-`func (o *WikiPage) GetUpdaterIdOk() (*float32, bool)`
+`func (o *WikiPage) GetUpdaterIdOk() (*int32, bool)`
 
 GetUpdaterIdOk returns a tuple with the UpdaterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdaterId
 
-`func (o *WikiPage) SetUpdaterId(v float32)`
+`func (o *WikiPage) SetUpdaterId(v int32)`
 
 SetUpdaterId sets UpdaterId field to given value.
 

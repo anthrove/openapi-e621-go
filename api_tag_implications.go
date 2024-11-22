@@ -25,7 +25,7 @@ type TagImplicationsAPIService service
 type TagImplicationsAPIApproveTagImplicationRequest struct {
 	ctx        context.Context
 	ApiService *TagImplicationsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TagImplicationsAPIApproveTagImplicationRequest) Execute() (*http.Response, error) {
@@ -41,7 +41,7 @@ You must be Admin+.
 	@param id The ID of the tag implication.
 	@return TagImplicationsAPIApproveTagImplicationRequest
 */
-func (a *TagImplicationsAPIService) ApproveTagImplication(ctx context.Context, id float32) TagImplicationsAPIApproveTagImplicationRequest {
+func (a *TagImplicationsAPIService) ApproveTagImplication(ctx context.Context, id int32) TagImplicationsAPIApproveTagImplicationRequest {
 	return TagImplicationsAPIApproveTagImplicationRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -288,7 +288,7 @@ func (a *TagImplicationsAPIService) CreateTagImplicationExecute(r TagImplication
 type TagImplicationsAPIEditTagImplicationRequest struct {
 	ctx                          context.Context
 	ApiService                   *TagImplicationsAPIService
-	id                           float32
+	id                           int32
 	tagImplicationAntecedentName *string
 	tagImplicationConsequentName *string
 	tagImplicationForumTopicId   *string
@@ -322,7 +322,7 @@ You must be Admin+.
 	@param id The ID of the tag implication.
 	@return TagImplicationsAPIEditTagImplicationRequest
 */
-func (a *TagImplicationsAPIService) EditTagImplication(ctx context.Context, id float32) TagImplicationsAPIEditTagImplicationRequest {
+func (a *TagImplicationsAPIService) EditTagImplication(ctx context.Context, id int32) TagImplicationsAPIEditTagImplicationRequest {
 	return TagImplicationsAPIEditTagImplicationRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -439,7 +439,7 @@ func (a *TagImplicationsAPIService) EditTagImplicationExecute(r TagImplicationsA
 type TagImplicationsAPIGetTagImplicationRequest struct {
 	ctx        context.Context
 	ApiService *TagImplicationsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TagImplicationsAPIGetTagImplicationRequest) Execute() (*TagImplication, *http.Response, error) {
@@ -453,7 +453,7 @@ GetTagImplication Get Tag Implication
 	@param id The ID of the tag implication.
 	@return TagImplicationsAPIGetTagImplicationRequest
 */
-func (a *TagImplicationsAPIService) GetTagImplication(ctx context.Context, id float32) TagImplicationsAPIGetTagImplicationRequest {
+func (a *TagImplicationsAPIService) GetTagImplication(ctx context.Context, id int32) TagImplicationsAPIGetTagImplicationRequest {
 	return TagImplicationsAPIGetTagImplicationRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -551,7 +551,7 @@ func (a *TagImplicationsAPIService) GetTagImplicationExecute(r TagImplicationsAP
 type TagImplicationsAPIRejectTagImplicationRequest struct {
 	ctx        context.Context
 	ApiService *TagImplicationsAPIService
-	id         float32
+	id         int32
 }
 
 func (r TagImplicationsAPIRejectTagImplicationRequest) Execute() (*http.Response, error) {
@@ -567,7 +567,7 @@ You must be the creator of the request (if pending), or Admin+.
 	@param id The ID of the tag implication.
 	@return TagImplicationsAPIRejectTagImplicationRequest
 */
-func (a *TagImplicationsAPIService) RejectTagImplication(ctx context.Context, id float32) TagImplicationsAPIRejectTagImplicationRequest {
+func (a *TagImplicationsAPIService) RejectTagImplication(ctx context.Context, id int32) TagImplicationsAPIRejectTagImplicationRequest {
 	return TagImplicationsAPIRejectTagImplicationRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -674,9 +674,9 @@ type TagImplicationsAPISearchTagImplicationsRequest struct {
 	searchStatus                *TagRequestStatuses
 	searchAntecedentTagCategory *TagCategories
 	searchConsequentTagCategory *TagCategories
-	searchCreatorId             *float32
+	searchCreatorId             *int32
 	searchCreatorName           *string
-	searchApproverId            *float32
+	searchApproverId            *int32
 	searchApproverName          *string
 }
 
@@ -733,7 +733,7 @@ func (r TagImplicationsAPISearchTagImplicationsRequest) SearchConsequentTagCateg
 	return r
 }
 
-func (r TagImplicationsAPISearchTagImplicationsRequest) SearchCreatorId(searchCreatorId float32) TagImplicationsAPISearchTagImplicationsRequest {
+func (r TagImplicationsAPISearchTagImplicationsRequest) SearchCreatorId(searchCreatorId int32) TagImplicationsAPISearchTagImplicationsRequest {
 	r.searchCreatorId = &searchCreatorId
 	return r
 }
@@ -743,7 +743,7 @@ func (r TagImplicationsAPISearchTagImplicationsRequest) SearchCreatorName(search
 	return r
 }
 
-func (r TagImplicationsAPISearchTagImplicationsRequest) SearchApproverId(searchApproverId float32) TagImplicationsAPISearchTagImplicationsRequest {
+func (r TagImplicationsAPISearchTagImplicationsRequest) SearchApproverId(searchApproverId int32) TagImplicationsAPISearchTagImplicationsRequest {
 	r.searchApproverId = &searchApproverId
 	return r
 }

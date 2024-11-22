@@ -31,7 +31,7 @@ import (
 
 func main() {
 	id := "id_example" // string | The ID of the post.
-	score := float32(8.14) // float32 | 
+	score := int32(56) // int32 | 
 	noUnvote := true // bool |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -62,7 +62,7 @@ Other parameters are passed through a pointer to a apiCreatePostVoteRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **score** | **float32** |  | 
+ **score** | **int32** |  | 
  **noUnvote** | **bool** |  | 
 
 ### Return type

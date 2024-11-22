@@ -22,8 +22,8 @@ var _ MappedNullable = &PostSampleAlternate{}
 // PostSampleAlternate struct for PostSampleAlternate
 type PostSampleAlternate struct {
 	Type   string                         `json:"type"`
-	Height float32                        `json:"height"`
-	Width  float32                        `json:"width"`
+	Height int32                          `json:"height"`
+	Width  int32                          `json:"width"`
 	Urls   []PostSampleAlternateUrlsInner `json:"urls"`
 }
 
@@ -33,7 +33,7 @@ type _PostSampleAlternate PostSampleAlternate
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostSampleAlternate(type_ string, height float32, width float32, urls []PostSampleAlternateUrlsInner) *PostSampleAlternate {
+func NewPostSampleAlternate(type_ string, height int32, width int32, urls []PostSampleAlternateUrlsInner) *PostSampleAlternate {
 	this := PostSampleAlternate{}
 	this.Type = type_
 	this.Height = height
@@ -75,9 +75,9 @@ func (o *PostSampleAlternate) SetType(v string) {
 }
 
 // GetHeight returns the Height field value
-func (o *PostSampleAlternate) GetHeight() float32 {
+func (o *PostSampleAlternate) GetHeight() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -86,7 +86,7 @@ func (o *PostSampleAlternate) GetHeight() float32 {
 
 // GetHeightOk returns a tuple with the Height field value
 // and a boolean to check if the value has been set.
-func (o *PostSampleAlternate) GetHeightOk() (*float32, bool) {
+func (o *PostSampleAlternate) GetHeightOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -94,14 +94,14 @@ func (o *PostSampleAlternate) GetHeightOk() (*float32, bool) {
 }
 
 // SetHeight sets field value
-func (o *PostSampleAlternate) SetHeight(v float32) {
+func (o *PostSampleAlternate) SetHeight(v int32) {
 	o.Height = v
 }
 
 // GetWidth returns the Width field value
-func (o *PostSampleAlternate) GetWidth() float32 {
+func (o *PostSampleAlternate) GetWidth() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -110,7 +110,7 @@ func (o *PostSampleAlternate) GetWidth() float32 {
 
 // GetWidthOk returns a tuple with the Width field value
 // and a boolean to check if the value has been set.
-func (o *PostSampleAlternate) GetWidthOk() (*float32, bool) {
+func (o *PostSampleAlternate) GetWidthOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -118,7 +118,7 @@ func (o *PostSampleAlternate) GetWidthOk() (*float32, bool) {
 }
 
 // SetWidth sets field value
-func (o *PostSampleAlternate) SetWidth(v float32) {
+func (o *PostSampleAlternate) SetWidth(v int32) {
 	o.Width = v
 }
 

@@ -25,9 +25,9 @@ type AdminUsersAPIService service
 type AdminUsersAPIAdminEditUserRequest struct {
 	ctx                   context.Context
 	ApiService            *AdminUsersAPIService
-	id                    float32
+	id                    int32
 	userVerified          *bool
-	userLevel             *float32
+	userLevel             *int32
 	userName              *string
 	userProfileAbout      *string
 	userProfileArtinfo    *string
@@ -47,7 +47,7 @@ func (r AdminUsersAPIAdminEditUserRequest) UserVerified(userVerified bool) Admin
 }
 
 // Must have the bd staff user flag to promote to Admin+.
-func (r AdminUsersAPIAdminEditUserRequest) UserLevel(userLevel float32) AdminUsersAPIAdminEditUserRequest {
+func (r AdminUsersAPIAdminEditUserRequest) UserLevel(userLevel int32) AdminUsersAPIAdminEditUserRequest {
 	r.userLevel = &userLevel
 	return r
 }
@@ -116,7 +116,7 @@ You must be Admin+. If editing an Admin+, you must be Owner+.
 	@param id The ID of the user.
 	@return AdminUsersAPIAdminEditUserRequest
 */
-func (a *AdminUsersAPIService) AdminEditUser(ctx context.Context, id float32) AdminUsersAPIAdminEditUserRequest {
+func (a *AdminUsersAPIService) AdminEditUser(ctx context.Context, id int32) AdminUsersAPIAdminEditUserRequest {
 	return AdminUsersAPIAdminEditUserRequest{
 		ApiService: a,
 		ctx:        ctx,
@@ -271,11 +271,11 @@ func (a *AdminUsersAPIService) AdminEditUserExecute(r AdminUsersAPIAdminEditUser
 type AdminUsersAPIGetAltListRequest struct {
 	ctx        context.Context
 	ApiService *AdminUsersAPIService
-	page       *float32
+	page       *int32
 }
 
 // The page number of results to get. Between 1 and 9999.
-func (r AdminUsersAPIGetAltListRequest) Page(page float32) AdminUsersAPIGetAltListRequest {
+func (r AdminUsersAPIGetAltListRequest) Page(page int32) AdminUsersAPIGetAltListRequest {
 	r.page = &page
 	return r
 }
