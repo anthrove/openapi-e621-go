@@ -24,10 +24,10 @@ type TagPreview struct {
 	// The name if type=tag, else the antecedent.
 	A string `json:"a"`
 	// The consequent, only present if type=alias or type=implication.
-	B        *string        `json:"b,omitempty"`
-	Type     string         `json:"type"`
-	TagTypeA TagCategories  `json:"tagTypeA"`
-	TagTypeB *TagCategories `json:"tagTypeB,omitempty"`
+	B        *string               `json:"b,omitempty"`
+	Type     string                `json:"type"`
+	TagTypeA NullableTagCategories `json:"tagTypeA"`
+	TagTypeB NullableTagCategories `json:"tagTypeB,omitempty"`
 }
 
 type _TagPreview TagPreview
@@ -36,7 +36,7 @@ type _TagPreview TagPreview
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagPreview(a string, type_ string, tagTypeA TagCategories) *TagPreview {
+func NewTagPreview(a string, type_ string, tagTypeA NullableTagCategories) *TagPreview {
 	this := TagPreview{}
 	this.A = a
 	this.Type = type_
@@ -133,59 +133,72 @@ func (o *TagPreview) SetType(v string) {
 }
 
 // GetTagTypeA returns the TagTypeA field value
+// If the value is explicit nil, the zero value for TagCategories will be returned
 func (o *TagPreview) GetTagTypeA() TagCategories {
-	if o == nil {
+	if o == nil || o.TagTypeA.Get() == nil {
 		var ret TagCategories
 		return ret
 	}
 
-	return o.TagTypeA
+	return *o.TagTypeA.Get()
 }
 
 // GetTagTypeAOk returns a tuple with the TagTypeA field value
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TagPreview) GetTagTypeAOk() (*TagCategories, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.TagTypeA, true
+	return o.TagTypeA.Get(), o.TagTypeA.IsSet()
 }
 
 // SetTagTypeA sets field value
 func (o *TagPreview) SetTagTypeA(v TagCategories) {
-	o.TagTypeA = v
+	o.TagTypeA.Set(&v)
 }
 
-// GetTagTypeB returns the TagTypeB field value if set, zero value otherwise.
+// GetTagTypeB returns the TagTypeB field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *TagPreview) GetTagTypeB() TagCategories {
-	if o == nil || IsNil(o.TagTypeB) {
+	if o == nil || IsNil(o.TagTypeB.Get()) {
 		var ret TagCategories
 		return ret
 	}
-	return *o.TagTypeB
+	return *o.TagTypeB.Get()
 }
 
 // GetTagTypeBOk returns a tuple with the TagTypeB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *TagPreview) GetTagTypeBOk() (*TagCategories, bool) {
-	if o == nil || IsNil(o.TagTypeB) {
+	if o == nil {
 		return nil, false
 	}
-	return o.TagTypeB, true
+	return o.TagTypeB.Get(), o.TagTypeB.IsSet()
 }
 
 // HasTagTypeB returns a boolean if a field has been set.
 func (o *TagPreview) HasTagTypeB() bool {
-	if o != nil && !IsNil(o.TagTypeB) {
+	if o != nil && o.TagTypeB.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetTagTypeB gets a reference to the given TagCategories and assigns it to the TagTypeB field.
+// SetTagTypeB gets a reference to the given NullableTagCategories and assigns it to the TagTypeB field.
 func (o *TagPreview) SetTagTypeB(v TagCategories) {
-	o.TagTypeB = &v
+	o.TagTypeB.Set(&v)
+}
+
+// SetTagTypeBNil sets the value for TagTypeB to be an explicit nil
+func (o *TagPreview) SetTagTypeBNil() {
+	o.TagTypeB.Set(nil)
+}
+
+// UnsetTagTypeB ensures that no value is present for TagTypeB, not even an explicit nil
+func (o *TagPreview) UnsetTagTypeB() {
+	o.TagTypeB.Unset()
 }
 
 func (o TagPreview) MarshalJSON() ([]byte, error) {
@@ -203,9 +216,9 @@ func (o TagPreview) ToMap() (map[string]interface{}, error) {
 		toSerialize["b"] = o.B
 	}
 	toSerialize["type"] = o.Type
-	toSerialize["tagTypeA"] = o.TagTypeA
-	if !IsNil(o.TagTypeB) {
-		toSerialize["tagTypeB"] = o.TagTypeB
+	toSerialize["tagTypeA"] = o.TagTypeA.Get()
+	if o.TagTypeB.IsSet() {
+		toSerialize["tagTypeB"] = o.TagTypeB.Get()
 	}
 	return toSerialize, nil
 }

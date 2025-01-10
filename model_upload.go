@@ -28,14 +28,14 @@ type Upload struct {
 	UploaderId int32   `json:"uploader_id"`
 	TagString  string  `json:"tag_string"`
 	// Note: The \"error\" status will be proceeded by an error, ex: \"error: RuntimeError - No file or source URL provided\"
-	Status    string          `json:"status"`
-	Backtrace NullableString  `json:"backtrace"`
-	PostId    NullableFloat32 `json:"post_id"`
+	Status    string         `json:"status"`
+	Backtrace NullableString `json:"backtrace"`
+	PostId    NullableInt32  `json:"post_id"`
 	// Deprecated
 	Md5Confirmation interface{}                `json:"md5_confirmation"`
 	CreatedAt       time.Time                  `json:"created_at"`
 	UpdatedAt       time.Time                  `json:"updated_at"`
-	ParentId        NullableFloat32            `json:"parent_id"`
+	ParentId        NullableInt32              `json:"parent_id"`
 	Md5             NullableString             `json:"md5"`
 	FileExt         GetArtistIdOrNameParameter `json:"file_ext"`
 	FileSize        NullableFloat32            `json:"file_size"`
@@ -51,7 +51,7 @@ type _Upload Upload
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUpload(id int32, source string, rating Ratings, uploaderId int32, tagString string, status string, backtrace NullableString, postId NullableFloat32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableFloat32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string) *Upload {
+func NewUpload(id int32, source string, rating Ratings, uploaderId int32, tagString string, status string, backtrace NullableString, postId NullableInt32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableInt32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string) *Upload {
 	this := Upload{}
 	this.Id = id
 	this.Source = source
@@ -254,10 +254,10 @@ func (o *Upload) SetBacktrace(v string) {
 }
 
 // GetPostId returns the PostId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *Upload) GetPostId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *Upload) GetPostId() int32 {
 	if o == nil || o.PostId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -267,7 +267,7 @@ func (o *Upload) GetPostId() float32 {
 // GetPostIdOk returns a tuple with the PostId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Upload) GetPostIdOk() (*float32, bool) {
+func (o *Upload) GetPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -275,7 +275,7 @@ func (o *Upload) GetPostIdOk() (*float32, bool) {
 }
 
 // SetPostId sets field value
-func (o *Upload) SetPostId(v float32) {
+func (o *Upload) SetPostId(v int32) {
 	o.PostId.Set(&v)
 }
 
@@ -357,10 +357,10 @@ func (o *Upload) SetUpdatedAt(v time.Time) {
 }
 
 // GetParentId returns the ParentId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *Upload) GetParentId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *Upload) GetParentId() int32 {
 	if o == nil || o.ParentId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -370,7 +370,7 @@ func (o *Upload) GetParentId() float32 {
 // GetParentIdOk returns a tuple with the ParentId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Upload) GetParentIdOk() (*float32, bool) {
+func (o *Upload) GetParentIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -378,7 +378,7 @@ func (o *Upload) GetParentIdOk() (*float32, bool) {
 }
 
 // SetParentId sets field value
-func (o *Upload) SetParentId(v float32) {
+func (o *Upload) SetParentId(v int32) {
 	o.ParentId.Set(&v)
 }
 

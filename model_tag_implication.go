@@ -22,19 +22,19 @@ var _ MappedNullable = &TagImplication{}
 
 // TagImplication struct for TagImplication
 type TagImplication struct {
-	Id             int32           `json:"id"`
-	Reason         string          `json:"reason"`
-	CreatorId      int32           `json:"creator_id"`
-	CreatedAt      time.Time       `json:"created_at"`
-	ForumPostId    NullableFloat32 `json:"forum_post_id"`
-	AntecedentName string          `json:"antecedent_name"`
-	ConsequentName string          `json:"consequent_name"`
+	Id             int32         `json:"id"`
+	Reason         string        `json:"reason"`
+	CreatorId      int32         `json:"creator_id"`
+	CreatedAt      time.Time     `json:"created_at"`
+	ForumPostId    NullableInt32 `json:"forum_post_id"`
+	AntecedentName string        `json:"antecedent_name"`
+	ConsequentName string        `json:"consequent_name"`
 	// Note: The \"error\" status will be proceeded by an error, ex: \"error: Validation failed: A tag alias for tag_name already exists\"
 	Status          TagRequestStatuses `json:"status"`
-	ForumTopicId    NullableFloat32    `json:"forum_topic_id"`
+	ForumTopicId    NullableInt32      `json:"forum_topic_id"`
 	UpdatedAt       time.Time          `json:"updated_at"`
 	DescendantNames []string           `json:"descendant_names"`
-	ApproverId      NullableFloat32    `json:"approver_id"`
+	ApproverId      NullableInt32      `json:"approver_id"`
 }
 
 type _TagImplication TagImplication
@@ -43,7 +43,7 @@ type _TagImplication TagImplication
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagImplication(id int32, reason string, creatorId int32, createdAt time.Time, forumPostId NullableFloat32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableFloat32, updatedAt time.Time, descendantNames []string, approverId NullableFloat32) *TagImplication {
+func NewTagImplication(id int32, reason string, creatorId int32, createdAt time.Time, forumPostId NullableInt32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableInt32, updatedAt time.Time, descendantNames []string, approverId NullableInt32) *TagImplication {
 	this := TagImplication{}
 	this.Id = id
 	this.Reason = reason
@@ -165,10 +165,10 @@ func (o *TagImplication) SetCreatedAt(v time.Time) {
 }
 
 // GetForumPostId returns the ForumPostId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *TagImplication) GetForumPostId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *TagImplication) GetForumPostId() int32 {
 	if o == nil || o.ForumPostId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -178,7 +178,7 @@ func (o *TagImplication) GetForumPostId() float32 {
 // GetForumPostIdOk returns a tuple with the ForumPostId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TagImplication) GetForumPostIdOk() (*float32, bool) {
+func (o *TagImplication) GetForumPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -186,7 +186,7 @@ func (o *TagImplication) GetForumPostIdOk() (*float32, bool) {
 }
 
 // SetForumPostId sets field value
-func (o *TagImplication) SetForumPostId(v float32) {
+func (o *TagImplication) SetForumPostId(v int32) {
 	o.ForumPostId.Set(&v)
 }
 
@@ -263,10 +263,10 @@ func (o *TagImplication) SetStatus(v TagRequestStatuses) {
 }
 
 // GetForumTopicId returns the ForumTopicId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *TagImplication) GetForumTopicId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *TagImplication) GetForumTopicId() int32 {
 	if o == nil || o.ForumTopicId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -276,7 +276,7 @@ func (o *TagImplication) GetForumTopicId() float32 {
 // GetForumTopicIdOk returns a tuple with the ForumTopicId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TagImplication) GetForumTopicIdOk() (*float32, bool) {
+func (o *TagImplication) GetForumTopicIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -284,7 +284,7 @@ func (o *TagImplication) GetForumTopicIdOk() (*float32, bool) {
 }
 
 // SetForumTopicId sets field value
-func (o *TagImplication) SetForumTopicId(v float32) {
+func (o *TagImplication) SetForumTopicId(v int32) {
 	o.ForumTopicId.Set(&v)
 }
 
@@ -337,10 +337,10 @@ func (o *TagImplication) SetDescendantNames(v []string) {
 }
 
 // GetApproverId returns the ApproverId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *TagImplication) GetApproverId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *TagImplication) GetApproverId() int32 {
 	if o == nil || o.ApproverId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -350,7 +350,7 @@ func (o *TagImplication) GetApproverId() float32 {
 // GetApproverIdOk returns a tuple with the ApproverId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TagImplication) GetApproverIdOk() (*float32, bool) {
+func (o *TagImplication) GetApproverIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -358,7 +358,7 @@ func (o *TagImplication) GetApproverIdOk() (*float32, bool) {
 }
 
 // SetApproverId sets field value
-func (o *TagImplication) SetApproverId(v float32) {
+func (o *TagImplication) SetApproverId(v int32) {
 	o.ApproverId.Set(&v)
 }
 

@@ -22,16 +22,16 @@ var _ MappedNullable = &ForumPost{}
 
 // ForumPost struct for ForumPost
 type ForumPost struct {
-	Id            int32           `json:"id"`
-	TopicId       int32           `json:"topic_id"`
-	CreatorId     int32           `json:"creator_id"`
-	UpdaterId     int32           `json:"updater_id"`
-	Body          string          `json:"body"`
-	IsHidden      bool            `json:"is_hidden"`
-	CreatedAt     time.Time       `json:"created_at"`
-	UpdatedAt     time.Time       `json:"updated_at"`
-	WarningType   WarningTypes    `json:"warning_type"`
-	WarningUserId NullableFloat32 `json:"warning_user_id"`
+	Id            int32                `json:"id"`
+	TopicId       int32                `json:"topic_id"`
+	CreatorId     int32                `json:"creator_id"`
+	UpdaterId     int32                `json:"updater_id"`
+	Body          string               `json:"body"`
+	IsHidden      bool                 `json:"is_hidden"`
+	CreatedAt     time.Time            `json:"created_at"`
+	UpdatedAt     time.Time            `json:"updated_at"`
+	WarningType   NullableWarningTypes `json:"warning_type"`
+	WarningUserId NullableInt32        `json:"warning_user_id"`
 }
 
 type _ForumPost ForumPost
@@ -40,7 +40,7 @@ type _ForumPost ForumPost
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewForumPost(id int32, topicId int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32) *ForumPost {
+func NewForumPost(id int32, topicId int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType NullableWarningTypes, warningUserId NullableInt32) *ForumPost {
 	this := ForumPost{}
 	this.Id = id
 	this.TopicId = topicId
@@ -256,34 +256,36 @@ func (o *ForumPost) SetUpdatedAt(v time.Time) {
 }
 
 // GetWarningType returns the WarningType field value
+// If the value is explicit nil, the zero value for WarningTypes will be returned
 func (o *ForumPost) GetWarningType() WarningTypes {
-	if o == nil {
+	if o == nil || o.WarningType.Get() == nil {
 		var ret WarningTypes
 		return ret
 	}
 
-	return o.WarningType
+	return *o.WarningType.Get()
 }
 
 // GetWarningTypeOk returns a tuple with the WarningType field value
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *ForumPost) GetWarningTypeOk() (*WarningTypes, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.WarningType, true
+	return o.WarningType.Get(), o.WarningType.IsSet()
 }
 
 // SetWarningType sets field value
 func (o *ForumPost) SetWarningType(v WarningTypes) {
-	o.WarningType = v
+	o.WarningType.Set(&v)
 }
 
 // GetWarningUserId returns the WarningUserId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *ForumPost) GetWarningUserId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *ForumPost) GetWarningUserId() int32 {
 	if o == nil || o.WarningUserId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -293,7 +295,7 @@ func (o *ForumPost) GetWarningUserId() float32 {
 // GetWarningUserIdOk returns a tuple with the WarningUserId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ForumPost) GetWarningUserIdOk() (*float32, bool) {
+func (o *ForumPost) GetWarningUserIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -301,7 +303,7 @@ func (o *ForumPost) GetWarningUserIdOk() (*float32, bool) {
 }
 
 // SetWarningUserId sets field value
-func (o *ForumPost) SetWarningUserId(v float32) {
+func (o *ForumPost) SetWarningUserId(v int32) {
 	o.WarningUserId.Set(&v)
 }
 
@@ -323,7 +325,7 @@ func (o ForumPost) ToMap() (map[string]interface{}, error) {
 	toSerialize["is_hidden"] = o.IsHidden
 	toSerialize["created_at"] = o.CreatedAt
 	toSerialize["updated_at"] = o.UpdatedAt
-	toSerialize["warning_type"] = o.WarningType
+	toSerialize["warning_type"] = o.WarningType.Get()
 	toSerialize["warning_user_id"] = o.WarningUserId.Get()
 	return toSerialize, nil
 }

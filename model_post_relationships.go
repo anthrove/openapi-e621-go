@@ -21,10 +21,10 @@ var _ MappedNullable = &PostRelationships{}
 
 // PostRelationships struct for PostRelationships
 type PostRelationships struct {
-	ParentId          NullableFloat32 `json:"parent_id"`
-	HasChildren       bool            `json:"has_children"`
-	HasActiveChildren bool            `json:"has_active_children"`
-	Children          []int32         `json:"children"`
+	ParentId          NullableInt32 `json:"parent_id"`
+	HasChildren       bool          `json:"has_children"`
+	HasActiveChildren bool          `json:"has_active_children"`
+	Children          []int32       `json:"children"`
 }
 
 type _PostRelationships PostRelationships
@@ -33,7 +33,7 @@ type _PostRelationships PostRelationships
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostRelationships(parentId NullableFloat32, hasChildren bool, hasActiveChildren bool, children []int32) *PostRelationships {
+func NewPostRelationships(parentId NullableInt32, hasChildren bool, hasActiveChildren bool, children []int32) *PostRelationships {
 	this := PostRelationships{}
 	this.ParentId = parentId
 	this.HasChildren = hasChildren
@@ -51,10 +51,10 @@ func NewPostRelationshipsWithDefaults() *PostRelationships {
 }
 
 // GetParentId returns the ParentId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *PostRelationships) GetParentId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *PostRelationships) GetParentId() int32 {
 	if o == nil || o.ParentId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -64,7 +64,7 @@ func (o *PostRelationships) GetParentId() float32 {
 // GetParentIdOk returns a tuple with the ParentId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PostRelationships) GetParentIdOk() (*float32, bool) {
+func (o *PostRelationships) GetParentIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -72,7 +72,7 @@ func (o *PostRelationships) GetParentIdOk() (*float32, bool) {
 }
 
 // SetParentId sets field value
-func (o *PostRelationships) SetParentId(v float32) {
+func (o *PostRelationships) SetParentId(v int32) {
 	o.ParentId.Set(&v)
 }
 

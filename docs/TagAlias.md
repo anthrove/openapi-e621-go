@@ -9,19 +9,19 @@ Name | Type | Description | Notes
 **Reason** | **string** |  | 
 **CreatorId** | **int32** |  | 
 **CreatedAt** | **NullableTime** |  | 
-**ForumPostId** | **NullableFloat32** |  | 
+**ForumPostId** | **NullableInt32** |  | 
 **UpdatedAt** | **NullableTime** |  | 
-**ForumTopicId** | **NullableFloat32** |  | 
+**ForumTopicId** | **NullableInt32** |  | 
 **ConsequentName** | **string** |  | 
 **Status** | [**TagRequestStatuses**](TagRequestStatuses.md) | Note: The \&quot;error\&quot; status will be proceeded by an error, ex: \&quot;error: Validation failed: A tag alias for tag_name already exists\&quot;  | 
 **PostCount** | **int32** |  | 
-**ApproverId** | **NullableFloat32** |  | 
+**ApproverId** | **NullableInt32** |  | 
 
 ## Methods
 
 ### NewTagAlias
 
-`func NewTagAlias(id int32, antecedentName string, reason string, creatorId int32, createdAt NullableTime, forumPostId NullableFloat32, updatedAt NullableTime, forumTopicId NullableFloat32, consequentName string, status TagRequestStatuses, postCount int32, approverId NullableFloat32, ) *TagAlias`
+`func NewTagAlias(id int32, antecedentName string, reason string, creatorId int32, createdAt NullableTime, forumPostId NullableInt32, updatedAt NullableTime, forumTopicId NullableInt32, consequentName string, status TagRequestStatuses, postCount int32, approverId NullableInt32, ) *TagAlias`
 
 NewTagAlias instantiates a new TagAlias object
 This constructor will assign default values to properties that have it defined,
@@ -148,20 +148,20 @@ SetCreatedAt sets CreatedAt field to given value.
 UnsetCreatedAt ensures that no value is present for CreatedAt, not even an explicit nil
 ### GetForumPostId
 
-`func (o *TagAlias) GetForumPostId() float32`
+`func (o *TagAlias) GetForumPostId() int32`
 
 GetForumPostId returns the ForumPostId field if non-nil, zero value otherwise.
 
 ### GetForumPostIdOk
 
-`func (o *TagAlias) GetForumPostIdOk() (*float32, bool)`
+`func (o *TagAlias) GetForumPostIdOk() (*int32, bool)`
 
 GetForumPostIdOk returns a tuple with the ForumPostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetForumPostId
 
-`func (o *TagAlias) SetForumPostId(v float32)`
+`func (o *TagAlias) SetForumPostId(v int32)`
 
 SetForumPostId sets ForumPostId field to given value.
 
@@ -208,20 +208,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 UnsetUpdatedAt ensures that no value is present for UpdatedAt, not even an explicit nil
 ### GetForumTopicId
 
-`func (o *TagAlias) GetForumTopicId() float32`
+`func (o *TagAlias) GetForumTopicId() int32`
 
 GetForumTopicId returns the ForumTopicId field if non-nil, zero value otherwise.
 
 ### GetForumTopicIdOk
 
-`func (o *TagAlias) GetForumTopicIdOk() (*float32, bool)`
+`func (o *TagAlias) GetForumTopicIdOk() (*int32, bool)`
 
 GetForumTopicIdOk returns a tuple with the ForumTopicId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetForumTopicId
 
-`func (o *TagAlias) SetForumTopicId(v float32)`
+`func (o *TagAlias) SetForumTopicId(v int32)`
 
 SetForumTopicId sets ForumTopicId field to given value.
 
@@ -298,20 +298,20 @@ SetPostCount sets PostCount field to given value.
 
 ### GetApproverId
 
-`func (o *TagAlias) GetApproverId() float32`
+`func (o *TagAlias) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *TagAlias) GetApproverIdOk() (*float32, bool)`
+`func (o *TagAlias) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *TagAlias) SetApproverId(v float32)`
+`func (o *TagAlias) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 

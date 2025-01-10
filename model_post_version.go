@@ -22,30 +22,30 @@ var _ MappedNullable = &PostVersion{}
 
 // PostVersion struct for PostVersion
 type PostVersion struct {
-	Id                  int32           `json:"id"`
-	PostId              int32           `json:"post_id"`
-	Tags                string          `json:"tags"`
-	UpdaterId           int32           `json:"updater_id"`
-	UpdatedAt           time.Time       `json:"updated_at"`
-	Rating              Ratings         `json:"rating"`
-	ParentId            NullableFloat32 `json:"parent_id"`
-	Source              string          `json:"source"`
-	Description         string          `json:"description"`
-	Reason              NullableString  `json:"reason"`
-	LockedTags          NullableString  `json:"locked_tags"`
-	AddedTags           []string        `json:"added_tags"`
-	RemovedTags         []string        `json:"removed_tags"`
-	AddedLockedTags     []string        `json:"added_locked_tags"`
-	RemovedLockedTags   []string        `json:"removed_locked_tags"`
-	RatingChanged       bool            `json:"rating_changed"`
-	ParentChanged       bool            `json:"parent_changed"`
-	SourceChanged       bool            `json:"source_changed"`
-	DescriptionChanged  bool            `json:"description_changed"`
-	Version             float32         `json:"version"`
-	ObsoleteAddedTags   string          `json:"obsolete_added_tags"`
-	ObsoleteRemovedTags string          `json:"obsolete_removed_tags"`
-	UnchangedTags       string          `json:"unchanged_tags"`
-	UpdaterName         string          `json:"updater_name"`
+	Id                  int32          `json:"id"`
+	PostId              int32          `json:"post_id"`
+	Tags                string         `json:"tags"`
+	UpdaterId           int32          `json:"updater_id"`
+	UpdatedAt           time.Time      `json:"updated_at"`
+	Rating              Ratings        `json:"rating"`
+	ParentId            NullableInt32  `json:"parent_id"`
+	Source              string         `json:"source"`
+	Description         string         `json:"description"`
+	Reason              NullableString `json:"reason"`
+	LockedTags          NullableString `json:"locked_tags"`
+	AddedTags           []string       `json:"added_tags"`
+	RemovedTags         []string       `json:"removed_tags"`
+	AddedLockedTags     []string       `json:"added_locked_tags"`
+	RemovedLockedTags   []string       `json:"removed_locked_tags"`
+	RatingChanged       bool           `json:"rating_changed"`
+	ParentChanged       bool           `json:"parent_changed"`
+	SourceChanged       bool           `json:"source_changed"`
+	DescriptionChanged  bool           `json:"description_changed"`
+	Version             float32        `json:"version"`
+	ObsoleteAddedTags   string         `json:"obsolete_added_tags"`
+	ObsoleteRemovedTags string         `json:"obsolete_removed_tags"`
+	UnchangedTags       string         `json:"unchanged_tags"`
+	UpdaterName         string         `json:"updater_name"`
 }
 
 type _PostVersion PostVersion
@@ -54,7 +54,7 @@ type _PostVersion PostVersion
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostVersion(id int32, postId int32, tags string, updaterId int32, updatedAt time.Time, rating Ratings, parentId NullableFloat32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string) *PostVersion {
+func NewPostVersion(id int32, postId int32, tags string, updaterId int32, updatedAt time.Time, rating Ratings, parentId NullableInt32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string) *PostVersion {
 	this := PostVersion{}
 	this.Id = id
 	this.PostId = postId
@@ -236,10 +236,10 @@ func (o *PostVersion) SetRating(v Ratings) {
 }
 
 // GetParentId returns the ParentId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *PostVersion) GetParentId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *PostVersion) GetParentId() int32 {
 	if o == nil || o.ParentId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -249,7 +249,7 @@ func (o *PostVersion) GetParentId() float32 {
 // GetParentIdOk returns a tuple with the ParentId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PostVersion) GetParentIdOk() (*float32, bool) {
+func (o *PostVersion) GetParentIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -257,7 +257,7 @@ func (o *PostVersion) GetParentIdOk() (*float32, bool) {
 }
 
 // SetParentId sets field value
-func (o *PostVersion) SetParentId(v float32) {
+func (o *PostVersion) SetParentId(v int32) {
 	o.ParentId.Set(&v)
 }
 

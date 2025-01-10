@@ -22,15 +22,15 @@ var _ MappedNullable = &PostFlag{}
 
 // PostFlag struct for PostFlag
 type PostFlag struct {
-	Id         int32           `json:"id"`
-	CreatedAt  time.Time       `json:"created_at"`
-	PostId     int32           `json:"post_id"`
-	Reason     string          `json:"reason"`
-	CreatorId  NullableFloat32 `json:"creator_id"`
-	IsResolved bool            `json:"is_resolved"`
-	UpdatedAt  time.Time       `json:"updated_at"`
-	IsDeletion bool            `json:"is_deletion"`
-	Type       string          `json:"type"`
+	Id         int32         `json:"id"`
+	CreatedAt  time.Time     `json:"created_at"`
+	PostId     int32         `json:"post_id"`
+	Reason     string        `json:"reason"`
+	CreatorId  NullableInt32 `json:"creator_id"`
+	IsResolved bool          `json:"is_resolved"`
+	UpdatedAt  time.Time     `json:"updated_at"`
+	IsDeletion bool          `json:"is_deletion"`
+	Type       string        `json:"type"`
 }
 
 type _PostFlag PostFlag
@@ -39,7 +39,7 @@ type _PostFlag PostFlag
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostFlag(id int32, createdAt time.Time, postId int32, reason string, creatorId NullableFloat32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string) *PostFlag {
+func NewPostFlag(id int32, createdAt time.Time, postId int32, reason string, creatorId NullableInt32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string) *PostFlag {
 	this := PostFlag{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -158,10 +158,10 @@ func (o *PostFlag) SetReason(v string) {
 }
 
 // GetCreatorId returns the CreatorId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *PostFlag) GetCreatorId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *PostFlag) GetCreatorId() int32 {
 	if o == nil || o.CreatorId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -171,7 +171,7 @@ func (o *PostFlag) GetCreatorId() float32 {
 // GetCreatorIdOk returns a tuple with the CreatorId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PostFlag) GetCreatorIdOk() (*float32, bool) {
+func (o *PostFlag) GetCreatorIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -179,7 +179,7 @@ func (o *PostFlag) GetCreatorIdOk() (*float32, bool) {
 }
 
 // SetCreatorId sets field value
-func (o *PostFlag) SetCreatorId(v float32) {
+func (o *PostFlag) SetCreatorId(v int32) {
 	o.CreatorId.Set(&v)
 }
 

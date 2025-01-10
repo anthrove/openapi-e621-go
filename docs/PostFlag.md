@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **CreatedAt** | **time.Time** |  | 
 **PostId** | **int32** |  | 
 **Reason** | **string** |  | 
-**CreatorId** | **NullableFloat32** |  | 
+**CreatorId** | **NullableInt32** |  | 
 **IsResolved** | **bool** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **IsDeletion** | **bool** |  | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewPostFlag
 
-`func NewPostFlag(id int32, createdAt time.Time, postId int32, reason string, creatorId NullableFloat32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string, ) *PostFlag`
+`func NewPostFlag(id int32, createdAt time.Time, postId int32, reason string, creatorId NullableInt32, isResolved bool, updatedAt time.Time, isDeletion bool, type_ string, ) *PostFlag`
 
 NewPostFlag instantiates a new PostFlag object
 This constructor will assign default values to properties that have it defined,
@@ -115,20 +115,20 @@ SetReason sets Reason field to given value.
 
 ### GetCreatorId
 
-`func (o *PostFlag) GetCreatorId() float32`
+`func (o *PostFlag) GetCreatorId() int32`
 
 GetCreatorId returns the CreatorId field if non-nil, zero value otherwise.
 
 ### GetCreatorIdOk
 
-`func (o *PostFlag) GetCreatorIdOk() (*float32, bool)`
+`func (o *PostFlag) GetCreatorIdOk() (*int32, bool)`
 
 GetCreatorIdOk returns a tuple with the CreatorId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatorId
 
-`func (o *PostFlag) SetCreatorId(v float32)`
+`func (o *PostFlag) SetCreatorId(v int32)`
 
 SetCreatorId sets CreatorId field to given value.
 

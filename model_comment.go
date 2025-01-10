@@ -31,13 +31,13 @@ type Comment struct {
 	UpdatedAt time.Time `json:"updated_at"`
 	UpdaterId int32     `json:"updater_id"`
 	// Deprecated
-	DoNotBumpPost bool            `json:"do_not_bump_post"`
-	IsHidden      bool            `json:"is_hidden"`
-	IsSticky      bool            `json:"is_sticky"`
-	WarningType   WarningTypes    `json:"warning_type"`
-	WarningUserId NullableFloat32 `json:"warning_user_id"`
-	CreatorName   string          `json:"creator_name"`
-	UpdaterName   string          `json:"updater_name"`
+	DoNotBumpPost bool                 `json:"do_not_bump_post"`
+	IsHidden      bool                 `json:"is_hidden"`
+	IsSticky      bool                 `json:"is_sticky"`
+	WarningType   NullableWarningTypes `json:"warning_type"`
+	WarningUserId NullableInt32        `json:"warning_user_id"`
+	CreatorName   string               `json:"creator_name"`
+	UpdaterName   string               `json:"updater_name"`
 }
 
 type _Comment Comment
@@ -46,7 +46,7 @@ type _Comment Comment
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score int32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string) *Comment {
+func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score int32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType NullableWarningTypes, warningUserId NullableInt32, creatorName string, updaterName string) *Comment {
 	this := Comment{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -342,34 +342,36 @@ func (o *Comment) SetIsSticky(v bool) {
 }
 
 // GetWarningType returns the WarningType field value
+// If the value is explicit nil, the zero value for WarningTypes will be returned
 func (o *Comment) GetWarningType() WarningTypes {
-	if o == nil {
+	if o == nil || o.WarningType.Get() == nil {
 		var ret WarningTypes
 		return ret
 	}
 
-	return o.WarningType
+	return *o.WarningType.Get()
 }
 
 // GetWarningTypeOk returns a tuple with the WarningType field value
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *Comment) GetWarningTypeOk() (*WarningTypes, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return &o.WarningType, true
+	return o.WarningType.Get(), o.WarningType.IsSet()
 }
 
 // SetWarningType sets field value
 func (o *Comment) SetWarningType(v WarningTypes) {
-	o.WarningType = v
+	o.WarningType.Set(&v)
 }
 
 // GetWarningUserId returns the WarningUserId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *Comment) GetWarningUserId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *Comment) GetWarningUserId() int32 {
 	if o == nil || o.WarningUserId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -379,7 +381,7 @@ func (o *Comment) GetWarningUserId() float32 {
 // GetWarningUserIdOk returns a tuple with the WarningUserId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Comment) GetWarningUserIdOk() (*float32, bool) {
+func (o *Comment) GetWarningUserIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -387,7 +389,7 @@ func (o *Comment) GetWarningUserIdOk() (*float32, bool) {
 }
 
 // SetWarningUserId sets field value
-func (o *Comment) SetWarningUserId(v float32) {
+func (o *Comment) SetWarningUserId(v int32) {
 	o.WarningUserId.Set(&v)
 }
 
@@ -460,7 +462,7 @@ func (o Comment) ToMap() (map[string]interface{}, error) {
 	toSerialize["do_not_bump_post"] = o.DoNotBumpPost
 	toSerialize["is_hidden"] = o.IsHidden
 	toSerialize["is_sticky"] = o.IsSticky
-	toSerialize["warning_type"] = o.WarningType
+	toSerialize["warning_type"] = o.WarningType.Get()
 	toSerialize["warning_user_id"] = o.WarningUserId.Get()
 	toSerialize["creator_name"] = o.CreatorName
 	toSerialize["updater_name"] = o.UpdaterName
