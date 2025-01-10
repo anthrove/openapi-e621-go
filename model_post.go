@@ -38,7 +38,7 @@ type Post struct {
 	Sources       []string          `json:"sources"`
 	Pools         []int32           `json:"pools"`
 	Relationships PostRelationships `json:"relationships"`
-	ApproverId    NullableFloat32   `json:"approver_id"`
+	ApproverId    NullableInt32     `json:"approver_id"`
 	UploaderId    int32             `json:"uploader_id"`
 	Description   string            `json:"description"`
 	CommentCount  int32             `json:"comment_count"`
@@ -53,7 +53,7 @@ type _Post Post
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount int32, sources []string, pools []int32, relationships PostRelationships, approverId NullableFloat32, uploaderId int32, description string, commentCount int32, isFavorited bool, hasNotes bool, duration NullableFloat32) *Post {
+func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount int32, sources []string, pools []int32, relationships PostRelationships, approverId NullableInt32, uploaderId int32, description string, commentCount int32, isFavorited bool, hasNotes bool, duration NullableFloat32) *Post {
 	this := Post{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -474,10 +474,10 @@ func (o *Post) SetRelationships(v PostRelationships) {
 }
 
 // GetApproverId returns the ApproverId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *Post) GetApproverId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *Post) GetApproverId() int32 {
 	if o == nil || o.ApproverId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -487,7 +487,7 @@ func (o *Post) GetApproverId() float32 {
 // GetApproverIdOk returns a tuple with the ApproverId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Post) GetApproverIdOk() (*float32, bool) {
+func (o *Post) GetApproverIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -495,7 +495,7 @@ func (o *Post) GetApproverIdOk() (*float32, bool) {
 }
 
 // SetApproverId sets field value
-func (o *Post) SetApproverId(v float32) {
+func (o *Post) SetApproverId(v int32) {
 	o.ApproverId.Set(&v)
 }
 

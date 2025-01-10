@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **A** | **string** | The name if type&#x3D;tag, else the antecedent. | 
 **B** | Pointer to **string** | The consequent, only present if type&#x3D;alias or type&#x3D;implication. | [optional] 
 **Type** | **string** |  | 
-**TagTypeA** | [**TagCategories**](TagCategories.md) |  | 
-**TagTypeB** | Pointer to [**TagCategories**](TagCategories.md) |  | [optional] 
+**TagTypeA** | [**NullableTagCategories**](TagCategories.md) |  | 
+**TagTypeB** | Pointer to [**NullableTagCategories**](TagCategories.md) |  | [optional] 
 
 ## Methods
 
 ### NewTagPreview
 
-`func NewTagPreview(a string, type_ string, tagTypeA TagCategories, ) *TagPreview`
+`func NewTagPreview(a string, type_ string, tagTypeA NullableTagCategories, ) *TagPreview`
 
 NewTagPreview instantiates a new TagPreview object
 This constructor will assign default values to properties that have it defined,
@@ -114,6 +114,16 @@ and a boolean to check if the value has been set.
 SetTagTypeA sets TagTypeA field to given value.
 
 
+### SetTagTypeANil
+
+`func (o *TagPreview) SetTagTypeANil(b bool)`
+
+ SetTagTypeANil sets the value for TagTypeA to be an explicit nil
+
+### UnsetTagTypeA
+`func (o *TagPreview) UnsetTagTypeA()`
+
+UnsetTagTypeA ensures that no value is present for TagTypeA, not even an explicit nil
 ### GetTagTypeB
 
 `func (o *TagPreview) GetTagTypeB() TagCategories`
@@ -139,6 +149,16 @@ SetTagTypeB sets TagTypeB field to given value.
 
 HasTagTypeB returns a boolean if a field has been set.
 
+### SetTagTypeBNil
+
+`func (o *TagPreview) SetTagTypeBNil(b bool)`
+
+ SetTagTypeBNil sets the value for TagTypeB to be an explicit nil
+
+### UnsetTagTypeB
+`func (o *TagPreview) UnsetTagTypeB()`
+
+UnsetTagTypeB ensures that no value is present for TagTypeB, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

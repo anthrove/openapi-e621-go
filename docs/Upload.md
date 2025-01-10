@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **TagString** | **string** |  | 
 **Status** | **string** | Note: The \&quot;error\&quot; status will be proceeded by an error, ex: \&quot;error: RuntimeError - No file or source URL provided\&quot;  | 
 **Backtrace** | **NullableString** |  | 
-**PostId** | **NullableFloat32** |  | 
+**PostId** | **NullableInt32** |  | 
 **Md5Confirmation** | **interface{}** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**ParentId** | **NullableFloat32** |  | 
+**ParentId** | **NullableInt32** |  | 
 **Md5** | **NullableString** |  | 
 **FileExt** | [**GetArtistIdOrNameParameter**](GetArtistIdOrNameParameter.md) |  | 
 **FileSize** | **NullableFloat32** |  | 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 
 ### NewUpload
 
-`func NewUpload(id int32, source string, rating Ratings, uploaderId int32, tagString string, status string, backtrace NullableString, postId NullableFloat32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableFloat32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string, ) *Upload`
+`func NewUpload(id int32, source string, rating Ratings, uploaderId int32, tagString string, status string, backtrace NullableString, postId NullableInt32, md5Confirmation interface{}, createdAt time.Time, updatedAt time.Time, parentId NullableInt32, md5 NullableString, fileExt GetArtistIdOrNameParameter, fileSize NullableFloat32, imageWidth NullableFloat32, imageHeight NullableFloat32, description string, uploaderName string, ) *Upload`
 
 NewUpload instantiates a new Upload object
 This constructor will assign default values to properties that have it defined,
@@ -195,20 +195,20 @@ SetBacktrace sets Backtrace field to given value.
 UnsetBacktrace ensures that no value is present for Backtrace, not even an explicit nil
 ### GetPostId
 
-`func (o *Upload) GetPostId() float32`
+`func (o *Upload) GetPostId() int32`
 
 GetPostId returns the PostId field if non-nil, zero value otherwise.
 
 ### GetPostIdOk
 
-`func (o *Upload) GetPostIdOk() (*float32, bool)`
+`func (o *Upload) GetPostIdOk() (*int32, bool)`
 
 GetPostIdOk returns a tuple with the PostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPostId
 
-`func (o *Upload) SetPostId(v float32)`
+`func (o *Upload) SetPostId(v int32)`
 
 SetPostId sets PostId field to given value.
 
@@ -295,20 +295,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetParentId
 
-`func (o *Upload) GetParentId() float32`
+`func (o *Upload) GetParentId() int32`
 
 GetParentId returns the ParentId field if non-nil, zero value otherwise.
 
 ### GetParentIdOk
 
-`func (o *Upload) GetParentIdOk() (*float32, bool)`
+`func (o *Upload) GetParentIdOk() (*int32, bool)`
 
 GetParentIdOk returns a tuple with the ParentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParentId
 
-`func (o *Upload) SetParentId(v float32)`
+`func (o *Upload) SetParentId(v int32)`
 
 SetParentId sets ParentId field to given value.
 

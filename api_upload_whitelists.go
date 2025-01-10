@@ -200,7 +200,7 @@ func (r UploadWhitelistsAPICreateUploadWhitelistRequest) UploadWhitelistHidden(u
 	return r
 }
 
-func (r UploadWhitelistsAPICreateUploadWhitelistRequest) Execute() (*http.Response, error) {
+func (r UploadWhitelistsAPICreateUploadWhitelistRequest) Execute() (*UploadWhitelist, *http.Response, error) {
 	return r.ApiService.CreateUploadWhitelistExecute(r)
 }
 
@@ -220,16 +220,19 @@ func (a *UploadWhitelistsAPIService) CreateUploadWhitelist(ctx context.Context) 
 }
 
 // Execute executes the request
-func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitelistsAPICreateUploadWhitelistRequest) (*http.Response, error) {
+//
+//	@return UploadWhitelist
+func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitelistsAPICreateUploadWhitelistRequest) (*UploadWhitelist, *http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UploadWhitelist
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UploadWhitelistsAPIService.CreateUploadWhitelist")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/upload_whitelists.json"
@@ -238,10 +241,10 @@ func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitel
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.uploadWhitelistAllowed == nil {
-		return nil, reportError("uploadWhitelistAllowed is required and must be specified")
+		return localVarReturnValue, nil, reportError("uploadWhitelistAllowed is required and must be specified")
 	}
 	if r.uploadWhitelistPattern == nil {
-		return nil, reportError("uploadWhitelistPattern is required and must be specified")
+		return localVarReturnValue, nil, reportError("uploadWhitelistPattern is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -254,7 +257,7 @@ func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitel
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -274,19 +277,19 @@ func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitel
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -294,10 +297,40 @@ func (a *UploadWhitelistsAPIService) CreateUploadWhitelistExecute(r UploadWhitel
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		if localVarHTTPResponse.StatusCode == 403 {
+			var v map[string]interface{}
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 422 {
+			var v map[string]interface{}
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type UploadWhitelistsAPIDeleteUploadWhitelistRequest struct {

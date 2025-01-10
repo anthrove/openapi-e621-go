@@ -6,20 +6,20 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int32** |  | 
 **CreatorId** | **int32** |  | 
-**ForumTopicId** | **NullableFloat32** |  | 
+**ForumTopicId** | **NullableInt32** |  | 
 **Script** | **string** |  | 
 **Status** | **string** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**ApproverId** | **NullableFloat32** |  | 
-**ForumPostId** | **NullableFloat32** |  | 
+**ApproverId** | **NullableInt32** |  | 
+**ForumPostId** | **NullableInt32** |  | 
 **Title** | **string** |  | 
 
 ## Methods
 
 ### NewBulkUpdateRequest
 
-`func NewBulkUpdateRequest(id int32, creatorId int32, forumTopicId NullableFloat32, script string, status string, createdAt time.Time, updatedAt time.Time, approverId NullableFloat32, forumPostId NullableFloat32, title string, ) *BulkUpdateRequest`
+`func NewBulkUpdateRequest(id int32, creatorId int32, forumTopicId NullableInt32, script string, status string, createdAt time.Time, updatedAt time.Time, approverId NullableInt32, forumPostId NullableInt32, title string, ) *BulkUpdateRequest`
 
 NewBulkUpdateRequest instantiates a new BulkUpdateRequest object
 This constructor will assign default values to properties that have it defined,
@@ -76,20 +76,20 @@ SetCreatorId sets CreatorId field to given value.
 
 ### GetForumTopicId
 
-`func (o *BulkUpdateRequest) GetForumTopicId() float32`
+`func (o *BulkUpdateRequest) GetForumTopicId() int32`
 
 GetForumTopicId returns the ForumTopicId field if non-nil, zero value otherwise.
 
 ### GetForumTopicIdOk
 
-`func (o *BulkUpdateRequest) GetForumTopicIdOk() (*float32, bool)`
+`func (o *BulkUpdateRequest) GetForumTopicIdOk() (*int32, bool)`
 
 GetForumTopicIdOk returns a tuple with the ForumTopicId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetForumTopicId
 
-`func (o *BulkUpdateRequest) SetForumTopicId(v float32)`
+`func (o *BulkUpdateRequest) SetForumTopicId(v int32)`
 
 SetForumTopicId sets ForumTopicId field to given value.
 
@@ -186,20 +186,20 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 ### GetApproverId
 
-`func (o *BulkUpdateRequest) GetApproverId() float32`
+`func (o *BulkUpdateRequest) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *BulkUpdateRequest) GetApproverIdOk() (*float32, bool)`
+`func (o *BulkUpdateRequest) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *BulkUpdateRequest) SetApproverId(v float32)`
+`func (o *BulkUpdateRequest) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 
@@ -216,20 +216,20 @@ SetApproverId sets ApproverId field to given value.
 UnsetApproverId ensures that no value is present for ApproverId, not even an explicit nil
 ### GetForumPostId
 
-`func (o *BulkUpdateRequest) GetForumPostId() float32`
+`func (o *BulkUpdateRequest) GetForumPostId() int32`
 
 GetForumPostId returns the ForumPostId field if non-nil, zero value otherwise.
 
 ### GetForumPostIdOk
 
-`func (o *BulkUpdateRequest) GetForumPostIdOk() (*float32, bool)`
+`func (o *BulkUpdateRequest) GetForumPostIdOk() (*int32, bool)`
 
 GetForumPostIdOk returns a tuple with the ForumPostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetForumPostId
 
-`func (o *BulkUpdateRequest) SetForumPostId(v float32)`
+`func (o *BulkUpdateRequest) SetForumPostId(v int32)`
 
 SetForumPostId sets ForumPostId field to given value.
 

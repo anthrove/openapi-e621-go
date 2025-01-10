@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **Sources** | **[]string** |  | 
 **Pools** | **[]int32** |  | 
 **Relationships** | [**PostRelationships**](PostRelationships.md) |  | 
-**ApproverId** | **NullableFloat32** |  | 
+**ApproverId** | **NullableInt32** |  | 
 **UploaderId** | **int32** |  | 
 **Description** | **string** |  | 
 **CommentCount** | **int32** |  | 
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 
 ### NewPost
 
-`func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount int32, sources []string, pools []int32, relationships PostRelationships, approverId NullableFloat32, uploaderId int32, description string, commentCount int32, isFavorited bool, hasNotes bool, duration NullableFloat32, ) *Post`
+`func NewPost(id int32, createdAt time.Time, updatedAt time.Time, file PostFile, preview PostPreview, sample PostSample, score PostScore, tags PostTags, lockedTags []string, changeSeq float32, flags PostFlags, rating Ratings, favCount int32, sources []string, pools []int32, relationships PostRelationships, approverId NullableInt32, uploaderId int32, description string, commentCount int32, isFavorited bool, hasNotes bool, duration NullableFloat32, ) *Post`
 
 NewPost instantiates a new Post object
 This constructor will assign default values to properties that have it defined,
@@ -369,20 +369,20 @@ SetRelationships sets Relationships field to given value.
 
 ### GetApproverId
 
-`func (o *Post) GetApproverId() float32`
+`func (o *Post) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *Post) GetApproverIdOk() (*float32, bool)`
+`func (o *Post) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *Post) SetApproverId(v float32)`
+`func (o *Post) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 
