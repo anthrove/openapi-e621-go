@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Has** | **bool** |  | 
-**Height** | **NullableFloat32** |  | 
-**Width** | **NullableFloat32** |  | 
+**Height** | **NullableInt32** |  | 
+**Width** | **NullableInt32** |  | 
 **Url** | **NullableString** |  | 
 **Alternates** | [**PostSampleAlternates**](PostSampleAlternates.md) |  | 
 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewPostSample
 
-`func NewPostSample(has bool, height NullableFloat32, width NullableFloat32, url NullableString, alternates PostSampleAlternates, ) *PostSample`
+`func NewPostSample(has bool, height NullableInt32, width NullableInt32, url NullableString, alternates PostSampleAlternates, ) *PostSample`
 
 NewPostSample instantiates a new PostSample object
 This constructor will assign default values to properties that have it defined,
@@ -51,20 +51,20 @@ SetHas sets Has field to given value.
 
 ### GetHeight
 
-`func (o *PostSample) GetHeight() float32`
+`func (o *PostSample) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *PostSample) GetHeightOk() (*float32, bool)`
+`func (o *PostSample) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *PostSample) SetHeight(v float32)`
+`func (o *PostSample) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 
@@ -81,20 +81,20 @@ SetHeight sets Height field to given value.
 UnsetHeight ensures that no value is present for Height, not even an explicit nil
 ### GetWidth
 
-`func (o *PostSample) GetWidth() float32`
+`func (o *PostSample) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *PostSample) GetWidthOk() (*float32, bool)`
+`func (o *PostSample) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *PostSample) SetWidth(v float32)`
+`func (o *PostSample) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 

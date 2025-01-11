@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **UpdaterId** | **int32** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Rating** | [**Ratings**](Ratings.md) |  | 
-**ParentId** | **NullableFloat32** |  | 
+**ParentId** | **NullableInt32** |  | 
 **Source** | **string** |  | 
 **Description** | **string** |  | 
 **Reason** | **NullableString** |  | 
@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 ### NewPostVersion
 
-`func NewPostVersion(id int32, postId int32, tags string, updaterId int32, updatedAt time.Time, rating Ratings, parentId NullableFloat32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string, ) *PostVersion`
+`func NewPostVersion(id int32, postId int32, tags string, updaterId int32, updatedAt time.Time, rating Ratings, parentId NullableInt32, source string, description string, reason NullableString, lockedTags NullableString, addedTags []string, removedTags []string, addedLockedTags []string, removedLockedTags []string, ratingChanged bool, parentChanged bool, sourceChanged bool, descriptionChanged bool, version float32, obsoleteAddedTags string, obsoleteRemovedTags string, unchangedTags string, updaterName string, ) *PostVersion`
 
 NewPostVersion instantiates a new PostVersion object
 This constructor will assign default values to properties that have it defined,
@@ -170,20 +170,20 @@ SetRating sets Rating field to given value.
 
 ### GetParentId
 
-`func (o *PostVersion) GetParentId() float32`
+`func (o *PostVersion) GetParentId() int32`
 
 GetParentId returns the ParentId field if non-nil, zero value otherwise.
 
 ### GetParentIdOk
 
-`func (o *PostVersion) GetParentIdOk() (*float32, bool)`
+`func (o *PostVersion) GetParentIdOk() (*int32, bool)`
 
 GetParentIdOk returns a tuple with the ParentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParentId
 
-`func (o *PostVersion) SetParentId(v float32)`
+`func (o *PostVersion) SetParentId(v int32)`
 
 SetParentId sets ParentId field to given value.
 

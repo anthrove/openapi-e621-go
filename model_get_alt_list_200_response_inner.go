@@ -13,82 +13,48 @@ package openapi
 import (
 	"encoding/json"
 	"fmt"
-	"gopkg.in/validator.v2"
 )
 
-// GetAltList200ResponseInner - struct for GetAltList200ResponseInner
+// GetAltList200ResponseInner struct for GetAltList200ResponseInner
 type GetAltList200ResponseInner struct {
 	ArrayOfInt32 *[]int32
 	Int32        *int32
 }
 
-// []int32AsGetAltList200ResponseInner is a convenience function that returns []int32 wrapped in GetAltList200ResponseInner
-func ArrayOfInt32AsGetAltList200ResponseInner(v *[]int32) GetAltList200ResponseInner {
-	return GetAltList200ResponseInner{
-		ArrayOfInt32: v,
-	}
-}
-
-// int32AsGetAltList200ResponseInner is a convenience function that returns int32 wrapped in GetAltList200ResponseInner
-func Int32AsGetAltList200ResponseInner(v *int32) GetAltList200ResponseInner {
-	return GetAltList200ResponseInner{
-		Int32: v,
-	}
-}
-
-// Unmarshal JSON data into one of the pointers in the struct
+// Unmarshal JSON data into any of the pointers in the struct
 func (dst *GetAltList200ResponseInner) UnmarshalJSON(data []byte) error {
 	var err error
-	match := 0
-	// try to unmarshal data into ArrayOfInt32
-	err = newStrictDecoder(data).Decode(&dst.ArrayOfInt32)
+	// try to unmarshal JSON data into ArrayOfInt32
+	err = json.Unmarshal(data, &dst.ArrayOfInt32)
 	if err == nil {
 		jsonArrayOfInt32, _ := json.Marshal(dst.ArrayOfInt32)
 		if string(jsonArrayOfInt32) == "{}" { // empty struct
 			dst.ArrayOfInt32 = nil
 		} else {
-			if err = validator.Validate(dst.ArrayOfInt32); err != nil {
-				dst.ArrayOfInt32 = nil
-			} else {
-				match++
-			}
+			return nil // data stored in dst.ArrayOfInt32, return on the first match
 		}
 	} else {
 		dst.ArrayOfInt32 = nil
 	}
 
-	// try to unmarshal data into Int32
-	err = newStrictDecoder(data).Decode(&dst.Int32)
+	// try to unmarshal JSON data into Int32
+	err = json.Unmarshal(data, &dst.Int32)
 	if err == nil {
 		jsonInt32, _ := json.Marshal(dst.Int32)
 		if string(jsonInt32) == "{}" { // empty struct
 			dst.Int32 = nil
 		} else {
-			if err = validator.Validate(dst.Int32); err != nil {
-				dst.Int32 = nil
-			} else {
-				match++
-			}
+			return nil // data stored in dst.Int32, return on the first match
 		}
 	} else {
 		dst.Int32 = nil
 	}
 
-	if match > 1 { // more than 1 match
-		// reset to nil
-		dst.ArrayOfInt32 = nil
-		dst.Int32 = nil
-
-		return fmt.Errorf("data matches more than one schema in oneOf(GetAltList200ResponseInner)")
-	} else if match == 1 {
-		return nil // exactly one match
-	} else { // no match
-		return fmt.Errorf("data failed to match schemas in oneOf(GetAltList200ResponseInner)")
-	}
+	return fmt.Errorf("data failed to match schemas in anyOf(GetAltList200ResponseInner)")
 }
 
 // Marshal data from the first non-nil pointers in the struct to JSON
-func (src GetAltList200ResponseInner) MarshalJSON() ([]byte, error) {
+func (src *GetAltList200ResponseInner) MarshalJSON() ([]byte, error) {
 	if src.ArrayOfInt32 != nil {
 		return json.Marshal(&src.ArrayOfInt32)
 	}
@@ -97,24 +63,7 @@ func (src GetAltList200ResponseInner) MarshalJSON() ([]byte, error) {
 		return json.Marshal(&src.Int32)
 	}
 
-	return nil, nil // no data in oneOf schemas
-}
-
-// Get the actual instance
-func (obj *GetAltList200ResponseInner) GetActualInstance() interface{} {
-	if obj == nil {
-		return nil
-	}
-	if obj.ArrayOfInt32 != nil {
-		return obj.ArrayOfInt32
-	}
-
-	if obj.Int32 != nil {
-		return obj.Int32
-	}
-
-	// all schemas are nil
-	return nil
+	return nil, nil // no data in anyOf schemas
 }
 
 type NullableGetAltList200ResponseInner struct {

@@ -8,20 +8,20 @@ Name | Type | Description | Notes
 **Reason** | **string** |  | 
 **CreatorId** | **int32** |  | 
 **CreatedAt** | **time.Time** |  | 
-**ForumPostId** | **NullableFloat32** |  | 
+**ForumPostId** | **NullableInt32** |  | 
 **AntecedentName** | **string** |  | 
 **ConsequentName** | **string** |  | 
 **Status** | [**TagRequestStatuses**](TagRequestStatuses.md) | Note: The \&quot;error\&quot; status will be proceeded by an error, ex: \&quot;error: Validation failed: A tag alias for tag_name already exists\&quot;  | 
-**ForumTopicId** | **NullableFloat32** |  | 
+**ForumTopicId** | **NullableInt32** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **DescendantNames** | **[]string** |  | 
-**ApproverId** | **NullableFloat32** |  | 
+**ApproverId** | **NullableInt32** |  | 
 
 ## Methods
 
 ### NewTagImplication
 
-`func NewTagImplication(id int32, reason string, creatorId int32, createdAt time.Time, forumPostId NullableFloat32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableFloat32, updatedAt time.Time, descendantNames []string, approverId NullableFloat32, ) *TagImplication`
+`func NewTagImplication(id int32, reason string, creatorId int32, createdAt time.Time, forumPostId NullableInt32, antecedentName string, consequentName string, status TagRequestStatuses, forumTopicId NullableInt32, updatedAt time.Time, descendantNames []string, approverId NullableInt32, ) *TagImplication`
 
 NewTagImplication instantiates a new TagImplication object
 This constructor will assign default values to properties that have it defined,
@@ -118,20 +118,20 @@ SetCreatedAt sets CreatedAt field to given value.
 
 ### GetForumPostId
 
-`func (o *TagImplication) GetForumPostId() float32`
+`func (o *TagImplication) GetForumPostId() int32`
 
 GetForumPostId returns the ForumPostId field if non-nil, zero value otherwise.
 
 ### GetForumPostIdOk
 
-`func (o *TagImplication) GetForumPostIdOk() (*float32, bool)`
+`func (o *TagImplication) GetForumPostIdOk() (*int32, bool)`
 
 GetForumPostIdOk returns a tuple with the ForumPostId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetForumPostId
 
-`func (o *TagImplication) SetForumPostId(v float32)`
+`func (o *TagImplication) SetForumPostId(v int32)`
 
 SetForumPostId sets ForumPostId field to given value.
 
@@ -208,20 +208,20 @@ SetStatus sets Status field to given value.
 
 ### GetForumTopicId
 
-`func (o *TagImplication) GetForumTopicId() float32`
+`func (o *TagImplication) GetForumTopicId() int32`
 
 GetForumTopicId returns the ForumTopicId field if non-nil, zero value otherwise.
 
 ### GetForumTopicIdOk
 
-`func (o *TagImplication) GetForumTopicIdOk() (*float32, bool)`
+`func (o *TagImplication) GetForumTopicIdOk() (*int32, bool)`
 
 GetForumTopicIdOk returns a tuple with the ForumTopicId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetForumTopicId
 
-`func (o *TagImplication) SetForumTopicId(v float32)`
+`func (o *TagImplication) SetForumTopicId(v int32)`
 
 SetForumTopicId sets ForumTopicId field to given value.
 
@@ -278,20 +278,20 @@ SetDescendantNames sets DescendantNames field to given value.
 
 ### GetApproverId
 
-`func (o *TagImplication) GetApproverId() float32`
+`func (o *TagImplication) GetApproverId() int32`
 
 GetApproverId returns the ApproverId field if non-nil, zero value otherwise.
 
 ### GetApproverIdOk
 
-`func (o *TagImplication) GetApproverIdOk() (*float32, bool)`
+`func (o *TagImplication) GetApproverIdOk() (*int32, bool)`
 
 GetApproverIdOk returns a tuple with the ApproverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApproverId
 
-`func (o *TagImplication) SetApproverId(v float32)`
+`func (o *TagImplication) SetApproverId(v int32)`
 
 SetApproverId sets ApproverId field to given value.
 

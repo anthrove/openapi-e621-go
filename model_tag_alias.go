@@ -22,19 +22,19 @@ var _ MappedNullable = &TagAlias{}
 
 // TagAlias struct for TagAlias
 type TagAlias struct {
-	Id             int32           `json:"id"`
-	AntecedentName string          `json:"antecedent_name"`
-	Reason         string          `json:"reason"`
-	CreatorId      int32           `json:"creator_id"`
-	CreatedAt      NullableTime    `json:"created_at"`
-	ForumPostId    NullableFloat32 `json:"forum_post_id"`
-	UpdatedAt      NullableTime    `json:"updated_at"`
-	ForumTopicId   NullableFloat32 `json:"forum_topic_id"`
-	ConsequentName string          `json:"consequent_name"`
+	Id             int32         `json:"id"`
+	AntecedentName string        `json:"antecedent_name"`
+	Reason         string        `json:"reason"`
+	CreatorId      int32         `json:"creator_id"`
+	CreatedAt      NullableTime  `json:"created_at"`
+	ForumPostId    NullableInt32 `json:"forum_post_id"`
+	UpdatedAt      NullableTime  `json:"updated_at"`
+	ForumTopicId   NullableInt32 `json:"forum_topic_id"`
+	ConsequentName string        `json:"consequent_name"`
 	// Note: The \"error\" status will be proceeded by an error, ex: \"error: Validation failed: A tag alias for tag_name already exists\"
 	Status     TagRequestStatuses `json:"status"`
 	PostCount  int32              `json:"post_count"`
-	ApproverId NullableFloat32    `json:"approver_id"`
+	ApproverId NullableInt32      `json:"approver_id"`
 }
 
 type _TagAlias TagAlias
@@ -43,7 +43,7 @@ type _TagAlias TagAlias
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagAlias(id int32, antecedentName string, reason string, creatorId int32, createdAt NullableTime, forumPostId NullableFloat32, updatedAt NullableTime, forumTopicId NullableFloat32, consequentName string, status TagRequestStatuses, postCount int32, approverId NullableFloat32) *TagAlias {
+func NewTagAlias(id int32, antecedentName string, reason string, creatorId int32, createdAt NullableTime, forumPostId NullableInt32, updatedAt NullableTime, forumTopicId NullableInt32, consequentName string, status TagRequestStatuses, postCount int32, approverId NullableInt32) *TagAlias {
 	this := TagAlias{}
 	this.Id = id
 	this.AntecedentName = antecedentName
@@ -191,10 +191,10 @@ func (o *TagAlias) SetCreatedAt(v time.Time) {
 }
 
 // GetForumPostId returns the ForumPostId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *TagAlias) GetForumPostId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *TagAlias) GetForumPostId() int32 {
 	if o == nil || o.ForumPostId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -204,7 +204,7 @@ func (o *TagAlias) GetForumPostId() float32 {
 // GetForumPostIdOk returns a tuple with the ForumPostId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TagAlias) GetForumPostIdOk() (*float32, bool) {
+func (o *TagAlias) GetForumPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -212,7 +212,7 @@ func (o *TagAlias) GetForumPostIdOk() (*float32, bool) {
 }
 
 // SetForumPostId sets field value
-func (o *TagAlias) SetForumPostId(v float32) {
+func (o *TagAlias) SetForumPostId(v int32) {
 	o.ForumPostId.Set(&v)
 }
 
@@ -243,10 +243,10 @@ func (o *TagAlias) SetUpdatedAt(v time.Time) {
 }
 
 // GetForumTopicId returns the ForumTopicId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *TagAlias) GetForumTopicId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *TagAlias) GetForumTopicId() int32 {
 	if o == nil || o.ForumTopicId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -256,7 +256,7 @@ func (o *TagAlias) GetForumTopicId() float32 {
 // GetForumTopicIdOk returns a tuple with the ForumTopicId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TagAlias) GetForumTopicIdOk() (*float32, bool) {
+func (o *TagAlias) GetForumTopicIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -264,7 +264,7 @@ func (o *TagAlias) GetForumTopicIdOk() (*float32, bool) {
 }
 
 // SetForumTopicId sets field value
-func (o *TagAlias) SetForumTopicId(v float32) {
+func (o *TagAlias) SetForumTopicId(v int32) {
 	o.ForumTopicId.Set(&v)
 }
 
@@ -341,10 +341,10 @@ func (o *TagAlias) SetPostCount(v int32) {
 }
 
 // GetApproverId returns the ApproverId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *TagAlias) GetApproverId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *TagAlias) GetApproverId() int32 {
 	if o == nil || o.ApproverId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -354,7 +354,7 @@ func (o *TagAlias) GetApproverId() float32 {
 // GetApproverIdOk returns a tuple with the ApproverId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TagAlias) GetApproverIdOk() (*float32, bool) {
+func (o *TagAlias) GetApproverIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -362,7 +362,7 @@ func (o *TagAlias) GetApproverIdOk() (*float32, bool) {
 }
 
 // SetApproverId sets field value
-func (o *TagAlias) SetApproverId(v float32) {
+func (o *TagAlias) SetApproverId(v int32) {
 	o.ApproverId.Set(&v)
 }
 

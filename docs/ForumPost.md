@@ -12,14 +12,14 @@ Name | Type | Description | Notes
 **IsHidden** | **bool** |  | 
 **CreatedAt** | **time.Time** |  | 
 **UpdatedAt** | **time.Time** |  | 
-**WarningType** | [**WarningTypes**](WarningTypes.md) |  | 
-**WarningUserId** | **NullableFloat32** |  | 
+**WarningType** | [**NullableWarningTypes**](WarningTypes.md) |  | 
+**WarningUserId** | **NullableInt32** |  | 
 
 ## Methods
 
 ### NewForumPost
 
-`func NewForumPost(id int32, topicId int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType WarningTypes, warningUserId NullableFloat32, ) *ForumPost`
+`func NewForumPost(id int32, topicId int32, creatorId int32, updaterId int32, body string, isHidden bool, createdAt time.Time, updatedAt time.Time, warningType NullableWarningTypes, warningUserId NullableInt32, ) *ForumPost`
 
 NewForumPost instantiates a new ForumPost object
 This constructor will assign default values to properties that have it defined,
@@ -214,22 +214,32 @@ and a boolean to check if the value has been set.
 SetWarningType sets WarningType field to given value.
 
 
+### SetWarningTypeNil
+
+`func (o *ForumPost) SetWarningTypeNil(b bool)`
+
+ SetWarningTypeNil sets the value for WarningType to be an explicit nil
+
+### UnsetWarningType
+`func (o *ForumPost) UnsetWarningType()`
+
+UnsetWarningType ensures that no value is present for WarningType, not even an explicit nil
 ### GetWarningUserId
 
-`func (o *ForumPost) GetWarningUserId() float32`
+`func (o *ForumPost) GetWarningUserId() int32`
 
 GetWarningUserId returns the WarningUserId field if non-nil, zero value otherwise.
 
 ### GetWarningUserIdOk
 
-`func (o *ForumPost) GetWarningUserIdOk() (*float32, bool)`
+`func (o *ForumPost) GetWarningUserIdOk() (*int32, bool)`
 
 GetWarningUserIdOk returns a tuple with the WarningUserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWarningUserId
 
-`func (o *ForumPost) SetWarningUserId(v float32)`
+`func (o *ForumPost) SetWarningUserId(v int32)`
 
 SetWarningUserId sets WarningUserId field to given value.
 

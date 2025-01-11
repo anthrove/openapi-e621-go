@@ -22,16 +22,16 @@ var _ MappedNullable = &BulkUpdateRequest{}
 
 // BulkUpdateRequest struct for BulkUpdateRequest
 type BulkUpdateRequest struct {
-	Id           int32           `json:"id"`
-	CreatorId    int32           `json:"creator_id"`
-	ForumTopicId NullableFloat32 `json:"forum_topic_id"`
-	Script       string          `json:"script"`
-	Status       string          `json:"status"`
-	CreatedAt    time.Time       `json:"created_at"`
-	UpdatedAt    time.Time       `json:"updated_at"`
-	ApproverId   NullableFloat32 `json:"approver_id"`
-	ForumPostId  NullableFloat32 `json:"forum_post_id"`
-	Title        string          `json:"title"`
+	Id           int32         `json:"id"`
+	CreatorId    int32         `json:"creator_id"`
+	ForumTopicId NullableInt32 `json:"forum_topic_id"`
+	Script       string        `json:"script"`
+	Status       string        `json:"status"`
+	CreatedAt    time.Time     `json:"created_at"`
+	UpdatedAt    time.Time     `json:"updated_at"`
+	ApproverId   NullableInt32 `json:"approver_id"`
+	ForumPostId  NullableInt32 `json:"forum_post_id"`
+	Title        string        `json:"title"`
 }
 
 type _BulkUpdateRequest BulkUpdateRequest
@@ -40,7 +40,7 @@ type _BulkUpdateRequest BulkUpdateRequest
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBulkUpdateRequest(id int32, creatorId int32, forumTopicId NullableFloat32, script string, status string, createdAt time.Time, updatedAt time.Time, approverId NullableFloat32, forumPostId NullableFloat32, title string) *BulkUpdateRequest {
+func NewBulkUpdateRequest(id int32, creatorId int32, forumTopicId NullableInt32, script string, status string, createdAt time.Time, updatedAt time.Time, approverId NullableInt32, forumPostId NullableInt32, title string) *BulkUpdateRequest {
 	this := BulkUpdateRequest{}
 	this.Id = id
 	this.CreatorId = creatorId
@@ -112,10 +112,10 @@ func (o *BulkUpdateRequest) SetCreatorId(v int32) {
 }
 
 // GetForumTopicId returns the ForumTopicId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *BulkUpdateRequest) GetForumTopicId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *BulkUpdateRequest) GetForumTopicId() int32 {
 	if o == nil || o.ForumTopicId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -125,7 +125,7 @@ func (o *BulkUpdateRequest) GetForumTopicId() float32 {
 // GetForumTopicIdOk returns a tuple with the ForumTopicId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BulkUpdateRequest) GetForumTopicIdOk() (*float32, bool) {
+func (o *BulkUpdateRequest) GetForumTopicIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -133,7 +133,7 @@ func (o *BulkUpdateRequest) GetForumTopicIdOk() (*float32, bool) {
 }
 
 // SetForumTopicId sets field value
-func (o *BulkUpdateRequest) SetForumTopicId(v float32) {
+func (o *BulkUpdateRequest) SetForumTopicId(v int32) {
 	o.ForumTopicId.Set(&v)
 }
 
@@ -234,10 +234,10 @@ func (o *BulkUpdateRequest) SetUpdatedAt(v time.Time) {
 }
 
 // GetApproverId returns the ApproverId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *BulkUpdateRequest) GetApproverId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *BulkUpdateRequest) GetApproverId() int32 {
 	if o == nil || o.ApproverId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -247,7 +247,7 @@ func (o *BulkUpdateRequest) GetApproverId() float32 {
 // GetApproverIdOk returns a tuple with the ApproverId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BulkUpdateRequest) GetApproverIdOk() (*float32, bool) {
+func (o *BulkUpdateRequest) GetApproverIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -255,15 +255,15 @@ func (o *BulkUpdateRequest) GetApproverIdOk() (*float32, bool) {
 }
 
 // SetApproverId sets field value
-func (o *BulkUpdateRequest) SetApproverId(v float32) {
+func (o *BulkUpdateRequest) SetApproverId(v int32) {
 	o.ApproverId.Set(&v)
 }
 
 // GetForumPostId returns the ForumPostId field value
-// If the value is explicit nil, the zero value for float32 will be returned
-func (o *BulkUpdateRequest) GetForumPostId() float32 {
+// If the value is explicit nil, the zero value for int32 will be returned
+func (o *BulkUpdateRequest) GetForumPostId() int32 {
 	if o == nil || o.ForumPostId.Get() == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -273,7 +273,7 @@ func (o *BulkUpdateRequest) GetForumPostId() float32 {
 // GetForumPostIdOk returns a tuple with the ForumPostId field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BulkUpdateRequest) GetForumPostIdOk() (*float32, bool) {
+func (o *BulkUpdateRequest) GetForumPostIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -281,7 +281,7 @@ func (o *BulkUpdateRequest) GetForumPostIdOk() (*float32, bool) {
 }
 
 // SetForumPostId sets field value
-func (o *BulkUpdateRequest) SetForumPostId(v float32) {
+func (o *BulkUpdateRequest) SetForumPostId(v int32) {
 	o.ForumPostId.Set(&v)
 }
 

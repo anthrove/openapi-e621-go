@@ -6955,8 +6955,16 @@ paths:
             schema:
               $ref: '#/components/schemas/createUploadWhitelist_request'
       responses:
-        "200":
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadWhitelist'
           description: Success
+        "403":
+          $ref: '#/components/responses/AccessDenied'
+        "422":
+          $ref: '#/components/responses/ExpectedError'
       security:
       - basicAuth: []
       summary: Create Upload Whitelist
@@ -8975,12 +8983,12 @@ components:
         - count
     BulkUpdateRequest:
       example:
-        forum_topic_id: 1.4658129805029452
+        forum_topic_id: 1
         updated_at: 2000-01-23T04:56:07.000+00:00
-        approver_id: 5.962133916683182
+        approver_id: 5
         creator_id: 6
         created_at: 2000-01-23T04:56:07.000+00:00
-        forum_post_id: 5.637376656633329
+        forum_post_id: 5
         id: 0
         title: title
         script: script
@@ -8992,7 +9000,7 @@ components:
           type: integer
         forum_topic_id:
           nullable: true
-          type: number
+          type: integer
         script:
           type: string
         status:
@@ -9009,10 +9017,10 @@ components:
           type: string
         approver_id:
           nullable: true
-          type: number
+          type: integer
         forum_post_id:
           nullable: true
-          type: number
+          type: integer
         title:
           type: string
       required:
@@ -9030,9 +9038,9 @@ components:
       example:
         is_sticky: true
         is_hidden: true
-        warning_user_id: 2.3021358869347655
+        warning_user_id: 2
         created_at: 2000-01-23T04:56:07.000+00:00
-        warning_type: warning_type
+        warning_type: warning
         body: body
         updater_name: updater_name
         score: 5
@@ -9073,7 +9081,7 @@ components:
           $ref: '#/components/schemas/WarningTypes'
         warning_user_id:
           nullable: true
-          type: number
+          type: integer
         creator_name:
           type: string
         updater_name:
@@ -9220,28 +9228,22 @@ components:
         - time_zone
         - updated_at
       example:
-        comment_count: 3
         note_update_count: 2
-        remaining_api_limit: 8
+        remaining_api_limit: 1
         description_collapsed_initially: true
         show_hidden_comments: true
         last_forum_read_at: 2000-01-23T04:56:07.000+00:00
         recent_tags: recent_tags
-        api_burst_limit: 6
-        neutral_feedback_count: 1
-        profile_about: profile_about
-        upload_limit: 7
+        api_burst_limit: 7
         enable_compact_uploader: true
         id: 0
         replacements_beta: true
-        artist_version_count: 9
-        comment_threshold: 4.965218492984954
-        per_page: 5
+        comment_threshold: 9.301444243932576
+        per_page: 3
         level: 6
-        flag_count: 4.145608029883936
         enable_keyboard_navigation: true
-        favorite_limit: 6
-        tag_query_limit: 3
+        favorite_limit: 1
+        tag_query_limit: 6
         blacklist_users: true
         avatar_id: 7
         hide_comments: true
@@ -9254,17 +9256,13 @@ components:
         default_image_sizedefault_image_size: large
         is_banned: true
         can_approve_posts: true
-        wiki_page_version_count: 1
-        api_regen_multiplier: 9.369310271410669
-        favorites_count: 2
-        negative_feedback_count: 1
-        pool_version_count: 1
+        api_regen_multiplier: 4.145608029883936
         created_at: 2000-01-23T04:56:07.000+00:00
         base_upload_limit: 1
         updated_at: 2000-01-23T04:56:07.000+00:00
         blacklisted_tags: blacklisted_tags
         disable_responsive_mode: true
-        favorite_count: 9
+        favorite_count: 2
         has_mail: true
         email: email
         enable_safe_mode: true
@@ -9277,11 +9275,8 @@ components:
         custom_style: custom_style
         can_upload_free: true
         time_zone: time_zone
-        profile_artinfo: profile_artinfo
-        positive_feedback_count: 6
-        statement_timeout: 9
+        statement_timeout: 1
         no_flagging: true
-        forum_post_count: 7
         enable_privacy_mode: true
     DMail:
       example:
@@ -9448,9 +9443,9 @@ components:
         creator_id: 1
         updater_id: 5
         is_hidden: true
-        warning_user_id: 5.637376656633329
+        warning_user_id: 5
         created_at: 2000-01-23T04:56:07.000+00:00
-        warning_type: warning_type
+        warning_type: warning
         id: 0
         topic_id: 6
         body: body
@@ -9477,7 +9472,7 @@ components:
           $ref: '#/components/schemas/WarningTypes'
         warning_user_id:
           nullable: true
-          type: number
+          type: integer
       required:
       - body
       - created_at
@@ -9623,30 +9618,29 @@ components:
         - wiki_page_version_count
       example:
         can_approve_posts: true
-        comment_count: 6
+        comment_count: 7
         note_update_count: 2
-        wiki_page_version_count: 4
-        favorites_count: 2
-        negative_feedback_count: 6
-        pool_version_count: 9
+        wiki_page_version_count: 9
+        negative_feedback_count: 7
+        pool_version_count: 2
         created_at: 2000-01-23T04:56:07.000+00:00
         base_upload_limit: 1
-        neutral_feedback_count: 3
+        neutral_feedback_count: 6
         profile_about: profile_about
+        favorite_count: 1
         upload_limit: 1
-        favorite_count: 9
         id: 0
-        artist_version_count: 5
+        artist_version_count: 3
         level: 6
-        flag_count: 8
+        flag_count: 1
         post_update_count: 5
         level_string: level_string
         can_upload_free: true
         profile_artinfo: profile_artinfo
         avatar_id: 7
-        positive_feedback_count: 6
+        positive_feedback_count: 1
         name: name
-        forum_post_count: 9
+        forum_post_count: 4
         post_upload_count: 5
         is_banned: true
     Help:
@@ -10428,7 +10422,7 @@ components:
         sources:
         - sources
         - sources
-        approver_id: 4.965218492984954
+        approver_id: 4
         flags:
           rating_locked: true
           deleted: true
@@ -10443,7 +10437,7 @@ components:
         - 6
         description: description
         sample:
-          width: 9.301444243932576
+          width: 9
           has: true
           alternates:
             "720p":
@@ -10468,7 +10462,7 @@ components:
               type: video
               height: 3
           url: url
-          height: 7.061401241503109
+          height: 7
         tags:
           general:
           - general
@@ -10479,6 +10473,9 @@ components:
           character:
           - character
           - character
+          contributor:
+          - contributor
+          - contributor
           lore:
           - lore
           - lore
@@ -10505,7 +10502,7 @@ components:
           children:
           - 1
           - 1
-          parent_id: 7.457744773683766
+          parent_id: 7
         fav_count: 1
         file:
           ext: ext
@@ -10563,7 +10560,7 @@ components:
           $ref: '#/components/schemas/Post_relationships'
         approver_id:
           nullable: true
-          type: number
+          type: integer
         uploader_id:
           type: integer
         description:
@@ -10698,7 +10695,7 @@ components:
         post_id: 6
         updated_at: 2000-01-23T04:56:07.000+00:00
         is_resolved: true
-        creator_id: 1.4658129805029452
+        creator_id: 1
         created_at: 2000-01-23T04:56:07.000+00:00
         id: 0
         type: flag
@@ -10715,7 +10712,7 @@ components:
           type: string
         creator_id:
           nullable: true
-          type: number
+          type: integer
         is_resolved:
           type: boolean
         updated_at:
@@ -10914,7 +10911,7 @@ components:
         - added_locked_tags
         - added_locked_tags
         rating_changed: true
-        parent_id: 5.962133916683182
+        parent_id: 5
         added_tags:
         - added_tags
         - added_tags
@@ -10941,7 +10938,7 @@ components:
           $ref: '#/components/schemas/Ratings'
         parent_id:
           nullable: true
-          type: number
+          type: integer
         source:
           type: string
         description:
@@ -11071,13 +11068,13 @@ components:
     TagAlias:
       example:
         reason: reason
-        forum_topic_id: 5.962133916683182
+        forum_topic_id: 5
         updated_at: 2000-01-23T04:56:07.000+00:00
-        approver_id: 2.3021358869347655
+        approver_id: 2
         creator_id: 6
         consequent_name: consequent_name
         created_at: 2000-01-23T04:56:07.000+00:00
-        forum_post_id: 1.4658129805029452
+        forum_post_id: 1
         id: 0
         post_count: 5
         antecedent_name: antecedent_name
@@ -11097,14 +11094,14 @@ components:
           type: string
         forum_post_id:
           nullable: true
-          type: number
+          type: integer
         updated_at:
           format: date-time
           nullable: true
           type: string
         forum_topic_id:
           nullable: true
-          type: number
+          type: integer
         consequent_name:
           type: string
         status:
@@ -11113,7 +11110,7 @@ components:
           type: integer
         approver_id:
           nullable: true
-          type: number
+          type: integer
       required:
       - antecedent_name
       - approver_id
@@ -11130,16 +11127,16 @@ components:
     TagImplication:
       example:
         reason: reason
-        forum_topic_id: 5.962133916683182
+        forum_topic_id: 5
         updated_at: 2000-01-23T04:56:07.000+00:00
-        approver_id: 5.637376656633329
+        approver_id: 5
         creator_id: 6
         consequent_name: consequent_name
         descendant_names:
         - descendant_names
         - descendant_names
         created_at: 2000-01-23T04:56:07.000+00:00
-        forum_post_id: 1.4658129805029452
+        forum_post_id: 1
         id: 0
         antecedent_name: antecedent_name
         status: active
@@ -11155,7 +11152,7 @@ components:
           type: string
         forum_post_id:
           nullable: true
-          type: number
+          type: integer
         antecedent_name:
           type: string
         consequent_name:
@@ -11164,7 +11161,7 @@ components:
           $ref: '#/components/schemas/TagRequestStatuses'
         forum_topic_id:
           nullable: true
-          type: number
+          type: integer
         updated_at:
           format: date-time
           type: string
@@ -11174,7 +11171,7 @@ components:
           type: array
         approver_id:
           nullable: true
-          type: number
+          type: integer
       required:
       - antecedent_name
       - approver_id
@@ -11193,8 +11190,8 @@ components:
         a: a
         b: b
         type: tag
-        tagTypeA: 0.8008281904610115
-        tagTypeB: 6.027456183070403
+        tagTypeA: 0
+        tagTypeB: null
       properties:
         a:
           description: "The name if type=tag, else the antecedent."
@@ -11409,9 +11406,9 @@ components:
         md5_confirmation: ""
         file_ext: 5.637376656633329
         image_height: 9.301444243932576
-        post_id: 1.4658129805029452
+        post_id: 1
         updated_at: 2000-01-23T04:56:07.000+00:00
-        parent_id: 5.962133916683182
+        parent_id: 5
         id: 0
         status: completed
         md5: md5
@@ -11441,7 +11438,7 @@ components:
           type: string
         post_id:
           nullable: true
-          type: number
+          type: integer
         md5_confirmation:
           deprecated: true
           nullable: true
@@ -11453,7 +11450,7 @@ components:
           type: string
         parent_id:
           nullable: true
-          type: number
+          type: integer
         md5:
           nullable: true
           type: string
@@ -11495,29 +11492,16 @@ components:
     User:
       example:
         can_approve_posts: true
-        comment_count: 3
         note_update_count: 2
-        wiki_page_version_count: 1
-        favorites_count: 2
-        negative_feedback_count: 1
-        pool_version_count: 1
-        created_at: 2000-01-23T04:56:07.000+00:00
-        base_upload_limit: 1
-        neutral_feedback_count: 1
-        profile_about: profile_about
-        upload_limit: 7
-        id: 0
-        artist_version_count: 9
         level: 6
-        flag_count: 4.145608029883936
         post_update_count: 5
         level_string: level_string
+        created_at: 2000-01-23T04:56:07.000+00:00
         can_upload_free: true
-        profile_artinfo: profile_artinfo
+        base_upload_limit: 1
         avatar_id: 7
-        positive_feedback_count: 6
         name: name
-        forum_post_count: 7
+        id: 0
         post_upload_count: 5
         is_banned: true
       properties:
@@ -11548,32 +11532,6 @@ components:
           type: string
         avatar_id:
           nullable: true
-          type: integer
-        artist_version_count:
-          type: integer
-        comment_count:
-          type: integer
-        favorites_count:
-          type: integer
-        flag_count:
-          type: number
-        forum_post_count:
-          type: integer
-        negative_feedback_count:
-          type: integer
-        neutral_feedback_count:
-          type: integer
-        pool_version_count:
-          type: integer
-        positive_feedback_count:
-          type: integer
-        profile_about:
-          type: string
-        profile_artinfo:
-          type: string
-        upload_limit:
-          type: integer
-        wiki_page_version_count:
           type: integer
       required:
       - avatar_id
@@ -12296,7 +12254,7 @@ components:
           sources:
           - sources
           - sources
-          approver_id: 4.965218492984954
+          approver_id: 4
           flags:
             rating_locked: true
             deleted: true
@@ -12311,7 +12269,7 @@ components:
           - 6
           description: description
           sample:
-            width: 9.301444243932576
+            width: 9
             has: true
             alternates:
               "720p":
@@ -12336,7 +12294,7 @@ components:
                 type: video
                 height: 3
             url: url
-            height: 7.061401241503109
+            height: 7
           tags:
             general:
             - general
@@ -12347,6 +12305,9 @@ components:
             character:
             - character
             - character
+            contributor:
+            - contributor
+            - contributor
             lore:
             - lore
             - lore
@@ -12373,7 +12334,7 @@ components:
             children:
             - 1
             - 1
-            parent_id: 7.457744773683766
+            parent_id: 7
           fav_count: 1
           file:
             ext: ext
@@ -12399,7 +12360,7 @@ components:
           sources:
           - sources
           - sources
-          approver_id: 4.965218492984954
+          approver_id: 4
           flags:
             rating_locked: true
             deleted: true
@@ -12414,7 +12375,7 @@ components:
           - 6
           description: description
           sample:
-            width: 9.301444243932576
+            width: 9
             has: true
             alternates:
               "720p":
@@ -12439,7 +12400,7 @@ components:
                 type: video
                 height: 3
             url: url
-            height: 7.061401241503109
+            height: 7
           tags:
             general:
             - general
@@ -12450,6 +12411,9 @@ components:
             character:
             - character
             - character
+            contributor:
+            - contributor
+            - contributor
             lore:
             - lore
             - lore
@@ -12476,7 +12440,7 @@ components:
             children:
             - 1
             - 1
-            parent_id: 7.457744773683766
+            parent_id: 7
           fav_count: 1
           file:
             ext: ext
@@ -12518,7 +12482,7 @@ components:
           sources:
           - sources
           - sources
-          approver_id: 4.965218492984954
+          approver_id: 4
           flags:
             rating_locked: true
             deleted: true
@@ -12533,7 +12497,7 @@ components:
           - 6
           description: description
           sample:
-            width: 9.301444243932576
+            width: 9
             has: true
             alternates:
               "720p":
@@ -12558,7 +12522,7 @@ components:
                 type: video
                 height: 3
             url: url
-            height: 7.061401241503109
+            height: 7
           tags:
             general:
             - general
@@ -12569,6 +12533,9 @@ components:
             character:
             - character
             - character
+            contributor:
+            - contributor
+            - contributor
             lore:
             - lore
             - lore
@@ -12595,7 +12562,7 @@ components:
             children:
             - 1
             - 1
-            parent_id: 7.457744773683766
+            parent_id: 7
           fav_count: 1
           file:
             ext: ext
@@ -13856,7 +13823,7 @@ components:
       - $ref: '#/components/schemas/User'
       - $ref: '#/components/schemas/FullUser'
     getUser_200_response:
-      anyOf:
+      oneOf:
       - $ref: '#/components/schemas/FullUser'
       - $ref: '#/components/schemas/FullCurrentUser'
     editCurrentUser_request:
@@ -14048,7 +14015,7 @@ components:
           $ref: '#/components/schemas/WikiPageVersion'
       - $ref: '#/components/schemas/searchWikiPageVersions_200_response_anyOf'
     getAltList_200_response_inner:
-      oneOf:
+      anyOf:
       - description: ID of concerned user.
         type: integer
       - items:
@@ -14289,7 +14256,7 @@ components:
           $ref: '#/components/schemas/PostSampleAlternate'
     Post_sample:
       example:
-        width: 9.301444243932576
+        width: 9
         has: true
         alternates:
           "720p":
@@ -14314,16 +14281,16 @@ components:
             type: video
             height: 3
         url: url
-        height: 7.061401241503109
+        height: 7
       properties:
         has:
           type: boolean
         height:
           nullable: true
-          type: number
+          type: integer
         width:
           nullable: true
-          type: number
+          type: integer
         url:
           nullable: true
           type: string
@@ -14362,6 +14329,9 @@ components:
         character:
         - character
         - character
+        contributor:
+        - contributor
+        - contributor
         lore:
         - lore
         - lore
@@ -14410,9 +14380,14 @@ components:
           items:
             type: string
           type: array
+        contributor:
+          items:
+            type: string
+          type: array
       required:
       - artist
       - character
+      - contributor
       - copyright
       - general
       - invalid
@@ -14454,11 +14429,11 @@ components:
         children:
         - 1
         - 1
-        parent_id: 7.457744773683766
+        parent_id: 7
       properties:
         parent_id:
           nullable: true
-          type: number
+          type: integer
         has_children:
           type: boolean
         has_active_children:

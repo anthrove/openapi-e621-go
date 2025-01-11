@@ -12,12 +12,13 @@ Name | Type | Description | Notes
 **Invalid** | **[]string** |  | 
 **Meta** | **[]string** |  | 
 **Lore** | **[]string** |  | 
+**Contributor** | **[]string** |  | 
 
 ## Methods
 
 ### NewPostTags
 
-`func NewPostTags(general []string, artist []string, copyright []string, character []string, species []string, invalid []string, meta []string, lore []string, ) *PostTags`
+`func NewPostTags(general []string, artist []string, copyright []string, character []string, species []string, invalid []string, meta []string, lore []string, contributor []string, ) *PostTags`
 
 NewPostTags instantiates a new PostTags object
 This constructor will assign default values to properties that have it defined,
@@ -190,6 +191,26 @@ and a boolean to check if the value has been set.
 `func (o *PostTags) SetLore(v []string)`
 
 SetLore sets Lore field to given value.
+
+
+### GetContributor
+
+`func (o *PostTags) GetContributor() []string`
+
+GetContributor returns the Contributor field if non-nil, zero value otherwise.
+
+### GetContributorOk
+
+`func (o *PostTags) GetContributorOk() (*[]string, bool)`
+
+GetContributorOk returns a tuple with the Contributor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContributor
+
+`func (o *PostTags) SetContributor(v []string)`
+
+SetContributor sets Contributor field to given value.
 
 
 

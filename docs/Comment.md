@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **DoNotBumpPost** | **bool** |  | 
 **IsHidden** | **bool** |  | 
 **IsSticky** | **bool** |  | 
-**WarningType** | [**WarningTypes**](WarningTypes.md) |  | 
-**WarningUserId** | **NullableFloat32** |  | 
+**WarningType** | [**NullableWarningTypes**](WarningTypes.md) |  | 
+**WarningUserId** | **NullableInt32** |  | 
 **CreatorName** | **string** |  | 
 **UpdaterName** | **string** |  | 
 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewComment
 
-`func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score int32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType WarningTypes, warningUserId NullableFloat32, creatorName string, updaterName string, ) *Comment`
+`func NewComment(id int32, createdAt time.Time, postId int32, creatorId int32, body string, score int32, updatedAt time.Time, updaterId int32, doNotBumpPost bool, isHidden bool, isSticky bool, warningType NullableWarningTypes, warningUserId NullableInt32, creatorName string, updaterName string, ) *Comment`
 
 NewComment instantiates a new Comment object
 This constructor will assign default values to properties that have it defined,
@@ -279,22 +279,32 @@ and a boolean to check if the value has been set.
 SetWarningType sets WarningType field to given value.
 
 
+### SetWarningTypeNil
+
+`func (o *Comment) SetWarningTypeNil(b bool)`
+
+ SetWarningTypeNil sets the value for WarningType to be an explicit nil
+
+### UnsetWarningType
+`func (o *Comment) UnsetWarningType()`
+
+UnsetWarningType ensures that no value is present for WarningType, not even an explicit nil
 ### GetWarningUserId
 
-`func (o *Comment) GetWarningUserId() float32`
+`func (o *Comment) GetWarningUserId() int32`
 
 GetWarningUserId returns the WarningUserId field if non-nil, zero value otherwise.
 
 ### GetWarningUserIdOk
 
-`func (o *Comment) GetWarningUserIdOk() (*float32, bool)`
+`func (o *Comment) GetWarningUserIdOk() (*int32, bool)`
 
 GetWarningUserIdOk returns a tuple with the WarningUserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWarningUserId
 
-`func (o *Comment) SetWarningUserId(v float32)`
+`func (o *Comment) SetWarningUserId(v int32)`
 
 SetWarningUserId sets WarningUserId field to given value.
 

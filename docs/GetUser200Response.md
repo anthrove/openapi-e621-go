@@ -17,20 +17,19 @@ Name | Type | Description | Notes
 **CanUploadFree** | **bool** |  | 
 **LevelString** | **string** |  | 
 **AvatarId** | **int32** |  | 
+**WikiPageVersionCount** | **int32** |  | 
 **ArtistVersionCount** | **int32** |  | 
-**CommentCount** | **int32** |  | 
-**FavoritesCount** | Pointer to **int32** |  | [optional] 
-**FlagCount** | **int32** |  | 
-**ForumPostCount** | **int32** |  | 
-**NegativeFeedbackCount** | **int32** |  | 
-**NeutralFeedbackCount** | **int32** |  | 
 **PoolVersionCount** | **int32** |  | 
+**ForumPostCount** | **int32** |  | 
+**CommentCount** | **int32** |  | 
+**FlagCount** | **int32** |  | 
+**FavoriteCount** | **int32** |  | 
 **PositiveFeedbackCount** | **int32** |  | 
+**NeutralFeedbackCount** | **int32** |  | 
+**NegativeFeedbackCount** | **int32** |  | 
+**UploadLimit** | **int32** |  | 
 **ProfileAbout** | **string** |  | 
 **ProfileArtinfo** | **string** |  | 
-**UploadLimit** | **int32** |  | 
-**WikiPageVersionCount** | **int32** |  | 
-**FavoriteCount** | **int32** |  | 
 **BlacklistUsers** | **bool** |  | 
 **DescriptionCollapsedInitially** | **bool** |  | 
 **HideComments** | **bool** |  | 
@@ -72,7 +71,7 @@ Name | Type | Description | Notes
 
 ### NewGetUser200Response
 
-`func NewGetUser200Response(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, artistVersionCount int32, commentCount int32, flagCount int32, forumPostCount int32, negativeFeedbackCount int32, neutralFeedbackCount int32, poolVersionCount int32, positiveFeedbackCount int32, profileAbout string, profileArtinfo string, uploadLimit int32, wikiPageVersionCount int32, favoriteCount int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *GetUser200Response`
+`func NewGetUser200Response(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, wikiPageVersionCount int32, artistVersionCount int32, poolVersionCount int32, forumPostCount int32, commentCount int32, flagCount int32, favoriteCount int32, positiveFeedbackCount int32, neutralFeedbackCount int32, negativeFeedbackCount int32, uploadLimit int32, profileAbout string, profileArtinfo string, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *GetUser200Response`
 
 NewGetUser200Response instantiates a new GetUser200Response object
 This constructor will assign default values to properties that have it defined,
@@ -347,6 +346,26 @@ and a boolean to check if the value has been set.
 SetAvatarId sets AvatarId field to given value.
 
 
+### GetWikiPageVersionCount
+
+`func (o *GetUser200Response) GetWikiPageVersionCount() int32`
+
+GetWikiPageVersionCount returns the WikiPageVersionCount field if non-nil, zero value otherwise.
+
+### GetWikiPageVersionCountOk
+
+`func (o *GetUser200Response) GetWikiPageVersionCountOk() (*int32, bool)`
+
+GetWikiPageVersionCountOk returns a tuple with the WikiPageVersionCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWikiPageVersionCount
+
+`func (o *GetUser200Response) SetWikiPageVersionCount(v int32)`
+
+SetWikiPageVersionCount sets WikiPageVersionCount field to given value.
+
+
 ### GetArtistVersionCount
 
 `func (o *GetUser200Response) GetArtistVersionCount() int32`
@@ -365,131 +384,6 @@ and a boolean to check if the value has been set.
 `func (o *GetUser200Response) SetArtistVersionCount(v int32)`
 
 SetArtistVersionCount sets ArtistVersionCount field to given value.
-
-
-### GetCommentCount
-
-`func (o *GetUser200Response) GetCommentCount() int32`
-
-GetCommentCount returns the CommentCount field if non-nil, zero value otherwise.
-
-### GetCommentCountOk
-
-`func (o *GetUser200Response) GetCommentCountOk() (*int32, bool)`
-
-GetCommentCountOk returns a tuple with the CommentCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCommentCount
-
-`func (o *GetUser200Response) SetCommentCount(v int32)`
-
-SetCommentCount sets CommentCount field to given value.
-
-
-### GetFavoritesCount
-
-`func (o *GetUser200Response) GetFavoritesCount() int32`
-
-GetFavoritesCount returns the FavoritesCount field if non-nil, zero value otherwise.
-
-### GetFavoritesCountOk
-
-`func (o *GetUser200Response) GetFavoritesCountOk() (*int32, bool)`
-
-GetFavoritesCountOk returns a tuple with the FavoritesCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFavoritesCount
-
-`func (o *GetUser200Response) SetFavoritesCount(v int32)`
-
-SetFavoritesCount sets FavoritesCount field to given value.
-
-### HasFavoritesCount
-
-`func (o *GetUser200Response) HasFavoritesCount() bool`
-
-HasFavoritesCount returns a boolean if a field has been set.
-
-### GetFlagCount
-
-`func (o *GetUser200Response) GetFlagCount() int32`
-
-GetFlagCount returns the FlagCount field if non-nil, zero value otherwise.
-
-### GetFlagCountOk
-
-`func (o *GetUser200Response) GetFlagCountOk() (*int32, bool)`
-
-GetFlagCountOk returns a tuple with the FlagCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlagCount
-
-`func (o *GetUser200Response) SetFlagCount(v int32)`
-
-SetFlagCount sets FlagCount field to given value.
-
-
-### GetForumPostCount
-
-`func (o *GetUser200Response) GetForumPostCount() int32`
-
-GetForumPostCount returns the ForumPostCount field if non-nil, zero value otherwise.
-
-### GetForumPostCountOk
-
-`func (o *GetUser200Response) GetForumPostCountOk() (*int32, bool)`
-
-GetForumPostCountOk returns a tuple with the ForumPostCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetForumPostCount
-
-`func (o *GetUser200Response) SetForumPostCount(v int32)`
-
-SetForumPostCount sets ForumPostCount field to given value.
-
-
-### GetNegativeFeedbackCount
-
-`func (o *GetUser200Response) GetNegativeFeedbackCount() int32`
-
-GetNegativeFeedbackCount returns the NegativeFeedbackCount field if non-nil, zero value otherwise.
-
-### GetNegativeFeedbackCountOk
-
-`func (o *GetUser200Response) GetNegativeFeedbackCountOk() (*int32, bool)`
-
-GetNegativeFeedbackCountOk returns a tuple with the NegativeFeedbackCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNegativeFeedbackCount
-
-`func (o *GetUser200Response) SetNegativeFeedbackCount(v int32)`
-
-SetNegativeFeedbackCount sets NegativeFeedbackCount field to given value.
-
-
-### GetNeutralFeedbackCount
-
-`func (o *GetUser200Response) GetNeutralFeedbackCount() int32`
-
-GetNeutralFeedbackCount returns the NeutralFeedbackCount field if non-nil, zero value otherwise.
-
-### GetNeutralFeedbackCountOk
-
-`func (o *GetUser200Response) GetNeutralFeedbackCountOk() (*int32, bool)`
-
-GetNeutralFeedbackCountOk returns a tuple with the NeutralFeedbackCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNeutralFeedbackCount
-
-`func (o *GetUser200Response) SetNeutralFeedbackCount(v int32)`
-
-SetNeutralFeedbackCount sets NeutralFeedbackCount field to given value.
 
 
 ### GetPoolVersionCount
@@ -512,6 +406,86 @@ and a boolean to check if the value has been set.
 SetPoolVersionCount sets PoolVersionCount field to given value.
 
 
+### GetForumPostCount
+
+`func (o *GetUser200Response) GetForumPostCount() int32`
+
+GetForumPostCount returns the ForumPostCount field if non-nil, zero value otherwise.
+
+### GetForumPostCountOk
+
+`func (o *GetUser200Response) GetForumPostCountOk() (*int32, bool)`
+
+GetForumPostCountOk returns a tuple with the ForumPostCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetForumPostCount
+
+`func (o *GetUser200Response) SetForumPostCount(v int32)`
+
+SetForumPostCount sets ForumPostCount field to given value.
+
+
+### GetCommentCount
+
+`func (o *GetUser200Response) GetCommentCount() int32`
+
+GetCommentCount returns the CommentCount field if non-nil, zero value otherwise.
+
+### GetCommentCountOk
+
+`func (o *GetUser200Response) GetCommentCountOk() (*int32, bool)`
+
+GetCommentCountOk returns a tuple with the CommentCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCommentCount
+
+`func (o *GetUser200Response) SetCommentCount(v int32)`
+
+SetCommentCount sets CommentCount field to given value.
+
+
+### GetFlagCount
+
+`func (o *GetUser200Response) GetFlagCount() int32`
+
+GetFlagCount returns the FlagCount field if non-nil, zero value otherwise.
+
+### GetFlagCountOk
+
+`func (o *GetUser200Response) GetFlagCountOk() (*int32, bool)`
+
+GetFlagCountOk returns a tuple with the FlagCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlagCount
+
+`func (o *GetUser200Response) SetFlagCount(v int32)`
+
+SetFlagCount sets FlagCount field to given value.
+
+
+### GetFavoriteCount
+
+`func (o *GetUser200Response) GetFavoriteCount() int32`
+
+GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
+
+### GetFavoriteCountOk
+
+`func (o *GetUser200Response) GetFavoriteCountOk() (*int32, bool)`
+
+GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFavoriteCount
+
+`func (o *GetUser200Response) SetFavoriteCount(v int32)`
+
+SetFavoriteCount sets FavoriteCount field to given value.
+
+
 ### GetPositiveFeedbackCount
 
 `func (o *GetUser200Response) GetPositiveFeedbackCount() int32`
@@ -530,6 +504,66 @@ and a boolean to check if the value has been set.
 `func (o *GetUser200Response) SetPositiveFeedbackCount(v int32)`
 
 SetPositiveFeedbackCount sets PositiveFeedbackCount field to given value.
+
+
+### GetNeutralFeedbackCount
+
+`func (o *GetUser200Response) GetNeutralFeedbackCount() int32`
+
+GetNeutralFeedbackCount returns the NeutralFeedbackCount field if non-nil, zero value otherwise.
+
+### GetNeutralFeedbackCountOk
+
+`func (o *GetUser200Response) GetNeutralFeedbackCountOk() (*int32, bool)`
+
+GetNeutralFeedbackCountOk returns a tuple with the NeutralFeedbackCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeutralFeedbackCount
+
+`func (o *GetUser200Response) SetNeutralFeedbackCount(v int32)`
+
+SetNeutralFeedbackCount sets NeutralFeedbackCount field to given value.
+
+
+### GetNegativeFeedbackCount
+
+`func (o *GetUser200Response) GetNegativeFeedbackCount() int32`
+
+GetNegativeFeedbackCount returns the NegativeFeedbackCount field if non-nil, zero value otherwise.
+
+### GetNegativeFeedbackCountOk
+
+`func (o *GetUser200Response) GetNegativeFeedbackCountOk() (*int32, bool)`
+
+GetNegativeFeedbackCountOk returns a tuple with the NegativeFeedbackCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNegativeFeedbackCount
+
+`func (o *GetUser200Response) SetNegativeFeedbackCount(v int32)`
+
+SetNegativeFeedbackCount sets NegativeFeedbackCount field to given value.
+
+
+### GetUploadLimit
+
+`func (o *GetUser200Response) GetUploadLimit() int32`
+
+GetUploadLimit returns the UploadLimit field if non-nil, zero value otherwise.
+
+### GetUploadLimitOk
+
+`func (o *GetUser200Response) GetUploadLimitOk() (*int32, bool)`
+
+GetUploadLimitOk returns a tuple with the UploadLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadLimit
+
+`func (o *GetUser200Response) SetUploadLimit(v int32)`
+
+SetUploadLimit sets UploadLimit field to given value.
 
 
 ### GetProfileAbout
@@ -570,66 +604,6 @@ and a boolean to check if the value has been set.
 `func (o *GetUser200Response) SetProfileArtinfo(v string)`
 
 SetProfileArtinfo sets ProfileArtinfo field to given value.
-
-
-### GetUploadLimit
-
-`func (o *GetUser200Response) GetUploadLimit() int32`
-
-GetUploadLimit returns the UploadLimit field if non-nil, zero value otherwise.
-
-### GetUploadLimitOk
-
-`func (o *GetUser200Response) GetUploadLimitOk() (*int32, bool)`
-
-GetUploadLimitOk returns a tuple with the UploadLimit field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadLimit
-
-`func (o *GetUser200Response) SetUploadLimit(v int32)`
-
-SetUploadLimit sets UploadLimit field to given value.
-
-
-### GetWikiPageVersionCount
-
-`func (o *GetUser200Response) GetWikiPageVersionCount() int32`
-
-GetWikiPageVersionCount returns the WikiPageVersionCount field if non-nil, zero value otherwise.
-
-### GetWikiPageVersionCountOk
-
-`func (o *GetUser200Response) GetWikiPageVersionCountOk() (*int32, bool)`
-
-GetWikiPageVersionCountOk returns a tuple with the WikiPageVersionCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWikiPageVersionCount
-
-`func (o *GetUser200Response) SetWikiPageVersionCount(v int32)`
-
-SetWikiPageVersionCount sets WikiPageVersionCount field to given value.
-
-
-### GetFavoriteCount
-
-`func (o *GetUser200Response) GetFavoriteCount() int32`
-
-GetFavoriteCount returns the FavoriteCount field if non-nil, zero value otherwise.
-
-### GetFavoriteCountOk
-
-`func (o *GetUser200Response) GetFavoriteCountOk() (*int32, bool)`
-
-GetFavoriteCountOk returns a tuple with the FavoriteCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFavoriteCount
-
-`func (o *GetUser200Response) SetFavoriteCount(v int32)`
-
-SetFavoriteCount sets FavoriteCount field to given value.
 
 
 ### GetBlacklistUsers

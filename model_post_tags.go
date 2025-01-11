@@ -21,14 +21,15 @@ var _ MappedNullable = &PostTags{}
 
 // PostTags struct for PostTags
 type PostTags struct {
-	General   []string `json:"general"`
-	Artist    []string `json:"artist"`
-	Copyright []string `json:"copyright"`
-	Character []string `json:"character"`
-	Species   []string `json:"species"`
-	Invalid   []string `json:"invalid"`
-	Meta      []string `json:"meta"`
-	Lore      []string `json:"lore"`
+	General     []string `json:"general"`
+	Artist      []string `json:"artist"`
+	Copyright   []string `json:"copyright"`
+	Character   []string `json:"character"`
+	Species     []string `json:"species"`
+	Invalid     []string `json:"invalid"`
+	Meta        []string `json:"meta"`
+	Lore        []string `json:"lore"`
+	Contributor []string `json:"contributor"`
 }
 
 type _PostTags PostTags
@@ -37,7 +38,7 @@ type _PostTags PostTags
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPostTags(general []string, artist []string, copyright []string, character []string, species []string, invalid []string, meta []string, lore []string) *PostTags {
+func NewPostTags(general []string, artist []string, copyright []string, character []string, species []string, invalid []string, meta []string, lore []string, contributor []string) *PostTags {
 	this := PostTags{}
 	this.General = general
 	this.Artist = artist
@@ -47,6 +48,7 @@ func NewPostTags(general []string, artist []string, copyright []string, characte
 	this.Invalid = invalid
 	this.Meta = meta
 	this.Lore = lore
+	this.Contributor = contributor
 	return &this
 }
 
@@ -250,6 +252,30 @@ func (o *PostTags) SetLore(v []string) {
 	o.Lore = v
 }
 
+// GetContributor returns the Contributor field value
+func (o *PostTags) GetContributor() []string {
+	if o == nil {
+		var ret []string
+		return ret
+	}
+
+	return o.Contributor
+}
+
+// GetContributorOk returns a tuple with the Contributor field value
+// and a boolean to check if the value has been set.
+func (o *PostTags) GetContributorOk() ([]string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Contributor, true
+}
+
+// SetContributor sets field value
+func (o *PostTags) SetContributor(v []string) {
+	o.Contributor = v
+}
+
 func (o PostTags) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -268,6 +294,7 @@ func (o PostTags) ToMap() (map[string]interface{}, error) {
 	toSerialize["invalid"] = o.Invalid
 	toSerialize["meta"] = o.Meta
 	toSerialize["lore"] = o.Lore
+	toSerialize["contributor"] = o.Contributor
 	return toSerialize, nil
 }
 
@@ -284,6 +311,7 @@ func (o *PostTags) UnmarshalJSON(data []byte) (err error) {
 		"invalid",
 		"meta",
 		"lore",
+		"contributor",
 	}
 
 	allProperties := make(map[string]interface{})
