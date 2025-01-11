@@ -36,18 +36,18 @@ Name | Type | Description | Notes
 **ReplacementsBeta** | **bool** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Email** | **string** |  | 
-**LastLoggedInAt** | **time.Time** |  | 
-**LastForumReadAt** | **time.Time** |  | 
+**LastLoggedInAt** | **string** |  | 
+**LastForumReadAt** | **string** |  | 
 **RecentTags** | **string** |  | 
-**CommentThreshold** | **float32** |  | 
-**DefaultImageSizedefaultImageSize** | Pointer to **string** |  | [optional] 
+**CommentThreshold** | **int32** |  | 
+**DefaultImageSize** | **string** |  | 
 **FavoriteTags** | **string** |  | 
 **BlacklistedTags** | **string** |  | 
 **TimeZone** | **string** |  | 
 **PerPage** | **int32** |  | 
 **CustomStyle** | **string** |  | 
 **FavoriteCount** | **int32** |  | 
-**ApiRegenMultiplier** | **float32** |  | 
+**ApiRegenMultiplier** | **int32** |  | 
 **ApiBurstLimit** | **int32** |  | 
 **RemainingApiLimit** | **int32** |  | 
 **StatementTimeout** | **int32** |  | 
@@ -71,7 +71,7 @@ Name | Type | Description | Notes
 
 ### NewFullCurrentUser
 
-`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, wikiPageVersionCount int32, artistVersionCount int32, poolVersionCount int32, forumPostCount int32, commentCount int32, flagCount int32, positiveFeedbackCount int32, neutralFeedbackCount int32, negativeFeedbackCount int32, uploadLimit int32, profileAbout string, profileArtinfo string, ) *FullCurrentUser`
+`func NewFullCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt string, lastForumReadAt string, recentTags string, commentThreshold int32, defaultImageSize string, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier int32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, wikiPageVersionCount int32, artistVersionCount int32, poolVersionCount int32, forumPostCount int32, commentCount int32, flagCount int32, positiveFeedbackCount int32, neutralFeedbackCount int32, negativeFeedbackCount int32, uploadLimit int32, profileAbout string, profileArtinfo string, ) *FullCurrentUser`
 
 NewFullCurrentUser instantiates a new FullCurrentUser object
 This constructor will assign default values to properties that have it defined,
@@ -728,40 +728,40 @@ SetEmail sets Email field to given value.
 
 ### GetLastLoggedInAt
 
-`func (o *FullCurrentUser) GetLastLoggedInAt() time.Time`
+`func (o *FullCurrentUser) GetLastLoggedInAt() string`
 
 GetLastLoggedInAt returns the LastLoggedInAt field if non-nil, zero value otherwise.
 
 ### GetLastLoggedInAtOk
 
-`func (o *FullCurrentUser) GetLastLoggedInAtOk() (*time.Time, bool)`
+`func (o *FullCurrentUser) GetLastLoggedInAtOk() (*string, bool)`
 
 GetLastLoggedInAtOk returns a tuple with the LastLoggedInAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastLoggedInAt
 
-`func (o *FullCurrentUser) SetLastLoggedInAt(v time.Time)`
+`func (o *FullCurrentUser) SetLastLoggedInAt(v string)`
 
 SetLastLoggedInAt sets LastLoggedInAt field to given value.
 
 
 ### GetLastForumReadAt
 
-`func (o *FullCurrentUser) GetLastForumReadAt() time.Time`
+`func (o *FullCurrentUser) GetLastForumReadAt() string`
 
 GetLastForumReadAt returns the LastForumReadAt field if non-nil, zero value otherwise.
 
 ### GetLastForumReadAtOk
 
-`func (o *FullCurrentUser) GetLastForumReadAtOk() (*time.Time, bool)`
+`func (o *FullCurrentUser) GetLastForumReadAtOk() (*string, bool)`
 
 GetLastForumReadAtOk returns a tuple with the LastForumReadAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastForumReadAt
 
-`func (o *FullCurrentUser) SetLastForumReadAt(v time.Time)`
+`func (o *FullCurrentUser) SetLastForumReadAt(v string)`
 
 SetLastForumReadAt sets LastForumReadAt field to given value.
 
@@ -788,48 +788,43 @@ SetRecentTags sets RecentTags field to given value.
 
 ### GetCommentThreshold
 
-`func (o *FullCurrentUser) GetCommentThreshold() float32`
+`func (o *FullCurrentUser) GetCommentThreshold() int32`
 
 GetCommentThreshold returns the CommentThreshold field if non-nil, zero value otherwise.
 
 ### GetCommentThresholdOk
 
-`func (o *FullCurrentUser) GetCommentThresholdOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetCommentThresholdOk() (*int32, bool)`
 
 GetCommentThresholdOk returns a tuple with the CommentThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommentThreshold
 
-`func (o *FullCurrentUser) SetCommentThreshold(v float32)`
+`func (o *FullCurrentUser) SetCommentThreshold(v int32)`
 
 SetCommentThreshold sets CommentThreshold field to given value.
 
 
-### GetDefaultImageSizedefaultImageSize
+### GetDefaultImageSize
 
-`func (o *FullCurrentUser) GetDefaultImageSizedefaultImageSize() string`
+`func (o *FullCurrentUser) GetDefaultImageSize() string`
 
-GetDefaultImageSizedefaultImageSize returns the DefaultImageSizedefaultImageSize field if non-nil, zero value otherwise.
+GetDefaultImageSize returns the DefaultImageSize field if non-nil, zero value otherwise.
 
-### GetDefaultImageSizedefaultImageSizeOk
+### GetDefaultImageSizeOk
 
-`func (o *FullCurrentUser) GetDefaultImageSizedefaultImageSizeOk() (*string, bool)`
+`func (o *FullCurrentUser) GetDefaultImageSizeOk() (*string, bool)`
 
-GetDefaultImageSizedefaultImageSizeOk returns a tuple with the DefaultImageSizedefaultImageSize field if it's non-nil, zero value otherwise
+GetDefaultImageSizeOk returns a tuple with the DefaultImageSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultImageSizedefaultImageSize
+### SetDefaultImageSize
 
-`func (o *FullCurrentUser) SetDefaultImageSizedefaultImageSize(v string)`
+`func (o *FullCurrentUser) SetDefaultImageSize(v string)`
 
-SetDefaultImageSizedefaultImageSize sets DefaultImageSizedefaultImageSize field to given value.
+SetDefaultImageSize sets DefaultImageSize field to given value.
 
-### HasDefaultImageSizedefaultImageSize
-
-`func (o *FullCurrentUser) HasDefaultImageSizedefaultImageSize() bool`
-
-HasDefaultImageSizedefaultImageSize returns a boolean if a field has been set.
 
 ### GetFavoriteTags
 
@@ -953,20 +948,20 @@ SetFavoriteCount sets FavoriteCount field to given value.
 
 ### GetApiRegenMultiplier
 
-`func (o *FullCurrentUser) GetApiRegenMultiplier() float32`
+`func (o *FullCurrentUser) GetApiRegenMultiplier() int32`
 
 GetApiRegenMultiplier returns the ApiRegenMultiplier field if non-nil, zero value otherwise.
 
 ### GetApiRegenMultiplierOk
 
-`func (o *FullCurrentUser) GetApiRegenMultiplierOk() (*float32, bool)`
+`func (o *FullCurrentUser) GetApiRegenMultiplierOk() (*int32, bool)`
 
 GetApiRegenMultiplierOk returns a tuple with the ApiRegenMultiplier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApiRegenMultiplier
 
-`func (o *FullCurrentUser) SetApiRegenMultiplier(v float32)`
+`func (o *FullCurrentUser) SetApiRegenMultiplier(v int32)`
 
 SetApiRegenMultiplier sets ApiRegenMultiplier field to given value.
 

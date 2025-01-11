@@ -22,56 +22,56 @@ var _ MappedNullable = &CurrentUser{}
 
 // CurrentUser struct for CurrentUser
 type CurrentUser struct {
-	Id                               int32     `json:"id"`
-	CreatedAt                        time.Time `json:"created_at"`
-	Name                             string    `json:"name"`
-	Level                            int32     `json:"level"`
-	BaseUploadLimit                  int32     `json:"base_upload_limit"`
-	PostUploadCount                  int32     `json:"post_upload_count"`
-	PostUpdateCount                  int32     `json:"post_update_count"`
-	NoteUpdateCount                  int32     `json:"note_update_count"`
-	IsBanned                         bool      `json:"is_banned"`
-	CanApprovePosts                  bool      `json:"can_approve_posts"`
-	CanUploadFree                    bool      `json:"can_upload_free"`
-	LevelString                      string    `json:"level_string"`
-	AvatarId                         int32     `json:"avatar_id"`
-	BlacklistUsers                   bool      `json:"blacklist_users"`
-	DescriptionCollapsedInitially    bool      `json:"description_collapsed_initially"`
-	HideComments                     bool      `json:"hide_comments"`
-	ShowHiddenComments               bool      `json:"show_hidden_comments"`
-	ShowPostStatistics               bool      `json:"show_post_statistics"`
-	ReceiveEmailNotifications        bool      `json:"receive_email_notifications"`
-	EnableKeyboardNavigation         bool      `json:"enable_keyboard_navigation"`
-	EnablePrivacyMode                bool      `json:"enable_privacy_mode"`
-	StyleUsernames                   bool      `json:"style_usernames"`
-	EnableAutoComplete               bool      `json:"enable_auto_complete"`
-	DisableCroppedThumbnails         bool      `json:"disable_cropped_thumbnails"`
-	EnableSafeMode                   bool      `json:"enable_safe_mode"`
-	DisableResponsiveMode            bool      `json:"disable_responsive_mode"`
-	NoFlagging                       bool      `json:"no_flagging"`
-	DisableUserDmails                bool      `json:"disable_user_dmails"`
-	EnableCompactUploader            bool      `json:"enable_compact_uploader"`
-	ReplacementsBeta                 bool      `json:"replacements_beta"`
-	UpdatedAt                        time.Time `json:"updated_at"`
-	Email                            string    `json:"email"`
-	LastLoggedInAt                   time.Time `json:"last_logged_in_at"`
-	LastForumReadAt                  time.Time `json:"last_forum_read_at"`
-	RecentTags                       string    `json:"recent_tags"`
-	CommentThreshold                 float32   `json:"comment_threshold"`
-	DefaultImageSizedefaultImageSize *string   `json:"default_image_sizedefault_image_size,omitempty"`
-	FavoriteTags                     string    `json:"favorite_tags"`
-	BlacklistedTags                  string    `json:"blacklisted_tags"`
-	TimeZone                         string    `json:"time_zone"`
-	PerPage                          int32     `json:"per_page"`
-	CustomStyle                      string    `json:"custom_style"`
-	FavoriteCount                    int32     `json:"favorite_count"`
-	ApiRegenMultiplier               float32   `json:"api_regen_multiplier"`
-	ApiBurstLimit                    int32     `json:"api_burst_limit"`
-	RemainingApiLimit                int32     `json:"remaining_api_limit"`
-	StatementTimeout                 int32     `json:"statement_timeout"`
-	FavoriteLimit                    int32     `json:"favorite_limit"`
-	TagQueryLimit                    int32     `json:"tag_query_limit"`
-	HasMail                          bool      `json:"has_mail"`
+	Id                            int32     `json:"id"`
+	CreatedAt                     time.Time `json:"created_at"`
+	Name                          string    `json:"name"`
+	Level                         int32     `json:"level"`
+	BaseUploadLimit               int32     `json:"base_upload_limit"`
+	PostUploadCount               int32     `json:"post_upload_count"`
+	PostUpdateCount               int32     `json:"post_update_count"`
+	NoteUpdateCount               int32     `json:"note_update_count"`
+	IsBanned                      bool      `json:"is_banned"`
+	CanApprovePosts               bool      `json:"can_approve_posts"`
+	CanUploadFree                 bool      `json:"can_upload_free"`
+	LevelString                   string    `json:"level_string"`
+	AvatarId                      int32     `json:"avatar_id"`
+	BlacklistUsers                bool      `json:"blacklist_users"`
+	DescriptionCollapsedInitially bool      `json:"description_collapsed_initially"`
+	HideComments                  bool      `json:"hide_comments"`
+	ShowHiddenComments            bool      `json:"show_hidden_comments"`
+	ShowPostStatistics            bool      `json:"show_post_statistics"`
+	ReceiveEmailNotifications     bool      `json:"receive_email_notifications"`
+	EnableKeyboardNavigation      bool      `json:"enable_keyboard_navigation"`
+	EnablePrivacyMode             bool      `json:"enable_privacy_mode"`
+	StyleUsernames                bool      `json:"style_usernames"`
+	EnableAutoComplete            bool      `json:"enable_auto_complete"`
+	DisableCroppedThumbnails      bool      `json:"disable_cropped_thumbnails"`
+	EnableSafeMode                bool      `json:"enable_safe_mode"`
+	DisableResponsiveMode         bool      `json:"disable_responsive_mode"`
+	NoFlagging                    bool      `json:"no_flagging"`
+	DisableUserDmails             bool      `json:"disable_user_dmails"`
+	EnableCompactUploader         bool      `json:"enable_compact_uploader"`
+	ReplacementsBeta              bool      `json:"replacements_beta"`
+	UpdatedAt                     time.Time `json:"updated_at"`
+	Email                         string    `json:"email"`
+	LastLoggedInAt                string    `json:"last_logged_in_at"`
+	LastForumReadAt               string    `json:"last_forum_read_at"`
+	RecentTags                    string    `json:"recent_tags"`
+	CommentThreshold              int32     `json:"comment_threshold"`
+	DefaultImageSize              string    `json:"default_image_size"`
+	FavoriteTags                  string    `json:"favorite_tags"`
+	BlacklistedTags               string    `json:"blacklisted_tags"`
+	TimeZone                      string    `json:"time_zone"`
+	PerPage                       int32     `json:"per_page"`
+	CustomStyle                   string    `json:"custom_style"`
+	FavoriteCount                 int32     `json:"favorite_count"`
+	ApiRegenMultiplier            int32     `json:"api_regen_multiplier"`
+	ApiBurstLimit                 int32     `json:"api_burst_limit"`
+	RemainingApiLimit             int32     `json:"remaining_api_limit"`
+	StatementTimeout              int32     `json:"statement_timeout"`
+	FavoriteLimit                 int32     `json:"favorite_limit"`
+	TagQueryLimit                 int32     `json:"tag_query_limit"`
+	HasMail                       bool      `json:"has_mail"`
 }
 
 type _CurrentUser CurrentUser
@@ -80,7 +80,7 @@ type _CurrentUser CurrentUser
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *CurrentUser {
+func NewCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt string, lastForumReadAt string, recentTags string, commentThreshold int32, defaultImageSize string, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier int32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool) *CurrentUser {
 	this := CurrentUser{}
 	this.Id = id
 	this.CreatedAt = createdAt
@@ -118,6 +118,7 @@ func NewCurrentUser(id int32, createdAt time.Time, name string, level int32, bas
 	this.LastForumReadAt = lastForumReadAt
 	this.RecentTags = recentTags
 	this.CommentThreshold = commentThreshold
+	this.DefaultImageSize = defaultImageSize
 	this.FavoriteTags = favoriteTags
 	this.BlacklistedTags = blacklistedTags
 	this.TimeZone = timeZone
@@ -911,9 +912,9 @@ func (o *CurrentUser) SetEmail(v string) {
 }
 
 // GetLastLoggedInAt returns the LastLoggedInAt field value
-func (o *CurrentUser) GetLastLoggedInAt() time.Time {
+func (o *CurrentUser) GetLastLoggedInAt() string {
 	if o == nil {
-		var ret time.Time
+		var ret string
 		return ret
 	}
 
@@ -922,7 +923,7 @@ func (o *CurrentUser) GetLastLoggedInAt() time.Time {
 
 // GetLastLoggedInAtOk returns a tuple with the LastLoggedInAt field value
 // and a boolean to check if the value has been set.
-func (o *CurrentUser) GetLastLoggedInAtOk() (*time.Time, bool) {
+func (o *CurrentUser) GetLastLoggedInAtOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -930,14 +931,14 @@ func (o *CurrentUser) GetLastLoggedInAtOk() (*time.Time, bool) {
 }
 
 // SetLastLoggedInAt sets field value
-func (o *CurrentUser) SetLastLoggedInAt(v time.Time) {
+func (o *CurrentUser) SetLastLoggedInAt(v string) {
 	o.LastLoggedInAt = v
 }
 
 // GetLastForumReadAt returns the LastForumReadAt field value
-func (o *CurrentUser) GetLastForumReadAt() time.Time {
+func (o *CurrentUser) GetLastForumReadAt() string {
 	if o == nil {
-		var ret time.Time
+		var ret string
 		return ret
 	}
 
@@ -946,7 +947,7 @@ func (o *CurrentUser) GetLastForumReadAt() time.Time {
 
 // GetLastForumReadAtOk returns a tuple with the LastForumReadAt field value
 // and a boolean to check if the value has been set.
-func (o *CurrentUser) GetLastForumReadAtOk() (*time.Time, bool) {
+func (o *CurrentUser) GetLastForumReadAtOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -954,7 +955,7 @@ func (o *CurrentUser) GetLastForumReadAtOk() (*time.Time, bool) {
 }
 
 // SetLastForumReadAt sets field value
-func (o *CurrentUser) SetLastForumReadAt(v time.Time) {
+func (o *CurrentUser) SetLastForumReadAt(v string) {
 	o.LastForumReadAt = v
 }
 
@@ -983,9 +984,9 @@ func (o *CurrentUser) SetRecentTags(v string) {
 }
 
 // GetCommentThreshold returns the CommentThreshold field value
-func (o *CurrentUser) GetCommentThreshold() float32 {
+func (o *CurrentUser) GetCommentThreshold() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -994,7 +995,7 @@ func (o *CurrentUser) GetCommentThreshold() float32 {
 
 // GetCommentThresholdOk returns a tuple with the CommentThreshold field value
 // and a boolean to check if the value has been set.
-func (o *CurrentUser) GetCommentThresholdOk() (*float32, bool) {
+func (o *CurrentUser) GetCommentThresholdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1002,40 +1003,32 @@ func (o *CurrentUser) GetCommentThresholdOk() (*float32, bool) {
 }
 
 // SetCommentThreshold sets field value
-func (o *CurrentUser) SetCommentThreshold(v float32) {
+func (o *CurrentUser) SetCommentThreshold(v int32) {
 	o.CommentThreshold = v
 }
 
-// GetDefaultImageSizedefaultImageSize returns the DefaultImageSizedefaultImageSize field value if set, zero value otherwise.
-func (o *CurrentUser) GetDefaultImageSizedefaultImageSize() string {
-	if o == nil || IsNil(o.DefaultImageSizedefaultImageSize) {
+// GetDefaultImageSize returns the DefaultImageSize field value
+func (o *CurrentUser) GetDefaultImageSize() string {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.DefaultImageSizedefaultImageSize
+
+	return o.DefaultImageSize
 }
 
-// GetDefaultImageSizedefaultImageSizeOk returns a tuple with the DefaultImageSizedefaultImageSize field value if set, nil otherwise
+// GetDefaultImageSizeOk returns a tuple with the DefaultImageSize field value
 // and a boolean to check if the value has been set.
-func (o *CurrentUser) GetDefaultImageSizedefaultImageSizeOk() (*string, bool) {
-	if o == nil || IsNil(o.DefaultImageSizedefaultImageSize) {
+func (o *CurrentUser) GetDefaultImageSizeOk() (*string, bool) {
+	if o == nil {
 		return nil, false
 	}
-	return o.DefaultImageSizedefaultImageSize, true
+	return &o.DefaultImageSize, true
 }
 
-// HasDefaultImageSizedefaultImageSize returns a boolean if a field has been set.
-func (o *CurrentUser) HasDefaultImageSizedefaultImageSize() bool {
-	if o != nil && !IsNil(o.DefaultImageSizedefaultImageSize) {
-		return true
-	}
-
-	return false
-}
-
-// SetDefaultImageSizedefaultImageSize gets a reference to the given string and assigns it to the DefaultImageSizedefaultImageSize field.
-func (o *CurrentUser) SetDefaultImageSizedefaultImageSize(v string) {
-	o.DefaultImageSizedefaultImageSize = &v
+// SetDefaultImageSize sets field value
+func (o *CurrentUser) SetDefaultImageSize(v string) {
+	o.DefaultImageSize = v
 }
 
 // GetFavoriteTags returns the FavoriteTags field value
@@ -1183,9 +1176,9 @@ func (o *CurrentUser) SetFavoriteCount(v int32) {
 }
 
 // GetApiRegenMultiplier returns the ApiRegenMultiplier field value
-func (o *CurrentUser) GetApiRegenMultiplier() float32 {
+func (o *CurrentUser) GetApiRegenMultiplier() int32 {
 	if o == nil {
-		var ret float32
+		var ret int32
 		return ret
 	}
 
@@ -1194,7 +1187,7 @@ func (o *CurrentUser) GetApiRegenMultiplier() float32 {
 
 // GetApiRegenMultiplierOk returns a tuple with the ApiRegenMultiplier field value
 // and a boolean to check if the value has been set.
-func (o *CurrentUser) GetApiRegenMultiplierOk() (*float32, bool) {
+func (o *CurrentUser) GetApiRegenMultiplierOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1202,7 +1195,7 @@ func (o *CurrentUser) GetApiRegenMultiplierOk() (*float32, bool) {
 }
 
 // SetApiRegenMultiplier sets field value
-func (o *CurrentUser) SetApiRegenMultiplier(v float32) {
+func (o *CurrentUser) SetApiRegenMultiplier(v int32) {
 	o.ApiRegenMultiplier = v
 }
 
@@ -1396,9 +1389,7 @@ func (o CurrentUser) ToMap() (map[string]interface{}, error) {
 	toSerialize["last_forum_read_at"] = o.LastForumReadAt
 	toSerialize["recent_tags"] = o.RecentTags
 	toSerialize["comment_threshold"] = o.CommentThreshold
-	if !IsNil(o.DefaultImageSizedefaultImageSize) {
-		toSerialize["default_image_sizedefault_image_size"] = o.DefaultImageSizedefaultImageSize
-	}
+	toSerialize["default_image_size"] = o.DefaultImageSize
 	toSerialize["favorite_tags"] = o.FavoriteTags
 	toSerialize["blacklisted_tags"] = o.BlacklistedTags
 	toSerialize["time_zone"] = o.TimeZone
@@ -1456,6 +1447,7 @@ func (o *CurrentUser) UnmarshalJSON(data []byte) (err error) {
 		"last_forum_read_at",
 		"recent_tags",
 		"comment_threshold",
+		"default_image_size",
 		"favorite_tags",
 		"blacklisted_tags",
 		"time_zone",

@@ -57,7 +57,7 @@ func Test_openapi_TagsAPIService(t *testing.T) {
 		resp, httpRes, err := apiClient.TagsAPI.GetTag(context.Background(), id).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
+		require.NotNil(t, resgithub.com/anthrove/openapi-e621-gop)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

@@ -7,7 +7,7 @@
       <list>
         <CliArgumentViewModel>
           <option name="name" value="packageVersion" />
-          <option name="value" value="1.0.7" />
+          <option name="value" value="1.1.2" />
         </CliArgumentViewModel>
         <CliArgumentViewModel>
           <option name="name" value="enumClassPrefix" />
