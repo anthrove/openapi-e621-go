@@ -36,18 +36,18 @@ Name | Type | Description | Notes
 **ReplacementsBeta** | **bool** |  | 
 **UpdatedAt** | **time.Time** |  | 
 **Email** | **string** |  | 
-**LastLoggedInAt** | **time.Time** |  | 
-**LastForumReadAt** | **time.Time** |  | 
+**LastLoggedInAt** | **string** |  | 
+**LastForumReadAt** | **string** |  | 
 **RecentTags** | **string** |  | 
-**CommentThreshold** | **float32** |  | 
-**DefaultImageSizedefaultImageSize** | Pointer to **string** |  | [optional] 
+**CommentThreshold** | **int32** |  | 
+**DefaultImageSize** | **string** |  | 
 **FavoriteTags** | **string** |  | 
 **BlacklistedTags** | **string** |  | 
 **TimeZone** | **string** |  | 
 **PerPage** | **int32** |  | 
 **CustomStyle** | **string** |  | 
 **FavoriteCount** | **int32** |  | 
-**ApiRegenMultiplier** | **float32** |  | 
+**ApiRegenMultiplier** | **int32** |  | 
 **ApiBurstLimit** | **int32** |  | 
 **RemainingApiLimit** | **int32** |  | 
 **StatementTimeout** | **int32** |  | 
@@ -59,7 +59,7 @@ Name | Type | Description | Notes
 
 ### NewCurrentUser
 
-`func NewCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt time.Time, lastForumReadAt time.Time, recentTags string, commentThreshold float32, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier float32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *CurrentUser`
+`func NewCurrentUser(id int32, createdAt time.Time, name string, level int32, baseUploadLimit int32, postUploadCount int32, postUpdateCount int32, noteUpdateCount int32, isBanned bool, canApprovePosts bool, canUploadFree bool, levelString string, avatarId int32, blacklistUsers bool, descriptionCollapsedInitially bool, hideComments bool, showHiddenComments bool, showPostStatistics bool, receiveEmailNotifications bool, enableKeyboardNavigation bool, enablePrivacyMode bool, styleUsernames bool, enableAutoComplete bool, disableCroppedThumbnails bool, enableSafeMode bool, disableResponsiveMode bool, noFlagging bool, disableUserDmails bool, enableCompactUploader bool, replacementsBeta bool, updatedAt time.Time, email string, lastLoggedInAt string, lastForumReadAt string, recentTags string, commentThreshold int32, defaultImageSize string, favoriteTags string, blacklistedTags string, timeZone string, perPage int32, customStyle string, favoriteCount int32, apiRegenMultiplier int32, apiBurstLimit int32, remainingApiLimit int32, statementTimeout int32, favoriteLimit int32, tagQueryLimit int32, hasMail bool, ) *CurrentUser`
 
 NewCurrentUser instantiates a new CurrentUser object
 This constructor will assign default values to properties that have it defined,
@@ -716,40 +716,40 @@ SetEmail sets Email field to given value.
 
 ### GetLastLoggedInAt
 
-`func (o *CurrentUser) GetLastLoggedInAt() time.Time`
+`func (o *CurrentUser) GetLastLoggedInAt() string`
 
 GetLastLoggedInAt returns the LastLoggedInAt field if non-nil, zero value otherwise.
 
 ### GetLastLoggedInAtOk
 
-`func (o *CurrentUser) GetLastLoggedInAtOk() (*time.Time, bool)`
+`func (o *CurrentUser) GetLastLoggedInAtOk() (*string, bool)`
 
 GetLastLoggedInAtOk returns a tuple with the LastLoggedInAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastLoggedInAt
 
-`func (o *CurrentUser) SetLastLoggedInAt(v time.Time)`
+`func (o *CurrentUser) SetLastLoggedInAt(v string)`
 
 SetLastLoggedInAt sets LastLoggedInAt field to given value.
 
 
 ### GetLastForumReadAt
 
-`func (o *CurrentUser) GetLastForumReadAt() time.Time`
+`func (o *CurrentUser) GetLastForumReadAt() string`
 
 GetLastForumReadAt returns the LastForumReadAt field if non-nil, zero value otherwise.
 
 ### GetLastForumReadAtOk
 
-`func (o *CurrentUser) GetLastForumReadAtOk() (*time.Time, bool)`
+`func (o *CurrentUser) GetLastForumReadAtOk() (*string, bool)`
 
 GetLastForumReadAtOk returns a tuple with the LastForumReadAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastForumReadAt
 
-`func (o *CurrentUser) SetLastForumReadAt(v time.Time)`
+`func (o *CurrentUser) SetLastForumReadAt(v string)`
 
 SetLastForumReadAt sets LastForumReadAt field to given value.
 
@@ -776,48 +776,43 @@ SetRecentTags sets RecentTags field to given value.
 
 ### GetCommentThreshold
 
-`func (o *CurrentUser) GetCommentThreshold() float32`
+`func (o *CurrentUser) GetCommentThreshold() int32`
 
 GetCommentThreshold returns the CommentThreshold field if non-nil, zero value otherwise.
 
 ### GetCommentThresholdOk
 
-`func (o *CurrentUser) GetCommentThresholdOk() (*float32, bool)`
+`func (o *CurrentUser) GetCommentThresholdOk() (*int32, bool)`
 
 GetCommentThresholdOk returns a tuple with the CommentThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCommentThreshold
 
-`func (o *CurrentUser) SetCommentThreshold(v float32)`
+`func (o *CurrentUser) SetCommentThreshold(v int32)`
 
 SetCommentThreshold sets CommentThreshold field to given value.
 
 
-### GetDefaultImageSizedefaultImageSize
+### GetDefaultImageSize
 
-`func (o *CurrentUser) GetDefaultImageSizedefaultImageSize() string`
+`func (o *CurrentUser) GetDefaultImageSize() string`
 
-GetDefaultImageSizedefaultImageSize returns the DefaultImageSizedefaultImageSize field if non-nil, zero value otherwise.
+GetDefaultImageSize returns the DefaultImageSize field if non-nil, zero value otherwise.
 
-### GetDefaultImageSizedefaultImageSizeOk
+### GetDefaultImageSizeOk
 
-`func (o *CurrentUser) GetDefaultImageSizedefaultImageSizeOk() (*string, bool)`
+`func (o *CurrentUser) GetDefaultImageSizeOk() (*string, bool)`
 
-GetDefaultImageSizedefaultImageSizeOk returns a tuple with the DefaultImageSizedefaultImageSize field if it's non-nil, zero value otherwise
+GetDefaultImageSizeOk returns a tuple with the DefaultImageSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultImageSizedefaultImageSize
+### SetDefaultImageSize
 
-`func (o *CurrentUser) SetDefaultImageSizedefaultImageSize(v string)`
+`func (o *CurrentUser) SetDefaultImageSize(v string)`
 
-SetDefaultImageSizedefaultImageSize sets DefaultImageSizedefaultImageSize field to given value.
+SetDefaultImageSize sets DefaultImageSize field to given value.
 
-### HasDefaultImageSizedefaultImageSize
-
-`func (o *CurrentUser) HasDefaultImageSizedefaultImageSize() bool`
-
-HasDefaultImageSizedefaultImageSize returns a boolean if a field has been set.
 
 ### GetFavoriteTags
 
@@ -941,20 +936,20 @@ SetFavoriteCount sets FavoriteCount field to given value.
 
 ### GetApiRegenMultiplier
 
-`func (o *CurrentUser) GetApiRegenMultiplier() float32`
+`func (o *CurrentUser) GetApiRegenMultiplier() int32`
 
 GetApiRegenMultiplier returns the ApiRegenMultiplier field if non-nil, zero value otherwise.
 
 ### GetApiRegenMultiplierOk
 
-`func (o *CurrentUser) GetApiRegenMultiplierOk() (*float32, bool)`
+`func (o *CurrentUser) GetApiRegenMultiplierOk() (*int32, bool)`
 
 GetApiRegenMultiplierOk returns a tuple with the ApiRegenMultiplier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApiRegenMultiplier
 
-`func (o *CurrentUser) SetApiRegenMultiplier(v float32)`
+`func (o *CurrentUser) SetApiRegenMultiplier(v int32)`
 
 SetApiRegenMultiplier sets ApiRegenMultiplier field to given value.
 
