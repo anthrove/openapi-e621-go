@@ -1,0 +1,32 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Generate Code" type="SwaggerCodegen" editBeforeRun="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <option name="allowRunningInParallel" value="false" />
+    <option name="customTemplatesPath" value="" />
+    <option name="generateToPath" value="$USER_HOME$/Anthrove/_git/openapi-e621-go" />
+    <option name="generationParameters">
+      <list>
+        <CliArgumentViewModel>
+          <option name="name" value="packageVersion" />
+          <option name="value" value="1.0.7" />
+        </CliArgumentViewModel>
+        <CliArgumentViewModel>
+          <option name="name" value="enumClassPrefix" />
+          <option name="value" value="true" />
+        </CliArgumentViewModel>
+        <CliArgumentViewModel>
+          <option name="name" value="structPrefix" />
+          <option name="value" value="true" />
+        </CliArgumentViewModel>
+      </list>
+    </option>
+    <option name="generatorType" value="OPENAPI_GENERATOR_V7" />
+    <option name="jdkPath" value="$APPLICATION_HOME_DIR$/jbr/bin/java" />
+    <option name="language" value="go" />
+    <option name="projectPathOnTarget" />
+    <option name="selectedOptions">
+      <list />
+    </option>
+    <option name="specificationPath" value="$USER_HOME$/Anthrove/_git/E621OpenAPI/openapi.yaml" />
+    <method v="2" />
+  </configuration>
+</component>

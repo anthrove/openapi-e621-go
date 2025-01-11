@@ -13,48 +13,82 @@ package openapi
 import (
 	"encoding/json"
 	"fmt"
+	"gopkg.in/validator.v2"
 )
 
-// GetUser200Response struct for GetUser200Response
+// GetUser200Response - struct for GetUser200Response
 type GetUser200Response struct {
 	FullCurrentUser *FullCurrentUser
 	FullUser        *FullUser
 }
 
-// Unmarshal JSON data into any of the pointers in the struct
+// FullCurrentUserAsGetUser200Response is a convenience function that returns FullCurrentUser wrapped in GetUser200Response
+func FullCurrentUserAsGetUser200Response(v *FullCurrentUser) GetUser200Response {
+	return GetUser200Response{
+		FullCurrentUser: v,
+	}
+}
+
+// FullUserAsGetUser200Response is a convenience function that returns FullUser wrapped in GetUser200Response
+func FullUserAsGetUser200Response(v *FullUser) GetUser200Response {
+	return GetUser200Response{
+		FullUser: v,
+	}
+}
+
+// Unmarshal JSON data into one of the pointers in the struct
 func (dst *GetUser200Response) UnmarshalJSON(data []byte) error {
 	var err error
-	// try to unmarshal JSON data into FullCurrentUser
-	err = json.Unmarshal(data, &dst.FullCurrentUser)
+	match := 0
+	// try to unmarshal data into FullCurrentUser
+	err = newStrictDecoder(data).Decode(&dst.FullCurrentUser)
 	if err == nil {
 		jsonFullCurrentUser, _ := json.Marshal(dst.FullCurrentUser)
 		if string(jsonFullCurrentUser) == "{}" { // empty struct
 			dst.FullCurrentUser = nil
 		} else {
-			return nil // data stored in dst.FullCurrentUser, return on the first match
+			if err = validator.Validate(dst.FullCurrentUser); err != nil {
+				dst.FullCurrentUser = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.FullCurrentUser = nil
 	}
 
-	// try to unmarshal JSON data into FullUser
-	err = json.Unmarshal(data, &dst.FullUser)
+	// try to unmarshal data into FullUser
+	err = newStrictDecoder(data).Decode(&dst.FullUser)
 	if err == nil {
 		jsonFullUser, _ := json.Marshal(dst.FullUser)
 		if string(jsonFullUser) == "{}" { // empty struct
 			dst.FullUser = nil
 		} else {
-			return nil // data stored in dst.FullUser, return on the first match
+			if err = validator.Validate(dst.FullUser); err != nil {
+				dst.FullUser = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.FullUser = nil
 	}
 
-	return fmt.Errorf("data failed to match schemas in anyOf(GetUser200Response)")
+	if match > 1 { // more than 1 match
+		// reset to nil
+		dst.FullCurrentUser = nil
+		dst.FullUser = nil
+
+		return fmt.Errorf("data matches more than one schema in oneOf(GetUser200Response)")
+	} else if match == 1 {
+		return nil // exactly one match
+	} else { // no match
+		return fmt.Errorf("data failed to match schemas in oneOf(GetUser200Response)")
+	}
 }
 
 // Marshal data from the first non-nil pointers in the struct to JSON
-func (src *GetUser200Response) MarshalJSON() ([]byte, error) {
+func (src GetUser200Response) MarshalJSON() ([]byte, error) {
 	if src.FullCurrentUser != nil {
 		return json.Marshal(&src.FullCurrentUser)
 	}
@@ -63,7 +97,24 @@ func (src *GetUser200Response) MarshalJSON() ([]byte, error) {
 		return json.Marshal(&src.FullUser)
 	}
 
-	return nil, nil // no data in anyOf schemas
+	return nil, nil // no data in oneOf schemas
+}
+
+// Get the actual instance
+func (obj *GetUser200Response) GetActualInstance() interface{} {
+	if obj == nil {
+		return nil
+	}
+	if obj.FullCurrentUser != nil {
+		return obj.FullCurrentUser
+	}
+
+	if obj.FullUser != nil {
+		return obj.FullUser
+	}
+
+	// all schemas are nil
+	return nil
 }
 
 type NullableGetUser200Response struct {

@@ -13823,7 +13823,7 @@ components:
       - $ref: '#/components/schemas/User'
       - $ref: '#/components/schemas/FullUser'
     getUser_200_response:
-      anyOf:
+      oneOf:
       - $ref: '#/components/schemas/FullUser'
       - $ref: '#/components/schemas/FullCurrentUser'
     editCurrentUser_request:
