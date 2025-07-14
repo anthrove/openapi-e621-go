@@ -2,15 +2,10 @@ package main
 
 import (
 	"context"
+	"strconv"
+
 	"github.com/goforj/godump"
 )
-
-//type AccessDeniedReason string
-//type AccessDeniedSuccess string
-//type MessageErrorSuccess string
-//type NotFoundReason string
-//type NotFoundSuccess string
-//type WarningRecordType string
 
 func main() {
 	c, err := NewClientWithResponses("https://e621.net")
@@ -19,14 +14,10 @@ func main() {
 	}
 	userID := 136501
 
-	params := &ListFavoritesParams{
-		UserId: &userID,
-	}
-
-	resp, err := c.ListFavoritesWithResponse(context.Background(), params)
+	resp, err := c.GetUserWithResponse(context.Background(), strconv.Itoa(userID))
 	if err != nil {
 		panic(err)
 	}
 
-	godump.Dump(resp.JSON200.Posts[0])
+	godump.Dump(resp.JSON200.AsFullUser())
 }

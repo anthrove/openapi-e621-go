@@ -22,6 +22,11 @@ const (
 	BasicAuthScopes = "basicAuth.Scopes"
 )
 
+// Defines values for AccessDeniedResponseReason.
+const (
+	AccessDeniedResponseReasonAccessDenied AccessDeniedResponseReason = "Access Denied"
+)
+
 // Defines values for BulkUpdateRequestStatus.
 const (
 	BulkUpdateRequestStatusApproved BulkUpdateRequestStatus = "approved"
@@ -59,104 +64,117 @@ const (
 	IQDBPostGeneratedSamplesOriginal IQDBPostGeneratedSamples = "original"
 )
 
-// Defines values for ModactionActions.
+// Defines values for ModActionActions.
 const (
-	ArtistPageLock        ModactionActions = "artist_page_lock"
-	ArtistPageRename      ModactionActions = "artist_page_rename"
-	ArtistPageUnlock      ModactionActions = "artist_page_unlock"
-	ArtistUserLinked      ModactionActions = "artist_user_linked"
-	ArtistUserUnlinked    ModactionActions = "artist_user_unlinked"
-	AvoidPostingCreate    ModactionActions = "avoid_posting_create"
-	AvoidPostingDelete    ModactionActions = "avoid_posting_delete"
-	AvoidPostingDestroy   ModactionActions = "avoid_posting_destroy"
-	AvoidPostingUndelete  ModactionActions = "avoid_posting_undelete"
-	AvoidPostingUpdate    ModactionActions = "avoid_posting_update"
-	BlipDelete            ModactionActions = "blip_delete"
-	BlipHide              ModactionActions = "blip_hide"
-	BlipUnhide            ModactionActions = "blip_unhide"
-	BlipUpdate            ModactionActions = "blip_update"
-	CommentDelete         ModactionActions = "comment_delete"
-	CommentHide           ModactionActions = "comment_hide"
-	CommentUnhide         ModactionActions = "comment_unhide"
-	CommentUpdate         ModactionActions = "comment_update"
-	CreatedFlagReason     ModactionActions = "created_flag_reason"
-	CreatedNegativeRecord ModactionActions = "created_negative_record"
-	CreatedNeutralRecord  ModactionActions = "created_neutral_record"
-	CreatedPositiveRecord ModactionActions = "created_positive_record"
-	DeletedFlagReason     ModactionActions = "deleted_flag_reason"
-	EditedFlagReason      ModactionActions = "edited_flag_reason"
-	ForumCategoryCreate   ModactionActions = "forum_category_create"
-	ForumCategoryDelete   ModactionActions = "forum_category_delete"
-	ForumCategoryUpdate   ModactionActions = "forum_category_update"
-	ForumPostDelete       ModactionActions = "forum_post_delete"
-	ForumPostHide         ModactionActions = "forum_post_hide"
-	ForumPostUnhide       ModactionActions = "forum_post_unhide"
-	ForumPostUpdate       ModactionActions = "forum_post_update"
-	ForumTopicDelete      ModactionActions = "forum_topic_delete"
-	ForumTopicHide        ModactionActions = "forum_topic_hide"
-	ForumTopicLock        ModactionActions = "forum_topic_lock"
-	ForumTopicStick       ModactionActions = "forum_topic_stick"
-	ForumTopicUnhide      ModactionActions = "forum_topic_unhide"
-	ForumTopicUnlock      ModactionActions = "forum_topic_unlock"
-	ForumTopicUnstick     ModactionActions = "forum_topic_unstick"
-	ForumTopicUpdate      ModactionActions = "forum_topic_update"
-	HelpCreate            ModactionActions = "help_create"
-	HelpDelete            ModactionActions = "help_delete"
-	HelpUpdate            ModactionActions = "help_update"
-	IpBanCreate           ModactionActions = "ip_ban_create"
-	IpBanDelete           ModactionActions = "ip_ban_delete"
-	MascotCreate          ModactionActions = "mascot_create"
-	MascotDelete          ModactionActions = "mascot_delete"
-	MascotUpdate          ModactionActions = "mascot_update"
-	MassUpdate            ModactionActions = "mass_update"
-	NukeTag               ModactionActions = "nuke_tag"
-	PoolDelete            ModactionActions = "pool_delete"
-	PostDelete            ModactionActions = "post_delete"
-	PostDestroy           ModactionActions = "post_destroy"
-	PostMoveFavorites     ModactionActions = "post_move_favorites"
-	PostRatingLock        ModactionActions = "post_rating_lock"
-	PostReplacementAccept ModactionActions = "post_replacement_accept"
-	PostReplacementDelete ModactionActions = "post_replacement_delete"
-	PostReplacementReject ModactionActions = "post_replacement_reject"
-	PostUnapprove         ModactionActions = "post_unapprove"
-	PostUndelete          ModactionActions = "post_undelete"
-	ReportReasonCreate    ModactionActions = "report_reason_create"
-	ReportReasonDelete    ModactionActions = "report_reason_delete"
-	ReportReasonUpdate    ModactionActions = "report_reason_update"
-	SetChangeVisibility   ModactionActions = "set_change_visibility"
-	SetDelete             ModactionActions = "set_delete"
-	SetUpdate             ModactionActions = "set_update"
-	TagAliasCreate        ModactionActions = "tag_alias_create"
-	TagAliasUpdate        ModactionActions = "tag_alias_update"
-	TagImplicationCreate  ModactionActions = "tag_implication_create"
-	TagImplicationUpdate  ModactionActions = "tag_implication_update"
-	TakedownDelete        ModactionActions = "takedown_delete"
-	TakedownProcess       ModactionActions = "takedown_process"
-	TicketClaim           ModactionActions = "ticket_claim"
-	TicketUnclaim         ModactionActions = "ticket_unclaim"
-	TicketUpdate          ModactionActions = "ticket_update"
-	UploadWhitelistCreate ModactionActions = "upload_whitelist_create"
-	UploadWhitelistDelete ModactionActions = "upload_whitelist_delete"
-	UploadWhitelistUpdate ModactionActions = "upload_whitelist_update"
-	UserBan               ModactionActions = "user_ban"
-	UserBanUpdate         ModactionActions = "user_ban_update"
-	UserBlacklistChanged  ModactionActions = "user_blacklist_changed"
-	UserDelete            ModactionActions = "user_delete"
-	UserFeedbackCreate    ModactionActions = "user_feedback_create"
-	UserFeedbackDelete    ModactionActions = "user_feedback_delete"
-	UserFeedbackDestroy   ModactionActions = "user_feedback_destroy"
-	UserFeedbackUndelete  ModactionActions = "user_feedback_undelete"
-	UserFeedbackUpdate    ModactionActions = "user_feedback_update"
-	UserFlagsChange       ModactionActions = "user_flags_change"
-	UserLevelChange       ModactionActions = "user_level_change"
-	UserNameChange        ModactionActions = "user_name_change"
-	UserTextChange        ModactionActions = "user_text_change"
-	UserUnban             ModactionActions = "user_unban"
-	UserUploadLimitChange ModactionActions = "user_upload_limit_change"
-	WikiPageDelete        ModactionActions = "wiki_page_delete"
-	WikiPageLock          ModactionActions = "wiki_page_lock"
-	WikiPageRename        ModactionActions = "wiki_page_rename"
-	WikiPageUnlock        ModactionActions = "wiki_page_unlock"
+	ArtistPageLock        ModActionActions = "artist_page_lock"
+	ArtistPageRename      ModActionActions = "artist_page_rename"
+	ArtistPageUnlock      ModActionActions = "artist_page_unlock"
+	ArtistUserLinked      ModActionActions = "artist_user_linked"
+	ArtistUserUnlinked    ModActionActions = "artist_user_unlinked"
+	AvoidPostingCreate    ModActionActions = "avoid_posting_create"
+	AvoidPostingDelete    ModActionActions = "avoid_posting_delete"
+	AvoidPostingDestroy   ModActionActions = "avoid_posting_destroy"
+	AvoidPostingUndelete  ModActionActions = "avoid_posting_undelete"
+	AvoidPostingUpdate    ModActionActions = "avoid_posting_update"
+	BlipDelete            ModActionActions = "blip_delete"
+	BlipHide              ModActionActions = "blip_hide"
+	BlipUnhide            ModActionActions = "blip_unhide"
+	BlipUpdate            ModActionActions = "blip_update"
+	CommentDelete         ModActionActions = "comment_delete"
+	CommentHide           ModActionActions = "comment_hide"
+	CommentUnhide         ModActionActions = "comment_unhide"
+	CommentUpdate         ModActionActions = "comment_update"
+	CreatedFlagReason     ModActionActions = "created_flag_reason"
+	CreatedNegativeRecord ModActionActions = "created_negative_record"
+	CreatedNeutralRecord  ModActionActions = "created_neutral_record"
+	CreatedPositiveRecord ModActionActions = "created_positive_record"
+	DeletedFlagReason     ModActionActions = "deleted_flag_reason"
+	EditedFlagReason      ModActionActions = "edited_flag_reason"
+	ForumCategoryCreate   ModActionActions = "forum_category_create"
+	ForumCategoryDelete   ModActionActions = "forum_category_delete"
+	ForumCategoryUpdate   ModActionActions = "forum_category_update"
+	ForumPostDelete       ModActionActions = "forum_post_delete"
+	ForumPostHide         ModActionActions = "forum_post_hide"
+	ForumPostUnhide       ModActionActions = "forum_post_unhide"
+	ForumPostUpdate       ModActionActions = "forum_post_update"
+	ForumTopicDelete      ModActionActions = "forum_topic_delete"
+	ForumTopicHide        ModActionActions = "forum_topic_hide"
+	ForumTopicLock        ModActionActions = "forum_topic_lock"
+	ForumTopicStick       ModActionActions = "forum_topic_stick"
+	ForumTopicUnhide      ModActionActions = "forum_topic_unhide"
+	ForumTopicUnlock      ModActionActions = "forum_topic_unlock"
+	ForumTopicUnstick     ModActionActions = "forum_topic_unstick"
+	ForumTopicUpdate      ModActionActions = "forum_topic_update"
+	HelpCreate            ModActionActions = "help_create"
+	HelpDelete            ModActionActions = "help_delete"
+	HelpUpdate            ModActionActions = "help_update"
+	IpBanCreate           ModActionActions = "ip_ban_create"
+	IpBanDelete           ModActionActions = "ip_ban_delete"
+	MascotCreate          ModActionActions = "mascot_create"
+	MascotDelete          ModActionActions = "mascot_delete"
+	MascotUpdate          ModActionActions = "mascot_update"
+	MassUpdate            ModActionActions = "mass_update"
+	NukeTag               ModActionActions = "nuke_tag"
+	PoolDelete            ModActionActions = "pool_delete"
+	PostDelete            ModActionActions = "post_delete"
+	PostDestroy           ModActionActions = "post_destroy"
+	PostMoveFavorites     ModActionActions = "post_move_favorites"
+	PostRatingLock        ModActionActions = "post_rating_lock"
+	PostReplacementAccept ModActionActions = "post_replacement_accept"
+	PostReplacementDelete ModActionActions = "post_replacement_delete"
+	PostReplacementReject ModActionActions = "post_replacement_reject"
+	PostUnapprove         ModActionActions = "post_unapprove"
+	PostUndelete          ModActionActions = "post_undelete"
+	PostVersionHide       ModActionActions = "post_version_hide"
+	PostVersionUnhide     ModActionActions = "post_version_unhide"
+	ReportReasonCreate    ModActionActions = "report_reason_create"
+	ReportReasonDelete    ModActionActions = "report_reason_delete"
+	ReportReasonUpdate    ModActionActions = "report_reason_update"
+	SetChangeVisibility   ModActionActions = "set_change_visibility"
+	SetDelete             ModActionActions = "set_delete"
+	SetUpdate             ModActionActions = "set_update"
+	StaffNoteCreate       ModActionActions = "staff_note_create"
+	StaffNoteDelete       ModActionActions = "staff_note_delete"
+	StaffNoteUndelete     ModActionActions = "staff_note_undelete"
+	StaffNoteUpdate       ModActionActions = "staff_note_update"
+	TagAliasCreate        ModActionActions = "tag_alias_create"
+	TagAliasUpdate        ModActionActions = "tag_alias_update"
+	TagImplicationCreate  ModActionActions = "tag_implication_create"
+	TagImplicationUpdate  ModActionActions = "tag_implication_update"
+	TakedownDelete        ModActionActions = "takedown_delete"
+	TakedownProcess       ModActionActions = "takedown_process"
+	TicketClaim           ModActionActions = "ticket_claim"
+	TicketUnclaim         ModActionActions = "ticket_unclaim"
+	TicketUpdate          ModActionActions = "ticket_update"
+	UploadWhitelistCreate ModActionActions = "upload_whitelist_create"
+	UploadWhitelistDelete ModActionActions = "upload_whitelist_delete"
+	UploadWhitelistUpdate ModActionActions = "upload_whitelist_update"
+	UserBan               ModActionActions = "user_ban"
+	UserBanUpdate         ModActionActions = "user_ban_update"
+	UserBlacklistChanged  ModActionActions = "user_blacklist_changed"
+	UserDelete            ModActionActions = "user_delete"
+	UserFeedbackCreate    ModActionActions = "user_feedback_create"
+	UserFeedbackDelete    ModActionActions = "user_feedback_delete"
+	UserFeedbackDestroy   ModActionActions = "user_feedback_destroy"
+	UserFeedbackUndelete  ModActionActions = "user_feedback_undelete"
+	UserFeedbackUpdate    ModActionActions = "user_feedback_update"
+	UserFlagsChange       ModActionActions = "user_flags_change"
+	UserFlushFavorites    ModActionActions = "user_flush_favorites"
+	UserLevelChange       ModActionActions = "user_level_change"
+	UserNameChange        ModActionActions = "user_name_change"
+	UserTextChange        ModActionActions = "user_text_change"
+	UserUnban             ModActionActions = "user_unban"
+	UserUploadLimitChange ModActionActions = "user_upload_limit_change"
+	UserUploadsToggle     ModActionActions = "user_uploads_toggle"
+	WikiPageDelete        ModActionActions = "wiki_page_delete"
+	WikiPageLock          ModActionActions = "wiki_page_lock"
+	WikiPageRename        ModActionActions = "wiki_page_rename"
+	WikiPageUnlock        ModActionActions = "wiki_page_unlock"
+)
+
+// Defines values for NotFoundResponseReason.
+const (
+	NotFoundResponseReasonNotFound NotFoundResponseReason = "not found"
 )
 
 // Defines values for PoolCategories.
@@ -174,28 +192,29 @@ const (
 
 // Defines values for PostEventActions.
 const (
-	PostEventActionsApproved            PostEventActions = "approved"
-	PostEventActionsChangedBgColor      PostEventActions = "changed_bg_color"
-	PostEventActionsCommentLocked       PostEventActions = "comment_locked"
-	PostEventActionsCommentUnlocked     PostEventActions = "comment_unlocked"
-	PostEventActionsDeleted             PostEventActions = "deleted"
-	PostEventActionsExpunged            PostEventActions = "expunged"
-	PostEventActionsFavoritesMoved      PostEventActions = "favorites_moved"
-	PostEventActionsFavoritesReceived   PostEventActions = "favorites_received"
-	PostEventActionsFlagCreated         PostEventActions = "flag_created"
-	PostEventActionsFlagRemoved         PostEventActions = "flag_removed"
-	PostEventActionsNoteLocked          PostEventActions = "note_locked"
-	PostEventActionsNoteUnlocked        PostEventActions = "note_unlocked"
-	PostEventActionsRatingLocked        PostEventActions = "rating_locked"
-	PostEventActionsRatingUnlocked      PostEventActions = "rating_unlocked"
-	PostEventActionsReplacementAccepted PostEventActions = "replacement_accepted"
-	PostEventActionsReplacementDeleted  PostEventActions = "replacement_deleted"
-	PostEventActionsReplacementPromoted PostEventActions = "replacement_promoted"
-	PostEventActionsReplacementRejected PostEventActions = "replacement_rejected"
-	PostEventActionsStatusLocked        PostEventActions = "status_locked"
-	PostEventActionsStatusUnlocked      PostEventActions = "status_unlocked"
-	PostEventActionsUnapproved          PostEventActions = "unapproved"
-	PostEventActionsUndeleted           PostEventActions = "undeleted"
+	PostEventActionsApproved                  PostEventActions = "approved"
+	PostEventActionsChangedBgColor            PostEventActions = "changed_bg_color"
+	PostEventActionsCommentLocked             PostEventActions = "comment_locked"
+	PostEventActionsCommentUnlocked           PostEventActions = "comment_unlocked"
+	PostEventActionsDeleted                   PostEventActions = "deleted"
+	PostEventActionsExpunged                  PostEventActions = "expunged"
+	PostEventActionsFavoritesMoved            PostEventActions = "favorites_moved"
+	PostEventActionsFavoritesReceived         PostEventActions = "favorites_received"
+	PostEventActionsFlagCreated               PostEventActions = "flag_created"
+	PostEventActionsFlagRemoved               PostEventActions = "flag_removed"
+	PostEventActionsNoteLocked                PostEventActions = "note_locked"
+	PostEventActionsNoteUnlocked              PostEventActions = "note_unlocked"
+	PostEventActionsRatingLocked              PostEventActions = "rating_locked"
+	PostEventActionsRatingUnlocked            PostEventActions = "rating_unlocked"
+	PostEventActionsReplacementAccepted       PostEventActions = "replacement_accepted"
+	PostEventActionsReplacementDeleted        PostEventActions = "replacement_deleted"
+	PostEventActionsReplacementPenaltyChanged PostEventActions = "replacement_penalty_changed"
+	PostEventActionsReplacementPromoted       PostEventActions = "replacement_promoted"
+	PostEventActionsReplacementRejected       PostEventActions = "replacement_rejected"
+	PostEventActionsStatusLocked              PostEventActions = "status_locked"
+	PostEventActionsStatusUnlocked            PostEventActions = "status_unlocked"
+	PostEventActionsUnapproved                PostEventActions = "unapproved"
+	PostEventActionsUndeleted                 PostEventActions = "undeleted"
 )
 
 // Defines values for PostFlagType.
@@ -207,14 +226,10 @@ const (
 // Defines values for PostReplacementStatus.
 const (
 	PostReplacementStatusApproved PostReplacementStatus = "approved"
+	PostReplacementStatusOriginal PostReplacementStatus = "original"
 	PostReplacementStatusPending  PostReplacementStatus = "pending"
 	PostReplacementStatusPrompted PostReplacementStatus = "prompted"
 	PostReplacementStatusRejected PostReplacementStatus = "rejected"
-)
-
-// Defines values for PostSampleAlternateType.
-const (
-	Video PostSampleAlternateType = "video"
 )
 
 // Defines values for Ratings.
@@ -296,6 +311,14 @@ const (
 	UserNameChangeRequestStatusApproved UserNameChangeRequestStatus = "approved"
 )
 
+// Defines values for WarningRecordTypeRecordType.
+const (
+	WarningRecordTypeRecordTypeBan     WarningRecordTypeRecordType = "ban"
+	WarningRecordTypeRecordTypeRecord  WarningRecordTypeRecordType = "record"
+	WarningRecordTypeRecordTypeUnmark  WarningRecordTypeRecordType = "unmark"
+	WarningRecordTypeRecordTypeWarning WarningRecordTypeRecordType = "warning"
+)
+
 // Defines values for WarningTypes.
 const (
 	WarningTypesBan     WarningTypes = "ban"
@@ -368,14 +391,6 @@ const (
 	SearchBlipsParamsSearchOrderUpdatedAtDesc SearchBlipsParamsSearchOrder = "updated_at_desc"
 )
 
-// Defines values for MarkBlipJSONBodyRecordType.
-const (
-	MarkBlipJSONBodyRecordTypeBan     MarkBlipJSONBodyRecordType = "ban"
-	MarkBlipJSONBodyRecordTypeRecord  MarkBlipJSONBodyRecordType = "record"
-	MarkBlipJSONBodyRecordTypeUnmark  MarkBlipJSONBodyRecordType = "unmark"
-	MarkBlipJSONBodyRecordTypeWarning MarkBlipJSONBodyRecordType = "warning"
-)
-
 // Defines values for SearchBulkUpdateRequestsParamsSearchOrder.
 const (
 	SearchBulkUpdateRequestsParamsSearchOrderIdAsc         SearchBulkUpdateRequestsParamsSearchOrder = "id_asc"
@@ -413,14 +428,6 @@ const (
 	CreateCommentVoteParamsScoreN1     CreateCommentVoteParamsScore = 1
 )
 
-// Defines values for MarkCommentJSONBodyRecordType.
-const (
-	MarkCommentJSONBodyRecordTypeBan     MarkCommentJSONBodyRecordType = "ban"
-	MarkCommentJSONBodyRecordTypeRecord  MarkCommentJSONBodyRecordType = "record"
-	MarkCommentJSONBodyRecordTypeUnmark  MarkCommentJSONBodyRecordType = "unmark"
-	MarkCommentJSONBodyRecordTypeWarning MarkCommentJSONBodyRecordType = "warning"
-)
-
 // Defines values for SearchEmailBlacklistsParamsSearchOrder.
 const (
 	SearchEmailBlacklistsParamsSearchOrderDomain SearchEmailBlacklistsParamsSearchOrder = "domain"
@@ -440,14 +447,6 @@ const (
 	CreateForumPostVoteFormdataBodyForumPostVoteScoreMinus1 CreateForumPostVoteFormdataBodyForumPostVoteScore = -1
 	CreateForumPostVoteFormdataBodyForumPostVoteScoreN0     CreateForumPostVoteFormdataBodyForumPostVoteScore = 0
 	CreateForumPostVoteFormdataBodyForumPostVoteScoreN1     CreateForumPostVoteFormdataBodyForumPostVoteScore = 1
-)
-
-// Defines values for MarkForumPostJSONBodyRecordType.
-const (
-	MarkForumPostJSONBodyRecordTypeBan     MarkForumPostJSONBodyRecordType = "ban"
-	MarkForumPostJSONBodyRecordTypeRecord  MarkForumPostJSONBodyRecordType = "record"
-	MarkForumPostJSONBodyRecordTypeUnmark  MarkForumPostJSONBodyRecordType = "unmark"
-	MarkForumPostJSONBodyRecordTypeWarning MarkForumPostJSONBodyRecordType = "warning"
 )
 
 // Defines values for SearchForumTopicsParamsSearchOrder.
@@ -599,6 +598,12 @@ const (
 	CreatePostVoteParamsScoreN1     CreatePostVoteParamsScore = 1
 )
 
+// Defines values for SearchStaffNotesParamsSearchOrder.
+const (
+	SearchStaffNotesParamsSearchOrderIdAsc  SearchStaffNotesParamsSearchOrder = "id_asc"
+	SearchStaffNotesParamsSearchOrderIdDesc SearchStaffNotesParamsSearchOrder = "id_desc"
+)
+
 // Defines values for SearchTagAliasesParamsSearchOrder.
 const (
 	SearchTagAliasesParamsSearchOrderCreatedAt SearchTagAliasesParamsSearchOrder = "created_at"
@@ -648,8 +653,8 @@ const (
 
 // Defines values for EditTicketFormdataBodyTicketStatus.
 const (
-	Approved EditTicketFormdataBodyTicketStatus = "approved"
-	Partial  EditTicketFormdataBodyTicketStatus = "partial"
+	EditTicketFormdataBodyTicketStatusApproved EditTicketFormdataBodyTicketStatus = "approved"
+	EditTicketFormdataBodyTicketStatusPartial  EditTicketFormdataBodyTicketStatus = "partial"
 )
 
 // Defines values for SearchUploadWhitelistsParamsSearchOrder.
@@ -706,10 +711,10 @@ const (
 
 // Defines values for EditCurrentUserFormdataBodyUserDefaultImageSize.
 const (
-	EditCurrentUserFormdataBodyUserDefaultImageSizeFit      EditCurrentUserFormdataBodyUserDefaultImageSize = "fit"
-	EditCurrentUserFormdataBodyUserDefaultImageSizeFitv     EditCurrentUserFormdataBodyUserDefaultImageSize = "fitv"
-	EditCurrentUserFormdataBodyUserDefaultImageSizeLarge    EditCurrentUserFormdataBodyUserDefaultImageSize = "large"
-	EditCurrentUserFormdataBodyUserDefaultImageSizeOriginal EditCurrentUserFormdataBodyUserDefaultImageSize = "original"
+	Fit      EditCurrentUserFormdataBodyUserDefaultImageSize = "fit"
+	Fitv     EditCurrentUserFormdataBodyUserDefaultImageSize = "fitv"
+	Large    EditCurrentUserFormdataBodyUserDefaultImageSize = "large"
+	Original EditCurrentUserFormdataBodyUserDefaultImageSize = "original"
 )
 
 // Defines values for SearchWikiPageVersionsParamsSearchOrder.
@@ -720,11 +725,20 @@ const (
 
 // Defines values for SearchWikiPagesParamsSearchOrder.
 const (
-	SearchWikiPagesParamsSearchOrderIdAsc     SearchWikiPagesParamsSearchOrder = "id_asc"
-	SearchWikiPagesParamsSearchOrderIdDesc    SearchWikiPagesParamsSearchOrder = "id_desc"
-	SearchWikiPagesParamsSearchOrderPostCount SearchWikiPagesParamsSearchOrder = "post_count"
-	SearchWikiPagesParamsSearchOrderTitle     SearchWikiPagesParamsSearchOrder = "title"
+	IdAsc     SearchWikiPagesParamsSearchOrder = "id_asc"
+	IdDesc    SearchWikiPagesParamsSearchOrder = "id_desc"
+	PostCount SearchWikiPagesParamsSearchOrder = "post_count"
+	Title     SearchWikiPagesParamsSearchOrder = "title"
 )
+
+// AccessDeniedResponse defines model for AccessDeniedResponse.
+type AccessDeniedResponse struct {
+	Reason  AccessDeniedResponseReason `json:"reason"`
+	Success bool                       `json:"success"`
+}
+
+// AccessDeniedResponseReason defines model for AccessDeniedResponse.Reason.
+type AccessDeniedResponseReason string
 
 // Artist defines model for Artist.
 type Artist struct {
@@ -734,9 +748,9 @@ type Artist struct {
 	Id           int       `json:"id"`
 	IsActive     bool      `json:"is_active"`
 	IsLocked     bool      `json:"is_locked"`
-	LinkedUserId float32   `json:"linked_user_id"`
+	LinkedUserId *int      `json:"linked_user_id"`
 	Name         string    `json:"name"`
-	Notes        string    `json:"notes"`
+	Notes        *string   `json:"notes"`
 	OtherNames   []string  `json:"other_names"`
 	UpdatedAt    time.Time `json:"updated_at"`
 }
@@ -796,13 +810,13 @@ type AvoidPostingVersion struct {
 
 // Ban defines model for Ban.
 type Ban struct {
-	BannerId  int       `json:"banner_id"`
-	CreatedAt time.Time `json:"created_at"`
-	ExpiresAt time.Time `json:"expires_at"`
-	Id        int       `json:"id"`
-	Reason    string    `json:"reason"`
-	UpdatedAt time.Time `json:"updated_at"`
-	UserId    int       `json:"user_id"`
+	BannerId  int        `json:"banner_id"`
+	CreatedAt time.Time  `json:"created_at"`
+	ExpiresAt *time.Time `json:"expires_at"`
+	Id        int        `json:"id"`
+	Reason    string     `json:"reason"`
+	UpdatedAt time.Time  `json:"updated_at"`
+	UserId    int        `json:"user_id"`
 }
 
 // Blip defines model for Blip.
@@ -820,13 +834,20 @@ type Blip struct {
 	WarningUserId int          `json:"warning_user_id"`
 }
 
+// BulkRelatedTag defines model for BulkRelatedTag.
+type BulkRelatedTag struct {
+	CategoryId TagCategories `json:"category_id"`
+	Count      int           `json:"count"`
+	Name       string        `json:"name"`
+}
+
 // BulkUpdateRequest defines model for BulkUpdateRequest.
 type BulkUpdateRequest struct {
-	ApproverId   int                     `json:"approver_id"`
+	ApproverId   *int                    `json:"approver_id"`
 	CreatedAt    time.Time               `json:"created_at"`
 	CreatorId    int                     `json:"creator_id"`
-	ForumPostId  string                  `json:"forum_post_id"`
-	ForumTopicId string                  `json:"forum_topic_id"`
+	ForumPostId  *int                    `json:"forum_post_id"`
+	ForumTopicId *int                    `json:"forum_topic_id"`
 	Id           int                     `json:"id"`
 	Script       string                  `json:"script"`
 	Status       BulkUpdateRequestStatus `json:"status"`
@@ -844,29 +865,24 @@ type Comment struct {
 	CreatorId   int       `json:"creator_id"`
 	CreatorName string    `json:"creator_name"`
 	// Deprecated:
-	DoNotBumpPost bool                `json:"do_not_bump_post"`
-	Id            int                 `json:"id"`
-	IsHidden      bool                `json:"is_hidden"`
-	IsSticky      bool                `json:"is_sticky"`
-	PostId        int                 `json:"post_id"`
-	Score         int                 `json:"score"`
-	UpdatedAt     time.Time           `json:"updated_at"`
-	UpdaterId     int                 `json:"updater_id"`
-	UpdaterName   string              `json:"updater_name"`
-	WarningType   Comment_WarningType `json:"warning_type"`
-	WarningUserId string              `json:"warning_user_id"`
-}
-
-// Comment_WarningType defines model for Comment.WarningType.
-type Comment_WarningType struct {
-	union json.RawMessage
+	DoNotBumpPost bool         `json:"do_not_bump_post"`
+	Id            int          `json:"id"`
+	IsHidden      bool         `json:"is_hidden"`
+	IsSticky      bool         `json:"is_sticky"`
+	PostId        int          `json:"post_id"`
+	Score         int          `json:"score"`
+	UpdatedAt     time.Time    `json:"updated_at"`
+	UpdaterId     int          `json:"updater_id"`
+	UpdaterName   string       `json:"updater_name"`
+	WarningType   WarningTypes `json:"warning_type"`
+	WarningUserId *int         `json:"warning_user_id"`
 }
 
 // CurrentUser defines model for CurrentUser.
 type CurrentUser struct {
 	ApiBurstLimit                 int                         `json:"api_burst_limit"`
 	ApiRegenMultiplier            int                         `json:"api_regen_multiplier"`
-	AvatarId                      string                      `json:"avatar_id"`
+	AvatarId                      *int                        `json:"avatar_id"`
 	BaseUploadLimit               int                         `json:"base_upload_limit"`
 	BlacklistUsers                bool                        `json:"blacklist_users"`
 	BlacklistedTags               string                      `json:"blacklisted_tags"`
@@ -889,6 +905,7 @@ type CurrentUser struct {
 	FavoriteCount                 int                         `json:"favorite_count"`
 	FavoriteLimit                 int                         `json:"favorite_limit"`
 	FavoriteTags                  string                      `json:"favorite_tags"`
+	ForumNotificationDot          bool                        `json:"forum_notification_dot"`
 	HasMail                       bool                        `json:"has_mail"`
 	HideComments                  bool                        `json:"hide_comments"`
 	Id                            int                         `json:"id"`
@@ -935,8 +952,33 @@ type DMail struct {
 
 // DTextResponse defines model for DTextResponse.
 type DTextResponse struct {
-	Html  string                 `json:"html"`
-	Posts map[string]interface{} `json:"posts"`
+	Html  string       `json:"html"`
+	Posts DeferredPost `json:"posts"`
+}
+
+// DeferredPost defines model for DeferredPost.
+type DeferredPost struct {
+	CreatedAt     time.Time `json:"created_at"`
+	FavCount      int       `json:"fav_count"`
+	FileExt       string    `json:"file_ext"`
+	FileUrl       *string   `json:"file_url"`
+	Flags         string    `json:"flags"`
+	Height        int       `json:"height"`
+	Id            int       `json:"id"`
+	IsFavorited   bool      `json:"is_favorited"`
+	LargeUrl      *string   `json:"large_url"`
+	Md5           string    `json:"md5"`
+	Pools         []int     `json:"pools"`
+	PreviewHeight int       `json:"preview_height"`
+	PreviewUrl    *string   `json:"preview_url"`
+	PreviewWidth  int       `json:"preview_width"`
+	Rating        Ratings   `json:"rating"`
+	Score         int       `json:"score"`
+	Size          int64     `json:"size"`
+	Tags          string    `json:"tags"`
+	Uploader      string    `json:"uploader"`
+	UploaderId    int       `json:"uploader_id"`
+	Width         int       `json:"width"`
 }
 
 // EmailBlacklist defines model for EmailBlacklist.
@@ -954,21 +996,16 @@ type FeedbackCategories string
 
 // ForumPost defines model for ForumPost.
 type ForumPost struct {
-	Body          string                `json:"body"`
-	CreatedAt     time.Time             `json:"created_at"`
-	CreatorId     int                   `json:"creator_id"`
-	Id            int                   `json:"id"`
-	IsHidden      bool                  `json:"is_hidden"`
-	TopicId       int                   `json:"topic_id"`
-	UpdatedAt     time.Time             `json:"updated_at"`
-	UpdaterId     int                   `json:"updater_id"`
-	WarningType   ForumPost_WarningType `json:"warning_type"`
-	WarningUserId string                `json:"warning_user_id"`
-}
-
-// ForumPost_WarningType defines model for ForumPost.WarningType.
-type ForumPost_WarningType struct {
-	union json.RawMessage
+	Body          string       `json:"body"`
+	CreatedAt     time.Time    `json:"created_at"`
+	CreatorId     int          `json:"creator_id"`
+	Id            int          `json:"id"`
+	IsHidden      bool         `json:"is_hidden"`
+	TopicId       int          `json:"topic_id"`
+	UpdatedAt     time.Time    `json:"updated_at"`
+	UpdaterId     int          `json:"updater_id"`
+	WarningType   WarningTypes `json:"warning_type"`
+	WarningUserId *int         `json:"warning_user_id"`
 }
 
 // ForumPostVote defines model for ForumPostVote.
@@ -1002,7 +1039,7 @@ type FullCurrentUser struct {
 	ApiBurstLimit                 int                             `json:"api_burst_limit"`
 	ApiRegenMultiplier            int                             `json:"api_regen_multiplier"`
 	ArtistVersionCount            int                             `json:"artist_version_count"`
-	AvatarId                      string                          `json:"avatar_id"`
+	AvatarId                      *int                            `json:"avatar_id"`
 	BaseUploadLimit               int                             `json:"base_upload_limit"`
 	BlacklistUsers                bool                            `json:"blacklist_users"`
 	BlacklistedTags               string                          `json:"blacklisted_tags"`
@@ -1027,6 +1064,7 @@ type FullCurrentUser struct {
 	FavoriteLimit                 int                             `json:"favorite_limit"`
 	FavoriteTags                  string                          `json:"favorite_tags"`
 	FlagCount                     int                             `json:"flag_count"`
+	ForumNotificationDot          bool                            `json:"forum_notification_dot"`
 	ForumPostCount                int                             `json:"forum_post_count"`
 	HasMail                       bool                            `json:"has_mail"`
 	HideComments                  bool                            `json:"hide_comments"`
@@ -1069,7 +1107,7 @@ type FullCurrentUserDefaultImageSize string
 // FullUser defines model for FullUser.
 type FullUser struct {
 	ArtistVersionCount    int       `json:"artist_version_count"`
-	AvatarId              string    `json:"avatar_id"`
+	AvatarId              *int      `json:"avatar_id"`
 	BaseUploadLimit       int       `json:"base_upload_limit"`
 	CanApprovePosts       bool      `json:"can_approve_posts"`
 	CanUploadFree         bool      `json:"can_upload_free"`
@@ -1118,62 +1156,62 @@ type IPBan struct {
 
 // IQDBPost defines model for IQDBPost.
 type IQDBPost struct {
-	ApproverId          int                        `json:"approver_id"`
-	BgColor             string                     `json:"bg_color"`
-	BitFlags            float32                    `json:"bit_flags"`
-	ChangeSeq           int                        `json:"change_seq"`
-	ChildrenIds         string                     `json:"children_ids"`
-	CommentCount        int                        `json:"comment_count"`
-	CreatedAt           time.Time                  `json:"created_at"`
-	Description         string                     `json:"description"`
-	DownScore           int                        `json:"down_score"`
-	Duration            string                     `json:"duration"`
-	FavCount            int                        `json:"fav_count"`
-	FileExt             string                     `json:"file_ext"`
-	FileSize            int64                      `json:"file_size"`
-	FileUrl             *string                    `json:"file_url,omitempty"`
-	GeneratedSamples    []IQDBPostGeneratedSamples `json:"generated_samples"`
-	HasActiveChildren   bool                       `json:"has_active_children"`
-	HasChildren         bool                       `json:"has_children"`
-	HasLarge            bool                       `json:"has_large"`
-	HasVisibleChildren  bool                       `json:"has_visible_children"`
-	Id                  int                        `json:"id"`
-	ImageHeight         int                        `json:"image_height"`
-	ImageWidth          int                        `json:"image_width"`
-	IsCommentDisabled   bool                       `json:"is_comment_disabled"`
-	IsCommentLocked     bool                       `json:"is_comment_locked"`
-	IsDeleted           bool                       `json:"is_deleted"`
-	IsFavorited         bool                       `json:"is_favorited"`
-	IsFlagged           bool                       `json:"is_flagged"`
-	IsNoteLocked        bool                       `json:"is_note_locked"`
-	IsPending           bool                       `json:"is_pending"`
-	IsRatingLocked      bool                       `json:"is_rating_locked"`
-	IsStatusLocked      bool                       `json:"is_status_locked"`
-	LargeFileUrl        *string                    `json:"large_file_url,omitempty"`
-	LastCommentBumpedAt time.Time                  `json:"last_comment_bumped_at"`
-	LastCommentedAt     time.Time                  `json:"last_commented_at"`
-	LastNotedAt         time.Time                  `json:"last_noted_at"`
-	LockedTags          string                     `json:"locked_tags"`
-	Md5                 string                     `json:"md5"`
-	ParentId            string                     `json:"parent_id"`
-	PoolIds             []int                      `json:"pool_ids"`
-	PreviewFileUrl      *string                    `json:"preview_file_url,omitempty"`
-	Rating              Ratings                    `json:"rating"`
-	Score               int                        `json:"score"`
-	Source              string                     `json:"source"`
-	TagCount            int                        `json:"tag_count"`
-	TagCountArtist      int                        `json:"tag_count_artist"`
-	TagCountCharacter   int                        `json:"tag_count_character"`
-	TagCountCopyright   int                        `json:"tag_count_copyright"`
-	TagCountGeneral     int                        `json:"tag_count_general"`
-	TagCountInvalid     int                        `json:"tag_count_invalid"`
-	TagCountLore        int                        `json:"tag_count_lore"`
-	TagCountMeta        int                        `json:"tag_count_meta"`
-	TagCountSpecies     int                        `json:"tag_count_species"`
-	TagString           string                     `json:"tag_string"`
-	UpScore             int                        `json:"up_score"`
-	UpdatedAt           time.Time                  `json:"updated_at"`
-	UploaderId          int                        `json:"uploader_id"`
+	ApproverId          int                         `json:"approver_id"`
+	BgColor             *string                     `json:"bg_color"`
+	BitFlags            float32                     `json:"bit_flags"`
+	ChangeSeq           int                         `json:"change_seq"`
+	ChildrenIds         *string                     `json:"children_ids"`
+	CommentCount        int                         `json:"comment_count"`
+	CreatedAt           time.Time                   `json:"created_at"`
+	Description         string                      `json:"description"`
+	DownScore           int                         `json:"down_score"`
+	Duration            *string                     `json:"duration"`
+	FavCount            int                         `json:"fav_count"`
+	FileExt             string                      `json:"file_ext"`
+	FileSize            int64                       `json:"file_size"`
+	FileUrl             *string                     `json:"file_url,omitempty"`
+	GeneratedSamples    *[]IQDBPostGeneratedSamples `json:"generated_samples"`
+	HasActiveChildren   bool                        `json:"has_active_children"`
+	HasChildren         bool                        `json:"has_children"`
+	HasLarge            bool                        `json:"has_large"`
+	HasVisibleChildren  bool                        `json:"has_visible_children"`
+	Id                  int                         `json:"id"`
+	ImageHeight         int                         `json:"image_height"`
+	ImageWidth          int                         `json:"image_width"`
+	IsCommentDisabled   bool                        `json:"is_comment_disabled"`
+	IsCommentLocked     bool                        `json:"is_comment_locked"`
+	IsDeleted           bool                        `json:"is_deleted"`
+	IsFavorited         bool                        `json:"is_favorited"`
+	IsFlagged           bool                        `json:"is_flagged"`
+	IsNoteLocked        bool                        `json:"is_note_locked"`
+	IsPending           bool                        `json:"is_pending"`
+	IsRatingLocked      bool                        `json:"is_rating_locked"`
+	IsStatusLocked      bool                        `json:"is_status_locked"`
+	LargeFileUrl        *string                     `json:"large_file_url,omitempty"`
+	LastCommentBumpedAt *time.Time                  `json:"last_comment_bumped_at"`
+	LastCommentedAt     *time.Time                  `json:"last_commented_at"`
+	LastNotedAt         *time.Time                  `json:"last_noted_at"`
+	LockedTags          *string                     `json:"locked_tags"`
+	Md5                 string                      `json:"md5"`
+	ParentId            *int                        `json:"parent_id"`
+	PoolIds             []int                       `json:"pool_ids"`
+	PreviewFileUrl      *string                     `json:"preview_file_url,omitempty"`
+	Rating              Ratings                     `json:"rating"`
+	Score               int                         `json:"score"`
+	Source              string                      `json:"source"`
+	TagCount            int                         `json:"tag_count"`
+	TagCountArtist      int                         `json:"tag_count_artist"`
+	TagCountCharacter   int                         `json:"tag_count_character"`
+	TagCountCopyright   int                         `json:"tag_count_copyright"`
+	TagCountGeneral     int                         `json:"tag_count_general"`
+	TagCountInvalid     int                         `json:"tag_count_invalid"`
+	TagCountLore        int                         `json:"tag_count_lore"`
+	TagCountMeta        int                         `json:"tag_count_meta"`
+	TagCountSpecies     int                         `json:"tag_count_species"`
+	TagString           string                      `json:"tag_string"`
+	UpScore             int                         `json:"up_score"`
+	UpdatedAt           time.Time                   `json:"updated_at"`
+	UploaderId          int                         `json:"uploader_id"`
 }
 
 // IQDBPostGeneratedSamples defines model for IQDBPost.GeneratedSamples.
@@ -1208,15 +1246,15 @@ type Mascot struct {
 
 // ModAction defines model for ModAction.
 type ModAction struct {
-	Action    ModactionActions `json:"action"`
+	Action    ModActionActions `json:"action"`
 	CreatedAt time.Time        `json:"created_at"`
 	CreatorId int              `json:"creator_id"`
 	Id        int              `json:"id"`
 	UpdatedAt time.Time        `json:"updated_at"`
 }
 
-// ModactionActions defines model for ModactionActions.
-type ModactionActions string
+// ModActionActions defines model for ModActionActions.
+type ModActionActions string
 
 // NewsUpdate defines model for NewsUpdate.
 type NewsUpdate struct {
@@ -1227,6 +1265,15 @@ type NewsUpdate struct {
 	UpdatedAt time.Time `json:"updated_at"`
 	UpdaterId int       `json:"updater_id"`
 }
+
+// NotFoundResponse defines model for NotFoundResponse.
+type NotFoundResponse struct {
+	Reason  NotFoundResponseReason `json:"reason"`
+	Success bool                   `json:"success"`
+}
+
+// NotFoundResponseReason defines model for NotFoundResponse.Reason.
+type NotFoundResponseReason string
 
 // Note defines model for Note.
 type Note struct {
@@ -1302,20 +1349,20 @@ type PoolVersion struct {
 
 // Post defines model for Post.
 type Post struct {
-	ApproverId   int       `json:"approver_id"`
+	ApproverId   *int      `json:"approver_id"`
 	ChangeSeq    float32   `json:"change_seq"`
 	CommentCount int       `json:"comment_count"`
 	CreatedAt    time.Time `json:"created_at"`
 	Description  string    `json:"description"`
-	Duration     float32   `json:"duration"`
+	Duration     *int      `json:"duration"`
 	FavCount     int       `json:"fav_count"`
 	File         struct {
-		Ext    string `json:"ext"`
-		Height int    `json:"height"`
-		Md5    string `json:"md5"`
-		Size   int64  `json:"size"`
-		Url    string `json:"url"`
-		Width  int    `json:"width"`
+		Ext    string  `json:"ext"`
+		Height int     `json:"height"`
+		Md5    string  `json:"md5"`
+		Size   int64   `json:"size"`
+		Url    *string `json:"url"`
+		Width  int     `json:"width"`
 	} `json:"file"`
 	Flags struct {
 		Deleted      bool `json:"deleted"`
@@ -1325,33 +1372,40 @@ type Post struct {
 		RatingLocked bool `json:"rating_locked"`
 		StatusLocked bool `json:"status_locked"`
 	} `json:"flags"`
-	HasNotes    bool     `json:"has_notes"`
-	Id          int      `json:"id"`
-	IsFavorited bool     `json:"is_favorited"`
-	LockedTags  []string `json:"locked_tags"`
-	Pools       []int    `json:"pools"`
+	HasNotes    bool      `json:"has_notes"`
+	Id          int       `json:"id"`
+	IsFavorited bool      `json:"is_favorited"`
+	LockedTags  *[]string `json:"locked_tags"`
+	Pools       []int     `json:"pools"`
 	Preview     struct {
-		Height int    `json:"height"`
-		Url    string `json:"url"`
-		Width  int    `json:"width"`
+		Height int     `json:"height"`
+		Url    *string `json:"url"`
+		Width  int     `json:"width"`
 	} `json:"preview"`
 	Rating        Ratings `json:"rating"`
 	Relationships struct {
 		Children          []int `json:"children"`
 		HasActiveChildren bool  `json:"has_active_children"`
 		HasChildren       bool  `json:"has_children"`
-		ParentId          int   `json:"parent_id"`
+		ParentId          *int  `json:"parent_id"`
 	} `json:"relationships"`
 	Sample struct {
 		Alternates struct {
-			N480p    *PostSampleAlternate `json:"480p,omitempty"`
-			N720p    *PostSampleAlternate `json:"720p,omitempty"`
+			Has      *bool                `json:"has,omitempty"`
 			Original *PostSampleAlternate `json:"original,omitempty"`
+			Samples  *struct {
+				N480p *PostSampleAlternate `json:"480p,omitempty"`
+				N720p *PostSampleAlternate `json:"720p,omitempty"`
+			} `json:"samples,omitempty"`
+			Variants *struct {
+				Mp4  *PostSampleAlternate `json:"mp4,omitempty"`
+				Webm *PostSampleAlternate `json:"webm,omitempty"`
+			} `json:"variants,omitempty"`
 		} `json:"alternates"`
-		Has    bool   `json:"has"`
-		Height int    `json:"height"`
-		Url    string `json:"url"`
-		Width  int    `json:"width"`
+		Has    bool    `json:"has"`
+		Height *int    `json:"height"`
+		Url    *string `json:"url"`
+		Width  *int    `json:"width"`
 	} `json:"sample"`
 	Score struct {
 		Down  int `json:"down"`
@@ -1387,7 +1441,7 @@ type PostApproval struct {
 type PostDisapproval struct {
 	CreatedAt time.Time             `json:"created_at"`
 	Id        int                   `json:"id"`
-	Message   string                `json:"message"`
+	Message   *string               `json:"message"`
 	PostId    int                   `json:"post_id"`
 	Reason    PostDisapprovalReason `json:"reason"`
 	UpdatedAt time.Time             `json:"updated_at"`
@@ -1401,7 +1455,7 @@ type PostDisapprovalReason string
 type PostEvent struct {
 	Action    PostEventActions `json:"action"`
 	CreatedAt time.Time        `json:"created_at"`
-	CreatorId string           `json:"creator_id"`
+	CreatorId *int             `json:"creator_id"`
 	Id        int              `json:"id"`
 	PostId    int              `json:"post_id"`
 }
@@ -1412,10 +1466,11 @@ type PostEventActions string
 // PostFlag defines model for PostFlag.
 type PostFlag struct {
 	CreatedAt  time.Time    `json:"created_at"`
-	CreatorId  string       `json:"creator_id"`
+	CreatorId  *int         `json:"creator_id"`
 	Id         int          `json:"id"`
 	IsDeletion bool         `json:"is_deletion"`
 	IsResolved bool         `json:"is_resolved"`
+	Note       *string      `json:"note"`
 	PostId     int          `json:"post_id"`
 	Reason     string       `json:"reason"`
 	Type       PostFlagType `json:"type"`
@@ -1427,7 +1482,7 @@ type PostFlagType string
 
 // PostReplacement defines model for PostReplacement.
 type PostReplacement struct {
-	ApproverId  int                   `json:"approver_id"`
+	ApproverId  *int                  `json:"approver_id"`
 	CreatedAt   time.Time             `json:"created_at"`
 	CreatorId   int                   `json:"creator_id"`
 	FileExt     string                `json:"file_ext"`
@@ -1449,24 +1504,12 @@ type PostReplacementStatus string
 
 // PostSampleAlternate defines model for PostSampleAlternate.
 type PostSampleAlternate struct {
-	Height int                             `json:"height"`
-	Type   PostSampleAlternateType         `json:"type"`
-	Urls   []PostSampleAlternate_Urls_Item `json:"urls"`
-	Width  int                             `json:"width"`
-}
-
-// PostSampleAlternateType defines model for PostSampleAlternate.Type.
-type PostSampleAlternateType string
-
-// PostSampleAlternateUrls0 defines model for .
-type PostSampleAlternateUrls0 = string
-
-// PostSampleAlternateUrls1 defines model for .
-type PostSampleAlternateUrls1 = string
-
-// PostSampleAlternate_Urls_Item defines model for PostSampleAlternate.urls.Item.
-type PostSampleAlternate_Urls_Item struct {
-	union json.RawMessage
+	Codec  string  `json:"codec"`
+	Fps    float32 `json:"fps"`
+	Height int     `json:"height"`
+	Size   int64   `json:"size"`
+	Url    string  `json:"url"`
+	Width  int     `json:"width"`
 }
 
 // PostSet defines model for PostSet.
@@ -1491,15 +1534,16 @@ type PostVersion struct {
 	Description         string    `json:"description"`
 	DescriptionChanged  bool      `json:"description_changed"`
 	Id                  int       `json:"id"`
-	LockedTags          string    `json:"locked_tags"`
+	IsHidden            bool      `json:"is_hidden"`
+	LockedTags          *string   `json:"locked_tags"`
 	ObsoleteAddedTags   string    `json:"obsolete_added_tags"`
 	ObsoleteRemovedTags string    `json:"obsolete_removed_tags"`
 	ParentChanged       bool      `json:"parent_changed"`
-	ParentId            string    `json:"parent_id"`
+	ParentId            *int      `json:"parent_id"`
 	PostId              int       `json:"post_id"`
 	Rating              Ratings   `json:"rating"`
 	RatingChanged       bool      `json:"rating_changed"`
-	Reason              string    `json:"reason"`
+	Reason              *string   `json:"reason"`
 	RemovedLockedTags   []string  `json:"removed_locked_tags"`
 	RemovedTags         []string  `json:"removed_tags"`
 	Source              string    `json:"source"`
@@ -1515,6 +1559,24 @@ type PostVersion struct {
 // Ratings defines model for Ratings.
 type Ratings string
 
+// RelatedTag defines model for RelatedTag.
+type RelatedTag struct {
+	CategoryId TagCategories `json:"category_id"`
+	Name       string        `json:"name"`
+}
+
+// StaffNote defines model for StaffNote.
+type StaffNote struct {
+	Body      string    `json:"body"`
+	CreatedAt time.Time `json:"created_at"`
+	CreatorId int       `json:"creator_id"`
+	Id        int       `json:"id"`
+	IsDeleted bool      `json:"is_deleted"`
+	UpdatedAt time.Time `json:"updated_at"`
+	UpdaterId int       `json:"updater_id"`
+	UserId    int       `json:"user_id"`
+}
+
 // Tag defines model for Tag.
 type Tag struct {
 	Category             TagCategories `json:"category"`
@@ -1524,24 +1586,24 @@ type Tag struct {
 	Name                 string        `json:"name"`
 	PostCount            int           `json:"post_count"`
 	RelatedTags          []string      `json:"related_tags"`
-	RelatedTagsUpdatedAt time.Time     `json:"related_tags_updated_at"`
+	RelatedTagsUpdatedAt *time.Time    `json:"related_tags_updated_at"`
 	UpdatedAt            time.Time     `json:"updated_at"`
 }
 
 // TagAlias defines model for TagAlias.
 type TagAlias struct {
 	AntecedentName string             `json:"antecedent_name"`
-	ApproverId     int                `json:"approver_id"`
+	ApproverId     *int               `json:"approver_id"`
 	ConsequentName string             `json:"consequent_name"`
-	CreatedAt      time.Time          `json:"created_at"`
+	CreatedAt      *time.Time         `json:"created_at"`
 	CreatorId      int                `json:"creator_id"`
-	ForumPostId    string             `json:"forum_post_id"`
-	ForumTopicId   string             `json:"forum_topic_id"`
+	ForumPostId    *int               `json:"forum_post_id"`
+	ForumTopicId   *int               `json:"forum_topic_id"`
 	Id             int                `json:"id"`
 	PostCount      int                `json:"post_count"`
 	Reason         string             `json:"reason"`
 	Status         TagRequestStatuses `json:"status"`
-	UpdatedAt      time.Time          `json:"updated_at"`
+	UpdatedAt      *time.Time         `json:"updated_at"`
 }
 
 // TagCategories defines model for TagCategories.
@@ -1550,13 +1612,13 @@ type TagCategories int
 // TagImplication defines model for TagImplication.
 type TagImplication struct {
 	AntecedentName  string             `json:"antecedent_name"`
-	ApproverId      int                `json:"approver_id"`
+	ApproverId      *int               `json:"approver_id"`
 	ConsequentName  string             `json:"consequent_name"`
 	CreatedAt       time.Time          `json:"created_at"`
 	CreatorId       int                `json:"creator_id"`
 	DescendantNames []string           `json:"descendant_names"`
-	ForumPostId     string             `json:"forum_post_id"`
-	ForumTopicId    string             `json:"forum_topic_id"`
+	ForumPostId     *int               `json:"forum_post_id"`
+	ForumTopicId    *int               `json:"forum_topic_id"`
 	Id              int                `json:"id"`
 	Reason          string             `json:"reason"`
 	Status          TagRequestStatuses `json:"status"`
@@ -1569,20 +1631,10 @@ type TagPreview struct {
 	A string `json:"a"`
 
 	// B The consequent, only present if type=alias or type=implication.
-	B        *string              `json:"b,omitempty"`
-	TagTypeA TagPreview_TagTypeA  `json:"tagTypeA"`
-	TagTypeB *TagPreview_TagTypeB `json:"tagTypeB,omitempty"`
-	Type     TagPreviewType       `json:"type"`
-}
-
-// TagPreview_TagTypeA defines model for TagPreview.TagTypeA.
-type TagPreview_TagTypeA struct {
-	union json.RawMessage
-}
-
-// TagPreview_TagTypeB defines model for TagPreview.TagTypeB.
-type TagPreview_TagTypeB struct {
-	union json.RawMessage
+	B        *string        `json:"b,omitempty"`
+	TagTypeA TagCategories  `json:"tagTypeA"`
+	TagTypeB *TagCategories `json:"tagTypeB,omitempty"`
+	Type     TagPreviewType `json:"type"`
 }
 
 // TagPreviewType defines model for TagPreview.Type.
@@ -1605,7 +1657,7 @@ type TagTypeVersion struct {
 
 // Takedown defines model for Takedown.
 type Takedown struct {
-	ApproverId   float32        `json:"approver_id"`
+	ApproverId   *int           `json:"approver_id"`
 	CreatedAt    time.Time      `json:"created_at"`
 	Id           int            `json:"id"`
 	PostCount    int            `json:"post_count"`
@@ -1619,18 +1671,18 @@ type TakedownStatus string
 
 // Ticket defines model for Ticket.
 type Ticket struct {
-	AccusedId float32 `json:"accused_id"`
+	AccusedId *int `json:"accused_id"`
 
 	// ClaimantId Only visible to Moderator+.
-	ClaimantId   *float32       `json:"claimant_id,omitempty"`
+	ClaimantId   *int           `json:"claimant_id"`
 	CreatedAt    time.Time      `json:"created_at"`
 	CreatorId    int            `json:"creator_id"`
 	DispId       float32        `json:"disp_id"`
-	HandlerId    float32        `json:"handler_id"`
+	HandlerId    *int           `json:"handler_id"`
 	Id           int            `json:"id"`
 	Qtype        TicketTypes    `json:"qtype"`
 	Reason       string         `json:"reason"`
-	ReportReason string         `json:"report_reason"`
+	ReportReason *string        `json:"report_reason"`
 	Response     string         `json:"response"`
 	Status       TicketStatuses `json:"status"`
 	UpdatedAt    time.Time      `json:"updated_at"`
@@ -1644,19 +1696,19 @@ type TicketTypes string
 
 // Upload defines model for Upload.
 type Upload struct {
-	Backtrace   string    `json:"backtrace"`
+	Backtrace   *string   `json:"backtrace"`
 	CreatedAt   time.Time `json:"created_at"`
 	Description string    `json:"description"`
-	FileExt     string    `json:"file_ext"`
-	FileSize    float32   `json:"file_size"`
+	FileExt     *string   `json:"file_ext"`
+	FileSize    *int      `json:"file_size"`
 	Id          int       `json:"id"`
-	ImageHeight float32   `json:"image_height"`
-	ImageWidth  float32   `json:"image_width"`
-	Md5         string    `json:"md5"`
+	ImageHeight *int      `json:"image_height"`
+	ImageWidth  *int      `json:"image_width"`
+	Md5         *string   `json:"md5"`
 	// Deprecated:
-	Md5Confirmation string  `json:"md5_confirmation"`
-	ParentId        string  `json:"parent_id"`
-	PostId          string  `json:"post_id"`
+	Md5Confirmation *string `json:"md5_confirmation"`
+	ParentId        *int    `json:"parent_id"`
+	PostId          *int    `json:"post_id"`
 	Rating          Ratings `json:"rating"`
 	Source          string  `json:"source"`
 
@@ -1685,7 +1737,7 @@ type UploadWhitelist struct {
 
 // User defines model for User.
 type User struct {
-	AvatarId        string    `json:"avatar_id"`
+	AvatarId        *int      `json:"avatar_id"`
 	BaseUploadLimit int       `json:"base_upload_limit"`
 	CanApprovePosts bool      `json:"can_approve_posts"`
 	CanUploadFree   bool      `json:"can_upload_free"`
@@ -1729,6 +1781,14 @@ type UserNameChangeRequest struct {
 // UserNameChangeRequestStatus defines model for UserNameChangeRequest.Status.
 type UserNameChangeRequestStatus string
 
+// WarningRecordType defines model for WarningRecordType.
+type WarningRecordType struct {
+	RecordType WarningRecordTypeRecordType `json:"record_type"`
+}
+
+// WarningRecordTypeRecordType defines model for WarningRecordType.RecordType.
+type WarningRecordTypeRecordType string
+
 // WarningTypes defines model for WarningTypes.
 type WarningTypes string
 
@@ -1743,7 +1803,7 @@ type WikiPage struct {
 	IsDeleted   bool          `json:"is_deleted"`
 	IsLocked    bool          `json:"is_locked"`
 	OtherNames  []string      `json:"other_names"`
-	Parent      string        `json:"parent"`
+	Parent      *string       `json:"parent"`
 	Title       string        `json:"title"`
 	UpdatedAt   time.Time     `json:"updated_at"`
 	UpdaterId   int           `json:"updater_id"`
@@ -1757,8 +1817,8 @@ type WikiPageVersion struct {
 	IsDeleted  bool      `json:"is_deleted"`
 	IsLocked   bool      `json:"is_locked"`
 	OtherNames []string  `json:"other_names"`
-	Parent     string    `json:"parent"`
-	Reason     string    `json:"reason"`
+	Parent     *string   `json:"parent"`
+	Reason     *string   `json:"reason"`
 	Title      string    `json:"title"`
 	UpdatedAt  time.Time `json:"updated_at"`
 	UpdaterId  int       `json:"updater_id"`
@@ -1767,6 +1827,9 @@ type WikiPageVersion struct {
 
 // Id defines model for id.
 type Id = int
+
+// IdOrName defines model for idOrName.
+type IdOrName = string
 
 // IpAddr defines model for ip_addr.
 type IpAddr = string
@@ -1777,41 +1840,31 @@ type Limit = int
 // Page defines model for page.
 type Page = int
 
-type AccessDeniedReason string
-type AccessDeniedSuccess string
-type MessageErrorSuccess string
-type NotFoundReason string
-type NotFoundSuccess string
-type WarningRecordType string
-
 // AccessDenied defines model for AccessDenied.
-type AccessDenied struct {
-	Reason  AccessDeniedReason  `json:"reason"`
-	Success AccessDeniedSuccess `json:"success"`
-}
+type AccessDenied = AccessDeniedResponse
 
 // ExpectedError defines model for ExpectedError.
 type ExpectedError struct {
-	Errors map[string]interface{} `json:"errors"`
+	Errors []string `json:"errors"`
 }
 
 // MessageError defines model for MessageError.
 type MessageError struct {
-	Code    *string             `json:"code,omitempty"`
-	Message string              `json:"message"`
-	Success MessageErrorSuccess `json:"success"`
+	Code    *string `json:"code"`
+	Message string  `json:"message"`
+	Success bool    `json:"success"`
 }
 
 // NotFound defines model for NotFound.
-type NotFound struct {
-	Reason  NotFoundReason  `json:"reason"`
-	Success NotFoundSuccess `json:"success"`
+type NotFound = NotFoundResponse
+
+// UserResponse defines model for UserResponse.
+type UserResponse struct {
+	union json.RawMessage
 }
 
 // Warning defines model for warning.
-type Warning struct {
-	RecordType WarningRecordType `json:"record_type"`
-}
+type Warning = WarningRecordType
 
 // GetAltListParams defines parameters for GetAltList.
 type GetAltListParams struct {
@@ -1950,7 +2003,7 @@ type CreateArtistFormdataBody struct {
 	ArtistIsLocked *bool `form:"artist[is_locked],omitempty" json:"artist[is_locked],omitempty"`
 
 	// ArtistLinkedUserId Only usable for Janitor+
-	ArtistLinkedUserId     *float32  `form:"artist[linked_user_id],omitempty" json:"artist[linked_user_id],omitempty"`
+	ArtistLinkedUserId     *int      `form:"artist[linked_user_id]" json:"artist[linked_user_id]"`
 	ArtistName             string    `form:"artist[name]" json:"artist[name]"`
 	ArtistNotes            *string   `form:"artist[notes],omitempty" json:"artist[notes],omitempty"`
 	ArtistOtherNames       *[]string `form:"artist[other_names],omitempty" json:"artist[other_names],omitempty"`
@@ -2148,14 +2201,6 @@ type EditBlipFormdataBody struct {
 	BlipBody *string `form:"blip[body],omitempty" json:"blip[body],omitempty"`
 }
 
-// MarkBlipJSONBody defines parameters for MarkBlip.
-type MarkBlipJSONBody struct {
-	RecordType MarkBlipJSONBodyRecordType `json:"record_type"`
-}
-
-// MarkBlipJSONBodyRecordType defines parameters for MarkBlip.
-type MarkBlipJSONBodyRecordType string
-
 // EditBulkUpdateRequestFormdataBody defines parameters for EditBulkUpdateRequest.
 type EditBulkUpdateRequestFormdataBody struct {
 	// BulkUpdateRequestForumPostId You must be Admin+.
@@ -2287,14 +2332,6 @@ type CreateCommentVoteParams struct {
 // CreateCommentVoteParamsScore defines parameters for CreateCommentVote.
 type CreateCommentVoteParamsScore int
 
-// MarkCommentJSONBody defines parameters for MarkComment.
-type MarkCommentJSONBody struct {
-	RecordType MarkCommentJSONBodyRecordType `json:"record_type"`
-}
-
-// MarkCommentJSONBodyRecordType defines parameters for MarkComment.
-type MarkCommentJSONBodyRecordType string
-
 // SearchDMailsParams defines parameters for SearchDMails.
 type SearchDMailsParams struct {
 	// Limit The maximum number of results to return. Between 0 and 320.
@@ -2403,14 +2440,6 @@ type CreateForumPostVoteFormdataBody struct {
 
 // CreateForumPostVoteFormdataBodyForumPostVoteScore defines parameters for CreateForumPostVote.
 type CreateForumPostVoteFormdataBodyForumPostVoteScore int
-
-// MarkForumPostJSONBody defines parameters for MarkForumPost.
-type MarkForumPostJSONBody struct {
-	RecordType MarkForumPostJSONBodyRecordType `json:"record_type"`
-}
-
-// MarkForumPostJSONBodyRecordType defines parameters for MarkForumPost.
-type MarkForumPostJSONBodyRecordType string
 
 // SearchForumTopicsParams defines parameters for SearchForumTopics.
 type SearchForumTopicsParams struct {
@@ -2612,7 +2641,7 @@ type SearchModActionsParams struct {
 	SearchOrder       *SearchModActionsParamsSearchOrder `form:"search[order],omitempty" json:"search[order],omitempty"`
 	SearchCreatorId   *int                               `form:"search[creator_id],omitempty" json:"search[creator_id],omitempty"`
 	SearchCreatorName *string                            `form:"search[creator_name],omitempty" json:"search[creator_name],omitempty"`
-	SearchAction      *ModactionActions                  `form:"search[action],omitempty" json:"search[action],omitempty"`
+	SearchAction      *ModActionActions                  `form:"search[action],omitempty" json:"search[action],omitempty"`
 }
 
 // SearchModActionsParamsSearchOrder defines parameters for SearchModActions.
@@ -2973,6 +3002,7 @@ type SearchPostFlagsParamsSearchOrder string
 
 // CreatePostFlagFormdataBody defines parameters for CreatePostFlag.
 type CreatePostFlagFormdataBody struct {
+	PostFlagNote       *string                                      `form:"post_flag[note],omitempty" json:"post_flag[note],omitempty"`
 	PostFlagParentId   *int                                         `form:"post_flag[parent_id],omitempty" json:"post_flag[parent_id],omitempty"`
 	PostFlagPostId     int                                          `form:"post_flag[post_id]" json:"post_flag[post_id]"`
 	PostFlagReasonName CreatePostFlagFormdataBodyPostFlagReasonName `form:"post_flag[reason_name]" json:"post_flag[reason_name]"`
@@ -2998,10 +3028,15 @@ type SearchPostReplacementsParams struct {
 	SearchCreatorName           *string `form:"search[creator_name],omitempty" json:"search[creator_name],omitempty"`
 	SearchApproverId            *int    `form:"search[approver_id],omitempty" json:"search[approver_id],omitempty"`
 	SearchApproverName          *string `form:"search[approver_name],omitempty" json:"search[approver_name],omitempty"`
-	SearchRejectorId            *int    `form:"search[rejector_id],omitempty" json:"search[rejector_id],omitempty"`
-	SearchRejectorName          *string `form:"search[rejector_name],omitempty" json:"search[rejector_name],omitempty"`
 	SearchUploaderNameOnApprove *string `form:"search[uploader_name_on_approve],omitempty" json:"search[uploader_name_on_approve],omitempty"`
 	SearchUploaderIdOnApprove   *int    `form:"search[uploader_id_on_approve],omitempty" json:"search[uploader_id_on_approve],omitempty"`
+
+	// SearchPostId Allows a comma separated list of up to 100 post IDs.
+	SearchPostId    *string `form:"search[post_id],omitempty" json:"search[post_id],omitempty"`
+	SearchReason    *string `form:"search[reason],omitempty" json:"search[reason],omitempty"`
+	SearchPenalized *bool   `form:"search[penalized],omitempty" json:"search[penalized],omitempty"`
+	SearchSource    *string `form:"search[source],omitempty" json:"search[source],omitempty"`
+	SearchFileName  *string `form:"search[file_name],omitempty" json:"search[file_name],omitempty"`
 }
 
 // CreatePostReplacementMultipartBody defines parameters for CreatePostReplacement.
@@ -3016,11 +3051,6 @@ type CreatePostReplacementMultipartBody struct {
 	// PostReplacementReplacementUrl Mutually exclusive with replacement_file.
 	PostReplacementReplacementUrl *string `json:"post_replacement[replacement_url],omitempty"`
 	PostReplacementSource         *string `json:"post_replacement[source],omitempty"`
-}
-
-// RejectPostReplacementJSONBody defines parameters for RejectPostReplacement.
-type RejectPostReplacementJSONBody struct {
-	Reason *string `json:"reason,omitempty"`
 }
 
 // SearchPostSetsParams defines parameters for SearchPostSets.
@@ -3162,7 +3192,10 @@ type EditPostFormdataBody struct {
 	// PostHideFromSearchEngines You must be Admin+.
 	PostHideFromSearchEngines *bool `form:"post[hide_from_search_engines],omitempty" json:"post[hide_from_search_engines],omitempty"`
 
-	// PostIsCommentLocked You must be Admin+.
+	// PostIsCommentDisabled You must be Admin+.
+	PostIsCommentDisabled *bool `form:"post[is_comment_disabled],omitempty" json:"post[is_comment_disabled],omitempty"`
+
+	// PostIsCommentLocked You must be Moderator+.
 	PostIsCommentLocked *bool `form:"post[is_comment_locked],omitempty" json:"post[is_comment_locked],omitempty"`
 
 	// PostIsNoteLocked You must be Janitor+.
@@ -3246,6 +3279,41 @@ type CreatePostVoteParamsScore int
 type ListBulkRelatedTagsJSONBody struct {
 	CategoryId *TagCategories `json:"category_id,omitempty"`
 	Query      *string        `json:"query,omitempty"`
+}
+
+// SearchStaffNotesParams defines parameters for SearchStaffNotes.
+type SearchStaffNotesParams struct {
+	// Limit The maximum number of results to return. Between 0 and 320.
+	Limit *Limit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Page The page number of results to get. Between 1 and 750.
+	Page *Page `form:"page,omitempty" json:"page,omitempty"`
+
+	// SearchId Search for a specific id.
+	SearchId                *Id                                `form:"search[id],omitempty" json:"search[id],omitempty"`
+	SearchOrder             *SearchStaffNotesParamsSearchOrder `form:"search[order],omitempty" json:"search[order],omitempty"`
+	SearchCreatorId         *int                               `form:"search[creator_id],omitempty" json:"search[creator_id],omitempty"`
+	SearchCreatorName       *string                            `form:"search[creator_name],omitempty" json:"search[creator_name],omitempty"`
+	SearchUpdaterId         *int                               `form:"search[updater_id],omitempty" json:"search[updater_id],omitempty"`
+	SearchUpdaterName       *string                            `form:"search[updater_name],omitempty" json:"search[updater_name],omitempty"`
+	SearchUserId            *int                               `form:"search[user_id],omitempty" json:"search[user_id],omitempty"`
+	SearchUserName          *string                            `form:"search[user_name],omitempty" json:"search[user_name],omitempty"`
+	SearchBodyMatches       *string                            `form:"search[body_matches],omitempty" json:"search[body_matches],omitempty"`
+	SearchWithoutSystemUser *bool                              `form:"search[without_system_user],omitempty" json:"search[without_system_user],omitempty"`
+	SearchIncludeDeleted    *bool                              `form:"search[include_deleted],omitempty" json:"search[include_deleted],omitempty"`
+}
+
+// SearchStaffNotesParamsSearchOrder defines parameters for SearchStaffNotes.
+type SearchStaffNotesParamsSearchOrder string
+
+// CreateStaffNoteFormdataBody defines parameters for CreateStaffNote.
+type CreateStaffNoteFormdataBody struct {
+	StaffNoteBody string `form:"staff_note[body]" json:"staff_note[body]"`
+}
+
+// EditStaffNoteFormdataBody defines parameters for EditStaffNote.
+type EditStaffNoteFormdataBody struct {
+	StaffNoteBody *string `form:"staff_note[body],omitempty" json:"staff_note[body],omitempty"`
 }
 
 // CreateTagAliasFormdataBody defines parameters for CreateTagAlias.
@@ -3431,6 +3499,9 @@ type SearchTakedownsParams struct {
 
 	// SearchNotes Must be Moderator+ to use.
 	SearchNotes *string `form:"search[notes],omitempty" json:"search[notes],omitempty"`
+
+	// SearchCreatorLoggedIn Must be Moderator+ to use.
+	SearchCreatorLoggedIn *bool `form:"search[creator_logged_in],omitempty" json:"search[creator_logged_in],omitempty"`
 
 	// SearchEmail Must be Admin+ to use.
 	SearchEmail *string `form:"search[email],omitempty" json:"search[email],omitempty"`
@@ -3652,7 +3723,7 @@ type SearchUserFeedbacksParams struct {
 	SearchId    *Id                                   `form:"search[id],omitempty" json:"search[id],omitempty"`
 	SearchOrder *SearchUserFeedbacksParamsSearchOrder `form:"search[order],omitempty" json:"search[order],omitempty"`
 
-	// SearchDeleted You must be Moderator+.
+	// SearchDeleted You must be Janitor+.
 	SearchDeleted     *SearchUserFeedbacksParamsSearchDeleted `form:"search[deleted],omitempty" json:"search[deleted],omitempty"`
 	SearchBodyMatches *string                                 `form:"search[body_matches],omitempty" json:"search[body_matches],omitempty"`
 	SearchUserId      *int                                    `form:"search[user_id],omitempty" json:"search[user_id],omitempty"`
@@ -3760,6 +3831,7 @@ type EditCurrentUserFormdataBody struct {
 	UserEnablePrivacyMode         *bool   `form:"user[enable_privacy_mode],omitempty" json:"user[enable_privacy_mode],omitempty"`
 	UserEnableSafeMode            *bool   `form:"user[enable_safe_mode],omitempty" json:"user[enable_safe_mode],omitempty"`
 	UserFavoriteTags              *string `form:"user[favorite_tags],omitempty" json:"user[favorite_tags],omitempty"`
+	UserForumNotificationDot      *bool   `form:"user[forum_notification_dot],omitempty" json:"user[forum_notification_dot],omitempty"`
 	UserHideComments              *bool   `form:"user[hide_comments],omitempty" json:"user[hide_comments],omitempty"`
 	UserPerPage                   *int    `form:"user[per_page],omitempty" json:"user[per_page],omitempty"`
 	UserProfileAbout              *string `form:"user[profile_about],omitempty" json:"user[profile_about],omitempty"`
@@ -3855,8 +3927,12 @@ type CreateWikiPageFormdataBody struct {
 
 // EditWikiPageFormdataBody defines parameters for EditWikiPage.
 type EditWikiPageFormdataBody struct {
-	WikiPageBody       *string `form:"wiki_page[body],omitempty" json:"wiki_page[body],omitempty"`
-	WikiPageEditReason *string `form:"wiki_page[edit_reason],omitempty" json:"wiki_page[edit_reason],omitempty"`
+	WikiPageBody       *string        `form:"wiki_page[body],omitempty" json:"wiki_page[body],omitempty"`
+	WikiPageCategoryId *TagCategories `form:"wiki_page[category_id],omitempty" json:"wiki_page[category_id],omitempty"`
+
+	// WikiPageCategoryIsLocked Must be Admin+ to use.
+	WikiPageCategoryIsLocked *bool   `form:"wiki_page[category_is_locked],omitempty" json:"wiki_page[category_is_locked],omitempty"`
+	WikiPageEditReason       *string `form:"wiki_page[edit_reason],omitempty" json:"wiki_page[edit_reason],omitempty"`
 
 	// WikiPageIsDeleted Must be Janitor+ to use.
 	WikiPageIsDeleted *bool `form:"wiki_page[is_deleted],omitempty" json:"wiki_page[is_deleted],omitempty"`
@@ -3893,7 +3969,7 @@ type CreateBlipFormdataRequestBody CreateBlipFormdataBody
 type EditBlipFormdataRequestBody EditBlipFormdataBody
 
 // MarkBlipJSONRequestBody defines body for MarkBlip for application/json ContentType.
-type MarkBlipJSONRequestBody MarkBlipJSONBody
+type MarkBlipJSONRequestBody = WarningRecordType
 
 // EditBulkUpdateRequestFormdataRequestBody defines body for EditBulkUpdateRequest for application/x-www-form-urlencoded ContentType.
 type EditBulkUpdateRequestFormdataRequestBody EditBulkUpdateRequestFormdataBody
@@ -3908,7 +3984,7 @@ type CreateCommentFormdataRequestBody CreateCommentFormdataBody
 type EditCommentFormdataRequestBody EditCommentFormdataBody
 
 // MarkCommentJSONRequestBody defines body for MarkComment for application/json ContentType.
-type MarkCommentJSONRequestBody MarkCommentJSONBody
+type MarkCommentJSONRequestBody = WarningRecordType
 
 // PreviewDTextJSONRequestBody defines body for PreviewDText for application/json ContentType.
 type PreviewDTextJSONRequestBody PreviewDTextJSONBody
@@ -3929,7 +4005,7 @@ type EditForumPostFormdataRequestBody EditForumPostFormdataBody
 type CreateForumPostVoteFormdataRequestBody CreateForumPostVoteFormdataBody
 
 // MarkForumPostJSONRequestBody defines body for MarkForumPost for application/json ContentType.
-type MarkForumPostJSONRequestBody MarkForumPostJSONBody
+type MarkForumPostJSONRequestBody = WarningRecordType
 
 // CreateForumTopicFormdataRequestBody defines body for CreateForumTopic for application/x-www-form-urlencoded ContentType.
 type CreateForumTopicFormdataRequestBody CreateForumTopicFormdataBody
@@ -4012,9 +4088,6 @@ type CreatePostFlagFormdataRequestBody CreatePostFlagFormdataBody
 // CreatePostReplacementMultipartRequestBody defines body for CreatePostReplacement for multipart/form-data ContentType.
 type CreatePostReplacementMultipartRequestBody CreatePostReplacementMultipartBody
 
-// RejectPostReplacementJSONRequestBody defines body for RejectPostReplacement for application/json ContentType.
-type RejectPostReplacementJSONRequestBody RejectPostReplacementJSONBody
-
 // CreatePostSetFormdataRequestBody defines body for CreatePostSet for application/x-www-form-urlencoded ContentType.
 type CreatePostSetFormdataRequestBody CreatePostSetFormdataBody
 
@@ -4044,6 +4117,12 @@ type MarkPostAsTranslatedJSONRequestBody MarkPostAsTranslatedJSONBody
 
 // ListBulkRelatedTagsJSONRequestBody defines body for ListBulkRelatedTags for application/json ContentType.
 type ListBulkRelatedTagsJSONRequestBody ListBulkRelatedTagsJSONBody
+
+// CreateStaffNoteFormdataRequestBody defines body for CreateStaffNote for application/x-www-form-urlencoded ContentType.
+type CreateStaffNoteFormdataRequestBody CreateStaffNoteFormdataBody
+
+// EditStaffNoteFormdataRequestBody defines body for EditStaffNote for application/x-www-form-urlencoded ContentType.
+type EditStaffNoteFormdataRequestBody EditStaffNoteFormdataBody
 
 // CreateTagAliasFormdataRequestBody defines body for CreateTagAlias for application/x-www-form-urlencoded ContentType.
 type CreateTagAliasFormdataRequestBody CreateTagAliasFormdataBody
@@ -4111,22 +4190,22 @@ type CreateWikiPageFormdataRequestBody CreateWikiPageFormdataBody
 // EditWikiPageFormdataRequestBody defines body for EditWikiPage for application/x-www-form-urlencoded ContentType.
 type EditWikiPageFormdataRequestBody EditWikiPageFormdataBody
 
-// AsWarningTypes returns the union data inside the Comment_WarningType as a WarningTypes
-func (t Comment_WarningType) AsWarningTypes() (WarningTypes, error) {
-	var body WarningTypes
+// AsFullUser returns the union data inside the UserResponse as a FullUser
+func (t UserResponse) AsFullUser() (FullUser, error) {
+	var body FullUser
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromWarningTypes overwrites any union data inside the Comment_WarningType as the provided WarningTypes
-func (t *Comment_WarningType) FromWarningTypes(v WarningTypes) error {
+// FromFullUser overwrites any union data inside the UserResponse as the provided FullUser
+func (t *UserResponse) FromFullUser(v FullUser) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeWarningTypes performs a merge with any union data inside the Comment_WarningType, using the provided WarningTypes
-func (t *Comment_WarningType) MergeWarningTypes(v WarningTypes) error {
+// MergeFullUser performs a merge with any union data inside the UserResponse, using the provided FullUser
+func (t *UserResponse) MergeFullUser(v FullUser) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -4137,182 +4216,38 @@ func (t *Comment_WarningType) MergeWarningTypes(v WarningTypes) error {
 	return err
 }
 
-func (t Comment_WarningType) MarshalJSON() ([]byte, error) {
+// AsFullCurrentUser returns the union data inside the UserResponse as a FullCurrentUser
+func (t UserResponse) AsFullCurrentUser() (FullCurrentUser, error) {
+	var body FullCurrentUser
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromFullCurrentUser overwrites any union data inside the UserResponse as the provided FullCurrentUser
+func (t *UserResponse) FromFullCurrentUser(v FullCurrentUser) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeFullCurrentUser performs a merge with any union data inside the UserResponse, using the provided FullCurrentUser
+func (t *UserResponse) MergeFullCurrentUser(v FullCurrentUser) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t UserResponse) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *Comment_WarningType) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsWarningTypes returns the union data inside the ForumPost_WarningType as a WarningTypes
-func (t ForumPost_WarningType) AsWarningTypes() (WarningTypes, error) {
-	var body WarningTypes
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromWarningTypes overwrites any union data inside the ForumPost_WarningType as the provided WarningTypes
-func (t *ForumPost_WarningType) FromWarningTypes(v WarningTypes) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeWarningTypes performs a merge with any union data inside the ForumPost_WarningType, using the provided WarningTypes
-func (t *ForumPost_WarningType) MergeWarningTypes(v WarningTypes) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ForumPost_WarningType) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ForumPost_WarningType) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsPostSampleAlternateUrls0 returns the union data inside the PostSampleAlternate_Urls_Item as a PostSampleAlternateUrls0
-func (t PostSampleAlternate_Urls_Item) AsPostSampleAlternateUrls0() (PostSampleAlternateUrls0, error) {
-	var body PostSampleAlternateUrls0
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostSampleAlternateUrls0 overwrites any union data inside the PostSampleAlternate_Urls_Item as the provided PostSampleAlternateUrls0
-func (t *PostSampleAlternate_Urls_Item) FromPostSampleAlternateUrls0(v PostSampleAlternateUrls0) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostSampleAlternateUrls0 performs a merge with any union data inside the PostSampleAlternate_Urls_Item, using the provided PostSampleAlternateUrls0
-func (t *PostSampleAlternate_Urls_Item) MergePostSampleAlternateUrls0(v PostSampleAlternateUrls0) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostSampleAlternateUrls1 returns the union data inside the PostSampleAlternate_Urls_Item as a PostSampleAlternateUrls1
-func (t PostSampleAlternate_Urls_Item) AsPostSampleAlternateUrls1() (PostSampleAlternateUrls1, error) {
-	var body PostSampleAlternateUrls1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostSampleAlternateUrls1 overwrites any union data inside the PostSampleAlternate_Urls_Item as the provided PostSampleAlternateUrls1
-func (t *PostSampleAlternate_Urls_Item) FromPostSampleAlternateUrls1(v PostSampleAlternateUrls1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostSampleAlternateUrls1 performs a merge with any union data inside the PostSampleAlternate_Urls_Item, using the provided PostSampleAlternateUrls1
-func (t *PostSampleAlternate_Urls_Item) MergePostSampleAlternateUrls1(v PostSampleAlternateUrls1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostSampleAlternate_Urls_Item) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostSampleAlternate_Urls_Item) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsTagCategories returns the union data inside the TagPreview_TagTypeA as a TagCategories
-func (t TagPreview_TagTypeA) AsTagCategories() (TagCategories, error) {
-	var body TagCategories
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromTagCategories overwrites any union data inside the TagPreview_TagTypeA as the provided TagCategories
-func (t *TagPreview_TagTypeA) FromTagCategories(v TagCategories) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeTagCategories performs a merge with any union data inside the TagPreview_TagTypeA, using the provided TagCategories
-func (t *TagPreview_TagTypeA) MergeTagCategories(v TagCategories) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t TagPreview_TagTypeA) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *TagPreview_TagTypeA) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsTagCategories returns the union data inside the TagPreview_TagTypeB as a TagCategories
-func (t TagPreview_TagTypeB) AsTagCategories() (TagCategories, error) {
-	var body TagCategories
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromTagCategories overwrites any union data inside the TagPreview_TagTypeB as the provided TagCategories
-func (t *TagPreview_TagTypeB) FromTagCategories(v TagCategories) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeTagCategories performs a merge with any union data inside the TagPreview_TagTypeB, using the provided TagCategories
-func (t *TagPreview_TagTypeB) MergeTagCategories(v TagCategories) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t TagPreview_TagTypeB) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *TagPreview_TagTypeB) UnmarshalJSON(b []byte) error {
+func (t *UserResponse) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -4413,16 +4348,16 @@ type ClientInterface interface {
 	CreateArtistWithFormdataBody(ctx context.Context, body CreateArtistFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeleteArtist request
-	DeleteArtist(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DeleteArtist(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetArtist request
-	GetArtist(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	GetArtist(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// EditArtistWithBody request with any body
-	EditArtistWithBody(ctx context.Context, idOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	EditArtistWithBody(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// RevertArtist request
-	RevertArtist(ctx context.Context, idOrName string, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+	RevertArtist(ctx context.Context, idOrName IdOrName, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// SearchAvoidPostingVersions request
 	SearchAvoidPostingVersions(ctx context.Context, params *SearchAvoidPostingVersionsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -4436,21 +4371,21 @@ type ClientInterface interface {
 	CreateAvoidPostingWithFormdataBody(ctx context.Context, body CreateAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DestroyAvoidPosting request
-	DestroyAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DestroyAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetAvoidPosting request
-	GetAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	GetAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// EditAvoidPostingWithBody request with any body
-	EditAvoidPostingWithBody(ctx context.Context, idOrArtistName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	EditAvoidPostingWithBody(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	EditAvoidPostingWithFormdataBody(ctx context.Context, idOrArtistName string, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	EditAvoidPostingWithFormdataBody(ctx context.Context, idOrName IdOrName, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeleteAvoidPosting request
-	DeleteAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	DeleteAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// UndeleteAvoidPosting request
-	UndeleteAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	UndeleteAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// SearchBans request
 	SearchBans(ctx context.Context, params *SearchBansParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -4555,8 +4490,8 @@ type ClientInterface interface {
 	// SearchDMails request
 	SearchDMails(ctx context.Context, params *SearchDMailsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// MarkAllDMailsAsUnread request
-	MarkAllDMailsAsUnread(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// MarkAllDMailsAsRead request
+	MarkAllDMailsAsRead(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeleteDMail request
 	DeleteDMail(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -4732,6 +4667,9 @@ type ClientInterface interface {
 	// SearchModActions request
 	SearchModActions(ctx context.Context, params *SearchModActionsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// GetModAction request
+	GetModAction(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// UnapprovePostWithBody request with any body
 	UnapprovePostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -4885,10 +4823,8 @@ type ClientInterface interface {
 	// PromotePostReplacement request
 	PromotePostReplacement(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// RejectPostReplacementWithBody request with any body
-	RejectPostReplacementWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	RejectPostReplacement(ctx context.Context, id int, body RejectPostReplacementJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// RejectPostReplacement request
+	RejectPostReplacement(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// TogglePostReplacementPenalty request
 	TogglePostReplacementPenalty(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -4932,6 +4868,12 @@ type ClientInterface interface {
 
 	// SearchPostVersions request
 	SearchPostVersions(ctx context.Context, params *SearchPostVersionsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// HidePostVersion request
+	HidePostVersion(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UnhidePostVersion request
+	UnhidePostVersion(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeletePostVotes request
 	DeletePostVotes(ctx context.Context, params *DeletePostVotesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -4988,6 +4930,28 @@ type ClientInterface interface {
 
 	ListBulkRelatedTags(ctx context.Context, body ListBulkRelatedTagsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// SearchStaffNotes request
+	SearchStaffNotes(ctx context.Context, params *SearchStaffNotesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateStaffNoteWithBody request with any body
+	CreateStaffNoteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CreateStaffNoteWithFormdataBody(ctx context.Context, body CreateStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetStaffNote request
+	GetStaffNote(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// EditStaffNoteWithBody request with any body
+	EditStaffNoteWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	EditStaffNoteWithFormdataBody(ctx context.Context, id int, body EditStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteStaffNote request
+	DeleteStaffNote(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UndeleteStaffNote request
+	UndeleteStaffNote(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// CreateTagAliasWithBody request with any body
 	CreateTagAliasWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5041,13 +5005,19 @@ type ClientInterface interface {
 	// PreviewTags request
 	PreviewTags(ctx context.Context, params *PreviewTagsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// DeleteTag request
+	DeleteTag(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetTag request
-	GetTag(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	GetTag(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// EditTagWithBody request with any body
 	EditTagWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	EditTagWithFormdataBody(ctx context.Context, id int, body EditTagFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetTagCorrection request
+	GetTagCorrection(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// CorrectTagWithBody request with any body
 	CorrectTagWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5135,6 +5105,9 @@ type ClientInterface interface {
 	// UploadPostWithBody request with any body
 	UploadPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// GetUpload request
+	GetUpload(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// SearchUserFeedbacks request
 	SearchUserFeedbacks(ctx context.Context, params *SearchUserFeedbacksParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5174,9 +5147,6 @@ type ClientInterface interface {
 	// SearchUsers request
 	SearchUsers(ctx context.Context, params *SearchUsersParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GetCurrentUser request
-	GetCurrentUser(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// GetUser request
 	GetUser(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5184,6 +5154,18 @@ type ClientInterface interface {
 	EditCurrentUserWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	EditCurrentUserWithFormdataBody(ctx context.Context, id int, body EditCurrentUserFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// FixSpecificUserCounts request
+	FixSpecificUserCounts(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ClearUserFavorites request
+	ClearUserFavorites(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ToggleUserUploads request
+	ToggleUserUploads(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetUserUploadLimit request
+	GetUserUploadLimit(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// RevertWikiPage request
 	RevertWikiPage(ctx context.Context, id int, params *RevertWikiPageParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5310,7 +5292,7 @@ func (c *Client) CreateArtistWithFormdataBody(ctx context.Context, body CreateAr
 	return c.Client.Do(req)
 }
 
-func (c *Client) DeleteArtist(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+func (c *Client) DeleteArtist(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeleteArtistRequest(c.Server, idOrName)
 	if err != nil {
 		return nil, err
@@ -5322,7 +5304,7 @@ func (c *Client) DeleteArtist(ctx context.Context, idOrName string, reqEditors .
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetArtist(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+func (c *Client) GetArtist(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetArtistRequest(c.Server, idOrName)
 	if err != nil {
 		return nil, err
@@ -5334,7 +5316,7 @@ func (c *Client) GetArtist(ctx context.Context, idOrName string, reqEditors ...R
 	return c.Client.Do(req)
 }
 
-func (c *Client) EditArtistWithBody(ctx context.Context, idOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+func (c *Client) EditArtistWithBody(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewEditArtistRequestWithBody(c.Server, idOrName, contentType, body)
 	if err != nil {
 		return nil, err
@@ -5346,7 +5328,7 @@ func (c *Client) EditArtistWithBody(ctx context.Context, idOrName string, conten
 	return c.Client.Do(req)
 }
 
-func (c *Client) RevertArtist(ctx context.Context, idOrName string, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+func (c *Client) RevertArtist(ctx context.Context, idOrName IdOrName, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewRevertArtistRequest(c.Server, idOrName, params)
 	if err != nil {
 		return nil, err
@@ -5406,8 +5388,8 @@ func (c *Client) CreateAvoidPostingWithFormdataBody(ctx context.Context, body Cr
 	return c.Client.Do(req)
 }
 
-func (c *Client) DestroyAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDestroyAvoidPostingRequest(c.Server, idOrArtistName)
+func (c *Client) DestroyAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDestroyAvoidPostingRequest(c.Server, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -5418,8 +5400,8 @@ func (c *Client) DestroyAvoidPosting(ctx context.Context, idOrArtistName string,
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetAvoidPostingRequest(c.Server, idOrArtistName)
+func (c *Client) GetAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetAvoidPostingRequest(c.Server, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -5430,8 +5412,8 @@ func (c *Client) GetAvoidPosting(ctx context.Context, idOrArtistName string, req
 	return c.Client.Do(req)
 }
 
-func (c *Client) EditAvoidPostingWithBody(ctx context.Context, idOrArtistName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewEditAvoidPostingRequestWithBody(c.Server, idOrArtistName, contentType, body)
+func (c *Client) EditAvoidPostingWithBody(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewEditAvoidPostingRequestWithBody(c.Server, idOrName, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -5442,8 +5424,8 @@ func (c *Client) EditAvoidPostingWithBody(ctx context.Context, idOrArtistName st
 	return c.Client.Do(req)
 }
 
-func (c *Client) EditAvoidPostingWithFormdataBody(ctx context.Context, idOrArtistName string, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewEditAvoidPostingRequestWithFormdataBody(c.Server, idOrArtistName, body)
+func (c *Client) EditAvoidPostingWithFormdataBody(ctx context.Context, idOrName IdOrName, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewEditAvoidPostingRequestWithFormdataBody(c.Server, idOrName, body)
 	if err != nil {
 		return nil, err
 	}
@@ -5454,8 +5436,8 @@ func (c *Client) EditAvoidPostingWithFormdataBody(ctx context.Context, idOrArtis
 	return c.Client.Do(req)
 }
 
-func (c *Client) DeleteAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeleteAvoidPostingRequest(c.Server, idOrArtistName)
+func (c *Client) DeleteAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteAvoidPostingRequest(c.Server, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -5466,8 +5448,8 @@ func (c *Client) DeleteAvoidPosting(ctx context.Context, idOrArtistName string, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) UndeleteAvoidPosting(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewUndeleteAvoidPostingRequest(c.Server, idOrArtistName)
+func (c *Client) UndeleteAvoidPosting(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUndeleteAvoidPostingRequest(c.Server, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -5922,8 +5904,8 @@ func (c *Client) SearchDMails(ctx context.Context, params *SearchDMailsParams, r
 	return c.Client.Do(req)
 }
 
-func (c *Client) MarkAllDMailsAsUnread(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewMarkAllDMailsAsUnreadRequest(c.Server)
+func (c *Client) MarkAllDMailsAsRead(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewMarkAllDMailsAsReadRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -6690,6 +6672,18 @@ func (c *Client) SearchModActions(ctx context.Context, params *SearchModActionsP
 	return c.Client.Do(req)
 }
 
+func (c *Client) GetModAction(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetModActionRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) UnapprovePostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewUnapprovePostRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -7362,20 +7356,8 @@ func (c *Client) PromotePostReplacement(ctx context.Context, id int, reqEditors 
 	return c.Client.Do(req)
 }
 
-func (c *Client) RejectPostReplacementWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRejectPostReplacementRequestWithBody(c.Server, id, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) RejectPostReplacement(ctx context.Context, id int, body RejectPostReplacementJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewRejectPostReplacementRequest(c.Server, id, body)
+func (c *Client) RejectPostReplacement(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRejectPostReplacementRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -7568,6 +7550,30 @@ func (c *Client) UpdatePostSetPostsWithFormdataBody(ctx context.Context, id int,
 
 func (c *Client) SearchPostVersions(ctx context.Context, params *SearchPostVersionsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewSearchPostVersionsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) HidePostVersion(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewHidePostVersionRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UnhidePostVersion(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUnhidePostVersionRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -7818,6 +7824,102 @@ func (c *Client) ListBulkRelatedTags(ctx context.Context, body ListBulkRelatedTa
 	return c.Client.Do(req)
 }
 
+func (c *Client) SearchStaffNotes(ctx context.Context, params *SearchStaffNotesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSearchStaffNotesRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CreateStaffNoteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateStaffNoteRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CreateStaffNoteWithFormdataBody(ctx context.Context, body CreateStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateStaffNoteRequestWithFormdataBody(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetStaffNote(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetStaffNoteRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) EditStaffNoteWithBody(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewEditStaffNoteRequestWithBody(c.Server, id, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) EditStaffNoteWithFormdataBody(ctx context.Context, id int, body EditStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewEditStaffNoteRequestWithFormdataBody(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeleteStaffNote(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteStaffNoteRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UndeleteStaffNote(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUndeleteStaffNoteRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) CreateTagAliasWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCreateTagAliasRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -8046,7 +8148,19 @@ func (c *Client) PreviewTags(ctx context.Context, params *PreviewTagsParams, req
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetTag(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+func (c *Client) DeleteTag(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteTagRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetTag(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetTagRequest(c.Server, id)
 	if err != nil {
 		return nil, err
@@ -8072,6 +8186,18 @@ func (c *Client) EditTagWithBody(ctx context.Context, id int, contentType string
 
 func (c *Client) EditTagWithFormdataBody(ctx context.Context, id int, body EditTagFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewEditTagRequestWithFormdataBody(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetTagCorrection(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetTagCorrectionRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -8466,6 +8592,18 @@ func (c *Client) UploadPostWithBody(ctx context.Context, contentType string, bod
 	return c.Client.Do(req)
 }
 
+func (c *Client) GetUpload(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetUploadRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) SearchUserFeedbacks(ctx context.Context, params *SearchUserFeedbacksParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewSearchUserFeedbacksRequest(c.Server, params)
 	if err != nil {
@@ -8634,18 +8772,6 @@ func (c *Client) SearchUsers(ctx context.Context, params *SearchUsersParams, req
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetCurrentUser(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetCurrentUserRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 func (c *Client) GetUser(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetUserRequest(c.Server, id)
 	if err != nil {
@@ -8672,6 +8798,54 @@ func (c *Client) EditCurrentUserWithBody(ctx context.Context, id int, contentTyp
 
 func (c *Client) EditCurrentUserWithFormdataBody(ctx context.Context, id int, body EditCurrentUserFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewEditCurrentUserRequestWithFormdataBody(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) FixSpecificUserCounts(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewFixSpecificUserCountsRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ClearUserFavorites(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewClearUserFavoritesRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ToggleUserUploads(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewToggleUserUploadsRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetUserUploadLimit(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetUserUploadLimitRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -9598,7 +9772,7 @@ func NewCreateArtistRequestWithBody(server string, contentType string, body io.R
 }
 
 // NewDeleteArtistRequest generates requests for DeleteArtist
-func NewDeleteArtistRequest(server string, idOrName string) (*http.Request, error) {
+func NewDeleteArtistRequest(server string, idOrName IdOrName) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9632,7 +9806,7 @@ func NewDeleteArtistRequest(server string, idOrName string) (*http.Request, erro
 }
 
 // NewGetArtistRequest generates requests for GetArtist
-func NewGetArtistRequest(server string, idOrName string) (*http.Request, error) {
+func NewGetArtistRequest(server string, idOrName IdOrName) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9666,7 +9840,7 @@ func NewGetArtistRequest(server string, idOrName string) (*http.Request, error) 
 }
 
 // NewEditArtistRequestWithBody generates requests for EditArtist with any type of body
-func NewEditArtistRequestWithBody(server string, idOrName string, contentType string, body io.Reader) (*http.Request, error) {
+func NewEditArtistRequestWithBody(server string, idOrName IdOrName, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -9702,7 +9876,7 @@ func NewEditArtistRequestWithBody(server string, idOrName string, contentType st
 }
 
 // NewRevertArtistRequest generates requests for RevertArtist
-func NewRevertArtistRequest(server string, idOrName string, params *RevertArtistParams) (*http.Request, error) {
+func NewRevertArtistRequest(server string, idOrName IdOrName, params *RevertArtistParams) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -10292,12 +10466,12 @@ func NewCreateAvoidPostingRequestWithBody(server string, contentType string, bod
 }
 
 // NewDestroyAvoidPostingRequest generates requests for DestroyAvoidPosting
-func NewDestroyAvoidPostingRequest(server string, idOrArtistName string) (*http.Request, error) {
+func NewDestroyAvoidPostingRequest(server string, idOrName IdOrName) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
 
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrArtistName", runtime.ParamLocationPath, idOrArtistName)
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrName", runtime.ParamLocationPath, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -10326,12 +10500,12 @@ func NewDestroyAvoidPostingRequest(server string, idOrArtistName string) (*http.
 }
 
 // NewGetAvoidPostingRequest generates requests for GetAvoidPosting
-func NewGetAvoidPostingRequest(server string, idOrArtistName string) (*http.Request, error) {
+func NewGetAvoidPostingRequest(server string, idOrName IdOrName) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
 
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrArtistName", runtime.ParamLocationPath, idOrArtistName)
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrName", runtime.ParamLocationPath, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -10360,23 +10534,23 @@ func NewGetAvoidPostingRequest(server string, idOrArtistName string) (*http.Requ
 }
 
 // NewEditAvoidPostingRequestWithFormdataBody calls the generic EditAvoidPosting builder with application/x-www-form-urlencoded body
-func NewEditAvoidPostingRequestWithFormdataBody(server string, idOrArtistName string, body EditAvoidPostingFormdataRequestBody) (*http.Request, error) {
+func NewEditAvoidPostingRequestWithFormdataBody(server string, idOrName IdOrName, body EditAvoidPostingFormdataRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	bodyStr, err := runtime.MarshalForm(body, nil)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = strings.NewReader(bodyStr.Encode())
-	return NewEditAvoidPostingRequestWithBody(server, idOrArtistName, "application/x-www-form-urlencoded", bodyReader)
+	return NewEditAvoidPostingRequestWithBody(server, idOrName, "application/x-www-form-urlencoded", bodyReader)
 }
 
 // NewEditAvoidPostingRequestWithBody generates requests for EditAvoidPosting with any type of body
-func NewEditAvoidPostingRequestWithBody(server string, idOrArtistName string, contentType string, body io.Reader) (*http.Request, error) {
+func NewEditAvoidPostingRequestWithBody(server string, idOrName IdOrName, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
 
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrArtistName", runtime.ParamLocationPath, idOrArtistName)
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrName", runtime.ParamLocationPath, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -10407,12 +10581,12 @@ func NewEditAvoidPostingRequestWithBody(server string, idOrArtistName string, co
 }
 
 // NewDeleteAvoidPostingRequest generates requests for DeleteAvoidPosting
-func NewDeleteAvoidPostingRequest(server string, idOrArtistName string) (*http.Request, error) {
+func NewDeleteAvoidPostingRequest(server string, idOrName IdOrName) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
 
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrArtistName", runtime.ParamLocationPath, idOrArtistName)
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrName", runtime.ParamLocationPath, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -10441,12 +10615,12 @@ func NewDeleteAvoidPostingRequest(server string, idOrArtistName string) (*http.R
 }
 
 // NewUndeleteAvoidPostingRequest generates requests for UndeleteAvoidPosting
-func NewUndeleteAvoidPostingRequest(server string, idOrArtistName string) (*http.Request, error) {
+func NewUndeleteAvoidPostingRequest(server string, idOrName IdOrName) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
 
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrArtistName", runtime.ParamLocationPath, idOrArtistName)
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "idOrName", runtime.ParamLocationPath, idOrName)
 	if err != nil {
 		return nil, err
 	}
@@ -12554,8 +12728,8 @@ func NewSearchDMailsRequest(server string, params *SearchDMailsParams) (*http.Re
 	return req, nil
 }
 
-// NewMarkAllDMailsAsUnreadRequest generates requests for MarkAllDMailsAsUnread
-func NewMarkAllDMailsAsUnreadRequest(server string) (*http.Request, error) {
+// NewMarkAllDMailsAsReadRequest generates requests for MarkAllDMailsAsRead
+func NewMarkAllDMailsAsReadRequest(server string) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -12563,7 +12737,7 @@ func NewMarkAllDMailsAsUnreadRequest(server string) (*http.Request, error) {
 		return nil, err
 	}
 
-	operationPath := fmt.Sprintf("/dmails/mark_all_as_unread.json")
+	operationPath := fmt.Sprintf("/dmails/mark_all_as_read.json")
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -15153,6 +15327,40 @@ func NewSearchModActionsRequest(server string, params *SearchModActionsParams) (
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetModActionRequest generates requests for GetModAction
+func NewGetModActionRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/mod_actions/%s.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
 	}
 
 	req, err := http.NewRequest("GET", queryURL.String(), nil)
@@ -18087,38 +18295,6 @@ func NewSearchPostReplacementsRequest(server string, params *SearchPostReplaceme
 
 		}
 
-		if params.SearchRejectorId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[rejector_id]", runtime.ParamLocationQuery, *params.SearchRejectorId); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.SearchRejectorName != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[rejector_name]", runtime.ParamLocationQuery, *params.SearchRejectorName); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
 		if params.SearchUploaderNameOnApprove != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[uploader_name_on_approve]", runtime.ParamLocationQuery, *params.SearchUploaderNameOnApprove); err != nil {
@@ -18138,6 +18314,86 @@ func NewSearchPostReplacementsRequest(server string, params *SearchPostReplaceme
 		if params.SearchUploaderIdOnApprove != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[uploader_id_on_approve]", runtime.ParamLocationQuery, *params.SearchUploaderIdOnApprove); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchPostId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[post_id]", runtime.ParamLocationQuery, *params.SearchPostId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchReason != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[reason]", runtime.ParamLocationQuery, *params.SearchReason); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchPenalized != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[penalized]", runtime.ParamLocationQuery, *params.SearchPenalized); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchSource != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[source]", runtime.ParamLocationQuery, *params.SearchSource); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchFileName != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[file_name]", runtime.ParamLocationQuery, *params.SearchFileName); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -18293,19 +18549,8 @@ func NewPromotePostReplacementRequest(server string, id int) (*http.Request, err
 	return req, nil
 }
 
-// NewRejectPostReplacementRequest calls the generic RejectPostReplacement builder with application/json body
-func NewRejectPostReplacementRequest(server string, id int, body RejectPostReplacementJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewRejectPostReplacementRequestWithBody(server, id, "application/json", bodyReader)
-}
-
-// NewRejectPostReplacementRequestWithBody generates requests for RejectPostReplacement with any type of body
-func NewRejectPostReplacementRequestWithBody(server string, id int, contentType string, body io.Reader) (*http.Request, error) {
+// NewRejectPostReplacementRequest generates requests for RejectPostReplacement
+func NewRejectPostReplacementRequest(server string, id int) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -18330,12 +18575,10 @@ func NewRejectPostReplacementRequestWithBody(server string, id int, contentType 
 		return nil, err
 	}
 
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}
-
-	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -19291,6 +19534,74 @@ func NewSearchPostVersionsRequest(server string, params *SearchPostVersionsParam
 	return req, nil
 }
 
+// NewHidePostVersionRequest generates requests for HidePostVersion
+func NewHidePostVersionRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/post_versions/%s/hide.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUnhidePostVersionRequest generates requests for UnhidePostVersion
+func NewUnhidePostVersionRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/post_versions/%s/unhide.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewDeletePostVotesRequest generates requests for DeletePostVotes
 func NewDeletePostVotesRequest(server string, params *DeletePostVotesParams) (*http.Request, error) {
 	var err error
@@ -20045,6 +20356,436 @@ func NewListBulkRelatedTagsRequestWithBody(server string, contentType string, bo
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewSearchStaffNotesRequest generates requests for SearchStaffNotes
+func NewSearchStaffNotesRequest(server string, params *SearchStaffNotesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/staff_notes.json")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Page != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "page", runtime.ParamLocationQuery, *params.Page); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[id]", runtime.ParamLocationQuery, *params.SearchId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchOrder != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[order]", runtime.ParamLocationQuery, *params.SearchOrder); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchCreatorId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[creator_id]", runtime.ParamLocationQuery, *params.SearchCreatorId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchCreatorName != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[creator_name]", runtime.ParamLocationQuery, *params.SearchCreatorName); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchUpdaterId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[updater_id]", runtime.ParamLocationQuery, *params.SearchUpdaterId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchUpdaterName != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[updater_name]", runtime.ParamLocationQuery, *params.SearchUpdaterName); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchUserId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[user_id]", runtime.ParamLocationQuery, *params.SearchUserId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchUserName != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[user_name]", runtime.ParamLocationQuery, *params.SearchUserName); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchBodyMatches != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[body_matches]", runtime.ParamLocationQuery, *params.SearchBodyMatches); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchWithoutSystemUser != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[without_system_user]", runtime.ParamLocationQuery, *params.SearchWithoutSystemUser); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchIncludeDeleted != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[include_deleted]", runtime.ParamLocationQuery, *params.SearchIncludeDeleted); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCreateStaffNoteRequestWithFormdataBody calls the generic CreateStaffNote builder with application/x-www-form-urlencoded body
+func NewCreateStaffNoteRequestWithFormdataBody(server string, body CreateStaffNoteFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewCreateStaffNoteRequestWithBody(server, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewCreateStaffNoteRequestWithBody generates requests for CreateStaffNote with any type of body
+func NewCreateStaffNoteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/staff_notes.json")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetStaffNoteRequest generates requests for GetStaffNote
+func NewGetStaffNoteRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/staff_notes/%s.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewEditStaffNoteRequestWithFormdataBody calls the generic EditStaffNote builder with application/x-www-form-urlencoded body
+func NewEditStaffNoteRequestWithFormdataBody(server string, id int, body EditStaffNoteFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewEditStaffNoteRequestWithBody(server, id, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewEditStaffNoteRequestWithBody generates requests for EditStaffNote with any type of body
+func NewEditStaffNoteRequestWithBody(server string, id int, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/staff_notes/%s.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PATCH", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteStaffNoteRequest generates requests for DeleteStaffNote
+func NewDeleteStaffNoteRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/staff_notes/%s/delete.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUndeleteStaffNoteRequest generates requests for UndeleteStaffNote
+func NewUndeleteStaffNoteRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/staff_notes/%s/undelete.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -21324,8 +22065,42 @@ func NewPreviewTagsRequest(server string, params *PreviewTagsParams) (*http.Requ
 	return req, nil
 }
 
+// NewDeleteTagRequest generates requests for DeleteTag
+func NewDeleteTagRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/tags/%s.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetTagRequest generates requests for GetTag
-func NewGetTagRequest(server string, id string) (*http.Request, error) {
+func NewGetTagRequest(server string, id int) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -21401,6 +22176,40 @@ func NewEditTagRequestWithBody(server string, id int, contentType string, body i
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetTagCorrectionRequest generates requests for GetTagCorrection
+func NewGetTagCorrectionRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/tags/%s/correction.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -21685,6 +22494,22 @@ func NewSearchTakedownsRequest(server string, params *SearchTakedownsParams) (*h
 		if params.SearchNotes != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[notes]", runtime.ParamLocationQuery, *params.SearchNotes); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SearchCreatorLoggedIn != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "search[creator_logged_in]", runtime.ParamLocationQuery, *params.SearchCreatorLoggedIn); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -23082,6 +23907,40 @@ func NewUploadPostRequestWithBody(server string, contentType string, body io.Rea
 	return req, nil
 }
 
+// NewGetUploadRequest generates requests for GetUpload
+func NewGetUploadRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/uploads/%s.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewSearchUserFeedbacksRequest generates requests for SearchUserFeedbacks
 func NewSearchUserFeedbacksRequest(server string, params *SearchUserFeedbacksParams) (*http.Request, error) {
 	var err error
@@ -24006,33 +24865,6 @@ func NewSearchUsersRequest(server string, params *SearchUsersParams) (*http.Requ
 	return req, nil
 }
 
-// NewGetCurrentUserRequest generates requests for GetCurrentUser
-func NewGetCurrentUserRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/users/upload_limit.json")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
 // NewGetUserRequest generates requests for GetUser
 func NewGetUserRequest(server string, id string) (*http.Request, error) {
 	var err error
@@ -24110,6 +24942,142 @@ func NewEditCurrentUserRequestWithBody(server string, id int, contentType string
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewFixSpecificUserCountsRequest generates requests for FixSpecificUserCounts
+func NewFixSpecificUserCountsRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/fix_counts.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewClearUserFavoritesRequest generates requests for ClearUserFavorites
+func NewClearUserFavoritesRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/flush_favorites.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewToggleUserUploadsRequest generates requests for ToggleUserUploads
+func NewToggleUserUploadsRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/toggle_uploads.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetUserUploadLimitRequest generates requests for GetUserUploadLimit
+func NewGetUserUploadLimitRequest(server string, id int) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/users/%s/upload_limit.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -24903,16 +25871,16 @@ type ClientWithResponsesInterface interface {
 	CreateArtistWithFormdataBodyWithResponse(ctx context.Context, body CreateArtistFormdataRequestBody, reqEditors ...RequestEditorFn) (*CreateArtistResponse, error)
 
 	// DeleteArtistWithResponse request
-	DeleteArtistWithResponse(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*DeleteArtistResponse, error)
+	DeleteArtistWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*DeleteArtistResponse, error)
 
 	// GetArtistWithResponse request
-	GetArtistWithResponse(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*GetArtistResponse, error)
+	GetArtistWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*GetArtistResponse, error)
 
 	// EditArtistWithBodyWithResponse request with any body
-	EditArtistWithBodyWithResponse(ctx context.Context, idOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditArtistResponse, error)
+	EditArtistWithBodyWithResponse(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditArtistResponse, error)
 
 	// RevertArtistWithResponse request
-	RevertArtistWithResponse(ctx context.Context, idOrName string, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*RevertArtistResponse, error)
+	RevertArtistWithResponse(ctx context.Context, idOrName IdOrName, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*RevertArtistResponse, error)
 
 	// SearchAvoidPostingVersionsWithResponse request
 	SearchAvoidPostingVersionsWithResponse(ctx context.Context, params *SearchAvoidPostingVersionsParams, reqEditors ...RequestEditorFn) (*SearchAvoidPostingVersionsResponse, error)
@@ -24926,21 +25894,21 @@ type ClientWithResponsesInterface interface {
 	CreateAvoidPostingWithFormdataBodyWithResponse(ctx context.Context, body CreateAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*CreateAvoidPostingResponse, error)
 
 	// DestroyAvoidPostingWithResponse request
-	DestroyAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*DestroyAvoidPostingResponse, error)
+	DestroyAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*DestroyAvoidPostingResponse, error)
 
 	// GetAvoidPostingWithResponse request
-	GetAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*GetAvoidPostingResponse, error)
+	GetAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*GetAvoidPostingResponse, error)
 
 	// EditAvoidPostingWithBodyWithResponse request with any body
-	EditAvoidPostingWithBodyWithResponse(ctx context.Context, idOrArtistName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error)
+	EditAvoidPostingWithBodyWithResponse(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error)
 
-	EditAvoidPostingWithFormdataBodyWithResponse(ctx context.Context, idOrArtistName string, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error)
+	EditAvoidPostingWithFormdataBodyWithResponse(ctx context.Context, idOrName IdOrName, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error)
 
 	// DeleteAvoidPostingWithResponse request
-	DeleteAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*DeleteAvoidPostingResponse, error)
+	DeleteAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*DeleteAvoidPostingResponse, error)
 
 	// UndeleteAvoidPostingWithResponse request
-	UndeleteAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*UndeleteAvoidPostingResponse, error)
+	UndeleteAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*UndeleteAvoidPostingResponse, error)
 
 	// SearchBansWithResponse request
 	SearchBansWithResponse(ctx context.Context, params *SearchBansParams, reqEditors ...RequestEditorFn) (*SearchBansResponse, error)
@@ -25045,8 +26013,8 @@ type ClientWithResponsesInterface interface {
 	// SearchDMailsWithResponse request
 	SearchDMailsWithResponse(ctx context.Context, params *SearchDMailsParams, reqEditors ...RequestEditorFn) (*SearchDMailsResponse, error)
 
-	// MarkAllDMailsAsUnreadWithResponse request
-	MarkAllDMailsAsUnreadWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MarkAllDMailsAsUnreadResponse, error)
+	// MarkAllDMailsAsReadWithResponse request
+	MarkAllDMailsAsReadWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MarkAllDMailsAsReadResponse, error)
 
 	// DeleteDMailWithResponse request
 	DeleteDMailWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*DeleteDMailResponse, error)
@@ -25222,6 +26190,9 @@ type ClientWithResponsesInterface interface {
 	// SearchModActionsWithResponse request
 	SearchModActionsWithResponse(ctx context.Context, params *SearchModActionsParams, reqEditors ...RequestEditorFn) (*SearchModActionsResponse, error)
 
+	// GetModActionWithResponse request
+	GetModActionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetModActionResponse, error)
+
 	// UnapprovePostWithBodyWithResponse request with any body
 	UnapprovePostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UnapprovePostResponse, error)
 
@@ -25375,10 +26346,8 @@ type ClientWithResponsesInterface interface {
 	// PromotePostReplacementWithResponse request
 	PromotePostReplacementWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*PromotePostReplacementResponse, error)
 
-	// RejectPostReplacementWithBodyWithResponse request with any body
-	RejectPostReplacementWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RejectPostReplacementResponse, error)
-
-	RejectPostReplacementWithResponse(ctx context.Context, id int, body RejectPostReplacementJSONRequestBody, reqEditors ...RequestEditorFn) (*RejectPostReplacementResponse, error)
+	// RejectPostReplacementWithResponse request
+	RejectPostReplacementWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*RejectPostReplacementResponse, error)
 
 	// TogglePostReplacementPenaltyWithResponse request
 	TogglePostReplacementPenaltyWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*TogglePostReplacementPenaltyResponse, error)
@@ -25422,6 +26391,12 @@ type ClientWithResponsesInterface interface {
 
 	// SearchPostVersionsWithResponse request
 	SearchPostVersionsWithResponse(ctx context.Context, params *SearchPostVersionsParams, reqEditors ...RequestEditorFn) (*SearchPostVersionsResponse, error)
+
+	// HidePostVersionWithResponse request
+	HidePostVersionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*HidePostVersionResponse, error)
+
+	// UnhidePostVersionWithResponse request
+	UnhidePostVersionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*UnhidePostVersionResponse, error)
 
 	// DeletePostVotesWithResponse request
 	DeletePostVotesWithResponse(ctx context.Context, params *DeletePostVotesParams, reqEditors ...RequestEditorFn) (*DeletePostVotesResponse, error)
@@ -25478,6 +26453,28 @@ type ClientWithResponsesInterface interface {
 
 	ListBulkRelatedTagsWithResponse(ctx context.Context, body ListBulkRelatedTagsJSONRequestBody, reqEditors ...RequestEditorFn) (*ListBulkRelatedTagsResponse, error)
 
+	// SearchStaffNotesWithResponse request
+	SearchStaffNotesWithResponse(ctx context.Context, params *SearchStaffNotesParams, reqEditors ...RequestEditorFn) (*SearchStaffNotesResponse, error)
+
+	// CreateStaffNoteWithBodyWithResponse request with any body
+	CreateStaffNoteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateStaffNoteResponse, error)
+
+	CreateStaffNoteWithFormdataBodyWithResponse(ctx context.Context, body CreateStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*CreateStaffNoteResponse, error)
+
+	// GetStaffNoteWithResponse request
+	GetStaffNoteWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetStaffNoteResponse, error)
+
+	// EditStaffNoteWithBodyWithResponse request with any body
+	EditStaffNoteWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditStaffNoteResponse, error)
+
+	EditStaffNoteWithFormdataBodyWithResponse(ctx context.Context, id int, body EditStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditStaffNoteResponse, error)
+
+	// DeleteStaffNoteWithResponse request
+	DeleteStaffNoteWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*DeleteStaffNoteResponse, error)
+
+	// UndeleteStaffNoteWithResponse request
+	UndeleteStaffNoteWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*UndeleteStaffNoteResponse, error)
+
 	// CreateTagAliasWithBodyWithResponse request with any body
 	CreateTagAliasWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateTagAliasResponse, error)
 
@@ -25531,13 +26528,19 @@ type ClientWithResponsesInterface interface {
 	// PreviewTagsWithResponse request
 	PreviewTagsWithResponse(ctx context.Context, params *PreviewTagsParams, reqEditors ...RequestEditorFn) (*PreviewTagsResponse, error)
 
+	// DeleteTagWithResponse request
+	DeleteTagWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*DeleteTagResponse, error)
+
 	// GetTagWithResponse request
-	GetTagWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*GetTagResponse, error)
+	GetTagWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetTagResponse, error)
 
 	// EditTagWithBodyWithResponse request with any body
 	EditTagWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditTagResponse, error)
 
 	EditTagWithFormdataBodyWithResponse(ctx context.Context, id int, body EditTagFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditTagResponse, error)
+
+	// GetTagCorrectionWithResponse request
+	GetTagCorrectionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetTagCorrectionResponse, error)
 
 	// CorrectTagWithBodyWithResponse request with any body
 	CorrectTagWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CorrectTagResponse, error)
@@ -25625,6 +26628,9 @@ type ClientWithResponsesInterface interface {
 	// UploadPostWithBodyWithResponse request with any body
 	UploadPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UploadPostResponse, error)
 
+	// GetUploadWithResponse request
+	GetUploadWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetUploadResponse, error)
+
 	// SearchUserFeedbacksWithResponse request
 	SearchUserFeedbacksWithResponse(ctx context.Context, params *SearchUserFeedbacksParams, reqEditors ...RequestEditorFn) (*SearchUserFeedbacksResponse, error)
 
@@ -25664,9 +26670,6 @@ type ClientWithResponsesInterface interface {
 	// SearchUsersWithResponse request
 	SearchUsersWithResponse(ctx context.Context, params *SearchUsersParams, reqEditors ...RequestEditorFn) (*SearchUsersResponse, error)
 
-	// GetCurrentUserWithResponse request
-	GetCurrentUserWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetCurrentUserResponse, error)
-
 	// GetUserWithResponse request
 	GetUserWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*GetUserResponse, error)
 
@@ -25674,6 +26677,18 @@ type ClientWithResponsesInterface interface {
 	EditCurrentUserWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditCurrentUserResponse, error)
 
 	EditCurrentUserWithFormdataBodyWithResponse(ctx context.Context, id int, body EditCurrentUserFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditCurrentUserResponse, error)
+
+	// FixSpecificUserCountsWithResponse request
+	FixSpecificUserCountsWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*FixSpecificUserCountsResponse, error)
+
+	// ClearUserFavoritesWithResponse request
+	ClearUserFavoritesWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ClearUserFavoritesResponse, error)
+
+	// ToggleUserUploadsWithResponse request
+	ToggleUserUploadsWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ToggleUserUploadsResponse, error)
+
+	// GetUserUploadLimitWithResponse request
+	GetUserUploadLimitWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetUserUploadLimitResponse, error)
 
 	// RevertWikiPageWithResponse request
 	RevertWikiPageWithResponse(ctx context.Context, id int, params *RevertWikiPageParams, reqEditors ...RequestEditorFn) (*RevertWikiPageResponse, error)
@@ -25739,11 +26754,6 @@ type AdminEditUserResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type AdminEditUser400Success bool
-type AdminEditUser403Reason string
-type AdminEditUser403Success bool
-type AdminEditUser404Reason string
-type AdminEditUser404Success bool
 
 // Status returns HTTPResponse.Status
 func (r AdminEditUserResponse) Status() string {
@@ -25831,9 +26841,9 @@ type SearchArtistsResponse struct {
 		Id           int                                `json:"id"`
 		IsActive     bool                               `json:"is_active"`
 		IsLocked     bool                               `json:"is_locked"`
-		LinkedUserId float32                            `json:"linked_user_id"`
+		LinkedUserId *int                               `json:"linked_user_id"`
 		Name         string                             `json:"name"`
-		Notes        string                             `json:"notes"`
+		Notes        *string                            `json:"notes"`
 		OtherNames   []string                           `json:"other_names"`
 		UpdatedAt    time.Time                          `json:"updated_at"`
 		Urls         []ArtistURL                        `json:"urls"`
@@ -25868,8 +26878,6 @@ type CreateArtistResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateArtist403Reason string
-type CreateArtist403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateArtistResponse) Status() string {
@@ -25893,10 +26901,6 @@ type DeleteArtistResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteArtist403Reason string
-type DeleteArtist403Success bool
-type DeleteArtist404Reason string
-type DeleteArtist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteArtistResponse) Status() string {
@@ -25925,9 +26929,9 @@ type GetArtistResponse struct {
 		Id           int                            `json:"id"`
 		IsActive     bool                           `json:"is_active"`
 		IsLocked     bool                           `json:"is_locked"`
-		LinkedUserId float32                        `json:"linked_user_id"`
+		LinkedUserId *int                           `json:"linked_user_id"`
 		Name         string                         `json:"name"`
-		Notes        string                         `json:"notes"`
+		Notes        *string                        `json:"notes"`
 		OtherNames   []string                       `json:"other_names"`
 		UpdatedAt    time.Time                      `json:"updated_at"`
 		Urls         []ArtistURL                    `json:"urls"`
@@ -25939,8 +26943,6 @@ type GetArtist200Domains1 = float32
 type GetArtist_200_Domains_Item struct {
 	union json.RawMessage
 }
-type GetArtist404Reason string
-type GetArtist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetArtistResponse) Status() string {
@@ -25965,10 +26967,6 @@ type EditArtistResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditArtist403Reason string
-type EditArtist403Success bool
-type EditArtist404Reason string
-type EditArtist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditArtistResponse) Status() string {
@@ -25991,12 +26989,8 @@ type RevertArtistResponse struct {
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 	JSON404      *NotFound
-	JSON422      *ExpectedError
+	JSON422      *AccessDenied
 }
-type RevertArtist403Reason string
-type RevertArtist403Success bool
-type RevertArtist404Reason string
-type RevertArtist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RevertArtistResponse) Status() string {
@@ -26077,8 +27071,6 @@ type CreateAvoidPostingResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateAvoidPosting403Reason string
-type CreateAvoidPosting403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateAvoidPostingResponse) Status() string {
@@ -26102,10 +27094,6 @@ type DestroyAvoidPostingResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DestroyAvoidPosting403Reason string
-type DestroyAvoidPosting403Success bool
-type DestroyAvoidPosting404Reason string
-type DestroyAvoidPosting404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DestroyAvoidPostingResponse) Status() string {
@@ -26129,8 +27117,6 @@ type GetAvoidPostingResponse struct {
 	JSON200      *AvoidPosting
 	JSON404      *NotFound
 }
-type GetAvoidPosting404Reason string
-type GetAvoidPosting404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetAvoidPostingResponse) Status() string {
@@ -26156,10 +27142,6 @@ type EditAvoidPostingResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditAvoidPosting403Reason string
-type EditAvoidPosting403Success bool
-type EditAvoidPosting404Reason string
-type EditAvoidPosting404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditAvoidPostingResponse) Status() string {
@@ -26183,10 +27165,6 @@ type DeleteAvoidPostingResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteAvoidPosting403Reason string
-type DeleteAvoidPosting403Success bool
-type DeleteAvoidPosting404Reason string
-type DeleteAvoidPosting404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteAvoidPostingResponse) Status() string {
@@ -26210,10 +27188,6 @@ type UndeleteAvoidPostingResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UndeleteAvoidPosting403Reason string
-type UndeleteAvoidPosting403Success bool
-type UndeleteAvoidPosting404Reason string
-type UndeleteAvoidPosting404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UndeleteAvoidPostingResponse) Status() string {
@@ -26265,8 +27239,6 @@ type GetBanResponse struct {
 	JSON200      *Ban
 	JSON404      *NotFound
 }
-type GetBan404Reason string
-type GetBan404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetBanResponse) Status() string {
@@ -26320,10 +27292,6 @@ type CreateBlipResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type CreateBlip403Reason string
-type CreateBlip403Success bool
-type CreateBlip404Reason string
-type CreateBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateBlipResponse) Status() string {
@@ -26347,10 +27315,6 @@ type DeleteBlipResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteBlip403Reason string
-type DeleteBlip403Success bool
-type DeleteBlip404Reason string
-type DeleteBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteBlipResponse) Status() string {
@@ -26375,10 +27339,6 @@ type GetBlipResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetBlip403Reason string
-type GetBlip403Success bool
-type GetBlip404Reason string
-type GetBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetBlipResponse) Status() string {
@@ -26404,10 +27364,6 @@ type EditBlipResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditBlip403Reason string
-type EditBlip403Success bool
-type EditBlip404Reason string
-type EditBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditBlipResponse) Status() string {
@@ -26432,10 +27388,6 @@ type HideBlipResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type HideBlip403Reason string
-type HideBlip403Success bool
-type HideBlip404Reason string
-type HideBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r HideBlipResponse) Status() string {
@@ -26460,10 +27412,6 @@ type UnhideBlipResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnhideBlip403Reason string
-type UnhideBlip403Success bool
-type UnhideBlip404Reason string
-type UnhideBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnhideBlipResponse) Status() string {
@@ -26488,10 +27436,6 @@ type MarkBlipResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MarkBlip403Reason string
-type MarkBlip403Success bool
-type MarkBlip404Reason string
-type MarkBlip404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkBlipResponse) Status() string {
@@ -26515,10 +27459,6 @@ type RejectBulkUpdateRequestResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type RejectBulkUpdateRequest403Reason string
-type RejectBulkUpdateRequest403Success bool
-type RejectBulkUpdateRequest404Reason string
-type RejectBulkUpdateRequest404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RejectBulkUpdateRequestResponse) Status() string {
@@ -26542,8 +27482,6 @@ type GetBulkUpdateRequestResponse struct {
 	JSON200      *BulkUpdateRequest
 	JSON404      *NotFound
 }
-type GetBulkUpdateRequest404Reason string
-type GetBulkUpdateRequest404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetBulkUpdateRequestResponse) Status() string {
@@ -26568,10 +27506,6 @@ type EditBulkUpdateRequestResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditBulkUpdateRequest403Reason string
-type EditBulkUpdateRequest403Success bool
-type EditBulkUpdateRequest404Reason string
-type EditBulkUpdateRequest404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditBulkUpdateRequestResponse) Status() string {
@@ -26595,10 +27529,6 @@ type ApproveBulkUpdateRequestResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type ApproveBulkUpdateRequest403Reason string
-type ApproveBulkUpdateRequest403Success bool
-type ApproveBulkUpdateRequest404Reason string
-type ApproveBulkUpdateRequest404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ApproveBulkUpdateRequestResponse) Status() string {
@@ -26651,8 +27581,6 @@ type CreateBulkUpdateRequestResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateBulkUpdateRequest403Reason string
-type CreateBulkUpdateRequest403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateBulkUpdateRequestResponse) Status() string {
@@ -26675,8 +27603,6 @@ type DeleteCommentVotesResponse struct {
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type DeleteCommentVotes403Reason string
-type DeleteCommentVotes403Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteCommentVotesResponse) Status() string {
@@ -26701,10 +27627,6 @@ type LockCommentVotesResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type LockCommentVotes403Reason string
-type LockCommentVotes403Success bool
-type LockCommentVotes404Reason string
-type LockCommentVotes404Success bool
 
 // Status returns HTTPResponse.Status
 func (r LockCommentVotesResponse) Status() string {
@@ -26757,8 +27679,6 @@ type CreateCommentResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateComment403Reason string
-type CreateComment403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateCommentResponse) Status() string {
@@ -26782,10 +27702,6 @@ type DeleteCommentResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteComment403Reason string
-type DeleteComment403Success bool
-type DeleteComment404Reason string
-type DeleteComment404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteCommentResponse) Status() string {
@@ -26810,10 +27726,6 @@ type GetCommentResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetComment403Reason string
-type GetComment403Success bool
-type GetComment404Reason string
-type GetComment404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetCommentResponse) Status() string {
@@ -26838,10 +27750,6 @@ type EditCommentResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditComment403Reason string
-type EditComment403Success bool
-type EditComment404Reason string
-type EditComment404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditCommentResponse) Status() string {
@@ -26866,10 +27774,6 @@ type HideCommentResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type HideComment403Reason string
-type HideComment403Success bool
-type HideComment404Reason string
-type HideComment404Success bool
 
 // Status returns HTTPResponse.Status
 func (r HideCommentResponse) Status() string {
@@ -26894,10 +27798,6 @@ type UnhideCommentResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnhideComment403Reason string
-type UnhideComment403Success bool
-type UnhideComment404Reason string
-type UnhideComment404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnhideCommentResponse) Status() string {
@@ -26922,10 +27822,6 @@ type DeleteCommentVoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type DeleteCommentVote403Reason string
-type DeleteCommentVote403Success bool
-type DeleteCommentVote404Reason string
-type DeleteCommentVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteCommentVoteResponse) Status() string {
@@ -26954,10 +27850,6 @@ type CreateCommentVoteResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type CreateCommentVote403Reason string
-type CreateCommentVote403Success bool
-type CreateCommentVote404Reason string
-type CreateCommentVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateCommentVoteResponse) Status() string {
@@ -26982,10 +27874,6 @@ type MarkCommentResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MarkComment403Reason string
-type MarkComment403Success bool
-type MarkComment404Reason string
-type MarkComment404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkCommentResponse) Status() string {
@@ -27031,19 +27919,15 @@ func (r SearchDMailsResponse) StatusCode() int {
 	return 0
 }
 
-type MarkAllDMailsAsUnreadResponse struct {
+type MarkAllDMailsAsReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MarkAllDMailsAsUnread403Reason string
-type MarkAllDMailsAsUnread403Success bool
-type MarkAllDMailsAsUnread404Reason string
-type MarkAllDMailsAsUnread404Success bool
 
 // Status returns HTTPResponse.Status
-func (r MarkAllDMailsAsUnreadResponse) Status() string {
+func (r MarkAllDMailsAsReadResponse) Status() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Status
 	}
@@ -27051,7 +27935,7 @@ func (r MarkAllDMailsAsUnreadResponse) Status() string {
 }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r MarkAllDMailsAsUnreadResponse) StatusCode() int {
+func (r MarkAllDMailsAsReadResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -27064,10 +27948,6 @@ type DeleteDMailResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteDMail403Reason string
-type DeleteDMail403Success bool
-type DeleteDMail404Reason string
-type DeleteDMail404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteDMailResponse) Status() string {
@@ -27092,10 +27972,6 @@ type GetDMailResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetDMail403Reason string
-type GetDMail403Success bool
-type GetDMail404Reason string
-type GetDMail404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetDMailResponse) Status() string {
@@ -27119,10 +27995,6 @@ type MarkDMailAsReadResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MarkDMailAsRead403Reason string
-type MarkDMailAsRead403Success bool
-type MarkDMailAsRead404Reason string
-type MarkDMailAsRead404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkDMailAsReadResponse) Status() string {
@@ -27146,10 +28018,6 @@ type MarkDMailAsUnreadResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MarkDMailAsUnread403Reason string
-type MarkDMailAsUnread403Success bool
-type MarkDMailAsUnread404Reason string
-type MarkDMailAsUnread404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkDMailAsUnreadResponse) Status() string {
@@ -27246,10 +28114,6 @@ type DeleteEmailBlacklistResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteEmailBlacklist403Reason string
-type DeleteEmailBlacklist403Success bool
-type DeleteEmailBlacklist404Reason string
-type DeleteEmailBlacklist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteEmailBlacklistResponse) Status() string {
@@ -27276,10 +28140,6 @@ type ListFavoritesResponse struct {
 	JSON403 *AccessDenied
 	JSON404 *NotFound
 }
-type ListFavorites403Reason string
-type ListFavorites403Success bool
-type ListFavorites404Reason string
-type ListFavorites404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ListFavoritesResponse) Status() string {
@@ -27307,10 +28167,6 @@ type AddFavoriteResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type AddFavorite403Reason string
-type AddFavorite403Success bool
-type AddFavorite404Reason string
-type AddFavorite404Success bool
 
 // Status returns HTTPResponse.Status
 func (r AddFavoriteResponse) Status() string {
@@ -27335,10 +28191,6 @@ type RemoveFavoriteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RemoveFavorite403Reason string
-type RemoveFavorite403Success bool
-type RemoveFavorite404Reason string
-type RemoveFavorite404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RemoveFavoriteResponse) Status() string {
@@ -27391,8 +28243,6 @@ type CreateForumPostResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateForumPost403Reason string
-type CreateForumPost403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateForumPostResponse) Status() string {
@@ -27416,10 +28266,6 @@ type DeleteForumPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteForumPost403Reason string
-type DeleteForumPost403Success bool
-type DeleteForumPost404Reason string
-type DeleteForumPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteForumPostResponse) Status() string {
@@ -27444,10 +28290,6 @@ type GetForumPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetForumPost403Reason string
-type GetForumPost403Success bool
-type GetForumPost404Reason string
-type GetForumPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetForumPostResponse) Status() string {
@@ -27472,10 +28314,6 @@ type EditForumPostResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditForumPost403Reason string
-type EditForumPost403Success bool
-type EditForumPost404Reason string
-type EditForumPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditForumPostResponse) Status() string {
@@ -27500,10 +28338,6 @@ type HideForumPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type HideForumPost403Reason string
-type HideForumPost403Success bool
-type HideForumPost404Reason string
-type HideForumPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r HideForumPostResponse) Status() string {
@@ -27528,10 +28362,6 @@ type UnhideForumPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnhideForumPost403Reason string
-type UnhideForumPost403Success bool
-type UnhideForumPost404Reason string
-type UnhideForumPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnhideForumPostResponse) Status() string {
@@ -27556,10 +28386,6 @@ type DeleteForumPostVoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type DeleteForumPostVote403Reason string
-type DeleteForumPostVote403Success bool
-type DeleteForumPostVote404Reason string
-type DeleteForumPostVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteForumPostVoteResponse) Status() string {
@@ -27585,10 +28411,6 @@ type CreateForumPostVoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type CreateForumPostVote403Reason string
-type CreateForumPostVote403Success bool
-type CreateForumPostVote404Reason string
-type CreateForumPostVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateForumPostVoteResponse) Status() string {
@@ -27613,10 +28435,6 @@ type MarkForumPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MarkForumPost403Reason string
-type MarkForumPost403Success bool
-type MarkForumPost404Reason string
-type MarkForumPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkForumPostResponse) Status() string {
@@ -27663,8 +28481,6 @@ type CreateForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateForumTopic403Reason string
-type CreateForumTopic403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateForumTopicResponse) Status() string {
@@ -27687,8 +28503,6 @@ type MarkAllForumTopicsAsReadResponse struct {
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type MarkAllForumTopicsAsRead403Reason string
-type MarkAllForumTopicsAsRead403Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkAllForumTopicsAsReadResponse) Status() string {
@@ -27712,10 +28526,6 @@ type DeleteForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteForumTopic403Reason string
-type DeleteForumTopic403Success bool
-type DeleteForumTopic404Reason string
-type DeleteForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteForumTopicResponse) Status() string {
@@ -27740,10 +28550,6 @@ type GetForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetForumTopic403Reason string
-type GetForumTopic403Success bool
-type GetForumTopic404Reason string
-type GetForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetForumTopicResponse) Status() string {
@@ -27768,10 +28574,6 @@ type EditForumTopicResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditForumTopic403Reason string
-type EditForumTopic403Success bool
-type EditForumTopic404Reason string
-type EditForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditForumTopicResponse) Status() string {
@@ -27796,10 +28598,6 @@ type HideForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type HideForumTopic403Reason string
-type HideForumTopic403Success bool
-type HideForumTopic404Reason string
-type HideForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r HideForumTopicResponse) Status() string {
@@ -27824,10 +28622,6 @@ type SubscribeForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type SubscribeForumTopic403Reason string
-type SubscribeForumTopic403Success bool
-type SubscribeForumTopic404Reason string
-type SubscribeForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r SubscribeForumTopicResponse) Status() string {
@@ -27852,10 +28646,6 @@ type UnhideForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnhideForumTopic403Reason string
-type UnhideForumTopic403Success bool
-type UnhideForumTopic404Reason string
-type UnhideForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnhideForumTopicResponse) Status() string {
@@ -27880,10 +28670,6 @@ type UnsubscribeForumTopicResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnsubscribeForumTopic403Reason string
-type UnsubscribeForumTopic403Success bool
-type UnsubscribeForumTopic404Reason string
-type UnsubscribeForumTopic404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnsubscribeForumTopicResponse) Status() string {
@@ -27930,8 +28716,6 @@ type CreateHelpPageResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateHelpPage403Reason string
-type CreateHelpPage403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateHelpPageResponse) Status() string {
@@ -27955,10 +28739,6 @@ type DeleteHelpPageResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteHelpPage403Reason string
-type DeleteHelpPage403Success bool
-type DeleteHelpPage404Reason string
-type DeleteHelpPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteHelpPageResponse) Status() string {
@@ -27983,10 +28763,6 @@ type GetHelpPageResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetHelpPage403Reason string
-type GetHelpPage403Success bool
-type GetHelpPage404Reason string
-type GetHelpPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetHelpPageResponse) Status() string {
@@ -28011,10 +28787,6 @@ type EditHelpPageResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditHelpPage403Reason string
-type EditHelpPage403Success bool
-type EditHelpPage404Reason string
-type EditHelpPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditHelpPageResponse) Status() string {
@@ -28067,8 +28839,6 @@ type CreateIPBanResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateIPBan403Reason string
-type CreateIPBan403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateIPBanResponse) Status() string {
@@ -28092,10 +28862,6 @@ type DeleteIPBanResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteIPBan403Reason string
-type DeleteIPBan403Success bool
-type DeleteIPBan404Reason string
-type DeleteIPBan404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteIPBanResponse) Status() string {
@@ -28121,8 +28887,6 @@ type QueryIQDBGetResponse struct {
 	}
 	JSON403 *AccessDenied
 }
-type QueryIQDBGet403Reason string
-type QueryIQDBGet403Success bool
 
 // Status returns HTTPResponse.Status
 func (r QueryIQDBGetResponse) Status() string {
@@ -28148,8 +28912,6 @@ type QueryIQDPostResponse struct {
 	}
 	JSON403 *AccessDenied
 }
-type QueryIQDPost403Reason string
-type QueryIQDPost403Success bool
 
 // Status returns HTTPResponse.Status
 func (r QueryIQDPostResponse) Status() string {
@@ -28172,8 +28934,6 @@ type FixUserCountsResponse struct {
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type FixUserCounts403Reason string
-type FixUserCounts403Success bool
 
 // Status returns HTTPResponse.Status
 func (r FixUserCountsResponse) Status() string {
@@ -28196,8 +28956,6 @@ type UpdateUserDmailFilterResponse struct {
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type UpdateUserDmailFilter403Reason string
-type UpdateUserDmailFilter403Success bool
 
 // Status returns HTTPResponse.Status
 func (r UpdateUserDmailFilterResponse) Status() string {
@@ -28250,8 +29008,6 @@ type CreateMascotResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateMascot403Reason string
-type CreateMascot403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateMascotResponse) Status() string {
@@ -28275,10 +29031,6 @@ type DeleteMascotResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteMascot403Reason string
-type DeleteMascot403Success bool
-type DeleteMascot404Reason string
-type DeleteMascot404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteMascotResponse) Status() string {
@@ -28303,10 +29055,6 @@ type EditMascotResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditMascot403Reason string
-type EditMascot403Success bool
-type EditMascot404Reason string
-type EditMascot404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditMascotResponse) Status() string {
@@ -28346,16 +29094,36 @@ func (r SearchModActionsResponse) StatusCode() int {
 	return 0
 }
 
+type GetModActionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ModAction
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r GetModActionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetModActionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type UnapprovePostResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnapprovePost403Reason string
-type UnapprovePost403Success bool
-type UnapprovePost404Reason string
-type UnapprovePost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnapprovePostResponse) Status() string {
@@ -28379,10 +29147,6 @@ type ApprovePostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type ApprovePost403Reason string
-type ApprovePost403Success bool
-type ApprovePost404Reason string
-type ApprovePost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ApprovePostResponse) Status() string {
@@ -28435,8 +29199,6 @@ type CreatePostDisapprovalResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreatePostDisapproval403Reason string
-type CreatePostDisapproval403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreatePostDisapprovalResponse) Status() string {
@@ -28461,10 +29223,6 @@ type DeletePostResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type DeletePost403Reason string
-type DeletePost403Success bool
-type DeletePost404Reason string
-type DeletePost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeletePostResponse) Status() string {
@@ -28492,10 +29250,6 @@ type ExpungePostResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type ExpungePost403Reason string
-type ExpungePost403Success bool
-type ExpungePost404Reason string
-type ExpungePost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ExpungePostResponse) Status() string {
@@ -28519,10 +29273,6 @@ type MovePostFavoritesResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type MovePostFavorites403Reason string
-type MovePostFavorites403Success bool
-type MovePostFavorites404Reason string
-type MovePostFavorites404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MovePostFavoritesResponse) Status() string {
@@ -28550,10 +29300,6 @@ type RegeneratePostThumbnailsResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type RegeneratePostThumbnails403Reason string
-type RegeneratePostThumbnails403Success bool
-type RegeneratePostThumbnails404Reason string
-type RegeneratePostThumbnails404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RegeneratePostThumbnailsResponse) Status() string {
@@ -28578,10 +29324,6 @@ type RegeneratePostVideosResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RegeneratePostVideos403Reason string
-type RegeneratePostVideos403Success bool
-type RegeneratePostVideos404Reason string
-type RegeneratePostVideos404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RegeneratePostVideosResponse) Status() string {
@@ -28609,10 +29351,6 @@ type UndeletePostResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type UndeletePost403Reason string
-type UndeletePost403Success bool
-type UndeletePost404Reason string
-type UndeletePost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UndeletePostResponse) Status() string {
@@ -28665,8 +29403,6 @@ type CreateNewsUpdateResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateNewsUpdate403Reason string
-type CreateNewsUpdate403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateNewsUpdateResponse) Status() string {
@@ -28690,10 +29426,6 @@ type DeleteNewsUpdateResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteNewsUpdate403Reason string
-type DeleteNewsUpdate403Success bool
-type DeleteNewsUpdate404Reason string
-type DeleteNewsUpdate404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteNewsUpdateResponse) Status() string {
@@ -28718,10 +29450,6 @@ type EditNewsUpdateResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditNewsUpdate403Reason string
-type EditNewsUpdate403Success bool
-type EditNewsUpdate404Reason string
-type EditNewsUpdate404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditNewsUpdateResponse) Status() string {
@@ -28819,8 +29547,6 @@ type CreateNoteResponse struct {
 	JSON403 *AccessDenied
 	JSON422 *ExpectedError
 }
-type CreateNote403Reason string
-type CreateNote403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateNoteResponse) Status() string {
@@ -28844,10 +29570,6 @@ type DeleteNoteResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteNote403Reason string
-type DeleteNote403Success bool
-type DeleteNote404Reason string
-type DeleteNote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteNoteResponse) Status() string {
@@ -28871,8 +29593,6 @@ type GetNoteResponse struct {
 	JSON200      *Note
 	JSON404      *NotFound
 }
-type GetNote404Reason string
-type GetNote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetNoteResponse) Status() string {
@@ -28897,10 +29617,6 @@ type EditNoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditNote403Reason string
-type EditNote403Success bool
-type EditNote404Reason string
-type EditNote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditNoteResponse) Status() string {
@@ -28925,10 +29641,6 @@ type RevertNoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RevertNote403Reason string
-type RevertNote403Success bool
-type RevertNote404Reason string
-type RevertNote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RevertNoteResponse) Status() string {
@@ -29045,8 +29757,6 @@ type CreatePoolResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreatePool403Reason string
-type CreatePool403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreatePoolResponse) Status() string {
@@ -29070,10 +29780,6 @@ type DeletePoolResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeletePool403Reason string
-type DeletePool403Success bool
-type DeletePool404Reason string
-type DeletePool404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeletePoolResponse) Status() string {
@@ -29097,8 +29803,6 @@ type GetPoolResponse struct {
 	JSON200      *Pool
 	JSON404      *NotFound
 }
-type GetPool404Reason string
-type GetPool404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetPoolResponse) Status() string {
@@ -29123,10 +29827,6 @@ type EditPoolResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditPool403Reason string
-type EditPool403Success bool
-type EditPool404Reason string
-type EditPool404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditPoolResponse) Status() string {
@@ -29151,10 +29851,6 @@ type RevertPoolResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RevertPool403Reason string
-type RevertPool403Success bool
-type RevertPool404Reason string
-type RevertPool404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RevertPoolResponse) Status() string {
@@ -29283,8 +29979,6 @@ type CreatePostFlagResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreatePostFlag403Reason string
-type CreatePostFlag403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreatePostFlagResponse) Status() string {
@@ -29308,8 +30002,6 @@ type GetPostFlagResponse struct {
 	JSON200      *PostFlag
 	JSON404      *NotFound
 }
-type GetPostFlag404Reason string
-type GetPostFlag404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetPostFlagResponse) Status() string {
@@ -29367,9 +30059,6 @@ type CreatePostReplacementResponse struct {
 	JSON422 *ExpectedError
 }
 type CreatePostReplacement200Success bool
-type CreatePostReplacement403Reason string
-type CreatePostReplacement403Success bool
-type CreatePostReplacement412Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreatePostReplacementResponse) Status() string {
@@ -29393,10 +30082,6 @@ type DeletePostReplacementResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeletePostReplacement403Reason string
-type DeletePostReplacement403Success bool
-type DeletePostReplacement404Reason string
-type DeletePostReplacement404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeletePostReplacementResponse) Status() string {
@@ -29421,10 +30106,6 @@ type ApprovePostReplacementResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type ApprovePostReplacement403Reason string
-type ApprovePostReplacement403Success bool
-type ApprovePostReplacement404Reason string
-type ApprovePostReplacement404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ApprovePostReplacementResponse) Status() string {
@@ -29452,10 +30133,6 @@ type PromotePostReplacementResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type PromotePostReplacement403Reason string
-type PromotePostReplacement403Success bool
-type PromotePostReplacement404Reason string
-type PromotePostReplacement404Success bool
 
 // Status returns HTTPResponse.Status
 func (r PromotePostReplacementResponse) Status() string {
@@ -29480,10 +30157,6 @@ type RejectPostReplacementResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RejectPostReplacement403Reason string
-type RejectPostReplacement403Success bool
-type RejectPostReplacement404Reason string
-type RejectPostReplacement404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RejectPostReplacementResponse) Status() string {
@@ -29508,10 +30181,6 @@ type TogglePostReplacementPenaltyResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type TogglePostReplacementPenalty403Reason string
-type TogglePostReplacementPenalty403Success bool
-type TogglePostReplacementPenalty404Reason string
-type TogglePostReplacementPenalty404Success bool
 
 // Status returns HTTPResponse.Status
 func (r TogglePostReplacementPenaltyResponse) Status() string {
@@ -29564,8 +30233,6 @@ type CreatePostSetResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreatePostSet403Reason string
-type CreatePostSet403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreatePostSetResponse) Status() string {
@@ -29603,8 +30270,6 @@ type ListPostSetsForSelect200Owned1 = float32
 type ListPostSetsForSelect_200_Owned_Item struct {
 	union json.RawMessage
 }
-type ListPostSetsForSelect403Reason string
-type ListPostSetsForSelect403Success bool
 
 // Status returns HTTPResponse.Status
 func (r ListPostSetsForSelectResponse) Status() string {
@@ -29628,10 +30293,6 @@ type DeletePostSetResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeletePostSet403Reason string
-type DeletePostSet403Success bool
-type DeletePostSet404Reason string
-type DeletePostSet404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeletePostSetResponse) Status() string {
@@ -29656,10 +30317,6 @@ type GetPostSetResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetPostSet403Reason string
-type GetPostSet403Success bool
-type GetPostSet404Reason string
-type GetPostSet404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetPostSetResponse) Status() string {
@@ -29684,10 +30341,6 @@ type EditPostSetResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditPostSet403Reason string
-type EditPostSet403Success bool
-type EditPostSet404Reason string
-type EditPostSet404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditPostSetResponse) Status() string {
@@ -29713,10 +30366,6 @@ type AddPostsToPostSetResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type AddPostsToPostSet403Reason string
-type AddPostsToPostSet403Success bool
-type AddPostsToPostSet404Reason string
-type AddPostsToPostSet404Success bool
 
 // Status returns HTTPResponse.Status
 func (r AddPostsToPostSetResponse) Status() string {
@@ -29742,10 +30391,6 @@ type RemovePostsFromPostSetResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RemovePostsFromPostSet403Reason string
-type RemovePostsFromPostSet403Success bool
-type RemovePostsFromPostSet404Reason string
-type RemovePostsFromPostSet404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RemovePostsFromPostSetResponse) Status() string {
@@ -29771,10 +30416,6 @@ type UpdatePostSetPostsResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type UpdatePostSetPosts403Reason string
-type UpdatePostSetPosts403Success bool
-type UpdatePostSetPosts404Reason string
-type UpdatePostSetPosts404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UpdatePostSetPostsResponse) Status() string {
@@ -29814,13 +30455,57 @@ func (r SearchPostVersionsResponse) StatusCode() int {
 	return 0
 }
 
+type HidePostVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r HidePostVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r HidePostVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UnhidePostVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r UnhidePostVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UnhidePostVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type DeletePostVotesResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type DeletePostVotes403Reason string
-type DeletePostVotes403Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeletePostVotesResponse) Status() string {
@@ -29845,10 +30530,6 @@ type LockPostVoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type LockPostVote403Reason string
-type LockPostVote403Success bool
-type LockPostVote404Reason string
-type LockPostVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r LockPostVoteResponse) Status() string {
@@ -29898,8 +30579,6 @@ type GetRandomPostResponse struct {
 	}
 	JSON404 *NotFound
 }
-type GetRandomPost404Reason string
-type GetRandomPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetRandomPostResponse) Status() string {
@@ -29925,8 +30604,6 @@ type GetPostResponse struct {
 	}
 	JSON404 *NotFound
 }
-type GetPost404Reason string
-type GetPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetPostResponse) Status() string {
@@ -29952,10 +30629,6 @@ type EditPostResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditPost403Reason string
-type EditPost403Success bool
-type EditPost404Reason string
-type EditPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditPostResponse) Status() string {
@@ -29980,11 +30653,6 @@ type CopyNotesToPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type CopyNotesToPost400Success bool
-type CopyNotesToPost403Reason string
-type CopyNotesToPost403Success bool
-type CopyNotesToPost404Reason string
-type CopyNotesToPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CopyNotesToPostResponse) Status() string {
@@ -30008,10 +30676,6 @@ type UnflagPostResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnflagPost403Reason string
-type UnflagPost403Success bool
-type UnflagPost404Reason string
-type UnflagPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnflagPostResponse) Status() string {
@@ -30039,10 +30703,6 @@ type MarkPostAsTranslatedResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type MarkPostAsTranslated403Reason string
-type MarkPostAsTranslated403Success bool
-type MarkPostAsTranslated404Reason string
-type MarkPostAsTranslated404Success bool
 
 // Status returns HTTPResponse.Status
 func (r MarkPostAsTranslatedResponse) Status() string {
@@ -30067,10 +30727,6 @@ type RevertPostResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RevertPost403Reason string
-type RevertPost403Success bool
-type RevertPost404Reason string
-type RevertPost404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RevertPostResponse) Status() string {
@@ -30098,10 +30754,6 @@ type GetPostInSequenceResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type GetPostInSequence403Reason string
-type GetPostInSequence403Success bool
-type GetPostInSequence404Reason string
-type GetPostInSequence404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetPostInSequenceResponse) Status() string {
@@ -30129,10 +30781,6 @@ type UpdatePostIqdbResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type UpdatePostIqdb403Reason string
-type UpdatePostIqdb403Success bool
-type UpdatePostIqdb404Reason string
-type UpdatePostIqdb404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UpdatePostIqdbResponse) Status() string {
@@ -30157,10 +30805,6 @@ type DeletePostVoteResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type DeletePostVote403Reason string
-type DeletePostVote403Success bool
-type DeletePostVote404Reason string
-type DeletePostVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeletePostVoteResponse) Status() string {
@@ -30191,10 +30835,6 @@ type CreatePostVoteResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type CreatePostVote403Reason string
-type CreatePostVote403Success bool
-type CreatePostVote404Reason string
-type CreatePostVote404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreatePostVoteResponse) Status() string {
@@ -30215,11 +30855,9 @@ func (r CreatePostVoteResponse) StatusCode() int {
 type ListBulkRelatedTagsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *map[string]interface{}
+	JSON200      *BulkRelatedTag
 	JSON403      *AccessDenied
 }
-type ListBulkRelatedTags403Reason string
-type ListBulkRelatedTags403Success bool
 
 // Status returns HTTPResponse.Status
 func (r ListBulkRelatedTagsResponse) Status() string {
@@ -30237,13 +30875,161 @@ func (r ListBulkRelatedTagsResponse) StatusCode() int {
 	return 0
 }
 
+type SearchStaffNotesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		union json.RawMessage
+	}
+}
+type SearchStaffNotes2000 = []StaffNote
+type SearchStaffNotes2001 struct {
+	Blips *[]interface{} `json:"blips,omitempty"`
+}
+
+// Status returns HTTPResponse.Status
+func (r SearchStaffNotesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r SearchStaffNotesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CreateStaffNoteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *StaffNote
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+	JSON422      *ExpectedError
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateStaffNoteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateStaffNoteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetStaffNoteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *[]StaffNote
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r GetStaffNoteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetStaffNoteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type EditStaffNoteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StaffNote
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+	JSON422      *ExpectedError
+}
+
+// Status returns HTTPResponse.Status
+func (r EditStaffNoteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r EditStaffNoteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type DeleteStaffNoteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *StaffNote
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteStaffNoteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteStaffNoteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UndeleteStaffNoteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *StaffNote
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r UndeleteStaffNoteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UndeleteStaffNoteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type CreateTagAliasResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type CreateTagAlias403Reason string
-type CreateTagAlias403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateTagAliasResponse) Status() string {
@@ -30295,10 +31081,6 @@ type RejectTagAliasResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type RejectTagAlias403Reason string
-type RejectTagAlias403Success bool
-type RejectTagAlias404Reason string
-type RejectTagAlias404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RejectTagAliasResponse) Status() string {
@@ -30322,8 +31104,6 @@ type GetTagAliasResponse struct {
 	JSON200      *TagAlias
 	JSON404      *NotFound
 }
-type GetTagAlias404Reason string
-type GetTagAlias404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetTagAliasResponse) Status() string {
@@ -30348,10 +31128,6 @@ type EditTagAliasResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditTagAlias403Reason string
-type EditTagAlias403Success bool
-type EditTagAlias404Reason string
-type EditTagAlias404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditTagAliasResponse) Status() string {
@@ -30376,10 +31152,6 @@ type ApproveTagAliasResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type ApproveTagAlias403Reason string
-type ApproveTagAlias403Success bool
-type ApproveTagAlias404Reason string
-type ApproveTagAlias404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ApproveTagAliasResponse) Status() string {
@@ -30402,8 +31174,6 @@ type CreateTagImplicationResponse struct {
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 }
-type CreateTagImplication403Reason string
-type CreateTagImplication403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateTagImplicationResponse) Status() string {
@@ -30455,10 +31225,6 @@ type RejectTagImplicationResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type RejectTagImplication403Reason string
-type RejectTagImplication403Success bool
-type RejectTagImplication404Reason string
-type RejectTagImplication404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RejectTagImplicationResponse) Status() string {
@@ -30482,8 +31248,6 @@ type GetTagImplicationResponse struct {
 	JSON200      *TagImplication
 	JSON404      *NotFound
 }
-type GetTagImplication404Reason string
-type GetTagImplication404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetTagImplicationResponse) Status() string {
@@ -30508,10 +31272,6 @@ type EditTagImplicationResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditTagImplication403Reason string
-type EditTagImplication403Success bool
-type EditTagImplication404Reason string
-type EditTagImplication404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditTagImplicationResponse) Status() string {
@@ -30536,10 +31296,6 @@ type ApproveTagImplicationResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type ApproveTagImplication403Reason string
-type ApproveTagImplication403Success bool
-type ApproveTagImplication404Reason string
-type ApproveTagImplication404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ApproveTagImplicationResponse) Status() string {
@@ -30620,10 +31376,6 @@ type PreviewTagsResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type PreviewTags403Reason string
-type PreviewTags403Success bool
-type PreviewTags404Reason string
-type PreviewTags404Success bool
 
 // Status returns HTTPResponse.Status
 func (r PreviewTagsResponse) Status() string {
@@ -30641,14 +31393,35 @@ func (r PreviewTagsResponse) StatusCode() int {
 	return 0
 }
 
+type DeleteTagResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteTagResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteTagResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetTagResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON200      *Tag
 	JSON404      *NotFound
 }
-type GetTag404Reason string
-type GetTag404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetTagResponse) Status() string {
@@ -30673,10 +31446,6 @@ type EditTagResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditTag403Reason string
-type EditTag403Success bool
-type EditTag404Reason string
-type EditTag404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditTagResponse) Status() string {
@@ -30694,16 +31463,43 @@ func (r EditTagResponse) StatusCode() int {
 	return 0
 }
 
+type GetTagCorrectionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Post struct {
+			Category      TagCategories `json:"category"`
+			CategoryCache TagCategories `json:"category_cache"`
+			PostCount     int           `json:"post_count"`
+			RealPostCount int           `json:"real_post_count"`
+			Tag           Tag           `json:"tag"`
+		} `json:"post"`
+	}
+	JSON404 *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r GetTagCorrectionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetTagCorrectionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type CorrectTagResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type CorrectTag403Reason string
-type CorrectTag403Success bool
-type CorrectTag404Reason string
-type CorrectTag404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CorrectTagResponse) Status() string {
@@ -30756,8 +31552,6 @@ type CreateTakedownResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateTakedown403Reason string
-type CreateTakedown403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateTakedownResponse) Status() string {
@@ -30781,10 +31575,6 @@ type DeleteTakedownResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteTakedown403Reason string
-type DeleteTakedown403Success bool
-type DeleteTakedown404Reason string
-type DeleteTakedown404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteTakedownResponse) Status() string {
@@ -30808,8 +31598,6 @@ type GetTakedownResponse struct {
 	JSON200      *Takedown
 	JSON404      *NotFound
 }
-type GetTakedown404Reason string
-type GetTakedown404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetTakedownResponse) Status() string {
@@ -30834,10 +31622,6 @@ type EditTakedownResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditTakedown403Reason string
-type EditTakedown403Success bool
-type EditTakedown404Reason string
-type EditTakedown404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditTakedownResponse) Status() string {
@@ -30865,10 +31649,6 @@ type AddPostsToTakedownByIdsResponse struct {
 	JSON403 *AccessDenied
 	JSON404 *NotFound
 }
-type AddPostsToTakedownByIds403Reason string
-type AddPostsToTakedownByIds403Success bool
-type AddPostsToTakedownByIds404Reason string
-type AddPostsToTakedownByIds404Success bool
 
 // Status returns HTTPResponse.Status
 func (r AddPostsToTakedownByIdsResponse) Status() string {
@@ -30896,10 +31676,6 @@ type AddPostsToTakedownByTagsResponse struct {
 	JSON403 *AccessDenied
 	JSON404 *NotFound
 }
-type AddPostsToTakedownByTags403Reason string
-type AddPostsToTakedownByTags403Success bool
-type AddPostsToTakedownByTags404Reason string
-type AddPostsToTakedownByTags404Success bool
 
 // Status returns HTTPResponse.Status
 func (r AddPostsToTakedownByTagsResponse) Status() string {
@@ -30926,10 +31702,6 @@ type CountMatchingPostsResponse struct {
 	JSON403 *AccessDenied
 	JSON404 *NotFound
 }
-type CountMatchingPosts403Reason string
-type CountMatchingPosts403Success bool
-type CountMatchingPosts404Reason string
-type CountMatchingPosts404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CountMatchingPostsResponse) Status() string {
@@ -30953,10 +31725,6 @@ type RemovePostsFromTakedownByIdsResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type RemovePostsFromTakedownByIds403Reason string
-type RemovePostsFromTakedownByIds403Success bool
-type RemovePostsFromTakedownByIds404Reason string
-type RemovePostsFromTakedownByIds404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RemovePostsFromTakedownByIdsResponse) Status() string {
@@ -30986,8 +31754,6 @@ type SearchTickets2000 = []Ticket
 type SearchTickets2001 struct {
 	Tickets []interface{} `json:"tickets"`
 }
-type SearchTickets403Reason string
-type SearchTickets403Success bool
 
 // Status returns HTTPResponse.Status
 func (r SearchTicketsResponse) Status() string {
@@ -31012,10 +31778,6 @@ type GetTicketResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetTicket403Reason string
-type GetTicket403Success bool
-type GetTicket404Reason string
-type GetTicket404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetTicketResponse) Status() string {
@@ -31039,10 +31801,6 @@ type EditTicketResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type EditTicket403Reason string
-type EditTicket403Success bool
-type EditTicket404Reason string
-type EditTicket404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditTicketResponse) Status() string {
@@ -31067,10 +31825,6 @@ type ClaimTicketResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type ClaimTicket403Reason string
-type ClaimTicket403Success bool
-type ClaimTicket404Reason string
-type ClaimTicket404Success bool
 
 // Status returns HTTPResponse.Status
 func (r ClaimTicketResponse) Status() string {
@@ -31095,10 +31849,6 @@ type UnclaimTicketResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UnclaimTicket403Reason string
-type UnclaimTicket403Success bool
-type UnclaimTicket404Reason string
-type UnclaimTicket404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UnclaimTicketResponse) Status() string {
@@ -31151,8 +31901,6 @@ type CreateUploadWhitelistResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateUploadWhitelist403Reason string
-type CreateUploadWhitelist403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateUploadWhitelistResponse) Status() string {
@@ -31176,10 +31924,6 @@ type DeleteUploadWhitelistResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteUploadWhitelist403Reason string
-type DeleteUploadWhitelist403Success bool
-type DeleteUploadWhitelist404Reason string
-type DeleteUploadWhitelist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteUploadWhitelistResponse) Status() string {
@@ -31204,10 +31948,6 @@ type EditUploadWhitelistResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditUploadWhitelist403Reason string
-type EditUploadWhitelist403Success bool
-type EditUploadWhitelist404Reason string
-type EditUploadWhitelist404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditUploadWhitelistResponse) Status() string {
@@ -31238,10 +31978,6 @@ type CheckIfUrlIsAllowedResponse struct {
 	JSON404 *NotFound
 	JSON422 *ExpectedError
 }
-type CheckIfUrlIsAllowed403Reason string
-type CheckIfUrlIsAllowed403Success bool
-type CheckIfUrlIsAllowed404Reason string
-type CheckIfUrlIsAllowed404Success bool
 
 // Status returns HTTPResponse.Status
 func (r CheckIfUrlIsAllowedResponse) Status() string {
@@ -31299,9 +32035,6 @@ type UploadPostResponse struct {
 	JSON412 *MessageError
 }
 type UploadPost200Success bool
-type UploadPost403Reason string
-type UploadPost403Success bool
-type UploadPost412Success bool
 
 // Status returns HTTPResponse.Status
 func (r UploadPostResponse) Status() string {
@@ -31313,6 +32046,30 @@ func (r UploadPostResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r UploadPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetUploadResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *Upload
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r GetUploadResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetUploadResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -31354,8 +32111,6 @@ type CreateUserFeedbackResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateUserFeedback403Reason string
-type CreateUserFeedback403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateUserFeedbackResponse) Status() string {
@@ -31379,10 +32134,6 @@ type DestroyUserFeedbackResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DestroyUserFeedback403Reason string
-type DestroyUserFeedback403Success bool
-type DestroyUserFeedback404Reason string
-type DestroyUserFeedback404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DestroyUserFeedbackResponse) Status() string {
@@ -31407,10 +32158,6 @@ type GetUserFeedbackResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetUserFeedback403Reason string
-type GetUserFeedback403Success bool
-type GetUserFeedback404Reason string
-type GetUserFeedback404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetUserFeedbackResponse) Status() string {
@@ -31435,10 +32182,6 @@ type EditUserFeedbackResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditUserFeedback403Reason string
-type EditUserFeedback403Success bool
-type EditUserFeedback404Reason string
-type EditUserFeedback404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditUserFeedbackResponse) Status() string {
@@ -31462,10 +32205,6 @@ type DeleteUserFeedbackResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteUserFeedback403Reason string
-type DeleteUserFeedback403Success bool
-type DeleteUserFeedback404Reason string
-type DeleteUserFeedback404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteUserFeedbackResponse) Status() string {
@@ -31489,10 +32228,6 @@ type UndeleteUserFeedbackResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type UndeleteUserFeedback403Reason string
-type UndeleteUserFeedback403Success bool
-type UndeleteUserFeedback404Reason string
-type UndeleteUserFeedback404Success bool
 
 // Status returns HTTPResponse.Status
 func (r UndeleteUserFeedbackResponse) Status() string {
@@ -31544,8 +32279,6 @@ type CreateUserNameChangeRequestResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateUserNameChangeRequest403Reason string
-type CreateUserNameChangeRequest403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateUserNameChangeRequestResponse) Status() string {
@@ -31570,10 +32303,6 @@ type GetUserNameChangeRequestResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type GetUserNameChangeRequest403Reason string
-type GetUserNameChangeRequest403Success bool
-type GetUserNameChangeRequest404Reason string
-type GetUserNameChangeRequest404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetUserNameChangeRequestResponse) Status() string {
@@ -31616,41 +32345,12 @@ func (r SearchUsersResponse) StatusCode() int {
 	return 0
 }
 
-type GetCurrentUserResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *CurrentUser
-	JSON403      *AccessDenied
-}
-type GetCurrentUser403Reason string
-type GetCurrentUser403Success bool
-
-// Status returns HTTPResponse.Status
-func (r GetCurrentUserResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r GetCurrentUserResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
 type GetUserResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *struct {
-		union json.RawMessage
-	}
-	JSON404 *NotFound
+	JSON200      *UserResponse
+	JSON404      *NotFound
 }
-type GetUser404Reason string
-type GetUser404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetUserResponse) Status() string {
@@ -31674,8 +32374,6 @@ type EditCurrentUserResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type EditCurrentUser403Reason string
-type EditCurrentUser403Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditCurrentUserResponse) Status() string {
@@ -31693,6 +32391,98 @@ func (r EditCurrentUserResponse) StatusCode() int {
 	return 0
 }
 
+type FixSpecificUserCountsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r FixSpecificUserCountsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r FixSpecificUserCountsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ClearUserFavoritesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r ClearUserFavoritesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ClearUserFavoritesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ToggleUserUploadsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON403      *AccessDenied
+	JSON404      *NotFound
+}
+
+// Status returns HTTPResponse.Status
+func (r ToggleUserUploadsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ToggleUserUploadsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetUserUploadLimitResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *UserResponse
+	JSON403      *AccessDenied
+}
+
+// Status returns HTTPResponse.Status
+func (r GetUserUploadLimitResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetUserUploadLimitResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type RevertWikiPageResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -31700,10 +32490,6 @@ type RevertWikiPageResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type RevertWikiPage403Reason string
-type RevertWikiPage403Success bool
-type RevertWikiPage404Reason string
-type RevertWikiPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r RevertWikiPageResponse) Status() string {
@@ -31755,8 +32541,6 @@ type GetWikiPageVersionResponse struct {
 	JSON200      *WikiPageVersion
 	JSON404      *NotFound
 }
-type GetWikiPageVersion404Reason string
-type GetWikiPageVersion404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetWikiPageVersionResponse) Status() string {
@@ -31803,8 +32587,6 @@ type CreateWikiPageResponse struct {
 	JSON403      *AccessDenied
 	JSON422      *ExpectedError
 }
-type CreateWikiPage403Reason string
-type CreateWikiPage403Success bool
 
 // Status returns HTTPResponse.Status
 func (r CreateWikiPageResponse) Status() string {
@@ -31828,10 +32610,6 @@ type DeleteWikiPageResponse struct {
 	JSON403      *AccessDenied
 	JSON404      *NotFound
 }
-type DeleteWikiPage403Reason string
-type DeleteWikiPage403Success bool
-type DeleteWikiPage404Reason string
-type DeleteWikiPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r DeleteWikiPageResponse) Status() string {
@@ -31855,8 +32633,6 @@ type GetWikiPageResponse struct {
 	JSON200      *WikiPage
 	JSON404      *NotFound
 }
-type GetWikiPage404Reason string
-type GetWikiPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r GetWikiPageResponse) Status() string {
@@ -31881,10 +32657,6 @@ type EditWikiPageResponse struct {
 	JSON404      *NotFound
 	JSON422      *ExpectedError
 }
-type EditWikiPage403Reason string
-type EditWikiPage403Success bool
-type EditWikiPage404Reason string
-type EditWikiPage404Success bool
 
 // Status returns HTTPResponse.Status
 func (r EditWikiPageResponse) Status() string {
@@ -31973,7 +32745,7 @@ func (c *ClientWithResponses) CreateArtistWithFormdataBodyWithResponse(ctx conte
 }
 
 // DeleteArtistWithResponse request returning *DeleteArtistResponse
-func (c *ClientWithResponses) DeleteArtistWithResponse(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*DeleteArtistResponse, error) {
+func (c *ClientWithResponses) DeleteArtistWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*DeleteArtistResponse, error) {
 	rsp, err := c.DeleteArtist(ctx, idOrName, reqEditors...)
 	if err != nil {
 		return nil, err
@@ -31982,7 +32754,7 @@ func (c *ClientWithResponses) DeleteArtistWithResponse(ctx context.Context, idOr
 }
 
 // GetArtistWithResponse request returning *GetArtistResponse
-func (c *ClientWithResponses) GetArtistWithResponse(ctx context.Context, idOrName string, reqEditors ...RequestEditorFn) (*GetArtistResponse, error) {
+func (c *ClientWithResponses) GetArtistWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*GetArtistResponse, error) {
 	rsp, err := c.GetArtist(ctx, idOrName, reqEditors...)
 	if err != nil {
 		return nil, err
@@ -31991,7 +32763,7 @@ func (c *ClientWithResponses) GetArtistWithResponse(ctx context.Context, idOrNam
 }
 
 // EditArtistWithBodyWithResponse request with arbitrary body returning *EditArtistResponse
-func (c *ClientWithResponses) EditArtistWithBodyWithResponse(ctx context.Context, idOrName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditArtistResponse, error) {
+func (c *ClientWithResponses) EditArtistWithBodyWithResponse(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditArtistResponse, error) {
 	rsp, err := c.EditArtistWithBody(ctx, idOrName, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
@@ -32000,7 +32772,7 @@ func (c *ClientWithResponses) EditArtistWithBodyWithResponse(ctx context.Context
 }
 
 // RevertArtistWithResponse request returning *RevertArtistResponse
-func (c *ClientWithResponses) RevertArtistWithResponse(ctx context.Context, idOrName string, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*RevertArtistResponse, error) {
+func (c *ClientWithResponses) RevertArtistWithResponse(ctx context.Context, idOrName IdOrName, params *RevertArtistParams, reqEditors ...RequestEditorFn) (*RevertArtistResponse, error) {
 	rsp, err := c.RevertArtist(ctx, idOrName, params, reqEditors...)
 	if err != nil {
 		return nil, err
@@ -32044,8 +32816,8 @@ func (c *ClientWithResponses) CreateAvoidPostingWithFormdataBodyWithResponse(ctx
 }
 
 // DestroyAvoidPostingWithResponse request returning *DestroyAvoidPostingResponse
-func (c *ClientWithResponses) DestroyAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*DestroyAvoidPostingResponse, error) {
-	rsp, err := c.DestroyAvoidPosting(ctx, idOrArtistName, reqEditors...)
+func (c *ClientWithResponses) DestroyAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*DestroyAvoidPostingResponse, error) {
+	rsp, err := c.DestroyAvoidPosting(ctx, idOrName, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -32053,8 +32825,8 @@ func (c *ClientWithResponses) DestroyAvoidPostingWithResponse(ctx context.Contex
 }
 
 // GetAvoidPostingWithResponse request returning *GetAvoidPostingResponse
-func (c *ClientWithResponses) GetAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*GetAvoidPostingResponse, error) {
-	rsp, err := c.GetAvoidPosting(ctx, idOrArtistName, reqEditors...)
+func (c *ClientWithResponses) GetAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*GetAvoidPostingResponse, error) {
+	rsp, err := c.GetAvoidPosting(ctx, idOrName, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -32062,16 +32834,16 @@ func (c *ClientWithResponses) GetAvoidPostingWithResponse(ctx context.Context, i
 }
 
 // EditAvoidPostingWithBodyWithResponse request with arbitrary body returning *EditAvoidPostingResponse
-func (c *ClientWithResponses) EditAvoidPostingWithBodyWithResponse(ctx context.Context, idOrArtistName string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error) {
-	rsp, err := c.EditAvoidPostingWithBody(ctx, idOrArtistName, contentType, body, reqEditors...)
+func (c *ClientWithResponses) EditAvoidPostingWithBodyWithResponse(ctx context.Context, idOrName IdOrName, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error) {
+	rsp, err := c.EditAvoidPostingWithBody(ctx, idOrName, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
 	return ParseEditAvoidPostingResponse(rsp)
 }
 
-func (c *ClientWithResponses) EditAvoidPostingWithFormdataBodyWithResponse(ctx context.Context, idOrArtistName string, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error) {
-	rsp, err := c.EditAvoidPostingWithFormdataBody(ctx, idOrArtistName, body, reqEditors...)
+func (c *ClientWithResponses) EditAvoidPostingWithFormdataBodyWithResponse(ctx context.Context, idOrName IdOrName, body EditAvoidPostingFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditAvoidPostingResponse, error) {
+	rsp, err := c.EditAvoidPostingWithFormdataBody(ctx, idOrName, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -32079,8 +32851,8 @@ func (c *ClientWithResponses) EditAvoidPostingWithFormdataBodyWithResponse(ctx c
 }
 
 // DeleteAvoidPostingWithResponse request returning *DeleteAvoidPostingResponse
-func (c *ClientWithResponses) DeleteAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*DeleteAvoidPostingResponse, error) {
-	rsp, err := c.DeleteAvoidPosting(ctx, idOrArtistName, reqEditors...)
+func (c *ClientWithResponses) DeleteAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*DeleteAvoidPostingResponse, error) {
+	rsp, err := c.DeleteAvoidPosting(ctx, idOrName, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -32088,8 +32860,8 @@ func (c *ClientWithResponses) DeleteAvoidPostingWithResponse(ctx context.Context
 }
 
 // UndeleteAvoidPostingWithResponse request returning *UndeleteAvoidPostingResponse
-func (c *ClientWithResponses) UndeleteAvoidPostingWithResponse(ctx context.Context, idOrArtistName string, reqEditors ...RequestEditorFn) (*UndeleteAvoidPostingResponse, error) {
-	rsp, err := c.UndeleteAvoidPosting(ctx, idOrArtistName, reqEditors...)
+func (c *ClientWithResponses) UndeleteAvoidPostingWithResponse(ctx context.Context, idOrName IdOrName, reqEditors ...RequestEditorFn) (*UndeleteAvoidPostingResponse, error) {
+	rsp, err := c.UndeleteAvoidPosting(ctx, idOrName, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -32421,13 +33193,13 @@ func (c *ClientWithResponses) SearchDMailsWithResponse(ctx context.Context, para
 	return ParseSearchDMailsResponse(rsp)
 }
 
-// MarkAllDMailsAsUnreadWithResponse request returning *MarkAllDMailsAsUnreadResponse
-func (c *ClientWithResponses) MarkAllDMailsAsUnreadWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MarkAllDMailsAsUnreadResponse, error) {
-	rsp, err := c.MarkAllDMailsAsUnread(ctx, reqEditors...)
+// MarkAllDMailsAsReadWithResponse request returning *MarkAllDMailsAsReadResponse
+func (c *ClientWithResponses) MarkAllDMailsAsReadWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*MarkAllDMailsAsReadResponse, error) {
+	rsp, err := c.MarkAllDMailsAsRead(ctx, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseMarkAllDMailsAsUnreadResponse(rsp)
+	return ParseMarkAllDMailsAsReadResponse(rsp)
 }
 
 // DeleteDMailWithResponse request returning *DeleteDMailResponse
@@ -32982,6 +33754,15 @@ func (c *ClientWithResponses) SearchModActionsWithResponse(ctx context.Context, 
 	return ParseSearchModActionsResponse(rsp)
 }
 
+// GetModActionWithResponse request returning *GetModActionResponse
+func (c *ClientWithResponses) GetModActionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetModActionResponse, error) {
+	rsp, err := c.GetModAction(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetModActionResponse(rsp)
+}
+
 // UnapprovePostWithBodyWithResponse request with arbitrary body returning *UnapprovePostResponse
 func (c *ClientWithResponses) UnapprovePostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UnapprovePostResponse, error) {
 	rsp, err := c.UnapprovePostWithBody(ctx, contentType, body, reqEditors...)
@@ -33471,17 +34252,9 @@ func (c *ClientWithResponses) PromotePostReplacementWithResponse(ctx context.Con
 	return ParsePromotePostReplacementResponse(rsp)
 }
 
-// RejectPostReplacementWithBodyWithResponse request with arbitrary body returning *RejectPostReplacementResponse
-func (c *ClientWithResponses) RejectPostReplacementWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RejectPostReplacementResponse, error) {
-	rsp, err := c.RejectPostReplacementWithBody(ctx, id, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseRejectPostReplacementResponse(rsp)
-}
-
-func (c *ClientWithResponses) RejectPostReplacementWithResponse(ctx context.Context, id int, body RejectPostReplacementJSONRequestBody, reqEditors ...RequestEditorFn) (*RejectPostReplacementResponse, error) {
-	rsp, err := c.RejectPostReplacement(ctx, id, body, reqEditors...)
+// RejectPostReplacementWithResponse request returning *RejectPostReplacementResponse
+func (c *ClientWithResponses) RejectPostReplacementWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*RejectPostReplacementResponse, error) {
+	rsp, err := c.RejectPostReplacement(ctx, id, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -33625,6 +34398,24 @@ func (c *ClientWithResponses) SearchPostVersionsWithResponse(ctx context.Context
 		return nil, err
 	}
 	return ParseSearchPostVersionsResponse(rsp)
+}
+
+// HidePostVersionWithResponse request returning *HidePostVersionResponse
+func (c *ClientWithResponses) HidePostVersionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*HidePostVersionResponse, error) {
+	rsp, err := c.HidePostVersion(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseHidePostVersionResponse(rsp)
+}
+
+// UnhidePostVersionWithResponse request returning *UnhidePostVersionResponse
+func (c *ClientWithResponses) UnhidePostVersionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*UnhidePostVersionResponse, error) {
+	rsp, err := c.UnhidePostVersion(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUnhidePostVersionResponse(rsp)
 }
 
 // DeletePostVotesWithResponse request returning *DeletePostVotesResponse
@@ -33802,6 +34593,76 @@ func (c *ClientWithResponses) ListBulkRelatedTagsWithResponse(ctx context.Contex
 	return ParseListBulkRelatedTagsResponse(rsp)
 }
 
+// SearchStaffNotesWithResponse request returning *SearchStaffNotesResponse
+func (c *ClientWithResponses) SearchStaffNotesWithResponse(ctx context.Context, params *SearchStaffNotesParams, reqEditors ...RequestEditorFn) (*SearchStaffNotesResponse, error) {
+	rsp, err := c.SearchStaffNotes(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSearchStaffNotesResponse(rsp)
+}
+
+// CreateStaffNoteWithBodyWithResponse request with arbitrary body returning *CreateStaffNoteResponse
+func (c *ClientWithResponses) CreateStaffNoteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateStaffNoteResponse, error) {
+	rsp, err := c.CreateStaffNoteWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateStaffNoteResponse(rsp)
+}
+
+func (c *ClientWithResponses) CreateStaffNoteWithFormdataBodyWithResponse(ctx context.Context, body CreateStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*CreateStaffNoteResponse, error) {
+	rsp, err := c.CreateStaffNoteWithFormdataBody(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateStaffNoteResponse(rsp)
+}
+
+// GetStaffNoteWithResponse request returning *GetStaffNoteResponse
+func (c *ClientWithResponses) GetStaffNoteWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetStaffNoteResponse, error) {
+	rsp, err := c.GetStaffNote(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetStaffNoteResponse(rsp)
+}
+
+// EditStaffNoteWithBodyWithResponse request with arbitrary body returning *EditStaffNoteResponse
+func (c *ClientWithResponses) EditStaffNoteWithBodyWithResponse(ctx context.Context, id int, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*EditStaffNoteResponse, error) {
+	rsp, err := c.EditStaffNoteWithBody(ctx, id, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseEditStaffNoteResponse(rsp)
+}
+
+func (c *ClientWithResponses) EditStaffNoteWithFormdataBodyWithResponse(ctx context.Context, id int, body EditStaffNoteFormdataRequestBody, reqEditors ...RequestEditorFn) (*EditStaffNoteResponse, error) {
+	rsp, err := c.EditStaffNoteWithFormdataBody(ctx, id, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseEditStaffNoteResponse(rsp)
+}
+
+// DeleteStaffNoteWithResponse request returning *DeleteStaffNoteResponse
+func (c *ClientWithResponses) DeleteStaffNoteWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*DeleteStaffNoteResponse, error) {
+	rsp, err := c.DeleteStaffNote(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteStaffNoteResponse(rsp)
+}
+
+// UndeleteStaffNoteWithResponse request returning *UndeleteStaffNoteResponse
+func (c *ClientWithResponses) UndeleteStaffNoteWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*UndeleteStaffNoteResponse, error) {
+	rsp, err := c.UndeleteStaffNote(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUndeleteStaffNoteResponse(rsp)
+}
+
 // CreateTagAliasWithBodyWithResponse request with arbitrary body returning *CreateTagAliasResponse
 func (c *ClientWithResponses) CreateTagAliasWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateTagAliasResponse, error) {
 	rsp, err := c.CreateTagAliasWithBody(ctx, contentType, body, reqEditors...)
@@ -33969,8 +34830,17 @@ func (c *ClientWithResponses) PreviewTagsWithResponse(ctx context.Context, param
 	return ParsePreviewTagsResponse(rsp)
 }
 
+// DeleteTagWithResponse request returning *DeleteTagResponse
+func (c *ClientWithResponses) DeleteTagWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*DeleteTagResponse, error) {
+	rsp, err := c.DeleteTag(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteTagResponse(rsp)
+}
+
 // GetTagWithResponse request returning *GetTagResponse
-func (c *ClientWithResponses) GetTagWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*GetTagResponse, error) {
+func (c *ClientWithResponses) GetTagWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetTagResponse, error) {
 	rsp, err := c.GetTag(ctx, id, reqEditors...)
 	if err != nil {
 		return nil, err
@@ -33993,6 +34863,15 @@ func (c *ClientWithResponses) EditTagWithFormdataBodyWithResponse(ctx context.Co
 		return nil, err
 	}
 	return ParseEditTagResponse(rsp)
+}
+
+// GetTagCorrectionWithResponse request returning *GetTagCorrectionResponse
+func (c *ClientWithResponses) GetTagCorrectionWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetTagCorrectionResponse, error) {
+	rsp, err := c.GetTagCorrection(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetTagCorrectionResponse(rsp)
 }
 
 // CorrectTagWithBodyWithResponse request with arbitrary body returning *CorrectTagResponse
@@ -34273,6 +35152,15 @@ func (c *ClientWithResponses) UploadPostWithBodyWithResponse(ctx context.Context
 	return ParseUploadPostResponse(rsp)
 }
 
+// GetUploadWithResponse request returning *GetUploadResponse
+func (c *ClientWithResponses) GetUploadWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetUploadResponse, error) {
+	rsp, err := c.GetUpload(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetUploadResponse(rsp)
+}
+
 // SearchUserFeedbacksWithResponse request returning *SearchUserFeedbacksResponse
 func (c *ClientWithResponses) SearchUserFeedbacksWithResponse(ctx context.Context, params *SearchUserFeedbacksParams, reqEditors ...RequestEditorFn) (*SearchUserFeedbacksResponse, error) {
 	rsp, err := c.SearchUserFeedbacks(ctx, params, reqEditors...)
@@ -34396,15 +35284,6 @@ func (c *ClientWithResponses) SearchUsersWithResponse(ctx context.Context, param
 	return ParseSearchUsersResponse(rsp)
 }
 
-// GetCurrentUserWithResponse request returning *GetCurrentUserResponse
-func (c *ClientWithResponses) GetCurrentUserWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetCurrentUserResponse, error) {
-	rsp, err := c.GetCurrentUser(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetCurrentUserResponse(rsp)
-}
-
 // GetUserWithResponse request returning *GetUserResponse
 func (c *ClientWithResponses) GetUserWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*GetUserResponse, error) {
 	rsp, err := c.GetUser(ctx, id, reqEditors...)
@@ -34429,6 +35308,42 @@ func (c *ClientWithResponses) EditCurrentUserWithFormdataBodyWithResponse(ctx co
 		return nil, err
 	}
 	return ParseEditCurrentUserResponse(rsp)
+}
+
+// FixSpecificUserCountsWithResponse request returning *FixSpecificUserCountsResponse
+func (c *ClientWithResponses) FixSpecificUserCountsWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*FixSpecificUserCountsResponse, error) {
+	rsp, err := c.FixSpecificUserCounts(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseFixSpecificUserCountsResponse(rsp)
+}
+
+// ClearUserFavoritesWithResponse request returning *ClearUserFavoritesResponse
+func (c *ClientWithResponses) ClearUserFavoritesWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ClearUserFavoritesResponse, error) {
+	rsp, err := c.ClearUserFavorites(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseClearUserFavoritesResponse(rsp)
+}
+
+// ToggleUserUploadsWithResponse request returning *ToggleUserUploadsResponse
+func (c *ClientWithResponses) ToggleUserUploadsWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*ToggleUserUploadsResponse, error) {
+	rsp, err := c.ToggleUserUploads(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseToggleUserUploadsResponse(rsp)
+}
+
+// GetUserUploadLimitWithResponse request returning *GetUserUploadLimitResponse
+func (c *ClientWithResponses) GetUserUploadLimitWithResponse(ctx context.Context, id int, reqEditors ...RequestEditorFn) (*GetUserUploadLimitResponse, error) {
+	rsp, err := c.GetUserUploadLimit(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetUserUploadLimitResponse(rsp)
 }
 
 // RevertWikiPageWithResponse request returning *RevertWikiPageResponse
@@ -34678,9 +35593,9 @@ func ParseSearchArtistsResponse(rsp *http.Response) (*SearchArtistsResponse, err
 			Id           int                                `json:"id"`
 			IsActive     bool                               `json:"is_active"`
 			IsLocked     bool                               `json:"is_locked"`
-			LinkedUserId float32                            `json:"linked_user_id"`
+			LinkedUserId *int                               `json:"linked_user_id"`
 			Name         string                             `json:"name"`
-			Notes        string                             `json:"notes"`
+			Notes        *string                            `json:"notes"`
 			OtherNames   []string                           `json:"other_names"`
 			UpdatedAt    time.Time                          `json:"updated_at"`
 			Urls         []ArtistURL                        `json:"urls"`
@@ -34791,9 +35706,9 @@ func ParseGetArtistResponse(rsp *http.Response) (*GetArtistResponse, error) {
 			Id           int                            `json:"id"`
 			IsActive     bool                           `json:"is_active"`
 			IsLocked     bool                           `json:"is_locked"`
-			LinkedUserId float32                        `json:"linked_user_id"`
+			LinkedUserId *int                           `json:"linked_user_id"`
 			Name         string                         `json:"name"`
-			Notes        string                         `json:"notes"`
+			Notes        *string                        `json:"notes"`
 			OtherNames   []string                       `json:"other_names"`
 			UpdatedAt    time.Time                      `json:"updated_at"`
 			Urls         []ArtistURL                    `json:"urls"`
@@ -34884,7 +35799,7 @@ func ParseRevertArtistResponse(rsp *http.Response) (*RevertArtistResponse, error
 		response.JSON404 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
-		var dest ExpectedError
+		var dest AccessDenied
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -36238,15 +37153,15 @@ func ParseSearchDMailsResponse(rsp *http.Response) (*SearchDMailsResponse, error
 	return response, nil
 }
 
-// ParseMarkAllDMailsAsUnreadResponse parses an HTTP response from a MarkAllDMailsAsUnreadWithResponse call
-func ParseMarkAllDMailsAsUnreadResponse(rsp *http.Response) (*MarkAllDMailsAsUnreadResponse, error) {
+// ParseMarkAllDMailsAsReadResponse parses an HTTP response from a MarkAllDMailsAsReadWithResponse call
+func ParseMarkAllDMailsAsReadResponse(rsp *http.Response) (*MarkAllDMailsAsReadResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &MarkAllDMailsAsUnreadResponse{
+	response := &MarkAllDMailsAsReadResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -37977,6 +38892,46 @@ func ParseSearchModActionsResponse(rsp *http.Response) (*SearchModActionsRespons
 			return nil, err
 		}
 		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetModActionResponse parses an HTTP response from a GetModActionWithResponse call
+func ParseGetModActionResponse(rsp *http.Response) (*GetModActionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetModActionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ModAction
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
@@ -39905,6 +40860,72 @@ func ParseSearchPostVersionsResponse(rsp *http.Response) (*SearchPostVersionsRes
 	return response, nil
 }
 
+// ParseHidePostVersionResponse parses an HTTP response from a HidePostVersionWithResponse call
+func ParseHidePostVersionResponse(rsp *http.Response) (*HidePostVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &HidePostVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUnhidePostVersionResponse parses an HTTP response from a UnhidePostVersionWithResponse call
+func ParseUnhidePostVersionResponse(rsp *http.Response) (*UnhidePostVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UnhidePostVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseDeletePostVotesResponse parses an HTTP response from a DeletePostVotesWithResponse call
 func ParseDeletePostVotesResponse(rsp *http.Response) (*DeletePostVotesResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -40483,7 +41504,7 @@ func ParseListBulkRelatedTagsResponse(rsp *http.Response) (*ListBulkRelatedTagsR
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest map[string]interface{}
+		var dest BulkRelatedTag
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -40495,6 +41516,248 @@ func ParseListBulkRelatedTagsResponse(rsp *http.Response) (*ListBulkRelatedTagsR
 			return nil, err
 		}
 		response.JSON403 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseSearchStaffNotesResponse parses an HTTP response from a SearchStaffNotesWithResponse call
+func ParseSearchStaffNotesResponse(rsp *http.Response) (*SearchStaffNotesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &SearchStaffNotesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			union json.RawMessage
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCreateStaffNoteResponse parses an HTTP response from a CreateStaffNoteWithResponse call
+func ParseCreateStaffNoteResponse(rsp *http.Response) (*CreateStaffNoteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateStaffNoteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest StaffNote
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest ExpectedError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetStaffNoteResponse parses an HTTP response from a GetStaffNoteWithResponse call
+func ParseGetStaffNoteResponse(rsp *http.Response) (*GetStaffNoteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetStaffNoteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest []StaffNote
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseEditStaffNoteResponse parses an HTTP response from a EditStaffNoteWithResponse call
+func ParseEditStaffNoteResponse(rsp *http.Response) (*EditStaffNoteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &EditStaffNoteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StaffNote
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest ExpectedError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteStaffNoteResponse parses an HTTP response from a DeleteStaffNoteWithResponse call
+func ParseDeleteStaffNoteResponse(rsp *http.Response) (*DeleteStaffNoteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteStaffNoteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest StaffNote
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUndeleteStaffNoteResponse parses an HTTP response from a UndeleteStaffNoteWithResponse call
+func ParseUndeleteStaffNoteResponse(rsp *http.Response) (*UndeleteStaffNoteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UndeleteStaffNoteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest StaffNote
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
@@ -40997,6 +42260,39 @@ func ParsePreviewTagsResponse(rsp *http.Response) (*PreviewTagsResponse, error) 
 	return response, nil
 }
 
+// ParseDeleteTagResponse parses an HTTP response from a DeleteTagWithResponse call
+func ParseDeleteTagResponse(rsp *http.Response) (*DeleteTagResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteTagResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetTagResponse parses an HTTP response from a GetTagWithResponse call
 func ParseGetTagResponse(rsp *http.Response) (*GetTagResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -41064,6 +42360,47 @@ func ParseEditTagResponse(rsp *http.Response) (*EditTagResponse, error) {
 			return nil, err
 		}
 		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetTagCorrectionResponse parses an HTTP response from a GetTagCorrectionWithResponse call
+func ParseGetTagCorrectionResponse(rsp *http.Response) (*GetTagCorrectionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetTagCorrectionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Post struct {
+				Category      TagCategories `json:"category"`
+				CategoryCache TagCategories `json:"category_cache"`
+				PostCount     int           `json:"post_count"`
+				RealPostCount int           `json:"real_post_count"`
+				Tag           Tag           `json:"tag"`
+			} `json:"post"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
@@ -41891,6 +43228,46 @@ func ParseUploadPostResponse(rsp *http.Response) (*UploadPostResponse, error) {
 	return response, nil
 }
 
+// ParseGetUploadResponse parses an HTTP response from a GetUploadWithResponse call
+func ParseGetUploadResponse(rsp *http.Response) (*GetUploadResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetUploadResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Upload
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseSearchUserFeedbacksResponse parses an HTTP response from a SearchUserFeedbacksWithResponse call
 func ParseSearchUserFeedbacksResponse(rsp *http.Response) (*SearchUserFeedbacksResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -42265,39 +43642,6 @@ func ParseSearchUsersResponse(rsp *http.Response) (*SearchUsersResponse, error) 
 	return response, nil
 }
 
-// ParseGetCurrentUserResponse parses an HTTP response from a GetCurrentUserWithResponse call
-func ParseGetCurrentUserResponse(rsp *http.Response) (*GetCurrentUserResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetCurrentUserResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CurrentUser
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
-		var dest AccessDenied
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON403 = &dest
-
-	}
-
-	return response, nil
-}
-
 // ParseGetUserResponse parses an HTTP response from a GetUserWithResponse call
 func ParseGetUserResponse(rsp *http.Response) (*GetUserResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -42313,9 +43657,7 @@ func ParseGetUserResponse(rsp *http.Response) (*GetUserResponse, error) {
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest struct {
-			union json.RawMessage
-		}
+		var dest UserResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -42360,6 +43702,138 @@ func ParseEditCurrentUserResponse(rsp *http.Response) (*EditCurrentUserResponse,
 			return nil, err
 		}
 		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseFixSpecificUserCountsResponse parses an HTTP response from a FixSpecificUserCountsWithResponse call
+func ParseFixSpecificUserCountsResponse(rsp *http.Response) (*FixSpecificUserCountsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &FixSpecificUserCountsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseClearUserFavoritesResponse parses an HTTP response from a ClearUserFavoritesWithResponse call
+func ParseClearUserFavoritesResponse(rsp *http.Response) (*ClearUserFavoritesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ClearUserFavoritesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseToggleUserUploadsResponse parses an HTTP response from a ToggleUserUploadsWithResponse call
+func ParseToggleUserUploadsResponse(rsp *http.Response) (*ToggleUserUploadsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ToggleUserUploadsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetUserUploadLimitResponse parses an HTTP response from a GetUserUploadLimitWithResponse call
+func ParseGetUserUploadLimitResponse(rsp *http.Response) (*GetUserUploadLimitResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetUserUploadLimitResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest UserResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AccessDenied
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
 
 	}
 
