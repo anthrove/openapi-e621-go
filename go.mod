@@ -5,8 +5,8 @@ go 1.24.4
 tool github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen
 
 require (
-	github.com/goforj/godump v1.4.0
 	github.com/oapi-codegen/runtime v1.1.1
+	golang.org/x/time v0.5.0
 )
 
 require (
@@ -23,6 +23,7 @@ require (
 	github.com/oapi-codegen/oapi-codegen/v2 v2.4.1 // indirect
 	github.com/perimeterx/marshmallow v1.1.5 // indirect
 	github.com/speakeasy-api/openapi-overlay v0.9.0 // indirect
+	github.com/stretchr/testify v1.10.0 // indirect
 	github.com/vmware-labs/yaml-jsonpath v0.3.2 // indirect
 	golang.org/x/mod v0.17.0 // indirect
 	golang.org/x/text v0.18.0 // indirect
