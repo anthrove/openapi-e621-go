@@ -1,4 +1,4 @@
-module github.com/anthrove/openapi-e621-go
+module github.com/anthrove/openapi-e621-go/v2
 
 go 1.24.4
 
