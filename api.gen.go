@@ -950,6 +950,14 @@ type DMail struct {
 	UpdatedAt time.Time `json:"updated_at"`
 }
 
+// DMailResponseArray defines model for DMailResponseArray.
+type DMailResponseArray = []DMail
+
+// DMailResponseEmpty No Results
+type DMailResponseEmpty struct {
+	Dmails []DMail `json:"dmails"`
+}
+
 // DTextResponse defines model for DTextResponse.
 type DTextResponse struct {
 	Html  string       `json:"html"`
@@ -1844,7 +1852,9 @@ type Page = int
 type AccessDenied = AccessDeniedResponse
 
 // DMailResponse defines model for DMailResponse.
-type DMailResponse interface{}
+type DMailResponse struct {
+	union json.RawMessage
+}
 
 // ExpectedError defines model for ExpectedError.
 type ExpectedError struct {
@@ -4192,6 +4202,68 @@ type CreateWikiPageFormdataRequestBody CreateWikiPageFormdataBody
 
 // EditWikiPageFormdataRequestBody defines body for EditWikiPage for application/x-www-form-urlencoded ContentType.
 type EditWikiPageFormdataRequestBody EditWikiPageFormdataBody
+
+// AsDMailResponseArray returns the union data inside the DMailResponse as a DMailResponseArray
+func (t DMailResponse) AsDMailResponseArray() (DMailResponseArray, error) {
+	var body DMailResponseArray
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDMailResponseArray overwrites any union data inside the DMailResponse as the provided DMailResponseArray
+func (t *DMailResponse) FromDMailResponseArray(v DMailResponseArray) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDMailResponseArray performs a merge with any union data inside the DMailResponse, using the provided DMailResponseArray
+func (t *DMailResponse) MergeDMailResponseArray(v DMailResponseArray) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDMailResponseEmpty returns the union data inside the DMailResponse as a DMailResponseEmpty
+func (t DMailResponse) AsDMailResponseEmpty() (DMailResponseEmpty, error) {
+	var body DMailResponseEmpty
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDMailResponseEmpty overwrites any union data inside the DMailResponse as the provided DMailResponseEmpty
+func (t *DMailResponse) FromDMailResponseEmpty(v DMailResponseEmpty) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDMailResponseEmpty performs a merge with any union data inside the DMailResponse, using the provided DMailResponseEmpty
+func (t *DMailResponse) MergeDMailResponseEmpty(v DMailResponseEmpty) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DMailResponse) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *DMailResponse) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
 
 // AsFullUser returns the union data inside the UserResponse as a FullUser
 func (t UserResponse) AsFullUser() (FullUser, error) {
@@ -27897,6 +27969,7 @@ func (r MarkCommentResponse) StatusCode() int {
 type SearchDMailsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
+	JSON200      *DMailResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -37132,6 +37205,16 @@ func ParseSearchDMailsResponse(rsp *http.Response) (*SearchDMailsResponse, error
 	response := &SearchDMailsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest DMailResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
 	}
 
 	return response, nil
