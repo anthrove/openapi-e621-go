@@ -1,6 +1,6 @@
 # e621 Golang Client API
 
-This SDK is generated with the [OpenAPI specification](https://github.com/DonovanDMC/E621OpenAPI) by [DonovanDMC](https://furry.cool/)
+This SDK is generated with our actively maintained [fork](https://github.com/anthrove/E621OpenAPI) of the [OpenAPI specification](https://github.com/DonovanDMC/E621OpenAPI) by [DonovanDMC](https://furry.cool/)
 
 ## Building
 

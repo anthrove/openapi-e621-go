@@ -1843,6 +1843,9 @@ type Page = int
 // AccessDenied defines model for AccessDenied.
 type AccessDenied = AccessDeniedResponse
 
+// DMailResponse defines model for DMailResponse.
+type DMailResponse interface{}
+
 // ExpectedError defines model for ExpectedError.
 type ExpectedError struct {
 	Errors []string `json:"errors"`
@@ -27894,13 +27897,6 @@ func (r MarkCommentResponse) StatusCode() int {
 type SearchDMailsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *struct {
-		union json.RawMessage
-	}
-}
-type SearchDMails2000 = []DMail
-type SearchDMails2001 struct {
-	Dmails []interface{} `json:"dmails"`
 }
 
 // Status returns HTTPResponse.Status
@@ -37136,18 +37132,6 @@ func ParseSearchDMailsResponse(rsp *http.Response) (*SearchDMailsResponse, error
 	response := &SearchDMailsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest struct {
-			union json.RawMessage
-		}
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	}
 
 	return response, nil
